@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://amarenl.com
+
+# Sitemaps
+Sitemap: https://amarenl.com/sitemap.xml

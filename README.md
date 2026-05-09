@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AmareNL.com — Affiliate Bridge Site
 
-## Getting Started
+> Next.js 14 | TypeScript | Tailwind CSS | Vercel
 
-First, run the development server:
+AmareNL.com is een Nederlandse affiliate bridge site die bezoekers informeert over natuurlijke wellness supplementen en doorstuurt naar Amare.com.
+
+---
+
+## Live
+
+- Productie: **https://amarenl.com**
+- Amare affiliate ID: **2075008**
+
+---
+
+## Ontwikkeling
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev        # localhost:3000
+npm run build      # Productie build
+npm run lint       # ESLint
+npm run sitemap    # Sitemap genereren
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Structuur
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/                    # Next.js App Router
+├── page.tsx            # Homepage
+├── layout.tsx          # Root layout (GA4, fonts, schema, affiliate tracking)
+├── blogs/nieuws/       # Blog systeem (17 artikelen)
+├── go/                 # Akıllı affiliate yönlendirme
+├── collections/        # Collectie pagina's
+├── supplementen/       # Categoriepagina's
+├── gewichtsbeheer/
+├── schoonheid/
+├── over-ons/
+├── contact/
+└── privacy-beleid/
 
-## Learn More
+components/
+├── layout/             # Header, Footer, CampaignBanner, ReturnVisitorBanner, VisitTracker
+├── sections/           # HeroSection, ProductGrid, PromoCarousel, TrustBar, etc.
+├── ui/                 # AffiliateCTA, ExitPopup, SchemaMarkup, FloatingMobileCTA
+└── blog/               # BlogCard, BlogContent, BlogAccordion
 
-To learn more about Next.js, take a look at the following resources:
+lib/
+├── products.ts         # 40+ Amare producten database
+├── blog.ts             # 17 MDX blog artikelen
+├── schema.ts           # JSON-LD generators (Organization, Article, FAQ, Product, etc.)
+├── analytics.ts        # GA4 event helpers
+└── affiliate.ts        # 3-katmanlı affiliate tracking sistemi
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+content/blog/           # MDX blog artikelen
+public/images/          # Statische assets
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Belangrijkste Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### SEO & Schema
+- JSON-LD Schema markup op alle pagina's (Organization, Article, FAQ, Product, BreadcrumbList)
+- Auto sitemap via next-sitemap
+- Unieke meta tags per pagina
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Affiliate Tracking (3 katman)
+- **localStorage:** Ziyaretçi kaydı + otomatik affiliate ID
+- **/go yönlendirme:** Akıllı redirect sayfası (`/go/[product]` ürüne özel)
+- **Return visitor banner:** Geri dönen ziyaretçiye özel karşılama
+
+### Conversie
+- Exit-intent popup (e-mail capture)
+- PromoCarousel (3 döner banner — ürün + kampanya)
+- CampaignBanner (aylık güncellenen teklif)
+- Floating mobile CTA
+
+### Analytics
+- Google Analytics 4 (GT-MKTPDM2M)
+- Event tracking (affiliate clicks, form submissions, CTA clicks)
+- IP anonimleştirme
+
+---
+
+## Deployment
+
+Push naar `main` branch → automatische Vercel deployment.
+
+Zie `CLAUDE.md` voor volledige projectdocumentatie.
