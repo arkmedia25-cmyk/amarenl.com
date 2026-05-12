@@ -33,6 +33,9 @@ const nunito = Nunito_Sans({
 export const metadata: Metadata = {
   title: "AmareNL — Ontdek Natuurlijke Wellness Supplementen",
   description: "Ontdek de beste natuurlijke supplementen van Amare.",
+  verification: {
+    google: "Ss_zLWuGuXmzgf5vuuOzoIE4PEAGskWPIlWwuYgloHE",
+  },
 };
 
 export default function RootLayout({
