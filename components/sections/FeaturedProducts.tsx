@@ -1,0 +1,136 @@
+import Image from "next/image";
+import { Star, TrendingUp } from "lucide-react";
+import AffiliateCTA from "@/components/ui/AffiliateCTA";
+
+export default function FeaturedProducts() {
+  const featured = [
+    {
+      name: "Happy Juice Pack®",
+      tagline: "Meest Populair",
+      description: "Complete gut-brain ondersteuning in één delicieus juicepakket",
+      benefits: ["Energie & focus", "Stemming en veerkracht", "Darmgezondheid"],
+      badge: "⭐ BESTSELLER",
+      image: "https://amarecdn.azureedge.net/webassets/web/prod/products/HJ_mango-EU-800_25.jpg",
+      product: "happy-juice-pack",
+      color: "from-purple-500 to-purple-600",
+    },
+    {
+      name: "Triangle of Wellness Xtreme™",
+      tagline: "Meest Compleet",
+      description: "De ultieme drietapak: gut-brain-beauty in perfecte balans",
+      benefits: ["Mentale fitness", "Darmgezondheid", "Huid & schoonheid"],
+      badge: "🔥 PREMIUM",
+      image: "https://amarecdn.azureedge.net/webassets/web/prod/products/Triangle-of-Wellness-Xtreme2-EU-800_25.jpg",
+      product: "triangle-of-wellness-xtreme",
+      color: "from-gold-500 to-gold-600",
+    },
+  ];
+
+  return (
+    <section className="py-20 bg-white">
+      <div className="container-page">
+        {/* Header */}
+        <div className="text-center mb-16 animate-slide-up">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 bg-[var(--color-primary)]/10 text-[var(--color-primary)] rounded-full text-xs font-bold uppercase tracking-widest">
+            <TrendingUp size={14} />
+            Meest Populaire Pakketten
+          </div>
+          <h2 className="text-4xl md:text-5xl font-cormorant font-bold text-[var(--color-text)] mb-4">
+            Begin hier met <span className="text-[var(--color-primary)]">Amare</span>
+          </h2>
+          <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto">
+            Deze twee pakketten zijn het meest gekozen door onze klanten. Compleet, effectief en wetenschappelijk onderbouwd.
+          </p>
+        </div>
+
+        {/* Products Grid */}
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          {featured.map((item, idx) => (
+            <div
+              key={item.product}
+              className="group rounded-2xl overflow-hidden border border-[var(--color-border)] bg-[var(--color-bg-soft)] hover:shadow-2xl transition-all duration-500 animate-slide-up"
+              style={{ animationDelay: `${idx * 100}ms` }}
+            >
+              {/* Image Container */}
+              <div className="relative h-80 overflow-hidden bg-gradient-to-br from-[var(--color-primary)]/5 to-[var(--color-accent)]/5">
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  fill
+                  className="object-contain group-hover:scale-110 transition-transform duration-500 p-8"
+                />
+                {/* Badge */}
+                <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-[var(--color-primary)]">
+                  {item.badge}
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="p-8">
+                {/* Rating */}
+                <div className="flex items-center gap-1 mb-3">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      size={16}
+                      className="fill-[var(--color-accent)] text-[var(--color-accent)]"
+                    />
+                  ))}
+                  <span className="text-xs text-[var(--color-text-muted)] ml-2">
+                    (500+ reviews)
+                  </span>
+                </div>
+
+                <h3 className="text-2xl font-cormorant font-bold text-[var(--color-text)] mb-2">
+                  {item.name}
+                </h3>
+                <p className="text-sm text-[var(--color-primary)] font-semibold mb-4">
+                  {item.tagline}
+                </p>
+
+                <p className="text-[var(--color-text-muted)] mb-6 leading-relaxed">
+                  {item.description}
+                </p>
+
+                {/* Benefits */}
+                <ul className="space-y-3 mb-8">
+                  {item.benefits.map((benefit) => (
+                    <li key={benefit} className="flex items-start gap-3">
+                      <span className="text-[var(--color-primary)] font-bold mt-1">✓</span>
+                      <span className="text-sm text-[var(--color-text-muted)]">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* CTA */}
+                <AffiliateCTA
+                  label="Bestel nu →"
+                  product={item.product}
+                  variant="primary"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Guarantee Bar */}
+        <div className="bg-[var(--color-primary)]/5 border border-[var(--color-border)] rounded-xl p-8">
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div>
+              <p className="text-2xl font-bold text-[var(--color-primary)] mb-2">30 Dagen</p>
+              <p className="text-sm text-[var(--color-text-muted)]">Geld-terug garantie, geen vragen gesteld</p>
+            </div>
+            <div>
+              <p className="text-2xl font-bold text-[var(--color-primary)] mb-2">€8 Korting</p>
+              <p className="text-sm text-[var(--color-text-muted)]">Op je eerste bestelling via onze link</p>
+            </div>
+            <div>
+              <p className="text-2xl font-bold text-[var(--color-primary)] mb-2">Gratis Verzending</p>
+              <p className="text-sm text-[var(--color-text-muted)]">Vanaf €175 (of abonnement -10%)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
