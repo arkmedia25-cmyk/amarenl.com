@@ -120,7 +120,7 @@ export default function ProductGrid() {
         <div className="mt-16 flex flex-wrap justify-center items-center gap-6 opacity-40 grayscale text-[9px] font-bold uppercase tracking-widest">
           <span>iDEAL</span>
           <span className="w-1 h-1 bg-current rounded-full" />
-          <span>PostNL</span>
+          <span>Amare</span>
           <span className="w-1 h-1 bg-current rounded-full" />
           <span>30 Dagen Garantie</span>
         </div>

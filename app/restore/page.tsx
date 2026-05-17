@@ -12,7 +12,7 @@ import {
 export const metadata = {
   title: "Restore Kopen — Probiotica & Spijsverteringsenzymen | AmareNL",
   description:
-    "Amare Restore: 5 probiotische stammen (2 miljard KVE) + 5 enzymen incl. lactase + 9 botanische extracten. Voor darmflora & spijsvertering. Vanuit Nederland verzonden.",
+    "Amare Restore: 5 probiotische stammen (2 miljard KVE) + 5 enzymen incl. lactase + 9 botanische extracten. Voor darmflora & spijsvertering. Direct van Amare — premium kwaliteit.",
 };
 
 const faqs = [
@@ -42,9 +42,9 @@ const faqs = [
       "Sommige gebruikers ervaren de eerste dagen lichte veranderingen in de stoelgang wanneer ze starten met probiotica — dit is normaal en meestal tijdelijk. Je darmflora past zich aan de nieuwe bacteriestammen aan. Als dit langer dan een week aanhoudt, halveer dan de dosering en bouw langzaam op.",
   },
   {
-    question: "Wordt Restore vanuit Nederland verzonden?",
+    question: "Kan ik dit product gebruiken in combinatie met medicatie?",
     answer:
-      "Ja! Sinds begin 2026 worden Amare producten rechtstreeks vanuit Nederland verzonden via PostNL. Dat betekent: geen douaneproces, geen extra importkosten, en snelle levering — meestal 1-2 werkdagen. Ook naar België wordt zonder douane verzonden.",
+      "Raadpleeg altijd eerst je arts voordat je supplementen combineert met voorgeschreven medicatie. Hoewel Amare producten gemaakt zijn met natuurlijke ingrediënten, kunnen interacties met bepaalde medicijnen niet worden uitgesloten. Je arts kent jouw medische geschiedenis en kan het beste adviseren.",
   },
 ];
 
@@ -143,7 +143,7 @@ export default function RestorePage() {
               </p>
               <p className="text-sm text-[var(--color-text-muted)] mb-6">
                 Inclusief lactase voor ondersteuning bij lactose-intolerantie.{" "}
-                <strong>Vanuit Nederland verzonden, geen douane.</strong>
+                <strong>Direct van Amare — premium kwaliteit.</strong>
               </p>
               <div className="flex flex-col sm:flex-row gap-3 mb-4">
                 <AffiliateCTA
@@ -367,7 +367,7 @@ export default function RestorePage() {
             <AffiliateCTA label="Bestel nu — Abonnement €29,70/maand" product="restore" variant="urgency" />
           </div>
           <p className="mt-4 text-[10px] text-white/60">
-            🛡️ 30 dagen geld-terug-garantie &middot; 🚚 Gratis verzending vanaf €175 &middot; 📦 Vanuit Nederland verzonden
+            🛡️ 30 dagen geld-terug-garantie &middot; 🚚 Gratis verzending vanaf €175 &middot; 📦 Direct van Amare
           </p>
         </div>
       </section>
@@ -435,9 +435,9 @@ export default function RestorePage() {
             </div>
             <div className="flex flex-wrap justify-center gap-4 text-[10px] font-bold text-[var(--color-text-muted)] uppercase tracking-wider">
               <span>🛡️ 30 dagen garantie</span><span className="text-[var(--color-border)]">|</span>
-              <span>🚚 Snelle PostNL levering</span><span className="text-[var(--color-border)]">|</span>
-              <span>🇳🇱 Vanuit Nederland</span><span className="text-[var(--color-border)]">|</span>
-              <span>🔄 Geen douane</span>
+              <span>🚚 Wetenschappelijk onderbouwd</span><span className="text-[var(--color-border)]">|</span>
+              <span>🌿 Natuurlijke ingrediënten</span><span className="text-[var(--color-border)]">|</span>
+              <span>⭐ 10.000+ klanten</span>
             </div>
             <p className="mt-6 text-[9px] text-[var(--color-text-muted)]">
               * Affiliate link — je betaalt hetzelfde bedrag, wij ontvangen een commissie.<br />

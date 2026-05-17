@@ -12,7 +12,7 @@ import {
 export const metadata = {
   title: "Happy Juice Pack Kopen — Energie, Stemming & Focus | AmareNL",
   description:
-    "Het Happy Juice Pack van Amare is de #1 bundel voor mentale energie, focus en een stabiele stemming. MentaBiotics + Energy+ + EDGE+. Vanuit Nederland verzonden, geen douane.",
+    "Het Happy Juice Pack van Amare is de #1 bundel voor mentale energie, focus en een stabiele stemming. MentaBiotics + Energy+ + EDGE+. Direct van Amare — premium kwaliteit.",
 };
 
 const faqs = [
@@ -42,9 +42,9 @@ const faqs = [
       "Absoluut. Happy Juice werkt uitstekend samen met andere Amare producten zoals Restore (extra spijsverteringsenzymen), Sunset (omega-3 voor het brein) en de Triangle of Wellness. Veel gebruikers bouwen hun routine geleidelijk uit. Begin met Happy Juice en voeg later andere producten toe op basis van je behoeften.",
   },
   {
-    question: "Wordt Happy Juice vanuit Nederland verzonden?",
+    question: "Kan ik dit product gebruiken in combinatie met medicatie?",
     answer:
-      "Ja! Sinds begin 2026 worden Amare producten rechtstreeks vanuit Nederland verzonden via PostNL. Dat betekent: geen douaneproces, geen extra importkosten, en snelle levering (meestal 1-2 werkdagen). Ook naar België wordt zonder douane verzonden — je ontvangt je bestelling snel en zonder verrassingen.",
+      "Raadpleeg altijd eerst je arts voordat je supplementen combineert met voorgeschreven medicatie. Hoewel Amare producten gemaakt zijn met natuurlijke ingrediënten, kunnen interacties met bepaalde medicijnen niet worden uitgesloten. Je arts kent jouw medische geschiedenis en kan het beste adviseren.",
   },
 ];
 
@@ -63,7 +63,7 @@ export default function HappyJuicePackPage() {
     name: "Amare Happy Juice Pack® - Amare EDGE+™ Mango",
     nameNL: "Amare Happy Juice Pack®",
     description:
-      "Het Happy Juice Pack is Amare's #1 productbundel voor mentale energie, focus en een stabiele stemming. Combineert MentaBiotics (probiotica), Energy+ (natuurlijke energie) en Amare EDGE+ (focus nootropicum) voor complete gut-brain ondersteuning. Vanuit Nederland verzonden.",
+      "Het Happy Juice Pack is Amare's #1 productbundel voor mentale energie, focus en een stabiele stemming. Combineert MentaBiotics (probiotica), Energy+ (natuurlijke energie) en Amare EDGE+ (focus nootropicum) voor complete gut-brain ondersteuning. Direct van Amare — premium kwaliteit.",
     image: productImage,
     slug: "happy-juice-pack",
     priceRetail: 172.22,
@@ -115,7 +115,7 @@ export default function HappyJuicePackPage() {
                 Happy Juice Pack<span className="text-[var(--color-primary)]">®</span>
               </h1>
               <p className="text-lg text-[var(--color-text-muted)] mb-6 leading-relaxed">
-                De #1 bundel van Amare voor mentale energie, focus en een stabiele stemming — wetenschappelijk onderbouwd, gemaakt met natuurlijke ingrediënten. <strong>Vanuit Nederland verzonden, geen douane.</strong>
+                De #1 bundel van Amare voor mentale energie, focus en een stabiele stemming — wetenschappelijk onderbouwd, gemaakt met natuurlijke ingrediënten. <strong>Direct van Amare — premium kwaliteit.</strong>
               </p>
               <div className="flex flex-col sm:flex-row gap-3 mb-4">
                 <AffiliateCTA label="Bestel bij Amare → €155,33/maand" product="happy-juice-pack-amare-edge-mango" variant="primary" />
@@ -291,7 +291,7 @@ export default function HappyJuicePackPage() {
             <AffiliateCTA label="Bestel nu — Abonnement €155,33/maand" product="happy-juice-pack-amare-edge-mango" variant="urgency" />
           </div>
           <p className="mt-4 text-[10px] text-white/60">
-            🛡️ 30 dagen geld-terug-garantie &middot; 🚚 Gratis verzending vanaf €175 &middot; 📦 Vanuit Nederland verzonden
+            🛡️ 30 dagen geld-terug-garantie &middot; 🚚 Gratis verzending vanaf €175 &middot; 📦 Direct van Amare
           </p>
         </div>
       </section>
@@ -368,11 +368,11 @@ export default function HappyJuicePackPage() {
             <div className="flex flex-wrap justify-center gap-4 text-[10px] font-bold text-[var(--color-text-muted)] uppercase tracking-wider">
               <span>🛡️ 30 dagen garantie</span>
               <span className="text-[var(--color-border)]">|</span>
-              <span>🚚 Snelle PostNL levering</span>
+              <span>🚚 Wetenschappelijk onderbouwd</span>
               <span className="text-[var(--color-border)]">|</span>
-              <span>🇳🇱 Vanuit Nederland</span>
+              <span>🌿 Natuurlijke ingrediënten</span>
               <span className="text-[var(--color-border)]">|</span>
-              <span>🔄 Geen douane</span>
+              <span>⭐ 10.000+ klanten</span>
             </div>
             <p className="mt-6 text-[9px] text-[var(--color-text-muted)]">
               * Affiliate link — je betaalt hetzelfde bedrag, wij ontvangen een commissie.<br />

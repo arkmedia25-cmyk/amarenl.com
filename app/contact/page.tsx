@@ -146,7 +146,7 @@ export default function Contact() {
                   <div>
                     <h3 className="font-bold text-[var(--color-text)] text-sm mb-1">Social media</h3>
                     <p className="text-xs text-[var(--color-text-muted)]">
-                      Volg ons op Instagram en Facebook voor tips, aanbiedingen en het laatste nieuws over Amare producten.
+                      Volg ons op Instagram en Amare voor tips, aanbiedingen en het laatste nieuws over Amare producten.
                     </p>
                   </div>
                 </div>

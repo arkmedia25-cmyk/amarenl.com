@@ -12,7 +12,7 @@ import {
 export const metadata = {
   title: "Amare Origin Kopen — 100% Plantaardige Eiwitshake | AmareNL",
   description:
-    "Amare Origin: 23 g plantaardig eiwit uit erwten, pompoenpit en tuinbonen. Met calcium, magnesium, zink en MCT-olie. 100% vegan, allergeenvrij. Vanuit Nederland verzonden.",
+    "Amare Origin: 23 g plantaardig eiwit uit erwten, pompoenpit en tuinbonen. Met calcium, magnesium, zink en MCT-olie. 100% vegan, allergeenvrij. Direct van Amare — premium kwaliteit.",
 };
 
 const faqs = [
@@ -42,9 +42,9 @@ const faqs = [
       "Ja, Origin is één van de meest allergeenvrije eiwitshakes op de markt: 100% vegan, glutenvrij, lactosevrij, sojavrij en notenvrij. Gemaakt in een faciliteit die kruisbesmetting minimaliseert. Altijd het etiket controleren als je een specifieke allergie hebt.",
   },
   {
-    question: "Wordt Origin vanuit Nederland verzonden?",
+    question: "Kan ik dit product gebruiken in combinatie met medicatie?",
     answer:
-      "Ja! Sinds begin 2026 worden Amare producten rechtstreeks vanuit Nederland verzonden via PostNL. Dat betekent: geen douaneproces, geen extra importkosten, en snelle levering — meestal 1-2 werkdagen. Ook naar België wordt zonder douane verzonden.",
+      "Raadpleeg altijd eerst je arts voordat je supplementen combineert met voorgeschreven medicatie. Hoewel Amare producten gemaakt zijn met natuurlijke ingrediënten, kunnen interacties met bepaalde medicijnen niet worden uitgesloten. Je arts kent jouw medische geschiedenis en kan het beste adviseren.",
   },
 ];
 
@@ -148,7 +148,7 @@ export default function OriginPage() {
               </p>
               <p className="text-sm text-[var(--color-text-muted)] mb-6">
                 Vegane proteïne zonder compromissen — chocoladesmaak, allergeenvrij.{" "}
-                <strong>Vanuit Nederland verzonden, geen douane.</strong>
+                <strong>Direct van Amare — premium kwaliteit.</strong>
               </p>
               <div className="flex flex-col sm:flex-row gap-3 mb-4">
                 <AffiliateCTA
@@ -472,7 +472,7 @@ export default function OriginPage() {
           </div>
           <p className="mt-4 text-[10px] text-white/60">
             🛡️ 30 dagen geld-terug-garantie &middot; 🚚 Gratis verzending vanaf
-            €175 &middot; 📦 Vanuit Nederland verzonden
+            €175 &middot; 📦 Direct van Amare
           </p>
         </div>
       </section>
@@ -586,11 +586,11 @@ export default function OriginPage() {
             <div className="flex flex-wrap justify-center gap-4 text-[10px] font-bold text-[var(--color-text-muted)] uppercase tracking-wider">
               <span>🛡️ 30 dagen garantie</span>
               <span className="text-[var(--color-border)]">|</span>
-              <span>🚚 Snelle PostNL levering</span>
+              <span>🚚 Wetenschappelijk onderbouwd</span>
               <span className="text-[var(--color-border)]">|</span>
-              <span>🇳🇱 Vanuit Nederland</span>
+              <span>🌿 Natuurlijke ingrediënten</span>
               <span className="text-[var(--color-border)]">|</span>
-              <span>🔄 Geen douane</span>
+              <span>⭐ 10.000+ klanten</span>
             </div>
             <p className="mt-6 text-[9px] text-[var(--color-text-muted)]">
               * Affiliate link — je betaalt hetzelfde bedrag, wij ontvangen een commissie.

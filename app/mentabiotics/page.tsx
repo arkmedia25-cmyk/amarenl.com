@@ -12,7 +12,7 @@ import {
 export const metadata = {
   title: "MentaBiotics Kopen — Probiotica voor Mentale Veerkracht | AmareNL",
   description:
-    "Amare MentaBiotics met Cerebiome® blend: probiotica voor de darm-hersen-as. Magnesium voor normale psychologische functie. Vanuit Nederland verzonden, geen douane.",
+    "Amare MentaBiotics met Cerebiome® blend: probiotica voor de darm-hersen-as. Magnesium voor normale psychologische functie. Direct van Amare — premium kwaliteit.",
 };
 
 const faqs = [
@@ -42,9 +42,9 @@ const faqs = [
       "MentaBiotics is een voedingssupplement, geen geneesmiddel. Het bevat van nature voorkomende bacteriestammen, prebiotische vezels, magnesium en botanische extracten — allemaal ingrediënten met een lange geschiedenis van veilig gebruik. Let op: MentaBiotics bevat 1 mg EGCG per dagelijkse dosis uit groene thee-extract; combineer het niet met andere groene theesupplementen op dezelfde dag. Niet geschikt voor zwangere vrouwen, borstvoeding gevende vrouwen en kinderen onder de 18 jaar.",
   },
   {
-    question: "Wordt MentaBiotics vanuit Nederland verzonden?",
+    question: "Kan ik dit product gebruiken in combinatie met medicatie?",
     answer:
-      "Ja! Sinds begin 2026 worden Amare producten rechtstreeks vanuit Nederland verzonden via PostNL. Dat betekent: geen douaneproces, geen extra importkosten, en snelle levering — meestal 1-2 werkdagen. Ook naar België wordt zonder douane verzonden. Je ontvangt je MentaBiotics snel en zonder verrassingen.",
+      "Raadpleeg altijd eerst je arts voordat je supplementen combineert met voorgeschreven medicatie. Hoewel Amare producten gemaakt zijn met natuurlijke ingrediënten, kunnen interacties met bepaalde medicijnen niet worden uitgesloten. Je arts kent jouw medische geschiedenis en kan het beste adviseren.",
   },
 ];
 
@@ -152,7 +152,7 @@ export default function MentaBioticsPage() {
               <p className="text-sm text-[var(--color-text-muted)] mb-6">
                 Magnesium draagt bij aan een normale psychologische functie en
                 aan de vermindering van vermoeidheid.{" "}
-                <strong>Vanuit Nederland verzonden, geen douane.</strong>
+                <strong>Direct van Amare — premium kwaliteit.</strong>
               </p>
               <div className="flex flex-col sm:flex-row gap-3 mb-4">
                 <AffiliateCTA
@@ -490,7 +490,7 @@ export default function MentaBioticsPage() {
           </div>
           <p className="mt-4 text-[10px] text-white/60">
             🛡️ 30 dagen geld-terug-garantie &middot; 🚚 Gratis verzending vanaf
-            €175 &middot; 📦 Vanuit Nederland verzonden
+            €175 &middot; 📦 Direct van Amare
           </p>
         </div>
       </section>
@@ -605,11 +605,11 @@ export default function MentaBioticsPage() {
             <div className="flex flex-wrap justify-center gap-4 text-[10px] font-bold text-[var(--color-text-muted)] uppercase tracking-wider">
               <span>🛡️ 30 dagen garantie</span>
               <span className="text-[var(--color-border)]">|</span>
-              <span>🚚 Snelle PostNL levering</span>
+              <span>🚚 Wetenschappelijk onderbouwd</span>
               <span className="text-[var(--color-border)]">|</span>
-              <span>🇳🇱 Vanuit Nederland</span>
+              <span>🌿 Natuurlijke ingrediënten</span>
               <span className="text-[var(--color-border)]">|</span>
-              <span>🔄 Geen douane</span>
+              <span>⭐ 10.000+ klanten</span>
             </div>
             <p className="mt-6 text-[9px] text-[var(--color-text-muted)]">
               * Affiliate link — je betaalt hetzelfde bedrag, wij ontvangen een commissie.

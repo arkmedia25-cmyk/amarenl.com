@@ -12,7 +12,7 @@ import {
 export const metadata = {
   title: "Sunrise 2-Pack Kopen — Ochtend Superfoods & 9 Vitaminen | AmareNL",
   description:
-    "Amare Sunrise: 22 superfoods, 9 essentiële vitaminen (C, B-complex, Biotine) in vloeibare ochtendformule. Voor energie, huid, haar en immuunsysteem. Vanuit Nederland verzonden.",
+    "Amare Sunrise: 22 superfoods, 9 essentiële vitaminen (C, B-complex, Biotine) in vloeibare ochtendformule. Voor energie, huid, haar en immuunsysteem. Direct van Amare — premium kwaliteit.",
 };
 
 const faqs = [
@@ -42,9 +42,9 @@ const faqs = [
       "Ja, Sunrise is ontworpen als dagelijkse basis die uitstekend combineert met andere Amare producten. Veel gebruikers nemen Sunrise in de ochtend en voegen Energy+ of MentaBiotics toe. Het is de ideale fundering van je dagelijkse supplementenroutine.",
   },
   {
-    question: "Wordt Sunrise vanuit Nederland verzonden?",
+    question: "Kan ik dit product gebruiken in combinatie met medicatie?",
     answer:
-      "Ja! Sinds begin 2026 worden Amare producten rechtstreeks vanuit Nederland verzonden via PostNL. Geen douane, geen extra kosten, snelle levering — meestal 1-2 werkdagen. Ook naar België zonder douane.",
+      "Raadpleeg altijd eerst je arts voordat je supplementen combineert met voorgeschreven medicatie. Hoewel Amare producten gemaakt zijn met natuurlijke ingrediënten, kunnen interacties met bepaalde medicijnen niet worden uitgesloten. Je arts kent jouw medische geschiedenis en kan het beste adviseren.",
   },
 ];
 
@@ -126,7 +126,7 @@ export default function SunrisePage() {
               </p>
               <p className="text-sm text-[var(--color-text-muted)] mb-6">
                 Biotine (300% RI) voor haar en huid. B-vitamines voor energie.{" "}
-                <strong>Vanuit Nederland verzonden, geen douane.</strong>
+                <strong>Direct van Amare — premium kwaliteit.</strong>
               </p>
               <div className="flex flex-col sm:flex-row gap-3 mb-4">
                 <AffiliateCTA label="Bestel bij Amare → €85,78/maand" product="sunrise-2-pack" variant="primary" />
@@ -313,9 +313,9 @@ export default function SunrisePage() {
             </div>
             <div className="flex flex-wrap justify-center gap-4 text-[10px] font-bold text-[var(--color-text-muted)] uppercase tracking-wider">
               <span>🛡️ 30 dagen garantie</span><span className="text-[var(--color-border)]">|</span>
-              <span>🚚 Snelle PostNL levering</span><span className="text-[var(--color-border)]">|</span>
-              <span>🇳🇱 Vanuit Nederland</span><span className="text-[var(--color-border)]">|</span>
-              <span>🔄 Geen douane</span>
+              <span>🚚 Wetenschappelijk onderbouwd</span><span className="text-[var(--color-border)]">|</span>
+              <span>🌿 Natuurlijke ingrediënten</span><span className="text-[var(--color-border)]">|</span>
+              <span>⭐ 10.000+ klanten</span>
             </div>
             <p className="mt-6 text-[9px] text-[var(--color-text-muted)]">
               * Affiliate link — je betaalt hetzelfde bedrag.<br />
