@@ -1,0 +1,50 @@
+{
+  "slug": "skin-to-mind-neunight-restore-renew-serum",
+  "name": "Skin to Mind NeuNight™ Restore + Renew Serum",
+  "nameNL": "Skin to Mind NeuNight™ Restore + Renew Serum",
+  "shortNameNL": "Skin to Mind NeuNight™ Restore + Renew Serum",
+  "category": "schoonheid",
+  "taglineNL": "Huid, haar & nagels verzorging",
+  "description": {
+    "short": "Huid, haar & nagels verzorging",
+    "long": "Skin to Mind NeuNight™ Restore + Renew Serum is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+  },
+  "pricing": {
+    "subscription": 97.89,
+    "oneTime": 108.84,
+    "currency": "EUR",
+    "savings": 10.95,
+    "savingsPercent": 10.1
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/NueNight_800.jpg",
+    "alt": "Skin to Mind NeuNight™ Restore + Renew Serum — Amare supplement"
+  },
+  "benefits": [
+    "Hoogwaardige ingrediënten",
+    "Wetenschappelijk onderbouwd",
+    "gemaakt met natuurlijke ingrediënten"
+  ],
+  "usage": {
+    "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/skin-to-mind-neunight-restore-renew-serum",
+    "sourceTag": "amarenl-product-page"
+  },
+  "relatedProducts": [],
+  "tags": [],
+  "seo": {
+    "title": "Skin to Mind NeuNight™ Restore + Renew Serum Kopen | Beste Prijs Nederland 2026",
+    "description": "Huid, haar & nagels verzorging",
+    "keywords": []
+  },
+  "isNew": true,
+  "isBestseller": false,
+  "isPack": false,
+  "priority": 25,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

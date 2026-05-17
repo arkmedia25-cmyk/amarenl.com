@@ -17,7 +17,7 @@ const values = [
   {
     icon: Leaf,
     title: "Natuurlijk",
-    text: "Wij geloven in de kracht van natuurlijke ingrediënten. Alle Amare producten zijn 100% natuurlijk en wetenschappelijk onderbouwd.",
+    text: "Wij geloven in de kracht van natuurlijke ingrediënten. Alle Amare producten zijn gemaakt met natuurlijke ingrediënten en wetenschappelijk onderbouwd.",
   },
   {
     icon: Heart,

@@ -1,0 +1,50 @@
+{
+  "slug": "xtreme-56ml-2-pack",
+  "name": "Amare Xtreme 56ml 2-Pack",
+  "nameNL": "Amare Xtreme 56ml 2-Pack",
+  "shortNameNL": "Amare Xtreme 56ml 2-Pack",
+  "category": "essentials",
+  "taglineNL": "Dagelijkse basisondersteuning",
+  "description": {
+    "short": "Dagelijkse basisondersteuning",
+    "long": "Amare Xtreme 56ml 2-Pack is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+  },
+  "pricing": {
+    "subscription": 100.66,
+    "oneTime": 111.84,
+    "currency": "EUR",
+    "savings": 11.18,
+    "savingsPercent": 10
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Nitro-Xtreme-56ml-2pk-EU-800.jpg",
+    "alt": "Amare Xtreme 56ml 2-Pack — Amare supplement"
+  },
+  "benefits": [
+    "Hoogwaardige ingrediënten",
+    "Wetenschappelijk onderbouwd",
+    "gemaakt met natuurlijke ingrediënten"
+  ],
+  "usage": {
+    "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/nitro-xtreme-56ml-2pack",
+    "sourceTag": "amarenl-product-page"
+  },
+  "relatedProducts": [],
+  "tags": [],
+  "seo": {
+    "title": "Amare Xtreme 56ml 2-Pack Kopen | Beste Prijs Nederland 2026",
+    "description": "Dagelijkse basisondersteuning",
+    "keywords": []
+  },
+  "isNew": false,
+  "isBestseller": false,
+  "isPack": true,
+  "priority": 15,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

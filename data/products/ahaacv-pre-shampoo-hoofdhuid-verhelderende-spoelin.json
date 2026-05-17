@@ -1,0 +1,50 @@
+{
+  "slug": "ahaacv-pre-shampoo-hoofdhuid-verhelderende-spoelin",
+  "name": "AHA+ACV Pre-Shampoo Hoofdhuid Verhelderende Spoeling",
+  "nameNL": "AHA+ACV Pre-Shampoo Hoofdhuid Verhelderende Spoeling",
+  "shortNameNL": "AHA+ACV Pre-Shampoo Hoofdhuid Verhelderende Spoeling",
+  "category": "schoonheid",
+  "taglineNL": "Huid, haar & nagels verzorging",
+  "description": {
+    "short": "Huid, haar & nagels verzorging",
+    "long": "AHA+ACV Pre-Shampoo Hoofdhuid Verhelderende Spoeling is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+  },
+  "pricing": {
+    "subscription": 28.81,
+    "oneTime": 32.99,
+    "currency": "EUR",
+    "savings": 4.18,
+    "savingsPercent": 12.7
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/AHA_ACV_Pre_Shampoo_BE_800.jpg",
+    "alt": "AHA+ACV Pre-Shampoo Hoofdhuid Verhelderende Spoeling — Amare supplement"
+  },
+  "benefits": [
+    "Hoogwaardige ingrediënten",
+    "Wetenschappelijk onderbouwd",
+    "gemaakt met natuurlijke ingrediënten"
+  ],
+  "usage": {
+    "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/pre-shampoo-clarifying-rinse",
+    "sourceTag": "amarenl-product-page"
+  },
+  "relatedProducts": [],
+  "tags": [],
+  "seo": {
+    "title": "AHA+ACV Pre-Shampoo Hoofdhuid Verhelderende Spoeling Kopen | Beste Prijs Nederland 2026",
+    "description": "Huid, haar & nagels verzorging",
+    "keywords": []
+  },
+  "isNew": true,
+  "isBestseller": false,
+  "isPack": false,
+  "priority": 28,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

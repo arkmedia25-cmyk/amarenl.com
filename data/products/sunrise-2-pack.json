@@ -1,0 +1,148 @@
+{
+  "slug": "sunrise-2-pack",
+  "name": "Amare Sunrise 2-Pack",
+  "nameNL": "Amare Sunrise 2-Pack",
+  "shortNameNL": "Amare Sunrise 2-Pack",
+  "category": "essentials",
+  "taglineNL": "Ochtend superfoods & 9 vitaminen",
+  "description": {
+    "short": "Ochtend superfoods & 9 vitaminen",
+    "long": "Sunrise is een vloeibare ochtendformule met 22 zorgvuldig geselecteerde superfoods en 9 essentiële vitaminen. Bevat bessen (bosbes, blauwe bes, Canadese bosbes, framboos, aronia, vossenbes, cranberry, açaí), groene planten (spinazie, boerenkool, broccoli), granaatappel, mangosteen, druivenschil en Panax ginseng extract. De 9 vitaminen (C, B1, B2, B3, B5, B6, B9, B12, Biotine) ondersteunen energie, immuunsysteem, huid, haar en psychologische functie."
+  },
+  "pricing": {
+    "subscription": 85.78,
+    "oneTime": 95.31,
+    "currency": "EUR",
+    "savings": 9.53,
+    "savingsPercent": 10
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Sunrise-2pk-EU-800.jpg",
+    "alt": "Amare Sunrise 2-Pack — Amare supplement"
+  },
+  "ingredients": [
+    {
+      "name": "Vitamine C (L-ascorbinezuur)",
+      "amount": "60 mg (75% RI)"
+    },
+    {
+      "name": "Niacine (Vitamine B3)",
+      "amount": "25 mg NE (156% RI)"
+    },
+    {
+      "name": "Pantotheenzuur (Vitamine B5)",
+      "amount": "15 mg (250% RI)"
+    },
+    {
+      "name": "Vitamine B6",
+      "amount": "1.7 mg (121% RI)"
+    },
+    {
+      "name": "Vitamine B2 (Riboflavine)",
+      "amount": "1.7 mg (121% RI)"
+    },
+    {
+      "name": "Vitamine B1 (Thiamine)",
+      "amount": "1.5 mg (136% RI)"
+    },
+    {
+      "name": "Foliumzuur (Vitamine B9)",
+      "amount": "200 µg (100% RI)"
+    },
+    {
+      "name": "Biotine (Vitamine B7/H)",
+      "amount": "150 µg (300% RI)"
+    },
+    {
+      "name": "Vitamine B12",
+      "amount": "3 µg (120% RI)"
+    },
+    {
+      "name": "Taurine",
+      "amount": "200 mg"
+    },
+    {
+      "name": "Inositol",
+      "amount": "25 mg"
+    },
+    {
+      "name": "Panax ginseng extract",
+      "amount": "1.57 mg"
+    },
+    {
+      "name": "Amla bessenextract",
+      "amount": "1.023 mg"
+    }
+  ],
+  "benefits": [
+    "22 superfoods waaronder 8 soorten bessen, groene groenten en granaatappel",
+    "9 essentiële vitaminen in één portie (30 ml)",
+    "Vitamine C, B2, B6, B9, B12, B3 en B5 voor vermindering van vermoeidheid",
+    "Biotine (150 µg, 300% RI) voor normaal haar en huid",
+    "Panax ginseng extract en taurine (200 mg)"
+  ],
+  "usage": {
+    "dosage": "Begin de dag met 1 pouch Sunrise (30 ml). Maak er je ochtendroutine van. Geschikt voor volwassenen.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "mechanismNL": "De 9 B-vitamines en vitamine C ondersteunen het natuurlijke energiemetabolisme, de psychologische functie en het immuunsysteem. De polyfenolen uit bessen, granaatappel en groene groenten helpen cellen beschermen tegen oxidatieve stress. Taurine en ginseng ondersteunen mentale alertheid.",
+  "targetAudienceNL": "Volwassenen die hun ochtend willen starten met een complete voedingsboost. Ideaal als dagelijkse basis naast een gezonde levensstijl.",
+  "faqs": [
+    {
+      "q": "Wanneer neem ik Sunrise het beste in?",
+      "a": "Sunrise is speciaal ontwikkeld voor de ochtend. Neem 1 pouch (30 ml) bij het ontbijt of direct na het opstaan. Het maakt deel uit van de Triangle of Wellness: Sunrise (ochtend) → Nitro (middag) → Sunset (avond)."
+    },
+    {
+      "q": "Bevat Sunrise toegevoegde suikers?",
+      "a": "Sunrise bevat fructose uit vruchtensapconcentraten en is gezoet met steviolglycosiden uit stevia. Het bevat geen geraffineerde suiker of kunstmatige zoetstoffen."
+    },
+    {
+      "q": "Is Sunrise geschikt voor veganisten?",
+      "a": "Ja, Sunrise is 100% plantaardig, vegan, glutenvrij, lactosevrij, sojavrij en notenvrij."
+    }
+  ],
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/sunrise-2pack",
+    "sourceTag": "amarenl-product-page"
+  },
+  "relatedProducts": [
+    "amare-nitro-xtreme-56ml",
+    "amare-sunset"
+  ],
+  "tags": [
+    "ochtend supplement",
+    "superfoods vitaminen",
+    "dagelijkse vitamines",
+    "natuurlijke energie ochtend",
+    "bessen extract supplement"
+  ],
+  "seo": {
+    "title": "Amare Sunrise 2-Pack Kopen | Beste Prijs Nederland 2026",
+    "description": "Ochtend superfoods & 9 vitaminen",
+    "keywords": [
+      "ochtend supplement",
+      "superfoods vitaminen",
+      "dagelijkse vitamines",
+      "natuurlijke energie ochtend",
+      "bessen extract supplement"
+    ]
+  },
+  "synergies": [
+    "amare-nitro-xtreme-56ml",
+    "amare-sunset"
+  ],
+  "seoKeywordsNL": [
+    "ochtend supplement",
+    "superfoods vitaminen",
+    "dagelijkse vitamines",
+    "natuurlijke energie ochtend",
+    "bessen extract supplement"
+  ],
+  "isNew": false,
+  "isBestseller": false,
+  "isPack": false,
+  "priority": 12,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

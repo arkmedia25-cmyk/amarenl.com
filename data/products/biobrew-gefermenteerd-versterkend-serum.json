@@ -1,0 +1,50 @@
+{
+  "slug": "biobrew-gefermenteerd-versterkend-serum",
+  "name": "BioBrew™ Gefermenteerd Versterkend Serum",
+  "nameNL": "BioBrew™ Gefermenteerd Versterkend Serum",
+  "shortNameNL": "BioBrew™ Gefermenteerd Versterkend Serum",
+  "category": "schoonheid",
+  "taglineNL": "Huid, haar & nagels verzorging",
+  "description": {
+    "short": "Huid, haar & nagels verzorging",
+    "long": "BioBrew™ Gefermenteerd Versterkend Serum is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+  },
+  "pricing": {
+    "subscription": 30.88,
+    "oneTime": 35.05,
+    "currency": "EUR",
+    "savings": 4.17,
+    "savingsPercent": 11.9
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/BioBrew_Serum_BE_800.jpg",
+    "alt": "BioBrew™ Gefermenteerd Versterkend Serum — Amare supplement"
+  },
+  "benefits": [
+    "Hoogwaardige ingrediënten",
+    "Wetenschappelijk onderbouwd",
+    "gemaakt met natuurlijke ingrediënten"
+  ],
+  "usage": {
+    "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/biobrew-fermented-strengthening-serum",
+    "sourceTag": "amarenl-product-page"
+  },
+  "relatedProducts": [],
+  "tags": [],
+  "seo": {
+    "title": "BioBrew™ Gefermenteerd Versterkend Serum Kopen | Beste Prijs Nederland 2026",
+    "description": "Huid, haar & nagels verzorging",
+    "keywords": []
+  },
+  "isNew": true,
+  "isBestseller": false,
+  "isPack": false,
+  "priority": 29,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

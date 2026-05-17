@@ -1,0 +1,50 @@
+{
+  "slug": "happy-lifestyle-pack-basic",
+  "name": "Happy Lifestyle Pack Basic",
+  "nameNL": "Happy Lifestyle Pack Basic",
+  "shortNameNL": "Happy Lifestyle Pack Basic",
+  "category": "pakketten",
+  "taglineNL": "Beste waarde bundel",
+  "description": {
+    "short": "Beste waarde bundel",
+    "long": "Happy Lifestyle Pack Basic is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+  },
+  "pricing": {
+    "subscription": 277.68,
+    "oneTime": 308.22,
+    "currency": "EUR",
+    "savings": 30.54,
+    "savingsPercent": 9.9
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Happy-Lifestyle-Pack-Basic-EU-new-800.jpg",
+    "alt": "Happy Lifestyle Pack Basic — Amare supplement"
+  },
+  "benefits": [
+    "Hoogwaardige ingrediënten",
+    "Wetenschappelijk onderbouwd",
+    "gemaakt met natuurlijke ingrediënten"
+  ],
+  "usage": {
+    "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/happy-lifestyle-pack-basic",
+    "sourceTag": "amarenl-product-page"
+  },
+  "relatedProducts": [],
+  "tags": [],
+  "seo": {
+    "title": "Happy Lifestyle Pack Basic Kopen | Beste Prijs Nederland 2026",
+    "description": "Beste waarde bundel",
+    "keywords": []
+  },
+  "isNew": false,
+  "isBestseller": false,
+  "isPack": true,
+  "priority": 16,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

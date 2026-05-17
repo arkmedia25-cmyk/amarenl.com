@@ -1,0 +1,50 @@
+{
+  "slug": "verduidelijk-droogshampoo-poeder",
+  "name": "Verduidelijk Droogshampoo Poeder",
+  "nameNL": "Verduidelijk Droogshampoo Poeder",
+  "shortNameNL": "Verduidelijk Droogshampoo Poeder",
+  "category": "schoonheid",
+  "taglineNL": "Huid, haar & nagels verzorging",
+  "description": {
+    "short": "Huid, haar & nagels verzorging",
+    "long": "Verduidelijk Droogshampoo Poeder is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+  },
+  "pricing": {
+    "subscription": 29.85,
+    "oneTime": 34.02,
+    "currency": "EUR",
+    "savings": 4.17,
+    "savingsPercent": 12.3
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Clarify_Dry_Shampoo_Powder_CZ_800.jpg",
+    "alt": "Verduidelijk Droogshampoo Poeder — Amare supplement"
+  },
+  "benefits": [
+    "Hoogwaardige ingrediënten",
+    "Wetenschappelijk onderbouwd",
+    "gemaakt met natuurlijke ingrediënten"
+  ],
+  "usage": {
+    "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/clarify-dry-shampoo-powder",
+    "sourceTag": "amarenl-product-page"
+  },
+  "relatedProducts": [],
+  "tags": [],
+  "seo": {
+    "title": "Verduidelijk Droogshampoo Poeder Kopen | Beste Prijs Nederland 2026",
+    "description": "Huid, haar & nagels verzorging",
+    "keywords": []
+  },
+  "isNew": true,
+  "isBestseller": false,
+  "isPack": false,
+  "priority": 37,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

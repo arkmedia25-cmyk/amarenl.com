@@ -1,0 +1,50 @@
+{
+  "slug": "collectie-voor-vette-hoofdhuid-en-fijn-haar",
+  "name": "Collectie voor vette hoofdhuid en fijn haar",
+  "nameNL": "Collectie voor vette hoofdhuid en fijn haar",
+  "shortNameNL": "Collectie voor vette hoofdhuid en fijn haar",
+  "category": "schoonheid",
+  "taglineNL": "Huid, haar & nagels verzorging",
+  "description": {
+    "short": "Huid, haar & nagels verzorging",
+    "long": "Collectie voor vette hoofdhuid en fijn haar is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+  },
+  "pricing": {
+    "subscription": 151.55,
+    "oneTime": 171.4,
+    "currency": "EUR",
+    "savings": 19.85,
+    "savingsPercent": 11.6
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Collection_For_Oily_Scalp_and_Fine_Hair_EU_800x800.jpg",
+    "alt": "Collectie voor vette hoofdhuid en fijn haar — Amare supplement"
+  },
+  "benefits": [
+    "Hoogwaardige ingrediënten",
+    "Wetenschappelijk onderbouwd",
+    "gemaakt met natuurlijke ingrediënten"
+  ],
+  "usage": {
+    "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/collection-oily-scalp-fine-hair",
+    "sourceTag": "amarenl-product-page"
+  },
+  "relatedProducts": [],
+  "tags": [],
+  "seo": {
+    "title": "Collectie voor vette hoofdhuid en fijn haar Kopen | Beste Prijs Nederland 2026",
+    "description": "Huid, haar & nagels verzorging",
+    "keywords": []
+  },
+  "isNew": true,
+  "isBestseller": false,
+  "isPack": false,
+  "priority": 31,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

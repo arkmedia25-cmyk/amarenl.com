@@ -1,0 +1,50 @@
+{
+  "slug": "haarverdikkende-collectie-voor-volume",
+  "name": "Haarverdikkende Collectie voor Volume",
+  "nameNL": "Haarverdikkende Collectie voor Volume",
+  "shortNameNL": "Haarverdikkende Collectie voor Volume",
+  "category": "schoonheid",
+  "taglineNL": "Huid, haar & nagels verzorging",
+  "description": {
+    "short": "Huid, haar & nagels verzorging",
+    "long": "Haarverdikkende Collectie voor Volume is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+  },
+  "pricing": {
+    "subscription": 132.02,
+    "oneTime": 148.87,
+    "currency": "EUR",
+    "savings": 16.85,
+    "savingsPercent": 11.3
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Densifying_Collection_for_Volume_EU_800x800.jpg",
+    "alt": "Haarverdikkende Collectie voor Volume — Amare supplement"
+  },
+  "benefits": [
+    "Hoogwaardige ingrediënten",
+    "Wetenschappelijk onderbouwd",
+    "gemaakt met natuurlijke ingrediënten"
+  ],
+  "usage": {
+    "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/collection-densifying-for-volume",
+    "sourceTag": "amarenl-product-page"
+  },
+  "relatedProducts": [],
+  "tags": [],
+  "seo": {
+    "title": "Haarverdikkende Collectie voor Volume Kopen | Beste Prijs Nederland 2026",
+    "description": "Huid, haar & nagels verzorging",
+    "keywords": []
+  },
+  "isNew": true,
+  "isBestseller": false,
+  "isPack": false,
+  "priority": 33,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

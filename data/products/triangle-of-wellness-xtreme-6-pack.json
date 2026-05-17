@@ -1,0 +1,50 @@
+{
+  "slug": "triangle-of-wellness-xtreme-6-pack",
+  "name": "Triangle of Wellness Xtreme™ 6-Pack",
+  "nameNL": "Triangle of Wellness Xtreme™ 6-Pack",
+  "shortNameNL": "Triangle of Wellness Xtreme™ 6-Pack",
+  "category": "essentials",
+  "taglineNL": "Dagelijkse basisondersteuning",
+  "description": {
+    "short": "Dagelijkse basisondersteuning",
+    "long": "Triangle of Wellness Xtreme™ 6-Pack is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+  },
+  "pricing": {
+    "subscription": 613.4,
+    "oneTime": 715.63,
+    "currency": "EUR",
+    "savings": 102.23,
+    "savingsPercent": 14.3
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Triangle-of-Wellness-Xtreme2-EU-800_25_x6.jpg",
+    "alt": "Triangle of Wellness Xtreme™ 6-Pack — Amare supplement"
+  },
+  "benefits": [
+    "Hoogwaardige ingrediënten",
+    "Wetenschappelijk onderbouwd",
+    "gemaakt met natuurlijke ingrediënten"
+  ],
+  "usage": {
+    "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/triangle-of-wellness-xtreme-6pack",
+    "sourceTag": "amarenl-product-page"
+  },
+  "relatedProducts": [],
+  "tags": [],
+  "seo": {
+    "title": "Triangle of Wellness Xtreme™ 6-Pack Kopen | Beste Prijs Nederland 2026",
+    "description": "Dagelijkse basisondersteuning",
+    "keywords": []
+  },
+  "isNew": false,
+  "isBestseller": false,
+  "isPack": true,
+  "priority": 23,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

@@ -1,0 +1,54 @@
+{
+  "slug": "on-4-pack",
+  "name": "Amare ON 4-Pack",
+  "nameNL": "Amare ON 4-Pack",
+  "shortNameNL": "Amare ON 4-Pack",
+  "category": "hersenen",
+  "taglineNL": "Mentale focus & veerkracht",
+  "description": {
+    "short": "Mentale focus & veerkracht",
+    "long": "Amare ON 4-Pack is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+  },
+  "pricing": {
+    "subscription": 98.37,
+    "oneTime": 109.31,
+    "currency": "EUR",
+    "savings": 10.94,
+    "savingsPercent": 10
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/ON-Raspberry-Grapefruit-4pk-EU-800.jpg",
+    "alt": "Amare ON 4-Pack — Amare supplement"
+  },
+  "benefits": [
+    "Hoogwaardige ingrediënten",
+    "Wetenschappelijk onderbouwd",
+    "gemaakt met natuurlijke ingrediënten"
+  ],
+  "usage": {
+    "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/onshots-4pack",
+    "sourceTag": "amarenl-product-page"
+  },
+  "ratings": {
+    "value": 4.5,
+    "count": 500
+  },
+  "relatedProducts": [],
+  "tags": [],
+  "seo": {
+    "title": "Amare ON 4-Pack Kopen | Beste Prijs Nederland 2026",
+    "description": "Mentale focus & veerkracht",
+    "keywords": []
+  },
+  "isNew": false,
+  "isBestseller": true,
+  "isPack": false,
+  "priority": 5,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

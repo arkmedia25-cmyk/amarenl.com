@@ -1,0 +1,116 @@
+{
+  "slug": "ignite-him",
+  "name": "Amare Ignite for HIM",
+  "nameNL": "Amare Ignite for HIM",
+  "shortNameNL": "Amare Ignite for HIM",
+  "category": "hersenen",
+  "taglineNL": "Mannelijke vitaliteit & testosteron",
+  "description": {
+    "short": "Mannelijke vitaliteit & testosteron",
+    "long": "Ignite for HIM combineert rode bietenpoeder (330 mg), Rhodiola Rosea-extract (150 mg, met 4,5 mg rosarin), Cordyceps Sinensis-extract (20 mg, gelijk aan 200 mg) en bamboe-extract (25 mg, met 17,5 mg silica) met zink (10 mg, 100% RI). Zink draagt bij aan het behoud van normale testosteronniveaus in het bloed, normale vruchtbaarheid en voortplanting, en een normale cognitieve functie."
+  },
+  "pricing": {
+    "subscription": 49.5,
+    "oneTime": 55,
+    "currency": "EUR",
+    "savings": 5.5,
+    "savingsPercent": 10
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Ignite-Him-EU-800.jpg",
+    "alt": "Amare Ignite for HIM — Amare supplement"
+  },
+  "ingredients": [
+    {
+      "name": "Rode bietenpoeder",
+      "amount": "330 mg"
+    },
+    {
+      "name": "Rhodiola Rosea-extract (3% rosarin)",
+      "amount": "150 mg (4,5 mg rosarin)"
+    },
+    {
+      "name": "Bamboe-extract (70% silica)",
+      "amount": "25 mg (17,5 mg silica)"
+    },
+    {
+      "name": "Cordyceps Sinensis-extract",
+      "amount": "20 mg (gelijk aan 200 mg)"
+    },
+    {
+      "name": "Zink(oxide)",
+      "amount": "10 mg (100% RI)"
+    }
+  ],
+  "benefits": [
+    "Zink (10 mg, 100% RI) voor behoud normale testosteronspiegel en vruchtbaarheid",
+    "Rhodiola Rosea-extract (150 mg) — adaptogeen voor stress en uithouding",
+    "Cordyceps Sinensis-extract — traditioneel Chinees kruid voor vitaliteit",
+    "Rode bietenpoeder (330 mg) voor natuurlijke nitraten",
+    "Bamboe-extract met silica (17,5 mg) voor bindweefselondersteuning"
+  ],
+  "usage": {
+    "dosage": "Neem dagelijks 2 capsules met water. 60 capsules (1 maand). Alleen voor volwassenen vanaf 18 jaar. Veganistisch, glutenvrij, lactosevrij.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "mechanismNL": "Zink is een essentieel mineraal betrokken bij meer dan 200 enzymatische reacties, waaronder de productie van testosteron. Rhodiola Rosea is een adaptogeen dat het lichaam helpt omgaan met fysieke en mentale stress. Cordyceps wordt traditioneel gebruikt voor uithouding en vitaliteit. Rode biet levert natuurlijke nitraten voor een gezonde bloedsomloop.",
+  "targetAudienceNL": "Mannen vanaf 18 jaar die hun testosteronspiegel, vruchtbaarheid en algehele vitaliteit willen ondersteunen met natuurlijke ingrediënten.",
+  "faqs": [
+    {
+      "q": "Verhoogt Ignite for HIM mijn testosteron?",
+      "a": "Zink (10 mg, 100% RI) draagt bij aan het behoud van normale testosteronniveaus in het bloed. De formule ondersteunt de natuurlijke hormonale balans — het bevat geen synthetische hormonen."
+    },
+    {
+      "q": "Kan ik Ignite for HIM combineren met andere Amare producten?",
+      "a": "Ja, Ignite for HIM combineert uitstekend met Amare EDGE+ voor focus en FIT20 voor spierherstel. Samen vormen ze een complete ondersteuning voor actieve mannen."
+    },
+    {
+      "q": "Vanaf welke leeftijd is Ignite for HIM geschikt?",
+      "a": "Ignite for HIM is geschikt voor mannen vanaf 18 jaar. Het is niet bedoeld voor kinderen of tieners onder 18."
+    }
+  ],
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/ignite-him",
+    "sourceTag": "amarenl-product-page"
+  },
+  "relatedProducts": [
+    "amare-edge-mango",
+    "fit20"
+  ],
+  "tags": [
+    "testosteron supplement natuurlijk",
+    "zink vruchtbaarheid",
+    "rhodiola rosea mannen",
+    "mannelijke vitaliteit",
+    "cordyceps supplement"
+  ],
+  "seo": {
+    "title": "Amare Ignite for HIM Kopen | Beste Prijs Nederland 2026",
+    "description": "Mannelijke vitaliteit & testosteron",
+    "keywords": [
+      "testosteron supplement natuurlijk",
+      "zink vruchtbaarheid",
+      "rhodiola rosea mannen",
+      "mannelijke vitaliteit",
+      "cordyceps supplement"
+    ]
+  },
+  "synergies": [
+    "amare-edge-mango",
+    "fit20"
+  ],
+  "seoKeywordsNL": [
+    "testosteron supplement natuurlijk",
+    "zink vruchtbaarheid",
+    "rhodiola rosea mannen",
+    "mannelijke vitaliteit",
+    "cordyceps supplement"
+  ],
+  "isNew": false,
+  "isBestseller": false,
+  "isPack": false,
+  "priority": 26,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

@@ -1,0 +1,50 @@
+{
+  "slug": "edge-watermelon",
+  "name": "Amare EDGE+™ Watermelon",
+  "nameNL": "Amare EDGE+™ Watermelon",
+  "shortNameNL": "Amare EDGE+™ Watermelon",
+  "category": "hersenen",
+  "taglineNL": "Mentale focus & veerkracht",
+  "description": {
+    "short": "Mentale focus & veerkracht",
+    "long": "Amare EDGE+™ Watermelon is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+  },
+  "pricing": {
+    "subscription": 77.28,
+    "oneTime": 86,
+    "currency": "EUR",
+    "savings": 8.72,
+    "savingsPercent": 10.1
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/EU_Watermelon_800_25.jpg",
+    "alt": "Amare EDGE+™ Watermelon — Amare supplement"
+  },
+  "benefits": [
+    "Hoogwaardige ingrediënten",
+    "Wetenschappelijk onderbouwd",
+    "gemaakt met natuurlijke ingrediënten"
+  ],
+  "usage": {
+    "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/amareedge-plus-watermelon",
+    "sourceTag": "amarenl-product-page"
+  },
+  "relatedProducts": [],
+  "tags": [],
+  "seo": {
+    "title": "Amare EDGE+™ Watermelon Kopen | Beste Prijs Nederland 2026",
+    "description": "Mentale focus & veerkracht",
+    "keywords": []
+  },
+  "isNew": false,
+  "isBestseller": false,
+  "isPack": false,
+  "priority": 9,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

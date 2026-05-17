@@ -1,0 +1,50 @@
+{
+  "slug": "triangle-marketing-pack",
+  "name": "Triangle Marketing Pack",
+  "nameNL": "Triangle Marketing Pack",
+  "shortNameNL": "Triangle Marketing Pack",
+  "category": "pakketten",
+  "taglineNL": "Beste waarde bundel",
+  "description": {
+    "short": "Beste waarde bundel",
+    "long": "Triangle Marketing Pack is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+  },
+  "pricing": {
+    "subscription": 511.21,
+    "oneTime": 567.44,
+    "currency": "EUR",
+    "savings": 56.23,
+    "savingsPercent": 9.9
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/500QV-MarketingPack-EU-new-800.jpg",
+    "alt": "Triangle Marketing Pack — Amare supplement"
+  },
+  "benefits": [
+    "Hoogwaardige ingrediënten",
+    "Wetenschappelijk onderbouwd",
+    "gemaakt met natuurlijke ingrediënten"
+  ],
+  "usage": {
+    "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/triangle-marketing-pack",
+    "sourceTag": "amarenl-product-page"
+  },
+  "relatedProducts": [],
+  "tags": [],
+  "seo": {
+    "title": "Triangle Marketing Pack Kopen | Beste Prijs Nederland 2026",
+    "description": "Beste waarde bundel",
+    "keywords": []
+  },
+  "isNew": false,
+  "isBestseller": false,
+  "isPack": true,
+  "priority": 18,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

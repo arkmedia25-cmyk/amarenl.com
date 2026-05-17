@@ -1,0 +1,50 @@
+{
+  "slug": "versterkende-collectie-voor-haarherstel",
+  "name": "Versterkende Collectie voor Haarherstel",
+  "nameNL": "Versterkende Collectie voor Haarherstel",
+  "shortNameNL": "Versterkende Collectie voor Haarherstel",
+  "category": "schoonheid",
+  "taglineNL": "Huid, haar & nagels verzorging",
+  "description": {
+    "short": "Huid, haar & nagels verzorging",
+    "long": "Versterkende Collectie voor Haarherstel is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+  },
+  "pricing": {
+    "subscription": 110.47,
+    "oneTime": 125.36,
+    "currency": "EUR",
+    "savings": 14.89,
+    "savingsPercent": 11.9
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Strenghtening_Collection_for_Hair_Repair_EU_800x800.jpg",
+    "alt": "Versterkende Collectie voor Haarherstel — Amare supplement"
+  },
+  "benefits": [
+    "Hoogwaardige ingrediënten",
+    "Wetenschappelijk onderbouwd",
+    "gemaakt met natuurlijke ingrediënten"
+  ],
+  "usage": {
+    "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/collection-hair-repair",
+    "sourceTag": "amarenl-product-page"
+  },
+  "relatedProducts": [],
+  "tags": [],
+  "seo": {
+    "title": "Versterkende Collectie voor Haarherstel Kopen | Beste Prijs Nederland 2026",
+    "description": "Huid, haar & nagels verzorging",
+    "keywords": []
+  },
+  "isNew": true,
+  "isBestseller": false,
+  "isPack": false,
+  "priority": 39,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

@@ -1,0 +1,149 @@
+{
+  "slug": "restore",
+  "name": "Restore",
+  "nameNL": "Restore",
+  "shortNameNL": "Restore",
+  "category": "darmen",
+  "taglineNL": "Darmflora & spijsvertering in balans",
+  "description": {
+    "short": "Darmflora & spijsvertering in balans",
+    "long": "Restore combineert 5 probiotische bacteriestammen (2 miljard KVE per 2 capsules: B. infantis, L. plantarum, L. rhamnosus, B. longum, L. acidophilus) met 5 spijsverteringsenzymen (amylase, protease, lactase, lipase, cellulase) en 9 plantaardige ingrediënten waaronder paardenbloemwortel, mariadistel, gember en venkel. Het enzym lactase helpt bij de vertering van lactose bij personen met lactose-intolerantie."
+  },
+  "pricing": {
+    "subscription": 29.7,
+    "oneTime": 33.01,
+    "currency": "EUR",
+    "savings": 3.31,
+    "savingsPercent": 10
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Restore-EU-800.jpg",
+    "alt": "Restore — Amare supplement"
+  },
+  "ingredients": [
+    {
+      "name": "Probiotische blend (5 stammen)",
+      "amount": "2 miljard KVE (per 2 caps)",
+      "form": "B. infantis, L. plantarum, L. rhamnosus, B. longum, L. acidophilus"
+    },
+    {
+      "name": "Enzymenmengsel (5 enzymen)",
+      "amount": "250 mg (per 2 caps)",
+      "form": "Amylase 6250 SKB, Protease 2500 HUT, Lactase 1000 ALU, Lipase 250 IE, Cellulase 100 IE"
+    },
+    {
+      "name": "Paardenbloemwortelpoeder",
+      "amount": "150 mg"
+    },
+    {
+      "name": "Gemberwortelpoeder",
+      "amount": "50 mg"
+    },
+    {
+      "name": "Roze Himalaya-zout",
+      "amount": "50 mg"
+    },
+    {
+      "name": "Mariadistelzaadextract",
+      "amount": "20 mg"
+    },
+    {
+      "name": "Heermoes (hele kruid) extract",
+      "amount": "15 mg"
+    },
+    {
+      "name": "Jeneverbespoeder",
+      "amount": "15 mg"
+    },
+    {
+      "name": "Venkelzaadpoeder",
+      "amount": "15 mg"
+    },
+    {
+      "name": "Heemstwortelpoeder",
+      "amount": "15 mg"
+    },
+    {
+      "name": "Peterseliebladpoeder",
+      "amount": "10 mg"
+    },
+    {
+      "name": "Zwartepeperzaadextract (4:1)",
+      "amount": "1.27 mg (gelijk aan 5 mg droge plant)"
+    }
+  ],
+  "benefits": [
+    "5 probiotische stammen — 2 miljard KVE per dagdosering",
+    "5 spijsverteringsenzymen inclusief lactase voor lactosevertering",
+    "9 botanische ingrediënten: paardenbloem, gember, mariadistel, venkel, jeneverbes",
+    "Lactosevrij, glutenvrij, sojavrij — geschikt voor vegetariërs",
+    "Zwarte peper extract voor verbeterde opname van voedingsstoffen"
+  ],
+  "usage": {
+    "dosage": "Neem tweemaal daags 2 capsules met de eerste maaltijd. Dagelijkse dosering van 6 capsules niet overschrijden. Geschikt voor volwassenen en kinderen vanaf 12 jaar.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "mechanismNL": "Probiotische bacteriën ondersteunen de natuurlijke balans van de darmflora. De 5 spijsverteringsenzymen helpen bij het afbreken van koolhydraten (amylase), eiwitten (protease), lactose (lactase), vetten (lipase) en vezels (cellulase). De 9 botanische extracten bevatten fytonutriënten die traditioneel worden gebruikt ter ondersteuning van de spijsvertering.",
+  "targetAudienceNL": "Volwassenen en kinderen (12+) die hun spijsvertering willen ondersteunen, vooral bij lactose-intolerantie, een opgeblazen gevoel of onregelmatige stoelgang. Geschikt voor vegetariërs.",
+  "faqs": [
+    {
+      "q": "Wat is het verschil tussen Restore en MentaBiotics?",
+      "a": "Restore richt zich op spijsvertering met 5 enzymen (waaronder lactase) en 5 probiotische stammen. MentaBiotics richt zich op de darm-hersen-as met de Cerebiome® blend, magnesium en botanische extracten. Beide vullen elkaar aan."
+    },
+    {
+      "q": "Helpt Restore bij lactose-intolerantie?",
+      "a": "Ja, Restore bevat het enzym lactase (1000 ALU per 2 capsules) dat helpt bij de vertering van lactose. Dit kan ondersteuning bieden bij lactose-intolerantie wanneer het bij de maaltijd wordt ingenomen."
+    },
+    {
+      "q": "Wanneer moet ik Restore innemen?",
+      "a": "Neem 2 capsules bij de eerste maaltijd van de dag en nogmaals 2 capsules bij een volgende maaltijd. Het innemen met voeding optimaliseert de werking van de spijsverteringsenzymen."
+    }
+  ],
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/restore",
+    "sourceTag": "amarenl-product-page"
+  },
+  "relatedProducts": [
+    "amare-mentabiotics",
+    "amare-origin"
+  ],
+  "tags": [
+    "probiotica darmen",
+    "spijsverteringsenzymen",
+    "lactose intolerantie supplement",
+    "darmflora herstellen",
+    "natuurlijke spijsvertering",
+    "probiotica enzymen"
+  ],
+  "seo": {
+    "title": "Restore Kopen | Beste Prijs Nederland 2026",
+    "description": "Darmflora & spijsvertering in balans",
+    "keywords": [
+      "probiotica darmen",
+      "spijsverteringsenzymen",
+      "lactose intolerantie supplement",
+      "darmflora herstellen",
+      "natuurlijke spijsvertering",
+      "probiotica enzymen"
+    ]
+  },
+  "synergies": [
+    "amare-mentabiotics",
+    "amare-origin"
+  ],
+  "seoKeywordsNL": [
+    "probiotica darmen",
+    "spijsverteringsenzymen",
+    "lactose intolerantie supplement",
+    "darmflora herstellen",
+    "natuurlijke spijsvertering",
+    "probiotica enzymen"
+  ],
+  "isNew": false,
+  "isBestseller": false,
+  "isPack": false,
+  "priority": 10,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

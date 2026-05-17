@@ -1,0 +1,125 @@
+{
+  "slug": "fit20",
+  "name": "FIT20",
+  "nameNL": "FIT20",
+  "shortNameNL": "FIT20",
+  "category": "essentials",
+  "taglineNL": "Spierherstel & metabolisme ondersteuning",
+  "description": {
+    "short": "Spierherstel & metabolisme ondersteuning",
+    "long": "FIT20 combineert grasgevoerd wei-eiwitisolaat met gehydrolyseerde collageenpeptiden voor 20 g eiwit per portie (30,7 g). Bevat 21 aminozuren waaronder 3,02 g glycine, 2,30 g proline en 1,62 g alanine. Verrijkt met magnesiumcitraat (27% RI), MCT-oliepoeder en zonnebloemlecithine voor optimale opname. Toegevoegde enzymen verbeteren de verteerbaarheid. Vanille smaak."
+  },
+  "pricing": {
+    "subscription": 48.01,
+    "oneTime": 53.34,
+    "currency": "EUR",
+    "savings": 5.33,
+    "savingsPercent": 10
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Fit20-Vanilla-EU-800.jpg",
+    "alt": "FIT20 — Amare supplement"
+  },
+  "ingredients": [
+    {
+      "name": "Grasgevoed wei-eiwitisolaat",
+      "amount": "—",
+      "form": "melk"
+    },
+    {
+      "name": "Grasgevoede collageenpeptiden",
+      "amount": "—",
+      "form": "gehydrolyseerd"
+    },
+    {
+      "name": "Magnesiumcitraat",
+      "amount": "100 mg (27% RI)",
+      "form": "goed opneembare vorm"
+    },
+    {
+      "name": "MCT-oliepoeder",
+      "amount": "—",
+      "form": "kokosnoot"
+    },
+    {
+      "name": "Zonnebloemlecithine",
+      "amount": "—"
+    },
+    {
+      "name": "Aminozuurprofiel (21 aminozuren)",
+      "amount": "o.a. Glycine 3,02 g, Proline 2,30 g, Glutaminezuur 3,27 g",
+      "form": "uit wei en collageen"
+    }
+  ],
+  "benefits": [
+    "20 g eiwit per portie: grasgevoerd wei-isolaat + collageenpeptiden",
+    "21 aminozuren voor compleet spierherstel en -opbouw",
+    "Magnesiumcitraat (27% RI) voor spierfunctie en vermindering van vermoeidheid",
+    "MCT-oliepoeder voor snelle energie",
+    "Toegevoegde enzymen voor optimale verteerbaarheid"
+  ],
+  "usage": {
+    "dosage": "Neem 1 maatschep (30,7 g) na de training, bij het ontbijt of op elk ander moment. Meng met 350 ml water of je favoriete drank. Geschikt vanaf 12 jaar. Bevat melk en lactose.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "mechanismNL": "Wei-eiwitisolaat levert snel opneembare aminozuren voor spierherstel. Collageenpeptiden voorzien de specifieke aminozuren glycine en proline voor bindweefselondersteuning. Magnesiumcitraat draagt bij aan normale spierfunctie en vermindering van vermoeidheid. MCT-olie wordt direct door de lever omgezet in ketonen voor snelle energie.",
+  "targetAudienceNL": "Actieve volwassenen en sporters die spierherstel en -opbouw willen ondersteunen. Ook geschikt voor dagelijkse eiwitaanvulling bij een actieve levensstijl.",
+  "faqs": [
+    {
+      "q": "Wat maakt FIT20 anders dan andere eiwitpoeders?",
+      "a": "FIT20 combineert wei-isolaat met collageenpeptiden — de meeste eiwitpoeders bevatten alleen wei. Dit levert 21 aminozuren voor zowel spier- als bindweefselondersteuning. Bovendien bevat FIT20 magnesiumcitraat, MCT-olie en spijsverteringsenzymen."
+    },
+    {
+      "q": "Is FIT20 geschikt bij lactose-intolerantie?",
+      "a": "FIT20 bevat lactose uit wei-eiwit. Bij lichte lactose-intolerantie kunnen de toegevoegde enzymen helpen, maar bij ernstige intolerantie wordt een plantaardig alternatief zoals Amare Origin aanbevolen."
+    },
+    {
+      "q": "Wanneer neem ik FIT20 het beste in?",
+      "a": "Ideaal binnen 30 minuten na de training voor optimaal spierherstel. Kan ook bij het ontbijt of als eiwitrijke snack op elk moment van de dag worden gebruikt."
+    }
+  ],
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/fit20",
+    "sourceTag": "amarenl-product-page"
+  },
+  "relatedProducts": [
+    "energy",
+    "amare-edge-mango"
+  ],
+  "tags": [
+    "eiwitpoeder spierherstel",
+    "wei eiwit collageen",
+    "natuurlijk eiwit supplement",
+    "sportvoeding 21 aminozuren",
+    "magnesium spierfunctie"
+  ],
+  "seo": {
+    "title": "FIT20 Kopen | Beste Prijs Nederland 2026",
+    "description": "Spierherstel & metabolisme ondersteuning",
+    "keywords": [
+      "eiwitpoeder spierherstel",
+      "wei eiwit collageen",
+      "natuurlijk eiwit supplement",
+      "sportvoeding 21 aminozuren",
+      "magnesium spierfunctie"
+    ]
+  },
+  "synergies": [
+    "energy",
+    "amare-edge-mango"
+  ],
+  "seoKeywordsNL": [
+    "eiwitpoeder spierherstel",
+    "wei eiwit collageen",
+    "natuurlijk eiwit supplement",
+    "sportvoeding 21 aminozuren",
+    "magnesium spierfunctie"
+  ],
+  "isNew": false,
+  "isBestseller": false,
+  "isPack": false,
+  "priority": 13,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

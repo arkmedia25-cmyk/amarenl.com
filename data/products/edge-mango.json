@@ -1,0 +1,127 @@
+{
+  "slug": "edge-mango",
+  "name": "Amare EDGE+™ Mango",
+  "nameNL": "Amare EDGE+™ Mango",
+  "shortNameNL": "Amare EDGE+™ Mango",
+  "category": "hersenen",
+  "taglineNL": "Plantaardig nootropicum voor drive & focus",
+  "description": {
+    "short": "Plantaardig nootropicum voor drive & focus",
+    "long": "Amare EDGE+™ is een cafeïnevrij, plantaardig nootropicum met pantotheenzuur (vitamine B5, 3 mg, 50% RI) dat bijdraagt aan een normaal energieleverend metabolisme, de normale synthese van steroïde hormonen en neurotransmitters, en de vermindering van vermoeidheid. Bevat mango-extract, goji (Lycium barbarum), Terminalia chebula, Boswellia serrata (wierook) en bètacaroteen."
+  },
+  "pricing": {
+    "subscription": 77.28,
+    "oneTime": 86,
+    "currency": "EUR",
+    "savings": 8.72,
+    "savingsPercent": 10.1
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/EU_Mango_800_25.jpg",
+    "alt": "Amare EDGE+™ Mango — Amare supplement"
+  },
+  "ingredients": [
+    {
+      "name": "Isomalto-oligosacharide",
+      "amount": "945 mg",
+      "form": "prebiotische vezel"
+    },
+    {
+      "name": "Pantotheenzuur (Vitamine B5)",
+      "amount": "3 mg (50% RI)",
+      "form": "D-calciumpantothenaat"
+    },
+    {
+      "name": "Terminalia chebula vruchtenextract",
+      "amount": "216 mg",
+      "form": "zwarte chebulische vrucht"
+    },
+    {
+      "name": "Mango vruchtenextract (Mangifera indica)",
+      "amount": "100 mg"
+    },
+    {
+      "name": "Boswellia serrata hars-extract (wierook)",
+      "amount": "54 mg"
+    },
+    {
+      "name": "Goji vruchtenextract (Lycium barbarum)",
+      "amount": "50 mg"
+    }
+  ],
+  "benefits": [
+    "Pantotheenzuur (Vit B5, 3 mg) voor energie, hormoonsynthese en mentale prestaties",
+    "Terminalia chebula extract (216 mg) — Ayurvedisch adaptogeen",
+    "Boswellia serrata (wierook) extract (54 mg)",
+    "Mango- en goji-extracten voor natuurlijke antioxidanten",
+    "Cafeïnevrij — geen crash of slaapproblemen"
+  ],
+  "usage": {
+    "dosage": "Meng 1 stickpack (3,9 g) in 250 ml water en drinken. Eenmaal per dag. Niet geschikt voor kinderen onder 10 jaar. Bevat isomalto-oligosacharide (bron van glucose).",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "mechanismNL": "Pantotheenzuur (Vit B5) is essentieel voor de synthese van co-enzym A, dat een sleutelrol speelt in het energiemetabolisme, de aanmaak van steroïde hormonen, vitamine D en neurotransmitters. De adaptogene plantenextracten (Terminalia chebula, Boswellia, goji) bevatten bioactieve stoffen die het lichaam helpen omgaan met dagelijkse stress.",
+  "targetAudienceNL": "Volwassenen die een cafeïnevrij alternatief zoeken voor mentale focus, energie en dagelijkse vitaliteit. Ideaal voor drukke professionals, studenten en actieve levensstijlen.",
+  "faqs": [
+    {
+      "q": "Bevat Amare EDGE+ cafeïne?",
+      "a": "Nee, EDGE+ is volledig cafeïnevrij. Het ondersteunt energie en focus via pantotheenzuur (Vit B5) en adaptogene plantenextracten — zonder stimulanten en zonder crash."
+    },
+    {
+      "q": "Wat is het verschil tussen EDGE+ en Energy+?",
+      "a": "Energy+ bevat Vitamine C, L-glycine en natuurlijke cafeïne (27,64 mg) voor een actieve energieboost. EDGE+ is cafeïnevrij en richt zich op langdurige mentale focus via Vitamine B5 en adaptogene extracten. Beide vullen elkaar goed aan."
+    },
+    {
+      "q": "Kan ik EDGE+ dagelijks gebruiken?",
+      "a": "Ja, EDGE+ is ontworpen voor dagelijks gebruik. De aanbevolen dosering is 1 stickpack per dag."
+    }
+  ],
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/amareedge-plus-mango",
+    "sourceTag": "amarenl-product-page"
+  },
+  "ratings": {
+    "value": 4.5,
+    "count": 500
+  },
+  "relatedProducts": [
+    "energy",
+    "amare-mentabiotics"
+  ],
+  "tags": [
+    "natuurlijk nootropicum",
+    "focus supplement cafeïnevrij",
+    "energie metabolisme ondersteunen",
+    "adaptogeen supplement",
+    "vitamine B5 energie"
+  ],
+  "seo": {
+    "title": "Amare EDGE+™ Mango Kopen | Beste Prijs Nederland 2026",
+    "description": "Plantaardig nootropicum voor drive & focus",
+    "keywords": [
+      "natuurlijk nootropicum",
+      "focus supplement cafeïnevrij",
+      "energie metabolisme ondersteunen",
+      "adaptogeen supplement",
+      "vitamine B5 energie"
+    ]
+  },
+  "synergies": [
+    "energy",
+    "amare-mentabiotics"
+  ],
+  "seoKeywordsNL": [
+    "natuurlijk nootropicum",
+    "focus supplement cafeïnevrij",
+    "energie metabolisme ondersteunen",
+    "adaptogeen supplement",
+    "vitamine B5 energie"
+  ],
+  "isNew": false,
+  "isBestseller": true,
+  "isPack": false,
+  "priority": 8,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

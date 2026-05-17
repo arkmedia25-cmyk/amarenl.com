@@ -1,0 +1,50 @@
+{
+  "slug": "rootist-dynamic-pack",
+  "name": "Rootist Dynamic Pack",
+  "nameNL": "Rootist Dynamic Pack",
+  "shortNameNL": "Rootist Dynamic Pack",
+  "category": "schoonheid",
+  "taglineNL": "Huid, haar & nagels verzorging",
+  "description": {
+    "short": "Huid, haar & nagels verzorging",
+    "long": "Rootist Dynamic Pack is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+  },
+  "pricing": {
+    "subscription": 96.8,
+    "oneTime": 107.63,
+    "currency": "EUR",
+    "savings": 10.83,
+    "savingsPercent": 10.1
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Rootist_Dynamic_Pack_800_Hero_DU.jpg",
+    "alt": "Rootist Dynamic Pack — Amare supplement"
+  },
+  "benefits": [
+    "Hoogwaardige ingrediënten",
+    "Wetenschappelijk onderbouwd",
+    "gemaakt met natuurlijke ingrediënten"
+  ],
+  "usage": {
+    "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/rootist-dynamic-pack",
+    "sourceTag": "amarenl-product-page"
+  },
+  "relatedProducts": [],
+  "tags": [],
+  "seo": {
+    "title": "Rootist Dynamic Pack Kopen | Beste Prijs Nederland 2026",
+    "description": "Huid, haar & nagels verzorging",
+    "keywords": []
+  },
+  "isNew": true,
+  "isBestseller": false,
+  "isPack": false,
+  "priority": 34,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

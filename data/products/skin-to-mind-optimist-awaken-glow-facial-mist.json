@@ -1,0 +1,50 @@
+{
+  "slug": "skin-to-mind-optimist-awaken-glow-facial-mist",
+  "name": "Skin to Mind OptiMIST™ Awaken + Glow Facial Mist",
+  "nameNL": "Skin to Mind OptiMIST™ Awaken + Glow Facial Mist",
+  "shortNameNL": "Skin to Mind OptiMIST™ Awaken + Glow Facial Mist",
+  "category": "schoonheid",
+  "taglineNL": "Huid, haar & nagels verzorging",
+  "description": {
+    "short": "Huid, haar & nagels verzorging",
+    "long": "Skin to Mind OptiMIST™ Awaken + Glow Facial Mist is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+  },
+  "pricing": {
+    "subscription": 51.5,
+    "oneTime": 58.02,
+    "currency": "EUR",
+    "savings": 6.52,
+    "savingsPercent": 11.2
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/OptiMist_800.jpg",
+    "alt": "Skin to Mind OptiMIST™ Awaken + Glow Facial Mist — Amare supplement"
+  },
+  "benefits": [
+    "Hoogwaardige ingrediënten",
+    "Wetenschappelijk onderbouwd",
+    "gemaakt met natuurlijke ingrediënten"
+  ],
+  "usage": {
+    "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/skin-mind-optimist",
+    "sourceTag": "amarenl-product-page"
+  },
+  "relatedProducts": [],
+  "tags": [],
+  "seo": {
+    "title": "Skin to Mind OptiMIST™ Awaken + Glow Facial Mist Kopen | Beste Prijs Nederland 2026",
+    "description": "Huid, haar & nagels verzorging",
+    "keywords": []
+  },
+  "isNew": true,
+  "isBestseller": false,
+  "isPack": false,
+  "priority": 26,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

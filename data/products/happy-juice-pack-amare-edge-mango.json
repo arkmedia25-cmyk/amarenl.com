@@ -1,0 +1,54 @@
+{
+  "slug": "happy-juice-pack-amare-edge-mango",
+  "name": "Amare Happy Juice Pack® - Amare EDGE+™ Mango",
+  "nameNL": "Amare Happy Juice Pack® - Amare EDGE+™ Mango",
+  "shortNameNL": "Amare Happy Juice Pack®",
+  "category": "hersenen",
+  "taglineNL": "Mentale focus & veerkracht",
+  "description": {
+    "short": "Mentale focus & veerkracht",
+    "long": "Amare Happy Juice Pack® - Amare EDGE+™ Mango is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+  },
+  "pricing": {
+    "subscription": 155.33,
+    "oneTime": 172.22,
+    "currency": "EUR",
+    "savings": 16.89,
+    "savingsPercent": 9.8
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/HJ_mango-EU-800_25.jpg",
+    "alt": "Amare Happy Juice Pack® - Amare EDGE+™ Mango — Amare supplement"
+  },
+  "benefits": [
+    "Hoogwaardige ingrediënten",
+    "Wetenschappelijk onderbouwd",
+    "gemaakt met natuurlijke ingrediënten"
+  ],
+  "usage": {
+    "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/happy-juice-edge-plus-mango",
+    "sourceTag": "amarenl-product-page"
+  },
+  "ratings": {
+    "value": 4.5,
+    "count": 500
+  },
+  "relatedProducts": [],
+  "tags": [],
+  "seo": {
+    "title": "Amare Happy Juice Pack® - Amare EDGE+™ Mango Kopen | Beste Prijs Nederland 2026",
+    "description": "Mentale focus & veerkracht",
+    "keywords": []
+  },
+  "isNew": false,
+  "isBestseller": true,
+  "isPack": false,
+  "priority": 1,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

@@ -1,10 +1,12 @@
 import CategoryLanding from "@/components/sections/CategoryLanding";
+import SchemaMarkup from "@/components/ui/SchemaMarkup";
+import { generateBreadcrumbSchema } from "@/lib/schema";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Mentale Fitness Supplementen — Focus, Energie & Stemming | AmareNL",
   description:
-    "Ontdek Amare supplementen voor mentale fitness: Happy Juice Pack, MentaBiotics, EDGE+, Energy+ en meer. Wetenschappelijk onderbouwd, 100% natuurlijk.",
+    "Ontdek Amare supplementen voor mentale fitness: Happy Juice Pack, MentaBiotics, EDGE+, Energy+ en meer. Wetenschappelijk onderbouwd, gemaakt met natuurlijke ingrediënten.",
 };
 
 const category = {
@@ -16,5 +18,16 @@ const category = {
 };
 
 export default function SupplementenPage() {
-  return <CategoryLanding category={category} categorySlug="hersenen" />;
+  return (
+    <>
+      <SchemaMarkup
+        schema={generateBreadcrumbSchema([
+          { name: "Home", url: "/" },
+          { name: "Mentale Fitness", url: "/supplementen" },
+        ])}
+        id="supplementen-breadcrumb"
+      />
+      <CategoryLanding category={category} categorySlug="hersenen" />
+    </>
+  );
 }

@@ -1,0 +1,50 @@
+{
+  "slug": "xtreme-triangle-of-wellness-level-up",
+  "name": "Xtreme Triangle of Wellness Level Up",
+  "nameNL": "Xtreme Triangle of Wellness Level Up",
+  "shortNameNL": "Xtreme Triangle of Wellness Level Up",
+  "category": "essentials",
+  "taglineNL": "Dagelijkse basisondersteuning",
+  "description": {
+    "short": "Dagelijkse basisondersteuning",
+    "long": "Xtreme Triangle of Wellness Level Up is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+  },
+  "pricing": {
+    "subscription": 176.2,
+    "oneTime": 195.77,
+    "currency": "EUR",
+    "savings": 19.57,
+    "savingsPercent": 10
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Triangle-of-Wellness-Xtreme-Level-Up-HL5-EU-800.jpg",
+    "alt": "Xtreme Triangle of Wellness Level Up — Amare supplement"
+  },
+  "benefits": [
+    "Hoogwaardige ingrediënten",
+    "Wetenschappelijk onderbouwd",
+    "gemaakt met natuurlijke ingrediënten"
+  ],
+  "usage": {
+    "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/triangle-of-wellness-levelup-pack",
+    "sourceTag": "amarenl-product-page"
+  },
+  "relatedProducts": [],
+  "tags": [],
+  "seo": {
+    "title": "Xtreme Triangle of Wellness Level Up Kopen | Beste Prijs Nederland 2026",
+    "description": "Dagelijkse basisondersteuning",
+    "keywords": []
+  },
+  "isNew": false,
+  "isBestseller": false,
+  "isPack": true,
+  "priority": 22,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

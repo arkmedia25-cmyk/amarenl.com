@@ -1,10 +1,12 @@
 import CategoryLanding from "@/components/sections/CategoryLanding";
+import SchemaMarkup from "@/components/ui/SchemaMarkup";
+import { generateBreadcrumbSchema } from "@/lib/schema";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Gewichtsbeheer Supplementen — Metabolisme & Vitaliteit | AmareNL",
   description:
-    "Ondersteun je metabolisme en gewichtsbeheer met Amare supplementen. GBX Fit, Origin, FIT20 en meer — wetenschappelijk onderbouwd, 100% natuurlijk.",
+    "Ondersteun je metabolisme en gewichtsbeheer met Amare supplementen. GBX Fit, Origin, FIT20 en meer — wetenschappelijk onderbouwd, gemaakt met natuurlijke ingrediënten.",
 };
 
 const category = {
@@ -16,5 +18,16 @@ const category = {
 };
 
 export default function GewichtsbeheerPage() {
-  return <CategoryLanding category={category} categorySlug="essentials" />;
+  return (
+    <>
+      <SchemaMarkup
+        schema={generateBreadcrumbSchema([
+          { name: "Home", url: "/" },
+          { name: "Gewichtsbeheer", url: "/gewichtsbeheer" },
+        ])}
+        id="gewichtsbeheer-breadcrumb"
+      />
+      <CategoryLanding category={category} categorySlug="essentials" />
+    </>
+  );
 }

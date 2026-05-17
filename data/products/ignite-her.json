@@ -1,0 +1,125 @@
+{
+  "slug": "ignite-her",
+  "name": "Amare Ignite for HER",
+  "nameNL": "Amare Ignite for HER",
+  "shortNameNL": "Amare Ignite for HER",
+  "category": "hersenen",
+  "taglineNL": "Vrouwelijk welzijn & balans",
+  "description": {
+    "short": "Vrouwelijk welzijn & balans",
+    "long": "Ignite for HER is een voedingssupplement speciaal voor vrouwen met Neuravena® extract van wilde groene haver (300 mg), rode bietenpoeder (100 mg), shatavari-extract (40 mg, gelijk aan 200 mg), fenegriekzaadextract (25 mg, gelijk aan 150 mg), citroenmelisse-extract (23,5 mg, gelijk aan 94 mg) en bamboe-extract (28,57 mg, met 20 mg silica). Verrijkt met magnesium (60 mg, 16% RI) dat helpt vermoeidheid te verminderen en de normale werking van spieren en zenuwstelsel ondersteunt."
+  },
+  "pricing": {
+    "subscription": 49.5,
+    "oneTime": 55,
+    "currency": "EUR",
+    "savings": 5.5,
+    "savingsPercent": 10
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Ignite-Her-EU-800.jpg",
+    "alt": "Amare Ignite for HER — Amare supplement"
+  },
+  "ingredients": [
+    {
+      "name": "Neuravena® wilde groene haver extract",
+      "amount": "300 mg",
+      "form": "gepatenteerd extract"
+    },
+    {
+      "name": "Rode bietenpoeder",
+      "amount": "100 mg"
+    },
+    {
+      "name": "Magnesium(oxide)",
+      "amount": "60 mg (16% RI)"
+    },
+    {
+      "name": "Shatavari 5:1 extract",
+      "amount": "40 mg (gelijk aan 200 mg)"
+    },
+    {
+      "name": "Bamboe-extract (70% silica)",
+      "amount": "28,57 mg (20 mg silica)"
+    },
+    {
+      "name": "Fenegriekzaad 6:1 extract",
+      "amount": "25 mg (gelijk aan 150 mg)"
+    },
+    {
+      "name": "Citroenmelisse 4:1 extract",
+      "amount": "23,5 mg (gelijk aan 94 mg)"
+    }
+  ],
+  "benefits": [
+    "Neuravena® wilde groene haver (300 mg) — gepatenteerd extract voor vrouwelijk welzijn",
+    "Shatavari en fenegriek — traditionele Ayurvedische kruiden voor vrouwelijke balans",
+    "Magnesium (60 mg) voor vermindering vermoeidheid en normale spierfunctie",
+    "Bamboe-extract met silica (20 mg) voor huid, haar en nagels",
+    "Citroenmelisse voor natuurlijke ontspanning"
+  ],
+  "usage": {
+    "dosage": "Neem dagelijks 2 capsules met water. 60 capsules (1 maand). Geschikt vanaf 12 jaar. Bevat gluten (uit haver) — niet geschikt bij coeliakie. Veganistisch & vegetarisch.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "mechanismNL": "Neuravena® bevat bioactieve stoffen uit wilde groene haver die de cognitieve functie ondersteunen. Shatavari (Asparagus racemosus) en fenegriek worden traditioneel in de Ayurveda gebruikt voor vrouwelijke hormonale balans. Magnesium draagt bij aan de normale werking van het zenuwstelsel en vermindert vermoeidheid. Silica uit bamboe ondersteunt de natuurlijke collageenvorming.",
+  "targetAudienceNL": "Vrouwen vanaf 12 jaar die hun algehele welzijn, energie en vrouwelijke balans willen ondersteunen met natuurlijke plantaardige ingrediënten. Veganistisch.",
+  "faqs": [
+    {
+      "q": "Wat is Neuravena®?",
+      "a": "Neuravena® is een gepatenteerd extract van wilde groene haver (Avena sativa) dat specifiek wordt gebruikt in supplementen voor cognitieve ondersteuning en algeheel welzijn."
+    },
+    {
+      "q": "Op welke leeftijd kan ik Ignite for HER gebruiken?",
+      "a": "Ignite for HER is geschikt voor vrouwen vanaf 12 jaar. De formule is speciaal samengesteld om vrouwen in verschillende levensfasen te ondersteunen."
+    },
+    {
+      "q": "Bevat Ignite for HER hormonen?",
+      "a": "Nee, Ignite for HER bevat geen hormonen. Het bevat plantaardige extracten zoals shatavari en fenegriek die traditioneel worden gebruikt ter ondersteuning van de vrouwelijke balans, plus magnesium voor energie en welzijn."
+    }
+  ],
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/ignite-her",
+    "sourceTag": "amarenl-product-page"
+  },
+  "relatedProducts": [
+    "amare-mentabiotics",
+    "amare-sunrise-2-pack"
+  ],
+  "tags": [
+    "vrouwelijk welzijn supplement",
+    "shatavari extract",
+    "magnesium vermoeidheid",
+    "natuurlijke hormoonbalans",
+    "vrouwen energie supplement"
+  ],
+  "seo": {
+    "title": "Amare Ignite for HER Kopen | Beste Prijs Nederland 2026",
+    "description": "Vrouwelijk welzijn & balans",
+    "keywords": [
+      "vrouwelijk welzijn supplement",
+      "shatavari extract",
+      "magnesium vermoeidheid",
+      "natuurlijke hormoonbalans",
+      "vrouwen energie supplement"
+    ]
+  },
+  "synergies": [
+    "amare-mentabiotics",
+    "amare-sunrise-2-pack"
+  ],
+  "seoKeywordsNL": [
+    "vrouwelijk welzijn supplement",
+    "shatavari extract",
+    "magnesium vermoeidheid",
+    "natuurlijke hormoonbalans",
+    "vrouwen energie supplement"
+  ],
+  "isNew": false,
+  "isBestseller": false,
+  "isPack": false,
+  "priority": 25,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

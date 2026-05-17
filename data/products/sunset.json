@@ -1,0 +1,127 @@
+{
+  "slug": "sunset",
+  "name": "Amare Sunset",
+  "nameNL": "Amare Sunset",
+  "shortNameNL": "Amare Sunset",
+  "category": "essentials",
+  "taglineNL": "Avond omega-3 & vitamine D3/A/E",
+  "description": {
+    "short": "Avond omega-3 & vitamine D3/A/E",
+    "long": "Sunset is een avondsupplement met hoogwaardige omega-3 uit wilde visolie (zalm e.a.): EPA 520 mg, DHA 223 mg per dagdosering (3 capsules). Verrijkt met vitamine D3 (6 µg, 120% RI), vitamine A (200 µg RE, 25% RI) als retinylpalmitaat, vitamine E (18 mg α-TE, 150% RI) als natuurlijke D-α-tocoferol uit rijstzemelenolie, en astaxanthine (2 mg) uit de alg Haematococcus pluvialis. Onderdeel van de Triangle of Wellness met Sunrise en Nitro."
+  },
+  "pricing": {
+    "subscription": 67.5,
+    "oneTime": 75,
+    "currency": "EUR",
+    "savings": 7.5,
+    "savingsPercent": 10
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Sunset-EU-800.jpg",
+    "alt": "Amare Sunset — Amare supplement"
+  },
+  "ingredients": [
+    {
+      "name": "Visolie (uit wilde zalm e.a.)",
+      "amount": "786 mg",
+      "form": "omega-3 bron"
+    },
+    {
+      "name": "EPA (eicosapentaeenzuur)",
+      "amount": "520 mg"
+    },
+    {
+      "name": "DHA (docosahexaeenzuur)",
+      "amount": "223 mg"
+    },
+    {
+      "name": "Vitamine D3 (cholecalciferol)",
+      "amount": "6 µg (120% RI)"
+    },
+    {
+      "name": "Vitamine E (D-α-tocoferol)",
+      "amount": "18 mg α-TE (150% RI)",
+      "form": "uit rijstzemelenolie"
+    },
+    {
+      "name": "Vitamine A (retinylpalmitaat)",
+      "amount": "200 µg RE (25% RI)"
+    },
+    {
+      "name": "Astaxanthine",
+      "amount": "2 mg",
+      "form": "uit Haematococcus pluvialis alg"
+    }
+  ],
+  "benefits": [
+    "EPA 520 mg + DHA 223 mg uit wilde visolie voor hart, hersenen en gezichtsvermogen",
+    "Vitamine D3 (120% RI) voor botten, spieren en immuunsysteem",
+    "Vitamine E (150% RI) als natuurlijke D-α-tocoferol tegen oxidatieve stress",
+    "Vitamine A als retinylpalmitaat — direct beschikbare vorm",
+    "Astaxanthine (2 mg) — natuurlijke carotenoïde antioxidant"
+  ],
+  "usage": {
+    "dosage": "Neem 3 capsules bij de avondmaaltijd. 90 capsules (30 porties). Geschikt voor volwassenen. Bevat visgelatine en visolie — niet geschikt voor veganisten/vegetariërs.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "mechanismNL": "EPA en DHA dragen bij aan een normale hartfunctie (bij 250 mg/dag). DHA ondersteunt de hersenfunctie en het gezichtsvermogen (bij 250 mg/dag). Vitamine D3 is essentieel voor calciumopname, botten en immuunsysteem. Vitamine E beschermt cellen tegen oxidatieve stress. Astaxanthine is een krachtige natuurlijke antioxidant. De avondinname ondersteunt nachtelijk herstel.",
+  "targetAudienceNL": "Volwassenen die hun hart, hersenen en immuunsysteem willen ondersteunen met omega-3 en vetoplosbare vitaminen. Specifiek voor avondgebruik als onderdeel van de Triangle of Wellness.",
+  "faqs": [
+    {
+      "q": "Waarom neem je Sunset 's avonds?",
+      "a": "Sunset bevat vetoplosbare vitaminen (D3, A, E) en omega-3 die tijdens de nachtrust worden opgenomen en benut voor celherstel. De vitamine D3 en astaxanthine ondersteunen het natuurlijke herstelproces dat tijdens de slaap plaatsvindt."
+    },
+    {
+      "q": "Uit welke vis komt de omega-3 in Sunset?",
+      "a": "De omega-3 in Sunset is afkomstig uit verantwoord gevangen wilde vis, waaronder zalm, bekend om hun natuurlijke zuiverheid en hoge EPA/DHA-gehalte."
+    },
+    {
+      "q": "Kan ik Sunset ook overdag innemen?",
+      "a": "Sunset is geoptimaliseerd voor de avond, maar kan op elk moment van de dag bij een maaltijd worden ingenomen. De Triangle of Wellness is: Sunrise (ochtend) → Nitro (middag) → Sunset (avond)."
+    }
+  ],
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/sunset",
+    "sourceTag": "amarenl-product-page"
+  },
+  "relatedProducts": [
+    "amare-sunrise-2-pack",
+    "amare-nitro-xtreme-56ml"
+  ],
+  "tags": [
+    "omega 3 supplement",
+    "visolie EPA DHA",
+    "vitamine D3 avond",
+    "astaxanthine antioxidant",
+    "omega 3 hart hersenen"
+  ],
+  "seo": {
+    "title": "Amare Sunset Kopen | Beste Prijs Nederland 2026",
+    "description": "Avond omega-3 & vitamine D3/A/E",
+    "keywords": [
+      "omega 3 supplement",
+      "visolie EPA DHA",
+      "vitamine D3 avond",
+      "astaxanthine antioxidant",
+      "omega 3 hart hersenen"
+    ]
+  },
+  "synergies": [
+    "amare-sunrise-2-pack",
+    "amare-nitro-xtreme-56ml"
+  ],
+  "seoKeywordsNL": [
+    "omega 3 supplement",
+    "visolie EPA DHA",
+    "vitamine D3 avond",
+    "astaxanthine antioxidant",
+    "omega 3 hart hersenen"
+  ],
+  "isNew": false,
+  "isBestseller": false,
+  "isPack": false,
+  "priority": 15,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

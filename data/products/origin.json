@@ -1,0 +1,151 @@
+{
+  "slug": "origin",
+  "name": "Amare Origin",
+  "nameNL": "Amare Origin",
+  "shortNameNL": "Amare Origin",
+  "category": "essentials",
+  "taglineNL": "100% plantaardige maaltijdshake",
+  "description": {
+    "short": "100% plantaardige maaltijdshake",
+    "long": "Origin is een 100% veganistische eiwitshake met 23 g plantaardig eiwit per portie (44 g) uit erwten (55%), pompoenpit en tuinbonen. Verrijkt met MCT-kokosolie, lijnzaad, appelpectine, cacaopoeder en essentiële mineralen: calcium (212 mg, 26% RI), magnesium (96 mg, 25% RI), zink (6 mg, 60% RI), kalium (221 mg, 11% RI) en mangaan (1,5 mg, 75% RI), plus vitamine E (12,5 mg, 104% RI). Chocoladesmaak, prebiotisch."
+  },
+  "pricing": {
+    "subscription": 40,
+    "oneTime": 44.45,
+    "currency": "EUR",
+    "savings": 4.45,
+    "savingsPercent": 10
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Origin-Chocolate-EU-800.jpg",
+    "alt": "Amare Origin — Amare supplement"
+  },
+  "ingredients": [
+    {
+      "name": "Erwteneiwitisolaat (55%)",
+      "amount": "—",
+      "form": "plantaardig eiwit"
+    },
+    {
+      "name": "Pompoenpiteiwit",
+      "amount": "—",
+      "form": "plantaardig eiwit"
+    },
+    {
+      "name": "Tuinboneneiwit",
+      "amount": "—",
+      "form": "plantaardig eiwit"
+    },
+    {
+      "name": "Vitamine E (D-α-tocoferol)",
+      "amount": "12,5 mg α-TE (104% RI)",
+      "form": "uit zonnebloemolie"
+    },
+    {
+      "name": "Calcium",
+      "amount": "212 mg (26% RI)"
+    },
+    {
+      "name": "Magnesium",
+      "amount": "96 mg (25% RI)"
+    },
+    {
+      "name": "Zink",
+      "amount": "6 mg (60% RI)"
+    },
+    {
+      "name": "Kalium",
+      "amount": "221 mg (11% RI)"
+    },
+    {
+      "name": "Mangaan",
+      "amount": "1,5 mg (75% RI)"
+    },
+    {
+      "name": "MCT-kokosolie",
+      "amount": "—",
+      "form": "medium-chain triglycerides"
+    },
+    {
+      "name": "Lijnzaadpoeder",
+      "amount": "—",
+      "form": "omega-3 bron"
+    },
+    {
+      "name": "Appelpectine",
+      "amount": "—",
+      "form": "prebiotische vezel"
+    }
+  ],
+  "benefits": [
+    "23 g plantaardig eiwit uit erwten, pompoenpit en tuinbonen",
+    "Vitamine E (104% RI) + Zink (60% RI) voor huid, haar en immuunsysteem",
+    "Calcium (26% RI) + Magnesium (25% RI) voor botten en spierfunctie",
+    "MCT-olie en lijnzaad voor gezonde vetten en verzadiging",
+    "100% vegan, glutenvrij, lactosevrij, sojavrij, notenvrij"
+  ],
+  "usage": {
+    "dosage": "Doe 3 maatschepjes (44 g) in een shaker en voeg 300 ml koud water toe. Krachtig schudden en drinken. 14 porties per verpakking. Geschikt vanaf 12 jaar.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "mechanismNL": "Plantaardige eiwitten uit erwten, pompoenpit en tuinbonen leveren een compleet aminozuurprofiel voor spieronderhoud. MCT-olie wordt direct door de lever omgezet in ketonen voor langdurige energie en verzadiging. De mineralen (calcium, magnesium, zink) ondersteunen botten, spieren en immuunsysteem. Lijnzaad en appelpectine leveren prebiotische vezels.",
+  "targetAudienceNL": "Volwassenen die een plantaardige, allergeenvrije eiwitshake zoeken. Ideaal als maaltijdvervanger, post-workout shake of gezonde snack. Geschikt voor veganisten en mensen met lactose-/soja-/notenallergie.",
+  "faqs": [
+    {
+      "q": "Is Origin een volledige maaltijdvervanger?",
+      "a": "Origin levert 23 g eiwit, gezonde vetten, vezels en 6 essentiële mineralen per portie (163 kcal). Het kan dienen als lichte maaltijdvervanger maar is primair een eiwitsupplement. Voor een volledige maaltijd combineer je het met fruit of groenten."
+    },
+    {
+      "q": "Wat is het verschil tussen Origin en FIT20?",
+      "a": "Origin is 100% plantaardig (erwten, pompoenpit, tuinbonen) en allergeenvrij. FIT20 bevat dierlijke eiwitten (wei + collageen) met 21 aminozuren. Origin is geschikt voor veganisten; FIT20 voor wie dierlijke eiwitten prefereert."
+    },
+    {
+      "q": "Kan ik Origin gebruiken voor gewichtsbeheersing?",
+      "a": "Origin kan onderdeel zijn van een gewichtsbeheersingsplan door de verzadigende combinatie van 23 g eiwit, MCT-olie en vezels. Het helpt honger tussen maaltijden te verminderen."
+    }
+  ],
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/kyani-origin-chocolate",
+    "sourceTag": "amarenl-product-page"
+  },
+  "relatedProducts": [
+    "energy",
+    "fit20"
+  ],
+  "tags": [
+    "vegan eiwitpoeder",
+    "plantaardige maaltijdshake",
+    "erwteneiwit",
+    "natuurlijk eiwit vegan",
+    "maaltijdvervanger shake"
+  ],
+  "seo": {
+    "title": "Amare Origin Kopen | Beste Prijs Nederland 2026",
+    "description": "100% plantaardige maaltijdshake",
+    "keywords": [
+      "vegan eiwitpoeder",
+      "plantaardige maaltijdshake",
+      "erwteneiwit",
+      "natuurlijk eiwit vegan",
+      "maaltijdvervanger shake"
+    ]
+  },
+  "synergies": [
+    "energy",
+    "fit20"
+  ],
+  "seoKeywordsNL": [
+    "vegan eiwitpoeder",
+    "plantaardige maaltijdshake",
+    "erwteneiwit",
+    "natuurlijk eiwit vegan",
+    "maaltijdvervanger shake"
+  ],
+  "isNew": false,
+  "isBestseller": false,
+  "isPack": false,
+  "priority": 11,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

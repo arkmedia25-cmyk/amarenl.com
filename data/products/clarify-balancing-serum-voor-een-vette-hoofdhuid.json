@@ -1,0 +1,50 @@
+{
+  "slug": "clarify-balancing-serum-voor-een-vette-hoofdhuid",
+  "name": "Clarify Balancing Serum voor een vette hoofdhuid",
+  "nameNL": "Clarify Balancing Serum voor een vette hoofdhuid",
+  "shortNameNL": "Clarify Balancing Serum voor een vette hoofdhuid",
+  "category": "schoonheid",
+  "taglineNL": "Huid, haar & nagels verzorging",
+  "description": {
+    "short": "Huid, haar & nagels verzorging",
+    "long": "Clarify Balancing Serum voor een vette hoofdhuid is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+  },
+  "pricing": {
+    "subscription": 44.28,
+    "oneTime": 49.48,
+    "currency": "EUR",
+    "savings": 5.2,
+    "savingsPercent": 10.5
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Clarify_Balancing_Serum_BE_800.jpg",
+    "alt": "Clarify Balancing Serum voor een vette hoofdhuid — Amare supplement"
+  },
+  "benefits": [
+    "Hoogwaardige ingrediënten",
+    "Wetenschappelijk onderbouwd",
+    "gemaakt met natuurlijke ingrediënten"
+  ],
+  "usage": {
+    "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/clarify-balancing-serum-oily-scalp",
+    "sourceTag": "amarenl-product-page"
+  },
+  "relatedProducts": [],
+  "tags": [],
+  "seo": {
+    "title": "Clarify Balancing Serum voor een vette hoofdhuid Kopen | Beste Prijs Nederland 2026",
+    "description": "Huid, haar & nagels verzorging",
+    "keywords": []
+  },
+  "isNew": true,
+  "isBestseller": false,
+  "isPack": false,
+  "priority": 30,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

@@ -1,0 +1,54 @@
+{
+  "slug": "on",
+  "name": "Amare ON",
+  "nameNL": "Amare ON",
+  "shortNameNL": "Amare ON",
+  "category": "hersenen",
+  "taglineNL": "Mentale focus & veerkracht",
+  "description": {
+    "short": "Mentale focus & veerkracht",
+    "long": "Amare ON is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+  },
+  "pricing": {
+    "subscription": 27.41,
+    "oneTime": 30.45,
+    "currency": "EUR",
+    "savings": 3.04,
+    "savingsPercent": 10
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/ON-Raspberry-Grapefruit-EU-800.jpg",
+    "alt": "Amare ON — Amare supplement"
+  },
+  "benefits": [
+    "Hoogwaardige ingrediënten",
+    "Wetenschappelijk onderbouwd",
+    "gemaakt met natuurlijke ingrediënten"
+  ],
+  "usage": {
+    "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/onshots",
+    "sourceTag": "amarenl-product-page"
+  },
+  "ratings": {
+    "value": 4.5,
+    "count": 500
+  },
+  "relatedProducts": [],
+  "tags": [],
+  "seo": {
+    "title": "Amare ON Kopen | Beste Prijs Nederland 2026",
+    "description": "Mentale focus & veerkracht",
+    "keywords": []
+  },
+  "isNew": false,
+  "isBestseller": true,
+  "isPack": false,
+  "priority": 4,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

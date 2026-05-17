@@ -1,0 +1,50 @@
+{
+  "slug": "skin-to-mind-collection",
+  "name": "Skin to Mind™ Collection",
+  "nameNL": "Skin to Mind™ Collection",
+  "shortNameNL": "Skin to Mind™ Collection",
+  "category": "schoonheid",
+  "taglineNL": "Huid, haar & nagels verzorging",
+  "description": {
+    "short": "Huid, haar & nagels verzorging",
+    "long": "Skin to Mind™ Collection is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+  },
+  "pricing": {
+    "subscription": 195.83,
+    "oneTime": 217.74,
+    "currency": "EUR",
+    "savings": 21.91,
+    "savingsPercent": 10.1
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/SkinToMind_Collection_800.jpg",
+    "alt": "Skin to Mind™ Collection — Amare supplement"
+  },
+  "benefits": [
+    "Hoogwaardige ingrediënten",
+    "Wetenschappelijk onderbouwd",
+    "gemaakt met natuurlijke ingrediënten"
+  ],
+  "usage": {
+    "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/skin-mind-collection",
+    "sourceTag": "amarenl-product-page"
+  },
+  "relatedProducts": [],
+  "tags": [],
+  "seo": {
+    "title": "Skin to Mind™ Collection Kopen | Beste Prijs Nederland 2026",
+    "description": "Huid, haar & nagels verzorging",
+    "keywords": []
+  },
+  "isNew": true,
+  "isBestseller": false,
+  "isPack": false,
+  "priority": 27,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

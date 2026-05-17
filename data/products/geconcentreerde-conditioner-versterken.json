@@ -1,0 +1,50 @@
+{
+  "slug": "geconcentreerde-conditioner-versterken",
+  "name": "Geconcentreerde conditioner versterken",
+  "nameNL": "Geconcentreerde conditioner versterken",
+  "shortNameNL": "Geconcentreerde conditioner versterken",
+  "category": "schoonheid",
+  "taglineNL": "Huid, haar & nagels verzorging",
+  "description": {
+    "short": "Huid, haar & nagels verzorging",
+    "long": "Geconcentreerde conditioner versterken is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+  },
+  "pricing": {
+    "subscription": 28.81,
+    "oneTime": 32.99,
+    "currency": "EUR",
+    "savings": 4.18,
+    "savingsPercent": 12.7
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Strengthen_Concentrated_Conditioner_BE_800.jpg",
+    "alt": "Geconcentreerde conditioner versterken — Amare supplement"
+  },
+  "benefits": [
+    "Hoogwaardige ingrediënten",
+    "Wetenschappelijk onderbouwd",
+    "gemaakt met natuurlijke ingrediënten"
+  ],
+  "usage": {
+    "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/strengthen-concentrated-conditioner",
+    "sourceTag": "amarenl-product-page"
+  },
+  "relatedProducts": [],
+  "tags": [],
+  "seo": {
+    "title": "Geconcentreerde conditioner versterken Kopen | Beste Prijs Nederland 2026",
+    "description": "Huid, haar & nagels verzorging",
+    "keywords": []
+  },
+  "isNew": true,
+  "isBestseller": false,
+  "isPack": false,
+  "priority": 32,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

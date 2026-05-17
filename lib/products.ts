@@ -1,756 +1,290 @@
 /**
- * AMARE ÜRÜN VERİTABANI — Excel kaynaklı, otomatik üretildi
- * Toplam: ~40 ürün (başlık satırı hariç)
+ * AmareNL Product Data Access Layer
+ *
+ * Source of truth: data/products.json (43 products generated from data/products/*.json)
+ * Regenerate: npx tsx scripts/generate-product-index.ts
+ *
+ * Functions:
+ *   getAllProducts()       → Product[]
+ *   getProduct(slug)       → Product | undefined
+ *   getProductsByCategory  → Product[]
+ *   getBestsellers()       → Product[]
+ *   getRelatedProducts     → Product[]
+ *   getAffiliateUrl(id)    → string
  */
 
-export const AFFILIATE_ID = "2075008";
+import rawProducts from '../data/products.json';
+
+export const AFFILIATE_ID = '2075008';
 export const AFFILIATE_BASE_URL = `https://www.amare.com/${AFFILIATE_ID}/nl-nl/`;
 
-export interface Category { slug: string; nameNL: string; descriptionNL: string; icon: string; }
+// ── Types ──────────────────────────────────────────────────────────────────
 
-export const categories: Category[] = [
-  { slug: "hersenen", nameNL: "Mentale Fitness", descriptionNL: "Gut-brain ondersteuning voor focus, stemming en mentale veerkracht.", icon: "Brain" },
-  { slug: "darmen", nameNL: "Darmen & Digestie", descriptionNL: "Probiotica, enzymen en superfoods voor een gezonde darmflora.", icon: "Heart" },
-  { slug: "schoonheid", nameNL: "Schoonheid & Verzorging", descriptionNL: "Huidverzorging, haarverzorging en collageen van binnenuit.", icon: "Sparkles" },
-  { slug: "essentials", nameNL: "Dagelijkse Essentials", descriptionNL: "Vitamines, eiwitten, omega-3 en dagelijkse basisondersteuning.", icon: "Shield" },
-  { slug: "pakketten", nameNL: "Pakketten & Bundels", descriptionNL: "Bespaar met onze zorgvuldig samengestelde productbundels.", icon: "Package" },
-];
-
-export interface Product {
-  id: string; name: string; nameNL: string; category: string; taglineNL: string;
-  descriptionNL: string; benefitsNL: string[]; usageNL: string; priority: number;
-  isNew: boolean; isBestseller: boolean; isPack: boolean;
-  priceRetail: number; priceSubscription: number; affiliateUrl: string; image: string;
+export interface Category {
+  slug: string;
+  nameNL: string;
+  descriptionNL: string;
+  icon: string;
 }
 
-export const products: Product[] = [
-{
-    id: 'amare-happy-juice-pack-amare-edge-mango',
-    name: 'Amare Happy Juice Pack® - Amare EDGE+™ Mango',
-    nameNL: 'Amare Happy Juice Pack® - Amare EDGE+™ Mango',
-    category: 'hersenen',
-    taglineNL: 'Mentale focus & veerkracht',
-    descriptionNL: 'Amare Happy Juice Pack® - Amare EDGE+™ Mango is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 1,
-    isNew: false,
-    isBestseller: true,
-    isPack: false,
-    priceRetail: 172.22,
-    priceSubscription: 155.33,
-    affiliateUrl: 'happy-juice-edge-plus-mango',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/HJ_mango-EU-800_25.jpg',
+export interface ProductIngredient {
+  name: string;
+  amount: string;
+  form?: string;
+}
+
+export interface ProductFAQ {
+  q: string;
+  a: string;
+}
+
+export interface Product {
+  // Identity
+  slug: string;
+  id: string; // alias for slug (backward compat)
+  name: string;
+  nameNL: string;
+
+  // Classification
+  category: string;
+  taglineNL: string;
+  isNew: boolean;
+  isBestseller: boolean;
+  isPack: boolean;
+  priority: number;
+
+  // Description
+  descriptionNL: string;
+
+  // Pricing (flat + nested)
+  priceRetail: number;
+  priceSubscription: number;
+  pricing: {
+    subscription: number;
+    oneTime: number;
+    currency: 'EUR';
+    savings: number;
+    savingsPercent: number;
+  };
+
+  // Images (flat + nested)
+  image: string;
+  images: {
+    primary: string;
+    gallery?: string[];
+    alt: string;
+  };
+
+  // Content
+  benefitsNL: string[];
+  benefits: string[];
+  usageNL: string;
+  usage: {
+    dosage: string;
+    timing: string;
+    duration: string;
+  };
+
+  ingredientsNL?: ProductIngredient[];
+  ingredients?: ProductIngredient[];
+  mechanismNL?: string;
+  targetAudienceNL?: string;
+
+  // Affiliate
+  affiliateUrl: string;
+  affiliate: {
+    url: string;
+    sourceTag: string;
+  };
+
+  // SEO
+  seoKeywordsNL?: string[];
+  tags: string[];
+  seo: {
+    title: string;
+    description: string;
+    keywords: string[];
+  };
+
+  // Relations
+  synergies?: string[];
+  relatedProducts?: string[];
+  faqNL?: ProductFAQ[];
+  faqs?: ProductFAQ[];
+
+  // Meta
+  publishedAt: string;
+  updatedAt: string;
+}
+
+// ── Categories ─────────────────────────────────────────────────────────────
+
+export const categories: Category[] = [
+  {
+    slug: 'hersenen',
+    nameNL: 'Mentale Fitness',
+    descriptionNL:
+      'Gut-brain ondersteuning voor focus, stemming en mentale veerkracht.',
+    icon: 'Brain',
   },
-{
-    id: 'amare-happy-juice-pack-amare-edge-watermelon',
-    name: 'Amare Happy Juice Pack® - Amare EDGE+™ Watermelon',
-    nameNL: 'Amare Happy Juice Pack® - Amare EDGE+™ Watermelon',
-    category: 'hersenen',
-    taglineNL: 'Mentale focus & veerkracht',
-    descriptionNL: 'Amare Happy Juice Pack® - Amare EDGE+™ Watermelon is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 2,
-    isNew: false,
-    isBestseller: true,
-    isPack: false,
-    priceRetail: 172.22,
-    priceSubscription: 155.33,
-    affiliateUrl: 'happy-juice-edge-plus-watermelon',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/HJ_wm-EU-800_25.jpg',
+  {
+    slug: 'darmen',
+    nameNL: 'Darmen & Digestie',
+    descriptionNL:
+      'Probiotica, enzymen en superfoods voor een gezonde darmflora.',
+    icon: 'Heart',
   },
-{
-    id: 'amare-hl5-2-pack',
-    name: 'Amare HL5 2-Pack',
-    nameNL: 'Amare HL5 2-Pack',
-    category: 'schoonheid',
-    taglineNL: 'Huid, haar & nagels verzorging',
-    descriptionNL: 'Amare HL5 2-Pack is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 3,
-    isNew: false,
-    isBestseller: true,
-    isPack: false,
-    priceRetail: 144.9,
-    priceSubscription: 130.42,
-    affiliateUrl: 'hl5-peach-2pack',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/HL5-Peach-2pk-EU-800.jpg',
+  {
+    slug: 'schoonheid',
+    nameNL: 'Schoonheid & Verzorging',
+    descriptionNL:
+      'Huidverzorging, haarverzorging en collageen van binnenuit.',
+    icon: 'Sparkles',
   },
-{
-    id: 'amare-on',
-    name: 'Amare ON',
-    nameNL: 'Amare ON',
-    category: 'hersenen',
-    taglineNL: 'Mentale focus & veerkracht',
-    descriptionNL: 'Amare ON is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 4,
-    isNew: false,
-    isBestseller: true,
-    isPack: false,
-    priceRetail: 30.45,
-    priceSubscription: 27.41,
-    affiliateUrl: 'onshots',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/ON-Raspberry-Grapefruit-EU-800.jpg',
+  {
+    slug: 'essentials',
+    nameNL: 'Dagelijkse Essentials',
+    descriptionNL:
+      'Vitamines, eiwitten, omega-3 en dagelijkse basisondersteuning.',
+    icon: 'Shield',
   },
-{
-    id: 'amare-on-4-pack',
-    name: 'Amare ON 4-Pack',
-    nameNL: 'Amare ON 4-Pack',
-    category: 'hersenen',
-    taglineNL: 'Mentale focus & veerkracht',
-    descriptionNL: 'Amare ON 4-Pack is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 5,
-    isNew: false,
-    isBestseller: true,
-    isPack: false,
-    priceRetail: 109.31,
-    priceSubscription: 98.37,
-    affiliateUrl: 'onshots-4pack',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/ON-Raspberry-Grapefruit-4pk-EU-800.jpg',
-  },
-{
-    id: 'energy',
-    name: 'Energy+',
-    nameNL: 'Energy+',
-    category: 'hersenen',
-    taglineNL: 'Mentale focus & veerkracht',
-    descriptionNL: 'Energy+ is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 6,
-    isNew: false,
-    isBestseller: true,
-    isPack: false,
-    priceRetail: 59.84,
-    priceSubscription: 55.48,
-    affiliateUrl: 'EnergyPlus',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/Amare-Energy-Dragonfruit-EU-800.jpg',
-  },
-{
-    id: 'amare-mentabiotics',
-    name: 'Amare MentaBiotics',
-    nameNL: 'Amare MentaBiotics',
-    category: 'darmen',
-    taglineNL: 'Darmgezondheid van binnenuit',
-    descriptionNL: 'Amare MentaBiotics is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 7,
-    isNew: false,
-    isBestseller: true,
-    isPack: false,
-    priceRetail: 80.55,
-    priceSubscription: 71.83,
-    affiliateUrl: 'mentabiotics',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/Amare-Mentabiotics-EU-800.jpg',
-  },
-{
-    id: 'amare-edge-mango',
-    name: 'Amare EDGE+™ Mango',
-    nameNL: 'Amare EDGE+™ Mango',
-    category: 'hersenen',
-    taglineNL: 'Mentale focus & veerkracht',
-    descriptionNL: 'Amare EDGE+™ Mango is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 8,
-    isNew: false,
-    isBestseller: true,
-    isPack: false,
-    priceRetail: 86.0,
-    priceSubscription: 77.28,
-    affiliateUrl: 'amareedge-plus-mango',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/EU_Mango_800_25.jpg',
-  },
-{
-    id: 'amare-edge-watermelon',
-    name: 'Amare EDGE+™ Watermelon',
-    nameNL: 'Amare EDGE+™ Watermelon',
-    category: 'hersenen',
-    taglineNL: 'Mentale focus & veerkracht',
-    descriptionNL: 'Amare EDGE+™ Watermelon is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 9,
-    isNew: false,
-    isBestseller: false,
-    isPack: false,
-    priceRetail: 86.0,
-    priceSubscription: 77.28,
-    affiliateUrl: 'amareedge-plus-watermelon',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/EU_Watermelon_800_25.jpg',
-  },
-{
-    id: 'restore',
-    name: 'Restore',
-    nameNL: 'Restore',
-    category: 'darmen',
-    taglineNL: 'Darmgezondheid van binnenuit',
-    descriptionNL: 'Restore is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 10,
-    isNew: false,
-    isBestseller: false,
-    isPack: false,
-    priceRetail: 33.01,
-    priceSubscription: 29.7,
-    affiliateUrl: 'restore',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/Restore-EU-800.jpg',
-  },
-{
-    id: 'amare-origin',
-    name: 'Amare Origin',
-    nameNL: 'Amare Origin',
-    category: 'essentials',
-    taglineNL: 'Dagelijkse basisondersteuning',
-    descriptionNL: 'Een complete, macronutriënten uitgebalanceerde, 100% veganistische shake op basis van plantaardige eiwitten van superieure kwaliteit. Origin bevat 23 gram eiwit per portie en de voedingsstoffen die je lichaam nodig heeft. Geniet van een heerlijke, romige shake en voorzie je lichaam van de eiwitte...',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 11,
-    isNew: false,
-    isBestseller: false,
-    isPack: false,
-    priceRetail: 44.45,
-    priceSubscription: 40.0,
-    affiliateUrl: 'kyani-origin-chocolate',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/Origin-Chocolate-EU-800.jpg',
-  },
-{
-    id: 'amare-sunrise-2-pack',
-    name: 'Amare Sunrise 2-Pack',
-    nameNL: 'Amare Sunrise 2-Pack',
-    category: 'essentials',
-    taglineNL: 'Dagelijkse basisondersteuning',
-    descriptionNL: 'Amare Sunrise 2-Pack is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 12,
-    isNew: false,
-    isBestseller: false,
-    isPack: false,
-    priceRetail: 95.31,
-    priceSubscription: 85.78,
-    affiliateUrl: 'sunrise-2pack',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/Sunrise-2pk-EU-800.jpg',
-  },
-{
-    id: 'fit20',
-    name: 'FIT20',
-    nameNL: 'FIT20',
-    category: 'essentials',
-    taglineNL: 'Dagelijkse basisondersteuning',
-    descriptionNL: 'FIT20 levert een unieke combinatie van eiwitten en andere natuurlijke ingrediënten om de training en het herstel te ondersteunen. Dit krachtige supplement, met in totaal 20 gram eiwit per portie, combineert gehydrolyseerd collageen met grasgevoerd wei-eiwitisolaat.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 13,
-    isNew: false,
-    isBestseller: false,
-    isPack: false,
-    priceRetail: 53.34,
-    priceSubscription: 48.01,
-    affiliateUrl: 'fit20',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/Fit20-Vanilla-EU-800.jpg',
-  },
-{
-    id: 'amare-nitro-xtreme-56ml',
-    name: 'Amare Nitro Xtreme 56ml',
-    nameNL: 'Amare Nitro Xtreme 56ml',
-    category: 'essentials',
-    taglineNL: 'Dagelijkse basisondersteuning',
-    descriptionNL: 'Amare Nitro Xtreme 56ml is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 14,
-    isNew: false,
-    isBestseller: false,
-    isPack: true,
-    priceRetail: 59.71,
-    priceSubscription: 53.74,
-    affiliateUrl: 'kyani-nitro-xtreme-56ml',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/Nitro-Xtreme-56ml-EU-800.jpg',
-  },
-{
-    id: 'amare-xtreme-56ml-2-pack',
-    name: 'Amare Xtreme 56ml 2-Pack',
-    nameNL: 'Amare Xtreme 56ml 2-Pack',
-    category: 'essentials',
-    taglineNL: 'Dagelijkse basisondersteuning',
-    descriptionNL: 'Amare Xtreme 56ml 2-Pack is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 15,
-    isNew: false,
-    isBestseller: false,
-    isPack: true,
-    priceRetail: 111.84,
-    priceSubscription: 100.66,
-    affiliateUrl: 'nitro-xtreme-56ml-2pack',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/Nitro-Xtreme-56ml-2pk-EU-800.jpg',
-  },
-{
-    id: 'happy-lifestyle-pack-basic',
-    name: 'Happy Lifestyle Pack Basic',
-    nameNL: 'Happy Lifestyle Pack Basic',
-    category: 'pakketten',
-    taglineNL: 'Beste waarde bundel',
-    descriptionNL: 'Happy Lifestyle Pack Basic is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 16,
-    isNew: false,
-    isBestseller: false,
-    isPack: true,
-    priceRetail: 308.22,
-    priceSubscription: 277.68,
-    affiliateUrl: 'happy-lifestyle-pack-basic',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/Happy-Lifestyle-Pack-Basic-EU-new-800.jpg',
-  },
-{
-    id: 'happy-lifestyle-pack-pro',
-    name: 'Happy Lifestyle Pack Pro',
-    nameNL: 'Happy Lifestyle Pack Pro',
-    category: 'pakketten',
-    taglineNL: 'Beste waarde bundel',
-    descriptionNL: 'Happy Lifestyle Pack Pro is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 17,
-    isNew: false,
-    isBestseller: false,
-    isPack: true,
-    priceRetail: 721.1,
-    priceSubscription: 649.64,
-    affiliateUrl: 'happy-lifestyle-pack-pro',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/Happy-Lifestyle-Pack-Pro-EU-new-800.jpg',
-  },
-{
-    id: 'triangle-marketing-pack',
-    name: 'Triangle Marketing Pack',
-    nameNL: 'Triangle Marketing Pack',
-    category: 'pakketten',
-    taglineNL: 'Beste waarde bundel',
-    descriptionNL: 'Triangle Marketing Pack is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 18,
-    isNew: false,
-    isBestseller: false,
-    isPack: true,
-    priceRetail: 567.44,
-    priceSubscription: 511.21,
-    affiliateUrl: 'triangle-marketing-pack',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/500QV-MarketingPack-EU-new-800.jpg',
-  },
-{
-    id: 'triangle-of-wellness-xtreme',
-    name: 'Triangle of Wellness Xtreme™',
-    nameNL: 'Triangle of Wellness Xtreme™',
-    category: 'essentials',
-    taglineNL: 'Dagelijkse basisondersteuning',
-    descriptionNL: 'Triangle of Wellness Xtreme™ is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 19,
-    isNew: false,
-    isBestseller: false,
-    isPack: true,
-    priceRetail: 137.27,
-    priceSubscription: 123.55,
-    affiliateUrl: 'triangle-of-wellness-xtreme',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/Triangle-of-Wellness-Xtreme2-EU-800_25.jpg',
-  },
-{
-    id: 'triangle-of-wellness-xtreme-2-pack',
-    name: 'Triangle of Wellness Xtreme™ 2-Pack',
-    nameNL: 'Triangle of Wellness Xtreme™ 2-Pack',
-    category: 'essentials',
-    taglineNL: 'Dagelijkse basisondersteuning',
-    descriptionNL: 'Triangle of Wellness Xtreme™ 2-Pack is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 20,
-    isNew: false,
-    isBestseller: false,
-    isPack: true,
-    priceRetail: 237.99,
-    priceSubscription: 205.96,
-    affiliateUrl: 'triangle-of-wellness-xtreme-2pack',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/Triangle-of-Wellness-Xtreme2-EU-800_25_x2.jpg',
-  },
-{
-    id: 'triangle-of-wellness-xtreme-3-pack',
-    name: 'Triangle of Wellness Xtreme™ 3-Pack',
-    nameNL: 'Triangle of Wellness Xtreme™ 3-Pack',
-    category: 'essentials',
-    taglineNL: 'Dagelijkse basisondersteuning',
-    descriptionNL: 'Triangle of Wellness Xtreme™ 3-Pack is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 21,
-    isNew: false,
-    isBestseller: false,
-    isPack: true,
-    priceRetail: 373.8,
-    priceSubscription: 320.41,
-    affiliateUrl: 'triangle-of-wellness-xtreme-3pack',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/Triangle-of-Wellness-Xtreme2-EU-800_25_x3.jpg',
-  },
-{
-    id: 'xtreme-triangle-of-wellness-level-up',
-    name: 'Xtreme Triangle of Wellness Level Up',
-    nameNL: 'Xtreme Triangle of Wellness Level Up',
-    category: 'essentials',
-    taglineNL: 'Dagelijkse basisondersteuning',
-    descriptionNL: 'Xtreme Triangle of Wellness Level Up is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 22,
-    isNew: false,
-    isBestseller: false,
-    isPack: true,
-    priceRetail: 195.77,
-    priceSubscription: 176.2,
-    affiliateUrl: 'triangle-of-wellness-levelup-pack',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/Triangle-of-Wellness-Xtreme-Level-Up-HL5-EU-800.jpg',
-  },
-{
-    id: 'triangle-of-wellness-xtreme-6-pack',
-    name: 'Triangle of Wellness Xtreme™ 6-Pack',
-    nameNL: 'Triangle of Wellness Xtreme™ 6-Pack',
-    category: 'essentials',
-    taglineNL: 'Dagelijkse basisondersteuning',
-    descriptionNL: 'Triangle of Wellness Xtreme™ 6-Pack is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 23,
-    isNew: false,
-    isBestseller: false,
-    isPack: true,
-    priceRetail: 715.63,
-    priceSubscription: 613.4,
-    affiliateUrl: 'triangle-of-wellness-xtreme-6pack',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/Triangle-of-Wellness-Xtreme2-EU-800_25_x6.jpg',
-  },
-{
-    id: 'skin-to-mind-neuday-brighten-revitalize-serum',
-    name: 'Skin to Mind NeuDay™ Brighten + Revitalize Serum',
-    nameNL: 'Skin to Mind NeuDay™ Brighten + Revitalize Serum',
-    category: 'schoonheid',
-    taglineNL: 'Huid, haar & nagels verzorging',
-    descriptionNL: 'Skin to Mind NeuDay™ Brighten + Revitalize Serum is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 24,
-    isNew: true,
-    isBestseller: false,
-    isPack: false,
-    priceRetail: 97.95,
-    priceSubscription: 87.58,
-    affiliateUrl: 'skin-mind-neuday',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/NueDay_800.jpg',
-  },
-{
-    id: 'skin-to-mind-neunight-restore-renew-serum',
-    name: 'Skin to Mind NeuNight™ Restore + Renew Serum',
-    nameNL: 'Skin to Mind NeuNight™ Restore + Renew Serum',
-    category: 'schoonheid',
-    taglineNL: 'Huid, haar & nagels verzorging',
-    descriptionNL: 'Skin to Mind NeuNight™ Restore + Renew Serum is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 25,
-    isNew: true,
-    isBestseller: false,
-    isPack: false,
-    priceRetail: 108.84,
-    priceSubscription: 97.89,
-    affiliateUrl: 'skin-to-mind-neunight-restore-renew-serum',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/NueNight_800.jpg',
-  },
-{
-    id: 'skin-to-mind-optimist-awaken-glow-facial-mist',
-    name: 'Skin to Mind OptiMIST™ Awaken + Glow Facial Mist',
-    nameNL: 'Skin to Mind OptiMIST™ Awaken + Glow Facial Mist',
-    category: 'schoonheid',
-    taglineNL: 'Huid, haar & nagels verzorging',
-    descriptionNL: 'Skin to Mind OptiMIST™ Awaken + Glow Facial Mist is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 26,
-    isNew: true,
-    isBestseller: false,
-    isPack: false,
-    priceRetail: 58.02,
-    priceSubscription: 51.5,
-    affiliateUrl: 'skin-mind-optimist',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/OptiMist_800.jpg',
-  },
-{
-    id: 'skin-to-mind-collection',
-    name: 'Skin to Mind™ Collection',
-    nameNL: 'Skin to Mind™ Collection',
-    category: 'schoonheid',
-    taglineNL: 'Huid, haar & nagels verzorging',
-    descriptionNL: 'Skin to Mind™ Collection is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 27,
-    isNew: true,
-    isBestseller: false,
-    isPack: false,
-    priceRetail: 217.74,
-    priceSubscription: 195.83,
-    affiliateUrl: 'skin-mind-collection',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/SkinToMind_Collection_800.jpg',
-  },
-{
-    id: 'ahaacv-pre-shampoo-hoofdhuid-verhelderende-spoelin',
-    name: 'AHA+ACV Pre-Shampoo Hoofdhuid Verhelderende Spoeling',
-    nameNL: 'AHA+ACV Pre-Shampoo Hoofdhuid Verhelderende Spoeling',
-    category: 'schoonheid',
-    taglineNL: 'Huid, haar & nagels verzorging',
-    descriptionNL: 'AHA+ACV Pre-Shampoo Hoofdhuid Verhelderende Spoeling is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 28,
-    isNew: true,
-    isBestseller: false,
-    isPack: false,
-    priceRetail: 32.99,
-    priceSubscription: 28.81,
-    affiliateUrl: 'pre-shampoo-clarifying-rinse',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/AHA_ACV_Pre_Shampoo_BE_800.jpg',
-  },
-{
-    id: 'biobrew-gefermenteerd-versterkend-serum',
-    name: 'BioBrew™ Gefermenteerd Versterkend Serum',
-    nameNL: 'BioBrew™ Gefermenteerd Versterkend Serum',
-    category: 'schoonheid',
-    taglineNL: 'Huid, haar & nagels verzorging',
-    descriptionNL: 'BioBrew™ Gefermenteerd Versterkend Serum is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 29,
-    isNew: true,
-    isBestseller: false,
-    isPack: false,
-    priceRetail: 35.05,
-    priceSubscription: 30.88,
-    affiliateUrl: 'biobrew-fermented-strengthening-serum',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/BioBrew_Serum_BE_800.jpg',
-  },
-{
-    id: 'clarify-balancing-serum-voor-een-vette-hoofdhuid',
-    name: 'Clarify Balancing Serum voor een vette hoofdhuid',
-    nameNL: 'Clarify Balancing Serum voor een vette hoofdhuid',
-    category: 'schoonheid',
-    taglineNL: 'Huid, haar & nagels verzorging',
-    descriptionNL: 'Clarify Balancing Serum voor een vette hoofdhuid is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 30,
-    isNew: true,
-    isBestseller: false,
-    isPack: false,
-    priceRetail: 49.48,
-    priceSubscription: 44.28,
-    affiliateUrl: 'clarify-balancing-serum-oily-scalp',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/Clarify_Balancing_Serum_BE_800.jpg',
-  },
-{
-    id: 'collectie-voor-vette-hoofdhuid-en-fijn-haar',
-    name: 'Collectie voor vette hoofdhuid en fijn haar',
-    nameNL: 'Collectie voor vette hoofdhuid en fijn haar',
-    category: 'schoonheid',
-    taglineNL: 'Huid, haar & nagels verzorging',
-    descriptionNL: 'Collectie voor vette hoofdhuid en fijn haar is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 31,
-    isNew: true,
-    isBestseller: false,
-    isPack: false,
-    priceRetail: 171.4,
-    priceSubscription: 151.55,
-    affiliateUrl: 'collection-oily-scalp-fine-hair',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/Collection_For_Oily_Scalp_and_Fine_Hair_EU_800x800.jpg',
-  },
-{
-    id: 'geconcentreerde-conditioner-versterken',
-    name: 'Geconcentreerde conditioner versterken',
-    nameNL: 'Geconcentreerde conditioner versterken',
-    category: 'schoonheid',
-    taglineNL: 'Huid, haar & nagels verzorging',
-    descriptionNL: 'Geconcentreerde conditioner versterken is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 32,
-    isNew: true,
-    isBestseller: false,
-    isPack: false,
-    priceRetail: 32.99,
-    priceSubscription: 28.81,
-    affiliateUrl: 'strengthen-concentrated-conditioner',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/Strengthen_Concentrated_Conditioner_BE_800.jpg',
-  },
-{
-    id: 'haarverdikkende-collectie-voor-volume',
-    name: 'Haarverdikkende Collectie voor Volume',
-    nameNL: 'Haarverdikkende Collectie voor Volume',
-    category: 'schoonheid',
-    taglineNL: 'Huid, haar & nagels verzorging',
-    descriptionNL: 'Haarverdikkende Collectie voor Volume is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 33,
-    isNew: true,
-    isBestseller: false,
-    isPack: false,
-    priceRetail: 148.87,
-    priceSubscription: 132.02,
-    affiliateUrl: 'collection-densifying-for-volume',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/Densifying_Collection_for_Volume_EU_800x800.jpg',
-  },
-{
-    id: 'rootist-dynamic-pack',
-    name: 'Rootist Dynamic Pack',
-    nameNL: 'Rootist Dynamic Pack',
-    category: 'schoonheid',
-    taglineNL: 'Huid, haar & nagels verzorging',
-    descriptionNL: 'Rootist Dynamic Pack is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 34,
-    isNew: true,
-    isBestseller: false,
-    isPack: false,
-    priceRetail: 107.63,
-    priceSubscription: 96.8,
-    affiliateUrl: 'rootist-dynamic-pack',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/Rootist_Dynamic_Pack_800_Hero_DU.jpg',
-  },
-{
-    id: 'verdichten-geconcentreerde-conditioner',
-    name: 'Verdichten Geconcentreerde Conditioner',
-    nameNL: 'Verdichten Geconcentreerde Conditioner',
-    category: 'schoonheid',
-    taglineNL: 'Huid, haar & nagels verzorging',
-    descriptionNL: 'Verdichten Geconcentreerde Conditioner is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 35,
-    isNew: true,
-    isBestseller: false,
-    isPack: false,
-    priceRetail: 32.99,
-    priceSubscription: 28.81,
-    affiliateUrl: 'densify-concentrated-conditioner',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/Densify_Concentrated_Conditioner_BE_800.jpg',
-  },
-{
-    id: 'verdichten-geconcentreerde-shampoo',
-    name: 'Verdichten Geconcentreerde Shampoo',
-    nameNL: 'Verdichten Geconcentreerde Shampoo',
-    category: 'schoonheid',
-    taglineNL: 'Huid, haar & nagels verzorging',
-    descriptionNL: 'Verdichten Geconcentreerde Shampoo is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 36,
-    isNew: true,
-    isBestseller: false,
-    isPack: false,
-    priceRetail: 30.93,
-    priceSubscription: 27.78,
-    affiliateUrl: 'densify-concentrated-shampoo',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/Densify_Concentrated_Shampoo_BE_800.jpg',
-  },
-{
-    id: 'verduidelijk-droogshampoo-poeder',
-    name: 'Verduidelijk Droogshampoo Poeder',
-    nameNL: 'Verduidelijk Droogshampoo Poeder',
-    category: 'schoonheid',
-    taglineNL: 'Huid, haar & nagels verzorging',
-    descriptionNL: 'Verduidelijk Droogshampoo Poeder is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 37,
-    isNew: true,
-    isBestseller: false,
-    isPack: false,
-    priceRetail: 34.02,
-    priceSubscription: 29.85,
-    affiliateUrl: 'clarify-dry-shampoo-powder',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/Clarify_Dry_Shampoo_Powder_CZ_800.jpg',
-  },
-{
-    id: 'versterken-geconcentreerde-shampoo',
-    name: 'Versterken Geconcentreerde Shampoo',
-    nameNL: 'Versterken Geconcentreerde Shampoo',
-    category: 'schoonheid',
-    taglineNL: 'Huid, haar & nagels verzorging',
-    descriptionNL: 'Versterken Geconcentreerde Shampoo is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 38,
-    isNew: true,
-    isBestseller: false,
-    isPack: false,
-    priceRetail: 30.93,
-    priceSubscription: 27.78,
-    affiliateUrl: 'strengthen-concentrated-shampoo',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/Strengthen_Concentrated_Shampoo_BE_800.jpg',
-  },
-{
-    id: 'versterkende-collectie-voor-haarherstel',
-    name: 'Versterkende Collectie voor Haarherstel',
-    nameNL: 'Versterkende Collectie voor Haarherstel',
-    category: 'schoonheid',
-    taglineNL: 'Huid, haar & nagels verzorging',
-    descriptionNL: 'Versterkende Collectie voor Haarherstel is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 39,
-    isNew: true,
-    isBestseller: false,
-    isPack: false,
-    priceRetail: 125.36,
-    priceSubscription: 110.47,
-    affiliateUrl: 'collection-hair-repair',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/Strenghtening_Collection_for_Hair_Repair_EU_800x800.jpg',
-  },
-{
-    id: 'verdikkend-serum-voor-fijn-haar',
-    name: '„Verdikkend serum voor fijn haar*“',
-    nameNL: '„Verdikkend serum voor fijn haar*“',
-    category: 'schoonheid',
-    taglineNL: 'Huid, haar & nagels verzorging',
-    descriptionNL: '„Verdikkend serum voor fijn haar*“ is een premium supplement van Amare, wetenschappelijk onderbouwd en 100% natuurlijk.',
-    benefitsNL: ['Hoogwaardige ingrediënten', 'Wetenschappelijk onderbouwd', '100% natuurlijk'],
-    usageNL: 'Raadpleeg de verpakking voor de aanbevolen dosering.',
-    priority: 40,
-    isNew: true,
-    isBestseller: false,
-    isPack: false,
-    priceRetail: 59.8,
-    priceSubscription: 53.56,
-    affiliateUrl: 'densifying-serum-thinning-hair',
-    image: 'https://amarecdn.azureedge.net/webassets/web/prod/products/Densifying_Serum_BE_800.jpg',
+  {
+    slug: 'pakketten',
+    nameNL: 'Pakketten & Bundels',
+    descriptionNL:
+      'Bespaar met onze zorgvuldig samengestelde productbundels.',
+    icon: 'Package',
   },
 ];
 
-export function getProductById(id: string): Product | undefined { return products.find((p) => p.id === id); }
-export function getProductsByCategory(cat: string): Product[] { return products.filter((p) => p.category === cat).sort((a, b) => a.priority - b.priority); }
-export function getBestsellers(): Product[] { return products.filter((p) => p.isBestseller); }
+// ── Data normalization ──────────────────────────────────────────────────────
+
+interface RawProduct {
+  slug: string;
+  name: string;
+  nameNL: string;
+  category: string;
+  taglineNL: string;
+  isNew?: boolean;
+  isBestseller?: boolean;
+  isPack?: boolean;
+  priority?: number;
+  description?: { short: string; long: string };
+  pricing?: { subscription: number; oneTime: number; currency: string; savings: number; savingsPercent: number };
+  images?: { primary: string; gallery?: string[]; alt: string };
+  benefits?: string[];
+  usage?: { dosage: string; timing: string; duration: string };
+  ingredients?: ProductIngredient[];
+  mechanismNL?: string;
+  targetAudienceNL?: string;
+  affiliate?: { url: string; sourceTag: string };
+  seoKeywordsNL?: string[];
+  tags?: string[];
+  seo?: { title: string; description: string; keywords: string[] };
+  synergies?: string[];
+  relatedProducts?: string[];
+  faqs?: ProductFAQ[];
+  publishedAt?: string;
+  updatedAt?: string;
+}
+
+function normalizeProduct(p: RawProduct): Product {
+  return {
+    slug: p.slug,
+    id: p.slug,
+    name: p.name,
+    nameNL: p.nameNL,
+
+    category: p.category,
+    taglineNL: p.taglineNL,
+    isNew: p.isNew ?? false,
+    isBestseller: p.isBestseller ?? false,
+    isPack: p.isPack ?? false,
+    priority: p.priority ?? 99,
+
+    descriptionNL: p.description?.long || p.description?.short || '',
+
+    priceRetail: p.pricing?.oneTime ?? 0,
+    priceSubscription: p.pricing?.subscription ?? 0,
+    pricing: {
+      subscription: p.pricing?.subscription ?? 0,
+      oneTime: p.pricing?.oneTime ?? 0,
+      currency: 'EUR' as const,
+      savings: p.pricing?.savings ?? 0,
+      savingsPercent: p.pricing?.savingsPercent ?? 0,
+    },
+
+    image: p.images?.primary || '',
+    images: p.images ?? { primary: '', alt: '' },
+
+    benefitsNL: p.benefits ?? [],
+    benefits: p.benefits ?? [],
+    usageNL: p.usage?.dosage ?? '',
+    usage: p.usage ?? { dosage: '', timing: '', duration: '' },
+
+    ingredientsNL: p.ingredients ?? [],
+    ingredients: p.ingredients ?? [],
+    mechanismNL: p.mechanismNL,
+    targetAudienceNL: p.targetAudienceNL,
+
+    affiliateUrl: p.affiliate?.url ?? '',
+    affiliate: p.affiliate ?? { url: '', sourceTag: '' },
+
+    seoKeywordsNL: p.seoKeywordsNL ?? p.tags ?? [],
+    tags: p.tags ?? [],
+    seo: p.seo ?? { title: '', description: '', keywords: [] },
+
+    synergies: p.synergies ?? [],
+    relatedProducts: p.relatedProducts ?? [],
+    faqNL: p.faqs ?? [],
+    faqs: p.faqs ?? [],
+
+    publishedAt: p.publishedAt ?? '',
+    updatedAt: p.updatedAt ?? '',
+  };
+}
+
+// ── Product array ───────────────────────────────────────────────────────────
+
+export const products: Product[] = (rawProducts as RawProduct[])
+  .map(normalizeProduct)
+  .sort((a, b) => a.priority - b.priority);
+
+// ── Public API ──────────────────────────────────────────────────────────────
+
+export function getAllProducts(): Product[] {
+  return products;
+}
+
+export function getProduct(slug: string): Product | undefined {
+  return products.find((p) => p.slug === slug);
+}
+
+/** @deprecated use getProduct(slug) instead */
+export function getProductById(id: string): Product | undefined {
+  return getProduct(id);
+}
+
+export function getProductsByCategory(cat: string): Product[] {
+  return products
+    .filter((p) => p.category === cat)
+    .sort((a, b) => a.priority - b.priority);
+}
+
+export function getBestsellers(): Product[] {
+  return products.filter((p) => p.isBestseller);
+}
+
+export function getRelatedProducts(slug: string): Product[] {
+  const product = getProduct(slug);
+  if (!product?.relatedProducts?.length) return [];
+  return product.relatedProducts
+    .map((s) => getProduct(s))
+    .filter((p): p is Product => !!p);
+}
+
 export function getAffiliateUrl(productId: string): string {
-  const p = getProductById(productId);
+  const p = getProduct(productId);
   if (!p) return AFFILIATE_BASE_URL;
-  return `${AFFILIATE_BASE_URL}${p.affiliateUrl || productId}`;
+  return p.affiliateUrl || `${AFFILIATE_BASE_URL}${productId}`;
 }

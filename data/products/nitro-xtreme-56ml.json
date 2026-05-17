@@ -1,0 +1,121 @@
+{
+  "slug": "nitro-xtreme-56ml",
+  "name": "Amare Nitro Xtreme 56ml",
+  "nameNL": "Amare Nitro Xtreme 56ml",
+  "shortNameNL": "Amare Nitro Xtreme 56ml",
+  "category": "essentials",
+  "taglineNL": "Triangle of Wellness — middagboost",
+  "description": {
+    "short": "Triangle of Wellness — middagboost",
+    "long": "Nitro Xtreme is een vloeibaar noni-vruchtenconcentraat (Morinda citrifolia, 240 mg/3ml) verrijkt met essentiële B-vitamines en mineralen: thiamine (Vit B1, 1,5 mg, 136% RI), niacine (Vit B3, 3,6 mg, 23% RI), zink (3,45 mg, 35% RI) en chroom (14,5 µg, 36% RI). Bevat ook CoQ10 (750 µg). Onderdeel van de Triangle of Wellness: Sunrise (ochtend) → Nitro (middag) → Sunset (avond)."
+  },
+  "pricing": {
+    "subscription": 53.74,
+    "oneTime": 59.71,
+    "currency": "EUR",
+    "savings": 5.97,
+    "savingsPercent": 10
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Nitro-Xtreme-56ml-EU-800.jpg",
+    "alt": "Amare Nitro Xtreme 56ml — Amare supplement"
+  },
+  "ingredients": [
+    {
+      "name": "Noni-vruchtenconcentraat (Morinda citrifolia)",
+      "amount": "240 mg (per 3 ml)",
+      "form": "tropisch fruit extract"
+    },
+    {
+      "name": "Thiamine (Vitamine B1)",
+      "amount": "1,5 mg (136% RI)"
+    },
+    {
+      "name": "Niacine (Vitamine B3)",
+      "amount": "3,6 mg NE (23% RI)"
+    },
+    {
+      "name": "Zink(sulfaat)",
+      "amount": "3,45 mg (35% RI)"
+    },
+    {
+      "name": "Chroom",
+      "amount": "14,5 µg (36% RI)"
+    },
+    {
+      "name": "CoQ10 (Ubiquinon)",
+      "amount": "750 µg"
+    }
+  ],
+  "benefits": [
+    "Thiamine (Vit B1, 136% RI) voor energiestofwisseling en hartfunctie",
+    "Niacine (Vit B3) voor huid, zenuwstelsel en vermindering vermoeidheid",
+    "Zink (35% RI) voor immuunsysteem, huid, haar, nagels en testosteron",
+    "Chroom (36% RI) voor behoud normale bloedsuikerspiegel",
+    "CoQ10 (750 µg) voor mitochondriale energieproductie"
+  ],
+  "usage": {
+    "dosage": "Neem tot driemaal per dag 1 ml (20 druppels). Totaal 3 ml (60 druppels) per dag. Een flesje bevat 56 ml — voldoende voor 1 maand. Geschikt vanaf 12 jaar.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "mechanismNL": "Noni bevat natuurlijke fytonutriënten die al generaties in de Stille Oceaan worden gewaardeerd. De B-vitamines (B1, B3) ondersteunen de energiestofwisseling. Zink draagt bij aan 200+ enzymatische reacties. Chroom ondersteunt de normale bloedsuikerspiegel. CoQ10 speelt een rol in de mitochondriale energieproductie. Samen met Sunrise en Sunset vormt Nitro de \"Triangle of Wellness\" voor 24-uurs ondersteuning.",
+  "targetAudienceNL": "Volwassenen met een actieve levensstijl die hun dagelijkse voedingsopname willen optimaliseren. Ideaal als middagboost binnen de Triangle of Wellness routine.",
+  "faqs": [
+    {
+      "q": "Wat is de Triangle of Wellness?",
+      "a": "De Triangle of Wellness is Amare's 3-stappen systeem: Sunrise (ochtend, 22 superfoods + 9 vitaminen), Nitro (middag, noni + B-vitamines + mineralen) en Sunset (avond, omega-3 + vitamine D3/A/E). Samen bieden ze 24-uurs voedingsondersteuning."
+    },
+    {
+      "q": "Waarom is noni het hoofdingrediënt van Nitro?",
+      "a": "De nonivrucht (Morinda citrifolia) groeit in tropische Stille Oceaanregio's en wordt al generaties gewaardeerd om zijn natuurlijke voedingsstoffen en fytonutriënten. Amare gebruikt een geconcentreerde vorm met verhoogde concentratie in Nitro Xtreme."
+    },
+    {
+      "q": "Kan ik Nitro ook 's avonds innemen?",
+      "a": "Nitro is ontworpen voor gebruik verspreid over de dag (ochtend/middag). Voor de avond is Sunset specifiek ontwikkeld met omega-3, vitamine D3 en astaxanthine ter ondersteuning van nachtrust en herstel."
+    }
+  ],
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/kyani-nitro-xtreme-56ml",
+    "sourceTag": "amarenl-product-page"
+  },
+  "relatedProducts": [
+    "amare-sunrise-2-pack",
+    "amare-sunset"
+  ],
+  "tags": [
+    "noni supplement",
+    "coq10 zink chroom",
+    "triangle of wellness",
+    "middag energie supplement",
+    "natuurlijke bloedsuikerspiegel"
+  ],
+  "seo": {
+    "title": "Amare Nitro Xtreme 56ml Kopen | Beste Prijs Nederland 2026",
+    "description": "Triangle of Wellness — middagboost",
+    "keywords": [
+      "noni supplement",
+      "coq10 zink chroom",
+      "triangle of wellness",
+      "middag energie supplement",
+      "natuurlijke bloedsuikerspiegel"
+    ]
+  },
+  "synergies": [
+    "amare-sunrise-2-pack",
+    "amare-sunset"
+  ],
+  "seoKeywordsNL": [
+    "noni supplement",
+    "coq10 zink chroom",
+    "triangle of wellness",
+    "middag energie supplement",
+    "natuurlijke bloedsuikerspiegel"
+  ],
+  "isNew": false,
+  "isBestseller": false,
+  "isPack": true,
+  "priority": 14,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

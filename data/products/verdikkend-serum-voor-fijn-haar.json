@@ -1,0 +1,50 @@
+{
+  "slug": "verdikkend-serum-voor-fijn-haar",
+  "name": "„Verdikkend serum voor fijn haar*”",
+  "nameNL": "„Verdikkend serum voor fijn haar*”",
+  "shortNameNL": "„Verdikkend serum voor fijn haar*”",
+  "category": "schoonheid",
+  "taglineNL": "Huid, haar & nagels verzorging",
+  "description": {
+    "short": "Huid, haar & nagels verzorging",
+    "long": "„Verdikkend serum voor fijn haar*” is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+  },
+  "pricing": {
+    "subscription": 53.56,
+    "oneTime": 59.8,
+    "currency": "EUR",
+    "savings": 6.24,
+    "savingsPercent": 10.4
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Densifying_Serum_BE_800.jpg",
+    "alt": "„Verdikkend serum voor fijn haar*” — Amare supplement"
+  },
+  "benefits": [
+    "Hoogwaardige ingrediënten",
+    "Wetenschappelijk onderbouwd",
+    "gemaakt met natuurlijke ingrediënten"
+  ],
+  "usage": {
+    "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/densifying-serum-thinning-hair",
+    "sourceTag": "amarenl-product-page"
+  },
+  "relatedProducts": [],
+  "tags": [],
+  "seo": {
+    "title": "„Verdikkend serum voor fijn haar*” Kopen | Beste Prijs Nederland 2026",
+    "description": "Huid, haar & nagels verzorging",
+    "keywords": []
+  },
+  "isNew": true,
+  "isBestseller": false,
+  "isPack": false,
+  "priority": 40,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

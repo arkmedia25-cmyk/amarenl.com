@@ -1,4 +1,6 @@
 import CategoryLanding from "@/components/sections/CategoryLanding";
+import SchemaMarkup from "@/components/ui/SchemaMarkup";
+import { generateBreadcrumbSchema } from "@/lib/schema";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,5 +18,16 @@ const category = {
 };
 
 export default function SchoonheidPage() {
-  return <CategoryLanding category={category} categorySlug="schoonheid" />;
+  return (
+    <>
+      <SchemaMarkup
+        schema={generateBreadcrumbSchema([
+          { name: "Home", url: "/" },
+          { name: "Schoonheid", url: "/schoonheid" },
+        ])}
+        id="schoonheid-breadcrumb"
+      />
+      <CategoryLanding category={category} categorySlug="schoonheid" />
+    </>
+  );
 }

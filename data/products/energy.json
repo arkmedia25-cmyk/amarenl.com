@@ -1,0 +1,140 @@
+{
+  "slug": "energy",
+  "name": "Energy+",
+  "nameNL": "Energy+",
+  "shortNameNL": "Energy+",
+  "category": "hersenen",
+  "taglineNL": "Natuurlijke energie zonder crash",
+  "description": {
+    "short": "Natuurlijke energie zonder crash",
+    "long": "Amare Energy+ is een natuurlijke energieformule met vitamine C (60 mg), L-glycine (1000 mg) en plantaardige extracten zoals framboos (met 4 mg frambozenketonen), druivenpit, maritieme pijnboomschors, ApplePhenon® appelextract (met polyfenolen) en granaatappel. Bevat 27,64 mg natuurlijke cafeïne per portie — vergelijkbaar met een kop groene thee. Vrij van kunstmatige kleur- en conserveringsmiddelen."
+  },
+  "pricing": {
+    "subscription": 55.48,
+    "oneTime": 59.84,
+    "currency": "EUR",
+    "savings": 4.36,
+    "savingsPercent": 7.3
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Amare-Energy-Dragonfruit-EU-800.jpg",
+    "alt": "Energy+ — Amare supplement"
+  },
+  "ingredients": [
+    {
+      "name": "Vitamine C (L-ascorbinezuur)",
+      "amount": "60 mg (75% RI)",
+      "form": "vitamine"
+    },
+    {
+      "name": "L-glycine",
+      "amount": "1000 mg",
+      "form": "aminozuur"
+    },
+    {
+      "name": "Frambozenextract",
+      "amount": "100 mg",
+      "form": "bevat 4 mg frambozenketonen"
+    },
+    {
+      "name": "Druivenpitextract",
+      "amount": "10.53 mg",
+      "form": "bevat 10 mg proanthocyanen"
+    },
+    {
+      "name": "Maritieme pijnboomschorsextract",
+      "amount": "10.53 mg",
+      "form": "bevat 10 mg proanthocyanen"
+    },
+    {
+      "name": "ApplePhenon® appelextract",
+      "amount": "10 mg",
+      "form": "bevat 7 mg polyfenolen"
+    },
+    {
+      "name": "Granaatappelextract",
+      "amount": "2.5 mg",
+      "form": "gelijk aan 100 mg granaatappel"
+    },
+    {
+      "name": "Cafeïne (natuurlijk)",
+      "amount": "27.64 mg",
+      "form": "uit plantaardige bronnen"
+    }
+  ],
+  "benefits": [
+    "Vitamine C (60 mg, 75% RI) voor energiemetabolisme en vermindering van vermoeidheid",
+    "L-glycine (1000 mg) voor mentale helderheid en focus",
+    "Plantaardige polyfenolen uit framboos, druivenpit, pijnboomschors en granaatappel",
+    "ApplePhenon® appelextract met natuurlijke polyfenolen",
+    "Lichte cafeïne (27,64 mg) — geen crash zoals bij koffie"
+  ],
+  "usage": {
+    "dosage": "Meng 1 zakje met 350 ml water, melk, sap, smoothie of yoghurt. Bij voorkeur 's ochtends innemen. Geschikt voor volwassenen en jongeren vanaf 12 jaar. Niet koken of blootstellen aan sterk verhitte vloeistoffen.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "mechanismNL": "Vitamine C ondersteunt het natuurlijke energiemetabolisme en helpt vermoeidheid te verminderen. L-glycine werkt als neurotransmitter-precursor voor mentale helderheid. De polyfenolen uit framboos, druivenpit en pijnboomschors helpen cellen beschermen tegen oxidatieve stress, wat bijdraagt aan duurzame energie gedurende de dag.",
+  "targetAudienceNL": "Volwassenen en jongeren (12+) die op zoek zijn naar natuurlijke, duurzame energie zonder de crash van koffie of synthetische stimulanten. Ideaal voor drukke werkdagen, studie of actieve levensstijl.",
+  "faqs": [
+    {
+      "q": "Hoeveel cafeïne bevat Energy+ vergeleken met koffie?",
+      "a": "Energy+ bevat 27,64 mg cafeïne per portie — vergelijkbaar met een kop groene thee. Een gemiddelde kop koffie bevat 80-100 mg. Dit geeft een milde energieboost zonder de beruchte cafeïnecrash."
+    },
+    {
+      "q": "Kan ik Energy+ elke dag gebruiken?",
+      "a": "Ja, Energy+ is ontworpen voor dagelijks gebruik als onderdeel van een evenwichtige levensstijl. De aanbevolen dagelijkse dosis is 1 zakje."
+    },
+    {
+      "q": "Wat is het beste moment om Energy+ in te nemen?",
+      "a": "Bij voorkeur 's ochtends of vroeg in de middag. Door de lichte cafeïne-inhoud wordt afname in de avond afgeraden als je gevoelig bent voor cafeïne."
+    }
+  ],
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/EnergyPlus",
+    "sourceTag": "amarenl-product-page"
+  },
+  "ratings": {
+    "value": 4.5,
+    "count": 500
+  },
+  "relatedProducts": [
+    "amare-mentabiotics",
+    "amare-edge-mango"
+  ],
+  "tags": [
+    "natuurlijke energie supplement",
+    "energie zonder crash",
+    "supplementen tegen vermoeidheid",
+    "natuurlijke cafeïne alternatief",
+    "meer energie overdag"
+  ],
+  "seo": {
+    "title": "Energy+ Kopen | Beste Prijs Nederland 2026",
+    "description": "Natuurlijke energie zonder crash",
+    "keywords": [
+      "natuurlijke energie supplement",
+      "energie zonder crash",
+      "supplementen tegen vermoeidheid",
+      "natuurlijke cafeïne alternatief",
+      "meer energie overdag"
+    ]
+  },
+  "synergies": [
+    "amare-mentabiotics",
+    "amare-edge-mango"
+  ],
+  "seoKeywordsNL": [
+    "natuurlijke energie supplement",
+    "energie zonder crash",
+    "supplementen tegen vermoeidheid",
+    "natuurlijke cafeïne alternatief",
+    "meer energie overdag"
+  ],
+  "isNew": false,
+  "isBestseller": true,
+  "isPack": false,
+  "priority": 6,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

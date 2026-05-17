@@ -104,6 +104,121 @@ export function generateFAQSchema(questions: FAQItem[]) {
   };
 }
 
+export interface ProductSchemaInput {
+  name: string;
+  nameNL?: string;
+  description: string;
+  image?: string;
+  slug: string;
+  category?: string;
+  /** Subscription price */
+  priceSubscription: number;
+  /** One-time purchase price */
+  priceRetail: number;
+  priceCurrency?: string;
+  availability?: string;
+  /** AggregateRating (0-5) */
+  ratingValue?: number;
+  ratingCount?: number;
+  /** Affiliate URL */
+  affiliateUrl: string;
+}
+
+export function generateProductSchema(input: ProductSchemaInput) {
+  const currency = input.priceCurrency || 'EUR';
+  const availability = input.availability || 'https://schema.org/InStock';
+  const productUrl = `${SITE_URL}/${input.slug}`;
+  const priceValidUntil = new Date(
+    new Date().getFullYear() + 1,
+    11,
+    31
+  ).toISOString().split('T')[0];
+
+  const schema: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: input.nameNL || input.name,
+    description: input.description,
+    sku: input.slug,
+    url: productUrl,
+    ...(input.image && {
+      image: input.image.startsWith('http') ? input.image : `${SITE_URL}${input.image}`,
+    }),
+    brand: {
+      '@type': 'Brand',
+      name: 'Amare',
+    },
+    offers: [
+      {
+        '@type': 'Offer',
+        url: input.affiliateUrl,
+        priceCurrency: currency,
+        price: input.priceSubscription,
+        availability,
+        priceValidUntil,
+        itemCondition: 'https://schema.org/NewCondition',
+        name: 'Abonnement (-10%)',
+        seller: {
+          '@type': 'Organization',
+          name: 'Amare Global',
+        },
+      },
+      {
+        '@type': 'Offer',
+        url: input.affiliateUrl,
+        priceCurrency: currency,
+        price: input.priceRetail,
+        availability,
+        priceValidUntil,
+        itemCondition: 'https://schema.org/NewCondition',
+        name: 'Eenmalige aankoop',
+        seller: {
+          '@type': 'Organization',
+          name: 'Amare Global',
+        },
+      },
+    ],
+  };
+
+  if (input.ratingValue && input.ratingCount) {
+    schema.aggregateRating = {
+      '@type': 'AggregateRating',
+      ratingValue: input.ratingValue,
+      reviewCount: input.ratingCount,
+      bestRating: 5,
+      worstRating: 1,
+    };
+  }
+
+  return schema;
+}
+
+/** @deprecated Use generateProductSchema for full product schema */
+export function generateProductSchemaBasic(input: ProductInput) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: input.name,
+    description: input.description,
+    ...(input.image && { image: input.image }),
+    url: input.url,
+    brand: {
+      '@type': 'Brand',
+      name: 'Amare',
+    },
+    ...(input.price && {
+      offers: {
+        '@type': 'Offer',
+        price: input.price,
+        priceCurrency: input.priceCurrency || 'EUR',
+        availability: input.availability || 'https://schema.org/InStock',
+        url: input.url,
+      },
+    }),
+  };
+}
+
+// Legacy type kept for backward compatibility
 export interface ProductInput {
   name: string;
   description: string;
@@ -112,30 +227,6 @@ export interface ProductInput {
   price?: number;
   priceCurrency?: string;
   availability?: string;
-}
-
-export function generateProductSchema(input: ProductInput) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: input.name,
-    description: input.description,
-    ...(input.image && { image: input.image }),
-    url: input.url,
-    brand: {
-      "@type": "Brand",
-      name: "Amare",
-    },
-    ...(input.price && {
-      offers: {
-        "@type": "Offer",
-        price: input.price,
-        priceCurrency: input.priceCurrency || "EUR",
-        availability: input.availability || "https://schema.org/InStock",
-        url: input.url,
-      },
-    }),
-  };
 }
 
 export interface BreadcrumbItem {

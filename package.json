@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "sitemap": "next-sitemap",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap",
+    "validate-products": "node scripts/validate-products.js",
+    "efsa-check": "node scripts/efsa-audit.js"
   },
   "dependencies": {
     "dompurify": "^3.4.2",

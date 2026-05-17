@@ -1,0 +1,50 @@
+{
+  "slug": "versterken-geconcentreerde-shampoo",
+  "name": "Versterken Geconcentreerde Shampoo",
+  "nameNL": "Versterken Geconcentreerde Shampoo",
+  "shortNameNL": "Versterken Geconcentreerde Shampoo",
+  "category": "schoonheid",
+  "taglineNL": "Huid, haar & nagels verzorging",
+  "description": {
+    "short": "Huid, haar & nagels verzorging",
+    "long": "Versterken Geconcentreerde Shampoo is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+  },
+  "pricing": {
+    "subscription": 27.78,
+    "oneTime": 30.93,
+    "currency": "EUR",
+    "savings": 3.15,
+    "savingsPercent": 10.2
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Strengthen_Concentrated_Shampoo_BE_800.jpg",
+    "alt": "Versterken Geconcentreerde Shampoo — Amare supplement"
+  },
+  "benefits": [
+    "Hoogwaardige ingrediënten",
+    "Wetenschappelijk onderbouwd",
+    "gemaakt met natuurlijke ingrediënten"
+  ],
+  "usage": {
+    "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/strengthen-concentrated-shampoo",
+    "sourceTag": "amarenl-product-page"
+  },
+  "relatedProducts": [],
+  "tags": [],
+  "seo": {
+    "title": "Versterken Geconcentreerde Shampoo Kopen | Beste Prijs Nederland 2026",
+    "description": "Huid, haar & nagels verzorging",
+    "keywords": []
+  },
+  "isNew": true,
+  "isBestseller": false,
+  "isPack": false,
+  "priority": 38,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}

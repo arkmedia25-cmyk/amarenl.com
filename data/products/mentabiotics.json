@@ -1,0 +1,157 @@
+{
+  "slug": "mentabiotics",
+  "name": "Amare MentaBiotics",
+  "nameNL": "Amare MentaBiotics",
+  "shortNameNL": "Amare MentaBiotics",
+  "category": "darmen",
+  "taglineNL": "Probiotica voor mentale veerkracht",
+  "description": {
+    "short": "Probiotica voor mentale veerkracht",
+    "long": "MentaBiotics™ is een multi-component formule die oligosachariden, bacteriestammen, aminozuren, magnesium en botanische ingrediënten combineert. Bevat het klinisch onderzochte Cerebiome® bacteriële blend (L. helveticus R0052, L. rhamnosus R0011, B. longum R0175) met 1 miljard KVE. Magnesium draagt bij aan een normale psychologische functie, een normaal energieleverend metabolisme en aan de vermindering van vermoeidheid."
+  },
+  "pricing": {
+    "subscription": 71.83,
+    "oneTime": 80.55,
+    "currency": "EUR",
+    "savings": 8.72,
+    "savingsPercent": 10.8
+  },
+  "images": {
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Amare-Mentabiotics-EU-800.jpg",
+    "alt": "Amare MentaBiotics — Amare supplement"
+  },
+  "ingredients": [
+    {
+      "name": "Isomalto-oligosacharide",
+      "amount": "2752 mg",
+      "form": "prebiotische vezel"
+    },
+    {
+      "name": "Galacto-oligosacharide (uit lactose)",
+      "amount": "1800 mg",
+      "form": "prebiotische vezel"
+    },
+    {
+      "name": "Gedeeltelijk gehydrolyseerde guargom",
+      "amount": "1200 mg",
+      "form": "oplosbare vezel"
+    },
+    {
+      "name": "Cerebiome® bacteriële blend",
+      "amount": "1 miljard KVE",
+      "form": "L. helveticus R0052, L. rhamnosus R0011, B. longum R0175"
+    },
+    {
+      "name": "Groene thee-extract (Camellia sinensis)",
+      "amount": "26.41 mg",
+      "form": "gestandaardiseerd extract"
+    },
+    {
+      "name": "L-glutamine",
+      "amount": "230 mg",
+      "form": "aminozuur"
+    },
+    {
+      "name": "Magnesium(oxide)",
+      "amount": "56.25 mg (15% RI)",
+      "form": "mineraal"
+    },
+    {
+      "name": "Appelextract (Malus domestica)",
+      "amount": "100 mg"
+    },
+    {
+      "name": "Gemberwortelextract (Zingiber officinale)",
+      "amount": "25 mg"
+    },
+    {
+      "name": "Maritieme pijnboomschorsextract (Pinus pinaster)",
+      "amount": "20 mg"
+    },
+    {
+      "name": "Druivenpitextract (Vitis vinifera)",
+      "amount": "15 mg"
+    }
+  ],
+  "benefits": [
+    "Cerebiome® klinisch onderzochte bacteriestammen (1 miljard KVE)",
+    "Magnesium voor vermindering van vermoeidheid en normale psychologische functie",
+    "Prebiotische vezels (isomalto- en galacto-oligosachariden) voor darmflora",
+    "Botanische extracten: groene thee, druivenpit, pijnboomschors, gember, appel",
+    "L-glutamine aminozuur voor darmondersteuning"
+  ],
+  "usage": {
+    "dosage": "Meng 1 sachet in 250 ml water. Neem eenmaal per dag. Niet op een lege maag innemen. Bevat 1 mg EGCG per dagelijkse dosis — niet combineren met andere groene thee producten op dezelfde dag.",
+    "timing": "Raadpleeg de verpakking",
+    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+  },
+  "mechanismNL": "De darm-hersen-as verbindt het centrale zenuwstelsel met het darmmicrobioom via de nervus vagus. MentaBiotics levert probiotische stammen die de darmflora ondersteunen, prebiotische vezels die als voeding dienen voor goede bacteriën, en magnesium dat bijdraagt aan een normale psychologische functie. De botanische extracten (groene thee, druivenpit, pijnboomschors) bevatten polyfenolen die cellen helpen beschermen tegen oxidatieve stress.",
+  "targetAudienceNL": "Volwassenen die hun mentale veerkracht en darmgezondheid willen ondersteunen. Geschikt bij stress, vermoeidheid en stemmingswisselingen. Niet geschikt voor zwangere vrouwen, borstvoeding gevende vrouwen en kinderen <18 jaar.",
+  "faqs": [
+    {
+      "q": "Hoe snel werkt MentaBiotics voor je stemming?",
+      "a": "De meeste gebruikers ervaren binnen 2-4 weken de eerste veranderingen in mentaal welzijn bij consistent dagelijks gebruik. Optimale resultaten worden typisch na 6-8 weken bereikt."
+    },
+    {
+      "q": "Wat is het verschil tussen MentaBiotics en gewone probiotica?",
+      "a": "MentaBiotics combineert 3 specifieke bacteriestammen (Cerebiome® blend) met prebiotica, magnesium en botanische extracten — speciaal ontwikkeld voor de darm-hersen-as. Gewone probiotica richten zich meestal alleen op spijsvertering."
+    },
+    {
+      "q": "Kan ik MentaBiotics combineren met andere Amare producten?",
+      "a": "Ja, MentaBiotics werkt uitstekend samen met Energy+ en Amare EDGE+ voor een complete mentale ondersteuning. Ook met Restore voor extra spijsverteringsondersteuning."
+    }
+  ],
+  "affiliate": {
+    "url": "https://www.amare.com/2075008/nl-nl/mentabiotics",
+    "sourceTag": "amarenl-product-page"
+  },
+  "ratings": {
+    "value": 4.5,
+    "count": 500
+  },
+  "relatedProducts": [
+    "energy",
+    "amare-happy-juice-pack-amare-edge-mango"
+  ],
+  "tags": [
+    "probiotica stemming",
+    "darm hersenen connectie",
+    "probiotica mentale gezondheid",
+    "stress probiotica",
+    "gut brain as",
+    "natuurlijke probiotica",
+    "magnesium vermoeidheid"
+  ],
+  "seo": {
+    "title": "Amare MentaBiotics Kopen | Beste Prijs Nederland 2026",
+    "description": "Probiotica voor mentale veerkracht",
+    "keywords": [
+      "probiotica stemming",
+      "darm hersenen connectie",
+      "probiotica mentale gezondheid",
+      "stress probiotica",
+      "gut brain as",
+      "natuurlijke probiotica",
+      "magnesium vermoeidheid"
+    ]
+  },
+  "synergies": [
+    "energy",
+    "amare-happy-juice-pack-amare-edge-mango"
+  ],
+  "seoKeywordsNL": [
+    "probiotica stemming",
+    "darm hersenen connectie",
+    "probiotica mentale gezondheid",
+    "stress probiotica",
+    "gut brain as",
+    "natuurlijke probiotica",
+    "magnesium vermoeidheid"
+  ],
+  "isNew": false,
+  "isBestseller": true,
+  "isPack": false,
+  "priority": 7,
+  "publishedAt": "2024-01-15",
+  "updatedAt": "2026-05-17"
+}
