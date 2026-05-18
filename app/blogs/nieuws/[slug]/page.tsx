@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getBlogPostBySlug, getAllBlogPosts } from "@/lib/blog";
-import { ArrowLeft, Calendar, Tag, Share2 } from "lucide-react";
+import { getBlogPostBySlug, getAllBlogPosts, getProductLinksForArticle, linkifyProductMentions } from "@/lib/blog";
+import { ArrowLeft, Calendar, Tag, Share2, ExternalLink, ShoppingCart, Gift, ShieldCheck } from "lucide-react";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import {
   generateArticleSchema,
@@ -34,7 +34,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props) {
-  const post = getBlogPostBySlug(params.slug);
+  const { slug } = await params;
+  const post = getBlogPostBySlug(slug);
   if (!post) return { title: "Niet gevonden | AmareNL" };
   return {
     title: `${post.title} | AmareNL`,
@@ -42,10 +43,13 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-export default function BlogPostPage({ params }: Props) {
-  const post = getBlogPostBySlug(params.slug);
+export default async function BlogPostPage({ params }: Props) {
+  const { slug } = await params;
+  const post = getBlogPostBySlug(slug);
   if (!post) notFound();
 
+  const productLinks = getProductLinksForArticle(post.slug);
+  const linkedContent = linkifyProductMentions(post.content, post.slug);
   const faqItems = extractFAQItems(post.content);
   const articleSchema = generateArticleSchema({
     title: post.title,
@@ -99,6 +103,39 @@ export default function BlogPostPage({ params }: Props) {
         </div>
       </header>
 
+      {/* Nieuwe Klant Voordeel + Garantie */}
+      <section className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-light)] text-white">
+        <div className="container-page max-w-4xl py-4">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="bg-white/20 p-2 rounded-full">
+                <Gift size={20} />
+              </div>
+              <div>
+                <span className="text-xs font-bold uppercase tracking-wider opacity-80">Nieuwe Klant Voordeel</span>
+                <p className="text-sm font-bold">Claim <span className="text-[var(--color-accent)] font-bold text-lg">€8</span> korting op je eerste bestelling</p>
+              </div>
+            </div>
+            <div className="hidden sm:block w-px h-12 bg-white/20" />
+            <div className="flex items-center gap-3">
+              <div className="bg-white/20 p-2 rounded-full">
+                <ShieldCheck size={20} />
+              </div>
+              <div>
+                <span className="text-xs font-bold uppercase tracking-wider opacity-80">Zekerheid</span>
+                <p className="text-sm font-bold">30 Dagen Geld-Terug Garantie</p>
+              </div>
+            </div>
+            <a
+              href="#newsletter"
+              className="shrink-0 px-5 py-2.5 bg-[var(--color-accent)] text-white rounded-full text-xs font-bold hover:opacity-90 transition-all shadow-lg whitespace-nowrap"
+            >
+              Claim €8 Korting →
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20">
         <div className="container-page max-w-3xl">
           <div
@@ -107,7 +144,7 @@ export default function BlogPostPage({ params }: Props) {
               prose-p:text-[var(--color-text-muted)] prose-p:leading-relaxed
               prose-strong:text-[var(--color-text)]
               prose-li:text-[var(--color-text-muted)]"
-            dangerouslySetInnerHTML={{ __html: post.content }}
+            dangerouslySetInnerHTML={{ __html: linkedContent }}
           />
 
           <div className="mt-20 pt-10 border-t border-[var(--color-border)] flex flex-col sm:flex-row justify-between items-center gap-6">
@@ -125,6 +162,56 @@ export default function BlogPostPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* Product CTA Section */}
+      {productLinks.length > 0 && (
+        <section className="py-20 bg-[var(--color-bg-soft)] border-t border-[var(--color-border)]">
+          <div className="container-page max-w-4xl">
+            <div className="text-center mb-10">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-[var(--color-accent)]">Aanbevolen Producten</span>
+              <h2 className="text-2xl md:text-3xl font-cormorant font-bold text-[var(--color-text)] mt-2">
+                Ondersteun je welzijn met deze <span className="text-[var(--color-primary)]">formules</span>
+              </h2>
+            </div>
+            <div className={`grid gap-6 ${productLinks.length === 1 ? "max-w-sm mx-auto" : "md:grid-cols-2"}`}>
+              {productLinks.map((product) => (
+                <a
+                  key={product.name}
+                  href={product.url}
+                  target={product.isInternal ? undefined : "_blank"}
+                  rel={product.isInternal ? undefined : "nofollow noopener noreferrer"}
+                  className="group bg-white rounded-2xl border border-[var(--color-border)] p-6 hover:shadow-xl hover:border-[var(--color-primary)] transition-all duration-300 flex flex-col"
+                >
+                  <div className="flex items-start justify-between mb-3">
+                    <div className="flex items-center gap-2">
+                      <ShoppingCart size={16} className="text-[var(--color-primary)]" />
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-[var(--color-text-muted)]">
+                        {product.isInternal ? "Bekijk op AmareNL" : "Bestel bij Amare"}
+                      </span>
+                    </div>
+                    {!product.isInternal && <ExternalLink size={14} className="text-[var(--color-text-muted)] opacity-40" />}
+                  </div>
+                  <h3 className="text-lg font-bold text-[var(--color-text)] mb-1">{product.name}</h3>
+                  {product.tagline && (
+                    <p className="text-sm text-[var(--color-text-muted)] mb-3">{product.tagline}</p>
+                  )}
+                  <div className="mt-auto flex items-center justify-between pt-3 border-t border-[var(--color-border)]">
+                    {product.price && (
+                      <span className="text-sm font-bold text-[var(--color-primary)]">Vanaf €{product.price.replace("€", "").split("/")[0]}/maand</span>
+                    )}
+                    <span className="text-xs font-bold text-[var(--color-primary)] group-hover:translate-x-1 transition-transform">
+                      {product.isInternal ? "Bekijk product →" : "Bestel bij Amare →"}
+                    </span>
+                  </div>
+                </a>
+              ))}
+            </div>
+            <p className="text-center text-[9px] text-[var(--color-text-muted)] mt-6 opacity-60">
+              * Prijzen zijn inclusief abonnementskorting. Affiliate links — je betaalt hetzelfde bedrag.
+            </p>
+          </div>
+        </section>
+      )}
 
       <section className="py-24 bg-[var(--color-bg-soft)] border-t border-[var(--color-border)]">
         <div className="container-page max-w-5xl">

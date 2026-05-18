@@ -15,7 +15,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: "probiotica-stemming-darm-hersen-connectie-mentabiotics",
-    title: "Probiotica en Je Stemming: De Complete Gids voor de Darm-Hersen Connectie (2026)",
+    title: "MentaBiotics: Probiotica voor Darm-Hersen Connectie & Mentale Veerkracht (2026)",
     date: "2026-05-17",
     category: "Darmen & Mentaal",
     excerpt: "Wist je dat 90% van je serotonine in je darmen wordt aangemaakt? Ontdek hoe probiotica via de darm-hersen-as je stemming beïnvloeden — en waarom MentaBiotics specifiek hiervoor is ontwikkeld.",
@@ -77,7 +77,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "supplementen-voor-meer-energie-dit-werkt-echt",
-    title: "Supplementen voor meer energie — dit werkt écht (2026 gids)",
+    title: "Energy+: Natuurlijke Energie Supplement Zonder Cafeïnecrash (2026)",
     date: "2026-05-09",
     category: "Energie",
     excerpt: "Altijd moe? Ontdek welke supplementen écht werken voor meer energie — zonder cafeïnecrash. Van mitochondriën tot natuurlijke energieboosters.",
@@ -143,7 +143,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "collageen-bouwsteen-voor-huid-haar-en-nagels-dit-moet-je-weten",
-    title: "Collageen voor huid, haar en nagels — complete gids",
+    title: "HL5 Collageen: 5g Gehydrolyseerd Collageen voor Huid, Haar & Nagels",
     date: "2026-05-09",
     category: "Beauty",
     excerpt: "Collageen is het belangrijkste eiwit voor je huid, haar en nagels. Vanaf je 25e neemt de productie af. Ontdek hoe je dit op natuurlijke wijze ondersteunt.",
@@ -213,7 +213,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "prebiotica-probiotica-verschil-nederland",
-    title: "Prebiotica vs Probiotica: Wat Is het Verschil? (Volledige Gids 2026)",
+    title: "Restore & Happy Juice Pack: Prebiotica vs Probiotica voor Darmgezondheid (2026)",
     date: "2026-04-15",
     category: "Gut Health",
     excerpt: "Ontdek het cruciale verschil tussen prebiotica en probiotica en waarom ze samenwerken voor een gezonde darmflora en een sterk immuunsysteem.",
@@ -240,7 +240,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "ijzer-tekort-vermoeidheid-supplement-nederland",
-    title: "IJzer Tekort en Vermoeidheid: Herken de Signalen (2026)",
+    title: "Sunrise 2-Pack: IJzertekort & Vermoeidheid — 22 Superfoods + 9 Vitaminen",
     date: "2026-04-10",
     category: "Energie",
     excerpt: "Voel je je constant moe? Een ijzertekort kan de boosdoener zijn. Leer hoe je de signalen herkent en wat je eraan kunt doen.",
@@ -266,7 +266,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "mct-olie-energie-gewicht-supplement",
-    title: "MCT Olie voor Energie en Gewicht: Wat Zegt de Wetenschap? (2026)",
+    title: "Origin Vegan Protein: MCT Olie & Plantaardig Eiwit voor Energie & Gewicht (2026)",
     date: "2026-04-05",
     category: "Metabolisme",
     excerpt: "MCT-olie is razend populair in de wellness-wereld. Maar wat doet het precies voor je energie ve vetverbranding?",
@@ -287,7 +287,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "magnesium-slaap-supplement-nederland",
-    title: "Magnesium en Slaap: Waarom Nederlanders Tekort Hebben (2026)",
+    title: "MentaBiotics: Magnesium & Slaap — Waarom Nederlanders Tekort Hebben (2026)",
     date: "2026-03-28",
     category: "Wellness",
     excerpt: "Moeite met slapen? Magnesium is een essentieel mineraal voor spierontspanning ve een rustig zenuwstelsel.",
@@ -305,7 +305,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "vitamine-d-tekort-nederland-supplement",
-    title: "Vitamine D Tekort Nederland: Symptomen & Beste Aanvulling 2026",
+    title: "Sunset & Sunrise: Vitamine D Tekort in Nederland — Symptomen & Beste Supplement",
     date: "2026-03-20",
     category: "Immuniteit",
     excerpt: "Met weinig zonlicht is een vitamine D tekort in Nederland bijna onvermijdelijk. Leer hoe je je weerstand ondersteunt.",
@@ -323,7 +323,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "omega-3-hersenen-supplement-nederland",
-    title: "Omega-3 en Hersengezondheid: Wat Niemand Je Vertelt (2026)",
+    title: "Sunset Omega-3: Essentiële Vetzuren voor Hersengezondheid & Focus (2026)",
     date: "2026-03-15",
     category: "Focus",
     excerpt: "Je hersenen bestaan voor een groot deel uit vetten. Ontdek waarom Omega-3 essentieel is voor je focus ve stemming.",
@@ -341,7 +341,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "adaptogenen-stress-supplement-nederland",
-    title: "Adaptogenen tegen Stress: Ashwagandha, Rhodiola & Co (2026)",
+    title: "MentaFocus & Happy Juice Pack: Adaptogenen tegen Stress — Ashwagandha & Rhodiola (2026)",
     date: "2026-03-05",
     category: "Mentaal Welzijn",
     excerpt: "Adaptogenen zijn natuurlijke stoffen die je lichaam helpen om te gaan met stress ve vermoeidheid.",
@@ -359,7 +359,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "collageen-supplement-huid-haar-gewrichten",
-    title: "Collageen Supplement: Werkt Het Voor Huid, Haar ve Gewrichten? (2026)",
+    title: "HL5 Collageen: Werkt Het Echt voor Huid, Haar & Gewrichten? (2026 Review)",
     date: "2026-02-28",
     category: "Beauty",
     excerpt: "Collageen is het meest voorkomende eiwit in je lichaam. Ontdek waarom suppletie essentieel is bij het ouder worden.",
@@ -377,7 +377,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "calcium-botten-supplement-nederland",
-    title: "Calcium voor Sterke Botten: Meer Dan Alleen Melk (2026)",
+    title: "Sunset & Origin: Calcium + D3 + K2 voor Sterke Botten & Spieren (2026)",
     date: "2026-05-01",
     category: "Wellness",
     excerpt: "Leer waarom calcium essentieel is voor je botdichtheid ve hoe de synergie met vitamine D3 de opname optimaliseert.",
@@ -395,7 +395,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "zink-testosteron-supplement-nederland",
-    title: "Zink en Testosteron: Het Belang voor Hormonale Balans (2026)",
+    title: "Triangle of Wellness & Nitro Xtreme: Zink & Testosteron voor Hormonale Balans",
     date: "2026-04-30",
     category: "Metabolisme",
     excerpt: "Zink speelt een cruciale rol bij de hormoonproductie. Ontdek hoe dit mineraal je vitaliteit ve testosteronspiegel ondersteunt.",
@@ -413,7 +413,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "vitamine-c-immuunsysteem-supplement",
-    title: "Vitamine C en je Immuunsysteem: De Ultieme Beschermer (2026)",
+    title: "Sunrise 2-Pack: Natuurlijke Vitamine C voor Immuunsysteem & Energie (2026)",
     date: "2026-04-29",
     category: "Immuniteit",
     excerpt: "Iedereen kent vitamine C, maar wist je dat het ook de opname van ijzer verhoogt ve je cellen beschermt tegen oxidatieve stress?",
@@ -431,7 +431,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "vitamine-e-huid-haar-supplement",
-    title: "Vitamine E voor Huid en Haar: Werkt Het Echt? (2026)",
+    title: "Sunset: Vitamine E (Tocotriënolen) voor Huid, Haar & Diepe Nachtrust (2026)",
     date: "2026-04-28",
     category: "Beauty",
     excerpt: "Ontdek de geheimen van vitamine E voor een elastische huid ve glanzend haar. Leer waarom tocotriënolen de beste vorm zijn.",
@@ -449,7 +449,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "darm-hersen-verbinding-stemming-supplement",
-    title: "De Darm-Hersen Verbinding: Hoe Je Darmen Je Stemming Bepalen",
+    title: "MentaBiotics: De Darm-Hersen Verbinding — Hoe Je Darmen Je Stemming Bepalen",
     date: "2026-04-27",
     category: "Gut Health",
     excerpt: "Wist je dat 90% van je serotonine in je darmen wordt aangemaakt? Leer hoe je darmgezondheid je mentale welzijn beïnvloedt.",
@@ -467,7 +467,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "b-vitamines-energie-supplement-nederland",
-    title: "B-Vitamines en Energie: De Motor van je Metabolisme (2026)",
+    title: "Amare ON: B-Vitamines voor Energie & Focus — De Motor van je Metabolisme (2026)",
     date: "2026-04-25",
     category: "Energie",
     excerpt: "Voel je je futloos? B-vitamines zijn essentieel voor het omzetten van voeding in bruikbare energie voor je hersenen ve spieren.",
@@ -485,7 +485,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "probiotica-darmen-supplement-nederland",
-    title: "Probiotica voor Darmen: De Juiste Stammen Kiezen (2026)",
+    title: "Restore & MentaBiotics: Probiotica Stammen Kiezen voor Optimale Darmgezondheid (2026)",
     date: "2026-04-23",
     category: "Gut Health",
     excerpt: "Niet alle probiotica zijn gelijk. Leer welke stammen zoals Lactobacillus ve Bifidobacterium het beste werken voor jouw darmflora.",
@@ -509,4 +509,191 @@ export function getBlogPostBySlug(slug: string): BlogPost | undefined {
 
 export function getAllBlogPosts(): BlogPost[] {
   return [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
+
+interface ProductLink {
+  name: string;
+  /** Interne productpagina (e.g. /mentabiotics) of volledige Amare URL */
+  url: string;
+  /** true = interne amarenl.com pagina, false = directe affiliate link */
+  isInternal: boolean;
+  price?: string;
+  tagline?: string;
+}
+
+/**
+ * Koppelt elk artikel aan relevante producten met affiliate links.
+ * Interne productpagina's voor de 7 deep pages, anders directe Amare link.
+ */
+const AFFILIATE_BASE = "https://www.amare.com/2075008/nl-nl";
+
+const articleProductMap: Record<string, ProductLink[]> = {
+  "probiotica-stemming-darm-hersen-connectie-mentabiotics": [
+    { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — probiotica voor stemming & mentale veerkracht" },
+    { name: "Energy+", url: "/energy", isInternal: true, price: "€55.48/maand", tagline: "Natuurlijke cafeïne + B-vitamines, zonder crash" },
+    { name: "Restore", url: "/restore", isInternal: true, price: "€29.70/maand", tagline: "5 spijsverteringsenzymen + 5 probiotica stammen" },
+  ],
+  "supplementen-voor-meer-energie-dit-werkt-echt": [
+    { name: "Energy+", url: "/energy", isInternal: true, price: "€55.48/maand", tagline: "Natuurlijke energie zonder cafeïnecrash" },
+    { name: "Happy Juice Pack", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — energie, stemming & focus in één pakket" },
+    { name: "Amare ON", url: `${AFFILIATE_BASE}/amare-on`, isInternal: false, price: "€70.23/maand", tagline: "Directe mentale boost met uitgebalanceerd B-complex" },
+  ],
+  "collageen-bouwsteen-voor-huid-haar-en-nagels-dit-moet-je-weten": [
+    { name: "HL5", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "5g gehydrolyseerd collageen Type 1&3 — 2-pack" },
+    { name: "Amare HL5", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "5g gehydrolyseerd collageen Type 1&3 — 2-pack" },
+  ],
+  "prebiotica-probiotica-verschil-nederland": [
+    { name: "Happy Juice", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — complete gut-brain support in één pakket" },
+    { name: "Restore", url: "/restore", isInternal: true, price: "€29.70/maand", tagline: "Spijsverteringsenzymen + 5 probiotica stammen" },
+  ],
+  "ijzer-tekort-vermoeidheid-supplement-nederland": [
+    { name: "Sunrise", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "22 superfoods + 9 vitamines — 2-pack" },
+    { name: "Amare Sunrise", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "22 superfoods + 9 vitamines — 2-pack voordelig" },
+  ],
+  "mct-olie-energie-gewicht-supplement": [
+    { name: "Origin", url: "/origin", isInternal: true, price: "€40/maand", tagline: "23g plantaardig eiwit + MCT — vegan shake" },
+    { name: "Amare Origin", url: "/origin", isInternal: true, price: "€40/maand", tagline: "23g plantaardig eiwit + MCT — vegan shake" },
+  ],
+  "magnesium-slaap-supplement-nederland": [
+    { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Magnesium 56,25mg + Cerebiome® blend voor ontspanning & slaap" },
+  ],
+  "vitamine-d-tekort-nederland-supplement": [
+    { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "D3 + K2 + Omega-3 — melatoninevrije slaapformule" },
+    { name: "Amare Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "D3 + K2 + Omega-3 — melatoninevrije slaapformule" },
+    { name: "Sunrise", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "22 superfoods + 9 vitamines inclusief D3" },
+  ],
+  "omega-3-hersenen-supplement-nederland": [
+    { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Omega-3 (EPA/DHA) voor hart, brein & gewrichten" },
+    { name: "Amare Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Omega-3 (EPA/DHA) voor hart, brein & gewrichten" },
+  ],
+  "adaptogenen-stress-supplement-nederland": [
+    { name: "MentaFocus", url: `${AFFILIATE_BASE}/mentafocus`, isInternal: false, price: "€70.23/maand", tagline: "Adaptogenen (Ashwagandha + Rhodiola) voor focus & stress" },
+    { name: "Amare MentaFocus", url: `${AFFILIATE_BASE}/mentafocus`, isInternal: false, price: "€70.23/maand", tagline: "Adaptogenen (Ashwagandha + Rhodiola) voor focus & stress" },
+    { name: "Happy Juice Pack", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — energie, stemming & focus in één pakket" },
+  ],
+  "collageen-supplement-huid-haar-gewrichten": [
+    { name: "HL5", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "5g gehydrolyseerd collageen Type 1&3 — 2-pack" },
+    { name: "Amare HL5", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "5g gehydrolyseerd collageen Type 1&3 — 2-pack" },
+  ],
+  "calcium-botten-supplement-nederland": [
+    { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Calcium + D3 + K2 + Omega-3 — complete botformule" },
+    { name: "Amare Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Calcium + D3 + K2 + Omega-3 — complete botformule" },
+    { name: "Origin", url: "/origin", isInternal: true, price: "€40/maand", tagline: "Plantaardig eiwit + calcium — vegan shake" },
+    { name: "Amare Origin", url: "/origin", isInternal: true, price: "€40/maand", tagline: "Plantaardig eiwit + calcium — vegan shake" },
+  ],
+  "zink-testosteron-supplement-nederland": [
+    { name: "Triangle of Wellness", url: `${AFFILIATE_BASE}/triangle-of-wellness`, isInternal: false, price: "Vanaf €189/maand", tagline: "Sunrise + Nitro + Sunset — complete dagelijkse routine" },
+    { name: "Nitro Xtreme", url: `${AFFILIATE_BASE}/nitro-xtreme`, isInternal: false, price: "€80/maand", tagline: "Nitraten + mineralen voor focus, energie & hormonale balans" },
+  ],
+  "vitamine-c-immuunsysteem-supplement": [
+    { name: "Sunrise", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "Natuurlijke vitamine C uit 22 superfoods — 2-pack" },
+    { name: "Amare Sunrise", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "Natuurlijke vitamine C uit 22 superfoods — 2-pack" },
+  ],
+  "vitamine-e-huid-haar-supplement": [
+    { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Tocotriënolen (krachtigste vitamine E) voor huid & haar" },
+    { name: "Amare Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Tocotriënolen (krachtigste vitamine E) voor huid & haar" },
+  ],
+  "darm-hersen-verbinding-stemming-supplement": [
+    { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — darm-hersen-as & mentale veerkracht" },
+    { name: "Amare MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — darm-hersen-as & mentale veerkracht" },
+  ],
+  "b-vitamines-energie-supplement-nederland": [
+    { name: "Amare ON", url: `${AFFILIATE_BASE}/amare-on`, isInternal: false, price: "€70.23/maand", tagline: "Directe mentale boost met uitgebalanceerd B-complex" },
+  ],
+  "probiotica-darmen-supplement-nederland": [
+    { name: "Restore", url: "/restore", isInternal: true, price: "€29.70/maand", tagline: "5 probiotica stammen + 5 spijsverteringsenzymen" },
+    { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Probiotica specifiek voor de darm-hersen-as" },
+  ],
+};
+
+export function getProductLinksForArticle(slug: string): ProductLink[] {
+  return articleProductMap[slug] || [];
+}
+
+/**
+ * Algemene keywords → categorie/generieke pagina's.
+ * Deze worden ALLEEN gelinkt als er GEEN specifiek product in de buurt staat.
+ */
+interface KeywordLink {
+  pattern: RegExp;
+  url: string;
+  label: string;
+}
+
+const generalKeywords: KeywordLink[] = [
+  { pattern: /supplementen?\s*(kopen|bestellen|online|aanbieding|winkel)/gi, url: "/supplementen/", label: "supplementen" },
+  { pattern: /natuurlijke\s+supplementen/gi, url: "/supplementen/", label: "natuurlijke supplementen" },
+  { pattern: /beste\s+supplementen/gi, url: "/supplementen/", label: "beste supplementen" },
+  { pattern: /wellness\s+supplementen/gi, url: "/supplementen/", label: "wellness supplementen" },
+  { pattern: /Amare\s+producten/gi, url: "/#products", label: "Amare producten" },
+  { pattern: /probiotica\s+(supplementen?|producten?)/gi, url: "/supplementen/", label: "probiotica supplementen" },
+  { pattern: /energie\s+(supplementen?|boosters?|producten?)/gi, url: "/supplementen/", label: "energie supplementen" },
+  { pattern: /collageen\s+(supplementen?|producten?)/gi, url: "/schoonheid/", label: "collageen supplementen" },
+  { pattern: /gewichtsbeheer\s+(supplementen?|producten?)/gi, url: "/gewichtsbeheer/", label: "gewichtsbeheer supplementen" },
+  { pattern: /slaap\s+(supplementen?|producten?|formules?)/gi, url: "/supplementen/", label: "slaap supplementen" },
+  { pattern: /mentale\s+(wellness|gezondheid)\s+(supplementen?|producten?)/gi, url: "/supplementen/", label: "mentale wellness supplementen" },
+  { pattern: /darm\s+(supplementen?|gezondheid\s+supplementen?)/gi, url: "/supplementen/", label: "darm supplementen" },
+  { pattern: /focus\s+(supplementen?|producten?)/gi, url: "/supplementen/", label: "focus supplementen" },
+  { pattern: /stress\s+(supplementen?|producten?)/gi, url: "/supplementen/", label: "stress supplementen" },
+  { pattern: /immuun\s+(supplementen?|producten?|boosters?)/gi, url: "/supplementen/", label: "immuun supplementen" },
+  { pattern: /sport\s+(supplementen?|voeding|herstel)/gi, url: "/supplementen/", label: "sport supplementen" },
+];
+
+/**
+ * Herbruikbare link builder — voorkomt duplicate code.
+ */
+function buildLink(href: string, text: string, isExternal: boolean, cssClass = ""): string {
+  const rel = isExternal ? ' target="_blank" rel="nofollow noopener noreferrer"' : "";
+  const cls = cssClass || "inline-flex items-center gap-1 px-2 py-0.5 bg-[var(--color-primary)]/10 text-[var(--color-primary)] font-bold rounded-md hover:bg-[var(--color-primary)] hover:text-white transition-all text-sm no-underline";
+  return `<a href="${href}"${rel} class="${cls}">${text} →</a>`;
+}
+
+/**
+ * Vervang productnamen én algemene keywords in HTML-content met de juiste links.
+ *
+ * REGEL: specifiek product genoemd → link naar dat product.
+ *        algemene term zoals "supplement kopen" → link naar categoriepagina.
+ */
+export function linkifyProductMentions(html: string, slug: string): string {
+  let result = html;
+  const products = articleProductMap[slug] || [];
+
+  // STAP 1: Specifieke producten → directe productlinks (button-stijl)
+  for (const product of products) {
+    const target = product.url;
+    const isExternal = !product.isInternal;
+    const escaped = product.name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const ctaLabel = isExternal ? "Bestel bij Amare →" : "Bekijk product →";
+    const ctaClass = "inline-flex items-center gap-1 px-3 py-1.5 bg-[var(--color-accent)] text-white font-bold rounded-full text-xs hover:opacity-90 transition-all no-underline shadow-md";
+
+    // <strong>ProductName</strong> → styled link (pill button)
+    result = result.replace(
+      new RegExp(`<strong>(${escaped})</strong>`, "gi"),
+      (_substring: string, name: string) => `<strong>${buildLink(target, name, isExternal)}</strong>`
+    );
+
+    // Standalone product name (eerste 3 occurrences)
+    let count = 0;
+    result = result.replace(
+      new RegExp(`(?<![a-zA-Z>=-])(${escaped})(?![a-zA-Z<=-])`, "gi"),
+      (match: string) => {
+        if (count < 3) { count++; return buildLink(target, match, isExternal); }
+        return match;
+      }
+    );
+
+    // Eerste keer dat product genoemd wordt → voeg opvallende CTA button toe
+    const firstMention = new RegExp(`(<a[^>]*>${escaped}[^<]*</a>)`, "i");
+    if (firstMention.test(result)) {
+      result = result.replace(firstMention, `$1 <a href="${target}" class="${ctaClass}"${isExternal ? ' target="_blank" rel="nofollow noopener noreferrer"' : ""}>${ctaLabel}</a>`);
+    }
+  }
+
+  // STAP 2: Algemene keywords → categorie/generieke pagina's
+  for (const kw of generalKeywords) {
+    kw.pattern.lastIndex = 0;
+    result = result.replace(kw.pattern, (match: string) => buildLink(kw.url, match, false));
+  }
+
+  return result;
 }
