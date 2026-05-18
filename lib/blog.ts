@@ -500,6 +500,252 @@ export const blogPosts: BlogPost[] = [
       <p>Onze producten zoals <strong>Restore</strong> ve <strong>MentaBiotics</strong> maken gebruik van gepatenteerde stammen die wetenschappelijk zijn bewezen om de darmbarrière te versterken.</p>
     `,
     image: "/images/blog/probiotics-guide.jpg"
+  },
+  {
+    slug: "happy-juice-pack-complete-mentale-focus-energie-bundel",
+    title: "Happy Juice Pack: Complete Bundel voor Mentale Focus & Energie (2026)",
+    date: "2026-05-18",
+    category: "Pakketten & Bundels",
+    excerpt: "Het #1 bestverkopende Amare pakket combineert MentaBiotics, Energy+ en Amare EDGE+ voor totale mentale ondersteuning — voordeliger dan los kopen. Ontdek waarom duizenden Nederlanders voor deze bundel kiezen.",
+    content: `
+      <h2>Wat is de Happy Juice Pack?</h2>
+      <p>De <strong>Happy Juice Pack</strong> is het bestverkopende productpakket van Amare — en dat is niet zonder reden. Deze complete bundel combineert <strong>drie van de meest populaire formules</strong> in één voordelig pakket: MentaBiotics voor de darm-hersen-as, Energy+ voor natuurlijke energie, en Amare EDGE+ voor mentale scherpte en focus.</p>
+      <p>Het idee achter de Happy Juice Pack is eenvoudig maar krachtig: in plaats van losse supplementen te kopen die elkaar misschien overlappen of juist niet aanvullen, krijg je een <strong>wetenschappelijk op elkaar afgestemde bundel</strong> die de drie pijlers van mentaal welzijn — stemming, energie en focus — in één keer dekt.</p>
+      <p>Voor nieuwe klanten die willen beginnen met de Amare producten is de Happy Juice Pack veruit de meest gekozen instapbundel. Je betaalt aanzienlijk minder dan wanneer je de drie producten los zou aanschaffen, en je ervaart direct hoe de formules samenwerken.</p>
+
+      <h2>Wat zit er in de Happy Juice Pack?</h2>
+      <p>De Happy Juice Pack bestaat uit drie kernproducten die samen een complete mentale wellness routine vormen:</p>
+      <ul>
+        <li><strong>MentaBiotics (30 sachets):</strong> De kern van het pakket. MentaBiotics bevat de klinisch onderzochte Cerebiome® bacteriële blend met Lactobacillus helveticus R0052, Lacticaseibacillus rhamnosus R0011 en Bifidobacterium longum R0175 — drie stammen specifiek geselecteerd voor hun rol in de darm-hersen-as. Aangevuld met magnesium (56,25 mg) voor psychologische functie, L-glutamine voor de darmwand, en prebiotische vezels als voeding voor de goede bacteriën.</li>
+        <li><strong>Energy+ (30 sachets):</strong> Natuurlijke energie zonder cafeïnecrash. Bevat 80 mg natuurlijke cafeïne uit groene koffiebonen en matcha groene thee, gecombineerd met vitamine C voor vermindering van vermoeidheid, L-glycine voor mentale focus, en een antioxidantencomplex uit 29 botanische extracten. Geen synthetische stimulanten — je merkt het verschil aan het uitblijven van de middagdip.</li>
+        <li><strong>Amare EDGE+ (30 sachets, keuze Mango of Watermelon):</strong> Een plantaardig nootropicum dat mentale scherpte, creativiteit en productiviteit ondersteunt. Bevat gepatenteerde ingrediënten zoals Cereboost® (Amerikaanse ginseng) en Zynamite® (mango-extract), plus acetyl-L-carnitine, L-tyrosine, Rhodiola rosea en vitamines B6, B12 en foliumzuur.</li>
+      </ul>
+      <p>Alle drie de producten worden als sachetpoeder geleverd dat je mengt met 250 ml water — een ochtendritueel dat nog geen twee minuten kost.</p>
+
+      <h2>Waarom een bundel meer waarde biedt dan losse producten</h2>
+      <p>De Happy Juice Pack is niet zomaar drie producten in één doos. De formules zijn <strong>wetenschappelijk op elkaar afgestemd</strong> zodat ze elkaars werking versterken:</p>
+      <ul>
+        <li><strong>MentaBiotics + Energy+ synergie:</strong> De Cerebiome® blend in MentaBiotics ondersteunt de aanmaak van serotonine (90% gebeurt in je darmen) en GABA, terwijl de natuurlijke cafeïne en B-vitamines in Energy+ zorgen voor de energie om de dag door te komen. Samen bestrijden ze zowel de biologische als de psychologische kant van vermoeidheid.</li>
+        <li><strong>Energy+ + EDGE+ synergie:</strong> Waar Energy+ zorgt voor fysieke energie en uithoudingsvermogen, richt EDGE+ zich op mentale energie — focus, concentratie en creativiteit. Geen nerveuze energie zoals bij synthetische stimulanten, maar een gebalanceerd gevoel van alertheid.</li>
+        <li><strong>Prijsvoordeel:</strong> De losse producten bij elkaar kosten aanzienlijk meer. Als bundel bespaar je tot 15% ten opzichte van de individuele abonnementsprijzen. Op jaarbasis scheelt dat ruim €200.</li>
+      </ul>
+
+      <h2>Voor wie is de Happy Juice Pack geschikt?</h2>
+      <p>De Happy Juice Pack is ontworpen voor volwassenen die hun <strong>mentale welzijn serieus willen aanpakken</strong> via de darm-hersen-as. Je past bij deze bundel als je:</p>
+      <ul>
+        <li>Last hebt van wisselende stemmingen, stress of piekergedachten</li>
+        <li>Vaak moe wakker wordt, ook na een volledige nachtrust</li>
+        <li>Moeite hebt met concentreren tijdens werk of studie</li>
+        <li>Op zoek bent naar een natuurlijk alternatief voor koffie en energiedrankjes</li>
+        <li>De voordelen van de darm-hersen-as zelf wilt ervaren</li>
+      </ul>
+      <p>De Happy Juice Pack is <strong>niet geschikt</strong> voor zwangere vrouwen, vrouwen die borstvoeding geven, en personen jonger dan 18 jaar. Raadpleeg bij twijfel altijd een arts.</p>
+
+      <h2>Veelgestelde vragen</h2>
+
+      <h3>Hoe gebruik ik de Happy Juice Pack dagelijks?</h3>
+      <p>Meng elk sachet met 250 ml koud water en neem het bij een maaltijd. De aanbevolen volgorde is: begin de ochtend met Energy+, neem MentaBiotics bij het ontbijt, en gebruik EDGE+ wanneer je mentale focus nodig hebt (bijvoorbeeld voor een belangrijke meeting of studiesessie). Alle drie de sachets mogen tegelijk worden ingenomen als dat praktischer is.</p>
+
+      <h3>Is de Happy Juice Pack veganistisch?</h3>
+      <p>Ja, alle drie de producten in de Happy Juice Pack zijn veganistisch en vrij van GMO's, kunstmatige kleurstoffen en conserveermiddelen. MentaBiotics bevat wel lactose uit het fermentatieproces, maar de hoeveelheid is verwaarloosbaar (minder dan 10 ppm).</p>
+
+      <h3>Hoe snel merk ik resultaat van de Happy Juice Pack?</h3>
+      <p>Veel gebruikers ervaren binnen 1-2 weken meer energie en minder middagdips. De mentale voordelen — zoals een stabielere stemming en minder piekeren — worden doorgaans na 4-6 weken consistent gebruik merkbaar. De darmflora heeft tijd nodig om zich aan te passen; geef het minimaal 30 dagen de kans.</p>
+
+      <h2>Conclusie</h2>
+      <p>De Happy Juice Pack is niet voor niets het #1 bestverkopende product bij Amare. Het combineert drie wetenschappelijk onderbouwde formules in één voordelige bundel die de kern van mentaal welzijn dekt: stemming, energie en focus. Voor nieuwe klanten is dit de meest logische eerste stap — je ervaart direct hoe de darm-hersen-as werkt en profiteert van een significante kostenbesparing ten opzichte van losse aankopen.</p>
+      <p>Met de <strong>30 dagen geld-terug-garantie</strong> loop je bovendien geen enkel risico: bevalt het niet, dan krijg je je geld terug. Geen vragen, geen gedoe. De €8 nieuwe-klant-korting maakt de eerste bestelling nóg toegankelijker.</p>
+      <p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Resultaten kunnen per persoon verschillen. Dit product is niet geschikt voor zwangere vrouwen, vrouwen die borstvoeding geven en personen jonger dan 18 jaar.</em></p>
+    `,
+    image: "/images/blog/happy-juice-pack-bundle.jpg"
+  },
+  {
+    slug: "triangle-of-wellness-xtreme-dagelijkse-basisondersteuning-pakket",
+    title: "Triangle of Wellness Xtreme: Dagelijkse Basisondersteuning voor Energie & Herstel (2026)",
+    date: "2026-05-18",
+    category: "Pakketten & Bundels",
+    excerpt: "De Triangle of Wellness Xtreme combineert Sunrise, Nitro Xtreme en Sunset in één dagelijkse routine — ochtendenergie, middagfocus en avondherstel. Het meest complete basispakket van Amare.",
+    content: `
+      <h2>Wat is de Triangle of Wellness Xtreme?</h2>
+      <p>De <strong>Triangle of Wellness Xtreme</strong> is het signature systeem van Amare — een driedelige dagelijkse routine die je van ochtend tot avond ondersteunt. Het concept is gebaseerd op het natuurlijke dagritme van je lichaam: <strong>opbouwen, presteren en herstellen</strong>.</p>
+      <p>Waar veel supplementenmerken losse producten verkopen die je zelf moet combineren, heeft Amare met de Triangle of Wellness een <strong>wetenschappelijk op elkaar afgestemd systeem</strong> ontwikkeld. Drie formules, elk met een specifiek doel en tijdstip:</p>
+      <ul>
+        <li><strong>Sunrise:</strong> Je ochtendboost — 22 superfoods, 9 vitamines en 6 mineralen om de dag energiek te starten</li>
+        <li><strong>Nitro Xtreme:</strong> Je middagfocus — nitraten, L-citrulline, L-glutathion en 56 mineralen voor uithoudingsvermogen en mentale helderheid</li>
+        <li><strong>Sunset:</strong> Je avondherstel — Omega-3 (EPA/DHA), D3, K2, calcium, vitamine E tocotriënolen en magnesium voor diepe slaap en herstel</li>
+      </ul>
+      <p>Het resultaat is een <strong>naadloze dagelijkse routine</strong> die niet alleen je energie en focus ondersteunt, maar ook je slaapkwaliteit en herstel — de twee pijlers die de meeste mensen onderschatten.</p>
+
+      <h2>De drie pijlers van de Triangle of Wellness</h2>
+      <p>Laten we elk onderdeel van de Triangle of Wellness Xtreme in detail bekijken, inclusief de belangrijkste ingrediënten en wat de wetenschap erover zegt.</p>
+
+      <h3>Sunrise — De Ochtendbasis</h3>
+      <p>Sunrise is ontworpen om je dag te starten met een breed spectrum aan micronutriënten uit <strong>22 verschillende superfoods</strong>, waaronder bietenpoeder, tarwegras, spirulina, chlorella, kurkuma, gember, bosbessen, acai, goji-bessen en granaatappel. Daarnaast bevat het 9 vitamines (waaronder B-complex, C, D3, E) en 6 mineralen (waaronder magnesium en kalium).</p>
+      <p>In plaats van een handvol losse vitaminesupplementen krijg je één sachet dat je mengt met 250 ml water. Het is ontworpen om zacht te zijn voor de maag — in tegenstelling tot veel multivitamines die op een lege maag voor misselijkheid kunnen zorgen.</p>
+
+      <h3>Nitro Xtreme — De Middagkracht</h3>
+      <p>Nitro Xtreme is het product dat de "Xtreme" in de Triangle of Wellness brengt. Het combineert <strong>nitraten uit rode biet</strong> met L-citrulline en L-glutathion voor een volledig andere benadering van energie dan cafeïne. Nitraten worden in het lichaam omgezet in stikstofmonoxide (NO), een molecuul dat bloedvaten verwijdt en de zuurstof- en nutriëntenstroom naar spieren en hersenen verbetert.</p>
+      <p>Daarnaast bevat Nitro Xtreme <strong>56 mineralen</strong> in sporenhoeveelheden, gewonnen uit natuurlijke bronnen. Deze mineralen ondersteunen honderden enzymatische reacties in het lichaam — van energieproductie tot hormoonregulatie.</p>
+
+      <h3>Sunset — Het Avondherstel</h3>
+      <p>Sunset is de meest onderschatte pijler van de Triangle. Het bevat <strong>Omega-3 vetzuren (EPA en DHA)</strong> uit algenolie — een plantaardig alternatief voor visolie — plus vitamine D3 (25 mcg), vitamine K2 (45 mcg), calcium (120 mg), magnesium (100 mg) en tocotriënolen (de krachtigste vorm van vitamine E).</p>
+      <p>Wat Sunset bijzonder maakt is dat het <strong>melatoninevrij</strong> is. In plaats van je lichaam kunstmatig slaperig te maken met melatonine, ondersteunt Sunset de natuurlijke slaapcyclus met mineralen en vetzuren die je lichaam nodig heeft om zelf melatonine aan te maken en te reguleren.</p>
+
+      <h2>Waarom de Xtreme versie kiezen?</h2>
+      <p>De Triangle of Wellness Xtreme onderscheidt zich van de standaard Triangle door <strong>hogere doseringen en extra ingrediënten</strong>. De Xtreme variant van Nitro bevat 56 mineralen (tegenover 0 in de standaardversie) en een krachtiger nitratencomplex. De Xtreme variant van Sunset bevat extra Omega-3 en vitamine E tocotriënolen.</p>
+      <p>Voor de meeste gebruikers is de Xtreme versie de aanbevolen keuze — het prijsverschil is relatief klein, maar de toegevoegde waarde in termen van nutriëntendichtheid is significant. De Triangle of Wellness is ook verkrijgbaar in voordelige <strong>2-pack, 3-pack en 6-pack varianten</strong> voor nog meer besparing per portie.</p>
+
+      <h2>Voor wie is de Triangle of Wellness Xtreme?</h2>
+      <p>De Triangle of Wellness Xtreme is ideaal voor volwassenen die:</p>
+      <ul>
+        <li>Een <strong>complete dagelijkse routine</strong> zoeken zonder zelf producten te hoeven combineren</li>
+        <li>Hun energie, focus én slaap in één systeem willen aanpakken</li>
+        <li>Bereid zijn te investeren in hun gezondheid (3 sachets per dag)</li>
+        <li>Geen synthetische stimulanten of slaapmiddelen willen gebruiken</li>
+        <li>De voordelen van plantaardige, whole-food supplementen willen ervaren</li>
+      </ul>
+
+      <h2>Veelgestelde vragen</h2>
+
+      <h3>Kan ik de Triangle of Wellness combineren met andere Amare producten?</h3>
+      <p>Absoluut. Veel gebruikers voegen MentaBiotics toe voor extra ondersteuning van de darm-hersen-as, of HL5 voor collageen. De Triangle of Wellness vormt een uitstekende basis die je naar behoefte kunt uitbreiden. De producten zijn zo ontworpen dat ze elkaar aanvullen zonder overlap of overdosering.</p>
+
+      <h3>Is de Triangle of Wellness Xtreme geschikt voor veganisten?</h3>
+      <p>Sunrise en Nitro Xtreme zijn volledig plantaardig. Sunset bevat Omega-3 uit algenolie (geen visolie) en is daarmee ook veganistisch. De volledige Triangle of Wellness Xtreme is dus geschikt voor veganisten. Controleer altijd het etiket voor de meest actuele ingrediëntenlijst.</p>
+
+      <h3>Wat is het prijsvoordeel van een multi-pack?</h3>
+      <p>De Triangle of Wellness Xtreme 2-Pack bespaart ongeveer 10% ten opzichte van twee losse maandvoorraden. De 3-Pack en 6-Pack bieden nog grotere kortingen — ideaal als je zeker weet dat dit je dagelijkse routine is. Bij een 6-Pack abonnement kan de besparing oplopen tot meer dan €100 per jaar vergeleken met maandelijks bestellen.</p>
+
+      <h2>Conclusie</h2>
+      <p>De Triangle of Wellness Xtreme is het meest complete basispakket dat Amare aanbiedt. Het dekt de drie essentiële fasen van je dag — ochtend, middag en avond — met formules die wetenschappelijk op elkaar zijn afgestemd. Of je nu net begint met supplementen of al jaren zoekt naar een systeem dat echt werkt: deze triangle verdient serieuze overweging.</p>
+      <p>Met de <strong>30 dagen geld-terug-garantie</strong> en de <strong>€8 nieuwe-klant-korting</strong> is er bovendien weinig te verliezen. Begin met de 2-Pack voor de beste prijs-kwaliteitverhouding, of kies de 3-Pack als je direct voor de langere termijn wilt gaan.</p>
+      <p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij medische aandoeningen of twijfel een arts. Dit product is niet geschikt voor personen jonger dan 18 jaar.</em></p>
+    `,
+    image: "/images/blog/triangle-of-wellness-xtreme.jpg"
+  },
+  {
+    slug: "hl5-2-pack-collageen-huid-haar-nagels-beste-waarde",
+    title: "HL5 2-Pack: Gehydrolyseerd Collageen voor Huid, Haar & Nagels — Beste Waarde (2026)",
+    date: "2026-05-18",
+    category: "Schoonheid",
+    excerpt: "De HL5 2-Pack levert 5 g gehydrolyseerd collageen Type 1 & 3 per portie in een heerlijke Peach of Berry smaak — met tot 90% opname binnen 6 uur. Ontdek het prijsvoordeel van de 2-pack.",
+    content: `
+      <h2>Wat is HL5 collageen en waarom is het anders?</h2>
+      <p>Collageen is het meest voorkomende eiwit in het menselijk lichaam — het vormt de bouwsteen van je huid, haar, nagels, gewrichten, botten en spieren. Maar vanaf je 25e levensjaar neemt de natuurlijke collageenproductie gestaag af — met ongeveer 1% per jaar. Tegen de tijd dat je 40 bent, produceert je lichaam tot <strong>30% minder collageen</strong> dan op je 25e.</p>
+      <p><strong>Amare HL5</strong> pakt dit probleem fundamenteel aan. Elke dagelijkse portie levert <strong>5 gram gehydrolyseerd collageen Type 1 & 3</strong> — de twee belangrijkste collageentypen voor huid, haar, nagels en gewrichten. Maar wat HL5 echt onderscheidt van de tientallen andere collageensupplementen op de markt is de <strong>vloeibare formule</strong>.</p>
+      <p>In plaats van een pil of capsule die eerst moet worden afgebroken in je maag, is HL5 een kant-en-klaar vloeibaar collageen dat je direct inneemt. De gehydrolyseerde collageenpeptiden zijn al voorverteerd tot kleinere peptiden, wat resulteert in een <strong>opname van tot 90% binnen 6 uur</strong> — aanzienlijk efficiënter dan capsules of poeders die vaak maar 20-40% worden opgenomen.</p>
+
+      <h2>De 5 g collageen per portie — waarom dosering telt</h2>
+      <p>Veel collageensupplementen bevatten slechts 1 tot 3 gram collageen per portie. De wetenschappelijke literatuur wijst echter uit dat <strong>5 gram per dag de minimale effectieve dosering</strong> is voor meetbare resultaten in huidelasticiteit, hydratatie en nagelsterkte. HL5 levert precies die klinisch relevante dosering — geen halve maatregelen.</p>
+      <p>De collageenpeptiden in HL5 zijn <strong>gehydrolyseerd</strong>, wat betekent dat de lange collageenketens enzymatisch zijn afgebroken tot kleinere peptiden. Dit verhoogt niet alleen de opneembaarheid, maar zorgt er ook voor dat de peptiden sneller in de bloedbaan terechtkomen en beschikbaar zijn voor de fibroblasten — de cellen die verantwoordelijk zijn voor de aanmaak van nieuw collageen in je huid.</p>
+      <p>Daarnaast bevat HL5:</p>
+      <ul>
+        <li><strong>Vitamine C:</strong> Essentieel voor de natuurlijke collageenvorming in het lichaam. Zonder voldoende vitamine C kunnen je fibroblasten geen nieuw collageen aanmaken, ongeacht hoeveel collageen je inneemt.</li>
+        <li><strong>Biotine:</strong> Draagt bij aan het behoud van een normale huid, haar en slijmvliezen.</li>
+        <li><strong>Zink:</strong> Ondersteunt het eiwitmetabolisme en draagt bij aan de instandhouding van gezonde huidcellen.</li>
+      </ul>
+
+      <h2>Waarom de HL5 2-Pack de slimme keuze is</h2>
+      <p>De <strong>HL5 2-Pack</strong> levert twee maandvoorraden (2 x 30 porties) in één bestelling tegen een lagere prijs per portie dan de losse aankoop. Hier is waarom dat voordelig is:</p>
+      <ul>
+        <li><strong>Lagere prijs per portie:</strong> Met het abonnement op de 2-Pack betaal je rond de €65,21 per maandvoorraad, terwijl een losse HL5 op abonnementsbasis duurder uitvalt. Op jaarbasis scheelt dat al snel tientallen euro's.</li>
+        <li><strong>Minder verzendkosten:</strong> Bij bestellingen boven €175 is de verzending gratis. De 2-Pack komt daar met €130,42 dicht bij in de buurt — combineer met één ander product en je verzending is gratis.</li>
+        <li><strong>Nooit zonder:</strong> Eén bestelling, twee maanden voorraad. Geen gedoe met maandelijks opnieuw bestellen of het risico dat je een paar dagen zonder zit.</li>
+      </ul>
+      <p>Collageen werkt cumulatief — hoe consistenter je het inneemt, hoe beter de resultaten. Een 2-Pack ondersteunt die consistentie.</p>
+
+      <h2>Wat kun je verwachten van HL5?</h2>
+      <p>Collageen is geen wondermiddel van de ene op de andere dag. De resultaten bouwen zich geleidelijk op naarmate je lichaam de collageenpeptiden gebruikt om nieuwe huid-, haar- en nagelstructuren op te bouwen. Gebruikers rapporteren doorgaans de volgende tijdslijn:</p>
+      <ul>
+        <li><strong>Week 2-4:</strong> Verbeterde hydratatie van de huid, minder droge plekken. Nagels voelen sterker aan.</li>
+        <li><strong>Week 4-8:</strong> Zichtbare verbetering in huidelasticiteit en gladheid. Haar voelt voller en breekt minder snel.</li>
+        <li><strong>Week 8-12:</strong> Optimale resultaten — fijne lijntjes lijken minder zichtbaar, nagels groeien sneller en sterker, gewrichten voelen soepeler aan.</li>
+      </ul>
+      <p>HL5 is verkrijgbaar in twee smaken — <strong>Berry</strong> en <strong>Peach</strong> — en wordt geleverd in handige 30 ml shots die je puur kunt innemen of mengen met water of een smoothie.</p>
+
+      <h2>Veelgestelde vragen</h2>
+
+      <h3>Is HL5 geschikt voor de keto- of paleo-dieet?</h3>
+      <p>Ja. HL5 bevat 0 g koolhydraten en 0 g suiker per portie, en is gezoet met natuurlijke aroma's en stevia. Met 35 calorieën per shot en 9 g eiwit (vrijwel volledig uit collageen) past het uitstekend binnen een keto-, paleo- of koolhydraatarm eetpatroon.</p>
+
+      <h3>Kan ik HL5 combineren met andere collageenproducten?</h3>
+      <p>HL5 levert al 5 g collageen per dag — de klinisch effectieve dosering. Extra collageen toevoegen heeft geen bewezen meerwaarde en is economisch niet zinvol. Combineer HL5 liever met producten die de collageensynthese ondersteunen, zoals vitamine C-rijke Sunrise of de DermaBiotics Pack voor de gut-skin axis.</p>
+
+      <h3>Waarom vloeibaar collageen en geen capsules?</h3>
+      <p>Vloeibare collageenpeptiden hebben een significant hogere biologische beschikbaarheid dan capsules of tabletten. Capsules moeten eerst oplossen in de maag — een proces dat tot een uur duurt — waarna de collageen nog moet worden afgebroken. HL5 is al gehydrolyseerd en direct opneembaar, wat resulteert in tot 90% opname binnen 6 uur en een meetbaar hogere concentratie collageenpeptiden in het bloed.</p>
+
+      <h2>Conclusie</h2>
+      <p>HL5 is een van de bestverkopende collageensupplementen bij Amare — en met goede reden. De vloeibare formule met 5 g gehydrolyseerd collageen Type 1 & 3 per portie biedt een opname die capsules niet kunnen evenaren. De <strong>HL5 2-Pack</strong> is de voordeligste manier om HL5 te gebruiken: lagere prijs per portie, minder verzendkosten, en altijd een maand voorraad achter de hand.</p>
+      <p>Met de <strong>30 dagen geld-terug-garantie</strong> probeer je HL5 risicoloos — word je huid niet zichtbaar gehydrateerder of je nagels niet sterker binnen een maand, dan krijg je je geld terug. Gebruik de <strong>€8 nieuwe-klant-korting</strong> voor een extra voordelige eerste 2-Pack bestelling.</p>
+      <p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Resultaten kunnen per persoon verschillen. Collageen is een eiwit en draagt bij aan de instandhouding van normale botten (gezondheidsclaim goedgekeurd door EFSA).</em></p>
+    `,
+    image: "/images/blog/hl5-2-pack-collageen.jpg"
+  },
+  {
+    slug: "happy-lifestyle-pack-beste-waarde-bundel-totaal-welzijn",
+    title: "Happy Lifestyle Pack: Beste Waarde Bundel voor Totaal Welzijn (2026)",
+    date: "2026-05-18",
+    category: "Pakketten & Bundels",
+    excerpt: "De Happy Lifestyle Pack is de meest complete bundel van Amare — tot 15 producten in één voordelig pakket voor wie totale ondersteuning zoekt. Van darmgezondheid tot collageen, alles inbegrepen.",
+    content: `
+      <h2>Wat is de Happy Lifestyle Pack?</h2>
+      <p>De <strong>Happy Lifestyle Pack</strong> is de meest uitgebreide bundel die Amare aanbiedt — ontworpen voor wie geen halve maatregelen wil nemen als het om welzijn gaat. Waar de Happy Juice Pack zich richt op mentale energie en focus, en de Triangle of Wellness op dagelijkse basisondersteuning, dekt de Happy Lifestyle Pack <strong>vrijwel het volledige Amare assortiment</strong> in één maandelijks pakket.</p>
+      <p>De bundel is verkrijgbaar in twee varianten: de <strong>Basic</strong> (ongeveer 7-8 kernproducten) en de <strong>Pro</strong> (tot 15 producten inclusief de nieuwste lanceringen). Beide zijn ontworpen voor de serieuze gebruiker die begrijpt dat consistentie en volledigheid de sleutels zijn tot resultaat.</p>
+      <p>Het concept is simpel: in plaats van elke maand losse producten te bestellen en te hopen dat je niets vergeet, krijg je één doos met alles wat je nodig hebt — <strong>op elkaar afgestemd, klaar voor gebruik, tegen de beste prijs per product</strong>.</p>
+
+      <h2>Wat zit er in de Happy Lifestyle Pack Basic?</h2>
+      <p>De Basic variant bevat de essentiële Amare formules voor een complete dagelijkse routine:</p>
+      <ul>
+        <li><strong>Happy Juice Pack (MentaBiotics + Energy+ + EDGE+):</strong> De #1 bestseller voor mentale energie, stemming en focus via de darm-hersen-as</li>
+        <li><strong>Restore:</strong> 5 probiotica stammen + 5 spijsverteringsenzymen voor optimale darmgezondheid</li>
+        <li><strong>Sunrise:</strong> 22 superfoods + 9 vitamines voor de ochtendbasis</li>
+        <li><strong>HL5:</strong> 5 g vloeibaar collageen Type 1 & 3 voor huid, haar en nagels</li>
+      </ul>
+      <p>Met de Basic bundel ben je goed voor ongeveer <strong>€277,68 per maand</strong> op abonnementsbasis — een besparing van 15-20% ten opzichte van losse aankopen. Verzending is gratis (boven €175).</p>
+
+      <h2>Happy Lifestyle Pack Pro — voor de volledige ervaring</h2>
+      <p>De Pro variant tilt het naar een hoger niveau met tot <strong>15 producten</strong>, inclusief:</p>
+      <ul>
+        <li>Alles uit de Basic bundel</li>
+        <li><strong>Triangle of Wellness (Sunrise + Nitro Xtreme + Sunset):</strong> De complete dagcyclus voor energie, focus en slaap</li>
+        <li><strong>NeuCollagen:</strong> 6-dimensioneel collageen voor huid, haar, nagels, gewrichten, spieren én cortisolbalans</li>
+        <li><strong>VitaGBX:</strong> Complete multivitamine met 50+ voedingsstoffen</li>
+        <li><strong>OmMega:</strong> Omega-3 uit algenolie voor hart, brein en gewrichten</li>
+        <li><strong>GBX SuperFood + SeedFiber:</strong> Superfoods en vezels voor darmgezondheid</li>
+      </ul>
+      <p>De Pro bundel kost ongeveer <strong>€649,64 per maand</strong> op abonnementsbasis — een flinke investering, maar per product aanzienlijk voordeliger dan los kopen. Voor de echte wellness-liefhebber die alles uit zijn dagelijkse routine wil halen.</p>
+
+      <h2>Voor wie is de Happy Lifestyle Pack?</h2>
+      <p>Deze bundels zijn niet voor iedereen weggelegd — en dat is ook niet de bedoeling. De Happy Lifestyle Pack is ontworpen voor:</p>
+      <ul>
+        <li><strong>Ervaren supplementgebruikers</strong> die al weten wat Amare producten voor hen doen en willen upgraden naar een alles-in-één oplossing</li>
+        <li><strong>Drukke professionals</strong> die geen tijd hebben om uit te zoeken welke supplementen ze nodig hebben en gewoon één maandelijkse doos willen</li>
+        <li><strong>Gezondheidsbewuste koppels of gezinnen</strong> die de producten delen en baat hebben bij grotere volumes</li>
+        <li>Iedereen die <strong>maximale besparing</strong> per product wil — de Pro bundel biedt de laagste prijs per eenheid van alle Amare aankoopopties</li>
+      </ul>
+
+      <h2>Basic vs Pro: welke kies je?</h2>
+      <p>De keuze tussen Basic en Pro hangt af van drie factoren: je budget, je doelen en je ervaring met supplementen.</p>
+      <p><strong>Kies Basic als:</strong> je net begint met Amare en de kernproducten wilt ervaren. De Basic bundel dekt 80% van wat de meeste mensen nodig hebben — energie, focus, stemming en basisvoeding — voor een toegankelijk maandbedrag.</p>
+      <p><strong>Kies Pro als:</strong> je al bekend bent met Amare en het maximale uit je routine wilt halen. De toegevoegde producten in de Pro (met name NeuCollagen, de volledige Triangle of Wellness en OmMega) bieden extra dimensies die op lange termijn het verschil maken in huidkwaliteit, gewrichtsgezondheid en cardiovasculaire ondersteuning.</p>
+
+      <h2>Veelgestelde vragen</h2>
+
+      <h3>Kan ik maandelijks wisselen tussen Basic en Pro?</h3>
+      <p>Ja, je abonnement is flexibel. Je kunt de ene maand Basic bestellen en de volgende maand upgraden naar Pro — of andersom. De abonnementskorting blijft van toepassing zolang je een actief abonnement hebt. Aanpassingen kunnen eenvoudig via je Amare account of door contact op te nemen met de klantenservice.</p>
+
+      <h3>Wat is het prijsverschil tussen de Happy Lifestyle Pack en los kopen?</h3>
+      <p>De besparing loopt op naarmate je meer producten in de bundel hebt. Bij de Basic bundel bespaar je ongeveer 15-20% ten opzichte van losse abonnementsprijzen. Bij de Pro bundel kan de besparing oplopen tot 25% — dat is honderden euro's per jaar. Plus: je betaalt één keer verzendkosten (gratis boven €175) in plaats van per product.</p>
+
+      <h3>Zit de €8 nieuwe-klant-korting ook op de Happy Lifestyle Pack?</h3>
+      <p>De €8 korting is beschikbaar op je eerste bestelling, ook als die eerste bestelling een Happy Lifestyle Pack is. Combineer dit met de gratis verzending (de bundel zit ruim boven €175) en je eerste maand is meteen de voordeligste. Na je eerste bestelling geldt het standaard abonnementstarief.</p>
+
+      <h2>Conclusie</h2>
+      <p>De Happy Lifestyle Pack is de ultieme keuze voor wie serieus werk wil maken van zijn of haar welzijn. Geen gedoe met het uitzoeken van losse producten, geen twijfel of je iets vergeet — één bundel, één bestelling, één prijs. De Basic is de perfecte upgrade vanaf de Happy Juice Pack; de Pro is voor de echte wellness-enthousiasteling.</p>
+      <p>Met de <strong>30 dagen geld-terug-garantie</strong> loop je geen enkel risico, ook niet bij een bundel van honderden euro's. Probeer het een maand — bevalt het niet, dan krijg je je geld terug. Gebruik de <strong>€8 nieuwe-klant-korting</strong> op je eerste bundel voor de beste start.</p>
+      <p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. De genoemde prijzen zijn inclusief abonnementskorting en kunnen afwijken. Controleer de actuele prijzen op de Amare website. Productbeschikbaarheid kan variëren per bundelvariant.</em></p>
+    `,
+    image: "/images/blog/happy-lifestyle-pack.jpg"
   }
 ];
 
@@ -603,6 +849,32 @@ const articleProductMap: Record<string, ProductLink[]> = {
   "probiotica-darmen-supplement-nederland": [
     { name: "Restore", url: "/restore", isInternal: true, price: "€29.70/maand", tagline: "5 probiotica stammen + 5 spijsverteringsenzymen" },
     { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Probiotica specifiek voor de darm-hersen-as" },
+  ],
+  "happy-juice-pack-complete-mentale-focus-energie-bundel": [
+    { name: "Happy Juice Pack", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — MentaBiotics + Energy+ + EDGE+ in één bundel" },
+    { name: "Amare Happy Juice Pack", url: `${AFFILIATE_BASE}/happy-juice-edge-plus-mango`, isInternal: false, price: "€155.33/maand", tagline: "Happy Juice Pack (Mango) — bestel direct bij Amare" },
+    { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — de kern van de Happy Juice Pack" },
+    { name: "Energy+", url: "/energy", isInternal: true, price: "€55.48/maand", tagline: "Natuurlijke energie zonder cafeïnecrash" },
+    { name: "Amare EDGE+", url: `${AFFILIATE_BASE}/amare-edge`, isInternal: false, price: "€66.23/maand", tagline: "Plantaardig nootropicum — mentale scherpte & focus" },
+  ],
+  "triangle-of-wellness-xtreme-dagelijkse-basisondersteuning-pakket": [
+    { name: "Triangle of Wellness Xtreme", url: `${AFFILIATE_BASE}/triangle-of-wellness-xtreme`, isInternal: false, price: "€123.55/maand", tagline: "Sunrise + Nitro Xtreme + Sunset — complete dagcyclus" },
+    { name: "Amare Triangle of Wellness", url: `${AFFILIATE_BASE}/triangle-of-wellness-xtreme-2pack`, isInternal: false, price: "€205.96/maand", tagline: "Triangle of Wellness Xtreme 2-Pack — beste prijs-kwaliteit" },
+    { name: "Energy+", url: "/energy", isInternal: true, price: "€55.48/maand", tagline: "Natuurlijke cafeïne + antioxidanten voor energie" },
+    { name: "Restore", url: "/restore", isInternal: true, price: "€29.70/maand", tagline: "5 probiotica stammen + 5 spijsverteringsenzymen" },
+    { name: "Nitro Xtreme", url: `${AFFILIATE_BASE}/nitro-xtreme`, isInternal: false, price: "€80/maand", tagline: "Nitraten + 56 mineralen voor uithoudingsvermogen & herstel" },
+    { name: "Sunrise", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "22 superfoods + 9 vitamines voor de ochtend" },
+  ],
+  "hl5-2-pack-collageen-huid-haar-nagels-beste-waarde": [
+    { name: "HL5 2-Pack", url: `${AFFILIATE_BASE}/hl5-peach-2pack`, isInternal: false, price: "€130.42/maand", tagline: "2 maanden collageen — 5 g per portie, €65,21 per maand" },
+    { name: "HL5", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "5 g gehydrolyseerd collageen Type 1&3 — 2-pack" },
+    { name: "Amare HL5", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "5 g gehydrolyseerd collageen Type 1&3 — 2-pack" },
+  ],
+  "happy-lifestyle-pack-beste-waarde-bundel-totaal-welzijn": [
+    { name: "Happy Lifestyle Pack", url: `${AFFILIATE_BASE}/happy-lifestyle-pack`, isInternal: false, price: "Vanaf €277.68/maand", tagline: "Basic of Pro — complete welzijnsbundel met tot 25% korting" },
+    { name: "Amare Happy Lifestyle Pack Basic", url: `${AFFILIATE_BASE}/happy-lifestyle-pack`, isInternal: false, price: "€277.68/maand", tagline: "7-8 kernproducten — darm, brein, energie & collageen" },
+    { name: "Happy Juice Pack", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — inbegrepen in de Happy Lifestyle Pack" },
+    { name: "HL5", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "5 g vloeibaar collageen — inbegrepen in de bundel" },
   ],
 };
 
