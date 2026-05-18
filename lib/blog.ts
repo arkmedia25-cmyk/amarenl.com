@@ -14,6 +14,46 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "collageen-supplement-kopen-waar-op-letten",
+    title: "Collageen Supplement Kopen: Complete Gids voor Huid, Haar en Nagels (2026)",
+    date: "2026-05-23",
+    category: "Schoonheid & Verzorging",
+    excerpt: "Het aanbod collageen supplementen is overweldigend. Ontdek waar je op moet letten bij het kopen — van type 1 vs 3 tot gehydrolyseerd vs gewoon — en maak een doordachte keuze voor je huid, haar en nagels.",
+    content: `
+      <h2>Wat is collageen en waarom neemt het af met de leeftijd?</h2>
+      <p>Collageen is het meest voorkomende eiwit in het menselijk lichaam — het vormt 30% van al je lichaamseiwitten. Het is de structurele ruggengraat van je huid, haar, nagels, gewrichten, botten en pezen. Vanaf je 25e begint je natuurlijke collageenproductie jaarlijks met ongeveer 1 tot 1,5% af te nemen. Tegen de tijd dat je 40 bent, heb je mogelijk 15 tot 25% minder collageen — en dat zie en voel je. De zichtbare gevolgen: fijne lijntjes, minder stevige huid, doffer haar en brozere nagels. Minder zichtbaar maar minstens zo belangrijk: stijvere gewrichten en tragere spierherstel.</p>
+      <p>Factoren die het verlies versnellen: UV-blootstelling, roken, suikerrijk dieet en chronische stress. Het goede nieuws: je kunt collageen actief aanvullen via een <strong>gehydrolyseerd collageen supplement</strong>.</p>
+
+      <h2>Collageen type 1 vs type 3: wat is het verschil?</h2>
+      <p>Er zijn 28 verschillende typen collageen ontdekt, maar voor huid, haar en nagels zijn type 1 en 3 de belangrijkste. <strong>Type 1</strong> maakt ongeveer 90% van al het collageen uit en is verantwoordelijk voor stevigheid en structuur — gram voor gram sterker dan staal. <strong>Type 3</strong> werkt samen met type 1 en geeft elasticiteit aan de huid en bloedvaten. Bij een jong lichaam is de verhouding type 1 tot type 3 in de huid ongeveer 4:1 — die balans verschuift met de jaren. De beste collageen supplementen combineren beide typen in de natuurlijke verhouding, zoals Amare HL5 met 5 gram gehydrolyseerd collageen type 1 en 3 uit grasgevoerde runderen.</p>
+
+      <h2>Gehydrolyseerd collageen: waarom is dit beter opneembaar?</h2>
+      <p>Dit is het belangrijkste onderscheid bij het kopen van collageen. Je komt drie vormen tegen: gelatine (gekookt collageen, slecht oplosbaar, lage opname), <strong>collageen peptiden</strong> (enzymatisch in kleine ketens geknipt, 90-95% absorptie, oplosbaar in koude én warme dranken), en niet-gehydrolyseerd collageen (laagste opname). Kies altijd voor gehydrolyseerd collageen — de enige vorm met aangetoonde hoge biobeschikbaarheid. HL5 gebruikt gehydrolyseerde peptiden met laag moleculair gewicht, volledig oplosbaar en smaakneutraal.</p>
+
+      <h2>Collageen voor huid, haar en nagels: wat zegt het onderzoek?</h2>
+      <p>Een dubbelblind, placebo-gecontroleerd onderzoek onder 114 vrouwen (35-55 jaar) toonde aan dat 2,5 gram collageen peptiden gedurende 8 weken leidde tot significante vermindering van kraaienpootjes en meetbare toename van huidelasticiteit. Een meta-analyse uit 2024 bundelde 12 klinische studies en concludeerde dat collageen supplementen consistent worden geassocieerd met verbeterde huidvochtbalans, elasticiteit en collageendichtheid. Voor nagels rapporteerde een studie 12% toename in groei en 42% minder gebroken nagels na 24 weken. De optimale dosering ligt tussen 2,5 en 10 gram per dag — HL5 levert 5 gram per portie, precies in de sweet spot.</p>
+
+      <h2>Waar op letten bij het kopen van een collageen supplement?</h2>
+      <ul>
+        <li><strong>Kies gehydrolyseerd:</strong> Alleen peptiden hebben aangetoonde hoge biobeschikbaarheid. Geen gelatine.</li>
+        <li><strong>Type 1 + 3:</strong> De combinatie in natuurlijke verhouding geeft het beste resultaat voor huid, haar en nagels.</li>
+        <li><strong>Dosering:</strong> 2,5 tot 10 gram per dag. Producten onder 2 gram zijn vaak ondergedoseerd.</li>
+        <li><strong>Herkomst:</strong> Grasgevoerde, hormoonvrije bronnen zijn aanbevolen. Vermijd producten die niet transparant zijn.</li>
+        <li><strong>Oplosbaarheid:</strong> Een goed gehydrolyseerd collageen lost volledig op in zowel koude als warme dranken, zonder klonters of bijsmaak.</li>
+        <li><strong>Prijs per gram:</strong> HL5 2-Pack: €130.42/maand voor 5g/dag = €2.17 per dagportie — concurrerend voor premium kwaliteit.</li>
+      </ul>
+
+      <h2>Veelgestelde vragen</h2>
+      <h3>Hoe snel zie je resultaat van collageen supplementen?</h3>
+      <p>Collageen is een marathon, geen sprint. Eerste subtiele veranderingen in huidvochtbalans na 4-6 weken. Zichtbare verbetering in elasticiteit, fijnere lijntjes en sterkere nagels na 8-12 weken. Dagelijkse inname is essentieel voor cumulatieve resultaten.</p>
+      <h3>Kan ik collageen combineren met andere supplementen?</h3>
+      <p>Ja, collageen combineert uitstekend met vitamine C (co-factor voor collageenaanmaak), omega-3 (huidelasticiteit) en biotine (haar en nagels). Neem bij voorkeur op een lege maag of tussen maaltijden voor optimale opname.</p>
+      <h3>Is collageen veilig voor langdurig gebruik?</h3>
+      <p>Collageen peptiden worden door de EFSA als veilig beschouwd voor langdurig dagelijks gebruik bij aanbevolen doseringen. Blijf binnen de aanbevolen hoeveelheid en raadpleeg bij twijfel een arts.</p>
+    `,
+    image: "/images/blog/collageen-supplement-kopen.jpg"
+  },
+  {
     slug: "beste-probiotica-2026-kopen-vergelijken",
     title: "Beste Probiotica 2026: Waar Moet Je Op Letten bij het Kiezen van een Probioticum?",
     date: "2026-05-21",
@@ -860,6 +900,11 @@ interface ProductLink {
 const AFFILIATE_BASE = "https://www.amare.com/2075008/nl-nl";
 
 const articleProductMap: Record<string, ProductLink[]> = {
+  "collageen-supplement-kopen-waar-op-letten": [
+    { name: "HL5 2-Pack", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "5g gehydrolyseerd collageen Type 1&3 — Berry of Peach" },
+    { name: "Amare HL5", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "Grasgevoerde collageen peptiden voor huid, haar en nagels" },
+    { name: "HL5 bij Amare", url: `${AFFILIATE_BASE}/hl5-peach-2pack`, isInternal: false, price: "€130.42/maand", tagline: "5g collageen type 1&3 per portie — 2-pack beste waarde" },
+  ],
   "beste-probiotica-2026-kopen-vergelijken": [
     { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — probiotica voor stemming & mentale veerkracht" },
     { name: "Restore", url: "/restore", isInternal: true, price: "€29.70/maand", tagline: "5 spijsverteringsenzymen + 5 probiotica stammen" },
