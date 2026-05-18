@@ -1,7 +1,8 @@
 # AmareNL Article Queue — SEO-GEO-AEO İçerik Planı
-> Laatste update: 2026-05-16
+> Laatste update: 2026-05-18
 > Metodoloji: NL search volume × commercial intent × product match × GEO query fan-out
-> Yayın takvimi: Ma/Wo/Vr 9:57 (cron — article-scheduler skill)
+> Yayın takvimi: 2 günde bir (cron — article-scheduler skill)
+> Bron: amarenl-agent-keywords.md (12 artikelen)
 
 ## 📊 Dutch Market Priority Matrix — Mayıs 2026
 
@@ -49,56 +50,27 @@
 
 ---
 
-## 🗓 8 Haftalık Yayın Takvimi (19 Mayıs — 11 Temmuz 2026)
+## 🗓 12 Artikelen — 2 Günde Bir Yayın Takvimi (19 Mayıs — 11 Haziran 2026)
 
-### Week 21: "Darm & Mentale Gezondheid" 🌱
-| Gün | # | Makale | Status |
-|-----|---|--------|--------|
-| Ma 19 mei | 1 | Probiotica en Je Stemming: Darm-Hersen Connectie | - [x] 2026-05-17 |
-| Wo 21 mei | 11 | De Gut-Brain Connectie: Darmen & Mentale Gezondheid | - [ ] |
-| Vr 23 mei | 19 | Prebiotica vs Probiotica: Het Complete Verschil | - [ ] |
+> Bron: amarenl-agent-keywords.md
 
-### Week 22: "Energie & Vitaliteit" ⚡
-| Gün | # | Makale | Status |
-|-----|---|--------|--------|
-| Ma 26 mei | 4 | Supplementen voor Meer Energie Zonder Crash | - [ ] |
-| Wo 28 mei | 6 | Magnesium: Slaap, Stress en Spierontspanning | - [ ] |
-| Vr 30 mei | 5 | Vitamine D Tekort in Nederland: Oplossingen 2026 | - [ ] |
+| Gün | # | Anahtar Kelime | Ürün CTA | Status |
+|-----|---|---------------|----------|--------|
+| Ma 19 mei | 1 | vitamine D tekort symptomen | Sunrise | - [x] ✅ |
+| Wo 21 mei | 2 | beste probiotica 2026 | MentaBiotics | - [ ] |
+| Vr 23 mei | 3 | collageen supplement kopen | HL5 2-Pack | - [ ] |
+| Zo 25 mei | 4 | ashwagandha kopen nederland | EDGE+ | - [ ] |
+| Di 27 mei | 5 | gut brain connectie | Happy Juice Pack | - [ ] |
+| Do 29 mei | 6 | haaruitval supplement vrouwen | HL5 | - [ ] |
+| Za 31 mei | 7 | focus supplement | EDGE+ | - [ ] |
+| Ma 2 jun | 8 | hormoonbalans supplement vrouwen | Ignite for HER | - [ ] |
+| Wo 4 jun | 9 | darmflora verbeteren | Restore | - [ ] |
+| Vr 6 jun | 10 | supplement routine ochtend | Triangle of Wellness | - [ ] |
+| Zo 8 jun | 11 | plantaardige proteïne shake kopen | Origin | - [ ] |
+| Di 10 jun | 12 | menopauze supplement | Ignite for HER | - [ ] |
 
-### Week 23: "Schoonheid van Binnenuit" ✨
-| Gün | # | Makale | Status |
-|-----|---|--------|--------|
-| Ma 2 jun | 2 | Beste Collageen Supplement 2026 | - [ ] |
-| Wo 4 jun | 14 | Collageen Peptiden: Werkt Het Echt? | - [ ] |
-| Vr 6 jun | 15 | Huidverzorging van Binnenuit: Supplementen voor Stralende Huid | - [ ] |
-
-### Week 24: "Hormonen & Vrouwengezondheid" 🌸
-| Gün | # | Makale | Status |
-|-----|---|--------|--------|
-| Ma 9 jun | 9 | Overgang en Supplementen: Natuurlijke Ondersteuning | - [ ] |
-| Wo 11 jun | 18 | Hormoonbalans Vrouw: Supplementen per Levensfase | - [ ] |
-| Vr 13 jun | 16 | Cortisol Verlagen: Natuurlijke Manieren | - [ ] |
-
-### Week 25: "Focus & Ontspanning" 🧠
-| Gün | # | Makale | Status |
-|-----|---|--------|--------|
-| Ma 16 jun | 10 | Stress Verminderen met Supplementen | - [ ] |
-| Wo 18 jun | 12 | Adaptogenen: Complete Gids voor Stressverlichting | - [ ] |
-| Vr 20 jun | 17 | Beter Slapen Zonder Medicatie: Diepe Nachtrust | - [ ] |
-
-### Week 26: "Lichaam & Voeding" 💪
-| Gün | # | Makale | Status |
-|-----|---|--------|--------|
-| Ma 23 jun | 3 | Natuurlijk Afvallen: Supplementen voor Metabolisme | - [ ] |
-| Wo 25 jun | 7 | Omega-3: Ultieme Gids voor Hersenen en Hart | - [ ] |
-| Vr 27 jun | 13 | Beste Eiwitpoeder 2026: Plantaardig vs Wei | - [ ] |
-
-### Week 27-28: "Special Topics" 🎯
-| Gün | # | Makale | Status |
-|-----|---|--------|--------|
-| Ma 30 jun | 8 | Haaruitval bij Vrouwen: Oorzaken en Oplossingen | - [ ] |
-| Wo 2 jul | 20 | Kids en Supplementen: Wat Heeft Jouw Kind Nodig? | - [ ] |
-| Vr 4 jul | — | Buffer haftası / Telafi günü | - [ ] |
+> ⏰ Cron: her 2 günde bir saat 9:57'de yeni makale yayınlanır.
+> Her makale 1200+ kelime, SEO-GEO optimize, ilgili ürüne AffiliateCTA linki içerir.
 
 ---
 

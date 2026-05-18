@@ -14,6 +14,50 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "vitamine-d-tekort-symptomen",
+    title: "Vitamine D Tekort Symptomen: Signalen Die Je Niet Mag Negeren (2026)",
+    date: "2026-05-19",
+    category: "Dagelijkse Essentials",
+    excerpt: "Hoe herken je een vitamine D tekort? Van vermoeidheid tot spierpijn — ontdek de symptomen, de aanbevolen dagelijkse dosering, en waarom Nederlanders extra risico lopen op een tekort aan deze essentiële vitamine.",
+    content: `
+      <h2>Wat is vitamine D en waarom is het zo belangrijk voor Nederlanders?</h2>
+      <p>Vitamine D is een van de meest onderschatte — en tegelijkertijd meest voorkomende — vitaminetekorten in Nederland. In de volksmond wordt het de 'zonvitamine' genoemd, omdat je lichaam het grotendeels zelf aanmaakt wanneer zonlicht op je huid valt. Maar in een land waar het tussen oktober en april grotendeels bewolkt is, schiet die natuurlijke aanmaak ernstig tekort. Naar schatting heeft <strong>40 tot 60 procent van de Nederlandse bevolking</strong> een te lage vitamine D-waarde. Bij ouderen, mensen met een getinte huidskleur en mensen die weinig buiten komen, loopt dat percentage op tot boven de 80 procent.</p>
+      <p>Vitamine D functioneert in je lichaam eerder als een hormoon. Het speelt een sleutelrol bij de opname van calcium en fosfaat, wat essentieel is voor sterke botten en tanden. Maar de functie gaat veel verder: vitamine D is betrokken bij de werking van je immuunsysteem, je spierkracht, en er zijn steeds meer aanwijzingen dat het ook invloed heeft op je stemming en mentale veerkracht.</p>
+
+      <h2>De meest voorkomende vitamine D tekort symptomen</h2>
+      <p>Een vitamine D tekort sluipt er vaak stilletjes in. De symptomen stapelen zich geleidelijk op en veel mensen schrijven de klachten toe aan 'druk zijn' of 'gewoon ouder worden'. Dit zijn de meest voorkomende signalen:</p>
+      <ul>
+        <li><strong>Aanhoudende vermoeidheid en futloosheid.</strong> Je slaapt voldoende, maar voelt je toch uitgeput. Vitamine D speelt een rol in de mitochondriale energieproductie — de energiefabriekjes van je cellen.</li>
+        <li><strong>Spierzwakte en spierpijn.</strong> Zonder voldoende vitamine D kan calcium minder goed worden opgenomen in de spiercellen. Vooral in de grote spiergroepen zoals bovenbenen en schouders.</li>
+        <li><strong>Gewrichtspijn en botpijn.</strong> Bij een tekort onttrekt je lichaam calcium uit de botten om de bloedspiegel op peil te houden.</li>
+        <li><strong>Verlaagde weerstand.</strong> Vitamine D activeert de T-cellen van je immuunsysteem. Zonder voldoende D blijven die inactief, waardoor je vaker infecties oploopt.</li>
+        <li><strong>Slecht humeur en somber gevoel.</strong> Vitamine D-receptoren in de hersenen zijn betrokken bij stemmingregulatie. Vooral in de wintermaanden ervaren mensen met een laag vitamine D-niveau vaker neerslachtigheid.</li>
+        <li><strong>Haaruitval.</strong> Haarzakjes zijn afhankelijk van een goede vitamine D-status voor een gezonde groeicyclus.</li>
+      </ul>
+      <p>Heb je meerdere van deze symptomen? Een bloedtest bij de huisarts geeft zekerheid. Maar gezien de prevalentie in Nederland is de kans aanzienlijk dat je waarde aan de lage kant is.</p>
+
+      <h2>Hoeveel vitamine D heb je per dag nodig?</h2>
+      <p>De Gezondheidsraad beveelt voor volwassenen 10 mcg (400 IE) per dag aan als aanvulling bij onvoldoende zonlicht. 70-plussers en risicogroepen hebben 20 mcg (800 IE) per dag nodig. Let op: dit zijn minimumnormen om een klinisch tekort te voorkomen. Veel experts adviseren 20 tot 25 mcg (800-1000 IE) voor optimale gezondheid. De veilige bovengrens volgens de EFSA ligt op 100 mcg (4000 IE) per dag.</p>
+
+      <h2>Vitamine D3 supplement: wanneer en hoe nemen?</h2>
+      <p>Kies altijd voor vitamine D3 (cholecalciferol) — dezelfde vorm die je huid aanmaakt uit zonlicht. D2 (ergocalciferol) uit planten is minder effectief. Vitamine D is vetoplosbaar, dus neem het altijd met een maaltijd die wat vet bevat. <strong>Combineer vitamine D3 met vitamine K2</strong> voor optimale opname van calcium in de botten. In de Amare-formules wordt deze synergie toegepast: <strong>Amare Sunrise</strong> bevat 10 mcg D3 per dagportie samen met 22 plantaardige concentraten en 9 essentiële vitaminen.</p>
+
+      <h2>Welke voeding bevat vitamine D?</h2>
+      <p>Vette vis (zalm, makreel, haring) is de beste bron — 100 gram levert 5 tot 15 mcg. Eieren en lever bevatten kleinere hoeveelheden. In Nederland zijn margarine en bakproducten verplicht verrijkt met vitamine D. Realistisch gezien: je zou dagelijks 200 gram vette vis moeten eten om aan de aanbevolen hoeveelheid te komen. Voor de meeste Nederlanders is een <strong>dagelijks D3-supplement</strong> de meest praktische keuze.</p>
+
+      <h2>Veelgestelde vragen</h2>
+      <h3>Wat is het verschil tussen vitamine D2 en D3?</h3>
+      <p>Vitamine D3 (cholecalciferol) is de vorm die je lichaam zelf aanmaakt uit zonlicht. D2 (ergocalciferol) komt uit plantaardige bronnen. D3 is ongeveer 87% krachtiger in het verhogen van de vitamine D-spiegel. Kies voor supplementen dus altijd D3.</p>
+      <h3>Kan ik te veel vitamine D innemen?</h3>
+      <p>Ja, vitamine D is vetoplosbaar en wordt opgeslagen in het lichaam. De veilige bovengrens is 100 mcg (4000 IE) per dag. Blijf onder die grens tenzij een arts anders voorschrijft. Bij extreem hoge doseringen kan hypercalciëmie ontstaan.</p>
+      <h3>Hoe snel merk je resultaat van een vitamine D supplement?</h3>
+      <p>Reken op 4 tot 8 weken consistent dagelijks gebruik voordat je bloedspiegel significant stijgt en je verschil merkt in energieniveau, stemming en weerstand. Het is een supplement voor de lange termijn — het beste resultaat bereik je door het het hele jaar door te nemen.</p>
+      <h3>Moet ik mijn vitamine D-waarde laten testen?</h3>
+      <p>Als je symptomen ervaart of tot een risicogroep behoort, is een bloedtest bij de huisarts aan te raden. Een optimale bloedspiegel ligt tussen de 75 en 100 nmol/L. Onder de 30 nmol/L spreek je van een ernstig tekort.</p>
+    `,
+    image: "/images/blog/vitamine-d-tekort-symptomen.jpg"
+  },
+  {
     slug: "probiotica-stemming-darm-hersen-connectie-mentabiotics",
     title: "MentaBiotics: Probiotica voor Darm-Hersen Connectie & Mentale Veerkracht (2026)",
     date: "2026-05-17",
@@ -774,6 +818,11 @@ interface ProductLink {
 const AFFILIATE_BASE = "https://www.amare.com/2075008/nl-nl";
 
 const articleProductMap: Record<string, ProductLink[]> = {
+  "vitamine-d-tekort-symptomen": [
+    { name: "Sunrise 2-Pack", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "22 plantaardige concentraten + 9 essentiële vitaminen inclusief D3" },
+    { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Vitamine D3 + K2 + Omega-3 in vetbasis voor optimale opname" },
+    { name: "Amare Sunrise", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "Vloeibare multivitamine met D3, B-complex en 22 superfoods" },
+  ],
   "probiotica-stemming-darm-hersen-connectie-mentabiotics": [
     { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — probiotica voor stemming & mentale veerkracht" },
     { name: "Energy+", url: "/energy", isInternal: true, price: "€55.48/maand", tagline: "Natuurlijke cafeïne + B-vitamines, zonder crash" },

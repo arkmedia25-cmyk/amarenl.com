@@ -732,8 +732,41 @@ Fase 7 — Automatisering (2026-05-09)
 
 ---
 
-*CLAUDE.md versie: 2.6 | Project: amarenl.com | Framework: Next.js 16 App Router | Taal: NL*
-*Laatste update: 9 mei 2026 (Stabilization) — Security ✅ | XSS Fixed ✅ | Next.js 16 ✅ | Production Ready ✅*
+*CLAUDE.md versie: 2.7 | Project: amarenl.com | Framework: Next.js 16 App Router | Taal: NL*
+*Laatste update: 18 mei 2026 (Blog Pipeline) — 12 artikelen kuyruktan ✅ | 2-gün cron ✅ | Build ✅*
+
+---
+
+## 21. SESSIE — 18 mei 2026 (Blog Pipeline & Agent Keywords)
+
+### Voltooid deze sessie
+- [x] amarenl-agent-keywords.md projeye eklendi (12 makale prompt'u)
+- [x] Makale #1: Vitamine D Tekort Symptomen → Sunrise ✅ (MDX + blog.ts)
+- [x] Yayın takvimi: 2 günde bir (eski Ma/Wo/Vr yerine)
+- [x] Cron: `57 9 */2 * *` → her 2 günde bir saat 9:57'de yeni makale
+- [x] Build başarılı (sitemap güncellendi)
+
+### 12 Makale Kuyruğu (amarenl-agent-keywords.md)
+| # | Keyword | Ürün | Tarih |
+|---|---------|------|-------|
+| 1 | vitamine D tekort symptomen | Sunrise | ✅ 19 mei |
+| 2 | beste probiotica 2026 | MentaBiotics | 21 mei |
+| 3 | collageen supplement kopen | HL5 | 23 mei |
+| 4 | ashwagandha kopen nederland | EDGE+ | 25 mei |
+| 5 | gut brain connectie | Happy Juice Pack | 27 mei |
+| 6 | haaruitval supplement vrouwen | HL5 | 29 mei |
+| 7 | focus supplement | EDGE+ | 31 mei |
+| 8 | hormoonbalans supplement vrouwen | Ignite HER | 2 jun |
+| 9 | darmflora verbeteren | Restore | 4 jun |
+| 10 | supplement routine ochtend | Triangle Xtreme | 6 jun |
+| 11 | plantaardige proteïne shake kopen | Origin | 8 jun |
+| 12 | menopauze supplement | Ignite HER | 10 jun |
+
+### Huidige staat
+- 7 blog MDX dosyası (6 eski + 1 yeni)
+- 27 blog referansı lib/blog.ts'de
+- 43 ürün data/products/ içinde
+- Cron: session-only (Claude çıkınca durur — persistent için ayarlanmalı)
 
 ---
 
