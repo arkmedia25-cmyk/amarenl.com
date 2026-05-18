@@ -14,6 +14,50 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ashwagandha-kopen-nederland-adaptogeen-supplement",
+    title: "Ashwagandha Kopen Nederland: Complete Gids voor dit Adaptogeen Supplement (2026)",
+    date: "2026-05-25",
+    category: "Mentale Focus & Stress",
+    excerpt: "Ashwagandha groeit razendsnel in populariteit. Ontdek wat het precies is, welke voordelen wetenschappelijk zijn onderbouwd, KSM-66 vs Sensoril, en waar je op let bij het kopen van een kwalitatief adaptogeen supplement in Nederland.",
+    content: `
+      <h2>De stijgende populariteit van ashwagandha in Nederland</h2>
+      <p>Vijf jaar geleden had bijna niemand in Nederland van ashwagandha gehoord. Vandaag is het een van de snelst groeiende supplementen, met duizenden maandelijkse zoekopdrachten naar "ashwagandha kopen". De verklaring: toenemende stress door onze altijd-aan-cultuur, een groeiende scepsis tegenover synthetische middelen, en een gestage stroom aan wetenschappelijk onderzoek dat de effecten van dit oeroude Ayurvedische kruid bevestigt.</p>
+
+      <h2>Wat is ashwagandha en waar komt het vandaan?</h2>
+      <p>Ashwagandha (<em>Withania somnifera</em>) is een struikachtige plant uit de nachtschadefamilie. Al meer dan 3000 jaar is het een hoeksteen van de Ayurvedische geneeskunde, waar het wordt geclassificeerd als een 'rasayana' — een verjongingsmiddel dat vitaliteit bevordert. De actieve bestanddelen zijn withanoliden, een groep van meer dan 40 steroïdale lactonen. Ashwagandha behoort tot de adaptogenen: natuurlijke stoffen die het lichaam helpen zich aan te passen aan stress — fysiek, chemisch of biologisch. Adaptogenen werken als een thermostaat voor je stresssysteem: niet dempen, maar reguleren.</p>
+
+      <h2>De bewezen voordelen van ashwagandha</h2>
+      <p>Een dubbelblind, placebo-gecontroleerd onderzoek onder 64 volwassenen toonde aan dat 300 mg KSM-66 ashwagandha tweemaal daags gedurende 60 dagen leidde tot een <strong>gemiddelde daling van 27,9% in serumcortisol</strong>. De placebogroep liet geen significante verandering zien. Een slaapstudie uit 2020 vond dat 120 mg gestandaardiseerd extract gedurende 6 weken de inslaaptijd met gemiddeld 11 minuten verkortte en de totale slaaptijd met 36 minuten verlengde. Onderzoek wijst ook op verbeteringen in reactiesnelheid, aandacht en geheugen, evenals een grotere maximale zuurstofopname (VO₂ max) bij sporters.</p>
+
+      <h2>Ashwagandha dosering: hoeveel moet je nemen?</h2>
+      <p>De meest gebruikte klinische dosering is 300 tot 600 mg van een gestandaardiseerd extract per dag. KSM-66 (5% withanoliden): 300-600 mg/dag. Sensoril (8-10% withanoliden): 250-500 mg/dag. Rauw poeder zonder standaardisatie: 1.000-2.000 mg/dag maar minder betrouwbaar. Begin met de laagste effectieve dosis en neem bij voorkeur met een maaltijd — withanoliden zijn vetoplosbaar.</p>
+
+      <h2>KSM-66 vs Sensoril: welk extract is het beste?</h2>
+      <p>KSM-66 is gemaakt van alleen de wortel via een gepatenteerd alcoholvrij proces en staat bekend om energie-ondersteunende en prestatieverbeterende effecten. Sensoril gebruikt wortel én bladeren, heeft een hoger withanolidengehalte, en wordt vaker ingezet voor ontspanning en slaap. Beide zijn klinisch onderzocht en van uitstekende kwaliteit — kies op basis van je doel: KSM-66 voor dagelijkse stressbestendigheid en energie, Sensoril voor slaap en diepe ontspanning.</p>
+
+      <h2>Ashwagandha combineren met andere supplementen</h2>
+      <p>Adaptogenen komen tot hun recht in combinatie. Ashwagandha werkt synergetisch met Rhodiola rosea (cognitieve prestaties onder druk), L-theanine (ontspannen alertheid) en Alpha-GPC (acetylcholine-ondersteuning). <strong>Amare EDGE+</strong> combineert meerdere adaptogene en nootropische ingrediënten — waaronder Bacopa monnieri, Rhodiola rosea en L-theanine — in één formule voor focus, stressbestendigheid en mentale helderheid. Een multi-component benadering kan effectiever zijn dan een enkelvoudig kruidensupplement.</p>
+
+      <h2>Waar op letten bij ashwagandha kopen in Nederland?</h2>
+      <ul>
+        <li><strong>Gestandaardiseerd extract:</strong> Withanolidengehalte op het etiket, minimaal 2,5%. "Rauw poeder" zonder specificatie zegt weinig.</li>
+        <li><strong>Gepatenteerd extract:</strong> KSM-66 of Sensoril zijn klinisch onderzocht op de specifieke dosering in het product.</li>
+        <li><strong>Geen onnodige vulstoffen:</strong> Check op magnesiumstearaat, titaniumdioxide en kunstmatige kleurstoffen.</li>
+        <li><strong>Combinatieproducten:</strong> Een multi-adaptogene formule zoals EDGE+ kan synergetisch effectiever zijn voor algehele stressbestendigheid.</li>
+        <li><strong>Prijs-kwaliteit:</strong> Een goed extract kost €15-35 per maand. Alles onder €10 is waarschijnlijk laaggedoseerd.</li>
+      </ul>
+
+      <h2>Veelgestelde vragen</h2>
+      <h3>Wanneer kan ik ashwagandha het beste innemen?</h3>
+      <p>Bij voorkeur met een maaltijd die wat vet bevat — withanoliden zijn vetoplosbaar. Voor stress en energie: ochtend. Voor slaap: avond. Vermijd vlak voor het slapengaan als je merkt dat het je alert maakt.</p>
+      <h3>Zijn er bijwerkingen van ashwagandha?</h3>
+      <p>Ashwagandha wordt bij aanbevolen doseringen over het algemeen goed verdragen. Milde bijwerkingen: lichte maag-darmklachten in de eerste dagen (meestal voorbijgaand) en sufheid bij hoge doseringen. Zwangere vrouwen wordt geadviseerd ashwagandha te vermijden. Overleg bij schildklieraandoeningen altijd met een arts.</p>
+      <h3>Kan ashwagandha samen met medicatie worden gebruikt?</h3>
+      <p>Ashwagandha kan een wisselwerking hebben met schildkliermedicatie, bloedsuikerverlagende middelen en bloeddrukverlagers. Overleg daarom altijd met je arts voordat je het combineert met voorgeschreven medicatie.</p>
+    `,
+    image: "/images/blog/ashwagandha-kopen-nederland.jpg"
+  },
+  {
     slug: "collageen-supplement-kopen-waar-op-letten",
     title: "Collageen Supplement Kopen: Complete Gids voor Huid, Haar en Nagels (2026)",
     date: "2026-05-23",
@@ -900,6 +944,11 @@ interface ProductLink {
 const AFFILIATE_BASE = "https://www.amare.com/2075008/nl-nl";
 
 const articleProductMap: Record<string, ProductLink[]> = {
+  "ashwagandha-kopen-nederland-adaptogeen-supplement": [
+    { name: "EDGE+ Mango", url: `${AFFILIATE_BASE}/amareedge-plus-mango`, isInternal: false, price: "€77.28/maand", tagline: "Plantaardig nootropicum met adaptogenen, L-theanine & Alpha-GPC" },
+    { name: "Amare EDGE+", url: `${AFFILIATE_BASE}/amareedge-plus-mango`, isInternal: false, price: "€77.28/maand", tagline: "Multi-adaptogeen + nootropic — focus, stressbestendigheid & mentale helderheid" },
+    { name: "Happy Juice Pack", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — adaptogenen, probiotica & nootropics in één pakket" },
+  ],
   "collageen-supplement-kopen-waar-op-letten": [
     { name: "HL5 2-Pack", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "5g gehydrolyseerd collageen Type 1&3 — Berry of Peach" },
     { name: "Amare HL5", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "Grasgevoerde collageen peptiden voor huid, haar en nagels" },

@@ -59,7 +59,7 @@
 | Ma 19 mei | 1 | vitamine D tekort symptomen | Sunrise | ✅ |
 | Wo 21 mei | 2 | beste probiotica 2026 | MentaBiotics | ✅ |
 | Vr 23 mei | 3 | collageen supplement kopen | HL5 2-Pack | ✅ |
-| Zo 25 mei | 4 | ashwagandha kopen nederland | EDGE+ | - [ ] |
+| Zo 25 mei | 4 | ashwagandha kopen nederland | EDGE+ | ✅ |
 | Di 27 mei | 5 | gut brain connectie | Happy Juice Pack | - [ ] |
 | Do 29 mei | 6 | haaruitval supplement vrouwen | HL5 | - [ ] |
 | Za 31 mei | 7 | focus supplement | EDGE+ | - [ ] |
