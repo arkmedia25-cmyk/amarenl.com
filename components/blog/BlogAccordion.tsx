@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ChevronDown, Calendar } from "lucide-react";
 import type { BlogPost } from "@/lib/blog";
 import DOMPurify from "dompurify";
+import { linkifyProductMentions } from "@/lib/blog";
 
 export default function BlogAccordion({ posts }: { posts: BlogPost[] }) {
   const [openSlug, setOpenSlug] = useState<string | null>(null);
@@ -53,7 +54,7 @@ export default function BlogAccordion({ posts }: { posts: BlogPost[] }) {
                     prose-li:text-[var(--color-text-muted)] prose-li:text-sm
                     prose-ul:my-3 prose-li:my-1
                     prose-h2:text-lg prose-h3:text-base prose-h4:text-sm"
-                  dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post.content) }}
+                  dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(linkifyProductMentions(post.content, post.slug)) }}
                 />
               </div>
             )}
