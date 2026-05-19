@@ -329,6 +329,47 @@ Urgentie CTA:    "Profiteer nu van €8 korting →" → affiliate link + kortin
 
 ## 8. BLOG SYSTEEM
 
+### ⚠️ DUAL DATA LAYER — KRİTİK
+
+Blog render sistemi **İKİ KATMANLI** çalışır. Her makale iki yerde yaşar:
+
+| Katman | Konum | Ne işe yarar |
+|--------|-------|-------------|
+| **1. Render HTML** | `lib/blog.ts` → `blogPosts[]` | **Sayfada render edilen içerik budur.** MDX değil! |
+| **2. Ürün linkleri** | `lib/blog.ts` → `articleProductMap{}` | `linkifyProductMentions()` buradan okuyup linkleri basar |
+| **3. MDX (referans)** | `content/blog/[slug].mdx` | SEO frontmatter + yedek. `<AffiliateCTA>` component'i **MDX'te çalışmaz!** |
+
+**Önemli:** `<AffiliateCTA>` sadece MDX içinde yazılır ama sayfada **render edilmez**. Ürün linkleri `linkifyProductMentions()` tarafından otomatik oluşturulur.
+
+### Yeni Makale Yayınlama Checklist (HER SEFERİNDE)
+
+```
+[ ] 1. content/blog/[slug].mdx oluştur (frontmatter + AffiliateCTA etiketiyle)
+[ ] 2. lib/blog.ts → blogPosts[] dizisine HTML entry ekle (en başa, en yeni tarihli)
+[ ] 3. lib/blog.ts → articleProductMap{} içine slug için ürün linkleri ekle
+[ ] 4. content/article-queue.md işaretle (✅)
+[ ] 5. npm run build (hata varsa düzelt)
+[ ] 6. git add + commit + push origin main
+[ ] 7. vercel --prod --yes
+[ ] 8. curl ile canlıyı kontrol et
+```
+
+### Ürün Linkleme Sistemi
+
+```typescript
+// lib/blog.ts içinde:
+linkifyProductMentions(post.content, post.slug)  // HTML içindeki ürün isimlerini linke çevirir
+getProductLinksForArticle(post.slug)             // Sayfa altındaki ürün kartları
+```
+
+**Nasıl çalışır:** `linkifyProductMentions()` HTML içinde `<strong>ÜrünAdı</strong>` ve standalone `ÜrünAdı` pattern'lerini arar, `articleProductMap[slug]` ile eşleştirip affiliate linke çevirir. "Amare ÜrünAdı" prefix'ini de tanır (fix: 19 May 2026).
+
+**Dikkat edilecekler:**
+- Ürün isimleri HTML içinde `<strong>` ile vurgulanmış olmalı
+- `articleProductMap`'teki isimlerle birebir aynı olmalı ("Amare" prefix'i opsiyonel)
+- Sadece `isInternal: false` olanlar doğrudan amare.com'a linklenir
+- `BlogAccordion` component'i de `linkifyProductMentions()` çağırmalı (fix: 19 May 2026)
+
 ### MDX bestandsstructuur
 Alle blogposts staan in `/content/blog/[slug].mdx`
 
@@ -732,8 +773,8 @@ Fase 7 — Automatisering (2026-05-09)
 
 ---
 
-*CLAUDE.md versie: 2.7 | Project: amarenl.com | Framework: Next.js 16 App Router | Taal: NL*
-*Laatste update: 18 mei 2026 (Blog Pipeline) — 12 artikelen kuyruktan ✅ | 2-gün cron ✅ | Build ✅*
+*CLAUDE.md versie: 2.8 | Project: amarenl.com | Framework: Next.js 16 App Router | Taal: NL*
+*Laatste update: 19 mei 2026 (Product Link Fix + Makale #5) — Dual data layer doc ✅ | linkifyProductMentions fix ✅ | BlogAccordion fix ✅*
 
 ---
 
@@ -763,10 +804,46 @@ Fase 7 — Automatisering (2026-05-09)
 | 12 | menopauze supplement | Ignite HER | 10 jun |
 
 ### Huidige staat
-- 7 blog MDX dosyası (6 eski + 1 yeni)
-- 27 blog referansı lib/blog.ts'de
+- 11 blog MDX dosyası (6 eski + 5 agent serisi)
+- 27 blog referansı lib/blog.ts'de (16 eski + 5 agent serisi + 6 pack)
 - 43 ürün data/products/ içinde
 - Cron: session-only (Claude çıkınca durur — persistent için ayarlanmalı)
+
+---
+
+## 22. SESSIE — 19 mei 2026 (Product Link Fix + Makale #5)
+
+### Voltooid deze sessie
+- [x] Makale #5: Gut-Brain Connectie → Happy Juice Pack ✅ (MDX + blog.ts + deploy)
+- [x] **BUG FIX — Ürün linkleri görünmüyordu:**
+  - `linkifyProductMentions()` "Amare" prefix'ini tanımıyordu → `<strong>Amare MentaBiotics</strong>` eşleşmiyordu
+  - Çözüm: Fonksiyona `<strong>Amare ${productName}</strong>` ve standalone `Amare ${productName}` regex'leri eklendi
+  - `BlogAccordion` hiç `linkifyProductMentions()` çağırmıyordu → blog listesinde linkler eksikti
+  - Çözüm: `BlogAccordion`'a `linkifyProductMentions(post.content, post.slug)` eklendi
+- [x] **GSC key bozuk** — ASN.1 seviyesinde kırık, yeni key gerekli (Google Cloud Console → yeni JSON key)
+- [x] CLAUDE.md güncellendi — Dual data layer + makale checklist + ürün linkleme kuralları eklendi
+
+### Kritik Dersler
+1. **Makale HTML içeriğindeki ürün isimleri `articleProductMap` ile birebir eşleşmeli.** "Amare" prefix'i artık tolere ediliyor.
+2. **Her makale yayınında 3 dosya değişir:** MDX + blog.ts (hem blogPosts hem articleProductMap)
+3. **İki farklı render noktası var:** `[slug]/page.tsx` VE `BlogAccordion` — ikisi de `linkifyProductMentions` çağırmalı.
+4. **MDX'teki `<AffiliateCTA>` component'i çalışmaz** — sayfalar blogPosts HTML'inden render ediliyor.
+
+### 12 Makale Kuyruğu
+| # | Keyword | Ürün | Tarih | Status |
+|---|---------|------|-------|--------|
+| 1 | vitamine D tekort symptomen | Sunrise | 19 mei | ✅ |
+| 2 | beste probiotica 2026 | MentaBiotics | 21 mei | ✅ |
+| 3 | collageen supplement kopen | HL5 2-Pack | 23 mei | ✅ |
+| 4 | ashwagandha kopen nederland | EDGE+ | 25 mei | ✅ |
+| 5 | gut brain connectie | Happy Juice Pack | 27 mei | ✅ |
+| 6 | haaruitval supplement vrouwen | HL5 | 29 mei | - [ ] |
+| 7 | focus supplement | EDGE+ | 31 mei | - [ ] |
+| 8 | hormoonbalans supplement vrouwen | Ignite HER | 2 jun | - [ ] |
+| 9 | darmflora verbeteren | Restore | 4 jun | - [ ] |
+| 10 | supplement routine ochtend | Triangle Xtreme | 6 jun | - [ ] |
+| 11 | plantaardige proteïne shake kopen | Origin | 8 jun | - [ ] |
+| 12 | menopauze supplement | Ignite HER | 10 jun | - [ ] |
 
 ---
 
