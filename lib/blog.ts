@@ -1181,6 +1181,11 @@ export function linkifyProductMentions(html: string, slug: string): string {
       new RegExp(`<strong>(${escaped})</strong>`, "gi"),
       (_substring: string, name: string) => `<strong>${buildLink(target, name, isExternal)}</strong>`
     );
+    // OOK: <strong>Amare ProductName</strong> → behoud de link
+    result = result.replace(
+      new RegExp(`<strong>Amare (${escaped})</strong>`, "gi"),
+      (_substring: string, name: string) => `<strong>Amare ${buildLink(target, name, isExternal)}</strong>`
+    );
 
     // Standalone product name (eerste 3 occurrences)
     let count = 0;
@@ -1188,6 +1193,14 @@ export function linkifyProductMentions(html: string, slug: string): string {
       new RegExp(`(?<![a-zA-Z>=-])(${escaped})(?![a-zA-Z<=-])`, "gi"),
       (match: string) => {
         if (count < 3) { count++; return buildLink(target, match, isExternal); }
+        return match;
+      }
+    );
+    // OOK: "Amare ProductName" standalone → link met behoud van prefix
+    result = result.replace(
+      new RegExp(`(?<![a-zA-Z>=-])Amare (${escaped})(?![a-zA-Z<=-])`, "gi"),
+      (match: string, name: string) => {
+        if (count < 4) { count++; return `Amare ${buildLink(target, name, isExternal)}`; }
         return match;
       }
     );
