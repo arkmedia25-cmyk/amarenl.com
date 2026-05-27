@@ -62,7 +62,7 @@
 | Zo 25 mei | 4 | ashwagandha kopen nederland | EDGE+ | ✅ |
 | Di 27 mei | 5 | gut brain connectie | Happy Juice Pack | ✅ |
 | Do 29 mei | 6 | haaruitval supplement vrouwen | HL5 | ✅ |
-| Za 31 mei | 7 | focus supplement | EDGE+ | - [ ] |
+| Za 31 mei | 7 | focus supplement | EDGE+ | ✅ |
 | Ma 2 jun | 8 | hormoonbalans supplement vrouwen | Ignite for HER | - [ ] |
 | Wo 4 jun | 9 | darmflora verbeteren | Restore | - [ ] |
 | Vr 6 jun | 10 | supplement routine ochtend | Triangle of Wellness | - [ ] |
