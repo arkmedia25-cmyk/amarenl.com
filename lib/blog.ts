@@ -14,6 +14,94 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "haaruitval-supplement-vrouwen-oorzaken-oplossingen",
+    title: "Haaruitval Supplement Vrouwen: Oorzaken en Natuurlijke Oplossingen Die Werken",
+    date: "2026-05-29",
+    category: "Schoonheid",
+    excerpt: "Bijna de helft van alle vrouwen krijgt ooit te maken met haaruitval. Ontdek de meest voorkomende oorzaken, welke vitaminen en mineralen essentieel zijn voor gezonde haargroei, en welke supplementen wetenschappelijk onderbouwd zijn.",
+    content: `
+      <h2>Haaruitval bij vrouwen: veel voorkomender dan je denkt</h2>
+      <p>Als je aan haaruitval denkt, zie je waarschijnlijk een man met een terugtrekkende haarlijn voor je. Maar de cijfers vertellen een ander verhaal: naar schatting <strong>krijgt 40 tot 50% van alle vrouwen</strong> op enig moment in hun leven te maken met zichtbaar haarverlies. In Nederland alleen al gaat het om honderdduizenden vrouwen — en het taboe is groot.</p>
+      <p>Anders dan bij mannen is haaruitval bij vrouwen zelden een kwestie van "erfelijke aanleg en klaar". Bij vrouwen spelen hormonale schommelingen, voedingstekorten, stress, medicatie en levensfase een doorslaggevende rol — en dat is eigenlijk goed nieuws. Want waar de oorzaak divers is, zijn er ook <strong>meerdere aangrijpingspunten om het aan te pakken</strong>.</p>
+      <p>Van een ijzertekort dat onopgemerkt bleef tot een tekort aan collageen dat pas na je 35e zichtbaar wordt — in dit artikel ontdek je de belangrijkste oorzaken van haaruitval bij vrouwen, welke vitaminen en supplementen wetenschappelijk onderbouwd zijn, en hoe je een routine opbouwt die je haar van binnenuit ondersteunt.</p>
+
+      <h2>De meest voorkomende oorzaken van haaruitval bij vrouwen</h2>
+      <p>Vrouwelijke haaruitval heeft zelden één oorzaak. Meestal is het een samenspel van factoren:</p>
+      <p><strong>Telogeen effluvium</strong> is de meest voorkomende vorm van diffuus haarverlies bij vrouwen. Een stressvolle gebeurtenis — een operatie, bevalling, zware infectie of emotionele crisis — duwt een groot aantal haarzakjes tegelijk in de rustfase (telogeen). Twee tot drie maanden later valt het haar plotseling in plukken uit. Het goede nieuws: dit type haaruitval herstelt meestal vanzelf binnen zes maanden, mits de onderliggende trigger is weggenomen en de voedingstoestand optimaal is.</p>
+      <p><strong>Hormonale schommelingen</strong> raken vrouwen in elke levensfase. Tijdens de zwangerschap zorgt een hoge oestrogeenspiegel voor voller, glanzender haar. Na de bevalling daalt oestrogeen plotseling — en valt het haar dat negen maanden langer is blijven zitten alsnog uit. In de perimenopauze en menopauze verschuift de verhouding tussen oestrogeen en testosteron, waardoor haarzakjes gevoeliger kunnen worden voor DHT (dihydrotestosteron), het hormoon dat de haargroeicyclus verkort.</p>
+      <p><strong>Voedingstekorten</strong> zijn een onderschatte oorzaak. IJzer is nodig om zuurstof naar de haarzakjes te transporteren; een ferritinewaarde onder 30 µg/L wordt al geassocieerd met haaruitval — ruim voordat bloedarmoede wordt vastgesteld. Vitamine D speelt een rol bij de haarcyclus: vitamine D-receptoren in de haarzakjes reguleren de overgang van rustfase naar groeifase. Zink is essentieel voor eiwitsynthese in de haarzakjes. Een tekort aan kwalitatief eiwit in de voeding betekent simpelweg onvoldoende bouwstenen voor keratine — het hoofdbestanddeel van haar.</p>
+      <p><strong>Erfelijke aanleg (androgenetische alopecia)</strong> is bij vrouwen meestal diffuser dan bij mannen en begint vaak later — vanaf 40 tot 50 jaar — maar kan al in de 30 merkbaar worden. De haarzakjes worden stapsgewijs gevoeliger voor androgenen en produceren dunner, korter haar.</p>
+
+      <h2>Welke vitaminen en mineralen zijn belangrijk voor haargroei?</h2>
+      <p>Een haarzakje is een van de meest actieve mini-orgaantjes in je lichaam. Het heeft een constante toevoer van voedingsstoffen nodig:</p>
+      <ul>
+        <li><strong>IJzer</strong> is de brandstof voor de haarzakjes. Een studie in het <em>Journal of Korean Medical Science</em> vond dat vrouwen met haaruitval significant lagere ferritinewaarden hadden dan vrouwen zonder haarverlies. IJzerrijke voeding: rood vlees, linzen, spinazie, pompoenpitten. Combineer plantaardig ijzer met vitamine C voor betere opname.</li>
+        <li><strong>Vitamine D3:</strong> Haarzakjes hebben vitamine D-receptoren — zonder voldoende D3 raakt de haargroeicyclus verstoord. Een tekort wordt in meerdere onderzoeken in verband gebracht met telogeen effluvium en alopecia areata. In Nederland heeft naar schatting 40 tot 60% van de bevolking een suboptimaal vitamine D-niveau in de wintermaanden.</li>
+        <li><strong>Zink</strong> is onmisbaar bij de synthese van keratine en collageen, de bouwstenen van haar. Zinktekort leidt tot broos, dunner wordend haar en een droge hoofdhuid. Zink zit in oesters, rundvlees, kikkererwten en noten.</li>
+        <li><strong>Biotine (vitamine B8)</strong> is het bekendste "haarvitamine" — maar werkt alleen bij een aangetoond tekort. Biotine draagt bij aan de normale keratineproductie, maar een overschot heeft geen extra voordeel voor mensen met een normale biotinestatus. Het wordt van nature gevonden in eieren, amandelen, zoete aardappel en zalm.</li>
+        <li><strong>Selenium</strong> beschermt de hoofdhuid en haarzakjes tegen oxidatieve stress. Paranoten, tonijn, zonnebloempitten en volkoren producten zijn uitstekende bronnen.</li>
+        <li><strong>Vitamine B12 en foliumzuur:</strong> Een tekort aan B12 leidt tot minder zuurstoftoevoer naar de haarzakjes — met dunner wordend haar als potentieel gevolg. Vooral vegetariërs en veganisten lopen risico op een B12-tekort.</li>
+      </ul>
+
+      <h2>Biotine voor haargroei: werkt het echt?</h2>
+      <p>Biotine is het meest bekende haarsupplement — en tegelijk het meest verkeerd begrepen. Biotine is een in water oplosbare B-vitamine (B8) die als co-enzym betrokken is bij de aanmaak van keratine, het structurele eiwit waar haar en nagels uit bestaan.</p>
+      <p>De wetenschappelijke realiteit: <strong>biotine werkt uitstekend bij een aangetoond biotinetekort</strong>, maar klinische studies laten geen significant voordeel zien voor mensen met een normale biotinestatus en gezond haar. De meeste mensen met een gevarieerd dieet krijgen voldoende biotine binnen — het zit in eieren, noten, zaden, avocado en zoete aardappel.</p>
+      <p>Wanneer kan biotine wél zinvol zijn? Tijdens zwangerschap en borstvoeding (verhoogde behoefte), bij langdurig gebruik van bepaalde anti-epileptica, bij mensen met een antibioticakuur die de darmbacteriën verstoort (een deel van de biotine wordt door darmbacteriën geproduceerd), en bij broze nagels — het enige gebied waar biotinesuppletie consistent positieve resultaten laat zien in klinisch onderzoek.</p>
+      <p>De les: biotine is geen wondermiddel voor iedere vrouw met haaruitval, maar een essentieel puzzelstukje in specifieke situaties. Een kwalitatief multinutriënt zoals <strong>Amare VitaGBX</strong> bevat biotine in combinatie met 50+ andere voedingsstoffen in fysiologisch zinvolle doseringen — een betere benadering dan hooggedoseerde losse biotine.</p>
+
+      <h2>Collageen en haaruitval: wat is de link?</h2>
+      <p>Collageen staat bekend als huid- en gewrichtssupplement, maar de connectie met haar is minstens zo belangrijk — en onderbelicht.</p>
+      <p>Je hoofdhuid bestaat voor ongeveer 70% uit collageen. Naarmate je ouder wordt — vanaf ongeveer je 25e neemt de natuurlijke collageenproductie met 1 tot 1,5% per jaar af en versnelt dit proces na de menopauze — wordt de huid van je hoofdhuid dunner en minder elastisch. Dit heeft directe gevolgen voor je haarzakjes: ze verliezen steunweefsel en doorbloeding, waardoor de groeifase verkort en haar dunner teruggroeit.</p>
+      <p>Gehydrolyseerd collageen (collageenpeptiden) levert de aminozuren glycine, proline en lysine — de bouwstenen die je lichaam nodig heeft voor keratineproductie. Een onderzoek uit 2017 vond dat een dagelijkse suppletie met collageenpeptiden gedurende 90 dagen leidde tot significante verbetering in haardikte en hoofdhuidgezondheid. Het aminozuur proline is bovendien een precursor van keratine — zonder voldoende proline kan de haargroei niet optimaal verlopen.</p>
+      <p><strong>Amare HL5</strong> bevat 5 gram gehydrolyseerd collageen type 1 en 3 per dagelijkse portie in een vloeibare, voorverteerde vorm. De toevoeging van hyaluronzuur en een antioxidantencomplex ondersteunt niet alleen de hoofdhuid, maar het geheel van huid, haar en nagels — een benadering die logisch is vanuit de biologie: dezelfde weefsels delen dezelfde bouwstenen.</p>
+
+      <h2>Supplementen voor haargroei: wat werkt en wat niet?</h2>
+      <p>De supplementenmarkt voor haar is een wirwar van beloftes. Wat heeft wetenschappelijke onderbouwing — en wat is marketing?</p>
+      <p><strong>Wat werkt (bewezen):</strong></p>
+      <ul>
+        <li><strong>Collageenpeptiden (5-10 g/dag):</strong> Leveren de aminozuren glycine, proline en lysine voor keratineproductie; ondersteunen de hoofdhuidstructuur. Klinisch het sterkst onderbouwd voor haardikte en groei.</li>
+        <li><strong>IJzer (bij aangetoond tekort):</strong> Streefwaarde ferritine minimaal 30 µg/L, optimaal 50-70 µg/L voor haargroei. Alleen suppleren na bloedonderzoek — een ijzeroverschot is schadelijk.</li>
+        <li><strong>Vitamine D3 (bij aangetoond tekort):</strong> 800-2000 IE per dag is voor de meeste Nederlandse vrouwen voldoende. Hogere doseringen alleen na bloedonderzoek.</li>
+        <li><strong>Zink (10-15 mg/dag):</strong> Ondersteunt eiwitsynthese en celdeling in de haarzakjes. Lage dosering is voldoende — langdurig hoge doseringen kunnen kopertekort veroorzaken.</li>
+        <li><strong>Omega-3 vetzuren (EPA/DHA):</strong> Ondersteunen de hoofdhuidgezondheid via hun ontstekingsremmende eigenschappen. Een gezonde hoofdhuid is de basis voor gezond haar.</li>
+      </ul>
+      <p><strong>Wat matig tot niet werkt:</strong></p>
+      <ul>
+        <li><strong>Biotine bij normale biotinestatus:</strong> Geen wetenschappelijk bewijs voor extra haargroei bovenop een normaal niveau.</li>
+        <li><strong>Silica / siliciumdioxide:</strong> Populair in haarcomplexen, maar klinisch bewijs voor haargroei is zwak en inconsistent.</li>
+        <li><strong>Saw palmetto:</strong> Wordt ingezet vanwege anti-DHT-werking, maar klinische studies zijn klein en van matige kwaliteit.</li>
+        <li><strong>Losse keratinesupplementen:</strong> Keratine is een eiwit dat in de maag wordt afgebroken zoals elk ander eiwit — je lichaam bouwt er niet direct haar van. Inname van de aminozuurbouwstenen (via collageen of voedingseiwit) is effectiever.</li>
+      </ul>
+      <p>Een supplement dat meerdere van deze bewezen nutriënten combineert is vaak praktischer en kosteneffectiever dan vijf losse potjes. <strong>Amare HL5</strong> levert collageenpeptiden plus hyaluronzuur voor hoofdhuid en haarzakjes; voor de micronutriëntenkant (ijzer, zink, biotine, D3) dekt <strong>Amare VitaGBX</strong> met 50+ voedingsstoffen de basis. Beide producten kun je combineren in één ochtendroutine.</p>
+
+      <h2>Leefstijltips naast supplementen</h2>
+      <p>Supplementen zijn ondersteunend — de basis ligt bij je dagelijkse gewoontes:</p>
+      <ol>
+        <li><strong>Eet voldoende eiwit.</strong> Je haar bestaat uit keratine — een eiwit. Streef naar minimaal 1,2 gram eiwit per kilo lichaamsgewicht per dag uit bronnen zoals eieren, vis, peulvruchten, Griekse yoghurt en quinoa.</li>
+        <li><strong>Wees voorzichtig met extreem caloriebeperkt dieet.</strong> Een tekort van meer dan 500 calorieën per dag kan binnen 8 tot 12 weken leiden tot telogeen effluvium — het lichaam geeft prioriteit aan vitale functies boven haargroei.</li>
+        <li><strong>Check je stressniveau.</strong> Chronische stress verhoogt cortisol, wat de haargroeicyclus verkort. Ademhalingsoefeningen, wandelen in de natuur en voldoende slaap zijn gratis interventies met een bewezen effect op de stressrespons.</li>
+        <li><strong>Vermijd strakke kapsels en hitte.</strong> Tractie-alopecia — haaruitval door constante spanning op de haarzakjes — is volledig te voorkomen. Vermijd elke dag strakke paardenstaarten, extensions of chemische behandelingen. Laat haar aan de lucht drogen wanneer mogelijk.</li>
+        <li><strong>Masseer je hoofdhuid.</strong> Een kleine studie uit 2016 vond dat vier minuten dagelijkse hoofdhuidmassage — via stimulatie van doorbloeding en rekking van de haarzakjes — na 24 weken leidde tot meetbaar dikker haar. Een zachte massage onder de douche of met een hoofdhuidborstel is voldoende.</li>
+        <li><strong>Drink voldoende water.</strong> Uitdroging maakt haar broos en glansloos. Anderhalf tot twee liter water per dag is een eenvoudige basisstap die veel vrouwen onderschatten.</li>
+      </ol>
+
+      <h2>Veelgestelde vragen</h2>
+      <h3>Hoe weet ik of mijn haaruitval tijdelijk is of blijvend?</h3>
+      <p>Tijdelijk haarverlies (telogeen effluvium) is meestal diffuus — je verliest over het hele hoofd gelijkmatig haar, vaak twee tot drie maanden na een trigger zoals stress of een operatie. Blijvend haarverlies (androgenetische alopecia) begint vaak met een verwijding van de middenscheiding en dunner wordend haar op de kruin. Het beste antwoord krijg je via een tricholoog of dermatoloog, die met een trichogram (haarwortelonderzoek) en bloedonderzoek de oorzaak kan vaststellen. Bij twijfel altijd eerst bloed laten prikken voordat je supplementen gaat nemen.</p>
+      <h3>Kan ik meerdere haarsupplementen tegelijk nemen?</h3>
+      <p>Ja, en dat is vaak logischer dan één enkel nutriënt. Collageen, ijzer, zink en vitamine D werken via verschillende mechanismen en kunnen elkaar aanvullen. Collageen (HL5) voor de bouwstenen van keratine en hoofdhuidstructuur; een multinutriënt (VitaGBX) voor de micronutriëntenbasis; en een omega-3 supplement voor hoofdhuidgezondheid en ontstekingsremming. Begin niet met alles tegelijk — voeg één voor één toe om te zien hoe je lichaam reageert. En bespreek ijzersuppletie altijd met je arts: een teveel aan ijzer kan schadelijk zijn.</p>
+      <h3>Hoelang duurt het voordat supplementen effect hebben op mijn haar?</h3>
+      <p>Haar groeit gemiddeld 1 tot 1,5 centimeter per maand. Een supplement kan alleen invloed hebben op haar dat nu in de groeifase zit en over zes tot acht weken uit de hoofdhuid komt. De eerste zichtbare resultaten — minder haarverlies in de borstel, nieuwe babyhaartjes bij de haarlijn — kunnen na 8 tot 12 weken merkbaar zijn. Voor significante verbetering in haardikte en volume reken je op minimaal 3 tot 6 maanden consistente suppletie. Haargroei heeft geduld nodig — maar het is een van de weinige gezondheidsdoelen waar consistentie betrouwbaar wordt beloond.</p>
+
+      <h2>Conclusie</h2>
+      <p>Haaruitval bij vrouwen is geen kwestie van pech of aanleg alleen — in veel gevallen is het een signaal van je lichaam dat de voedingstoestand, hormoonbalans of stresshuishouding aandacht vraagt. De aanpak die het beste werkt, is tweeledig: de onderliggende oorzaak identificeren én je haar van binnenuit ondersteunen met de juiste voedingsstoffen.</p>
+      <p>De meest onderbouwde suppletiestrategie omvat collageenpeptiden voor keratinebouwstenen en hoofdhuidstructuur, een kwalitatief multinutriënt voor de basis aan vitaminen en mineralen (inclusief ijzer, zink en D3), en omega-3 voor een gezonde hoofdhuid. <strong>Amare HL5</strong> is een vloeibaar collageensupplement met 5 gram gehydrolyseerd collageen type 1 en 3 per portie; in combinatie met <strong>Amare VitaGBX</strong> voor de micronutriëntenbasis heb je de kern in twee producten.</p>
+      <p>Dat gezegd hebbende: bij aanhoudend, plotseling of pleksgewijs haarverlies is een bezoek aan de huisarts of dermatoloog de eerste stap. Supplementen ondersteunen — een serieuze medische oorzaak pak je er niet mee aan.</p>
+      <p><em>Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij aanhoudende gezondheidsklachten of haaruitval altijd een arts. Dit product is niet geschikt voor zwangere vrouwen, borstvoeding gevende vrouwen en kinderen jonger dan 18 jaar.</em></p>
+    `,
+    image: "/images/blog/haaruitval-supplement-vrouwen.jpg"
+  },
+  {
     slug: "gut-brain-connectie-darmen-stemming-mentaal",
     title: "Gut-Brain Connectie: Hoe Je Darmen Je Stemming en Mentale Gezondheid Bepalen",
     date: "2026-05-27",
@@ -987,6 +1075,12 @@ interface ProductLink {
 const AFFILIATE_BASE = "https://www.amare.com/2075008/nl-nl";
 
 const articleProductMap: Record<string, ProductLink[]> = {
+  "haaruitval-supplement-vrouwen-oorzaken-oplossingen": [
+    { name: "HL5", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "5g gehydrolyseerd collageen Type 1&3 — 2-pack beste waarde" },
+    { name: "Amare HL5", url: `${AFFILIATE_BASE}/hl5-peach-2pack`, isInternal: false, price: "€130.42/maand", tagline: "5g gehydrolyseerd collageen type 1&3 per portie — 2-pack voordelig" },
+    { name: "HL5 2-Pack", url: `${AFFILIATE_BASE}/hl5-peach-2pack`, isInternal: false, price: "€130.42/maand", tagline: "2 maanden collageen voor huid, haar en nagels — €65,21 per maand" },
+    { name: "Amare VitaGBX", url: `${AFFILIATE_BASE}/vita-gbx`, isInternal: false, price: "€55.48/maand", tagline: "Complete multivitamine — 50+ voedingsstoffen inclusief biotine, ijzer en zink" },
+  ],
   "gut-brain-connectie-darmen-stemming-mentaal": [
     { name: "Happy Juice Pack", url: `${AFFILIATE_BASE}/happy-juice-edge-plus-mango`, isInternal: false, price: "€155.33/maand", tagline: "#1 bestseller — MentaBiotics + Energy+ + EDGE+ in één bundel" },
     { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — klinisch onderzochte psychobiotica voor de darm-hersenas" },
