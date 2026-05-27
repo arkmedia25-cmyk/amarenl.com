@@ -63,10 +63,10 @@
 | Di 27 mei | 5 | gut brain connectie | Happy Juice Pack | ✅ |
 | Do 29 mei | 6 | haaruitval supplement vrouwen | HL5 | ✅ |
 | Za 31 mei | 7 | focus supplement | EDGE+ | ✅ |
-| Ma 2 jun | 8 | hormoonbalans supplement vrouwen | Ignite for HER | - [ ] |
-| Wo 4 jun | 9 | darmflora verbeteren | Restore | - [ ] |
-| Vr 6 jun | 10 | supplement routine ochtend | Triangle of Wellness | - [ ] |
-| Zo 8 jun | 11 | plantaardige proteïne shake kopen | Origin | - [ ] |
+| Ma 2 jun | 8 | hormoonbalans supplement vrouwen | Ignite for HER | ✅ |
+| Wo 4 jun | 9 | darmflora verbeteren | Restore | ✅ |
+| Vr 6 jun | 10 | supplement routine ochtend | Triangle of Wellness | ✅ |
+| Zo 8 jun | 11 | plantaardige proteïne shake kopen | Origin | ✅ |
 | Di 10 jun | 12 | menopauze supplement | Ignite for HER | - [ ] |
 
 > ⏰ Cron: her 2 günde bir saat 9:57'de yeni makale yayınlanır.
