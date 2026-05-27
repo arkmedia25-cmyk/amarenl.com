@@ -839,9 +839,9 @@ Fase 7 — Automatisering (2026-05-09)
 | 5 | gut brain connectie | Happy Juice Pack | 27 mei | ✅ |
 | 6 | haaruitval supplement vrouwen | HL5 | 29 mei | ✅ |
 | 7 | focus supplement | EDGE+ | 31 mei | ✅ |
-| 8 | hormoonbalans supplement vrouwen | Ignite HER | 2 jun | - [ ] |
-| 9 | darmflora verbeteren | Restore | 4 jun | - [ ] |
-| 10 | supplement routine ochtend | Triangle Xtreme | 6 jun | - [ ] |
+| 8 | hormoonbalans supplement vrouwen | Ignite HER | 2 jun | ✅ |
+| 9 | darmflora verbeteren | Restore | 4 jun | ✅ |
+| 10 | supplement routine ochtend | Triangle Xtreme | 6 jun | ✅ |
 | 11 | plantaardige proteïne shake kopen | Origin | 8 jun | - [ ] |
 | 12 | menopauze supplement | Ignite HER | 10 jun | - [ ] |
 
@@ -940,8 +940,61 @@ Fase 7 — Automatisering (2026-05-09)
 - **Faz 4:** Blog image path validation
 
 ### Volgende Stap
-Site is **PRODUCTION-STABLE en klaar voor Vercel deployment**:
-```bash
-git add . && git commit -m "Stabilization: security fixes, XSS protection, Next.js 16 upgrade"
-git push origin main
+Site is **PRODUCTION-STABLE**. Pipeline: 11/12 artikelen live, #12 (menopauze) laatste.
+
+---
+
+## 23. SESSIE — 27 mei 2026 (Artikelen #6-#11 + Broken Link Fix)
+
+### Voltooid deze sessie
+- [x] Makale #6: Haaruitval Supplement Vrouwen → HL5 ✅
+- [x] Makale #7: Focus Supplement → EDGE+ ✅
+- [x] Makale #8: Hormoonbalans Supplement Vrouwen → Ignite for HER ✅
+- [x] Makale #9: Darmflora Verbeteren → Restore ✅
+- [x] Makale #10: Supplement Routine Ochtend → Triangle of Wellness ✅
+- [x] Makale #11: Plantaardige Proteïne Shake Kopen → Origin ✅
+- [x] **BROKEN LINK CLEANUP:** 6 broken affiliate URLs verwijderd uit articleProductMap
+  - `/vita-gbx` → 404 (verwijderd)
+  - `/amare-edge` → 404 (verwijderd)
+  - `/amare-on` → 404 (verwijderd, 2 entries)
+  - `/happy-lifestyle-pack` → 404 (verwijderd, 2 entries)
+  - `/triangle-of-wellness` → 404 (verwijderd — alleen `-xtreme` variant werkt)
+
+### 12 Makale Pipeline Status
+| # | Keyword | Ürün | Tarih | Status |
+|---|---------|------|-------|--------|
+| 1 | vitamine D tekort symptomen | Sunrise | 19 mei | ✅ |
+| 2 | beste probiotica 2026 | MentaBiotics | 21 mei | ✅ |
+| 3 | collageen supplement kopen | HL5 2-Pack | 23 mei | ✅ |
+| 4 | ashwagandha kopen nederland | EDGE+ | 25 mei | ✅ |
+| 5 | gut brain connectie | Happy Juice Pack | 27 mei | ✅ |
+| 6 | haaruitval supplement vrouwen | HL5 | 29 mei | ✅ |
+| 7 | focus supplement | EDGE+ | 31 mei | ✅ |
+| 8 | hormoonbalans supplement vrouwen | Ignite HER | 2 jun | ✅ |
+| 9 | darmflora verbeteren | Restore | 4 jun | ✅ |
+| 10 | supplement routine ochtend | Triangle Xtreme | 6 jun | ✅ |
+| 11 | plantaardige proteïne shake kopen | Origin | 8 jun | ✅ |
+| 12 | menopauze supplement | Ignite HER | 10 jun | 🔜 |
+
+### Huidige staat
+- **28 blog artikelen** in lib/blog.ts (17 origineel + 11 pipeline)
+- **9 working affiliate URLs** geverifieerd (200 OK)
+- **5 artikel verouderde links** verwijderd uit articleProductMap
+- Alle 11 pipeline artikelen live op amarenl.com ✅
+- Sitemap: 53 routes gegenereerd
+- Build: Succesvol (Next.js 16.2.6)
+- 1 artikel resterend: #12 menopauze supplement (10 jun)
+
+### Verificatie URLs
 ```
+✅ amareedge-plus-mango     ✅ happy-juice-edge-plus-mango  ✅ hl5-peach-2pack
+✅ mentabiotics             ✅ mentafocus                   ✅ nitro-xtreme
+✅ sunset                   ✅ triangle-of-wellness-xtreme   ✅ triangle-of-wellness-xtreme-2pack
+✅ ignite-for-her           ✅ restore                      ✅ kyani-origin-chocolate
+❌ vita-gbx (404)          ❌ amare-edge (404)             ❌ amare-on (404)
+❌ happy-lifestyle-pack (404) ❌ triangle-of-wellness (404)
+```
+
+---
+*CLAUDE.md versie: 2.9 | Project: amarenl.com | Framework: Next.js 16 App Router | Taal: NL*
+*Laatste update: 27 mei 2026 — Articles #6-#11 ✅ | Broken link cleanup ✅ | 11/12 pipeline live*

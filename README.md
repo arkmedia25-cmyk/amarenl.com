@@ -30,7 +30,7 @@ npm run sitemap    # Sitemap genereren
 app/                    # Next.js App Router
 ├── page.tsx            # Homepage
 ├── layout.tsx          # Root layout (GA4, fonts, schema, affiliate tracking)
-├── blogs/nieuws/       # Blog systeem (17 artikelen)
+├── blogs/nieuws/       # Blog systeem (28 artikelen — 17 origineel + 11 pipeline)
 ├── go/                 # Akıllı affiliate yönlendirme
 ├── collections/        # Collectie pagina's
 ├── supplementen/       # Categoriepagina's
@@ -48,7 +48,7 @@ components/
 
 lib/
 ├── products.ts         # 40+ Amare producten database
-├── blog.ts             # 17 MDX blog artikelen
+├── blog.ts             # 28 blog artikelen (17 origineel + 11 pipeline)
 ├── schema.ts           # JSON-LD generators (Organization, Article, FAQ, Product, etc.)
 ├── analytics.ts        # GA4 event helpers
 └── affiliate.ts        # 3-katmanlı affiliate tracking sistemi
@@ -88,4 +88,23 @@ public/images/          # Statische assets
 
 Push naar `main` branch → automatische Vercel deployment.
 
-Zie `CLAUDE.md` voor volledige projectdocumentatie.
+---
+
+## 12 Artikelen Pipeline (19 mei — 10 jun 2026)
+
+| # | Artikel | Product | Status |
+|---|---------|---------|--------|
+| 1 | Vitamine D Tekort Symptomen | Sunrise | ✅ |
+| 2 | Beste Probiotica 2026 | MentaBiotics | ✅ |
+| 3 | Collageen Supplement Kopen | HL5 2-Pack | ✅ |
+| 4 | Ashwagandha Kopen Nederland | EDGE+ | ✅ |
+| 5 | Gut-Brain Connectie | Happy Juice Pack | ✅ |
+| 6 | Haaruitval Supplement Vrouwen | HL5 | ✅ |
+| 7 | Focus Supplement | EDGE+ | ✅ |
+| 8 | Hormoonbalans Supplement Vrouwen | Ignite for HER | ✅ |
+| 9 | Darmflora Verbeteren | Restore | ✅ |
+| 10 | Supplement Routine Ochtend | Triangle of Wellness | ✅ |
+| 11 | Plantaardige Proteïne Shake Kopen | Origin | ✅ |
+| 12 | Menopauze Supplement | Ignite for HER | 🔜 10 jun |
+
+Zie `CLAUDE.md` en `content/article-queue.md` voor volledige projectdocumentatie.
