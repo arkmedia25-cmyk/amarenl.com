@@ -1,6 +1,7 @@
 # AmareNL Article Queue — SEO-GEO-AEO İçerik Planı
 > Laatste update: 2026-06-01
 > Status: 12/12 pipeline ✅ | 3 vergelijkingsartikelen ✅ | Totaal 31 artikelen live
+> Deploy: Vercel production ✅ — dpl_HGqHa2Lkidyc8PLYRvy7ebGPAVaS
 > Metodoloji: NL search volume × commercial intent × product match × GEO query fan-out
 > Yayın takvimi: 2 günde bir (cron — article-scheduler skill)
 > Bron: amarenl-agent-keywords.md (12 artikelen)
