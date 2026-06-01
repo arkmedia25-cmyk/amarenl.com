@@ -1405,6 +1405,130 @@ export const blogPosts: BlogPost[] = [
       <p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. De genoemde prijzen zijn inclusief abonnementskorting en kunnen afwijken. Controleer de actuele prijzen op de Amare website. Productbeschikbaarheid kan variëren per bundelvariant.</em></p>
     `,
     image: "/images/blog/happy-lifestyle-pack.jpg"
+  },
+  {
+    slug: "amare-triangle-of-wellness-ervaringen-waarom-balans-voeding-en-vitaliteit-samenkomen",
+    title: "Amare Triangle of Wellness Ervaringen — Waarom Balans, Voeding en Vitaliteit Samenkomen",
+    date: "2025-03-10",
+    category: "Lifestyle & Wellness",
+    excerpt: "De Triangle of Wellness is Amare's holistische benadering van gezondheid. Lees hoe voeding, mind en vitaliteit samenkomen.",
+    content: `
+      <h2>Wat is de Amare Triangle of Wellness?</h2>
+      <p>De Triangle of Wellness is de filosofie achter alle Amare producten. Het concept is eenvoudig maar krachtig: optimale gezondheid ontstaat wanneer drie pijlers in balans zijn — <strong>voeding</strong>, <strong>mentale gezondheid</strong> en <strong>vitaliteit</strong>. In plaats van je te richten op één aspect van gezondheid, erkent Amare dat alles met elkaar verbonden is. Je darmen beïnvloeden je stemming. Je energieniveau beïnvloedt je eetlust. Je mentale staat beïnvloedt je immuunsysteem.</p>
+
+      <h2>De drie pijlers uitgelegd</h2>
+      <h3>1. Voeding — brandstof voor je lichaam</h3>
+      <p>Wat je eet is de basis van je gezondheid. Amare's voedingsgerichte producten zoals VitaGBX en OmMega leveren essentiële voedingsstoffen die in het moderne dieet vaak ontbreken. Denk aan omega-3, vitamines, mineralen en antioxidanten.</p>
+      <h3>2. Mentale gezondheid — de gut-brain connectie</h3>
+      <p>Je darmen produceren meer dan 90% van je serotonine — het 'gelukshormoon'. Amare's <strong>MentaBiotics</strong> en <strong>Happy Juice Pack</strong> zijn speciaal ontwikkeld om de gut-brain axis te ondersteunen. Gebruikers rapporteren verbeterde stemming, minder stress en betere focus.</p>
+      <h3>3. Vitaliteit — energie voor het leven</h3>
+      <p>Vitaliteit is meer dan alleen niet moe zijn. Het gaat om levenslust, veerkracht en de energie om te doen wat je wilt doen. Producten zoals Energy+ en GBX SuperFood ondersteunen je natuurlijke energieniveau zonder kunstmatige stimulanten.</p>
+
+      <h2>Gebruikerservaringen uit Nederland</h2>
+      <p>Steeds meer Nederlanders ontdekken de Triangle of Wellness:</p>
+      <ul>
+        <li><strong>Meer energie gedurende de dag</strong> — niet alleen 's ochtends.</li>
+        <li><strong>Betere stemming en minder stressgevoelens</strong> — vooral met MentaBiotics.</li>
+        <li><strong>Verbeterde spijsvertering</strong> — minder opgeblazen gevoel, regelmatiger.</li>
+        <li><strong>Betere slaapkwaliteit</strong> — sneller in slaap vallen, dieper slapen.</li>
+        <li><strong>Meer focus op werk</strong> — helderder denken, minder brain fog.</li>
+      </ul>
+
+      <h2>Veelgestelde vragen</h2>
+      <h3>Is de Triangle of Wellness wetenschappelijk onderbouwd?</h3>
+      <p>Ja, Amare werkt samen met wetenschappers en gebruikt gepatenteerde ingrediënten die klinisch zijn onderzocht. De gut-brain connectie is een van de meest actieve onderzoeksgebieden in de neurowetenschap.</p>
+      <h3>Welk Amare product past bij mij?</h3>
+      <p>Dit hangt af van je doelen. Wil je meer energie? Begin met <strong>Happy Juice Pack</strong>. Wil je een betere stemming? <strong>MentaBiotics</strong>. Zoek je algehele gezondheid? FundaMentals Pack is een complete start.</p>
+      <h3>Kan ik meerdere Amare producten tegelijk gebruiken?</h3>
+      <p>Ja, veel producten zijn juist ontworpen om samen te werken. De Triangle of Wellness moedigt een holistische aanpak aan.</p>
+
+      <h2>Conclusie</h2>
+      <p>De Triangle of Wellness is geen marketingterm — het is een doordachte benadering van gezondheid die erkent dat alles in je lichaam met elkaar verbonden is. Door te investeren in voeding, mentale gezondheid en vitaliteit tegelijk, creëer je een fundament voor langdurig welzijn.</p>
+      <p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl.</em></p>
+    `,
+    image: "/images/blog/amare-triangle-of-wellness-cover.jpg"
+  },
+  {
+    slug: "altijd-moe-ontdek-hoe-cel-energie-jouw-energieniveau-bepaalt",
+    title: "Altijd Moe? Ontdek Hoe Cel-Energie Jouw Energieniveau Bepaalt",
+    date: "2025-01-20",
+    category: "Dagelijkse Essentials",
+    excerpt: "Chronische vermoeidheid treft steeds meer Nederlanders. De oplossing begint bij het begrijpen van je cellulaire energiehuishouding.",
+    content: `
+      <h2>Wat is cel-energie en waarom is het belangrijk?</h2>
+      <p>Voel je je vaak moe, zelfs na een goede nacht slaap? Je bent niet alleen. Chronische vermoeidheid is een van de meest voorkomende klachten in Nederland. De sleutel tot meer energie ligt niet in nóg een kop koffie, maar in je cellen — specifiek in je mitochondriën.</p>
+      <p>Mitochondriën zijn de energiecentrales van je cellen. Ze zetten voeding om in ATP (adenosinetrifosfaat), de brandstof waar je lichaam op draait. Als je mitochondriën niet optimaal functioneren, voel je dat direct aan je energieniveau.</p>
+
+      <h2>Wat put je mitochondriën uit?</h2>
+      <ul>
+        <li><strong>Chronische stress</strong> — verhoogt cortisol, wat de energieproductie remt.</li>
+        <li><strong>Slechte voeding</strong> — bewerkt voedsel levert niet de voedingsstoffen die mitochondriën nodig hebben.</li>
+        <li><strong>Te weinig beweging</strong> — mitochondriën hebben beweging nodig om actief te blijven.</li>
+        <li><strong>Slaaptekort</strong> — tijdens je slaap herstellen je mitochondriën.</li>
+        <li><strong>Oxidatieve stress</strong> — vrije radicalen beschadigen celstructuren.</li>
+      </ul>
+
+      <h2>Hoe ondersteun je je cel-energie op natuurlijke wijze?</h2>
+      <ol>
+        <li><strong>Voeding rijk aan antioxidanten</strong> — bessen, groene bladgroenten, noten.</li>
+        <li><strong>Regelmatige lichaamsbeweging</strong> — matige intensiteit, consistent.</li>
+        <li><strong>Stressmanagement</strong> — meditatie, ademhalingsoefeningen.</li>
+        <li><strong>Gerichte supplementen</strong> — ingrediënten zoals CoQ10, omega-3 en adaptogenen.</li>
+      </ol>
+
+      <h2>De rol van gerichte supplementen</h2>
+      <p>Sommige voedingsstoffen zijn lastig in optimale hoeveelheden uit voeding te halen. Hier komen hoogwaardige supplementen in beeld. Producten zoals <strong>Amare Energy+</strong> en VitaGBX bevatten specifieke ingrediënten die je cellulaire energiehuishouding ondersteunen — zonder de crash die je van cafeïne krijgt.</p>
+
+      <h2>Veelgestelde vragen</h2>
+      <h3>Waarom ben ik moe terwijl ik genoeg slaap?</h3>
+      <p>Slaap is belangrijk, maar slechts één factor. Als je mitochondriën niet efficiënt werken, kun je 10 uur slapen en nog steeds moe wakker worden. Kijk ook naar voeding, stress en beweging.</p>
+      <h3>Helpt koffie tegen vermoeidheid?</h3>
+      <p>Koffie maskeert vermoeidheid tijdelijk maar lost de onderliggende oorzaak niet op. Te veel cafeïne kan je bijnieren uitputten en je slaapkwaliteit verslechteren.</p>
+      <h3>Hoe snel werken energie-ondersteunende supplementen?</h3>
+      <p>De meeste mensen merken binnen 2 tot 4 weken verschil. Supplementen zijn geen quick fix maar een langetermijninvestering in je gezondheid.</p>
+
+      <h2>Conclusie</h2>
+      <p>Chronische vermoeidheid is geen normaal onderdeel van het leven. Door je te richten op de gezondheid van je cellen — met name je mitochondriën — kun je je energieniveau op een natuurlijke en duurzame manier verbeteren. Een combinatie van goede voeding, beweging, stressmanagement en gerichte supplementen vormt de basis voor blijvende vitaliteit.</p>
+      <p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl.</em></p>
+    `,
+    image: "/images/blog/altijd-moe-cel-energie-cover.jpg"
+  },
+  {
+    slug: "apotheek-of-groenteboer",
+    title: "Apotheek of Groenteboer — Waar Haal Jij Je Gezondheid?",
+    date: "2024-11-15",
+    category: "Lifestyle & Wellness",
+    excerpt: "De discussie tussen natuurlijke en synthetische gezondheidsproducten wordt steeds relevanter. Waar haal jij je gezondheid?",
+    content: `
+      <h2>Wat is het verschil tussen de apotheek en de groenteboer?</h2>
+      <p>We leven in een tijd waarin we meer keuze hebben dan ooit als het gaat om onze gezondheid. Aan de ene kant heb je de traditionele apotheek met medicijnen en synthetische supplementen. Aan de andere kant is er de groeiende wereld van natuurlijke supplementen en functionele voeding. Maar wat past het beste bij jouw lichaam?</p>
+      <p>De apotheek biedt vooral reactieve zorg — je gaat erheen als je al klachten hebt. De groenteboer en natuurlijke supplementenwinkel vertegenwoordigen preventieve zorg: je investeert in je gezondheid voordat er problemen ontstaan.</p>
+
+      <h2>Waarom natuurlijke supplementen steeds populairder worden</h2>
+      <p>Steeds meer Nederlanders ontdekken de kracht van natuurlijke supplementen. Dit komt niet uit de lucht vallen:</p>
+      <ul>
+        <li><strong>Toenemend wetenschappelijk bewijs</strong> — onderzoek toont aan dat natuurlijke ingrediënten zoals probiotica, omega-3 en plantaardige extracten meetbare gezondheidsvoordelen bieden.</li>
+        <li><strong>Minder bijwerkingen</strong> — natuurlijke supplementen hebben over het algemeen minder en mildere bijwerkingen dan synthetische alternatieven.</li>
+        <li><strong>Holistische benadering</strong> — in plaats van symptomen te bestrijden, ondersteunen natuurlijke producten het hele lichaam.</li>
+      </ul>
+
+      <h2>De gut-brain axis — dé wetenschappelijke doorbraak</h2>
+      <p>Een van de meest opwindende ontwikkelingen in de gezondheidswetenschap is de ontdekking van de gut-brain axis. Dit is de directe communicatielijn tussen je darmen en je hersenen. Wat blijkt? Je darmgezondheid heeft enorme invloed op je stemming en mentale veerkracht, je energieniveau, je focus en concentratie, en je immuunsysteem.</p>
+      <p>Amare is een van de pioniers op het gebied van gut-brain supplementen. Hun producten zoals <strong>MentaBiotics</strong> en <strong>Happy Juice Pack</strong> zijn speciaal ontwikkeld om deze verbinding te optimaliseren.</p>
+
+      <h2>Veelgestelde vragen</h2>
+      <h3>Zijn supplementen wel nodig als ik gezond eet?</h3>
+      <p>Zelfs met een gezond dieet kan het lastig zijn om alle voedingsstoffen binnen te krijgen die je lichaam nodig heeft. Bodemuitputting, stress en moderne voedselverwerking verminderen de voedingswaarde van ons eten. Supplementen vullen deze gaten aan.</p>
+      <h3>Wat maakt Amare anders dan andere supplementen?</h3>
+      <p>Amare richt zich specifiek op de gut-brain axis met wetenschappelijk onderbouwde formules. Hun producten bevatten gepatenteerde ingrediënten die je niet in de supermarkt vindt.</p>
+      <h3>Is het veilig om dagelijks supplementen te nemen?</h3>
+      <p>Ja, mits je kiest voor hoogwaardige supplementen van betrouwbare merken. Amare producten worden uitgebreid getest op zuiverheid en veiligheid.</p>
+
+      <h2>Conclusie</h2>
+      <p>Je gezondheid is te belangrijk om uitsluitend reactief te benaderen. Of je nu kiest voor de apotheek, de groenteboer of een combinatie van beide — het belangrijkste is dat je bewust investeert in je welzijn. Natuurlijke supplementen kunnen een waardevolle aanvulling zijn op een gezonde levensstijl.</p>
+      <p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl.</em></p>
+    `,
+    image: "/images/blog/apotheek-of-groenteboer-cover.jpg"
   }
 ];
 
@@ -1584,6 +1708,19 @@ const articleProductMap: Record<string, ProductLink[]> = {
   "happy-lifestyle-pack-beste-waarde-bundel-totaal-welzijn": [
     { name: "Happy Juice Pack", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — inbegrepen in de Happy Lifestyle Pack" },
     { name: "HL5", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "5 g vloeibaar collageen — inbegrepen in de bundel" },
+  ],
+  "amare-triangle-of-wellness-ervaringen-waarom-balans-voeding-en-vitaliteit-samenkomen": [
+    { name: "Happy Juice Pack", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — MentaBiotics + Energy+ + EDGE+ in één pakket" },
+    { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — probiotica voor de darm-hersen-as" },
+    { name: "Energy+", url: "/energy", isInternal: true, price: "€55.48/maand", tagline: "Natuurlijke energie zonder cafeïnecrash" },
+  ],
+  "altijd-moe-ontdek-hoe-cel-energie-jouw-energieniveau-bepaalt": [
+    { name: "Energy+", url: "/energy", isInternal: true, price: "€55.48/maand", tagline: "Natuurlijke cafeïne + B-vitamines — energie zonder crash" },
+    { name: "Happy Juice Pack", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — energie, stemming & focus in één pakket" },
+  ],
+  "apotheek-of-groenteboer": [
+    { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — probiotica voor stemming & mentale veerkracht" },
+    { name: "Happy Juice Pack", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — complete gut-brain ondersteuning" },
   ],
 };
 

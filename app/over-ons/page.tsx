@@ -6,7 +6,23 @@ export const metadata: Metadata = {
   title: "Over AmareNL — Onafhankelijke Amare Affiliate Partner | AmareNL",
   description:
     "AmareNL is een onafhankelijke affiliate partner van Amare Global. Wij helpen Nederlanders met natuurlijke supplementen voor mentale wellness, darmgezondheid en vitaliteit.",
-};
+  alternates: { canonical: "/over-ons" },
+  openGraph: {
+    title: "Over AmareNL — Onafhankelijke Amare Affiliate Partner | AmareNL",
+    description: "AmareNL is een onafhankelijke affiliate partner van Amare Global voor natuurlijke supplementen.",
+    url: "/over-ons",
+    type: "website",
+    siteName: "AmareNL",
+    locale: "nl_NL",
+    images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Over AmareNL — Onafhankelijke Amare Affiliate Partner | AmareNL",
+    description: "AmareNL is een onafhankelijke affiliate partner van Amare Global voor natuurlijke supplementen.",
+    images: ["/images/og-default.jpg"],
+  },
+}
 
 const values = [
   {

@@ -7,7 +7,23 @@ export const metadata: Metadata = {
   title: "Mentale Fitness Supplementen — Focus, Energie & Stemming | AmareNL",
   description:
     "Ontdek Amare supplementen voor mentale fitness: Happy Juice Pack, MentaBiotics, EDGE+, Energy+ en meer. Wetenschappelijk onderbouwd, gemaakt met natuurlijke ingrediënten.",
-};
+  alternates: { canonical: "/supplementen" },
+  openGraph: {
+    title: "Mentale Fitness Supplementen — Focus, Energie & Stemming | AmareNL",
+    description: "Ontdek Amare supplementen voor mentale fitness: Happy Juice Pack, MentaBiotics, EDGE+ en meer.",
+    url: "/supplementen",
+    type: "website",
+    siteName: "AmareNL",
+    locale: "nl_NL",
+    images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mentale Fitness Supplementen — Focus, Energie & Stemming | AmareNL",
+    description: "Ontdek Amare supplementen voor mentale fitness: Happy Juice Pack, MentaBiotics, EDGE+ en meer.",
+    images: ["/images/og-default.jpg"],
+  },
+}
 
 const category = {
   slug: "supplementen",

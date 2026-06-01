@@ -7,7 +7,23 @@ export const metadata: Metadata = {
   title: "Schoonheid & Verzorging — Huid, Haar & Collageen | AmareNL",
   description:
     "Ontdek Amare schoonheidsproducten: HL5 collageen, Skin to Mind huidverzorging, Rootist haarverzorging en meer. Wetenschappelijk onderbouwd, natuurlijke ingrediënten.",
-};
+  alternates: { canonical: "/schoonheid" },
+  openGraph: {
+    title: "Schoonheid & Verzorging — Huid, Haar & Collageen | AmareNL",
+    description: "Ontdek Amare schoonheidsproducten: HL5 collageen, Skin to Mind, Rootist en meer.",
+    url: "/schoonheid",
+    type: "website",
+    siteName: "AmareNL",
+    locale: "nl_NL",
+    images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Schoonheid & Verzorging — Huid, Haar & Collageen | AmareNL",
+    description: "Ontdek Amare schoonheidsproducten: HL5 collageen, Skin to Mind, Rootist en meer.",
+    images: ["/images/og-default.jpg"],
+  },
+}
 
 const category = {
   slug: "schoonheid",

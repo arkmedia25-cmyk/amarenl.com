@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import AffiliateCTA from "@/components/ui/AffiliateCTA";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import {
@@ -6,11 +7,27 @@ import {
   combineSchemas,
 } from "@/lib/schema";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Amare Wellness Essentials — Complete Gezondheid Collectie | AmareNL",
   description:
     "Ontdek de Amare Wellness Essentials collectie. Een zorgvuldig samengestelde bundel voor complete gut-brain ondersteuning. Bestel met korting via AmareNL.",
-};
+  alternates: { canonical: "/collections/amare-wellness-essentials-2" },
+  openGraph: {
+    title: "Amare Wellness Essentials — Complete Gezondheid Collectie | AmareNL",
+    description: "Een zorgvuldig samengestelde bundel voor complete gut-brain ondersteuning. Bestel met korting via AmareNL.",
+    url: "/collections/amare-wellness-essentials-2",
+    type: "website",
+    siteName: "AmareNL",
+    locale: "nl_NL",
+    images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Amare Wellness Essentials — Complete Gezondheid Collectie | AmareNL",
+    description: "Een zorgvuldig samengestelde bundel voor complete gut-brain ondersteuning. Bestel met korting via AmareNL.",
+    images: ["/images/og-default.jpg"],
+  },
+}
 
 export default function WellnessEssentials() {
   const schema = combineSchemas(

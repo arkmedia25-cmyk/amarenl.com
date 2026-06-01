@@ -2,8 +2,25 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacybeleid — AmareNL",
-  description: "Privacybeleid van AmareNL. Lees hoe wij omgaan met jouw persoonsgegevens conform de AVG/GDPR.",
-};
+  description:
+    "Privacybeleid van AmareNL. Lees hoe wij omgaan met jouw persoonsgegevens conform de AVG/GDPR.",
+  alternates: { canonical: "/privacy-beleid" },
+  openGraph: {
+    title: "Privacybeleid — AmareNL",
+    description: "Privacybeleid van AmareNL. Lees hoe wij omgaan met jouw persoonsgegevens conform de AVG/GDPR.",
+    url: "/privacy-beleid",
+    type: "website",
+    siteName: "AmareNL",
+    locale: "nl_NL",
+    images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacybeleid — AmareNL",
+    description: "Privacybeleid van AmareNL. Lees hoe wij omgaan met jouw persoonsgegevens conform de AVG/GDPR.",
+    images: ["/images/og-default.jpg"],
+  },
+}
 
 export default function PrivacyBeleid() {
   return (

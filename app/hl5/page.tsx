@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import AffiliateCTA from "@/components/ui/AffiliateCTA";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
@@ -9,11 +10,27 @@ import {
   combineSchemas,
 } from "@/lib/schema";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "HL5 Collageen Kopen — Huid, Haar & Nagels Van Binnenuit | AmareNL",
   description:
     "Amare HL5 met 5 g gehydrolyseerd collageen (Type 1 & 3) per portie — vloeibare formule voor maximale opname. Huid, haar, nagels en gewrichten. Direct van Amare — premium kwaliteit.",
-};
+  alternates: { canonical: "/hl5" },
+  openGraph: {
+    title: "HL5 Collageen Kopen — Huid, Haar & Nagels Van Binnenuit | AmareNL",
+    description: "Amare HL5 met 5 g gehydrolyseerd collageen per portie — vloeibare formule voor maximale opname.",
+    url: "/hl5",
+    type: "website",
+    siteName: "AmareNL",
+    locale: "nl_NL",
+    images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "HL5 Collageen Kopen — Huid, Haar & Nagels Van Binnenuit | AmareNL",
+    description: "Amare HL5 met 5 g gehydrolyseerd collageen per portie — vloeibare formule voor maximale opname.",
+    images: ["/images/og-default.jpg"],
+  },
+}
 
 const faqs = [
   {

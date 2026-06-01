@@ -37,9 +37,28 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const post = getBlogPostBySlug(slug);
   if (!post) return { title: "Niet gevonden | AmareNL" };
+  const url = `https://amarenl.com/blogs/nieuws/${slug}`;
+  const imageUrl = post.image || "/images/og-default.jpg";
   return {
     title: `${post.title} | AmareNL`,
     description: post.excerpt,
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${post.title} | AmareNL`,
+      description: post.excerpt,
+      type: "article",
+      url,
+      images: [{ url: imageUrl, width: 1200, height: 630 }],
+      publishedTime: post.date,
+      siteName: "AmareNL",
+      locale: "nl_NL",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${post.title} | AmareNL`,
+      description: post.excerpt,
+      images: [imageUrl],
+    },
   };
 }
 

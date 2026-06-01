@@ -31,10 +31,39 @@ const nunito = Nunito_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://amarenl.com"),
   title: "AmareNL — Ontdek Natuurlijke Wellness Supplementen",
-  description: "Ontdek de beste natuurlijke supplementen van Amare.",
+  description:
+    "Ontdek de beste natuurlijke supplementen van Amare voor energie, focus, slaap en welzijn. Gratis advies + €8 korting op je eerste bestelling.",
+  alternates: {
+    canonical: "/",
+  },
   verification: {
     google: "Ss_zLWuGuXmzgf5vuuOzoIE4PEAGskWPIlWwuYgloHE",
+  },
+  openGraph: {
+    siteName: "AmareNL",
+    locale: "nl_NL",
+    type: "website",
+    title: "AmareNL — Ontdek Natuurlijke Wellness Supplementen",
+    description:
+      "Ontdek de beste natuurlijke supplementen van Amare voor energie, focus, slaap en welzijn. Gratis advies + €8 korting op je eerste bestelling.",
+    url: "https://amarenl.com",
+    images: [
+      {
+        url: "/images/og-default.jpg",
+        width: 1200,
+        height: 630,
+        alt: "AmareNL — Natuurlijke Wellness Supplementen",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AmareNL — Ontdek Natuurlijke Wellness Supplementen",
+    description:
+      "Ontdek de beste natuurlijke supplementen van Amare voor energie, focus, slaap en welzijn.",
+    images: ["/images/og-default.jpg"],
   },
 };
 

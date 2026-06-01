@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import AffiliateCTA from "@/components/ui/AffiliateCTA";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
@@ -9,11 +10,27 @@ import {
   combineSchemas,
 } from "@/lib/schema";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Happy Juice Pack Kopen — Energie, Stemming & Focus | AmareNL",
   description:
     "Het Happy Juice Pack van Amare is de #1 bundel voor mentale energie, focus en een stabiele stemming. MentaBiotics + Energy+ + EDGE+. Direct van Amare — premium kwaliteit.",
-};
+  alternates: { canonical: "/happy-juice-pack" },
+  openGraph: {
+    title: "Happy Juice Pack Kopen — Energie, Stemming & Focus | AmareNL",
+    description: "Het Happy Juice Pack van Amare is de #1 bundel voor mentale energie, focus en een stabiele stemming.",
+    url: "/happy-juice-pack",
+    type: "website",
+    siteName: "AmareNL",
+    locale: "nl_NL",
+    images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Happy Juice Pack Kopen — Energie, Stemming & Focus | AmareNL",
+    description: "Het Happy Juice Pack van Amare is de #1 bundel voor mentale energie, focus en een stabiele stemming.",
+    images: ["/images/og-default.jpg"],
+  },
+}
 
 const faqs = [
   {

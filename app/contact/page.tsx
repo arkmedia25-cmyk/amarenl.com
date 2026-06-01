@@ -5,7 +5,23 @@ export const metadata: Metadata = {
   title: "Contact & Klantenservice — AmareNL",
   description:
     "Heb je vragen over Amare producten, je bestelling of wil je persoonlijk advies? Neem contact op met AmareNL. Wij helpen je graag verder.",
-};
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact & Klantenservice — AmareNL",
+    description: "Heb je vragen over Amare producten? Neem contact op met AmareNL. Wij helpen je graag verder.",
+    url: "/contact",
+    type: "website",
+    siteName: "AmareNL",
+    locale: "nl_NL",
+    images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact & Klantenservice — AmareNL",
+    description: "Heb je vragen over Amare producten? Neem contact op met AmareNL. Wij helpen je graag verder.",
+    images: ["/images/og-default.jpg"],
+  },
+}
 
 export default function Contact() {
   return (

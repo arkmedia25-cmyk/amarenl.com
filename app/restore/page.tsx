@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import AffiliateCTA from "@/components/ui/AffiliateCTA";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
@@ -9,11 +10,27 @@ import {
   combineSchemas,
 } from "@/lib/schema";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Restore Kopen — Probiotica & Spijsverteringsenzymen | AmareNL",
   description:
     "Amare Restore: 5 probiotische stammen (2 miljard KVE) + 5 enzymen incl. lactase + 9 botanische extracten. Voor darmflora & spijsvertering. Direct van Amare — premium kwaliteit.",
-};
+  alternates: { canonical: "/restore" },
+  openGraph: {
+    title: "Restore Kopen — Probiotica & Spijsverteringsenzymen | AmareNL",
+    description: "Amare Restore: 5 probiotische stammen + 5 enzymen + 9 botanische extracten voor darmflora.",
+    url: "/restore",
+    type: "website",
+    siteName: "AmareNL",
+    locale: "nl_NL",
+    images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Restore Kopen — Probiotica & Spijsverteringsenzymen | AmareNL",
+    description: "Amare Restore: 5 probiotische stammen + 5 enzymen + 9 botanische extracten voor darmflora.",
+    images: ["/images/og-default.jpg"],
+  },
+}
 
 const faqs = [
   {

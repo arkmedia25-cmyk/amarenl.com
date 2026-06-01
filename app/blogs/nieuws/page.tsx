@@ -11,7 +11,23 @@ export const metadata: Metadata = {
   title: "AmareNL Blog — Wellness, Supplementen & Gezondheid",
   description:
     "Ontdek wetenschappelijke inzichten, tips en gidsen over darmgezondheid, mentale wellness, collageen, supplementen en natuurlijke gezondheid.",
-};
+  alternates: { canonical: "/blogs/nieuws" },
+  openGraph: {
+    title: "AmareNL Blog — Wellness, Supplementen & Gezondheid",
+    description: "Ontdek wetenschappelijke inzichten, tips en gidsen over supplementen en natuurlijke gezondheid.",
+    url: "/blogs/nieuws",
+    type: "website",
+    siteName: "AmareNL",
+    locale: "nl_NL",
+    images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AmareNL Blog — Wellness, Supplementen & Gezondheid",
+    description: "Ontdek wetenschappelijke inzichten, tips en gidsen over supplementen en natuurlijke gezondheid.",
+    images: ["/images/og-default.jpg"],
+  },
+}
 
 export default function BlogListingPage() {
   const posts = getAllBlogPosts();
