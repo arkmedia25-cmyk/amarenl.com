@@ -1,6 +1,6 @@
 # AmareNL Article Queue — SEO-GEO-AEO İçerik Planı
-> Laatste update: 2026-06-01
-> Status: 12/12 pipeline ✅ | 3 vergelijkingsartikelen ✅ | Totaal 31 artikelen live
+> Laatste update: 2026-06-07
+> Status: 12/12 pipeline ✅ | 3 vergelijkingsartikelen ✅ | Totaal 34 artikelen live
 > Deploy: Vercel production ✅ — dpl_HGqHa2Lkidyc8PLYRvy7ebGPAVaS
 > Metodoloji: NL search volume × commercial intent × product match × GEO query fan-out
 > Yayın takvimi: 2 günde bir (cron — article-scheduler skill)
@@ -15,8 +15,8 @@
 | # | Makale Başlığı (NL) | Slug | Kategori | Hedef Ürün | Arama* | Status |
 |---|---------------------|------|----------|------------|--------|--------|
 | 1 | Probiotica en Je Stemming | probiotica-stemming-darm-hersen-connectie | darmen | MentaBiotics, Restore | 3.200 | ✅ |
-| 2 | Beste Collageen Supplement 2026 | beste-collageen-supplement-2026-werkt-echt | schoonheid | HL5, NeuCollagen | 2.800 | ⏳ |
-| 3 | Natuurlijk Afvallen Supplementen | natuurlijk-afvallen-supplementen-metabolisme | gewichtsbeheer | FIT20, EDGE+ | 2.400 | ⏳ |
+| 2 | Beste Collageen Supplement 2026 | beste-collageen-supplement-2026-werkt-echt | schoonheid | HL5, NeuCollagen | 2.800 | ✅ |
+| 3 | Natuurlijk Afvallen Supplementen | natuurlijk-afvallen-supplementen-metabolisme | gewichtsbeheer | FIT20, EDGE+ | 2.400 | ✅ |
 | 4 | Supplementen voor Meer Energie | supplementen-meer-energie-zonder-crash-natuurlijk | energie | Energy+, Happy Juice | 2.100 | ✅ |
 
 ### 🟡 TIER 2 — High Volume + Informational Intent
@@ -28,7 +28,7 @@
 | 7 | Omega-3: De Ultieme Gids | omega-3-hersenen-hart-voordelen-supplementen | essentials | Sunset, OmMega | 3.800 | ✅ |
 | 8 | Haaruitval bij Vrouwen | haaruitval-vrouwen-oorzaken-natuurlijke-oplossingen | schoonheid | Rootist, HL5 | 2.600 | 🔄 |
 | 9 | Overgang en Supplementen | overgang-supplementen-menopauze-natuurlijk-ondersteuning | hormonen | Ignite Her, Sunset | 2.300 | 🔄 |
-| 10 | Stress Verminderen met Supplementen | stress-verminderen-supplementen-cortisol-ontspanning | mentaal | MentaBiotics, MentaFocus | 2.100 | ⏳ |
+| 10 | Stress Verminderen met Supplementen | stress-verminderen-supplementen-cortisol-ontspanning | mentaal | MentaBiotics, MentaFocus | 2.100 | ✅ |
 
 ### 🟢 TIER 3 — Medium Volume + Specific Intent
 
@@ -157,10 +157,10 @@ Disclaimer: "* Deze uitspraken zijn niet beoordeeld door de NVWA..."
 
 | TIER | Totaal | ✅ Live | 🔄 Gecovered | ⏳ Open |
 |------|--------|---------|-------------|---------|
-| TIER 1 (High + Commercial) | 4 | 2 | 0 | 2 |
-| TIER 2 (High + Info) | 6 | 2 | 3 | 1 |
+| TIER 1 (High + Commercial) | 4 | 4 | 0 | 0 |
+| TIER 2 (High + Info) | 6 | 3 | 3 | 0 |
 | TIER 3 (Medium) | 5 | 1 | 0 | 4 |
 | TIER 4 (Niche/Seasonal) | 5 | 1 | 1 | 3 |
-| **TOTAAL** | **20** | **6** | **4** | **10** |
+| **TOTAAL** | **20** | **9** | **4** | **7** |
 
-> 10 van 20 originele TIER-artikelen nog te schrijven (6 onderwerpen zijn gecovered door pipeline/vergelijkingsartikelen onder andere slugs).
+> 7 van 20 originele TIER-artikelen nog te schrijven (6 onderwerpen zijn gecovered door pipeline/vergelijkingsartikelen onder andere slugs). TIER 1 volledig ✅
