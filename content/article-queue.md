@@ -8,45 +8,47 @@
 
 ## 📊 Dutch Market Priority Matrix — Mayıs 2026
 
-### 🔴 TIER 1 — High Volume + High Commercial Intent (hemen yazılmalı)
+> **Legenda:** ✅ = gepubliceerd (live) | 🔄 = onderwerp gecovered door gerelateerd artikel | ⏳ = nog te schrijven
 
-| # | Makale Başlığı (NL) | Slug | Kategori | Anahtar Kelime | Hedef Ürün | Tahmini Arama* |
-|---|---------------------|------|----------|----------------|------------|---------------|
-| 1 | Probiotica en Je Stemming: De Complete Gids voor een Gezonde Darm-Hersen Connectie | probiotica-stemming-darm-hersen-connectie | darmen | probiotica mentale gezondheid | MentaBiotics, Restore | 3.200/mo |
-| 2 | Beste Collageen Supplement 2026: Welke Werkt Echt voor Huid, Haar en Gewrichten? | beste-collageen-supplement-2026-werkt-echt | schoonheid | beste collageen supplement 2026 | HL5, NeuCollagen | 2.800/mo |
-| 3 | Natuurlijk Afvallen: Supplementen Die Je Metabolisme Écht Ondersteunen | natuurlijk-afvallen-supplementen-metabolisme | gewichtsbeheer | natuurlijk afvallen supplementen | FIT20, EDGE+ | 2.400/mo |
-| 4 | Altijd Moe? De Beste Supplementen voor Meer Energie Zonder Crash | supplementen-meer-energie-zonder-crash-natuurlijk | energie | supplementen meer energie natuurlijk | Energy+, Happy Juice | 2.100/mo |
+### 🔴 TIER 1 — High Volume + High Commercial Intent
+
+| # | Makale Başlığı (NL) | Slug | Kategori | Hedef Ürün | Arama* | Status |
+|---|---------------------|------|----------|------------|--------|--------|
+| 1 | Probiotica en Je Stemming | probiotica-stemming-darm-hersen-connectie | darmen | MentaBiotics, Restore | 3.200 | ✅ |
+| 2 | Beste Collageen Supplement 2026 | beste-collageen-supplement-2026-werkt-echt | schoonheid | HL5, NeuCollagen | 2.800 | ⏳ |
+| 3 | Natuurlijk Afvallen Supplementen | natuurlijk-afvallen-supplementen-metabolisme | gewichtsbeheer | FIT20, EDGE+ | 2.400 | ⏳ |
+| 4 | Supplementen voor Meer Energie | supplementen-meer-energie-zonder-crash-natuurlijk | energie | Energy+, Happy Juice | 2.100 | ✅ |
 
 ### 🟡 TIER 2 — High Volume + Informational Intent
 
-| # | Makale Başlığı (NL) | Slug | Kategori | Anahtar Kelime | Hedef Ürün | Tahmini Arama* |
-|---|---------------------|------|----------|----------------|------------|---------------|
-| 5 | Vitamine D Tekort in Nederland: Oorzaken, Symptomen en Beste Oplossingen 2026 | vitamine-d-tekort-nederland-oorzaken-oplossingen | essentials | vitamine d tekort nederland | Sunrise, Sunset | 5.100/mo |
-| 6 | Magnesium: Het Essentiële Mineraal voor Slaap, Stress en Spierontspanning | magnesium-slaap-stress-spierontspanning-voordelen | essentials | magnesium supplement voordelen | MentaBiotics, Restore | 4.200/mo |
-| 7 | Omega-3: De Ultieme Gids voor Hersenen, Hart en Ontstekingsremming | omega-3-hersenen-hart-voordelen-supplementen | essentials | omega 3 supplement voordelen | Sunset, OmMega | 3.800/mo |
-| 8 | Haaruitval bij Vrouwen: Oorzaken en Natuurlijke Oplossingen Die Werken | haaruitval-vrouwen-oorzaken-natuurlijke-oplossingen | schoonheid | haaruitval vrouwen supplementen | Rootist, HL5 | 2.600/mo |
-| 9 | Overgang en Supplementen: Natuurlijke Ondersteuning bij Menopauze Klachten | overgang-supplementen-menopauze-natuurlijk-ondersteuning | hormonen | overgang supplementen natuurlijk | Ignite Her, Sunset | 2.300/mo |
-| 10 | Stress Verminderen met Supplementen: Van Cortisol tot Innerlijke Rust | stress-verminderen-supplementen-cortisol-ontspanning | mentaal | stress verminderen supplementen | MentaBiotics, MentaFocus | 2.100/mo |
+| # | Makale Başlığı (NL) | Slug | Kategori | Hedef Ürün | Arama* | Status |
+|---|---------------------|------|----------|------------|--------|--------|
+| 5 | Vitamine D Tekort in Nederland | vitamine-d-tekort-nederland-oorzaken-oplossingen | essentials | Sunrise, Sunset | 5.100 | 🔄 |
+| 6 | Magnesium voor Slaap en Stress | magnesium-slaap-stress-spierontspanning-voordelen | essentials | MentaBiotics, Restore | 4.200 | ✅ |
+| 7 | Omega-3: De Ultieme Gids | omega-3-hersenen-hart-voordelen-supplementen | essentials | Sunset, OmMega | 3.800 | ✅ |
+| 8 | Haaruitval bij Vrouwen | haaruitval-vrouwen-oorzaken-natuurlijke-oplossingen | schoonheid | Rootist, HL5 | 2.600 | 🔄 |
+| 9 | Overgang en Supplementen | overgang-supplementen-menopauze-natuurlijk-ondersteuning | hormonen | Ignite Her, Sunset | 2.300 | 🔄 |
+| 10 | Stress Verminderen met Supplementen | stress-verminderen-supplementen-cortisol-ontspanning | mentaal | MentaBiotics, MentaFocus | 2.100 | ⏳ |
 
-### 🟢 TIER 3 — Medium Volume + Specific Intent / GEO Query Fan-out
+### 🟢 TIER 3 — Medium Volume + Specific Intent
 
-| # | Makale Başlığı (NL) | Slug | Kategori | Anahtar Kelime | Hedef Ürün | Tahmini Arama* |
-|---|---------------------|------|----------|----------------|------------|---------------|
-| 11 | De Gut-Brain Connectie: Hoe Je Darmen Je Stemming en Mentale Gezondheid Bepalen | gut-brain-connectie-darmen-stemming-mentaal | darmen | gut brain as darmen stemming | MentaBiotics, Happy Juice | 2.000/mo |
-| 12 | Adaptogenen: De Complete Gids voor Natuurlijke Stressverlichting (Ashwagandha, Rhodiola & Co) | adaptogenen-natuurlijke-stressverlichting-ashwagandha-rhodiola | mentaal | adaptogenen supplementen | MentaFocus, EDGE+ | 1.800/mo |
-| 13 | Beste Eiwitpoeder 2026: Plantaardig vs Wei — Wat Past Bij Jouw Doelen? | beste-eiwitpoeder-2026-plantaardig-wei-vergelijking | essentials | beste eiwitpoeder 2026 | Origin, FIT20 | 1.600/mo |
-| 14 | Collageen Peptiden: Werkt Het Echt? Wetenschap, Resultaten en Beste Keuzes | collageen-peptiden-werkt-echt-wetenschap-resultaten | schoonheid | collageen peptiden voordelen | HL5, NeuCollagen | 1.400/mo |
-| 15 | Huidverzorging van Binnenuit: De Beste Supplementen voor een Stralende Huid | huidverzorging-van-binnenuit-supplementen-stralende-huid | schoonheid | huidverzorging van binnenuit supplementen | Skin to Mind, HL5 | 1.300/mo |
+| # | Makale Başlığı (NL) | Slug | Kategori | Hedef Ürün | Arama* | Status |
+|---|---------------------|------|----------|------------|--------|--------|
+| 11 | De Gut-Brain Connectie | gut-brain-connectie-darmen-stemming-mentaal | darmen | MentaBiotics, Happy Juice | 2.000 | ✅ |
+| 12 | Adaptogenen: De Complete Gids | adaptogenen-natuurlijke-stressverlichting-ashwagandha-rhodiola | mentaal | MentaFocus, EDGE+ | 1.800 | ⏳ |
+| 13 | Beste Eiwitpoeder 2026 | beste-eiwitpoeder-2026-plantaardig-wei-vergelijking | essentials | Origin, FIT20 | 1.600 | ⏳ |
+| 14 | Collageen Peptiden: Werkt Het Echt? | collageen-peptiden-werkt-echt-wetenschap-resultaten | schoonheid | HL5, NeuCollagen | 1.400 | ⏳ |
+| 15 | Huidverzorging van Binnenuit | huidverzorging-van-binnenuit-supplementen-stralende-huid | schoonheid | Skin to Mind, HL5 | 1.300 | ⏳ |
 
 ### 🔵 TIER 4 — Emerging Niches / Seasonal
 
-| # | Makale Başlığı (NL) | Slug | Kategori | Anahtar Kelime | Hedef Ürün | Tahmini Arama* |
-|---|---------------------|------|----------|----------------|------------|---------------|
-| 16 | Cortisol Verlagen: Natuurlijke Manieren om Je Stresshormoon in Balans te Krijgen | cortisol-verlagen-natuurlijk-stresshormoon-balans | hormonen | cortisol verlagen natuurlijk | MentaBiotics, Ignite | 1.200/mo |
-| 17 | Beter Slapen Zonder Medicatie: Supplementen voor een Diepe, Herstellende Nachtrust | beter-slapen-zonder-medicatie-supplementen-nachtrust | wellness | beter slapen supplementen natuurlijk | Sleep+, Sunset | 1.100/mo |
-| 18 | Hormoonbalans Vrouw: Supplementen voor Elke Levensfase (20, 35, 50+) | hormoonbalans-vrouw-supplementen-levensfase | hormonen | hormoonbalans vrouw supplementen | Ignite Her, Sunset | 950/mo |
-| 19 | Wat Zijn Prebiotica vs Probiotica? Het Complete Verschil Uitgelegd | prebiotica-probiotica-verschil-darmen-uitleg | darmen | prebiotica probiotica verschil | MentaBiotics, SeedFiber | 900/mo |
-| 20 | Kids en Supplementen: Wat Heeft Jouw Kind Écht Nodig voor Groei en Focus? | kids-supplementen-nodig-groei-focus-school | kids | kids supplementen vitamines | Kids VitaGBX, Kids Mood+ | 700/mo |
+| # | Makale Başlığı (NL) | Slug | Kategori | Hedef Ürün | Arama* | Status |
+|---|---------------------|------|----------|------------|--------|--------|
+| 16 | Cortisol Verlagen | cortisol-verlagen-natuurlijk-stresshormoon-balans | hormonen | MentaBiotics, Ignite | 1.200 | ⏳ |
+| 17 | Beter Slapen Zonder Medicatie | beter-slapen-zonder-medicatie-supplementen-nachtrust | wellness | Sleep+, Sunset | 1.100 | ⏳ |
+| 18 | Hormoonbalans Vrouw | hormoonbalans-vrouw-supplementen-levensfase | hormonen | Ignite Her, Sunset | 950 | ✅ |
+| 19 | Prebiotica vs Probiotica | prebiotica-probiotica-verschil-darmen-uitleg | darmen | MentaBiotics, SeedFiber | 900 | 🔄 |
+| 20 | Kids en Supplementen | kids-supplementen-nodig-groei-focus-school | kids | Kids VitaGBX, Kids Mood+ | 700 | ⏳ |
 
 > *Tahmini aylık NL arama hacmi (Google Ads + Trends verisine dayalı)
 
@@ -87,29 +89,21 @@
 
 ---
 
-## 🔑 Anahtar Kelime → Ürün Eşleştirme Matrisi
+## 🔑 Anahtar Kelime → Ürün Eşleştirme Matrisi (Güncel — Live Artikelen)
 
-| Ürün | Birincil Keyword (NL) | İkincil Keyword'ler | Makale # |
-|------|----------------------|--------------------|----------|
-| **MentaBiotics** | probiotica stemming | darm hersenen connectie, stress probiotica | #1, #11, #19 |
-| **Happy Juice Pack** | energie supplement natuurlijk | focus supplement, gut brain | #4, #11 |
-| **Energy+** | meer energie supplement | natuurlijke energie booster, moeheid | #4 |
-| **HL5** | collageen supplement | collageen peptide, haar huid nagels | #2, #14, #15 |
-| **NeuCollagen** | beste collageen 2026 | collageen anti-aging, 6d collageen | #2, #14 |
-| **FIT20** | eiwitpoeder afvallen | spierherstel, metabolisme | #3, #13 |
-| **Origin** | vegan eiwitpoeder | plantaardig eiwit, meal replacement | #13 |
-| **Restore** | probiotica darmen | darmflora herstellen, spijsvertering | #1, #6 |
-| **Sunrise** | vitamine d supplement | vitamine c natuurlijk, dagelijkse vitamines | #5 |
-| **Sunset** | omega 3 supplement | vitamine e, nachtrust, ontstekingsremming | #7, #9, #17, #18 |
-| **Sleep+** | beter slapen supplement | natuurlijk slaapmiddel, melatonine vrij | #17 |
-| **MentaFocus** | focus supplement | concentratie verbeteren, adaptogenen | #10, #12 |
-| **Amare EDGE+** | metabolisme versnellen | focus energie, nootropicum natuurlijk | #3, #12 |
-| **Ignite Her** | overgang supplement | hormoonbalans vrouw, menopauze natuurlijk | #9, #16, #18 |
-| **Kids VitaGBX** | kids vitamines | kinderen supplementen, weerstand kind | #20 |
-| **Kids Mood+** | kinderen focus | school concentratie, kids supplement | #20 |
-| **Rootist** | haaruitval supplement | haarverzorging natuurlijk, dunner wordend haar | #8 |
-| **Skin to Mind** | huidverzorging supplement | huid van binnenuit, gut-skin axis | #15 |
-| **OmMega** | omega-3 visolie | hartgezondheid, ontstekingsremmend | #7 |
+| Ürün | Gepubliceerde Artikelen (slug) |
+|------|-------------------------------|
+| **MentaBiotics** | beste-probiotica-2026-kopen-vergelijken, probiotica-stemming-darm-hersen-connectie-mentabiotics, probiotica-prebiotica-mentabiotics-vergelijken, darmflora-verbeteren-herstel-spijsvertering-natuurlijk |
+| **Happy Juice Pack** | gut-brain-connectie-darmen-stemming-mentaal, happy-juice-pack-vs-losse-supplementen-vergelijken, supplementen-voor-meer-energie-dit-werkt-echt |
+| **Energy+** | supplementen-voor-meer-energie-dit-werkt-echt, happy-juice-pack-vs-losse-supplementen-vergelijken, altijd-moe-ontdek-hoe-cel-energie-jouw-energieniveau-bepaalt |
+| **HL5** | collageen-supplement-kopen-waar-op-letten, collageen-hl5-vs-supermarkt-vergelijken, haaruitval-supplement-vrouwen-oorzaken-oplossingen |
+| **Ignite for HER** | hormoonbalans-supplement-vrouwen-levensfase-ondersteuning, menopauze-supplement-natuurlijke-ondersteuning-overgang |
+| **Restore** | darmflora-verbeteren-herstel-spijsvertering-natuurlijk, probiotica-prebiotica-mentabiotics-vergelijken |
+| **EDGE+** | ashwagandha-kopen-nederland-adaptogeen-supplement, focus-supplement-natuurlijke-nootropics-concentratie, happy-juice-pack-vs-losse-supplementen-vergelijken |
+| **Sunrise** | vitamine-d-tekort-symptomen, supplement-routine-ochtend-timing-schema |
+| **Sunset** | adaptogenen-stress-supplement-nederland, omega-3-hersenen-supplement-nederland |
+| **Origin** | plantaardige-proteine-shake-kopen-vergelijken |
+| **Triangle of Wellness** | supplement-routine-ochtend-timing-schema |
 
 ---
 
@@ -156,3 +150,17 @@ Disclaimer: "* Deze uitspraken zijn niet beoordeeld door de NVWA..."
 | kids | — | — | 1 | 1 |
 | Lifestyle & Wellness | — | — | 2 | 2 |
 | **TOPLAM** | **12** | **3** | **16** | **31** |
+
+---
+
+## 📈 TIER Voortgang
+
+| TIER | Totaal | ✅ Live | 🔄 Gecovered | ⏳ Open |
+|------|--------|---------|-------------|---------|
+| TIER 1 (High + Commercial) | 4 | 2 | 0 | 2 |
+| TIER 2 (High + Info) | 6 | 2 | 3 | 1 |
+| TIER 3 (Medium) | 5 | 1 | 0 | 4 |
+| TIER 4 (Niche/Seasonal) | 5 | 1 | 1 | 3 |
+| **TOTAAL** | **20** | **6** | **4** | **10** |
+
+> 10 van 20 originele TIER-artikelen nog te schrijven (6 onderwerpen zijn gecovered door pipeline/vergelijkingsartikelen onder andere slugs).
