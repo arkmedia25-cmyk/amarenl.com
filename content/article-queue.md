@@ -1,5 +1,6 @@
 # AmareNL Article Queue — SEO-GEO-AEO İçerik Planı
-> Laatste update: 2026-05-18
+> Laatste update: 2026-06-01
+> Status: 12/12 pipeline ✅ | 3 vergelijkingsartikelen ✅ | Totaal 31 artikelen live
 > Metodoloji: NL search volume × commercial intent × product match × GEO query fan-out
 > Yayın takvimi: 2 günde bir (cron — article-scheduler skill)
 > Bron: amarenl-agent-keywords.md (12 artikelen)
@@ -67,10 +68,21 @@
 | Wo 4 jun | 9 | darmflora verbeteren | Restore | ✅ |
 | Vr 6 jun | 10 | supplement routine ochtend | Triangle of Wellness | ✅ |
 | Zo 8 jun | 11 | plantaardige proteïne shake kopen | Origin | ✅ |
-| Di 10 jun | 12 | menopauze supplement | Ignite for HER | - [ ] |
+| Di 10 jun | 12 | menopauze supplement | Ignite for HER | ✅ |
 
 > ⏰ Cron: her 2 günde bir saat 9:57'de yeni makale yayınlanır.
 > Her makale 1200+ kelime, SEO-GEO optimize, ilgili ürüne AffiliateCTA linki içerir.
+> **12/12 pipeline voltooid — 10 juni 2026** 🎉
+
+---
+
+## 🆕 Bonus: 3 Vergelijkingsartikelen (Juni 2026)
+
+| # | Titel | Slug | Categorie | Product | Datum | Status |
+|---|-------|------|-----------|---------|-------|--------|
+| B1 | Collageen HL5 vs Supermarkt Collageen: Wat is het Verschil? | collageen-hl5-vs-supermarkt-vergelijken | schoonheid | HL5 | 12 jun | ✅ |
+| B2 | Happy Juice Pack vs Losse Supplementen: Wat is Voordeliger? | happy-juice-pack-vs-losse-supplementen-vergelijken | mentaal | Happy Juice Pack | 14 jun | ✅ |
+| B3 | Probiotica vs Prebiotica vs MentaBiotics: De Complete Vergelijking | probiotica-prebiotica-mentabiotics-vergelijken | darmen | MentaBiotics, Restore | 16 jun | ✅ |
 
 ---
 
@@ -130,15 +142,16 @@ Disclaimer: "* Deze uitspraken zijn niet beoordeeld door de NVWA..."
 - ✅ Her makale EN AZ 2 farklı Amare ürününe iç link içermeli
 - ✅ JSON-LD Article + FAQ schema otomatik eklenecek
 
-## 📊 Kategori Dağılımı
+## 📊 Kategori Dağılımı (Güncel — 31 artikelen live)
 
-| Kategori | Planlanan | Yayınlanan | Kalan |
-|----------|-----------|------------|-------|
-| darmen (Gut Health) | 4 | 1 | 3 |
-| schoonheid (Beauty) | 4 | 0 | 4 |
-| essentials (Vitamines) | 4 | 0 | 4 |
-| mentaal (Mental Wellness) | 3 | 0 | 3 |
-| hormonen (Hormones) | 3 | 0 | 3 |
-| energie (Energy) | 1 | 0 | 1 |
-| kids | 1 | 0 | 1 |
-| **TOPLAM** | **20** | **1** | **19** |
+| Kategori | Pipeline | Vergelijking | Origineel | Totaal Live |
+|----------|----------|-------------|-----------|-------------|
+| darmen (Gut Health) | 3 | 1 | 3 | 7 |
+| schoonheid (Beauty) | 3 | 1 | 2 | 6 |
+| essentials (Vitamines) | 2 | — | 4 | 6 |
+| mentaal (Mental Wellness) | 2 | 1 | 2 | 5 |
+| hormonen (Hormones) | 2 | — | 1 | 3 |
+| energie (Energy) | — | — | 1 | 1 |
+| kids | — | — | 1 | 1 |
+| Lifestyle & Wellness | — | — | 2 | 2 |
+| **TOPLAM** | **12** | **3** | **16** | **31** |
