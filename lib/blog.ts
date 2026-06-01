@@ -198,6 +198,55 @@ export const blogPosts: BlogPost[] = [
     image: "/images/blog/probiotica-prebiotica-mentabiotics.jpg"
   },
   {
+    slug: "menopauze-supplement-natuurlijke-ondersteuning-overgang",
+    title: "Menopauze Supplement: Natuurlijke Ondersteuning bij Overgangsklachten",
+    date: "2026-06-10",
+    category: "hormonen",
+    excerpt: "De overgang is geen ziekte, maar de klachten zijn reëel. Ontdek welke natuurlijke supplementen — van magnesium tot adaptogenen — je lichaam ondersteunen tijdens de menopauze, zonder hormonen.",
+    content: `
+      <h2>Wat gebeurt er in je lichaam tijdens de menopauze?</h2>
+      <p>De menopauze — of overgang — is de fase waarin je eierstokken geleidelijk stoppen met de productie van oestrogeen en progesteron. Het is een natuurlijk biologisch proces, geen aandoening. Maar de hormonale verschuiving die ermee gepaard gaat, kan behoorlijk wat klachten geven: opvliegers, nachtzweten, stemmingswisselingen, vermoeidheid, brain fog, gewrichtspijn, en een veranderde vetverdeling.</p>
+      <p>De cijfers: 80% van de vrouwen ervaart overgangsklachten, variërend van mild tot ernstig. De gemiddelde leeftijd van de laatste menstruatie is 51 jaar, maar de perimenopauze — de aanloopfase waarin klachten vaak al beginnen — kan al vanaf 40 jaar intreden en 4 tot 10 jaar duren. Dat betekent dat je lichaam potentieel een decennium in een hormonale transitie zit.</p>
+      <p>De standaard medische benadering is hormoontherapie (HST). Maar niet elke vrouw wil of kan hormonen gebruiken — en er is groeiende interesse in natuurlijke ondersteuning. Supplementen kunnen de overgang niet "genezen" (het is immers geen ziekte), maar ze kunnen je lichaam wél ondersteunen bij de specifieke uitdagingen van deze fase: vermoeidheid, stemmingsdaling, botgezondheid, en stressbestendigheid.</p>
+      <h2>Welke nutriënten en kruiden ondersteunen de overgang?</h2>
+      <p><strong>Magnesium — het mineraal dat bijna elke overgangsklacht raakt.</strong> Magnesium speelt een rol in meer dan 300 enzymatische reacties in je lichaam, waaronder spierontspanning, zenuwfunctie, slaapkwaliteit en energieproductie. Tijdens de menopauze daalt de magnesiumopname in de darmen — terwijl de behoefte gelijk blijft of stijgt door toegenomen stress en nachtelijk zweten (waarbij je mineralen verliest). Een magnesiumsupplement kan helpen bij vermoeidheid, spierkrampen, onrustige benen en slaapproblemen — vier klachten die vaak samen gaan in de overgang.</p>
+      <p><strong>Omega-3 — ontstekingsremmend en stemmingsondersteunend.</strong> De daling van oestrogeen heeft een pro-inflammatoir effect: laaggradige ontsteking neemt toe, wat gewrichtspijn, huidveroudering en stemmingsdaling kan verergeren. Omega-3 vetzuren (EPA en DHA) zijn de best onderzochte natuurlijke ontstekingsremmers. Daarnaast ondersteunt DHA de hersenfunctie — relevant omdat veel vrouwen melding maken van "brain fog" en concentratieproblemen in de overgang.</p>
+      <p><strong>Vitamine D3 + K2 — voor je botten en immuunsysteem.</strong> Oestrogeen beschermt je botdichtheid; als het daalt, neemt het risico op osteoporose toe. Vitamine D3 verbetert de calciumopname, en K2 stuurt dat calcium naar je botten in plaats van je bloedvaten. Deze combinatie is essentieel voor vrouwen vanaf 40 — niet alleen voor botten, maar ook voor het immuunsysteem, dat eveneens door de menopauze wordt beïnvloed.</p>
+      <p><strong>Adaptogenen — voor stressbestendigheid en hormonale balans.</strong> Adaptogenen zijn plantaardige stoffen die je lichaam helpen zich aan te passen aan stress — fysiek, chemisch of biologisch. Ashwagandha, rhodiola en schisandra zijn de bekendste. Tijdens de menopauze nemen je bijnieren een deel van de oestrogeenproductie over — maar als je bijnieren uitgeput zijn door chronische stress, kunnen ze die taak niet aan. Adaptogenen ondersteunen de bijnierfunctie en helpen je stressrespons te reguleren, wat indirect je hormonale balans ten goede komt.</p>
+      <p><strong>Shatavari en fenegriek — Ayurvedische kruiden met een lange traditie.</strong> Shatavari (Asparagus racemosus) wordt in de Ayurveda al duizenden jaren gebruikt voor vrouwelijk welzijn — de naam betekent letterlijk "zij die honderd echtgenoten kan hebben", een verwijzing naar vitaliteit en levenskracht. Fenegriek staat bekend om zijn ondersteuning van de vrouwelijke balans. Beide zijn adaptogeen-achtig: ze helpen je lichaam zich aan te passen, zonder zelf hormonen te bevatten.</p>
+      <h2>Ignite for HER — specifiek samengesteld voor deze levensfase</h2>
+      <p><strong>Amare Ignite for HER</strong> combineert de belangrijkste van bovenstaande nutriënten in één formule. De kern is een synergetische blend van:</p>
+      <ul>
+      <li><strong>Neuravena® (wilde groene haver, 300 mg)</strong> — een gepatenteerd extract dat cognitieve functie en mentale helderheid ondersteunt, direct relevant voor de "brain fog" die veel vrouwen in de overgang ervaren.</li>
+      <li><strong>Shatavari 5:1 extract (40 mg = 200 mg kruidenequivalent)</strong> — voor traditionele vrouwelijke balans.</li>
+      <li><strong>Fenegriekzaad 6:1 extract (25 mg = 150 mg kruidenequivalent)</strong> — complementair aan shatavari voor algeheel vrouwelijk welzijn.</li>
+      <li><strong>Magnesium (60 mg, 16% RI)</strong> — ter ondersteuning van vermindering van vermoeidheid en normale spierfunctie.</li>
+      <li><strong>Bamboe-extract met silica (20 mg)</strong> — voor huid, haar en nagels — weefsels die tijdens de menopauze verandering ondergaan door de daling van collageen en oestrogeen.</li>
+      <li><strong>Citroenmelisse</strong> — voor natuurlijke ontspanning en kalmering van het zenuwstelsel.</li>
+      </ul>
+      <p>De dosering is 2 capsules per dag met water. De formule is vegan, bevat geen hormonen, en is geschikt vanaf 12 jaar — al is de primaire doelgroep vrouwen in de perimenopauze en menopauze. De eerste effecten zijn doorgaans merkbaar na 3 tot 4 weken consistent gebruik: subtiele verbetering in energieniveau, mentale helderheid en stressbestendigheid.</p>
+      <h2>Combineren met andere supplementen voor optimaal resultaat</h2>
+      <p>Eén supplement is zelden het hele antwoord — het lichaam is een systeem, en de menopauze raakt meerdere systemen tegelijk. Twee combinaties die elkaar goed aanvullen:</p>
+      <p><strong>Ignite for HER + Sunset — de dagelijkse aanpak voor overgang en slaap.</strong> Sunset combineert omega-3 (EPA/DHA) met vitamine D3, K2 en magnesium in een vetbasis — ideaal voor de avond. Waar Ignite for HER zich richt op vrouwelijk welzijn overdag (energie, mentale helderheid, adaptogenen), ondersteunt Sunset de slaapkwaliteit, botgezondheid en ontstekingsbalans 's nachts. Voor vrouwen in de overgang is dit een bijzonder doordachte combinatie: de omega-3 in Sunset helpt bij de laaggradige ontsteking die door oestrogeendaling toeneemt, en de magnesium + D3 + K2 combinatie ondersteunt precies de systemen die in de overgang onder druk staan.</p>
+      <p><strong>Ignite for HER + HL5 — de schoonheidsroute.</strong> HL5 levert 5 gram gehydrolyseerd collageen Type 1&3 per dag. Tijdens de menopauze daalt de lichaamseigen collageenaanmaak met ongeveer 30% in de eerste 5 jaar na de menopauze — dit verklaart de versnelde huidveroudering, dunnere haren en brozere nagels die veel vrouwen rapporteren. Ignite for HER ondersteunt het systeem, HL5 levert de bouwstenen — samen dekkend ze de twee kanten van menopauzegerelateerde schoonheidsveranderingen.</p>
+      <h2>Veelgestelde vragen</h2>
+      <p><strong>Bevat Ignite for HER hormonen?</strong></p>
+      <p>Nee. Ignite for HER bevat geen hormonen. De formule gebruikt plantaardige extracten zoals shatavari en fenegriek, adaptogenen, en magnesium om het vrouwelijk lichaam te ondersteunen tijdens hormonale transitie — zonder zelf hormonen toe te voegen. Dit maakt het geschikt voor vrouwen die geen hormoontherapie willen of kunnen gebruiken.</p>
+      <p><strong>Vanaf welke leeftijd heeft een menopauze supplement zin?</strong></p>
+      <p>De perimenopauze kan al vanaf 40 jaar beginnen. Supplementen die botgezondheid, stressbestendigheid en energie ondersteunen, hebben al zin in deze aanloopfase — niet pas na de laatste menstruatie. Vitamine D3, omega-3 en magnesium zijn voor vrijwel elke vrouw boven de 40 relevant, ongeacht of er al duidelijke overgangsklachten zijn.</p>
+      <p><strong>Kan ik Ignite for HER combineren met mijn bestaande supplementen?</strong></p>
+      <p>Ja, Ignite for HER combineert goed met de meeste supplementen. Let op de totale magnesiuminname als je al een apart magnesiumsupplement neemt (Ignite for HER bevat 60 mg per 2 capsules). De combinatie met Sunset of HL5 is veilig en synergetisch. Raadpleeg bij twijfel of bij gebruik van medicatie altijd een arts.</p>
+      <p><strong>Hoe snel werken supplementen bij overgangsklachten?</strong></p>
+      <p>Supplementen zijn geen quick fix. Adaptogenen en kruiden zoals shatavari hebben 3 tot 4 weken consistent gebruik nodig voordat je subtiele verbetering merkt in energieniveau en stressbestendigheid. Voor magnesium is het effect op spierontspanning en slaap vaak sneller merkbaar — binnen 1 tot 2 weken. Wees geduldig en houd een eenvoudig dagboek bij: noteer je energieniveau, opvliegers, stemming en slaapkwaliteit op een schaal van 1 tot 5, en bekijk na 4 tot 6 weken het patroon.</p>
+      <h2>Conclusie</h2>
+      <p>De menopauze is een natuurlijke transitie, geen aandoening die "behandeld" moet worden. Maar de klachten die ermee gepaard gaan — opvliegers, vermoeidheid, stemmingsdaling, brain fog, gewrichtspijn — zijn reëel en kunnen je kwaliteit van leven significant beïnvloeden.</p>
+      <p>Supplementen bieden een natuurlijke ondersteuningsroute, naast voeding en leefstijl. Magnesium voor vermoeidheid en slaap, omega-3 voor ontstekingsbalans en stemming, vitamine D3 + K2 voor botgezondheid, en adaptogenen + Ayurvedische kruiden voor stressbestendigheid en hormonale balans — samen vormen ze een compleet pakket dat je lichaam ondersteunt tijdens deze transitie.</p>
+      <p><strong>Amare Ignite for HER</strong> bundelt de kern van deze nutriënten in één dagelijkse formule: Neuravena® wilde groene haver voor cognitie, shatavari en fenegriek voor vrouwelijk welzijn, magnesium en silica voor vermoeidheid en huid — vegan, zonder hormonen, specifiek samengesteld voor de vrouwelijke levensfasen. Voor een complete aanpak combineer je het met Sunset (omega-3 + D3 + K2 voor slaap en botten) en/of HL5 (collageen voor huid, haar en nagels).</p>
+      <p>*Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij aanhoudende overgangsklachten altijd een arts — supplementen zijn een aanvulling op, geen vervanging van, medisch advies.*</p>
+    `,
+    image: "/images/blog/menopauze-supplement-overgang.jpg"
+  },
+  {
     slug: "plantaardige-proteine-shake-kopen-vergelijken",
     title: "Plantaardige Proteïne Shake Kopen: De Complete Gids voor 2026",
     date: "2026-06-08",
@@ -1741,6 +1790,11 @@ interface ProductLink {
 const AFFILIATE_BASE = "https://www.amare.com/2075008/nl-nl";
 
 const articleProductMap: Record<string, ProductLink[]> = {
+  "menopauze-supplement-natuurlijke-ondersteuning-overgang": [
+    { name: "Ignite for HER", url: `${AFFILIATE_BASE}/ignite-for-her`, isInternal: false, price: "€49.50/maand", tagline: "Adaptogenen + shatavari + magnesium — natuurlijke ondersteuning bij de overgang" },
+    { name: "Amare Ignite for HER", url: `${AFFILIATE_BASE}/ignite-for-her`, isInternal: false, price: "€49.50/maand", tagline: "Neuravena® + shatavari + fenegriek — vrouwelijk welzijn zonder hormonen" },
+    { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Omega-3 + D3 + K2 + magnesium — slaap, botten & ontstekingsbalans" },
+  ],
   "probiotica-prebiotica-mentabiotics-vergelijken": [
     { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — psychobioticum voor de darm-hersen-as" },
     { name: "Restore", url: "/restore", isInternal: true, price: "€29.70/maand", tagline: "5 probiotica stammen + 5 spijsverteringsenzymen" },
