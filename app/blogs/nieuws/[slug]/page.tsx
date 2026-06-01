@@ -7,6 +7,8 @@ import {
   generateArticleSchema,
   generateFAQSchema,
   generateBreadcrumbSchema,
+  generateSpeakableSchema,
+  generatePersonSchema,
   combineSchemas,
 } from "@/lib/schema";
 
@@ -83,9 +85,18 @@ export default async function BlogPostPage({ params }: Props) {
     { name: "Blog", url: "https://amarenl.com/blogs/nieuws" },
     { name: post.title, url: `https://amarenl.com/blogs/nieuws/${post.slug}` },
   ]);
+  // Extract H2 headings for speakable sections
+  const h2Regex = /<h2>(.+?)<\/h2>/g;
+  const headings: string[] = [];
+  let hm: RegExpExecArray | null;
+  while ((hm = h2Regex.exec(post.content)) !== null) {
+    headings.push(hm[1].replace(/<[^>]*>/g, "").trim());
+  }
+  const speakableSchema = generateSpeakableSchema(post.slug, headings.slice(0, 3));
+  const personSchema = generatePersonSchema();
   const combinedSchema = faqItems.length
-    ? combineSchemas(articleSchema, generateFAQSchema(faqItems), breadcrumbSchema)
-    : combineSchemas(articleSchema, breadcrumbSchema);
+    ? combineSchemas(articleSchema, generateFAQSchema(faqItems), breadcrumbSchema, speakableSchema, personSchema)
+    : combineSchemas(articleSchema, breadcrumbSchema, speakableSchema, personSchema);
 
   return (
     <>

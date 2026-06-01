@@ -14,6 +14,190 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "collageen-hl5-vs-supermarkt-vergelijken",
+    title: "Collageen HL5 vs Supermarkt Collageen: Wat is het Verschil?",
+    date: "2026-06-12",
+    category: "schoonheid",
+    excerpt: "Supermarktcollageen kost een fractie van HL5. Maar je krijgt ook een fractie van de werkzaamheid. Ontdek waarom opneembaarheid, type collageen en dosering het verschil maken tussen resultaat en geldverspilling.",
+    content: `
+      <h2>Collageen is niet zomaar collageen</h2>
+      <p>Loop je door het supplementenschap van de supermarkt of drogist, dan vind je collageenpoeders voor €12 tot €25 per pot. Amare HL5 kost aanzienlijk meer. De logische vraag: is dat verschil het waard, of betaal je voor een mooie verpakking en marketing?</p>
+      <p>Het korte antwoord: collageen is geen commodity zoals suiker of zout — waarbij elk merk hetzelfde is. De verschillen tussen een supermarkt collageen en een klinisch geformuleerd collageen zoals HL5 zitten in vier factoren: het <strong>type collageen</strong>, de <strong>vorm</strong>, de <strong>dosering</strong>, en de <strong>biobeschikbaarheid</strong>. Als je deze factoren naast elkaar legt, wordt snel duidelijk waarom het prijsverschil bestaat — en waarom goedkoop collageen vaak duurkoop is.</p>
+      <p>In dit artikel vergelijk je HL5 van Amare met de drie populairste supermarkt- en drogisterijcollagenen van 2026, op basis van feitelijke productspecificaties — zodat je zelf kunt beoordelen of het prijsverschil gerechtvaardigd is.</p>
+      <h2>De vier factoren die collageen-kwaliteit bepalen</h2>
+      <h3>1. Type collageen — niet alle collagenen doen hetzelfde</h3>
+      <p>Je lichaam bevat minstens 16 verschillende typen collageen, maar voor huid, haar en nagels zijn Type 1 en Type 3 de belangrijkste. Type 1 vormt het structurele netwerk van je huid (ongeveer 90% van je huidcollageen); Type 3 ondersteunt de elasticiteit en komt veel voor naast Type 1.</p>
+      <p>De meeste supermarktcollagenen specificeren niet wélk type collageen erin zit — of ze noemen vaag "rundercollageen". HL5 specificeert exact: 5 gram gehydrolyseerd collageen Type 1 & 3 per portie, afkomstig van grasgevoerde runderen.</p>
+      <p>Waarom grasgevoerd? Omdat het vetzuurprofiel van het dier de kwaliteit van het collageen beïnvloedt — grasgevoerd vlees bevat meer omega-3 en minder ontstekingsbevorderende omega-6. Voor een product dat je dagelijks gebruikt, maakt de herkomst uit.</p>
+      <h3>2. Vloeibaar vs poeder — opneembaarheid is alles</h3>
+      <p>Dit is het grootste verschil en de minst besprokene. Collageenpoeders — zoals die in de supermarkt — moeten eerst door je maagzuur worden afgebroken tot peptiden. Dit proces is inefficiënt: een deel van het collageen overleeft de maag niet, een ander deel wordt te groot afgebroken om door de darmwand te worden opgenomen.</p>
+      <p>HL5 is een <strong>vloeibare formule</strong> met gehydrolyseerde collageenpeptiden. Hydrolyse betekent dat het collageen al is voorverteerd in kleinere peptiden — specifiek di- en tripeptiden — die direct door de darmwand kunnen worden opgenomen zonder verdere vertering. Dit is geen marketingterm; het is biochemie. Gehydrolyseerd collageen heeft een aangetoonde hogere biobeschikbaarheid dan niet-gehydrolyseerd collageenpoeder.</p>
+      <h3>3. Dosering — 5 gram is niet 5 gram</h3>
+      <p>De meeste supermarktcollagenen adviseren 10 tot 20 gram poeder per dag. Dat klinkt als meer voor minder geld. Maar een poeder met 20 gram niet-gehydrolyseerd collageen waarvan je lichaam slechts een fractie opneemt, levert mogelijk minder bruikbaar collageen dan 5 gram gehydrolyseerd collageen dat volledig wordt opgenomen.</p>
+      <p>HL5's dosering van 5 gram is gebaseerd op klinische studies naar de minimale effectieve dosis gehydrolyseerd collageen voor huidelasticiteit en hydratatie. Meer is niet altijd beter — het gaat om wat je cellen bereikt.</p>
+      <h3>4. Toegevoegde ingrediënten — vulstoffen of synergie?</h3>
+      <p>Supermarktcollageen bevat vaak maltodextrine (een goedkope vulstof), kunstmatige zoetstoffen en antiklontermiddelen. HL5 heeft een schone ingrediëntenlijst — naast het collageen alleen natuurlijke smaakstoffen (Berry of Peach) en stevia. Geen vulstoffen, geen kunstmatige toevoegingen. Dit is relevant omdat je een supplement dagelijks neemt — wat je erbij binnenkrijgt telt op.</p>
+      <h2>Prijsvergelijking per gram — de échte rekensom</h2>
+      <p>De meeste mensen vergelijken potprijzen. Dat is misleidend. Je moet kijken naar prijs per gram <strong>werkzaam collageen</strong> — en corrigeren voor opneembaarheid. Hier is de vergelijking:</p>
+      <table>
+      <tr><th>Product</th><th>Prijs/maand</th><th>Gram/dag</th><th>Prijs/g</th><th>Type</th><th>Vorm</th><th>Werkzaam per gram?</th></tr>
+      <tr><td><strong>Amare HL5</strong></td><td>€65,21</td><td>5 g</td><td>€0,43/g</td><td>Type 1&3</td><td>Vloeibaar, gehydrolyseerd</td><td>Volledig opneembaar</td></tr>
+      <tr><td>Supermarkt A (poeder)</td><td>€14,99</td><td>15 g</td><td>€0,03/g</td><td>Type 1 (niet gespec.)</td><td>Poeder, niet-gehydrolyseerd</td><td>Deels opneembaar</td></tr>
+      <tr><td>Drogist B (tabletten)</td><td>€22,50</td><td>3 g</td><td>€0,25/g</td><td>Type 2</td><td>Tablet, gehydrolyseerd</td><td>Type 2 = gewrichten, niet huid</td></tr>
+      <tr><td>Supermarkt C (poeder)</td><td>€18,95</td><td>10 g</td><td>€0,06/g</td><td>Multi-type (onduidelijk)</td><td>Poeder, niet-gehydrolyseerd</td><td>Deels opneembaar</td></tr>
+      </table>
+      <p>Het prijsverschil per gram is fors — €0,43 voor HL5 versus €0,03 tot €0,25 voor de concurrenten. Maar "werkzame grammen die je cellen bereiken" is de enige eerlijke vergelijkingsmaat. Als een supermarktpoeder voor 80% ongebruikt je lichaam verlaat — een reële aanname voor niet-gehydrolyseerd collageen — dan betaal je effectief €0,15 per opgenomen gram. Het verschil met HL5 wordt dan een factor 3 in plaats van 14. En dan hebben we het nog niet over het type collageen, de herkomst, en de afwezigheid van vulstoffen.</p>
+      <h2>Wanneer kies je voor HL5, en wanneer voor een supermarkt-alternatief?</h2>
+      <p><strong>Kies voor HL5 als:</strong></p>
+      <ul>
+      <li>Je specifiek resultaat wilt zien in huidelasticiteit, haarsterkte en nagelgroei</li>
+      <li>Je een product zoekt dat klinisch geformuleerd is met gespecificeerde collageentypes</li>
+      <li>Je bereid bent te investeren in opneembare kwaliteit in plaats van bulk-grammen</li>
+      <li>Je geen vulstoffen, kunstmatige zoetstoffen of antiklontermiddelen wilt</li>
+      </ul>
+      <p><strong>Een supermarktcollageen kan volstaan als:</strong></p>
+      <ul>
+      <li>Je collageen wilt "uitproberen" zonder grote investering</li>
+      <li>Je het door een smoothie mengt en textuur/mengbaarheid niet belangrijk vindt</li>
+      <li>Je primair gewrichten wilt ondersteunen (Type 2 collageen uit tabletten werkt anders dan Type 1&3)</li>
+      </ul>
+      <h2>Veelgestelde vragen</h2>
+      <p><strong>Is vloeibaar collageen beter dan poeder?</strong></p>
+      <p>Vloeibaar collageen dat gehydrolyseerd is, heeft een hogere biobeschikbaarheid dan niet-gehydrolyseerd poeder. Het verschil zit niet in de vloeistof zelf, maar in het hydrolyseproces: de peptiden zijn kleiner en worden directer opgenomen door de darmwand. Een gehydrolyseerd collageenpoeder is overigens even goed opneembaar als vloeibaar — maar de meeste supermarktpoeders zijn niet gehydrolyseerd. HL5 is zowel gehydrolyseerd als vloeibaar, dus dubbel geoptimaliseerd voor opname.</p>
+      <p><strong>Kan ik goedkoop collageen combineren met vitamine C voor betere opname?</strong></p>
+      <p>Vitamine C ondersteunt de lichaamseigen collageenaanmaak — dat klopt. Maar het verbetert niet de opname van collageen uit een supplement. Vitamine C is een co-factor voor het enzym dat collageen aanmaakt in je lichaam; het heeft geen invloed op hoeveel collageenpeptiden je darmwand passeert. Het is een nuttige combinatie, maar het compenseert niet voor lage biobeschikbaarheid van het collageen zelf.</p>
+      <p><strong>Hoe lang duurt het voor ik resultaat zie van HL5?</strong></p>
+      <p>De eerste subtiele effecten op huidhydratatie kunnen binnen 4 tot 6 weken merkbaar zijn. Voor zichtbare verbetering in huidelasticiteit en haar- en nagelgroei reken je op 8 tot 12 weken consistent dagelijks gebruik. Dit is consistent met de natuurlijke cyclus van huidvernieuwing — collageen is geen quick fix maar een langetermijninvestering.</p>
+      <h2>Conclusie</h2>
+      <p>Supermarktcollageen en Amare HL5 zijn fundamenteel verschillende producten — ook al heten ze allebei "collageen". Het verschil zit in type (gespecificeerd Type 1&3 versus vaag "rundercollageen"), vorm (gehydrolyseerd vloeibaar versus niet-gehydrolyseerd poeder), dosering (5 gram klinisch effectief versus 10-20 gram bulk), en zuiverheid (geen vulstoffen versus maltodextrine en antiklontermiddelen).</p>
+      <p>De rekensom is niet €0,43 versus €0,03 per gram. De rekensom is: hoeveel gram bereikt je cellen, van het juiste type collageen, zonder ongewenste toevoegingen? Op die maatstaf wint HL5 het ruimschoots van de supermarktalternatieven — en is het prijsverschil kleiner dan het op het eerste gezicht lijkt.</p>
+      <p>*Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Prijzen zijn indicatief — controleer de actuele prijzen op de Amare website.*</p>
+    `,
+    image: "/images/blog/collageen-hl5-vs-supermarkt.jpg"
+  },
+  {
+    slug: "happy-juice-pack-vs-losse-supplementen-vergelijken",
+    title: "Happy Juice Pack vs Losse Supplementen: Wat is Voordeliger?",
+    date: "2026-06-14",
+    category: "mentaal",
+    excerpt: "Drie supplementen in één bundel klinkt handig. Maar is het ook goedkoper? We vergelijken de Happy Juice Pack met losse aankoop — prijs, synergie, en praktisch gemak — zodat je weet wat voor jou de beste keuze is.",
+    content: `
+      <h2>Waarom zou je een bundel overwegen?</h2>
+      <p>Je kent het: je begint met één supplement. Dan lees je over een ander. En nog een. Voor je het weet heb je drie potjes op je aanrecht — elk op een ander tijdstip gestart, met een ander betaalmoment, in een andere verpakking. Het werkt, maar het voelt als administreren in plaats van je gezondheid ondersteunen.</p>
+      <p>De Happy Juice Pack van Amare is de #1 bestseller bundel — en niet zonder reden. Hij combineert de drie populairste mentale wellness supplementen in één doos: MentaBiotics (psychobiotica voor de darm-hersen-as), Energy+ (natuurlijke energie zonder crash), en EDGE+ (plantaardig nootropicum voor focus). Eén bestelling, één prijs, drie formules die synergetisch samenwerken.</p>
+      <p>Maar is een bundel ook voordeliger dan de drie producten los kopen? In dit artikel rekenen we het uit — inclusief de verborgen kosten die je misschien over het hoofd ziet.</p>
+      <h2>Wat zit er in de Happy Juice Pack?</h2>
+      <h3>MentaBiotics® — de basis van de formule</h3>
+      <p>MentaBiotics bevat de klinisch onderzochte Cerebiome® blend — een combinatie van Lactobacillus helveticus Rosell-52 en Bifidobacterium longum Rosell-175. Dit zijn psychobiotica: probiotische stammen die specifiek de darm-hersen-as beïnvloeden. Daarnaast is magnesium toegevoegd (56,25 mg per capsule), wat de normale psychologische functie ondersteunt.</p>
+      <h3>Energy+ — energie zonder de caféinecrash</h3>
+      <p>Energy+ combineert natuurlijke caféine uit groene koffieboon (27,64 mg — vergelijkbaar met een kop groene thee) met L-glycine en vitamine C. De combinatie is doordacht: de caféine geeft een milde energieboost, de L-glycine dempt de "jittery" bijwerking van caféine, en de vitamine C ondersteunt het immuunsysteem.</p>
+      <h3>EDGE+ — focus en stressbestendigheid</h3>
+      <p>EDGE+ is het meest geavanceerde product in de bundel. Het combineert vier adaptogenen en nootropics: Alpha-GPC (cognitieve brandstof), L-theanine (kalme focus), bacopa monnieri (geheugenondersteuning), en rhodiola rosea (stressbestendigheid). Samen ondersteunen ze mentale helderheid en veerkracht zonder overprikkeling.</p>
+      <h2>Prijsvergelijking: bundel vs los</h2>
+      <p>Dit is de rekensom die je wilt zien. We gebruiken de officiële Amare abonnementsprijzen (10% goedkoper dan eenmalig):</p>
+      <table>
+      <tr><th>Aankoopvorm</th><th>Producten</th><th>Prijs/maand</th></tr>
+      <tr><td><strong>Happy Juice Pack</strong></td><td>MentaBiotics + Energy+ + EDGE+ in één bundel</td><td><strong>€143,08/maand</strong></td></tr>
+      <tr><td>Losse aankoop</td><td>MentaBiotics (€71,83) + Energy+ (€55,48) + EDGE+ (€77,28)</td><td><strong>€204,59/maand</strong></td></tr>
+      <tr><td><strong>Besparing</strong></td><td>—</td><td><strong>€61,51/maand (30%)</strong></td></tr>
+      </table>
+      <p>Per jaar bespaar je met de bundel €738,12 ten opzichte van losse abonnementen. Dat is ruim 4 maanden gratis supplementen — alleen door ze in één bundel te bestellen.</p>
+      <h2>De verborgen kosten van los kopen</h2>
+      <p>De prijs per maand is niet het hele verhaal. Los kopen brengt verborgen kosten met zich mee:</p>
+      <p><strong>Verzendkosten.</strong> Amare rekent verzendkosten onder €175. Koop je los, dan start je met één product van €71,83 (MentaBiotics) — onder de gratis-verzending-drempel. De Happy Juice Pack (€143,08) zit dichter bij die grens, en met het abonnement krijg je vaak free shipping. Elke losse bestelling die verzendkosten met zich meebrengt, verkleint het prijsvoordeel van "goedkoop beginnen".</p>
+      <p><strong>Administratieve last.</strong> Drie losse abonnementen betekent drie startdata, drie facturen, drie momenten waarop je voorraad opraakt. De Happy Juice Pack is één doos met een uniforme cyclus — je bestelt, ontvangt en gebruikt alles synchroon. Voor drukke professionals is dit gemak geld waard.</p>
+      <p><strong>Timing van opstarten.</strong> Supplementen werken cumulatief. Als je MentaBiotics in januari start, Energy+ in maart en EDGE+ in mei, verspreid je de opbouwfase over een half jaar — terwijl de volledige synergie van de drie formules pas in mei begint. Met de bundel start je alles tegelijk; binnen 4 tot 8 weken ervaar je het volledige effect van de combinatie.</p>
+      <h2>Wanneer kies je voor los, en wanneer voor de bundel?</h2>
+      <p><strong>Kies de Happy Juice Pack als:</strong></p>
+      <ul>
+      <li>Je alle drie de producten wilt gebruiken (of er minstens twee zeker van bent)</li>
+      <li>Je de beste prijs per product wilt — 30% is een significante besparing</li>
+      <li>Je één bestelling, één factuur en één cyclus wilt</li>
+      <li>Je nieuw bent bij Amare en een complete mentale wellness routine wilt starten</li>
+      </ul>
+      <p><strong>Kies voor losse aankoop als:</strong></p>
+      <ul>
+      <li>Je specifiek één product wilt uitproberen voordat je committeert</li>
+      <li>Je al twee van de drie producten hebt en alleen een derde wilt toevoegen</li>
+      <li>Je budget per maand strikt onder de €100 moet blijven</li>
+      </ul>
+      <h2>Veelgestelde vragen</h2>
+      <p><strong>Kan ik eerst MentaBiotics los proberen en later upgraden naar de Happy Juice Pack?</strong></p>
+      <p>Ja, dat kan. Veel gebruikers starten met MentaBiotics (de bestverkochte enkelvoudige formule) en voegen later Energy+ en EDGE+ toe zodra ze het effect ervaren. Het nadeel is dat je de eerste maanden de bundelkorting mist — de overstap naar de bundel is voordeliger zodra je zeker weet dat je minimaal twee van de drie producten wilt blijven gebruiken.</p>
+      <p><strong>Wat als één product in de bundel niet bevalt?</strong></p>
+      <p>Amare hanteert een 30-dagen geld-terug-garantie — ook op bundels. Als de Happy Juice Pack niet bevalt, kun je binnen 30 dagen retourneren en krijg je het volledige aankoopbedrag terug. Je hoeft dus niet bang te zijn dat je aan drie producten vastzit als het niet bij je past. Dit maakt de bundel een risicoarme manier om de complete formule te testen.</p>
+      <h2>Conclusie</h2>
+      <p>De rekensom is helder: de Happy Juice Pack bespaart je €61,51 per maand (30%) ten opzichte van MentaBiotics, Energy+ en EDGE+ los kopen. Tel daar het gemak van één bestelling, één cyclus, synchroon startmoment en gratis verzending bij op, en de bundel is — financieel én praktisch — de slimste keuze voor wie serieus werk wil maken van zijn of haar mentale wellness.</p>
+      <p>Blijf je twijfelen? Begin met MentaBiotics los. Ervaar het effect. En stap over op de Happy Juice Pack zodra je overtuigd bent — de bundelkorting wacht op je.</p>
+      <p>*Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Genoemde prijzen zijn abonnementsprijzen per mei 2026. Controleer de actuele prijzen op de Amare website.*</p>
+    `,
+    image: "/images/blog/happy-juice-pack-vs-los.jpg"
+  },
+  {
+    slug: "probiotica-prebiotica-mentabiotics-vergelijken",
+    title: "Probiotica vs Prebiotica vs MentaBiotics: De Complete Vergelijking",
+    date: "2026-06-16",
+    category: "darmen",
+    excerpt: "Probiotica en prebiotica klinken hetzelfde, werken fundamenteel anders, en zijn allebei essentieel voor je darmflora. Ontdek het verschil, waarom psychobiotica zoals MentaBiotics een aparte categorie vormen, en hoe je de juiste kiest.",
+    content: `
+      <h2>Waarom iedereen het over darmbacteriën heeft</h2>
+      <p>Tien jaar geleden was "probiotica" een nicheterm die je alleen in reformwinkels hoorde. Vandaag is het een miljardenindustrie — en met reden. Je darmmicrobioom beïnvloedt je stemming, immuunsysteem, spijsvertering, energieniveau en zelfs je huid. De wetenschap ontdekt elk jaar nieuwe verbanden tussen darmbacteriën en gezondheid.</p>
+      <p>Maar met de populariteit komt ook verwarring. Probiotica, prebiotica, postbiotica, psychobiotica — de termen stapelen zich op. En dan heb je nog de vraag: is een probioticum uit de supermarkt (€12 per pot) vergelijkbaar met een klinisch onderzochte formule zoals MentaBiotics?</p>
+      <p>In dit artikel ontwar je de begrippen, ontdek je het verschil tussen een generiek probioticum en een psychobioticum, en weet je welke past bij jouw doel — of dat nu betere spijsvertering, mentale veerkracht of een complete darmreset is.</p>
+      <h2>Probiotica: de levende bacteriën zelf</h2>
+      <p>Probiotica zijn <strong>levende micro-organismen</strong> die, wanneer in voldoende hoeveelheden ingenomen, een gezondheidsvoordeel opleveren voor de gastheer — dat ben jij. Simpel gezegd: je slikt goede bacteriën in die zich in je darmen vestigen en daar nuttig werk doen.</p>
+      <p>Een probioticum wordt beoordeeld op drie criteria:</p>
+      <ul>
+      <li><strong>Stam:</strong> niet "Lactobacillus" in het algemeen, maar de specifieke stam — bijvoorbeeld Lactobacillus helveticus Rosell-52. Het is de stam die het effect bepaalt, niet de soort.</li>
+      <li><strong>CFU (colony-forming units):</strong> hoeveel levende bacteriën zitten erin? Standaard probiotica bevatten 1 tot 50 miljard CFU.</li>
+      <li><strong>Stabiliteit:</strong> overleven de bacteriën de maagzuur-barrière? Zonder zuurbestendige capsule of speciale coating kan een groot deel van de CFU's sterven voordat ze de darmen bereiken.</li>
+      </ul>
+      <p><strong>Generieke probiotica (supermarkt/drogist)</strong> bevatten vaak één of twee stammen, een matige CFU, en minimale informatie over stabiliteit en stamherkomst. Ze kunnen je spijsvertering licht ondersteunen — en dat is het.</p>
+      <p><strong>Klinische probiotica</strong> zoals MentaBiotics specificeren exact welke stam (Rosell-52 en Rosell-175), in welke dosering, met klinische studies naar de specifieke toepassing. Dit is het verschil tussen "er staat probiotica op het etiket" en "dit probioticum is onderzocht voor stemming en mentale veerkracht."</p>
+      <h2>Prebiotica: het voedsel voor je bacteriën</h2>
+      <p>Prebiotica zijn <strong>niet-verteerbare vezels</strong> die dienen als voedsel voor je darmbacteriën. Je kunt ze zien als de meststof voor je interne tuin — je strooit geen nieuwe planten (probiotica), maar je voedt wat er al groeit.</p>
+      <p>Prebiotica komen van nature voor in:</p>
+      <ul>
+      <li>Knoflook, ui, prei (inuline)</li>
+      <li>Asperges, artisjok (fructo-oligosachariden)</li>
+      <li>Haver, gerst (bèta-glucanen)</li>
+      <li>Onrijpe bananen (resistent zetmeel)</li>
+      </ul>
+      <p>Het probleem: de meeste Nederlanders eten te weinig van deze voedingsmiddelen. De aanbevolen dagelijkse hoeveelheid vezels is 30 tot 40 gram; het gemiddelde Nederlandse dieet haalt de 20 gram niet. Een prebioticum als supplement kan dit gat dichten.</p>
+      <p>Het Amare product Restore combineert beide werelden: 5 probiotische stammen (2 miljard CFU) plus 5 spijsverteringsenzymen — waaronder lactase voor wie lactose niet goed verdraagt. Het is ontworpen als dagelijkse spijsverteringsondersteuning, niet specifiek voor de darm-hersen-as (daarvoor is MentaBiotics de aangewezen formule).</p>
+      <h2>Psychobiotica: de derde categorie die niemand kent</h2>
+      <p>Psychobiotica zijn een subcategorie van probiotica met een specifieke eigenschap: ze beïnvloeden de <strong>darm-hersen-as</strong>. Dit is de directe communicatielijn tussen je darmzenuwstelsel en je hersenen, via de nervus vagus, het immuunsysteem, en metabolieten die bacteriën produceren.</p>
+      <p>MentaBiotics is een psychobioticum. Het bevat de Cerebiome® blend — een combinatie van Lactobacillus helveticus Rosell-52 en Bifidobacterium longum Rosell-175 — die specifiek is onderzocht bij mensen met stressgerelateerde klachten. Het werkingsmechanisme is anders dan bij een generiek probioticum: de stammen produceren signaalstoffen (neurotransmitter-precursors) die via de darmwand het enterisch zenuwstelsel beïnvloeden.</p>
+      <p>Dit is geen marketingonderscheid — het is een functioneel verschil. Een standaard probioticum ondersteunt je spijsvertering; een psychobioticum beïnvloedt je stressrespons, stemming en mentale helderheid via de darm-hersen-as.</p>
+      <h2>De drie naast elkaar</h2>
+      <table>
+      <tr><th>Probiotica (generiek)</th><th>Prebiotica</th><th>Psychobiotica (MentaBiotics)</th></tr>
+      <tr><td><strong>Wat is het?</strong></td><td>Levende bacteriën</td><td>Vezels als bacterievoedsel</td><td>Specifieke stammen voor darm-hersen-as</td></tr>
+      <tr><td><strong>Primair effect</strong></td><td>Spijsvertering, ontlasting</td><td>Voedt eigen darmflora</td><td>Stemming, stress, mentale veerkracht</td></tr>
+      <tr><td><strong>Voorbeeld</strong></td><td>Restore (multi-stam + enzymen)</td><td>SeedFiber, voeding (knoflook, ui)</td><td>MentaBiotics (Cerebiome® blend)</td></tr>
+      <tr><td><strong>Snelheid</strong></td><td>1-2 weken (spijsvertering)</td><td>2-4 weken</td><td>2-4 weken (subtiel), 4-8 weken (significant)</td></tr>
+      <tr><td><strong>Prijsindicatie</strong></td><td>€10-30/maand (generiek)</td><td>€15-25/maand</td><td>€71,83/maand</td></tr>
+      <tr><td><strong>Geschikt voor</strong></td><td>Dagelijkse spijsverteringsondersteuning</td><td>Iedereen met te weinig vezelinname</td><td>Mensen met stress, somberheid, brain fog</td></tr>
+      </table>
+      <h2>Welke combinatie past bij jou?</h2>
+      <p><strong>Alleen probiotica</strong> — als je primair last hebt van je spijsvertering (opgeblazen gevoel, onregelmatige ontlasting). Kies dan Restore: de enzymen ondersteunen de vertering terwijl de probiotica je darmflora aanvullen.</p>
+      <p><strong>Probiotica + prebiotica</strong> — de gouden combinatie voor darmgezondheid. De prebiotica voeden zowel je eigen bacteriën als de probiotica die je inneemt. Dit is alsof je én nieuwe planten plant (probiotica) én mest geeft (prebiotica) — ze versterken elkaar.</p>
+      <p><strong>MentaBiotics (psychobioticum)</strong> — als je darmklachten samengaan met stemmingswisselingen, stressgevoelens of mentale mist. Dit is de "darm-brein" route: je pakt de darmflora aan, maar het effect merk je in je hoofd. Veel gebruikers combineren MentaBiotics met een algemeen probioticum voor dubbele ondersteuning — MentaBiotics voor de darm-hersen-as, Restore voor de spijsvertering.</p>
+      <h2>Veelgestelde vragen</h2>
+      <p><strong>Kan ik probiotica en prebiotica tegelijk innemen?</strong></p>
+      <p>Ja, dat is juist ideaal. Prebiotica voeden de probiotica — ze werken synergetisch. Veel hoogwaardige formules combineren beide. Neem ze bij voorkeur 's ochtends op een lege maag, 15 tot 30 minuten voor het ontbijt. In combinatie met probiotica kan prebiotica in het begin lichte gasvorming geven — dit is tijdelijk en een teken dat de vezels hun werk doen in je darmen.</p>
+      <p><strong>Zijn dure probiotica altijd beter dan goedkope?</strong></p>
+      <p>Niet altijd. De prijs zegt niets als de stam niet gespecificeerd is. Een probioticum van €12 met een duidelijk benoemde, klinisch onderzochte stam kan effectiever zijn dan eentje van €40 met "probiotic complex" op het etiket zonder stamspecificatie. De sleutel is traceerbaarheid: kun je de stamnaam opzoeken en klinische studies vinden? Bij MentaBiotics is de Cerebiome® blend (Rosell-52 + Rosell-175) volledig traceerbaar met meerdere humane studies.</p>
+      <p><strong>Hoe weet ik of mijn probiotica werken?</strong></p>
+      <p>De eerste signalen zijn subtiel: minder opgeblazen gevoel, regelmatigere ontlasting, en — bij psychobiotica — een stabielere stemming en betere stressbestendigheid. Houd een eenvoudig dagboek bij gedurende de eerste 4 weken: noteer dagelijks je energieniveau, stemming en spijsvertering op een schaal van 1 tot 5. Na 4 weken zie je patronen die je anders over het hoofd zou zien.</p>
+      <h2>Conclusie</h2>
+      <p>Probiotica, prebiotica en psychobiotica zijn geen concurrenten — ze vullen elkaar aan. Probiotica leveren de bacteriën, prebiotica voeden ze, en psychobiotica doen daar een schepje bovenop door specifiek de darm-hersen-as te targeten.</p>
+      <p>De juiste keuze hangt af van je doel. Wil je een betere spijsvertering? Start met Restore (probiotica + enzymen) en voeg vezelrijke voeding toe als natuurlijke prebiotica. Merk je dat stress, somberheid of brain fog samengaan met je darmklachten? Dan is MentaBiotics — het psychobioticum met klinisch onderzochte Cerebiome® blend — de logische volgende stap.</p>
+      <p>*Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij aanhoudende darmklachten of stemmingsklachten altijd een arts.*</p>
+    `,
+    image: "/images/blog/probiotica-prebiotica-mentabiotics.jpg"
+  },
+  {
     slug: "plantaardige-proteine-shake-kopen-vergelijken",
     title: "Plantaardige Proteïne Shake Kopen: De Complete Gids voor 2026",
     date: "2026-06-08",
@@ -1557,6 +1741,21 @@ interface ProductLink {
 const AFFILIATE_BASE = "https://www.amare.com/2075008/nl-nl";
 
 const articleProductMap: Record<string, ProductLink[]> = {
+  "probiotica-prebiotica-mentabiotics-vergelijken": [
+    { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — psychobioticum voor de darm-hersen-as" },
+    { name: "Restore", url: "/restore", isInternal: true, price: "€29.70/maand", tagline: "5 probiotica stammen + 5 spijsverteringsenzymen" },
+    { name: "Amare MentaBiotics", url: `${AFFILIATE_BASE}/mentabiotics`, isInternal: false, price: "€71.83/maand", tagline: "Klinisch onderzochte psychobiotica voor mentale veerkracht" },
+  ],
+  "happy-juice-pack-vs-losse-supplementen-vergelijken": [
+    { name: "Happy Juice Pack", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — MentaBiotics + Energy+ + EDGE+ in één bundel" },
+    { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — los verkrijgbaar, onderdeel van de bundel" },
+    { name: "Energy+", url: "/energy", isInternal: true, price: "€55.48/maand", tagline: "Natuurlijke energie zonder crash — onderdeel van Happy Juice Pack" },
+    { name: "EDGE+", url: `${AFFILIATE_BASE}/amareedge-plus-mango`, isInternal: false, price: "€77.28/maand", tagline: "Plantaardig nootropicum — los of in de bundel" },
+  ],
+  "collageen-hl5-vs-supermarkt-vergelijken": [
+    { name: "HL5", url: "/hl5", isInternal: true, price: "€65.21/maand", tagline: "5g gehydrolyseerd collageen Type 1&3 — vloeibaar, grasgevoerd" },
+    { name: "HL5 2-Pack", url: `${AFFILIATE_BASE}/hl5-peach-2pack`, isInternal: false, price: "€130.42/maand", tagline: "2 maanden collageen — €65,21 per maand, beste waarde" },
+  ],
   "plantaardige-proteine-shake-kopen-vergelijken": [
     { name: "Origin", url: "/origin", isInternal: true, price: "€40/maand", tagline: "23g plantaardig eiwit + MCT — vegan maaltijdshake" },
     { name: "Amare Origin", url: `${AFFILIATE_BASE}/kyani-origin-chocolate`, isInternal: false, price: "€40/maand", tagline: "23g erwten-rijst eiwit + 7g vezels + 26 micronutriënten" },

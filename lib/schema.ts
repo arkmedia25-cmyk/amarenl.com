@@ -257,3 +257,80 @@ export function combineSchemas(...schemas: object[]) {
     "@graph": schemas,
   };
 }
+
+/**
+ * Speakable schema — marks content sections as eligible for voice search (Google Assistant, Siri).
+ * Use on blog posts only. CSS selectors target the first 2-3 substantive sections.
+ */
+export function generateSpeakableSchema(slug: string, headings: string[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "SpeakableSpecification",
+    cssSelector: headings.map((_, i) => `#speakable-section-${i}`).concat([`#speakable-conclusie`]),
+    url: `${SITE_URL}/blogs/nieuws/${slug}`,
+  };
+}
+
+/**
+ * Person schema for E-E-A-T signals — establishes author identity for Google's trust evaluation.
+ * Used on all article/product pages.
+ */
+export function generatePersonSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "AmareNL Redactie",
+    jobTitle: "Wellness & Supplementen Expert",
+    description:
+      "Onafhankelijke supplementen-onderzoeker gespecialiseerd in natuurlijke formules, gut-brain gezondheid en evidence-based wellness in de Nederlandse markt.",
+    url: `${SITE_URL}/over-ons`,
+    sameAs: [SITE_URL],
+    knowsAbout: [
+      "Voedingssupplementen",
+      "Darmgezondheid",
+      "Gut-Brain Axis",
+      "Mentale Wellness",
+      "Plantaardige Voeding",
+      "Collageen & Huidgezondheid",
+      "Hormoonbalans",
+      "Natuurlijke Energie",
+    ],
+    affiliation: {
+      "@type": "Organization",
+      name: ORG_NAME,
+      url: SITE_URL,
+    },
+  };
+}
+
+/**
+ * SiteLinks search box — enables the search box directly in Google SERP for branded queries.
+ * Already integrated in generateWebSiteSchema; this is an enriched standalone variant.
+ */
+export function generateSiteLinksSearchSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE_NAME,
+    url: SITE_URL,
+    inLanguage: "nl-NL",
+    potentialAction: [
+      {
+        "@type": "SearchAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: `${SITE_URL}/blogs/nieuws/?s={search_term_string}`,
+        },
+        "query-input": "required name=search_term_string",
+      },
+      {
+        "@type": "SearchAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: `${SITE_URL}/?s={search_term_string}`,
+        },
+        "query-input": "required name=search_term_string",
+      },
+    ],
+  };
+}

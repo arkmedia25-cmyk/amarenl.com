@@ -11,6 +11,7 @@ import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import {
   generateOrganizationSchema,
   generateWebSiteSchema,
+  generatePersonSchema,
   combineSchemas,
 } from "@/lib/schema";
 import { GA_ID } from "@/lib/analytics";
@@ -78,7 +79,8 @@ export default function RootLayout({
         <SchemaMarkup
           schema={combineSchemas(
             generateOrganizationSchema(),
-            generateWebSiteSchema()
+            generateWebSiteSchema(),
+            generatePersonSchema()
           )}
           id="default-schema"
         />
