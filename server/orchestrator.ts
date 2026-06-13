@@ -248,7 +248,7 @@ async function runClaudeWithTools(
   userMessage: string,
   bot: Telegraf | null,
   subscribers: string[],
-  maxTurns: number = 20
+  maxTurns: number = 12
 ): Promise<string> {
   const claude = createClaudeClient();
   const messages: MessageParam[] = [{ role: "user", content: userMessage }];
@@ -256,13 +256,44 @@ async function runClaudeWithTools(
   let finalText = "";
 
   for (let turn = 0; turn < maxTurns; turn++) {
-    const response = await claude.messages.create({
-      model: "claude-sonnet-4-6",
-      max_tokens: 8000,
-      system: systemPrompt,
-      tools: TOOLS,
-      messages,
-    });
+    let response;
+    try {
+      response = await claude.messages.create({
+        model: "claude-sonnet-4-6",
+        max_tokens: 8000,
+        system: systemPrompt,
+        tools: TOOLS,
+        messages,
+      });
+    } catch (err: any) {
+      // Handle tool pairing errors: truncate messages and break gracefully
+      if (err.status === 400 && err.message?.includes("tool_use")) {
+        log("WARN", "orchestrator", "tool_pairing_error", {
+          turn,
+          messageCount: messages.length,
+          error: err.message.slice(0, 300),
+        });
+        // Remove the last assistant+user pair that caused the error
+        if (messages.length >= 2) {
+          messages.splice(-2);
+        }
+        // If finalText is empty, try one more call without tools
+        try {
+          const fallback = await claude.messages.create({
+            model: "claude-sonnet-4-6",
+            max_tokens: 4000,
+            system: systemPrompt,
+            messages: [{ role: "user", content: "De vorige poging faalde door een technische fout. Schrijf een korte samenvatting van wat je tot nu toe hebt kunnen doen, gebaseerd op de beschikbare data. Geef aanbevelingen in het Nederlands." }],
+          });
+          finalText = fallback.content
+            .filter((b) => b.type === "text")
+            .map((b: any) => b.text)
+            .join("\n");
+        } catch {}
+        break;
+      }
+      throw err;
+    }
 
     // Collect text and tool calls
     const toolUses: ToolUseBlock[] = [];
