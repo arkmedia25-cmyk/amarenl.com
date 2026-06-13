@@ -24,7 +24,6 @@ dotenv.config({ path: resolve(process.cwd(), ".env") });
 
 import { createBot, notifySubscribers } from "./telegram-bot.js";
 import {
-  runMondayPipeline,
   runPublishOnly,
   runBuildCheck,
 } from "./orchestrator.js";
@@ -65,10 +64,10 @@ process.once("SIGTERM", () => {
 // --- Cron Jobs (Amsterdam = UTC+2/CEST) ---
 // node-cron UTC çalışır, Amsterdam = UTC+2 (yaz saati) → 2 saat çıkar
 
-// Pazartesi 07:57 Amsterdam = 05:57 UTC — Tam pipeline
+// Pazartesi 07:57 Amsterdam = 05:57 UTC — Makale yayını
 cron.schedule("57 5 * * 1", async () => {
-  console.log("📅 Pazartesi pipeline başlıyor...");
-  await runMondayPipeline(bot, state);
+  console.log("📅 Pazartesi makale yayını başlıyor...");
+  await runPublishOnly(bot, state);
 });
 
 // Çarşamba 09:57 Amsterdam = 07:57 UTC — Makale yayını
