@@ -20,7 +20,6 @@ export const blogPosts: BlogPost[] = [
     category: "mentaal",
     excerpt: "Adaptogenen worden steeds populairder als natuurlijke oplossing tegen stress. Maar wat zijn het precies, welke soorten zijn er, en hoe kies je het juiste adaptogeen supplement? Een complete gids.",
     content: `
-      <p>import AffiliateCTA from '@/components/ui/AffiliateCTA'</p>
       <h2>Wat zijn adaptogenen?</h2>
       <p>Adaptogenen zijn natuurlijke stoffen — meestal plantaardig — die je lichaam helpen zich aan te passen aan stress. Het woord zegt het al: ze helpen je 'adapteren'. In de jaren 1940 definieerde de Russische wetenschapper Dr. Nikolai Lazarev adaptogenen als stoffen die aan drie criteria moeten voldoen: (1) niet-specifiek — ze verhogen weerstand tegen een breed scala aan stressfactoren, (2) normaliserend — ze brengen het lichaam terug naar balans, en (3) onschadelijk — ze verstoren normale lichaamsfuncties niet bij normaal gebruik.</p>
       <p>Denk aan adaptogenen als een thermostaat voor je stresssysteem. Een thermostaat koelt niet alleen — hij verwarmt ook als het te koud is. Zo werken adaptogenen ook: ze dempen niet alleen stress, maar reguleren het hele systeem.</p>
@@ -62,8 +61,8 @@ export const blogPosts: BlogPost[] = [
       <h2>Conclusie</h2>
       <p>Adaptogenen behoren tot de meest veelbelovende natuurlijke stoffen voor stressbeheersing. Ze vervangen geen stressmanagement, maar ondersteunen je stresssysteem. De beste om mee te beginnen: ashwagandha (chronische stress), rhodiola (burn-out), en L-theanine (kalme focus). Voor een alles-in-één formule is MentaFocus ontworpen. Voor een dagelijks mentaal fundament is Amare EDGE+ een moderne adaptogeen-nootropic hybride.</p>
       <p><em>Disclaimer: deze uitspraken zijn niet beoordeeld door de NVWA. Supplementen zijn geen vervanging voor een gevarieerd dieet en gezonde levensstijl.</em></p>
-      <AffiliateCTA label="Bekijk MentaFocus bij Amare →" product="mentabiotics" variant="primary" />
-      <AffiliateCTA label="Ontdek Amare EDGE+ →" product="edge-mango" variant="secondary" />
+      <a href="https://www.amare.com/2075008/nl-nl/mentafocus" target="_blank" rel="nofollow noopener noreferrer" style="display:inline-block;background:#C8A951;color:#fff;padding:12px 24px;border-radius:9999px;font-weight:700;text-decoration:none;margin-bottom:12px">Bekijk MentaFocus bij Amare →</a>
+      <a href="https://www.amare.com/2075008/nl-nl/edge" target="_blank" rel="nofollow noopener noreferrer" style="display:inline-block;background:transparent;color:#6B4C8C;border:2px solid #6B4C8C;padding:12px 24px;border-radius:9999px;font-weight:700;text-decoration:none">Ontdek Amare EDGE+ →</a>
     `,
   },
 {
@@ -73,7 +72,6 @@ export const blogPosts: BlogPost[] = [
     category: "mentaal",
     excerpt: "Chronische stress put je lichaam uit en verhoogt je cortisol. Gelukkig zijn er natuurlijke supplementen die je stressrespons ondersteunen — van ashwagandha tot psychobiotica. Dit is wat de wetenschap zegt over supplementen tegen stress.",
     content: `
-      <p>import AffiliateCTA from '@/components/ui/AffiliateCTA'</p>
       <h2>Wat gebeurt er in je lichaam bij chronische stress?</h2>
       <p>Stress is in essentie een nuttige respons — je lichaam maakt cortisol en adrenaline aan om je scherp te houden bij dreiging. Het probleem ontstaat wanneer die respons chronisch wordt. Je cortisol blijft verhoogd, dag na dag, en dat heeft cascading effecten:</p>
       <ul>
@@ -144,7 +142,6 @@ export const blogPosts: BlogPost[] = [
     category: "gewichtsbeheer",
     excerpt: "De markt voor afvalsupplementen is een mijnenveld van beloftes en teleurstellingen. Wij zochten uit welke ingrediënten je metabolisme echt ondersteunen, welke supplementen de moeite waard zijn en vooral: welke je kunt overslaan.",
     content: `
-      <p>import AffiliateCTA from '@/components/ui/AffiliateCTA'</p>
       <h2>De realiteit van afvallen met supplementen</h2>
       <p>Laten we eerlijk beginnen: er bestaat geen pil die vet wegsmelt terwijl je op de bank zit. Elk supplement dat dat belooft, liegt. Afvallen draait fundamenteel om een calorietekort — je verbruikt meer energie dan je binnenkrijgt.</p>
       <p>Maar. Dat betekent niet dat supplementen waardeloos zijn bij gewichtsverlies. Ze kunnen op vier legitieme manieren ondersteunen:</p>
@@ -208,7 +205,6 @@ export const blogPosts: BlogPost[] = [
     category: "schoonheid",
     excerpt: "De collageenmarkt is explosief gegroeid — van supermarkt tot premium merken. Maar welk collageen supplement werkt echt? We vergelijken HL5, NeuCollagen en budget opties op dosering, type, biologische beschikbaarheid en prijs.",
     content: `
-      <p>import AffiliateCTA from '@/components/ui/AffiliateCTA'</p>
       <h2>Wat is collageen en waarom heb je het nodig?</h2>
       <p>Collageen is het meest voorkomende structurele eiwit in je lichaam — ongeveer 30% van al je eiwitten. Het vormt de basisstructuur van je huid, botten, kraakbeen, pezen, ligamenten en zelfs je bloedvaten. Zonder collageen verliest je huid stevigheid, worden je gewrichten stijver en wordt je haar dunner.</p>
       <p>Het probleem: vanaf je 25e neemt de natuurlijke collageenproductie met ongeveer 1% per jaar af. Tegen de tijd dat je 40 bent, produceer je al 15% minder collageen — en het tempo versnelt tijdens de menopauze, wanneer vrouwen tot 30% van hun collageen kunnen verliezen in de eerste 5 jaar.</p>
