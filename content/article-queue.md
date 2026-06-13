@@ -35,7 +35,7 @@
 | # | Makale Başlığı (NL) | Slug | Kategori | Hedef Ürün | Arama* | Status |
 |---|---------------------|------|----------|------------|--------|--------|
 | 11 | De Gut-Brain Connectie | gut-brain-connectie-darmen-stemming-mentaal | darmen | MentaBiotics, Happy Juice | 2.000 | ✅ |
-| 12 | Adaptogenen: De Complete Gids | adaptogenen-natuurlijke-stressverlichting-ashwagandha-rhodiola | mentaal | MentaFocus, EDGE+ | 1.800 | ⏳ |
+| 12 | Adaptogenen: De Complete Gids | adaptogenen-natuurlijke-stressverlichting-ashwagandha-rhodiola | mentaal | MentaFocus, EDGE+ | 1.800 | ✅ |
 | 13 | Beste Eiwitpoeder 2026 | beste-eiwitpoeder-2026-plantaardig-wei-vergelijking | essentials | Origin, FIT20 | 1.600 | ⏳ |
 | 14 | Collageen Peptiden: Werkt Het Echt? | collageen-peptiden-werkt-echt-wetenschap-resultaten | schoonheid | HL5, NeuCollagen | 1.400 | ⏳ |
 | 15 | Huidverzorging van Binnenuit | huidverzorging-van-binnenuit-supplementen-stralende-huid | schoonheid | Skin to Mind, HL5 | 1.300 | ⏳ |
@@ -159,7 +159,7 @@ Disclaimer: "* Deze uitspraken zijn niet beoordeeld door de NVWA..."
 |------|--------|---------|-------------|---------|
 | TIER 1 (High + Commercial) | 4 | 4 | 0 | 0 |
 | TIER 2 (High + Info) | 6 | 3 | 3 | 0 |
-| TIER 3 (Medium) | 5 | 1 | 0 | 4 |
+| TIER 3 (Medium) | 5 | 2 | 0 | 3 |
 | TIER 4 (Niche/Seasonal) | 5 | 1 | 1 | 3 |
 | **TOTAAL** | **20** | **9** | **4** | **7** |
 
