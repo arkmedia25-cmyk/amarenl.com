@@ -25,6 +25,7 @@ dotenv.config({ path: resolve(process.cwd(), ".env") });
 import { createBot, notifySubscribers } from "./telegram-bot.js";
 import {
   runPublishOnly,
+  runResearchOnly,
   runBuildCheck,
 } from "./orchestrator.js";
 import type { OrchestratorState } from "./orchestrator.js";
@@ -104,8 +105,7 @@ cron.schedule("*/30 * * * * *", async () => {
   if (state.manualResearchRequested) {
     state.manualResearchRequested = false;
     console.log("🔔 Manuel research tetiklendi (Telegram)");
-    if (bot) await notifySubscribers(bot, state.subscribers, "🔍 Pazar araştırması başlatıldı...");
-    await runPublishOnly(bot, state);
+    await runResearchOnly(bot, state);
   }
 });
 

@@ -137,6 +137,21 @@ const TOOLS: Tool[] = [
       required: ["message"],
     },
   },
+  {
+    name: "web_search",
+    description:
+      "Search the web for current trending topics, keywords, and news. Use for market research, finding viral content angles, and checking what's trending in the Netherlands. Returns top search result snippets.",
+    input_schema: {
+      type: "object" as const,
+      properties: {
+        query: {
+          type: "string",
+          description: "Search query in Dutch, e.g. 'populaire supplementen 2026 trend' or 'collageen nieuws onderzoek'",
+        },
+      },
+      required: ["query"],
+    },
+  },
 ];
 
 // --- Tool executor ---
@@ -191,6 +206,29 @@ async function executeTool(
         await notifySubscribers(bot, subscribers, message);
       }
       return "OK: Telegram message sent";
+    }
+
+    case "web_search": {
+      const query = input.query as string;
+      const encoded = encodeURIComponent(query);
+      try {
+        const { stdout } = await execAsync(
+          `curl -s -L --max-time 15 "https://lite.duckduckgo.com/lite/?q=${encoded}" | sed 's/<[^>]*>//g' | sed '/^$/d' | head -60`,
+          { timeout: 20000, maxBuffer: 512 * 1024 }
+        );
+        return stdout.slice(0, 4000) || "(no results)";
+      } catch (err: any) {
+        // Fallback: use an alternative approach
+        try {
+          const { stdout } = await execAsync(
+            `curl -s --max-time 15 "https://html.duckduckgo.com/html/?q=${encoded}" | grep -oP '(?<=class="result__snippet">).*?(?=</a>)' | sed 's/<[^>]*>//g' | head -20`,
+            { timeout: 20000, maxBuffer: 512 * 1024 }
+          );
+          return stdout.slice(0, 4000) || "(no results from fallback)";
+        } catch {
+          return `Web search failed. Based on your knowledge, suggest trending topics for: "${query}"`;
+        }
+      }
     }
 
     default:
@@ -404,11 +442,141 @@ export async function runPublishOnly(
 
   state.pipelineActive = false;
   log("INFO", "orchestrator", "publish_complete");
+
+  // Auto-replenish queue if running low
+  await autoReplenishIfNeeded(bot, state);
 }
 
 /**
- * Run build check
+ * Step: Market Research — scan trends, find viral keywords, replenish queue
  */
+async function stepMarketResearch(
+  bot: Telegraf | null,
+  state: OrchestratorState
+): Promise<{ success: boolean; topicsAdded: number; error?: string }> {
+  log("INFO", "market-research", "start");
+
+  try {
+    const researchPrompt = loadSkillPrompt("market-research");
+    const keywordPrompt = loadSkillPrompt("keyword-analyzer");
+    const claudeMd = readText("CLAUDE.md");
+    const categories = claudeMd.includes("## 6. PRODUCTEN")
+      ? claudeMd.split("## 6. PRODUCTEN")[1].split("## 7.")[0].slice(0, 3000)
+      : "";
+
+    const systemPrompt = [
+      "Jij bent de AmareNL Market Research Agent. Je doet marktonderzoek voor een Nederlandse wellness affiliate site.",
+      "",
+      "=== MARKET RESEARCH SKILL ===",
+      researchPrompt,
+      "",
+      "=== KEYWORD ANALYZER SKILL ===",
+      keywordPrompt,
+      "",
+      "=== AMARE PRODUCT CATEGORIES ===",
+      categories,
+      "",
+      "=== BELANGRIJK ===",
+      "- Gebruik web_search om trending onderwerpen in Nederland te vinden.",
+      "- Focus op: supplementen, collageen, probiotica, afvallen, energie, slaap, stress, menopauze, huidverzorging, darmgezondheid.",
+      "- Zoek naar 'people also ask' vragen en viral content angles.",
+      "- Analyseer elke keyword met GEO-score (search volume × commercial intent × product match × competition gap × GEO potential).",
+      "- Voeg minimaal 3 nieuwe artikelen toe aan de queue (article-queue.md).",
+      "- Gebruik write_file om de geüpdatete queue op te slaan.",
+      "- Gebruik send_telegram om een samenvatting te sturen.",
+    ].join("\n");
+
+    const userMessage = [
+      "🔍 **MARKT ONDERZOEK — Vul de artikel wachtrij aan**",
+      "",
+      "Stappen:",
+      "1. Lees `content/article-queue.md` — hoeveel artikelen staan er nog in de wachtrij?",
+      "2. Lees `lib/blog.ts` — welke onderwerpen zijn al behandeld?",
+      "3. Gebruik web_search om trending gezondheid/supplement onderwerpen in Nederland te vinden.",
+      "   Zoek naar: 'supplementen trends 2026', 'populaire supplementen Nederland', 'gezondheidstrends', etc.",
+      "4. Identificeer minimaal 3 nieuwe content kansen met GEO-potentieel.",
+      "5. Voor elk nieuw onderwerp: bepaal keyword, GEO-score, target product, FAQ vragen.",
+      "6. Voeg de nieuwe artikelen toe aan `content/article-queue.md` — in de juiste TIER (🔴 hoog → 🟢 laag).",
+      "7. Zorg dat de queue minimaal 10 artikelen bevat.",
+      "8. Stuur een Telegram samenvatting met de nieuwe topics en hun GEO-scores.",
+      "",
+      "Gebruik de tools: read_file, web_search, write_file, send_telegram.",
+    ].join("\n");
+
+    await runClaudeWithTools(systemPrompt, userMessage, bot, state.subscribers);
+    log("INFO", "market-research", "complete");
+    return { success: true, topicsAdded: 0 };
+  } catch (err: any) {
+    log("ERROR", "market-research", "failed", { error: err.message });
+    return { success: false, topicsAdded: 0, error: err.message };
+  }
+}
+
+/**
+ * Auto-check: if queue < 5, auto-trigger research
+ */
+async function autoReplenishIfNeeded(
+  bot: Telegraf | null,
+  state: OrchestratorState
+): Promise<void> {
+  try {
+    const queue = readText("content/article-queue.md");
+    const pending = (queue.match(/- \[ \]/g) || []).length;
+    if (pending < 5) {
+      log("WARN", "orchestrator", "queue_low", { pending });
+      if (bot) {
+        await notifySubscribers(
+          bot,
+          state.subscribers,
+          `⚠️ *Kuyruk azalıyor!* Sadece ${pending} makale kaldı. Otomatik araştırma başlatılıyor...`
+        );
+      }
+      await stepMarketResearch(bot, state);
+    }
+  } catch {
+    // silently fail — auto-replenish is best-effort
+  }
+}
+
+/**
+ * Run market research (manual /research trigger)
+ */
+export async function runResearchOnly(
+  bot: Telegraf | null,
+  state: OrchestratorState
+): Promise<void> {
+  if (state.pipelineActive) {
+    log("WARN", "orchestrator", "pipeline_busy");
+    return;
+  }
+  state.pipelineActive = true;
+  log("INFO", "orchestrator", "research_start");
+
+  if (bot && state.subscribers.length > 0) {
+    await notifySubscribers(bot, state.subscribers, "🔍 *Pazar araştırması başlatıldı...*");
+  }
+
+  const result = await stepMarketResearch(bot, state);
+
+  if (bot && state.subscribers.length > 0) {
+    if (result.success) {
+      await notifySubscribers(
+        bot,
+        state.subscribers,
+        "✅ *Araştırma tamamlandı!* Yeni konular kuyruğa eklendi. /queue ile kontrol et."
+      );
+    } else {
+      await notifySubscribers(
+        bot,
+        state.subscribers,
+        `🚨 *Araştırma Hatası*\n\`\`\`\n${result.error}\n\`\`\``
+      );
+    }
+  }
+
+  state.pipelineActive = false;
+  log("INFO", "orchestrator", "research_complete");
+}
 export async function runBuildCheck(): Promise<{ ok: boolean; output: string }> {
   try {
     const cmd = existsSync(rel("node_modules/.bin/next"))
