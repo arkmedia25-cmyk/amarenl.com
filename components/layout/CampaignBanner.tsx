@@ -11,7 +11,7 @@ export default function CampaignBanner() {
         background: "linear-gradient(135deg, var(--color-primary), var(--color-accent))",
       }}
     >
-      <span>&#128640; MEI 2026 &nbsp;|&nbsp;</span>
+      <span>&#128640; JUNI 2026 &nbsp;|&nbsp;</span>
       <span>Gratis verzending vanaf €175 + 10% korting op abonnementen!</span>
       <Link
         href={AMARE_BASE}
