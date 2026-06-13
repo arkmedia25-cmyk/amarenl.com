@@ -217,21 +217,23 @@ async function executeTool(
         if (existsSync(searchScript)) {
           const { stdout } = await execAsync(
             `python3 "${searchScript}" "${query.replace(/"/g, '\\"')}"`,
-            { timeout: 20000, maxBuffer: 256 * 1024 }
+            { timeout: 25000, maxBuffer: 256 * 1024 }
           );
           const cleaned = stdout.trim();
-          if (cleaned && cleaned !== "NO_RESULTS" && !cleaned.startsWith("SEARCH_ERROR")) {
+          // Filter out CAPTCHA/rate-limit responses
+          const lower = cleaned.toLowerCase();
+          const isCaptcha = /captcha|complete the.*challenge|verify.*human|are you a human/i.test(lower);
+          if (cleaned && cleaned !== "NO_RESULTS" && !cleaned.startsWith("SEARCH_ERROR") && !isCaptcha) {
             log("INFO", "orchestrator", "web_search_ok", { query, resultLen: cleaned.length });
             return cleaned.slice(0, 4000);
           }
-          if (cleaned.startsWith("SEARCH_ERROR")) {
-            log("WARN", "orchestrator", "web_search_error", { error: cleaned });
-          }
+          if (isCaptcha) log("WARN", "orchestrator", "web_search_captcha", { query });
+          if (cleaned.startsWith("SEARCH_ERROR")) log("WARN", "orchestrator", "web_search_error", { error: cleaned });
         }
       } catch (err: any) {
         log("WARN", "orchestrator", "web_search_failed", { error: err.message });
       }
-      // Fallback
+      // Fallback: let Claude use its knowledge
       return `Web search completed for: "${query}". Use your knowledge about this topic to provide current, relevant information about Dutch market trends. Focus on what's currently popular in Nederland for wellness, supplementen, en gezondheid.`;
     }
 
