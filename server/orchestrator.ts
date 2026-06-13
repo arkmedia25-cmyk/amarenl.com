@@ -1,16 +1,13 @@
 /**
- * AmareNL Content Orchestrator
+ * AmareNL Content Orchestrator v2
  *
- * Haftalık içerik pipeline'ı:
- *   Pazartesi 08:00 → market-research
- *   Pazartesi 09:57 → article-scheduler → blog-writer (1. makale)
- *   Çarşamba  09:57 → article-scheduler → blog-writer (2. makale)
- *   Cuma      09:57 → article-scheduler → blog-writer (3. makale)
- *   Pazartesi 11:00 → traffic-monitor
+ * Claude API tool-use ile gerçek dosya işlemleri yapar.
+ * Telegram /publish → sıradaki makaleyi yazar, MDX+blog.ts+queue günceller.
  */
 
 import { Anthropic } from "@anthropic-ai/sdk";
-import { readFileSync, writeFileSync, appendFileSync, existsSync } from "fs";
+import type { Tool, MessageParam, ToolUseBlock } from "@anthropic-ai/sdk/resources/messages";
+import { readFileSync, writeFileSync, appendFileSync, existsSync, readdirSync } from "fs";
 import { join } from "path";
 import { exec } from "child_process";
 import { promisify } from "util";
@@ -26,8 +23,7 @@ export interface OrchestratorState {
   pipelineActive: boolean;
 }
 
-const PROJECT_ROOT =
-  process.env.PROJECT_ROOT || "/Users/ark/Documents/AmareNL.com";
+const PROJECT_ROOT = process.env.PROJECT_ROOT || "/opt/AmareNL.com";
 
 function rel(p: string): string {
   return join(PROJECT_ROOT, p);
@@ -54,6 +50,221 @@ function log(level: string, agent: string, event: string, data: Record<string, u
   console.log(`[${level}] ${agent}: ${event}`, data);
 }
 
+// --- Claude API with tool use ---
+function createClaudeClient(): Anthropic {
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  if (!apiKey) throw new Error("ANTHROPIC_API_KEY not set");
+  return new Anthropic({ apiKey });
+}
+
+// --- Tool definitions for Claude ---
+const TOOLS: Tool[] = [
+  {
+    name: "read_file",
+    description: "Read the contents of a file. Path is relative to project root.",
+    input_schema: {
+      type: "object" as const,
+      properties: {
+        path: {
+          type: "string",
+          description: "File path relative to project root, e.g. 'content/article-queue.md' or 'lib/blog.ts'",
+        },
+      },
+      required: ["path"],
+    },
+  },
+  {
+    name: "write_file",
+    description: "Write content to a file. Creates the file if it doesn't exist. Path is relative to project root.",
+    input_schema: {
+      type: "object" as const,
+      properties: {
+        path: {
+          type: "string",
+          description: "File path relative to project root, e.g. 'content/blog/my-article.mdx'",
+        },
+        content: {
+          type: "string",
+          description: "Full content to write to the file",
+        },
+      },
+      required: ["path", "content"],
+    },
+  },
+  {
+    name: "run_command",
+    description: "Execute a shell command and return stdout/stderr. Use for build checks, git operations, etc.",
+    input_schema: {
+      type: "object" as const,
+      properties: {
+        command: {
+          type: "string",
+          description: "Shell command to execute",
+        },
+        working_dir: {
+          type: "string",
+          description: "Working directory for the command, relative to project root. Default: project root.",
+        },
+      },
+      required: ["command"],
+    },
+  },
+  {
+    name: "list_files",
+    description: "List files in a directory. Useful for checking what blog articles already exist.",
+    input_schema: {
+      type: "object" as const,
+      properties: {
+        directory: {
+          type: "string",
+          description: "Directory path relative to project root, e.g. 'content/blog'",
+        },
+      },
+      required: ["directory"],
+    },
+  },
+  {
+    name: "send_telegram",
+    description: "Send a status message to Telegram subscribers.",
+    input_schema: {
+      type: "object" as const,
+      properties: {
+        message: {
+          type: "string",
+          description: "Markdown-formatted message to send",
+        },
+      },
+      required: ["message"],
+    },
+  },
+];
+
+// --- Tool executor ---
+async function executeTool(
+  toolName: string,
+  input: Record<string, unknown>,
+  bot: Telegraf | null,
+  subscribers: string[]
+): Promise<string> {
+  switch (toolName) {
+    case "read_file": {
+      const path = input.path as string;
+      if (!existsSync(rel(path))) return `ERROR: File not found: ${path}`;
+      const content = readText(path);
+      return content.length > 15000
+        ? content.slice(0, 15000) + `\n\n[... truncated, ${content.length} total chars]`
+        : content;
+    }
+
+    case "write_file": {
+      const path = input.path as string;
+      const content = input.content as string;
+      writeText(path, content);
+      return `OK: Written ${content.length} chars to ${path}`;
+    }
+
+    case "run_command": {
+      const command = input.command as string;
+      const cwd = (input.working_dir as string) || ".";
+      try {
+        const { stdout, stderr } = await execAsync(command, {
+          cwd: rel(cwd),
+          timeout: 60000,
+          maxBuffer: 1024 * 1024,
+        });
+        return stdout || stderr || "(no output)";
+      } catch (err: any) {
+        return `EXIT ${err.code}: ${err.stderr || err.stdout || err.message}`;
+      }
+    }
+
+    case "list_files": {
+      const dir = input.directory as string;
+      if (!existsSync(rel(dir))) return `ERROR: Directory not found: ${dir}`;
+      const files = readdirSync(rel(dir));
+      return files.join("\n");
+    }
+
+    case "send_telegram": {
+      const message = input.message as string;
+      if (bot) {
+        await notifySubscribers(bot, subscribers, message);
+      }
+      return "OK: Telegram message sent";
+    }
+
+    default:
+      return `Unknown tool: ${toolName}`;
+  }
+}
+
+// --- Tool use loop ---
+async function runClaudeWithTools(
+  systemPrompt: string,
+  userMessage: string,
+  bot: Telegraf | null,
+  subscribers: string[],
+  maxTurns: number = 20
+): Promise<string> {
+  const claude = createClaudeClient();
+  const messages: MessageParam[] = [{ role: "user", content: userMessage }];
+
+  let finalText = "";
+
+  for (let turn = 0; turn < maxTurns; turn++) {
+    const response = await claude.messages.create({
+      model: "claude-sonnet-4-6",
+      max_tokens: 8000,
+      system: systemPrompt,
+      tools: TOOLS,
+      messages,
+    });
+
+    // Collect text and tool calls
+    const toolUses: ToolUseBlock[] = [];
+    let text = "";
+
+    for (const block of response.content) {
+      if (block.type === "text") {
+        text += block.text;
+      } else if (block.type === "tool_use") {
+        toolUses.push(block as ToolUseBlock);
+      }
+    }
+
+    if (toolUses.length === 0) {
+      finalText = text;
+      break;
+    }
+
+    // Execute tools
+    const toolResults: MessageParam["content"] = [];
+    if (text) {
+      toolResults.push({ type: "text", text });
+    }
+
+    for (const tool of toolUses) {
+      log("INFO", "orchestrator", "tool_exec", { tool: tool.name, input: tool.input });
+      const result = await executeTool(tool.name, tool.input as Record<string, unknown>, bot, subscribers);
+      log("INFO", "orchestrator", "tool_result", { tool: tool.name, result: result.slice(0, 200) });
+      toolResults.push({
+        type: "tool_result",
+        tool_use_id: tool.id,
+        content: result,
+      });
+    }
+
+    messages.push({ role: "assistant", content: response.content });
+    messages.push({ role: "user", content: toolResults });
+  }
+
+  if (!finalText) {
+    finalText = "Claude completed tool operations.";
+  }
+
+  return finalText;
+}
+
 // --- Skill prompt loader ---
 function loadSkillPrompt(skillName: string): string {
   const path = rel(`.claude/skills/${skillName}.md`);
@@ -61,266 +272,95 @@ function loadSkillPrompt(skillName: string): string {
   return readText(path);
 }
 
-// --- Claude API client ---
-function createClaudeClient(): Anthropic {
-  const apiKey = process.env.ANTHROPIC_API_KEY;
-  if (!apiKey) throw new Error("ANTHROPIC_API_KEY eksik");
-  return new Anthropic({ apiKey });
-}
-
-interface TaskResult {
-  success: boolean;
-  output: string;
-  error?: string;
-}
-
-// --- Pipeline steps ---
+// --- Pipeline Steps ---
 
 /**
- * Step 1: Market Research
- * Yeni konu fırsatlarını tara, article-queue.md'i güncelle
+ * Step: Publish next article from queue
+ * Claude reads the queue, writes MDX, updates blog.ts, marks queue done.
  */
-async function stepMarketResearch(): Promise<TaskResult> {
-  log("INFO", "market-research", "start");
-  try {
-    const claude = createClaudeClient();
-    const skillPrompt = loadSkillPrompt("market-research");
-    const queueContent = readText("content/article-queue.md");
-    const blogContent = readText("lib/blog.ts");
-
-    const msg = await claude.messages.create({
-      model: "claude-sonnet-4-6",
-      max_tokens: 4000,
-      system: skillPrompt,
-      messages: [
-        {
-          role: "user",
-          content: [
-            {
-              type: "text",
-              text: [
-                "Haftalık pazar araştırması yap.",
-                "",
-                "MEVCUT KUYRUK:",
-                "```",
-                queueContent.slice(0, 5000),
-                "```",
-                "",
-                "MEVCUT BLOG MAKALELERİ (lib/blog.ts):",
-                "```",
-                blogContent.slice(0, 5000),
-                "```",
-                "",
-                "Eksik konuları tespit et. Yeni fırsatları bul.",
-                "Önerdiğin konuları content/article-queue.md'de uygun tier'a ekle.",
-                "Sadece article-queue.md'i güncelle, başka dosyayı değiştirme.",
-              ].join("\n"),
-            },
-          ],
-        },
-      ],
-    });
-
-    const text = msg.content
-      .filter((b) => b.type === "text")
-      .map((b) => b.text)
-      .join("\n");
-    log("INFO", "market-research", "complete", { length: text.length });
-    return { success: true, output: text };
-  } catch (err: any) {
-    log("ERROR", "market-research", "failed", { error: err.message });
-    return { success: false, output: "", error: err.message };
-  }
-}
-
-/**
- * Step 2: Write next article from queue
- * Sıradaki makaleyi yaz, lib/blog.ts'e ekle, MDX kaydet, kuyruğu güncelle
- */
-async function stepPublishArticle(): Promise<TaskResult> {
-  log("INFO", "article-scheduler", "start");
-  try {
-    const claude = createClaudeClient();
-    const schedulerPrompt = loadSkillPrompt("article-scheduler");
-    const writerPrompt = loadSkillPrompt("blog-writer");
-    const queueContent = readText("content/article-queue.md");
-    const blogTs = readText("lib/blog.ts");
-    const productsTs = readText("lib/products.ts");
-    const claudeMd = readText("CLAUDE.md");
-
-    const msg = await claude.messages.create({
-      model: "claude-sonnet-4-6",
-      max_tokens: 8000,
-      system: [
-        schedulerPrompt,
-        "",
-        "---",
-        "",
-        writerPrompt,
-        "",
-        "---",
-        "",
-        "ÖNEMLİ KURALLAR:",
-        claudeMd.split("## 17. NIET DOEN")[0].split("## 16. CODEERREGELS")[0].slice(-3000),
-      ].join("\n"),
-      messages: [
-        {
-          role: "user",
-          content: [
-            {
-              type: "text",
-              text: [
-                "Sıradaki makaleyi yaz ve yayınla.",
-                "",
-                "ARTICLE QUEUE (ilk yazılmamış makaleyi bul):",
-                "```",
-                queueContent.slice(0, 5000),
-                "```",
-                "",
-                "MEVCUT BLOG MAKALELERİ (slug çakışması kontrolü için):",
-                "```ts",
-                blogTs.slice(0, 5000),
-                "```",
-                "",
-                "ÜRÜN VERİTABANI:",
-                "```ts",
-                productsTs.slice(0, 5000),
-                "```",
-                "",
-                "Adımlar:",
-                "1. Article queue'dan ilk - [ ] makaleyi bul",
-                "2. Hedef ürünün bilgilerini products.ts'ten oku",
-                "3. SEO-GEO-AEO uyumlu, 1200-1800 kelime makale yaz",
-                "4. Makaleyi lib/blog.ts dizisinin başına ekle",
-                "5. Makaleyi content/blog/[slug].mdx olarak kaydet",
-                "6. Article queue'da makaleyi - [x] olarak işaretle",
-                "7. Sonucu bildir (başlık, kelime sayısı, slug)",
-              ].join("\n"),
-            },
-          ],
-        },
-      ],
-    });
-
-    const text = msg.content
-      .filter((b) => b.type === "text")
-      .map((b) => b.text)
-      .join("\n");
-    log("INFO", "article-scheduler", "complete", { length: text.length });
-    return { success: true, output: text };
-  } catch (err: any) {
-    log("ERROR", "article-scheduler", "failed", { error: err.message });
-    return { success: false, output: "", error: err.message };
-  }
-}
-
-/**
- * Step 3: Weekly Traffic Report
- */
-async function stepTrafficReport(): Promise<TaskResult> {
-  log("INFO", "traffic-monitor", "start");
-  try {
-    const claude = createClaudeClient();
-    const monitorPrompt = loadSkillPrompt("traffic-monitor");
-    const blogTs = readText("lib/blog.ts");
-
-    const msg = await claude.messages.create({
-      model: "claude-sonnet-4-6",
-      max_tokens: 3000,
-      system: monitorPrompt,
-      messages: [
-        {
-          role: "user",
-          content: [
-            {
-              type: "text",
-              text: [
-                "Haftalık trafik raporu çıkar.",
-                "",
-                "Not: GA4 verilerine erişim yoksa Google Search Console verilerini kullan.",
-                "Veri yoksa, mevcut makale sayıları ve sistem durumuyla bir özet çıkar.",
-                "",
-                "MEVCUT MAKALELER:",
-                "```ts",
-                blogTs.slice(0, 3000),
-                "```",
-                "",
-                "Raporu content/weekly-report-[BUGÜN].md olarak kaydet.",
-              ].join("\n"),
-            },
-          ],
-        },
-      ],
-    });
-
-    const text = msg.content
-      .filter((b) => b.type === "text")
-      .map((b) => b.text)
-      .join("\n");
-    log("INFO", "traffic-monitor", "complete", { length: text.length });
-    return { success: true, output: text };
-  } catch (err: any) {
-    log("ERROR", "traffic-monitor", "failed", { error: err.message });
-    return { success: false, output: "", error: err.message };
-  }
-}
-
-/**
- * Run full Monday pipeline
- */
-export async function runMondayPipeline(
+async function stepPublishArticle(
   bot: Telegraf | null,
   state: OrchestratorState
-): Promise<void> {
-  if (state.pipelineActive) {
-    log("WARN", "orchestrator", "pipeline_busy", {});
-    return;
-  }
-  state.pipelineActive = true;
-  log("INFO", "orchestrator", "monday_pipeline_start");
+): Promise<{ success: boolean; title?: string; slug?: string; words?: number; error?: string }> {
+  log("INFO", "article-scheduler", "start");
 
-  // Step 1: Market Research
-  const research = await stepMarketResearch();
-  if (bot) {
-    await notifySubscribers(
-      bot,
-      state.subscribers,
-      research.success
-        ? `🔍 *Pazar Araştırması* ✅\nYeni konular tarandı. /queue ile görebilirsin.`
-        : `🔍 *Pazar Araştırması* ❌\nHata: ${research.error}`
-    );
-  }
+  try {
+    // Build system prompt from skills + rules
+    const schedulerPrompt = loadSkillPrompt("article-scheduler");
+    const writerPrompt = loadSkillPrompt("blog-writer");
+    const claudeMd = readText("CLAUDE.md");
+    const seoRules = claudeMd.includes("## 13. SEO")
+      ? claudeMd.split("## 13. SEO")[1].split("## 14.")[0]
+      : "";
+    const verboden = claudeMd.includes("## 17. NIET DOEN")
+      ? claudeMd.split("## 17. NIET DOEN")[1].split("---")[0]
+      : "";
 
-  // Step 2: Publish article
-  const publish = await stepPublishArticle();
-  if (bot) {
-    await notifySubscribers(
-      bot,
-      state.subscribers,
-      publish.success
-        ? `📝 *Makale Yayınlandı* ✅\nYeni makale yayında!`
-        : `📝 *Makale Yayınlama* ❌\nHata: ${publish.error}`
-    );
-  }
+    const systemPrompt = [
+      "Jij bent de AmareNL Blog Writer. Je schrijft SEO-GEO-AEO geoptimaliseerde blog artikelen in het Nederlands.",
+      "",
+      "=== ARTICLE SCHEDULER REGELS ===",
+      schedulerPrompt,
+      "",
+      "=== BLOG WRITER REGELS ===",
+      writerPrompt,
+      "",
+      "=== SEO REGELS ===",
+      seoRules.slice(0, 3000),
+      "",
+      "=== VERBODEN (NIET DOEN) ===",
+      verboden.slice(0, 2000),
+      "",
+      "=== BELANGRIJK ===",
+      "- Je hebt BESTANDSTOOLS tot je beschikking om bestanden te lezen en te schrijven.",
+      "- Gebruik read_file om de article queue, products.ts, en blog.ts te lezen.",
+      "- Gebruik write_file om het MDX bestand en de geüpdatete blog.ts op te slaan.",
+      "- Markeer de geschreven artikel als [x] in article-queue.md.",
+      "- Stuur aan het einde een Telegram bericht met wat je hebt gedaan (gebruik send_telegram).",
+    ].join("\n");
 
-  // Step 3: Traffic Report
-  const report = await stepTrafficReport();
-  if (bot) {
-    await notifySubscribers(
-      bot,
-      state.subscribers,
-      report.success
-        ? `📊 *Haftalık Rapor* ✅\nRapor hazır. /report ile görebilirsin.`
-        : `📊 *Haftalık Rapor* ❌\nHata: ${report.error}`
-    );
-  }
+    const userMessage = [
+      "📝 **PUBLICEER HET VOLGENDE ARTIKEL**",
+      "",
+      "Voer deze stappen uit:",
+      "",
+      "1. Lees `content/article-queue.md` en vind de eerste `- [ ]` (ongeschreven) artikel.",
+      "2. Lees `lib/products.ts` voor informatie over het doelproduct.",
+      "3. Lees `lib/blog.ts` om bestaande slugs te controleren (geen duplicaten!).",
+      "4. Schrijf een SEO-GEO-AEO blog artikel van 1200-1800 woorden in het Nederlands.",
+      "   - Gebruik de exacte structuur uit de blog-writer skill (Wat is..., FAQ, Conclusie).",
+      "   - Voeg de NVWA disclaimer toe.",
+      "   - Gebruik het AffiliateCTA component voor het product.",
+      "5. Schrijf het MDX bestand naar `content/blog/[slug].mdx` met volledige frontmatter.",
+      "6. Voeg de blog entry toe aan `lib/blog.ts` — bovenaan de blogPosts array.",
+      "7. Update `content/article-queue.md`: markeer het artikel als `- [x]`.",
+      "8. Stuur een Telegram bericht met: titel, slug, woordenaantal, en wat de volgende is.",
+      "",
+      "Belangrijk: gebruik de TOOLS die je hebt! read_file, write_file, send_telegram.",
+      "Werk direct — lees de bestanden, schrijf het artikel, update de queue.",
+    ].join("\n");
 
-  state.pipelineActive = false;
-  log("INFO", "orchestrator", "monday_pipeline_complete");
+    const result = await runClaudeWithTools(systemPrompt, userMessage, bot, state.subscribers);
+    log("INFO", "article-scheduler", "complete", { resultLength: result.length });
+
+    // Try to extract title/slug from result
+    const titleMatch = result.match(/titel[:\s]+(.+)/i) || result.match(/gepubliceerd[:\s]+(.+)/i);
+    const slugMatch = result.match(/slug[:\s]+(.+)/i);
+
+    return {
+      success: true,
+      title: titleMatch?.[1]?.trim() || "Onbekend",
+      slug: slugMatch?.[1]?.trim() || "onbekend",
+      words: result.length,
+    };
+  } catch (err: any) {
+    log("ERROR", "article-scheduler", "failed", { error: err.message });
+    return { success: false, error: err.message };
+  }
 }
 
 /**
- * Run publish-only (Wed/Fri or manual trigger)
+ * Run publish pipeline (Wed/Fri or manual /publish trigger)
  */
 export async function runPublishOnly(
   bot: Telegraf | null,
@@ -333,35 +373,37 @@ export async function runPublishOnly(
   state.pipelineActive = true;
   log("INFO", "orchestrator", "publish_start");
 
-  const publish = await stepPublishArticle();
-  if (bot) {
-    await notifySubscribers(
-      bot,
-      state.subscribers,
-      publish.success
-        ? `📝 *Makale Yayınlandı* ✅\n${publish.output.slice(0, 200)}`
-        : `📝 *Makale Yayınlama* ❌\nHata: ${publish.error}`
-    );
+  if (bot && state.subscribers.length > 0) {
+    await notifySubscribers(bot, state.subscribers, "✍️ *Makale yazımı başladı...*");
+  }
+
+  const result = await stepPublishArticle(bot, state);
+
+  if (bot && state.subscribers.length > 0) {
+    if (result.success) {
+      await notifySubscribers(
+        bot,
+        state.subscribers,
+        [
+          `📝 *Makale Yayınlandı!*`,
+          `• Başlık: ${result.title}`,
+          `• Slug: \`${result.slug}\``,
+          `• Kelime: ~${result.words}`,
+          ``,
+          `📋 /queue ile kuyruğu kontrol et.`,
+        ].join("\n")
+      );
+    } else {
+      await notifySubscribers(
+        bot,
+        state.subscribers,
+        `🚨 *Yayın Hatası*\n\`\`\`\n${result.error}\n\`\`\``
+      );
+    }
   }
 
   state.pipelineActive = false;
   log("INFO", "orchestrator", "publish_complete");
-
-  // Build check after publish
-  try {
-    const { stdout } = await execAsync("cd " + PROJECT_ROOT + " && npx next build 2>&1 | tail -10");
-    const buildOk = !stdout.includes("Error") && !stdout.includes("Failed");
-    log("INFO", "orchestrator", "build_check", { ok: buildOk });
-    if (!buildOk && bot) {
-      await notifySubscribers(
-        bot,
-        state.subscribers,
-        `🚨 *Build Hatası!*\n\`\`\`\n${stdout.slice(-500)}\n\`\`\``
-      );
-    }
-  } catch (err: any) {
-    log("ERROR", "orchestrator", "build_check_failed", { error: err.message });
-  }
 }
 
 /**
@@ -369,7 +411,10 @@ export async function runPublishOnly(
  */
 export async function runBuildCheck(): Promise<{ ok: boolean; output: string }> {
   try {
-    const { stdout } = await execAsync("cd " + PROJECT_ROOT + " && npx next build 2>&1 | tail -15");
+    const cmd = existsSync(rel("node_modules/.bin/next"))
+      ? "npx next build 2>&1 | tail -15"
+      : "echo 'Next.js not installed on this server — skipping build check'";
+    const { stdout } = await execAsync(`cd ${PROJECT_ROOT} && ${cmd}`);
     return { ok: !stdout.includes("Error") && !stdout.includes("Failed"), output: stdout };
   } catch (err: any) {
     return { ok: false, output: err.message };

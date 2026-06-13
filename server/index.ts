@@ -95,24 +95,18 @@ cron.schedule("0 8 * * *", async () => {
   }
 });
 
-// Her 10 dakikada bir manuel tetikleyicileri kontrol et
-cron.schedule("*/10 * * * *", async () => {
+// Her 30 saniyede bir manuel tetikleyicileri kontrol et
+cron.schedule("*/30 * * * * *", async () => {
   if (state.manualPublishRequested) {
     state.manualPublishRequested = false;
-    console.log("🔔 Manuel publish tetiklendi");
+    console.log("🔔 Manuel publish tetiklendi (Telegram)");
     await runPublishOnly(bot, state);
   }
   if (state.manualResearchRequested) {
     state.manualResearchRequested = false;
-    console.log("🔔 Manuel research tetiklendi");
-    if (bot)
-      await notifySubscribers(
-        bot,
-        state.subscribers,
-        "🔍 Pazar araştırması başlatıldı..."
-      );
-    // Research is part of Monday pipeline
-    await runMondayPipeline(bot, state);
+    console.log("🔔 Manuel research tetiklendi (Telegram)");
+    if (bot) await notifySubscribers(bot, state.subscribers, "🔍 Pazar araştırması başlatıldı...");
+    await runPublishOnly(bot, state);
   }
 });
 
