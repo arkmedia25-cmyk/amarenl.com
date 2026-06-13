@@ -205,7 +205,8 @@ async function executeTool(
     }
 
     case "send_telegram": {
-      const message = input.message as string;
+      const message = (input.message as string) || "";
+      if (!message) return "ERROR: message is required for send_telegram";
       if (bot) {
         await notifySubscribers(bot, subscribers, message);
       }
@@ -452,13 +453,13 @@ export async function runPublishOnly(
   state.pipelineActive = true;
   log("INFO", "orchestrator", "publish_start");
 
-  if (bot && state.subscribers.length > 0) {
+  if (bot) {
     await notifySubscribers(bot, state.subscribers, "✍️ *Makale yazımı başladı...*");
   }
 
   const result = await stepPublishArticle(bot, state);
 
-  if (bot && state.subscribers.length > 0) {
+  if (bot) {
     if (result.success) {
       await notifySubscribers(
         bot,
@@ -593,13 +594,13 @@ export async function runResearchOnly(
   state.pipelineActive = true;
   log("INFO", "orchestrator", "research_start");
 
-  if (bot && state.subscribers.length > 0) {
+  if (bot) {
     await notifySubscribers(bot, state.subscribers, "🔍 *Pazar araştırması başlatıldı...*");
   }
 
   const result = await stepMarketResearch(bot, state);
 
-  if (bot && state.subscribers.length > 0) {
+  if (bot) {
     if (result.success) {
       await notifySubscribers(
         bot,
@@ -754,13 +755,13 @@ export async function runAnalyzeOnly(
   }
   state.pipelineActive = true;
 
-  if (bot && state.subscribers.length > 0) {
+  if (bot) {
     await notifySubscribers(bot, state.subscribers, "📊 *Keyword analizi başladı...* (GSC + ranking check)");
   }
 
   const result = await stepAnalyzeKeywords(bot, state);
 
-  if (bot && state.subscribers.length > 0) {
+  if (bot) {
     if (result.success) {
       await notifySubscribers(
         bot,
@@ -789,13 +790,13 @@ export async function runOptimizeArticle(
   }
   state.pipelineActive = true;
 
-  if (bot && state.subscribers.length > 0) {
+  if (bot) {
     await notifySubscribers(bot, state.subscribers, `🔧 *Optimiseer:* \`${slug}\`...`);
   }
 
   const result = await stepOptimizeArticle(slug, bot, state);
 
-  if (bot && state.subscribers.length > 0) {
+  if (bot) {
     if (result.success) {
       await notifySubscribers(bot, state.subscribers, `✅ *${slug}* geoptimaliseerd!`);
     } else {

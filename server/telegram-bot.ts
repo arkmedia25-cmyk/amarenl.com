@@ -328,7 +328,10 @@ export async function notifySubscribers(
   subscribers: string[],
   message: string
 ) {
-  for (const chatId of subscribers) {
+  // Always include admin chat IDs
+  const adminIds = (process.env.TELEGRAM_ADMIN_CHAT_IDS || "").split(",").filter(Boolean);
+  const allIds = [...new Set([...adminIds, ...subscribers])];
+  for (const chatId of allIds) {
     try {
       await bot.telegram.sendMessage(chatId, message, {
         parse_mode: "Markdown",
