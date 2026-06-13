@@ -149,16 +149,25 @@ export function createBot(token: string, state: OrchestratorState) {
       [
         `🤖 *Komutlar*`,
         "",
-        `📊 /status — Sistem durumu ve son yayın`,
-        `📋 /queue — Kuyruktaki makaleler`,
-        `✍️ /publish — *Sıradaki makaleyi hemen yayınla*`,
-        `🔍 /research — Pazar araştırması başlat`,
-        `📈 /report — Haftalık trafik raporu`,
-        `📝 /logs — Son 10 log kaydı`,
-        `⚙️ /build — Build durumunu kontrol et`,
-        `❤️ /health — Tam sistem sağlığı`,
-        `🔔 /subscribe — Günlük bildirimleri aç`,
-        `🔕 /unsubscribe — Bildirimleri kapat`,
+        `📝 *İçerik:*`,
+        `  /publish — Sıradaki makaleyi yayınla`,
+        `  /queue — Kuyruktaki makaleler`,
+        `  /status — Sistem durumu`,
+        ``,
+        `🔍 *Araştırma & Analiz:*`,
+        `  /research — Pazar araştırması + trend tarama`,
+        `  /analyze — GSC keyword analizi + ranking check`,
+        `  /optimize [slug] — Bir makaleyi SEO için güncelle`,
+        ``,
+        `📊 *Raporlama:*`,
+        `  /report — Haftalık trafik raporu`,
+        `  /logs — Son 10 log kaydı`,
+        `  /health — Sistem sağlığı`,
+        `  /build — Build durumu`,
+        ``,
+        `⚙️ *Ayarlar:*`,
+        `  /subscribe — Bildirimleri aç`,
+        `  /unsubscribe — Bildirimleri kapat`,
       ].join("\n"),
       { parse_mode: "Markdown" }
     );
@@ -204,6 +213,43 @@ export function createBot(token: string, state: OrchestratorState) {
       parse_mode: "Markdown",
     });
     state.manualResearchRequested = true;
+  });
+
+  // /analyze — GSC keyword analizi
+  bot.command("analyze", async (ctx: Context) => {
+    const chatId = ctx.chat.id.toString();
+    const admins = (process.env.TELEGRAM_ADMIN_CHAT_IDS || "").split(",");
+    if (!admins.includes(chatId)) {
+      ctx.reply("⛔ Bu komut sadece admin içindir.");
+      return;
+    }
+    ctx.reply("📊 *Keyword analizi başlatılıyor...* (GSC + ranking check)", {
+      parse_mode: "Markdown",
+    });
+    state.manualAnalyzeRequested = true;
+  });
+
+  // /optimize [slug] — belirli bir makaleyi optimize et
+  bot.command("optimize", async (ctx: Context) => {
+    const chatId = ctx.chat.id.toString();
+    const admins = (process.env.TELEGRAM_ADMIN_CHAT_IDS || "").split(",");
+    if (!admins.includes(chatId)) {
+      ctx.reply("⛔ Bu komut sadece admin içindir.");
+      return;
+    }
+    // Extract slug from message: "/optimize my-article-slug"
+    const msg = (ctx.message as any)?.text || "";
+    const parts = msg.split(/\s+/);
+    if (parts.length < 2) {
+      ctx.reply(
+        "Kullanım: `/optimize [slug]`\n\nÖrnek: `/optimize probiotica-stemming-darm-hersen-connectie`",
+        { parse_mode: "Markdown" }
+      );
+      return;
+    }
+    const slug = parts[1].trim();
+    ctx.reply(`🔧 *Optimize ediliyor:* \`${slug}\`...`, { parse_mode: "Markdown" });
+    state.manualOptimizeSlug = slug;
   });
 
   // /report

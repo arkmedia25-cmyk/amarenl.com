@@ -26,8 +26,11 @@ import { createBot, notifySubscribers } from "./telegram-bot.js";
 import {
   runPublishOnly,
   runResearchOnly,
+  runAnalyzeOnly,
+  runOptimizeArticle,
   runBuildCheck,
 } from "./orchestrator.js";
+import type { OrchestratorState } from "./orchestrator.js";
 import type { OrchestratorState } from "./orchestrator.js";
 import type { Telegraf } from "telegraf";
 
@@ -35,6 +38,8 @@ import type { Telegraf } from "telegraf";
 const state: OrchestratorState = {
   manualPublishRequested: false,
   manualResearchRequested: false,
+  manualAnalyzeRequested: false,
+  manualOptimizeSlug: null,
   subscribers: [],
   pipelineActive: false,
 };
@@ -106,6 +111,17 @@ cron.schedule("*/30 * * * * *", async () => {
     state.manualResearchRequested = false;
     console.log("🔔 Manuel research tetiklendi (Telegram)");
     await runResearchOnly(bot, state);
+  }
+  if (state.manualAnalyzeRequested) {
+    state.manualAnalyzeRequested = false;
+    console.log("🔔 Manuel keyword analizi tetiklendi (Telegram)");
+    await runAnalyzeOnly(bot, state);
+  }
+  if (state.manualOptimizeSlug) {
+    const slug = state.manualOptimizeSlug;
+    state.manualOptimizeSlug = null;
+    console.log(`🔔 Manuel optimize tetiklendi: ${slug}`);
+    await runOptimizeArticle(slug, bot, state);
   }
 });
 

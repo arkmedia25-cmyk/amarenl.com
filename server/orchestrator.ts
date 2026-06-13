@@ -19,6 +19,8 @@ const execAsync = promisify(exec);
 export interface OrchestratorState {
   manualPublishRequested: boolean;
   manualResearchRequested: boolean;
+  manualAnalyzeRequested: boolean;
+  manualOptimizeSlug: string | null;
   subscribers: string[];
   pipelineActive: boolean;
 }
@@ -577,6 +579,194 @@ export async function runResearchOnly(
   state.pipelineActive = false;
   log("INFO", "orchestrator", "research_complete");
 }
+
+// --- GSC Data & Keyword Analysis ---
+
+/**
+ * Step: Analyze search performance from GSC CSV data
+ * If no GSC CSV exists, uses web_search to find ranking insights.
+ */
+async function stepAnalyzeKeywords(
+  bot: Telegraf | null,
+  state: OrchestratorState
+): Promise<{ success: boolean; opportunities: number; error?: string }> {
+  log("INFO", "keyword-analyzer", "start");
+
+  try {
+    const hasGscData = existsSync(rel("content/gsc-data"));
+    const gscFiles = hasGscData
+      ? readdirSync(rel("content/gsc-data")).filter((f) => f.endsWith(".csv"))
+      : [];
+
+    const systemPrompt = [
+      "Jij bent de AmareNL SEO Analyst. Je analyseert zoekwoorddata en optimaliseert bestaande content.",
+      "",
+      "Je hebt toegang tot:",
+      "- Google Search Console export data (CSV in content/gsc-data/)",
+      "- Alle blog artikelen (lib/blog.ts en content/blog/*.mdx)",
+      "- Web search voor actuele ranking checks",
+      "",
+      "=== JOUW TAAK ===",
+      "1. Lees eventuele GSC CSV data uit content/gsc-data/",
+      "2. Lees alle blog artikelen (slugs, titles, target keywords)",
+      "3. Gebruik web_search om te checken of onze artikelen ranken voor hun target keywords",
+      "4. Identificeer kansen:",
+      "   - Keywords met hoge impressies maar lage CTR → meta description verbeteren",
+      "   - Keywords die bijna ranken (positie 4-15) → content uitbreiden",
+      "   - Nieuwe long-tail varianten die we nog niet targeten",
+      "5. Schrijf een analyse rapport naar content/keyword-analysis.md",
+      "6. Stuur een Telegram samenvatting met top 3 actiepunten",
+      "",
+      "=== BELANGRIJK ===",
+      "- Focus op HOLLANDSTALIGE keywords",
+      "- Geef concrete aanbevelingen per artikel",
+      "- Prioriteer op basis van verwacht traffic impact",
+    ].join("\n");
+
+    const userMessage = [
+      "📊 **ANALYSE ZOEKPRESTATIES**",
+      "",
+      `GSC data beschikbaar: ${gscFiles.length > 0 ? gscFiles.join(", ") : "GEEN — gebruik web search"}`,
+      "",
+      "Stappen:",
+      `1. ${gscFiles.length > 0 ? "Lees GSC CSV uit content/gsc-data/" + gscFiles[0] : "Gebruik web_search om ranking data te verzamelen"}`,
+      "2. Lees lib/blog.ts — lijst alle artikelen met hun slugs en titels",
+      "3. Voor de top 10 meest belangrijke artikelen: check via web_search of ze ranken",
+      "4. Identificeer 3-5 concrete verbeterkansen",
+      "5. Schrijf analyse naar content/keyword-analysis.md",
+      "6. Stuur samenvatting via send_telegram",
+      "",
+      "Gebruik de tools! read_file, web_search, write_file, send_telegram.",
+    ].join("\n");
+
+    await runClaudeWithTools(systemPrompt, userMessage, bot, state.subscribers);
+    log("INFO", "keyword-analyzer", "complete");
+    return { success: true, opportunities: 0 };
+  } catch (err: any) {
+    log("ERROR", "keyword-analyzer", "failed", { error: err.message });
+    return { success: false, opportunities: 0, error: err.message };
+  }
+}
+
+/**
+ * Step: Optimize a specific article based on keyword insights
+ */
+async function stepOptimizeArticle(
+  slug: string,
+  bot: Telegraf | null,
+  state: OrchestratorState
+): Promise<{ success: boolean; error?: string }> {
+  log("INFO", "content-optimizer", "start", { slug });
+
+  try {
+    const systemPrompt = [
+      "Jij bent de AmareNL Content Optimizer. Je verbetert bestaande blog artikelen voor betere SEO-GEO prestaties.",
+      "",
+      "=== REGELS ===",
+      "- Behoud de originele structuur en toon",
+      "- Verbeter meta description, H1, H2's waar nodig",
+      "- Voeg ontbrekende FAQ vragen toe",
+      "- Update interne links naar relevante productpagina's",
+      "- Behoud de NVWA disclaimer",
+      "- Verwijder GEEN bestaande content, alleen toevoegen/verbeteren",
+      "- Schrijf in het Nederlands",
+    ].join("\n");
+
+    const userMessage = [
+      `🔧 **OPTIMALISEER ARTIKEL: ${slug}**`,
+      "",
+      "Stappen:",
+      `1. Lees het MDX bestand: content/blog/${slug}.mdx`,
+      `2. Lees de blog entry in lib/blog.ts voor slug "${slug}"`,
+      "3. Lees content/keyword-analysis.md voor de laatste keyword inzichten",
+      `4. Check via web_search: "site:amarenl.com ${slug}" en relevante keywords`,
+      "5. Identificeer verbeterpunten:",
+      "   - Meta description (max 155 chars, hoofdkeyword vooraan)",
+      "   - H1/H2 structuur (keyword in eerste H2)",
+      "   - FAQ sectie (minstens 3 vragen met 40-60 woord antwoorden)",
+      "   - Interne links (2+ naar andere Amare pagina's)",
+      "   - Content lengte (target: 1200+ woorden)",
+      "6. Update het MDX bestand MET verbeteringen",
+      "7. Update de blog entry in lib/blog.ts (title, excerpt, metaDescription indien gewijzigd)",
+      "8. Stuur een Telegram bericht met wat je hebt verbeterd",
+      "",
+      "Gebruik de tools! read_file, web_search, write_file, send_telegram.",
+    ].join("\n");
+
+    await runClaudeWithTools(systemPrompt, userMessage, bot, state.subscribers);
+    log("INFO", "content-optimizer", "complete", { slug });
+    return { success: true };
+  } catch (err: any) {
+    log("ERROR", "content-optimizer", "failed", { slug, error: err.message });
+    return { success: false, error: err.message };
+  }
+}
+
+/**
+ * Run keyword analysis (manual /analyze trigger)
+ */
+export async function runAnalyzeOnly(
+  bot: Telegraf | null,
+  state: OrchestratorState
+): Promise<void> {
+  if (state.pipelineActive) {
+    log("WARN", "orchestrator", "pipeline_busy");
+    return;
+  }
+  state.pipelineActive = true;
+
+  if (bot && state.subscribers.length > 0) {
+    await notifySubscribers(bot, state.subscribers, "📊 *Keyword analizi başladı...* (GSC + ranking check)");
+  }
+
+  const result = await stepAnalyzeKeywords(bot, state);
+
+  if (bot && state.subscribers.length > 0) {
+    if (result.success) {
+      await notifySubscribers(
+        bot,
+        state.subscribers,
+        "✅ *Analiz tamamlandı!* Rapport: content/keyword-analysis.md\nKullanım: `/optimize [slug]` ile bir makaleyi güncelleyebilirsin."
+      );
+    } else {
+      await notifySubscribers(bot, state.subscribers, `🚨 *Analiz hatası:* ${result.error}`);
+    }
+  }
+
+  state.pipelineActive = false;
+}
+
+/**
+ * Run article optimization (manual /optimize trigger)
+ */
+export async function runOptimizeArticle(
+  slug: string,
+  bot: Telegraf | null,
+  state: OrchestratorState
+): Promise<void> {
+  if (state.pipelineActive) {
+    log("WARN", "orchestrator", "pipeline_busy");
+    return;
+  }
+  state.pipelineActive = true;
+
+  if (bot && state.subscribers.length > 0) {
+    await notifySubscribers(bot, state.subscribers, `🔧 *Optimiseer:* \`${slug}\`...`);
+  }
+
+  const result = await stepOptimizeArticle(slug, bot, state);
+
+  if (bot && state.subscribers.length > 0) {
+    if (result.success) {
+      await notifySubscribers(bot, state.subscribers, `✅ *${slug}* geoptimaliseerd!`);
+    } else {
+      await notifySubscribers(bot, state.subscribers, `🚨 *Optimalisatie fout:* ${result.error}`);
+    }
+  }
+
+  state.pipelineActive = false;
+}
+
 export async function runBuildCheck(): Promise<{ ok: boolean; output: string }> {
   try {
     const cmd = existsSync(rel("node_modules/.bin/next"))
