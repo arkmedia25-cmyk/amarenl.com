@@ -175,7 +175,9 @@ async function executeTool(
 
     case "write_file": {
       const path = input.path as string;
-      const content = input.content as string;
+      const content = (input.content as string) || "";
+      if (!path) return "ERROR: path is required";
+      if (!content) return "ERROR: content is empty — provide the full file content";
       writeText(path, content);
       return `OK: Written ${content.length} chars to ${path}`;
     }
