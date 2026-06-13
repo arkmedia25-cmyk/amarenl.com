@@ -312,11 +312,8 @@ async function runClaudeWithTools(
       break;
     }
 
-    // Execute tools
+    // Execute tools — push tool_results first, text after (API pairing requirement)
     const toolResults: MessageParam["content"] = [];
-    if (text) {
-      toolResults.push({ type: "text", text });
-    }
 
     for (const tool of toolUses) {
       log("INFO", "orchestrator", "tool_exec", { tool: tool.name, input: tool.input });
@@ -327,6 +324,11 @@ async function runClaudeWithTools(
         tool_use_id: tool.id,
         content: result,
       });
+    }
+
+    // Push any text after tool_results to avoid API pairing issues
+    if (text) {
+      toolResults.push({ type: "text", text });
     }
 
     messages.push({ role: "assistant", content: response.content });
