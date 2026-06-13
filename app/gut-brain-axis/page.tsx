@@ -48,12 +48,13 @@ const faqs = [
 
 export default function GutBrainAxisPage() {
   const articleSchema = generateArticleSchema({
-    name: "Darm-Hersen-As: De Wetenschap Achter Je Tweede Brein",
+    title: "Darm-Hersen-As: De Wetenschap Achter Je Tweede Brein",
     description:
       "Ontdek hoe je darmen en hersenen communiceren via de nervus vagus. 90% van serotonine wordt in je darm gemaakt. Wetenschap, probiotica en praktische tips.",
     image: "https://amarecdn.azureedge.net/webassets/web/prod/products/Amare-Mentabiotics-EU-800.jpg",
     datePublished: "2026-05-18",
     author: "AmareNL Redactie",
+    slug: "gut-brain-axis",
   });
 
   const combinedSchema = combineSchemas(
