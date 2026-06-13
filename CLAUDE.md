@@ -329,47 +329,6 @@ Urgentie CTA:    "Profiteer nu van €8 korting →" → affiliate link + kortin
 
 ## 8. BLOG SYSTEEM
 
-### ⚠️ DUAL DATA LAYER — KRİTİK
-
-Blog render sistemi **İKİ KATMANLI** çalışır. Her makale iki yerde yaşar:
-
-| Katman | Konum | Ne işe yarar |
-|--------|-------|-------------|
-| **1. Render HTML** | `lib/blog.ts` → `blogPosts[]` | **Sayfada render edilen içerik budur.** MDX değil! |
-| **2. Ürün linkleri** | `lib/blog.ts` → `articleProductMap{}` | `linkifyProductMentions()` buradan okuyup linkleri basar |
-| **3. MDX (referans)** | `content/blog/[slug].mdx` | SEO frontmatter + yedek. `<AffiliateCTA>` component'i **MDX'te çalışmaz!** |
-
-**Önemli:** `<AffiliateCTA>` sadece MDX içinde yazılır ama sayfada **render edilmez**. Ürün linkleri `linkifyProductMentions()` tarafından otomatik oluşturulur.
-
-### Yeni Makale Yayınlama Checklist (HER SEFERİNDE)
-
-```
-[ ] 1. content/blog/[slug].mdx oluştur (frontmatter + AffiliateCTA etiketiyle)
-[ ] 2. lib/blog.ts → blogPosts[] dizisine HTML entry ekle (en başa, en yeni tarihli)
-[ ] 3. lib/blog.ts → articleProductMap{} içine slug için ürün linkleri ekle
-[ ] 4. content/article-queue.md işaretle (✅)
-[ ] 5. npm run build (hata varsa düzelt)
-[ ] 6. git add + commit + push origin main
-[ ] 7. vercel --prod --yes
-[ ] 8. curl ile canlıyı kontrol et
-```
-
-### Ürün Linkleme Sistemi
-
-```typescript
-// lib/blog.ts içinde:
-linkifyProductMentions(post.content, post.slug)  // HTML içindeki ürün isimlerini linke çevirir
-getProductLinksForArticle(post.slug)             // Sayfa altındaki ürün kartları
-```
-
-**Nasıl çalışır:** `linkifyProductMentions()` HTML içinde `<strong>ÜrünAdı</strong>` ve standalone `ÜrünAdı` pattern'lerini arar, `articleProductMap[slug]` ile eşleştirip affiliate linke çevirir. "Amare ÜrünAdı" prefix'ini de tanır (fix: 19 May 2026).
-
-**Dikkat edilecekler:**
-- Ürün isimleri HTML içinde `<strong>` ile vurgulanmış olmalı
-- `articleProductMap`'teki isimlerle birebir aynı olmalı ("Amare" prefix'i opsiyonel)
-- Sadece `isInternal: false` olanlar doğrudan amare.com'a linklenir
-- `BlogAccordion` component'i de `linkifyProductMentions()` çağırmalı (fix: 19 May 2026)
-
 ### MDX bestandsstructuur
 Alle blogposts staan in `/content/blog/[slug].mdx`
 
@@ -758,9 +717,9 @@ Fase 5 — Categoriepagina's
   [x] /privacy-beleid/
 
 Fase 6 — Schema & Analytics
-  [ ] JSON-LD per paginatype
-  [ ] Google Analytics 4 integratie
-  [ ] Google Search Console verificatie
+  [x] JSON-LD per paginatype (Organization, Article, FAQ, Product, BreadcrumbList)
+  [x] Google Analytics 4 integratie (GT-MKTPDM2M)
+  [x] Google Search Console verificatie (googlebc32e3c9c012a1b4.html)
 
 Fase 7 — Automatisering (2026-05-09)
   [x] article-queue.md met 20 geplande artikelen
@@ -769,232 +728,82 @@ Fase 7 — Automatisering (2026-05-09)
   [x] blog-writer skill
   [x] cron: ma/wo/vr 9:57 auto-publish
   [x] Tailwind animaties gefixt (slide-up, fade-in, bounce-slow)
+
+Fase 8 — Deep Product Pages (TASK 2.1) — 2026-05-17
+  [x] /happy-juice-pack — 1000+ woorden, Product+FAQ+Breadcrumb schema, 3 CTA posities
+  [x] /mentabiotics — Cerebiome® blend, prebiotica, magnesium
+  [x] /energy — Energy+ natuurlijke cafeïne, vitamine C, L-glycine
+  [x] /hl5 — HL5 2-Pack collageen, 5g gehydrolyseerd collageen Type 1&3
+  [x] /origin — Vegan proteïne shake, 23g plantaardig eiwit
+  [x] /restore — Spijsverteringsenzymen, 5 probiotica stammen, lactase
+  [x] /sunrise — 22 superfoods, 9 vitamines, morning blend
+  [x] /fit20 — wei-isolaat + collageen, 21 aminozuren, magnesiumcitraat
+  [x] /sunset — omega-3 avondformule, EPA 520 mg, DHA 223 mg, D3/A/E, astaxanthine
+  [ ] /[10e product] — Skin to Mind of VitaGBX
+
+Fase 9 — Data & Infrastructuur — 2026-05-17
+  [x] 43 producten in individuele data/products/[slug].json
+  [x] data/products.json geaggregeerde index (generate-product-index.ts)
+  [x] Statische JSON import in lib/products.ts (client/server compatibel)
+  [x] EFSA compliance scanner (scripts/efsa-audit.js)
+  [x] Product URL validator (scripts/validate-products.js)
+  [x] PostNL/shipping claims verwijderd (Amare handelt verzending)
+  [x] Product dropdown menu in Header (desktop + mobiel, click-outside)
+  [x] Affiliate URL fixes: ignite-him, ignite-her, skin-to-mind-neunight
+  [~] verdikkend-serum-voor-fijn-haar → 500 error (Amare server-side)
 ```
 
 ---
 
 *CLAUDE.md versie: 2.8 | Project: amarenl.com | Framework: Next.js 16 App Router | Taal: NL*
-*Laatste update: 19 mei 2026 (Product Link Fix + Makale #5) — Dual data layer doc ✅ | linkifyProductMentions fix ✅ | BlogAccordion fix ✅*
+*Laatste update: 18 mei 2026 — FIT20/Sunset ✅ | 3 Pillar Pages in progress*
 
 ---
 
-## 21. SESSIE — 18 mei 2026 (Blog Pipeline & Agent Keywords)
+## 19. SESSIE STATUS — 13 juni 2026
 
-### Voltooid deze sessie
-- [x] amarenl-agent-keywords.md projeye eklendi (12 makale prompt'u)
-- [x] Makale #1: Vitamine D Tekort Symptomen → Sunrise ✅ (MDX + blog.ts)
-- [x] Yayın takvimi: 2 günde bir (eski Ma/Wo/Vr yerine)
-- [x] Cron: `57 9 */2 * *` → her 2 günde bir saat 9:57'de yeni makale
-- [x] Build başarılı (sitemap güncellendi)
+### Voltooid (deze en vorige sessies)
+- [x] Fase 1-9 t/m FIT20/Sunset (zie boven)
+- [x] 9 deep product pages (1000+ woorden, Product+FAQ+Breadcrumb schema)
+- [x] 43 producten database (individuele JSON + geaggregeerde index)
+- [x] 6 categoriepagina's + 2 speciale routes (/go, /go/[product])
+- [x] Build: 0 errors, 0 ESLint warnings, TypeScript strict clean
 
-### 12 Makale Kuyruğu (amarenl-agent-keywords.md)
-| # | Keyword | Ürün | Tarih |
-|---|---------|------|-------|
-| 1 | vitamine D tekort symptomen | Sunrise | ✅ 19 mei |
-| 2 | beste probiotica 2026 | MentaBiotics | 21 mei |
-| 3 | collageen supplement kopen | HL5 | 23 mei |
-| 4 | ashwagandha kopen nederland | EDGE+ | 25 mei |
-| 5 | gut brain connectie | Happy Juice Pack | 27 mei |
-| 6 | haaruitval supplement vrouwen | HL5 | 29 mei |
-| 7 | focus supplement | EDGE+ | 31 mei |
-| 8 | hormoonbalans supplement vrouwen | Ignite HER | 2 jun |
-| 9 | darmflora verbeteren | Restore | 4 jun |
-| 10 | supplement routine ochtend | Triangle Xtreme | 6 jun |
-| 11 | plantaardige proteïne shake kopen | Origin | 8 jun |
-| 12 | menopauze supplement | Ignite HER | 10 jun |
+### 🆕 Content Orchestrator (13 juni 2026)
+- [x] `content-orchestrator` skill — ana orkestratör, tüm pipeline'ı yönetir
+- [x] `keyword-analyzer` skill — anahtar kelime analizi, GEO skoru
+- [x] `traffic-monitor` skill — GA4 trafik ve dönüşüm izleme
+- [x] `server/` paketi — Node.js cron + Telegram bot
+  - `server/index.ts` — cron scheduler (Pzt/Crş/Cum + günlük build check)
+  - `server/orchestrator.ts` — pipeline adımları (research, publish, report)
+  - `server/telegram-bot.ts` — Telegram kontrol botu (9 komut)
+  - `server/health.ts` — sistem sağlık kontrolü
+- [x] 20 makale kuyrukta (content/article-queue.md)
 
-### Huidige staat
-- 11 blog MDX dosyası (6 eski + 5 agent serisi)
-- 27 blog referansı lib/blog.ts'de (16 eski + 5 agent serisi + 6 pack)
-- 43 ürün data/products/ içinde
-- Cron: session-only (Claude çıkınca durur — persistent için ayarlanmalı)
+### Kurulum gerekenler (sunucu için)
+- [ ] `server/.env` oluştur (ANTHROPIC_API_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_ADMIN_CHAT_IDS)
+- [ ] `cd server && npm install`
+- [ ] Sunucuda `npm start` ile başlat
+- [ ] @BotFather'dan Telegram bot token'ı al
+- [ ] Chat ID'ni `.env`'e ekle
 
----
+### Hala eksik
+**İçerik:**
+- [ ] 3 pillar pages — `/gut-brain-axis`, `/probiotica-stammen`, `/adaptogenen` (dosyalar var, kontrol edilmeli)
+- [ ] 20 makale kuyrukta bekliyor — orchestrator çalışınca otomatik yazılacak
+- [ ] 1 deep product page daha (Skin to Mind veya VitaGBX)
 
-## 22. SESSIE — 19 mei 2026 (Product Link Fix + Makale #5)
+**Infrastructuur:**
+- [ ] E-mail API route (/api/subscribe)
+- [ ] GitHub → Vercel auto-deploy
+- [ ] GA4 conversion tracking
+- [ ] verdikkend-serum-voor-fijn-haar → 500 (Amare server-side)
 
-### Voltooid deze sessie
-- [x] Makale #5: Gut-Brain Connectie → Happy Juice Pack ✅ (MDX + blog.ts + deploy)
-- [x] **BUG FIX — Ürün linkleri görünmüyordu:**
-  - `linkifyProductMentions()` "Amare" prefix'ini tanımıyordu → `<strong>Amare MentaBiotics</strong>` eşleşmiyordu
-  - Çözüm: Fonksiyona `<strong>Amare ${productName}</strong>` ve standalone `Amare ${productName}` regex'leri eklendi
-  - `BlogAccordion` hiç `linkifyProductMentions()` çağırmıyordu → blog listesinde linkler eksikti
-  - Çözüm: `BlogAccordion`'a `linkifyProductMentions(post.content, post.slug)` eklendi
-- [x] **GSC key bozuk** — ASN.1 seviyesinde kırık, yeni key gerekli (Google Cloud Console → yeni JSON key)
-- [x] CLAUDE.md güncellendi — Dual data layer + makale checklist + ürün linkleme kuralları eklendi
-
-### Kritik Dersler
-1. **Makale HTML içeriğindeki ürün isimleri `articleProductMap` ile birebir eşleşmeli.** "Amare" prefix'i artık tolere ediliyor.
-2. **Her makale yayınında 3 dosya değişir:** MDX + blog.ts (hem blogPosts hem articleProductMap)
-3. **İki farklı render noktası var:** `[slug]/page.tsx` VE `BlogAccordion` — ikisi de `linkifyProductMentions` çağırmalı.
-4. **MDX'teki `<AffiliateCTA>` component'i çalışmaz** — sayfalar blogPosts HTML'inden render ediliyor.
-
-### 12 Makale Kuyruğu
-| # | Keyword | Ürün | Tarih | Status |
-|---|---------|------|-------|--------|
-| 1 | vitamine D tekort symptomen | Sunrise | 19 mei | ✅ |
-| 2 | beste probiotica 2026 | MentaBiotics | 21 mei | ✅ |
-| 3 | collageen supplement kopen | HL5 2-Pack | 23 mei | ✅ |
-| 4 | ashwagandha kopen nederland | EDGE+ | 25 mei | ✅ |
-| 5 | gut brain connectie | Happy Juice Pack | 27 mei | ✅ |
-| 6 | haaruitval supplement vrouwen | HL5 | 29 mei | ✅ |
-| 7 | focus supplement | EDGE+ | 31 mei | ✅ |
-| 8 | hormoonbalans supplement vrouwen | Ignite HER | 2 jun | ✅ |
-| 9 | darmflora verbeteren | Restore | 4 jun | ✅ |
-| 10 | supplement routine ochtend | Triangle Xtreme | 6 jun | ✅ |
-| 11 | plantaardige proteïne shake kopen | Origin | 8 jun | - [ ] |
-| 12 | menopauze supplement | Ignite HER | 10 jun | - [ ] |
-
----
-
-## 19. SESSIE EINDE — 9 mei 2026
-
-### Voltooid deze sessie
-- [x] Fase 6 — Schema & Analytics (JSON-LD, GA4, Search Console)
-- [x] Fase 7 — Affiliate Tracking (3 katman: localStorage + /go + return banner)
-- [x] PromoCarousel (3 slide: Mei promo / Sunset / Rootist)
-- [x] CampaignBanner güncellendi (gratis verzending + 10% abonnement)
-- [x] .env.local met GA4 ID GT-MKTPDM2M
-- [x] README.md herschreven
-- [x] affiliate-tracking.md v1.1
-
-### Nog te doen: 5 artikel schrijven (SEO-GEO-AEO)
-3. Probiotica & stemming (gut-brain) — MentaBiotics
-4. Vitamine D tekort in Nederland — Sunrise
-5. Beste supplementen voor haar & nagels — HL5, Rootist
-6. IJzer & vermoeidheid — VitaGBX
-7. Natuurlijke vitamine C vs synthetisch — Sunrise
-
-### Huidige staat
-- 17 blog artikelen in lib/blog.ts
-- 40 producten in lib/products.ts
-- 5 categoriepagina's + /go + /go/[product]
-- 3 skills (.claude/skills/)
-- cron: article-scheduler ma/wo/vr 9:57
-- 3-katman affiliate tracking
-- PromoCarousel + CampaignBanner
-
----
-
-## 20. HOTFIX SESSION — 9 mei 2026 (Stabilisatie)
-
-### Fase 1: Tekstuele Fouten
-| Bestand | Fout | Oplossing |
-|---------|------|----------|
-| HeroSection.tsx | "energie ve focus" | "energie en focus" ✓ |
-| NewsletterForm.tsx | "nieuwsbrief ve blijf" | "nieuwsbrief en blijf" ✓ |
-| FAQSection.tsx | "Alles ne wat je" | "Alles wat je" ✓ |
-| BlogPreview.tsx | "as ve mentaal welzijn" | "as en mentaal welzijn" ✓ |
-| HeroSection.tsx | Image path: `/amare_hero_wellness_science_1778148263726.png` | `/images/hero-wellness.png` ✓ |
-
-### Fase 2: Security Fixes (CRITICAL)
-| Issue | Bestand | Oplossing | Status |
-|-------|---------|-----------|--------|
-| 5 npm vulnerabilities | package.json | `npm audit fix --force` → Next.js 16.2.6 ✓ | ✅ |
-| Next.js 16 breaking change | app/layout.tsx | Created ClientProviders wrapper for `ssr: false` ✓ | ✅ |
-| Debug code in production | NewsletterForm.tsx L13 | Removed `console.log()`, added form validation ✓ | ✅ |
-| XSS via dangerouslySetInnerHTML | app/blogs/nieuws/[slug]/page.tsx L110 | Added DOMPurify.sanitize() ✓ | ✅ |
-| XSS via dangerouslySetInnerHTML | components/blog/BlogAccordion.tsx L55 | Added DOMPurify.sanitize() ✓ | ✅ |
-
-### Code Changes Summary
-1. **app/layout.tsx** — Removed `ssr: false` dynamic import (Next.js 16 incompatible)
-2. **components/layout/ClientProviders.tsx** — NEW: Client Component wrapper for ExitIntentPopup
-3. **components/sections/NewsletterForm.tsx** — Removed debug log, added email validation
-4. **app/blogs/nieuws/[slug]/page.tsx** — Added DOMPurify import + sanitization
-5. **components/blog/BlogAccordion.tsx** — Added DOMPurify import + sanitization
-6. **package.json** → **package-lock.json** — Updated via `npm audit fix --force`
-
-### Build Status ✅
-- ✅ Build: Succesvol (Next.js 16.2.6)
-- ✅ ESLint: 0 waarschuwingen
-- ✅ TypeScript: Strict mode clean
-- ✅ Dev Server: Running (localhost:3000)
-- ✅ Sitemap: Automatisch gegenereerd (31 routes)
-- ✅ No vulnerabilities (high-severity)
-
-### Security Status
-- ✅ XSS protection: HTML sanitization enabled
-- ✅ Production debug code: Removed
-- ✅ npm dependencies: Updated to latest (Next.js 16)
-- ✅ Console clean in browser
-- ⚠️ Newsletter: Still non-functional (Faz 2 todo)
-- ⚠️ Email credentials: Missing in .env.local (Faz 2 todo)
-
-### Deploy Ready: PRODUCTION STABLE ✅
-- [x] Alle tekstuele fouten gecorrigeerd
-- [x] Alle security fixes applied
-- [x] XSS vulnerabilities patched
-- [x] Debug code removed
-- [x] npm audit critical fixed
-- [x] Build succeeds without errors
-- [x] Dev server runs without errors
-- [x] CSS/Styling intact
-- [x] JavaScript/React geen errors
-- [x] Responsive design intact
-- [x] Mobile CTA werkt
-- [x] Affiliate links operationeel
-
-### Volgende Fases (Optional — nog niet gestart)
-- **Faz 2:** Newsletter integration (Mailchimp setup)
-- **Faz 3:** Affiliate URL validation (40 product links)
-- **Faz 4:** Blog image path validation
-
-### Volgende Stap
-Site is **PRODUCTION-STABLE**. Pipeline: 11/12 artikelen live, #12 (menopauze) laatste.
-
----
-
-## 23. SESSIE — 27 mei 2026 (Artikelen #6-#11 + Broken Link Fix)
-
-### Voltooid deze sessie
-- [x] Makale #6: Haaruitval Supplement Vrouwen → HL5 ✅
-- [x] Makale #7: Focus Supplement → EDGE+ ✅
-- [x] Makale #8: Hormoonbalans Supplement Vrouwen → Ignite for HER ✅
-- [x] Makale #9: Darmflora Verbeteren → Restore ✅
-- [x] Makale #10: Supplement Routine Ochtend → Triangle of Wellness ✅
-- [x] Makale #11: Plantaardige Proteïne Shake Kopen → Origin ✅
-- [x] **BROKEN LINK CLEANUP:** 6 broken affiliate URLs verwijderd uit articleProductMap
-  - `/vita-gbx` → 404 (verwijderd)
-  - `/amare-edge` → 404 (verwijderd)
-  - `/amare-on` → 404 (verwijderd, 2 entries)
-  - `/happy-lifestyle-pack` → 404 (verwijderd, 2 entries)
-  - `/triangle-of-wellness` → 404 (verwijderd — alleen `-xtreme` variant werkt)
-
-### 12 Makale Pipeline Status
-| # | Keyword | Ürün | Tarih | Status |
-|---|---------|------|-------|--------|
-| 1 | vitamine D tekort symptomen | Sunrise | 19 mei | ✅ |
-| 2 | beste probiotica 2026 | MentaBiotics | 21 mei | ✅ |
-| 3 | collageen supplement kopen | HL5 2-Pack | 23 mei | ✅ |
-| 4 | ashwagandha kopen nederland | EDGE+ | 25 mei | ✅ |
-| 5 | gut brain connectie | Happy Juice Pack | 27 mei | ✅ |
-| 6 | haaruitval supplement vrouwen | HL5 | 29 mei | ✅ |
-| 7 | focus supplement | EDGE+ | 31 mei | ✅ |
-| 8 | hormoonbalans supplement vrouwen | Ignite HER | 2 jun | ✅ |
-| 9 | darmflora verbeteren | Restore | 4 jun | ✅ |
-| 10 | supplement routine ochtend | Triangle Xtreme | 6 jun | ✅ |
-| 11 | plantaardige proteïne shake kopen | Origin | 8 jun | ✅ |
-| 12 | menopauze supplement | Ignite HER | 10 jun | 🔜 |
-
-### Huidige staat
-- **28 blog artikelen** in lib/blog.ts (17 origineel + 11 pipeline)
-- **9 working affiliate URLs** geverifieerd (200 OK)
-- **5 artikel verouderde links** verwijderd uit articleProductMap
-- Alle 11 pipeline artikelen live op amarenl.com ✅
-- Sitemap: 53 routes gegenereerd
-- Build: Succesvol (Next.js 16.2.6)
-- 1 artikel resterend: #12 menopauze supplement (10 jun)
-
-### Verificatie URLs
-```
-✅ amareedge-plus-mango     ✅ happy-juice-edge-plus-mango  ✅ hl5-peach-2pack
-✅ mentabiotics             ✅ mentafocus                   ✅ nitro-xtreme
-✅ sunset                   ✅ triangle-of-wellness-xtreme   ✅ triangle-of-wellness-xtreme-2pack
-✅ ignite-for-her           ✅ restore                      ✅ kyani-origin-chocolate
-❌ vita-gbx (404)          ❌ amare-edge (404)             ❌ amare-on (404)
-❌ happy-lifestyle-pack (404) ❌ triangle-of-wellness (404)
-```
-
----
-*CLAUDE.md versie: 2.9 | Project: amarenl.com | Framework: Next.js 16 App Router | Taal: NL*
-*Laatste update: 27 mei 2026 — Articles #6-#11 ✅ | Broken link cleanup ✅ | 11/12 pipeline live*
+### Huidige staat — Cijfers
+- **43** producten in database (data/products/*.json + products.json)
+- **17** blog artikelen in lib/blog.ts, 6 MDX in content/blog/
+- **9** deep product pages (1000+ woorden) + 3 pillar pages (dosyalar var)
+- **6** categoriepagina's + 27 app routes
+- **6** skills (.claude/skills/: orchestrator, scheduler, writer, research, keyword, traffic)
+- **1** server paketi (server/: orchestrator + Telegram bot)
+- **20** makale kuyrukta (content/article-queue.md)

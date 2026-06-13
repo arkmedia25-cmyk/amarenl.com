@@ -1,6 +1,6 @@
 # AmareNL.com — Affiliate Bridge Site
 
-> Next.js 14 | TypeScript | Tailwind CSS | Vercel
+> Next.js 16 | TypeScript | Tailwind CSS | Vercel
 
 AmareNL.com is een Nederlandse affiliate bridge site die bezoekers informeert over natuurlijke wellness supplementen en doorstuurt naar Amare.com.
 
@@ -10,6 +10,7 @@ AmareNL.com is een Nederlandse affiliate bridge site die bezoekers informeert ov
 
 - Productie: **https://amarenl.com**
 - Amare affiliate ID: **2075008**
+- Analytics: GA4 (GT-MKTPDM2M)
 
 ---
 
@@ -19,7 +20,10 @@ AmareNL.com is een Nederlandse affiliate bridge site die bezoekers informeert ov
 npm run dev        # localhost:3000
 npm run build      # Productie build
 npm run lint       # ESLint
-npm run sitemap    # Sitemap genereren
+npx next-sitemap   # Sitemap genereren
+npx tsx scripts/generate-product-index.ts  # Product index herbouwen
+npx tsx scripts/efsa-audit.js              # EFSA compliance scan
+npx tsx scripts/validate-products.js       # Affiliate URL validatie
 ```
 
 ---
@@ -27,84 +31,168 @@ npm run sitemap    # Sitemap genereren
 ## Structuur
 
 ```
-app/                    # Next.js App Router
-├── page.tsx            # Homepage
-├── layout.tsx          # Root layout (GA4, fonts, schema, affiliate tracking)
-├── blogs/nieuws/       # Blog systeem (28 artikelen — 17 origineel + 11 pipeline)
-├── go/                 # Akıllı affiliate yönlendirme
-├── collections/        # Collectie pagina's
-├── supplementen/       # Categoriepagina's
-├── gewichtsbeheer/
-├── schoonheid/
+app/                        # Next.js App Router (14 routes)
+├── page.tsx                # Homepage
+├── layout.tsx              # Root layout (GA4, fonts, schema, affiliate tracking)
+├── blogs/nieuws/           # Blog systeem (17 artikelen)
+├── go/                     # Akıllı affiliate yönlendirme
+├── collections/            # Collectie pagina
+├── happy-juice-pack/       # Deep product page (1000+ woorden)
+├── mentabiotics/           # Deep product page
+├── energy/                 # Deep product page
+├── hl5/                    # Deep product page
+├── origin/                 # Deep product page
+├── restore/                # Deep product page
+├── sunrise/                # Deep product page
+├── supplementen/           # Categoriepagina
+├── gewichtsbeheer/         # Categoriepagina
+├── schoonheid/             # Categoriepagina
 ├── over-ons/
 ├── contact/
 └── privacy-beleid/
 
 components/
-├── layout/             # Header, Footer, CampaignBanner, ReturnVisitorBanner, VisitTracker
-├── sections/           # HeroSection, ProductGrid, PromoCarousel, TrustBar, etc.
-├── ui/                 # AffiliateCTA, ExitPopup, SchemaMarkup, FloatingMobileCTA
-└── blog/               # BlogCard, BlogContent, BlogAccordion
+├── layout/                 # Header, Footer, CampaignBanner, ReturnVisitorBanner, ClientProviders
+├── sections/               # HeroSection, ProductGrid, PromoCarousel, TrustBar, GuaranteeBlock, etc.
+├── ui/                     # AffiliateCTA, ExitPopup, SchemaMarkup, FloatingMobileCTA
+└── blog/                   # BlogCard, BlogContent, BlogAccordion
 
 lib/
-├── products.ts         # 40+ Amare producten database
-├── blog.ts             # 28 blog artikelen (17 origineel + 11 pipeline)
-├── schema.ts           # JSON-LD generators (Organization, Article, FAQ, Product, etc.)
-├── analytics.ts        # GA4 event helpers
-└── affiliate.ts        # 3-katmanlı affiliate tracking sistemi
+├── products.ts             # 43 Amare producten (statische JSON import)
+├── blog.ts                 # 17 MDX blog artikelen
+├── schema.ts               # JSON-LD generators (Product+FAQ+Breadcrumb, Organization, Article)
+├── analytics.ts            # GA4 event helpers
+└── affiliate.ts            # 3-katmanlı affiliate tracking
 
-content/blog/           # MDX blog artikelen
-public/images/          # Statische assets
+data/
+├── products/               # 43 individuele [slug].json bestanden
+└── products.json           # Geaggregeerde index (auto-generated)
+
+scripts/
+├── generate-product-index.ts  # Bouwt data/products.json uit individuele JSONs
+├── efsa-audit.js              # EFSA compliance scanner
+└── validate-products.js       # Affiliate URL validator
+
+content/blog/               # MDX blog artikelen
+public/images/              # Statische assets
 ```
 
 ---
 
-## Belangrijkste Features
+## Wat is klaar
 
 ### SEO & Schema
-- JSON-LD Schema markup op alle pagina's (Organization, Article, FAQ, Product, BreadcrumbList)
-- Auto sitemap via next-sitemap
-- Unieke meta tags per pagina
+- JSON-LD Product+FAQ+Breadcrumb schema op alle 7 deep product pages
+- JSON-LD Organization, Article, FAQ op blogpagina's
+- Auto sitemap via next-sitemap (31 routes)
+- Google Search Console geverifieerd
 
-### Affiliate Tracking (3 katman)
-- **localStorage:** Ziyaretçi kaydı + otomatik affiliate ID
-- **/go yönlendirme:** Akıllı redirect sayfası (`/go/[product]` ürüne özel)
-- **Return visitor banner:** Geri dönen ziyaretçiye özel karşılama
+### Producten
+- **43** producten in database
+- **7** deep product pages (1000+ woorden, EFSA-compliant)
+  - Happy Juice Pack, MentaBiotics, Energy+, HL5, Origin, Restore, Sunrise
+- Product dropdown menu in navigatie (desktop + mobiel)
+- Alle PostNL/shipping claims verwijderd (Amare handelt verzending)
+- Affiliate URL fixes: ignite-him, ignite-her, skin-to-mind-neunight
+
+### Affiliate Tracking (3 lagen)
+1. **localStorage** — bezoekerregistratie + automatische affiliate ID
+2. **/go** — akıllı redirect (`/go/[product]` voor productspecifieke links)
+3. **Return visitor banner** — herkenning terugkerende bezoekers
 
 ### Conversie
 - Exit-intent popup (e-mail capture)
-- PromoCarousel (3 döner banner — ürün + kampanya)
-- CampaignBanner (aylık güncellenen teklif)
+- PromoCarousel (3 roulerende banners)
+- CampaignBanner (maandelijks aanbod)
 - Floating mobile CTA
+- AffiliateCTA component (herbruikbaar)
 
-### Analytics
-- Google Analytics 4 (GT-MKTPDM2M)
-- Event tracking (affiliate clicks, form submissions, CTA clicks)
-- IP anonimleştirme
+### Security
+- XSS protectie (DOMPurify op alle HTML render)
+- Next.js 16.2.6 (latest stable)
+- 0 npm vulnerabilities (high-severity)
+- Clean console (geen debug logs)
+
+---
+
+## Nog te doen
+
+### Product Pages (TASK 2.1)
+- [x] FIT20 pagina (wei + collageen, 620 regels)
+- [x] Sunset pagina (omega-3 avondformule, 622 regels)
+- [ ] 1 extra pagina voor 10 totaal (Skin to Mind of VitaGBX)
+
+### Blog Content
+- [ ] 20 makale kuyrukta (content/article-queue.md)
+- [x] Orchestrator + Telegram bot (server/)
+- [ ] 3 pillar pages (Gut-Brain Axis, Probiotica Stammen, Adaptogenen) — kısmen yazıldı
+
+### Infrastructuur
+- [ ] E-mail API route (/api/subscribe) — Mailchimp integratie
+- [ ] Mail credentials in .env.local
+- [ ] GitHub → Vercel auto-deploy herstellen (nu CLI: `vercel --prod --yes`)
+- [ ] GA4 conversion tracking voor affiliate clicks (TASK 12.1)
+- [ ] verdikkend-serum-voor-fijn-haar → Amare server 500 (buiten onze controle)
+
+### Bekende Issues
+- `verdikkend-serum-voor-fijn-haar` — HTTP 500 op Amare.com (server-side)
+- GitHub auto-deploy naar Vercel werkt niet → handmatig deployen via CLI
+
+---
+
+## Content Orchestrator (🆕 13 Haz 2026)
+
+### Kurulum
+```bash
+cd server
+cp .env.example .env
+# .env dosyasını düzenle:
+#   ANTHROPIC_API_KEY=...
+#   TELEGRAM_BOT_TOKEN=...  ( @BotFather'dan al)
+#   TELEGRAM_ADMIN_CHAT_IDS=...
+npm install
+npm start
+```
+
+### Telegram Bot Komutları
+| Komut | İşlev |
+|-------|-------|
+| `/status` | Sistem durumu |
+| `/queue` | Makale kuyruğu |
+| `/publish` | Sıradaki makaleyi yayınla |
+| `/research` | Pazar araştırması başlat |
+| `/report` | Haftalık trafik raporu |
+| `/health` | Sistem sağlık kontrolü |
+| `/logs` | Son 10 log kaydı |
+| `/build` | Build durumu |
+
+### Cron Takvimi
+| Gün | Saat (Amsterdam) | Görev |
+|-----|-----------------|-------|
+| Pazartesi | 07:57 | Tam pipeline (research + publish + report) |
+| Çarşamba | 09:57 | Makale yayını |
+| Cuma | 09:57 | Makale yayını |
+| Her gün | 10:00 | Build kontrolü |
+
+### Telegram Bot Nasıl Oluşturulur
+1. Telegram'da [@BotFather](https://t.me/BotFather) ile konuş
+2. `/newbot` yaz, isim ver (örn: `AmareNL_Orchestrator_Bot`)
+3. Token'ı `.env` dosyasına kopyala
+4. Bot'una mesaj at
+5. `curl https://api.telegram.org/bot<TOKEN>/getUpdates` ile chat ID'ni al
+6. Chat ID'ni `.env`'e `TELEGRAM_ADMIN_CHAT_IDS` olarak ekle
 
 ---
 
 ## Deployment
 
-Push naar `main` branch → automatische Vercel deployment.
+**GitHub → Vercel auto-deploy is gebroken.** Gebruik CLI:
+
+```bash
+git push origin main
+vercel --prod --yes
+```
 
 ---
 
-## 12 Artikelen Pipeline (19 mei — 10 jun 2026)
-
-| # | Artikel | Product | Status |
-|---|---------|---------|--------|
-| 1 | Vitamine D Tekort Symptomen | Sunrise | ✅ |
-| 2 | Beste Probiotica 2026 | MentaBiotics | ✅ |
-| 3 | Collageen Supplement Kopen | HL5 2-Pack | ✅ |
-| 4 | Ashwagandha Kopen Nederland | EDGE+ | ✅ |
-| 5 | Gut-Brain Connectie | Happy Juice Pack | ✅ |
-| 6 | Haaruitval Supplement Vrouwen | HL5 | ✅ |
-| 7 | Focus Supplement | EDGE+ | ✅ |
-| 8 | Hormoonbalans Supplement Vrouwen | Ignite for HER | ✅ |
-| 9 | Darmflora Verbeteren | Restore | ✅ |
-| 10 | Supplement Routine Ochtend | Triangle of Wellness | ✅ |
-| 11 | Plantaardige Proteïne Shake Kopen | Origin | ✅ |
-| 12 | Menopauze Supplement | Ignite for HER | 🔜 10 jun |
-
-Zie `CLAUDE.md` en `content/article-queue.md` voor volledige projectdocumentatie.
+Zie `CLAUDE.md` voor volledige projectdocumentatie, codeerregels en SEO-eisen.

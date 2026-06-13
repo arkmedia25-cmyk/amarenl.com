@@ -1,108 +1,103 @@
 ---
 name: article-scheduler
-description: Makale kuyruğundan sıradaki konuyu alır, SEO uyumlu Hollandaca blog makalesi yazar ve otomatik yayınlar.
+description: Makale kuyruğundan sıradaki konuyu alır, blog-writer agent'ı çağırır, yayınlar ve kuyruğu günceller. Ma/Wo/Vr 9:57 cron ile otomatik çalışır.
 ---
 
-# Otomatik Makale Üretici ve Yayınlayıcı
+# 📅 Article Scheduler Agent — AmareNL
 
-Bu skill, `content/article-queue.md` dosyasındaki sıralı kuyruktan bir sonraki makaleyi alır, yazar ve `lib/blog.ts`'e ekleyerek yayınlar.
+## Görev Tanımı
+Bu agent, **Pazartesi / Çarşamba / Cuma 9:57**'de otomatik çalışarak:
+1. `content/article-queue.md`'den sıradaki makaleyi alır
+2. `blog-writer` skill'ini çağırarak makaleyi yazdırır
+3. Makaleyi `lib/blog.ts`'e ekler
+4. Kuyruğu günceller (checkbox işaretler)
+5. Build doğrulaması yapar
 
-## Çalıştırma
-- Manuel: `/article-scheduler`
-- Otomatik: Cron ile haftada 3 kez (Pazartesi, Çarşamba, Cuma)
-
-## Adım Adım Çalışma
-
-### Adım 1: Kuyruğu Oku
-1. `content/article-queue.md` dosyasını oku.
-2. İlk `- [ ]` (yazılmamış) makaleyi bul.
-3. O satırdaki şu bilgileri al:
-   - Başlık (kalın yazılı kısım)
-   - Kategori (örn: `darmen`, `hersenen`, `schoonheid`)
-   - Hedef ürün (örn: `MentaBiotics`, `Happy Juice Pack`)
-   - Anahtar kelimeler (satır sonundaki keyword'ler)
-
-### Adım 2: Ürün Araştırması
-1. `lib/products.ts` dosyasını oku.
-2. Hedef ürün(ler)in `benefitsNL`, `taglineNL`, `descriptionNL` alanlarını bul.
-3. Ürünün gerçek faydalarını, içeriklerini, kullanım şeklini öğren.
-
-### Adım 3: Makaleyi Yaz
-Aşağıdaki formata SIKI SIKIYA uy. Hedef: 1,200-1,800 kelime.
-
-Kategoriye göre `category` değeri:
-- hersenen → "Mentaal Welzijn"
-- darmen → "Gut Health"
-- schoonheid → "Beauty"
-- essentials → "Wellness"
-- kids → "Kids"
-
-Makale içeriği HTML formatında olmalı (blog sistemi `lib/blog.ts` HTML kullanıyor):
-
-```html
-<h2>Wat is [X] en waarom is het belangrijk?</h2>
-<p>[150-200 kelime giriş — ana anahtar kelime ilk 100 kelimede geçsin]</p>
-
-<h2>[H2 ikinci bölüm]</h2>
-<p>[200-300 kelime]</p>
-<ul>
-  <li><strong>Fayda 1:</strong> açıklama</li>
-  <li><strong>Fayda 2:</strong> açıklama</li>
-</ul>
-
-<h2>[H2 üçüncü bölüm]</h2>
-<p>[200-300 kelime — pratik tavsiyeler]</p>
-
-<h2>Veelgestelde vragen</h2>
-
-<h3>Soru 1?</h3>
-<p>[40-60 kelime cevap]</p>
-
-<h3>Soru 2?</h3>
-<p>[40-60 kelime cevap]</p>
-
-<h3>Soru 3?</h3>
-<p>[40-60 kelime cevap]</p>
-
-<h2>Conclusie</h2>
-<p>[Kısa özet + yumuşak ürün tavsiyesi]</p>
-<p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Supplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl.</em></p>
+## Cron Tetikleyici
+```
+cron: 57 9 * * 1,3,5  (Pazartesi, Çarşamba, Cuma sabah 9:57)
 ```
 
-### Adım 4: lib/blog.ts'e Ekle
-1. `lib/blog.ts` dosyasını oku.
-2. `export const blogPosts: BlogPost[] = [` satırını bul.
-3. Dizinin EN BAŞINA (ilk eleman olarak) yeni makaleyi ekle:
-```typescript
-  {
-    slug: "[benzersiz-slug]",
-    title: "[Başlık]",
-    date: "[YYYY-MM-DD — bugünün tarihi]",
-    category: "[Kategori]",
-    excerpt: "[1-2 cümle özet]",
-    content: `[HTML içerik]`,
-    image: "/images/blog/[slug]-cover.jpg"
-  },
+## Çalışma Adımları
+
+### Adım 1: Zaman Kontrolü
+- Bugünün tarihini kontrol et
+- `content/article-queue.md`'deki yayın takvimine bak
+- Bugüne atanmış makale var mı?
+- **Yoksa:** Bugüne en yakın `- [ ]` makaleyi bul
+
+### Adım 2: Kuyruktan Makaleyi Al
+1. `content/article-queue.md` dosyasını oku
+2. İlk `- [ ]` (yazılmamış) makaleyi bul
+3. Şu bilgileri çıkar:
+   - Başlık (NL)
+   - Slug
+   - Kategori
+   - Anahtar kelime
+   - Hedef ürün(ler)
+   - FAQ soruları
+
+### Adım 3: Blog Writer'ı Çağır
+Aşağıdaki prompt ile blog-writer agent'ını tetikle:
+```
+Blog yazma görevi:
+- Başlık: [kuyruktaki başlık]
+- Slug: [kuyruktaki slug]
+- Kategori: [kategori]
+- Anahtar Kelime: [keyword]
+- Hedef Ürün: [product-id]
+- FAQ Soruları: [soru1, soru2, soru3]
+
+Lütfen:
+1. lib/products.ts'ten hedef ürün bilgilerini oku
+2. Makaleyi HTML formatında yaz (1.200-1.800 kelime)
+3. lib/blog.ts'e ekle (BlogPost dizisinin başına)
+4. content/blog/[slug].mdx olarak kaydet
+5. Kalite kontrolünden geçir
 ```
 
-### Adım 5: Kuyruğu Güncelle
-1. `content/article-queue.md` dosyasında yazdığın makalenin `- [ ]` işaretini `- [x]` olarak değiştir.
-2. Satırın başına tarih ekle: `- [x] 2026-05-XX **Başlık** | ...`
+### Adım 4: Kuyruğu Güncelle
+`content/article-queue.md`'de yazılan makalenin:
+- `- [ ]` işaretini `- [x]` olarak değiştir
+- Tarih ekle: `- [x] YYYY-MM-DD — [başlık]`
 
-### Adım 6: Doğrulama
-- [ ] Build başarılı mı? (`npx next build`)
-- [ ] Slug benzersiz mi?
-- [ ] Min. 800 kelime mi?
-- [ ] 3 FAQ sorusu var mı?
-- [ ] NVWA disclaimeri var mı?
+### Adım 5: Doğrulama
+```bash
+npx next build 2>&1 | tail -5
+```
+- Build başarılı mı?
+- Hata varsa, hataları düzelt ve tekrar dene
 
-## Yasaklı İfadeler (KESİNLİKLE)
-- ❌ geneest, behandelt, klinisch bewezen te genezen
-- ❌ Absolute medische garanties
-- ❌ İngilizce cümleler (Hollandaca yaz)
+### Adım 6: Özet Rapor
+```markdown
+## 📝 Makale Yayınlandı — [Tarih]
 
-## Zorunlu İfadeler
-- ✅ "ondersteunt een gezond..."
-- ✅ "draagt bij aan..."
-- ✅ "veel gebruikers ervaren..."
-- ✅ "* Deze uitspraken zijn niet beoordeeld door de NVWA"
+**Başlık:** [X]
+**Slug:** [X]
+**Kategori:** [X]
+**Kelime Sayısı:** X,XXX
+**Hedef Anahtar Kelime:** [X]
+**Bağlı Ürünler:** [X, Y]
+
+✅ Build: Başarılı
+✅ Slug: Benzersiz
+✅ Kalite kontrolü: 8/8
+
+⏭ Sıradaki makale: [Bir sonraki başlık] — [Tarih]
+```
+
+## Hata Yönetimi
+- **Build hatası:** Hatayı logla, düzelt, tekrar dene (max 2 deneme)
+- **Slug çakışması:** Slug sonuna `-2` ekle
+- **Ürün bulunamadı:** En yakın alternatif ürünü kullan
+- **Üst üste 2 hata:** Skill'i durdur, manuel müdahale bildirimi gönder
+
+## Özel Durumlar
+- **Hafta sonu:** Makale yazma (cron zaten sadece hafta içi)
+- **Tatil günleri:** Normal çalışmaya devam et
+- **Kuyruk boşsa:** market-research agent'ını çağır, yeni konular ekle
+
+## Başarı Metrikleri
+- Makale başına ortalama kelime: 1.200+
+- Build başarı oranı: %95+
+- Zamanında yayınlanma: %90+
