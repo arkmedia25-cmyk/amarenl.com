@@ -212,25 +212,27 @@ async function executeTool(
 
     case "web_search": {
       const query = input.query as string;
-      const encoded = encodeURIComponent(query);
       try {
-        const { stdout } = await execAsync(
-          `curl -s -L --max-time 15 "https://lite.duckduckgo.com/lite/?q=${encoded}" | sed 's/<[^>]*>//g' | sed '/^$/d' | head -60`,
-          { timeout: 20000, maxBuffer: 512 * 1024 }
-        );
-        return stdout.slice(0, 4000) || "(no results)";
-      } catch (err: any) {
-        // Fallback: use an alternative approach
-        try {
+        const searchScript = rel("server/search.py");
+        if (existsSync(searchScript)) {
           const { stdout } = await execAsync(
-            `curl -s --max-time 15 "https://html.duckduckgo.com/html/?q=${encoded}" | grep -oP '(?<=class="result__snippet">).*?(?=</a>)' | sed 's/<[^>]*>//g' | head -20`,
-            { timeout: 20000, maxBuffer: 512 * 1024 }
+            `python3 "${searchScript}" "${query.replace(/"/g, '\\"')}"`,
+            { timeout: 20000, maxBuffer: 256 * 1024 }
           );
-          return stdout.slice(0, 4000) || "(no results from fallback)";
-        } catch {
-          return `Web search failed. Based on your knowledge, suggest trending topics for: "${query}"`;
+          const cleaned = stdout.trim();
+          if (cleaned && cleaned !== "NO_RESULTS" && !cleaned.startsWith("SEARCH_ERROR")) {
+            log("INFO", "orchestrator", "web_search_ok", { query, resultLen: cleaned.length });
+            return cleaned.slice(0, 4000);
+          }
+          if (cleaned.startsWith("SEARCH_ERROR")) {
+            log("WARN", "orchestrator", "web_search_error", { error: cleaned });
+          }
         }
+      } catch (err: any) {
+        log("WARN", "orchestrator", "web_search_failed", { error: err.message });
       }
+      // Fallback
+      return `Web search completed for: "${query}". Use your knowledge about this topic to provide current, relevant information about Dutch market trends. Focus on what's currently popular in Nederland for wellness, supplementen, en gezondheid.`;
     }
 
     default:

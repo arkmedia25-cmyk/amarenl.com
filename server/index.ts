@@ -31,7 +31,6 @@ import {
   runBuildCheck,
 } from "./orchestrator.js";
 import type { OrchestratorState } from "./orchestrator.js";
-import type { OrchestratorState } from "./orchestrator.js";
 import type { Telegraf } from "telegraf";
 
 // --- State ---
@@ -100,8 +99,8 @@ cron.schedule("0 8 * * *", async () => {
   }
 });
 
-// Her 30 saniyede bir manuel tetikleyicileri kontrol et
-cron.schedule("*/30 * * * * *", async () => {
+// Her 30 saniyede bir manuel tetikleyicileri kontrol et (setInterval, cron'dan daha güvenilir)
+setInterval(async () => {
   if (state.manualPublishRequested) {
     state.manualPublishRequested = false;
     console.log("🔔 Manuel publish tetiklendi (Telegram)");
@@ -123,7 +122,7 @@ cron.schedule("*/30 * * * * *", async () => {
     console.log(`🔔 Manuel optimize tetiklendi: ${slug}`);
     await runOptimizeArticle(slug, bot, state);
   }
-});
+}, 30000);
 
 // --- Başlangıç mesajı ---
 console.log(`
