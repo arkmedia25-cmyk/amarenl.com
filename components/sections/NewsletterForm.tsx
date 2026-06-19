@@ -6,14 +6,41 @@ import { Mail, ArrowRight, CheckCircle2, Tag } from "lucide-react";
 export default function NewsletterForm() {
   const [email, setEmail] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) {
       alert("Vul een geldig e-mailadres in");
       return;
     }
-    setIsSubmitted(true);
+    setIsLoading(true);
+    try {
+      const res = await fetch("https://connect.mailerlite.com/api/subscribers", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${process.env.NEXT_PUBLIC_MAILERLITE_API_KEY}`,
+        },
+        body: JSON.stringify({
+          email: email,
+          groups: ["136571629958727399"], // AmareNL subscribers group
+        }),
+      });
+      if (res.ok) {
+        setIsSubmitted(true);
+      } else {
+        const err = await res.json();
+        if (err.message?.includes("already")) {
+          setIsSubmitted(true); // Already subscribed = success
+        } else {
+          alert("Er ging iets mis. Probeer het opnieuw.");
+        }
+      }
+    } catch {
+      alert("Er ging iets mis. Probeer het opnieuw.");
+    }
+    setIsLoading(false);
   };
 
   return (
