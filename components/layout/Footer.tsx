@@ -14,8 +14,7 @@ export default function Footer() {
               Jouw gids naar natuurlijke mentale wellness en darmgezondheid. Onafhankelijke partner van Amare Global in Nederland.
             </p>
             <div className="flex items-center gap-4 text-xs font-bold text-[var(--color-primary)]">
-              <a href="#" className="hover:underline">INSTAGRAM</a>
-              <a href="#" className="hover:underline">FACEBOOK</a>
+              <a href="https://amarereview.nl" className="hover:underline" target="_blank">AMAREREVIEW.NL</a>
             </div>
           </div>
 
