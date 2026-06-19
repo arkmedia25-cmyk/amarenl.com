@@ -7,6 +7,7 @@ import Footer from "@/components/layout/Footer";
 import ReturnVisitorBanner from "@/components/layout/ReturnVisitorBanner";
 import VisitTracker from "@/components/layout/VisitTracker";
 import FloatingMobileCTA from "@/components/ui/FloatingMobileCTA";
+import ExitIntentPopup from "@/components/ui/ExitIntentPopup";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import {
   generateOrganizationSchema,
@@ -92,6 +93,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <ExitIntentPopup />
         <FloatingMobileCTA />
 
         {/* Google Analytics 4 */}

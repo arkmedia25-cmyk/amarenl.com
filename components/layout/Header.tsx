@@ -99,6 +99,12 @@ export default function Header() {
           >
             Blog
           </Link>
+          <Link
+            href="/blogs/nieuws/supplementen-wijzer-gratis"
+            className="text-sm font-bold text-[var(--color-accent)] hover:text-[var(--color-primary)] transition-colors"
+          >
+            Gratis Wijzer
+          </Link>
         </nav>
 
         {/* Action Buttons */}
@@ -160,6 +166,8 @@ export default function Header() {
             {[
               ["Blog", "/blogs/nieuws"],
               ["Over AmareNL", "/over-ons/"],
+              ["Gratis Supplementen Wijzer", "/blogs/nieuws/supplementen-wijzer-gratis"],
+              ["Ervaringen", "/blogs/nieuws/ervaringen-gebruikers-amare-supplementen"],
             ].map(([label, href]) => (
               <Link
                 key={label}
