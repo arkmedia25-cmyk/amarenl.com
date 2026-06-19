@@ -243,6 +243,19 @@ export default async function BlogPostPage({ params }: Props) {
         </section>
       )}
 
+      {/* Newsletter CTA */}
+      <section className="py-16 bg-[var(--color-primary)] text-white">
+        <div className="container-page max-w-3xl text-center">
+          <span className="text-xs font-bold uppercase tracking-widest text-[var(--color-accent)]">Gratis Download</span>
+          <h2 className="text-3xl font-cormorant font-bold mt-2 mb-4">Weet jij welk supplement bij jou past?</h2>
+          <p className="text-white/80 mb-8 max-w-xl mx-auto">Doe de 2-minuten test in onze Supplementen Wijzer en ontdek welke formule jouw lichaam nodig heeft.</p>
+          <a href="/blogs/nieuws/supplementen-wijzer-gratis" className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--color-accent)] text-[var(--color-text)] rounded-full font-bold hover:opacity-90 transition text-lg">
+            Download de Gratis Wijzer →
+          </a>
+          <p className="text-white/50 text-xs mt-4">Geen spam, direct downloaden, geen verplichtingen.</p>
+        </div>
+      </section>
+
       <section className="py-24 bg-[var(--color-bg-soft)] border-t border-[var(--color-border)]">
         <div className="container-page max-w-5xl">
           <h2 className="text-3xl font-bold text-[var(--color-text)] mb-12 text-center font-cormorant">Gerelateerde Artikelen</h2>
