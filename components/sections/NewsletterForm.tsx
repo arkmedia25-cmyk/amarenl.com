@@ -16,26 +16,16 @@ export default function NewsletterForm() {
     }
     setIsLoading(true);
     try {
-      const res = await fetch("https://connect.mailerlite.com/api/subscribers", {
+      const res = await fetch("/api/subscribe", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${process.env.NEXT_PUBLIC_MAILERLITE_API_KEY}`,
-        },
-        body: JSON.stringify({
-          email: email,
-          groups: ["136571629958727399"], // AmareNL subscribers group
-        }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
       });
-      if (res.ok) {
+      const data = await res.json();
+      if (data.success) {
         setIsSubmitted(true);
       } else {
-        const err = await res.json();
-        if (err.message?.includes("already")) {
-          setIsSubmitted(true); // Already subscribed = success
-        } else {
-          alert("Er ging iets mis. Probeer het opnieuw.");
-        }
+        alert("Er ging iets mis. Probeer het opnieuw.");
       }
     } catch {
       alert("Er ging iets mis. Probeer het opnieuw.");
