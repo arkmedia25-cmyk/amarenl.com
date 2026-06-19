@@ -1,6 +1,6 @@
 # AmareNL Article Queue — SEO-GEO-AEO İçerik Planı
-> Laatste update: 2026-06-07
-> Status: 12/12 pipeline ✅ | 3 vergelijkingsartikelen ✅ | Totaal 34 artikelen live
+> Laatste update: 2026-06-19
+> Status: 12/12 pipeline ✅ | 3 vergelijkingsartikelen ✅ | Totaal 35 artikelen live
 > Deploy: Vercel production ✅ — dpl_HGqHa2Lkidyc8PLYRvy7ebGPAVaS
 > Metodoloji: NL search volume × commercial intent × product match × GEO query fan-out
 > Yayın takvimi: 2 günde bir (cron — article-scheduler skill)
@@ -36,7 +36,7 @@
 |---|---------------------|------|----------|------------|--------|--------|
 | 11 | De Gut-Brain Connectie | gut-brain-connectie-darmen-stemming-mentaal | darmen | MentaBiotics, Happy Juice | 2.000 | ✅ |
 | 12 | Adaptogenen: De Complete Gids | adaptogenen-natuurlijke-stressverlichting-ashwagandha-rhodiola | mentaal | MentaFocus, EDGE+ | 1.800 | ✅ |
-| 13 | Beste Eiwitpoeder 2026 | beste-eiwitpoeder-2026-plantaardig-wei-vergelijking | essentials | Origin, FIT20 | 1.600 | ⏳ |
+| 13 | Beste Eiwitpoeder 2026 | beste-eiwitpoeder-2026-plantaardig-wei-vergelijking | essentials | Origin, FIT20 | 1.600 | ✅ |
 | 14 | Collageen Peptiden: Werkt Het Echt? | collageen-peptiden-werkt-echt-wetenschap-resultaten | schoonheid | HL5, NeuCollagen | 1.400 | ⏳ |
 | 15 | Huidverzorging van Binnenuit | huidverzorging-van-binnenuit-supplementen-stralende-huid | schoonheid | Skin to Mind, HL5 | 1.300 | ⏳ |
 
@@ -102,7 +102,8 @@
 | **EDGE+** | ashwagandha-kopen-nederland-adaptogeen-supplement, focus-supplement-natuurlijke-nootropics-concentratie, happy-juice-pack-vs-losse-supplementen-vergelijken |
 | **Sunrise** | vitamine-d-tekort-symptomen, supplement-routine-ochtend-timing-schema |
 | **Sunset** | adaptogenen-stress-supplement-nederland, omega-3-hersenen-supplement-nederland |
-| **Origin** | plantaardige-proteine-shake-kopen-vergelijken |
+| **Origin** | plantaardige-proteine-shake-kopen-vergelijken, beste-eiwitpoeder-2026-plantaardig-wei-vergelijking |
+| **FIT20** | natuurlijk-afvallen-supplementen-metabolisme, beste-eiwitpoeder-2026-plantaardig-wei-vergelijking |
 | **Triangle of Wellness** | supplement-routine-ochtend-timing-schema |
 
 ---
@@ -143,13 +144,13 @@ Disclaimer: "* Deze uitspraken zijn niet beoordeeld door de NVWA..."
 |----------|----------|-------------|-----------|-------------|
 | darmen (Gut Health) | 3 | 1 | 3 | 7 |
 | schoonheid (Beauty) | 3 | 1 | 2 | 6 |
-| essentials (Vitamines) | 2 | — | 4 | 6 |
+| essentials (Vitamines) | 2 | — | 5 | 7 |
 | mentaal (Mental Wellness) | 2 | 1 | 2 | 5 |
 | hormonen (Hormones) | 2 | — | 1 | 3 |
 | energie (Energy) | — | — | 1 | 1 |
 | kids | — | — | 1 | 1 |
 | Lifestyle & Wellness | — | — | 2 | 2 |
-| **TOPLAM** | **12** | **3** | **16** | **31** |
+| **TOPLAM** | **12** | **3** | **17** | **32** |
 
 ---
 
@@ -159,8 +160,8 @@ Disclaimer: "* Deze uitspraken zijn niet beoordeeld door de NVWA..."
 |------|--------|---------|-------------|---------|
 | TIER 1 (High + Commercial) | 4 | 4 | 0 | 0 |
 | TIER 2 (High + Info) | 6 | 3 | 3 | 0 |
-| TIER 3 (Medium) | 5 | 2 | 0 | 3 |
+| TIER 3 (Medium) | 5 | 3 | 0 | 2 |
 | TIER 4 (Niche/Seasonal) | 5 | 1 | 1 | 3 |
-| **TOTAAL** | **20** | **9** | **4** | **7** |
+| **TOTAAL** | **20** | **10** | **4** | **6** |
 
-> 7 van 20 originele TIER-artikelen nog te schrijven (6 onderwerpen zijn gecovered door pipeline/vergelijkingsartikelen onder andere slugs). TIER 1 volledig ✅
+> 6 van 20 originele TIER-artikelen nog te schrijven (6 onderwerpen zijn gecovered door pipeline/vergelijkingsartikelen onder andere slugs). TIER 1 volledig ✅
