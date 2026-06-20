@@ -33,7 +33,7 @@ const questions: Question[] = [
   {
     q: "Hoeveel stress ervaar je in je dagelijkse leven?",
     options: [
-      { label: " Weinig — ik kan goed ontspannen", points: { essentials: 1 } },
+      { label: "😊 Weinig — ik kan goed ontspannen", points: { essentials: 1 } },
       { label: "😐 Gemiddeld — soms lastig loslaten", points: { mentaal: 2, darmen: 1 } },
       { label: "😰 Veel — voel me vaak opgejaagd", points: { mentaal: 3, darmen: 2, energy: 1 } },
       { label: "🔥 Extreem — sta onder hoogspanning", points: { mentaal: 3, darmen: 3, energy: 2 } },
@@ -51,7 +51,7 @@ const questions: Question[] = [
   {
     q: "Wat merk je aan je lichaam sinds je ouder wordt (of door levensstijl)?",
     options: [
-      { label: " Minder energie dan vroeger", points: { energy: 2, essentials: 2 } },
+      { label: "🔋 Minder energie dan vroeger", points: { energy: 2, essentials: 2 } },
       { label: "🪞 Huid, haar of nagels veranderen zichtbaar", points: { schoonheid: 3 } },
       { label: "🧠 Minder scherp, vergeetachtiger", points: { mentaal: 2, darmen: 1 } },
       { label: "💪 Minder spierkracht, sneller blessures", points: { essentials: 2, schoonheid: 1 } },
