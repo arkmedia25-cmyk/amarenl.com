@@ -80,6 +80,7 @@ export default function RootLayout({
   return (
     <html lang="nl" className={`${cormorant.variable} ${nunito.variable}`}>
       <head>
+        <meta name="p:domain_verify" content="f1dafe74931e565325530d7434f9fddf" />
         <SchemaMarkup
           schema={combineSchemas(
             generateOrganizationSchema(),
