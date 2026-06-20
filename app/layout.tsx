@@ -37,6 +37,9 @@ export const metadata: Metadata = {
   title: "AmareNL — Ontdek Natuurlijke Wellness Supplementen",
   description:
     "Ontdek de beste natuurlijke supplementen van Amare voor energie, focus, slaap en welzijn. Gratis advies + €8 korting op je eerste bestelling.",
+  verification: {
+    other: { "p:domain_verify": "f1dafe74931e565325530d7434f9fddf" },
+  },
   alternates: {
     canonical: "/",
   },
