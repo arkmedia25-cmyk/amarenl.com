@@ -4,14 +4,42 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Menu, X, ArrowRight, ChevronDown } from "lucide-react";
 
+const categoryLinks = [
+  ["Mentale Wellness", "/supplementen/"],
+  ["Darmgezondheid", "/darmgezondheid/"],
+  ["Schoonheid", "/schoonheid/"],
+  ["Essentials", "/essentials/"],
+  ["Pakketten", "/pakketten/"],
+  ["Gewichtsbeheer", "/gewichtsbeheer/"],
+];
+
 const productLinks = [
-  ["Happy Juice Pack", "/happy-juice-pack"],
-  ["MentaBiotics", "/mentabiotics"],
-  ["Energy+", "/energy"],
-  ["HL5 Collageen", "/hl5"],
-  ["Restore", "/restore"],
-  ["Origin", "/origin"],
-  ["Sunrise", "/sunrise"],
+  { label: "Mentale Wellness", items: [
+    ["Happy Juice Pack", "/happy-juice-pack"],
+    ["MentaBiotics", "/mentabiotics"],
+    ["EDGE+", "/edge-plus"],
+    ["Energy+", "/energy"],
+    ["Amare ON", "/on"],
+    ["Nitro Xtreme", "/nitro-xtreme"],
+  ]},
+  { label: "Darmen & Digestie", items: [
+    ["Restore", "/restore"],
+    ["MentaBiotics", "/mentabiotics"],
+  ]},
+  { label: "Schoonheid", items: [
+    ["HL5 Collageen", "/hl5"],
+    ["Ignite for HER", "/ignite-for-her"],
+  ]},
+  { label: "Dagelijkse Essentials", items: [
+    ["Sunrise", "/sunrise"],
+    ["Sunset", "/sunset"],
+    ["Origin", "/origin"],
+    ["FIT20", "/fit20"],
+    ["Triangle of Wellness Xtreme", "/triangle-of-wellness-xtreme"],
+  ]},
+  { label: "Alle Producten", items: [
+    ["→ Bekijk alle producten", "/essentials/"],
+  ]},
 ];
 
 export default function Header() {
@@ -21,9 +49,7 @@ export default function Header() {
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -39,152 +65,82 @@ export default function Header() {
   }, []);
 
   return (
-    <header 
-      className={`sticky top-0 z-[60] transition-all duration-300 ${
-        isScrolled 
-          ? "bg-white/80 backdrop-blur-lg shadow-md py-2" 
-          : "bg-white py-4"
-      }`}
-    >
+    <header className={`sticky top-0 z-[60] transition-all duration-300 ${isScrolled ? "bg-white/80 backdrop-blur-lg shadow-md py-2" : "bg-white py-4"}`}>
       <div className="container-page flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="text-2xl font-bold font-cormorant text-[var(--color-primary)]">
-          AmareNL
-        </Link>
+        <Link href="/" className="text-2xl font-bold font-cormorant text-[var(--color-primary)]">AmareNL</Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-8">
-          {[
-            ["Mentale Wellness", "/supplementen/"],
-            ["Gewichtsbeheer", "/gewichtsbeheer/"],
-            ["Schoonheid", "/schoonheid/"],
-          ].map(([label, href]) => (
-            <Link
-              key={label}
-              href={href}
-              className="text-sm font-bold text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors"
-            >
+        <nav className="hidden lg:flex items-center gap-6">
+          {categoryLinks.map(([label, href]) => (
+            <Link key={label} href={href} className="text-xs font-bold text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors">
               {label}
             </Link>
           ))}
 
           {/* Product Dropdown */}
           <div ref={dropdownRef} className="relative">
-            <button
-              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="flex items-center gap-1 text-sm font-bold text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors"
-            >
-              Producten
-              <ChevronDown size={14} className={`transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
+            <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="flex items-center gap-1 text-xs font-bold text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors">
+              Producten <ChevronDown size={14} className={`transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
             </button>
             {isDropdownOpen && (
-              <div className="absolute top-full left-0 mt-2 bg-white border border-[var(--color-border)] rounded-xl shadow-lg py-2 min-w-[200px] z-50">
-                {productLinks.map(([label, href]) => (
-                  <Link
-                    key={label}
-                    href={href}
-                    onClick={() => setIsDropdownOpen(false)}
-                    className="block px-4 py-2 text-sm text-[var(--color-text)] hover:bg-[var(--color-bg-soft)] hover:text-[var(--color-primary)] transition-colors"
-                  >
-                    {label}
-                  </Link>
+              <div className="absolute top-full left-0 mt-2 bg-white border border-[var(--color-border)] rounded-xl shadow-lg py-3 min-w-[600px] z-50 grid grid-cols-3 gap-4 px-4">
+                {productLinks.map((group) => (
+                  <div key={group.label}>
+                    <span className="block px-2 py-1 text-[9px] font-bold text-[var(--color-text-muted)] uppercase tracking-wider">{group.label}</span>
+                    {group.items.map(([label, href]) => (
+                      <Link key={label} href={href} onClick={() => setIsDropdownOpen(false)} className="block px-2 py-1.5 text-sm text-[var(--color-text)] hover:bg-[var(--color-bg-soft)] hover:text-[var(--color-primary)] rounded transition-colors">
+                        {label}
+                      </Link>
+                    ))}
+                  </div>
                 ))}
               </div>
             )}
           </div>
 
-          <Link
-            href="/blogs/nieuws"
-            className="text-sm font-bold text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors"
-          >
-            Blog
-          </Link>
-          <Link
-            href="/blogs/nieuws/supplementen-wijzer-gratis"
-            className="text-sm font-bold text-[var(--color-accent)] hover:text-[var(--color-primary)] transition-colors"
-          >
-            Gratis Wijzer
-          </Link>
+          <Link href="/blogs/nieuws" className="text-xs font-bold text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors">Blog</Link>
+          <Link href="/blogs/nieuws/supplementen-wijzer-gratis" className="text-xs font-bold text-[var(--color-accent)] hover:text-[var(--color-primary)] transition-colors">Gratis Wijzer</Link>
         </nav>
 
-        {/* Action Buttons */}
         <div className="flex items-center gap-4">
-          <a
-            href="#newsletter"
-            className="hidden sm:flex items-center gap-2 px-5 py-2.5 bg-[var(--color-primary)] text-white rounded-full text-sm font-bold hover:opacity-90 transition-all"
-          >
-            Claim €8 Korting
-            <ArrowRight size={16} />
+          <a href="#newsletter" className="hidden sm:flex items-center gap-2 px-5 py-2.5 bg-[var(--color-primary)] text-white rounded-full text-sm font-bold hover:opacity-90 transition-all">
+            Claim €8 Korting <ArrowRight size={16} />
           </a>
-          
-          <button 
-            className="lg:hidden p-2 text-[var(--color-text)]" 
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle Menu"
-          >
+          <button className="lg:hidden p-2 text-[var(--color-text)]" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle Menu">
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile */}
       {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-[70px] bg-white z-[70] animate-fade-in overflow-y-auto">
+        <div className="lg:hidden fixed inset-0 top-[70px] bg-white z-[70] overflow-y-auto">
           <nav className="flex flex-col p-6 space-y-6">
-            {[
-              ["Mentale Wellness", "/supplementen/"],
-              ["Gewichtsbeheer", "/gewichtsbeheer/"],
-              ["Schoonheid", "/schoonheid/"],
-            ].map(([label, href]) => (
-              <Link
-                key={label}
-                href={href}
-                onClick={() => setIsMenuOpen(false)}
-                className="text-xl font-bold text-[var(--color-text)] border-b border-[var(--color-border)] pb-4"
-              >
+            {categoryLinks.map(([label, href]) => (
+              <Link key={label} href={href} onClick={() => setIsMenuOpen(false)} className="text-xl font-bold text-[var(--color-text)] border-b border-[var(--color-border)] pb-4">
                 {label}
               </Link>
             ))}
-
-            {/* Mobile Product Links */}
             <div className="border-b border-[var(--color-border)] pb-4">
               <span className="text-sm font-bold text-[var(--color-text-muted)] uppercase tracking-wider">Populaire Producten</span>
               <div className="mt-3 space-y-3">
-                {productLinks.map(([label, href]) => (
-                  <Link
-                    key={label}
-                    href={href}
-                    onClick={() => setIsMenuOpen(false)}
-                    className="block text-md font-bold text-[var(--color-text)] hover:text-[var(--color-primary)]"
-                  >
-                    {label}
+                {["Happy Juice Pack","MentaBiotics","EDGE+","Energy+","HL5 Collageen","Triangle of Wellness Xtreme","Ignite for HER","Amare ON","Restore","Sunrise"].map(name => (
+                  <Link key={name} href={productLinks.flatMap(g => g.items).find(([l]) => l === name)?.[1] || "/"} onClick={() => setIsMenuOpen(false)} className="block text-md font-bold text-[var(--color-text)] hover:text-[var(--color-primary)]">
+                    {name}
                   </Link>
                 ))}
               </div>
             </div>
-
             {[
               ["Blog", "/blogs/nieuws"],
               ["Over AmareNL", "/over-ons/"],
               ["Gratis Supplementen Wijzer", "/blogs/nieuws/supplementen-wijzer-gratis"],
               ["Ervaringen", "/blogs/nieuws/ervaringen-gebruikers-amare-supplementen"],
             ].map(([label, href]) => (
-              <Link
-                key={label}
-                href={href}
-                onClick={() => setIsMenuOpen(false)}
-                className="text-xl font-bold text-[var(--color-text)] border-b border-[var(--color-border)] pb-4"
-              >
-                {label}
-              </Link>
+              <Link key={label} href={href} onClick={() => setIsMenuOpen(false)} className="text-xl font-bold text-[var(--color-text)] border-b border-[var(--color-border)] pb-4">{label}</Link>
             ))}
-            <a
-              href="#newsletter"
-              onClick={() => setIsMenuOpen(false)}
-              className="flex items-center justify-center gap-2 w-full py-4 bg-[var(--color-primary)] text-white rounded-xl font-bold"
-            >
-              Claim mijn €8 korting
-              <ArrowRight size={20} />
+            <a href="#newsletter" onClick={() => setIsMenuOpen(false)} className="flex items-center justify-center gap-2 w-full py-4 bg-[var(--color-primary)] text-white rounded-xl font-bold">
+              Claim mijn €8 korting <ArrowRight size={20} />
             </a>
           </nav>
         </div>
