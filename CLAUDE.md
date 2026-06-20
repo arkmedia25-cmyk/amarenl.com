@@ -760,7 +760,7 @@ Fase 9 — Data & Infrastructuur — 2026-05-17
 
 ---
 
-## 19. SESSIE STATUS — 13 juni 2026
+## 19. SESSIE STATUS — 20 juni 2026
 
 ### Voltooid (deze en vorige sessies)
 - [x] Fase 1-9 t/m FIT20/Sunset (zie boven)
@@ -780,6 +780,12 @@ Fase 9 — Data & Infrastructuur — 2026-05-17
   - `server/health.ts` — sistem sağlık kontrolü
 - [x] 20 makale kuyrukta (content/article-queue.md)
 
+### 🆕 Cron Auto-Publish — 20 juni 2026
+- [x] Expand #14 collageen-peptiden: 973 → 1676 woorden (NVWA, FAQ, vergelijkingstabel, AffiliateCTA, 4 wetenschappelijke bronnen)
+- [x] 20/20 TIER artikelen voltooid — queue volledig afgevinkt ✅
+- [x] Alle 6 ⏳ artikelen geverifieerd op 1200+ woorden en NVWA-compliance
+- [x] Queue metadata geüpdatet (40+ artikelen live, 0 openstaand)
+
 ### Kurulum gerekenler (sunucu için)
 - [ ] `server/.env` oluştur (ANTHROPIC_API_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_ADMIN_CHAT_IDS)
 - [ ] `cd server && npm install`
@@ -790,20 +796,19 @@ Fase 9 — Data & Infrastructuur — 2026-05-17
 ### Hala eksik
 **İçerik:**
 - [ ] 3 pillar pages — `/gut-brain-axis`, `/probiotica-stammen`, `/adaptogenen` (dosyalar var, kontrol edilmeli)
-- [ ] 20 makale kuyrukta bekliyor — orchestrator çalışınca otomatik yazılacak
-- [ ] 1 deep product page daha (Skin to Mind veya VitaGBX)
+- [x] 20 makale allemaal voltooid (16 live + 4 gecovered)
+- [ ] 1 deep product page daha (Skin to Mind of VitaGBX)
 
 **Infrastructuur:**
 - [ ] E-mail API route (/api/subscribe)
-- [ ] GitHub → Vercel auto-deploy
 - [ ] GA4 conversion tracking
 - [ ] verdikkend-serum-voor-fijn-haar → 500 (Amare server-side)
 
 ### Huidige staat — Cijfers
 - **43** producten in database (data/products/*.json + products.json)
-- **17** blog artikelen in lib/blog.ts, 6 MDX in content/blog/
+- **40+** blog artikelen live
 - **9** deep product pages (1000+ woorden) + 3 pillar pages (dosyalar var)
 - **6** categoriepagina's + 27 app routes
 - **6** skills (.claude/skills/: orchestrator, scheduler, writer, research, keyword, traffic)
 - **1** server paketi (server/: orchestrator + Telegram bot)
-- **20** makale kuyrukta (content/article-queue.md)
+- **0** openstaande artikelopdrachten 🎉
