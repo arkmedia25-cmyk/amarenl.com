@@ -50,6 +50,13 @@ export default function Footer() {
               <p className="text-xs font-bold text-[var(--color-text)] uppercase tracking-wider">✓ Gecertificeerde Partner</p>
               <p className="text-[10px] text-[var(--color-text-muted)] mt-1">Officieel Amare Global distributeur in Nederland.</p>
             </div>
+            <div className="p-4 rounded-2xl bg-[var(--color-bg-soft)] border border-[var(--color-border)]">
+              <p className="text-xs font-bold text-[var(--color-text)] uppercase tracking-wider">📦 Snelle Levering</p>
+              <p className="text-[10px] text-[var(--color-text-muted)] mt-1">Vanuit Nederlands magazijn. 1-2 werkdagen bezorgd door Amare Global.</p>
+            </div>
+            <p className="text-[10px] text-[var(--color-text-muted)] leading-relaxed">
+              Referentie: <a href="https://www.amare.com/2075008/nl-NL" className="underline hover:text-[var(--color-primary)]" target="_blank">Amare Global officiële website</a> — Partner ID 2075008
+            </p>
             <p className="text-[10px] text-[var(--color-text-muted)] leading-relaxed">
               * Voedingssupplementen. Geen geneesmiddel. Deze producten zijn niet bedoeld om ziekten te diagnosticeren, behandelen, genezen of voorkomen. Lees voor gebruik de verpakking en raadpleeg bij twijfel een arts.
             </p>
