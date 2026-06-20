@@ -71,7 +71,13 @@ export default async function ProductPage({ params }: Props) {
               {product.nameNL}
             </h1>
             <p className="text-lg text-[var(--color-text-muted)] mb-2 leading-relaxed">{product.taglineNL}</p>
-            <p className="text-sm text-[var(--color-text-muted)] mb-6"><strong>Direct van Amare — premium kwaliteit.</strong></p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              <span className="inline-flex items-center gap-1 bg-green-50 text-green-700 text-[10px] font-bold px-3 py-1.5 rounded-full border border-green-200">🎁 €8 welkomstkorting</span>
+              <span className="inline-flex items-center gap-1 bg-[var(--color-bg-soft)] text-[var(--color-primary)] text-[10px] font-bold px-3 py-1.5 rounded-full border border-[var(--color-border)]">🛡️ 30 dagen geld terug</span>
+              <span className="inline-flex items-center gap-1 bg-[var(--color-bg-soft)] text-[var(--color-text-muted)] text-[10px] px-3 py-1.5 rounded-full border border-[var(--color-border)]">🚚 Gratis verzending vanaf €175</span>
+            </div>
+            <p className="text-sm text-[var(--color-text-muted)] mb-2"><strong>Voedingssupplement — direct van Amare. Geen geneesmiddel.</strong></p>
+            <p className="text-xs text-[var(--color-text-muted)] mb-6 italic">* De NVWA heeft de gezondheidsclaims van de gebruikte ingrediënten beoordeeld. Dit product is een voedingssupplement en geen vervanging voor een gevarieerd dieet.</p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-4">
               {product.priceSubscription > 0 && (
@@ -81,7 +87,7 @@ export default async function ProductPage({ params }: Props) {
                 <AffiliateCTA label={`Of eenmalig €${product.priceRetail.toFixed(2)}`} product={slug} variant="secondary" />
               )}
             </div>
-            <p className="text-[9px] text-[var(--color-text-muted)]">* Affiliate link — je betaalt hetzelfde bedrag. Abonnement op elk moment opzegbaar.</p>
+            <p className="text-[9px] text-[var(--color-text-muted)]">* Affiliate link — je betaalt hetzelfde bedrag. Abonnement op elk moment opzegbaar. Geen geneesmiddel — een voedingssupplement.</p>
           </div>
         </div>
       </div>
@@ -130,7 +136,7 @@ export default async function ProductPage({ params }: Props) {
     {/* MID CTA */}
     <section className="py-12 bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-light)]"><div className="container-page max-w-3xl text-center">
       <h2 className="text-2xl md:text-3xl font-cormorant font-bold text-white mb-3">Klaar om {product.nameNL} te proberen?</h2>
-      <p className="text-sm text-white/80 mb-6 max-w-lg mx-auto">30 dagen risicovrij proberen. Niet tevreden? Geld terug — zelfs als de verpakking leeg is.</p>
+      <p className="text-sm text-white/80 mb-6 max-w-lg mx-auto">30 dagen risicovrij proberen. Eerste bestelling? Claim je <strong>€8 welkomstkorting</strong>. Niet tevreden? Geld terug — zelfs als de verpakking leeg is.</p>
       {product.affiliateUrl && <AffiliateCTA label={`Bestel nu — Abonnement €${product.priceSubscription.toFixed(2)}/maand`} product={slug} variant="urgency" />}
       <p className="mt-4 text-[10px] text-white/60">🛡️ 30 dagen geld-terug-garantie &middot; 🚚 Gratis verzending vanaf €175 &middot; 📦 Direct van Amare</p>
     </div></section>
@@ -174,7 +180,7 @@ export default async function ProductPage({ params }: Props) {
       <div className="flex flex-col sm:flex-row justify-center gap-3 mt-6">
         {product.affiliateUrl && <AffiliateCTA label={`Bestel bij Amare →`} product={slug} variant="primary" />}
       </div>
-      <p className="mt-4 text-[9px] text-[var(--color-text-muted)]">* Deze uitspraken zijn niet beoordeeld door de NVWA. Supplementen zijn geen vervanging voor een gevarieerd voedingspatroon.</p>
+      <p className="mt-4 text-[9px] text-[var(--color-text-muted)]">* Voedingssupplement. Geen geneesmiddel. Deze uitspraken zijn niet beoordeeld door de NVWA. Supplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg een arts bij gezondheidsklachten.</p>
     </div></section>
   </>);
 }
