@@ -21,10 +21,13 @@ export default function Footer() {
           {/* Links Column 1 */}
           <div>
             <h4 className="font-bold text-[var(--color-text)] mb-6">Producten</h4>
-            <ul className="space-y-4 text-sm">
+            <ul className="space-y-3 text-sm">
               <li><Link href="/supplementen/" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">Mentale Wellness</Link></li>
-              <li><Link href="/gewichtsbeheer/" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">Gewichtsbeheer</Link></li>
+              <li><Link href="/darmgezondheid/" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">Darmgezondheid</Link></li>
               <li><Link href="/schoonheid/" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">Schoonheid & Collageen</Link></li>
+              <li><Link href="/essentials/" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">Dagelijkse Essentials</Link></li>
+              <li><Link href="/pakketten/" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">Pakketten & Bundels</Link></li>
+              <li><Link href="/gewichtsbeheer/" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">Gewichtsbeheer</Link></li>
             </ul>
           </div>
 
@@ -48,7 +51,7 @@ export default function Footer() {
               <p className="text-[10px] text-[var(--color-text-muted)] mt-1">Officieel Amare Global distributeur in Nederland.</p>
             </div>
             <p className="text-[10px] text-[var(--color-text-muted)] leading-relaxed">
-              * Deze producten zijn niet bedoeld om ziekten te diagnosticeren, behandelen, genezen of voorkomen.
+              * Voedingssupplementen. Geen geneesmiddel. Deze producten zijn niet bedoeld om ziekten te diagnosticeren, behandelen, genezen of voorkomen. Lees voor gebruik de verpakking en raadpleeg bij twijfel een arts.
             </p>
           </div>
         </div>
