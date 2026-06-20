@@ -99,7 +99,7 @@ export default function Header() {
           </div>
 
           <Link href="/blogs/nieuws" className="text-xs font-bold text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors">Blog</Link>
-          <Link href="/blogs/nieuws/supplementen-wijzer-gratis" className="text-xs font-bold text-[var(--color-accent)] hover:text-[var(--color-primary)] transition-colors">Gratis Wijzer</Link>
+          <Link href="/supplementenwijzer" className="text-xs font-bold text-[var(--color-accent)] hover:text-[var(--color-primary)] transition-colors">Supplementenwijzer</Link>
         </nav>
 
         <div className="flex items-center gap-4">
