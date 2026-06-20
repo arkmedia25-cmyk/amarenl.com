@@ -1,10 +1,10 @@
 # AmareNL Article Queue — SEO-GEO-AEO İçerik Planı
-> Laatste update: 2026-06-19
-> Status: 12/12 pipeline ✅ | 3 vergelijkingsartikelen ✅ | Totaal 35 artikelen live
-> Deploy: Vercel production ✅ — dpl_HGqHa2Lkidyc8PLYRvy7ebGPAVaS
+> Laatste update: 2026-06-20
+> Status: 20/20 TIER ✅ | 3 vergelijkingsartikelen ✅ | Totaal 40 artikelen live
+> Deploy: Vercel production ✅
 > Metodoloji: NL search volume × commercial intent × product match × GEO query fan-out
 > Yayın takvimi: 2 günde bir (cron — article-scheduler skill)
-> Bron: amarenl-agent-keywords.md (12 artikelen)
+> Bron: amarenl-agent-keywords.md (12 artikelen) + 8 aanvullende TIER-artikelen
 
 ## 📊 Dutch Market Priority Matrix — Mayıs 2026
 
@@ -37,18 +37,18 @@
 | 11 | De Gut-Brain Connectie | gut-brain-connectie-darmen-stemming-mentaal | darmen | MentaBiotics, Happy Juice | 2.000 | ✅ |
 | 12 | Adaptogenen: De Complete Gids | adaptogenen-natuurlijke-stressverlichting-ashwagandha-rhodiola | mentaal | MentaFocus, EDGE+ | 1.800 | ✅ |
 | 13 | Beste Eiwitpoeder 2026 | beste-eiwitpoeder-2026-plantaardig-wei-vergelijking | essentials | Origin, FIT20 | 1.600 | ✅ |
-| 14 | Collageen Peptiden: Werkt Het Echt? | collageen-peptiden-werkt-echt-wetenschap-resultaten | schoonheid | HL5, NeuCollagen | 1.400 | ⏳ |
-| 15 | Huidverzorging van Binnenuit | huidverzorging-van-binnenuit-supplementen-stralende-huid | schoonheid | Skin to Mind, HL5 | 1.300 | ⏳ |
+| 14 | Collageen Peptiden: Werkt Het Echt? | collageen-peptiden-werkt-echt-wetenschap-resultaten | schoonheid | HL5, NeuCollagen | 1.400 | ✅ |
+| 15 | Huidverzorging van Binnenuit | huidverzorging-van-binnenuit-supplementen-stralende-huid | schoonheid | Skin to Mind, HL5 | 1.300 | ✅ |
 
 ### 🔵 TIER 4 — Emerging Niches / Seasonal
 
 | # | Makale Başlığı (NL) | Slug | Kategori | Hedef Ürün | Arama* | Status |
 |---|---------------------|------|----------|------------|--------|--------|
-| 16 | Cortisol Verlagen | cortisol-verlagen-natuurlijk-stresshormoon-balans | hormonen | MentaBiotics, Ignite | 1.200 | ⏳ |
-| 17 | Beter Slapen Zonder Medicatie | beter-slapen-zonder-medicatie-supplementen-nachtrust | wellness | Sleep+, Sunset | 1.100 | ⏳ |
+| 16 | Cortisol Verlagen | cortisol-verlagen-natuurlijk-stresshormoon-balans | hormonen | MentaBiotics, Ignite | 1.200 | ✅ |
+| 17 | Beter Slapen Zonder Medicatie | beter-slapen-zonder-medicatie-supplementen-nachtrust | wellness | Sleep+, Sunset | 1.100 | ✅ |
 | 18 | Hormoonbalans Vrouw | hormoonbalans-vrouw-supplementen-levensfase | hormonen | Ignite Her, Sunset | 950 | ✅ |
 | 19 | Prebiotica vs Probiotica | prebiotica-probiotica-verschil-darmen-uitleg | darmen | MentaBiotics, SeedFiber | 900 | 🔄 |
-| 20 | Kids en Supplementen | kids-supplementen-nodig-groei-focus-school | kids | Kids VitaGBX, Kids Mood+ | 700 | ⏳ |
+| 20 | Kids en Supplementen | kids-supplementen-nodig-groei-focus-school | kids | Kids VitaGBX, Kids Mood+ | 700 | ✅ |
 
 > *Tahmini aylık NL arama hacmi (Google Ads + Trends verisine dayalı)
 
@@ -138,19 +138,19 @@ Disclaimer: "* Deze uitspraken zijn niet beoordeeld door de NVWA..."
 - ✅ Her makale EN AZ 2 farklı Amare ürününe iç link içermeli
 - ✅ JSON-LD Article + FAQ schema otomatik eklenecek
 
-## 📊 Kategori Dağılımı (Güncel — 31 artikelen live)
+## 📊 Kategori Dağılımı (Güncel — 40 artikelen live)
 
-| Kategori | Pipeline | Vergelijking | Origineel | Totaal Live |
-|----------|----------|-------------|-----------|-------------|
-| darmen (Gut Health) | 3 | 1 | 3 | 7 |
-| schoonheid (Beauty) | 3 | 1 | 2 | 6 |
-| essentials (Vitamines) | 2 | — | 5 | 7 |
-| mentaal (Mental Wellness) | 2 | 1 | 2 | 5 |
-| hormonen (Hormones) | 2 | — | 1 | 3 |
-| energie (Energy) | — | — | 1 | 1 |
-| kids | — | — | 1 | 1 |
-| Lifestyle & Wellness | — | — | 2 | 2 |
-| **TOPLAM** | **12** | **3** | **17** | **32** |
+| Kategori | Pipeline | Vergelijking | TIER | Origineel | Totaal Live |
+|----------|----------|-------------|------|-----------|-------------|
+| darmen (Gut Health) | 3 | 1 | 1 | 3 | 8 |
+| schoonheid (Beauty) | 3 | 1 | 2 | 2 | 8 |
+| essentials (Vitamines) | 2 | — | 2 | 5 | 9 |
+| mentaal (Mental Wellness) | 2 | 1 | 2 | 2 | 7 |
+| hormonen (Hormones) | 2 | — | 1 | 1 | 4 |
+| energie (Energy) | — | — | — | 1 | 1 |
+| kids | — | — | 1 | 1 | 2 |
+| wellness | — | — | 1 | 1 | 2 |
+| **TOPLAM** | **12** | **3** | **10** | **16** | **41** |
 
 ---
 
@@ -160,8 +160,8 @@ Disclaimer: "* Deze uitspraken zijn niet beoordeeld door de NVWA..."
 |------|--------|---------|-------------|---------|
 | TIER 1 (High + Commercial) | 4 | 4 | 0 | 0 |
 | TIER 2 (High + Info) | 6 | 3 | 3 | 0 |
-| TIER 3 (Medium) | 5 | 3 | 0 | 2 |
-| TIER 4 (Niche/Seasonal) | 5 | 1 | 1 | 3 |
-| **TOTAAL** | **20** | **10** | **4** | **6** |
+| TIER 3 (Medium) | 5 | 5 | 0 | 0 |
+| TIER 4 (Niche/Seasonal) | 5 | 4 | 1 | 0 |
+| **TOTAAL** | **20** | **16** | **4** | **0** |
 
-> 6 van 20 originele TIER-artikelen nog te schrijven (6 onderwerpen zijn gecovered door pipeline/vergelijkingsartikelen onder andere slugs). TIER 1 volledig ✅
+> Alle 20 TIER-artikelen voltooid! 🎉 16 live, 4 onderwerpen gecovered door gerelateerde artikelen onder andere slugs.
