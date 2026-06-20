@@ -148,6 +148,7 @@ export function generateProductSchema(input: ProductSchemaInput) {
       '@type': 'Brand',
       name: 'Amare',
     },
+    category: 'Voedingssupplementen',
     offers: [
       {
         '@type': 'Offer',
@@ -158,6 +159,23 @@ export function generateProductSchema(input: ProductSchemaInput) {
         priceValidUntil,
         itemCondition: 'https://schema.org/NewCondition',
         name: 'Abonnement (-10%)',
+        shippingDetails: {
+          '@type': 'OfferShippingDetails',
+          shippingRate: {
+            '@type': 'MonetaryAmount',
+            value: 0,
+            currency: 'EUR',
+          },
+          shippingDestination: {
+            '@type': 'DefinedRegion',
+            addressCountry: 'NL',
+          },
+          deliveryTime: {
+            '@type': 'ShippingDeliveryTime',
+            handlingTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 1, unitCode: 'DAY' },
+            transitTime: { '@type': 'QuantitativeValue', minValue: 2, maxValue: 5, unitCode: 'DAY' },
+          },
+        },
         seller: {
           '@type': 'Organization',
           name: 'Amare Global',
@@ -172,12 +190,25 @@ export function generateProductSchema(input: ProductSchemaInput) {
         priceValidUntil,
         itemCondition: 'https://schema.org/NewCondition',
         name: 'Eenmalige aankoop',
+        shippingDetails: {
+          '@type': 'OfferShippingDetails',
+          shippingRate: { '@type': 'MonetaryAmount', value: 4.95, currency: 'EUR' },
+          shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'NL' },
+        },
         seller: {
           '@type': 'Organization',
           name: 'Amare Global',
         },
       },
     ],
+    hasMerchantReturnPolicy: {
+      '@type': 'MerchantReturnPolicy',
+      returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+      returnMethod: 'https://schema.org/ReturnByMail',
+      returnFees: 'https://schema.org/FreeReturn',
+      merchantReturnDays: 30,
+      description: '30 dagen geld-terug-garantie — zelfs als de verpakking leeg is',
+    },
   };
 
   if (input.ratingValue && input.ratingCount) {
