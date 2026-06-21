@@ -1,6 +1,6 @@
 # AmareNL Article Queue — SEO-GEO-AEO İçerik Planı
-> Laatste update: 2026-06-20
-> Status: 20/20 TIER ✅ | 3 vergelijkingsartikelen ✅ | Totaal 40 artikelen live
+> Laatste update: 2026-06-21
+> Status: 20/20 TIER ✅ | 3 vergelijkingsartikelen ✅ | 1 bonus darm-huid artikel ✅ | Totaal 41 artikelen live
 > Deploy: Vercel production ✅
 > Metodoloji: NL search volume × commercial intent × product match × GEO query fan-out
 > Yayın takvimi: 2 günde bir (cron — article-scheduler skill)
@@ -138,19 +138,19 @@ Disclaimer: "* Deze uitspraken zijn niet beoordeeld door de NVWA..."
 - ✅ Her makale EN AZ 2 farklı Amare ürününe iç link içermeli
 - ✅ JSON-LD Article + FAQ schema otomatik eklenecek
 
-## 📊 Kategori Dağılımı (Güncel — 40 artikelen live)
+## 📊 Kategori Dağılımı (Güncel — 41 artikelen live)
 
-| Kategori | Pipeline | Vergelijking | TIER | Origineel | Totaal Live |
-|----------|----------|-------------|------|-----------|-------------|
-| darmen (Gut Health) | 3 | 1 | 1 | 3 | 8 |
-| schoonheid (Beauty) | 3 | 1 | 2 | 2 | 8 |
-| essentials (Vitamines) | 2 | — | 2 | 5 | 9 |
-| mentaal (Mental Wellness) | 2 | 1 | 2 | 2 | 7 |
-| hormonen (Hormones) | 2 | — | 1 | 1 | 4 |
-| energie (Energy) | — | — | — | 1 | 1 |
-| kids | — | — | 1 | 1 | 2 |
-| wellness | — | — | 1 | 1 | 2 |
-| **TOPLAM** | **12** | **3** | **10** | **16** | **41** |
+| Kategori | Pipeline | Vergelijking | TIER | Origineel | Bonus | Totaal Live |
+|----------|----------|-------------|------|-----------|-------|-------------|
+| darmen (Gut Health) | 3 | 1 | 1 | 3 | 1 | 9 |
+| schoonheid (Beauty) | 3 | 1 | 2 | 2 | — | 8 |
+| essentials (Vitamines) | 2 | — | 2 | 5 | — | 9 |
+| mentaal (Mental Wellness) | 2 | 1 | 2 | 2 | — | 7 |
+| hormonen (Hormones) | 2 | — | 1 | 1 | — | 4 |
+| energie (Energy) | — | — | — | 1 | — | 1 |
+| kids | — | — | 1 | 1 | — | 2 |
+| wellness | — | — | 1 | 1 | — | 2 |
+| **TOPLAM** | **12** | **3** | **10** | **16** | **1** | **42** |
 
 ---
 
