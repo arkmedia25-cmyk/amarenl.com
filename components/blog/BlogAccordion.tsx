@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown, Calendar } from "lucide-react";
+import { ChevronDown, Calendar, ExternalLink } from "lucide-react";
+import Link from "next/link";
 import type { BlogPost } from "@/lib/blog";
 import DOMPurify from "dompurify";
 import { linkifyProductMentions } from "@/lib/blog";
@@ -56,6 +57,14 @@ export default function BlogAccordion({ posts }: { posts: BlogPost[] }) {
                     prose-h2:text-lg prose-h3:text-base prose-h4:text-sm"
                   dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(linkifyProductMentions(post.content, post.slug)) }}
                 />
+                <div className="mt-4 pt-3 border-t border-[var(--color-border)]">
+                  <Link
+                    href={`/blogs/nieuws/${post.slug}`}
+                    className="inline-flex items-center gap-2 text-xs font-bold text-[var(--color-primary)] hover:text-[var(--color-accent)] transition-colors"
+                  >
+                    Lees volledig artikel <ExternalLink size={12} />
+                  </Link>
+                </div>
               </div>
             )}
           </div>

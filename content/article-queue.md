@@ -1,6 +1,6 @@
 # AmareNL Article Queue — SEO-GEO-AEO İçerik Planı
-> Laatste update: 2026-06-21
-> Status: 20/20 TIER ✅ | 3 vergelijkingsartikelen ✅ | 1 bonus darm-huid artikel ✅ | Totaal 41 artikelen live
+> Laatste update: 2026-06-22
+> Status: 20/20 TIER ✅ | 3 vergelijkingsartikelen ✅ | 1 bonus darm-huid artikel ✅ | 1 prebiotica artikel ✅ | Totaal 42 artikelen live
 > Deploy: Vercel production ✅
 > Metodoloji: NL search volume × commercial intent × product match × GEO query fan-out
 > Yayın takvimi: 2 günde bir (cron — article-scheduler skill)
@@ -93,12 +93,12 @@
 
 | Ürün | Gepubliceerde Artikelen (slug) |
 |------|-------------------------------|
-| **MentaBiotics** | beste-probiotica-2026-kopen-vergelijken, probiotica-stemming-darm-hersen-connectie-mentabiotics, probiotica-prebiotica-mentabiotics-vergelijken, darmflora-verbeteren-herstel-spijsvertering-natuurlijk |
+| **MentaBiotics** | beste-probiotica-2026-kopen-vergelijken, probiotica-stemming-darm-hersen-connectie-mentabiotics, probiotica-prebiotica-mentabiotics-vergelijken, darmflora-verbeteren-herstel-spijsvertering-natuurlijk, prebiotica-vezels-darmen-gezondheid-voeding-supplementen |
 | **Happy Juice Pack** | gut-brain-connectie-darmen-stemming-mentaal, happy-juice-pack-vs-losse-supplementen-vergelijken, supplementen-voor-meer-energie-dit-werkt-echt |
 | **Energy+** | supplementen-voor-meer-energie-dit-werkt-echt, happy-juice-pack-vs-losse-supplementen-vergelijken, altijd-moe-ontdek-hoe-cel-energie-jouw-energieniveau-bepaalt |
 | **HL5** | collageen-supplement-kopen-waar-op-letten, collageen-hl5-vs-supermarkt-vergelijken, haaruitval-supplement-vrouwen-oorzaken-oplossingen |
 | **Ignite for HER** | hormoonbalans-supplement-vrouwen-levensfase-ondersteuning, menopauze-supplement-natuurlijke-ondersteuning-overgang |
-| **Restore** | darmflora-verbeteren-herstel-spijsvertering-natuurlijk, probiotica-prebiotica-mentabiotics-vergelijken |
+| **Restore** | darmflora-verbeteren-herstel-spijsvertering-natuurlijk, probiotica-prebiotica-mentabiotics-vergelijken, prebiotica-vezels-darmen-gezondheid-voeding-supplementen |
 | **EDGE+** | ashwagandha-kopen-nederland-adaptogeen-supplement, focus-supplement-natuurlijke-nootropics-concentratie, happy-juice-pack-vs-losse-supplementen-vergelijken |
 | **Sunrise** | vitamine-d-tekort-symptomen, supplement-routine-ochtend-timing-schema |
 | **Sunset** | adaptogenen-stress-supplement-nederland, omega-3-hersenen-supplement-nederland |
@@ -138,11 +138,11 @@ Disclaimer: "* Deze uitspraken zijn niet beoordeeld door de NVWA..."
 - ✅ Her makale EN AZ 2 farklı Amare ürününe iç link içermeli
 - ✅ JSON-LD Article + FAQ schema otomatik eklenecek
 
-## 📊 Kategori Dağılımı (Güncel — 41 artikelen live)
+## 📊 Kategori Dağılımı (Güncel — 42 artikelen live)
 
 | Kategori | Pipeline | Vergelijking | TIER | Origineel | Bonus | Totaal Live |
 |----------|----------|-------------|------|-----------|-------|-------------|
-| darmen (Gut Health) | 3 | 1 | 1 | 3 | 1 | 9 |
+| darmen (Gut Health) | 3 | 1 | 1 | 3 | 2 | 10 |
 | schoonheid (Beauty) | 3 | 1 | 2 | 2 | — | 8 |
 | essentials (Vitamines) | 2 | — | 2 | 5 | — | 9 |
 | mentaal (Mental Wellness) | 2 | 1 | 2 | 2 | — | 7 |
@@ -150,7 +150,7 @@ Disclaimer: "* Deze uitspraken zijn niet beoordeeld door de NVWA..."
 | energie (Energy) | — | — | — | 1 | — | 1 |
 | kids | — | — | 1 | 1 | — | 2 |
 | wellness | — | — | 1 | 1 | — | 2 |
-| **TOPLAM** | **12** | **3** | **10** | **16** | **1** | **42** |
+| **TOPLAM** | **12** | **3** | **10** | **16** | **2** | **43** |
 
 ---
 
