@@ -1,34 +1,55 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from 'next/server'
+import fs from 'fs'
+import path from 'path'
 
-export async function POST(request: NextRequest) {
+const SUBSCRIBERS_FILE = path.join(process.cwd(), 'data', 'subscribers.json')
+
+function readSubscribers(): { email: string; date: string; source: string }[] {
   try {
-    const { email } = await request.json();
-    if (!email || !email.includes("@")) {
-      return NextResponse.json({ error: "Invalid email" }, { status: 400 });
+    if (fs.existsSync(SUBSCRIBERS_FILE)) {
+      return JSON.parse(fs.readFileSync(SUBSCRIBERS_FILE, 'utf-8'))
     }
+  } catch {}
+  return []
+}
 
-    const apiKey = process.env.MAILERLITE_API_KEY;
-    if (!apiKey) {
-      return NextResponse.json({ error: "Server config error" }, { status: 500 });
+function writeSubscribers(subscribers: typeof readSubscribers) {
+  const dir = path.dirname(SUBSCRIBERS_FILE)
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
+  fs.writeFileSync(SUBSCRIBERS_FILE, JSON.stringify(subscribers, null, 2))
+}
+
+export async function POST(request: Request) {
+  try {
+    const { email, source = 'website' } = await request.json()
+    
+    if (!email || !email.includes('@')) {
+      return NextResponse.json({ error: 'Ongeldig e-mailadres' }, { status: 400 })
     }
-
-    const res = await fetch("https://connect.mailerlite.com/api/subscribers", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${apiKey}`,
-      },
-      body: JSON.stringify({ email }),
-    });
-
-    const data = await res.json();
-
-    if (res.ok || data?.message?.includes("already")) {
-      return NextResponse.json({ success: true });
+    
+    const subscribers = readSubscribers()
+    const exists = subscribers.find(s => s.email.toLowerCase() === email.toLowerCase())
+    
+    if (!exists) {
+      subscribers.push({
+        email: email.toLowerCase(),
+        date: new Date().toISOString(),
+        source,
+      })
+      writeSubscribers(subscribers)
     }
-
-    return NextResponse.json({ error: data?.message || "Failed" }, { status: 400 });
-  } catch {
-    return NextResponse.json({ error: "Server error" }, { status: 500 });
+    
+    return NextResponse.json({ 
+      success: true, 
+      message: 'Je bent ingeschreven! Check je inbox voor je €8 kortingscode.',
+      count: subscribers.length,
+    })
+  } catch (error) {
+    return NextResponse.json({ error: 'Er ging iets mis' }, { status: 500 })
   }
+}
+
+export async function GET() {
+  const subscribers = readSubscribers()
+  return NextResponse.json({ count: subscribers.length })
 }
