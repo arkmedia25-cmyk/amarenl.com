@@ -13,7 +13,7 @@ function readSubscribers(): { email: string; date: string; source: string }[] {
   return []
 }
 
-function writeSubscribers(subscribers: typeof readSubscribers) {
+function writeSubscribers(subscribers: { email: string; date: string; source: string }[]) {
   const dir = path.dirname(SUBSCRIBERS_FILE)
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
   fs.writeFileSync(SUBSCRIBERS_FILE, JSON.stringify(subscribers, null, 2))
