@@ -2073,6 +2073,62 @@ export const blogPosts: BlogPost[] = [
       <p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl.</em></p>
     `,
     image: "/images/blog/apotheek-of-groenteboer-cover.jpg"
+  },
+{
+    slug: "beste-supplementen-haar-nagels-werkt-echt",
+    title: "Beste Supplementen voor Haar en Nagels: Dit Werkt Echt (2026)",
+    date: "2026-06-22",
+    category: "schoonheid",
+    excerpt: "Niet elk 'haar vitamine' supplement doet wat het belooft. We scheiden de feiten van de marketing voor sterker haar en nagels.",
+    content: `
+      <h2>Waarom haar en nagels als eerste lijden</h2>
+      <p>Je haar en nagels zijn geen vitale organen — je lichaam beschouwt ze als 'niet-essentieel'. Dat betekent dat bij een tekort aan voedingsstoffen, je lichaam de beschikbare bouwstoffen eerst naar je hart, hersenen en spieren stuurt. Je haar en nagels krijgen de restjes.</p>
+      <p>Daarom zijn broos haar en splijtende nagels vaak het eerste signaal dat er iets ontbreekt in je voeding. Het goede nieuws: het zijn ook de eerste plekken waar je verbetering ziet zodra je de juiste voedingsstoffen aanvult.</p>
+      <h2>De top 5 bewezen supplementen voor haar en nagels</h2>
+      <h3>1. Collageen — de bouwsteen van je haar en nagels</h3>
+      <p>Collageen is het meest voorkomende eiwit in je lichaam en vormt de structurele basis van je huid, haar en nagels. Gehydrolyseerd collageen (collageenpeptiden) zijn kleine eiwitfragmenten die je lichaam direct kan opnemen.</p>
+      <p>Onderzoek toont aan dat collageensuppletie de haardikte en nagelgroei kan ondersteunen. Een studie uit 2017 in het Journal of Cosmetic Dermatology vond dat dagelijkse inname van collageenpeptiden de nagelgroei met 12% verhoogde en broze nagels met 42% verminderde. Het mechanisme: collageenpeptiden leveren de aminozuren proline, glycine en hydroxyproline — de bouwstenen voor keratine, het hoofdeiwit van haar en nagels.</p>
+      <p>Let op: niet alle collageen is gelijk. Type I en III zijn het meest relevant voor huid, haar en nagels. Kies voor gehydrolyseerd collageen met een laag moleculair gewicht (minder dan 3000 Dalton) voor optimale opname.</p>
+      <h3>2. Biotine (Vitamine B8) — de klassieker met een kanttekening</h3>
+      <p>Biotine is het bekendste haar-en-nagelsupplement, en niet zonder reden. Het speelt een rol in de keratineproductie. Maar hier komt de nuance: biotine werkt alleen als je een biotinetekort hebt — en dat komt zelden voor bij mensen met een gevarieerd dieet.</p>
+      <p>Voor mensen mét een tekort (zwangere vrouwen, mensen die langdurig antibiotica gebruiken, rokers) is biotine effectief. Voor mensen zonder tekort is het wetenschappelijk bewijs zwakker. De meeste kwalitatieve haarformules bevatten biotine niet als hoofdingrediënt maar als ondersteuning — en dat is de juiste benadering.</p>
+      <h3>3. IJzer — de onderschatte haarvijand</h3>
+      <p>IJzertekort is een van de meest voorkomende oorzaken van haaruitval bij vrouwen, maar wordt vaak over het hoofd gezien. IJzer is essentieel voor de zuurstoftoevoer naar de haarfollikels. Zonder voldoende ijzer gaan follikels in een rustfase (telogeen), wat leidt tot diffuus haarverlies.</p>
+      <p>Een ferritinewaarde onder 30 ng/ml wordt door dermatologen geassocieerd met haaruitval. De oplossing: laat je bloed prikken voordat je ijzer supplementeert, maar weet dat dit een reële oorzaak is.</p>
+      <h3>4. Zink — de groeifactor</h3>
+      <p>Zink speelt een cruciale rol in de celdeling en eiwitsynthese — twee processen die 24/7 actief zijn in je haarfollikels en nagelmatrix. Een zinktekort leidt tot broos haar en witte vlekjes op de nagels (leukonychia).</p>
+      <p>Zink wordt slecht opgenomen uit plantaardige voeding, waardoor vegetariërs een hoger risico lopen. De aanbevolen dagelijkse hoeveelheid is 7-8 mg voor vrouwen en 9-10 mg voor mannen. Let op: langdurig hoog doseren van zink (boven 25 mg/dag) kan een kopertekort veroorzaken, wat juist weer haarproblemen geeft.</p>
+      <h3>5. Vitamine D — de follikelregulator</h3>
+      <p>Vitamine D-receptoren zijn aanwezig in haarfollikels en spelen een rol in de haargroeicyclus. Studies hebben een correlatie gevonden tussen lage vitamine D-spiegels en haaruitval, met name bij alopecia areata. In Nederland heeft 40-60% van de bevolking een suboptimale vitamine D-status in de winter.</p>
+      <h2>Supplementen die NIET werken voor haar en nagels</h2>
+      <p><strong>Keratinepillen</strong>: Keratine is een eiwit dat je maag afbreekt als elk ander eiwit. Het komt niet als intacte keratine in je haar terecht.</p>
+      <p><strong>'Haar Vitamine' mixen met alleen biotine</strong>: Te beperkt. Een goede haarformule bevat minimaal collageen, zink, biotine en vitamine C.</p>
+      <p><strong>Paardenstaartextract (silica)</strong>: Wordt aangeprezen voor haar maar het wetenschappelijk bewijs is anekdotisch.</p>
+      <h2>Amare producten voor haar en nagels — vergeleken</h2>
+      <table>
+      <tr><th>Product</th><th>Werkzame stoffen</th><th>Effect</th></tr>
+      <tr><td><strong>HL5</strong></td><td>5g gehydrolyseerd collageen type I+III</td><td>Bouwsteen voor haar en nagels</td></tr>
+      <tr><td><strong>NeuCollagen</strong></td><td>Premium collageen + hyaluronzuur</td><td>Extra hydratatie voor huid én haar</td></tr>
+      <tr><td><strong>Sunrise</strong></td><td>IJzer + Vitamine C + Zink + B-vitamines</td><td>Complete micronutriëntenbasis</td></tr>
+      </table>
+      <h2>Vergeet de basis niet</h2>
+      <p>Supplementen werken het beste als de basis klopt. Drie dingen die meer impact hebben dan welk supplement dan ook:</p>
+      <p><strong>1. Voldoende eiwit.</strong> Haar en nagels zijn opgebouwd uit eiwit. Als je te weinig eiwit eet, helpt geen enkel supplement. Streef naar minimaal 1,2 gram eiwit per kilo lichaamsgewicht per dag.</p>
+      <p><strong>2. Schildklier checken.</strong> Een trage schildklier is een frequente oorzaak van haaruitval en broze nagels — en wordt vaak gemist. Laat TSH en T4 meeprikken bij je volgende bloedtest.</p>
+      <p><strong>3. Milde haarverzorging.</strong> Hitte-styling, agressieve shampoos en strakke kapsels beschadigen het haar mechanisch — supplementen kunnen die schade niet herstellen.</p>
+      <h2>Veelgestelde vragen</h2>
+      <h3>Hoe snel zie ik resultaat van collageen voor haar en nagels?</h3>
+      <p>Nagels groeien ongeveer 3 mm per maand — je ziet verbetering dus meestal na 2 tot 3 maanden consistent gebruik. Haar groeit 1-1,5 cm per maand; de eerste verbetering in haardikte en uitval merk je na 3 tot 6 maanden. Consistentie is cruciaal.</p>
+      <h3>Kan ik collageen en biotine tegelijk nemen?</h3>
+      <p>Ja, ze vullen elkaar aan. Collageen levert bouwstenen, biotine ondersteunt de keratineproductie. De combinatie is sterker dan elk afzonderlijk.</p>
+      <h3>Helpt collageen ook tegen gespleten haarpunten?</h3>
+      <p>Nee. Gespleten punten zijn mechanische schade — collageen kan bestaande schade niet herstellen. Wat collageen wel kan: nieuw uitgroeiend haar sterker maken, waardoor het minder snel splitst. Knip de dode punten eraf en ondersteun de nieuwe groei.</p>
+      <h2>Conclusie</h2>
+      <p>De beste supplementen voor haar en nagels richten zich op de bouwstenen (collageen, eiwit), co-factoren (zink, biotine, ijzer bij tekort) en de basisgezondheid (vitamine D). Er bestaat geen wondermiddel dat beschadigd haar repareert, maar met de juiste combinatie van collageen, micronutriënten en consistente haarverzorging kun je sterker haar en nagels van binnenuit opbouwen.</p>
+      <p>Producten zoals Amare HL5 combineren 5 gram gehydrolyseerd collageen met een compleet aminozuurprofiel — een stevige basis voor zichtbaar sterker haar en nagels.</p>
+      <p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Supplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl.</em></p>
+    `,
+    image: "/images/blog/supplementen-haar-nagels-cover.jpg"
   }
 ];
 
@@ -2307,6 +2363,12 @@ const articleProductMap: Record<string, ProductLink[]> = {
   "apotheek-of-groenteboer": [
     { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — probiotica voor stemming & mentale veerkracht" },
     { name: "Happy Juice Pack", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — complete gut-brain ondersteuning" },
+  ],
+  "beste-supplementen-haar-nagels-werkt-echt": [
+    { name: "HL5", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "5g gehydrolyseerd collageen Type 1&3 — 2-pack beste waarde" },
+    { name: "Amare HL5", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "5g collageen peptiden + vit. C + hyaluronzuur — haar & nagels" },
+    { name: "NeuCollagen", url: `${AFFILIATE_BASE}/neucollagen`, isInternal: false, price: "~€90/maand", tagline: "6-dimensionaal collageen — huid, haar, nagels & gewrichten" },
+    { name: "Sunrise", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "IJzer + Zink + Vitamine C + B-complex — complete basis" },
   ],
 };
 
