@@ -12,8 +12,9 @@ export interface BlogPost {
   image?: string;
 }
 
-import { readFileSync, existsSync, readdirSync } from 'fs'
-import { join } from 'path'
+export function getAllBlogPosts(): BlogPost[] {
+  return [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
 
 export const blogPosts: BlogPost[] = [
 {
@@ -2146,41 +2147,6 @@ export const blogPosts: BlogPost[] = [
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);
-}
-
-export function getAllBlogPosts(): BlogPost[] {
-  const hardcoded = [...blogPosts];
-  
-  // Also scan MDX files from content/blog/
-  try {
-    const mdxDir = join(process.cwd(), 'content/blog');
-    if (existsSync(mdxDir)) {
-      const existingSlugs = new Set(hardcoded.map(p => p.slug));
-      const files = readdirSync(mdxDir).filter((f: string) => f.endsWith('.mdx'));
-      for (const file of files) {
-        const slug = file.replace('.mdx', '');
-        if (existingSlugs.has(slug)) continue;
-        const raw = readFileSync(join(mdxDir, file), 'utf-8');
-        const fm = raw.match(/^---\n([\s\S]*?)\n---/);
-        if (!fm) continue;
-        const meta: Record<string,string> = {};
-        fm[1].split('\n').forEach((line: string) => {
-          const m = line.match(/^(\w+):\s*"?(.+?)"?\s*$/);
-          if (m) meta[m[1]] = m[2];
-        });
-        hardcoded.push({
-          slug,
-          title: meta.title || slug,
-          date: meta.date || '2026-01-01',
-          category: meta.category || 'algemeen',
-          excerpt: meta.excerpt || meta.metaDescription || '',
-          content: raw.replace(/^---[\s\S]*?---\n/, ''),
-        });
-      }
-    }
-  } catch(e) { /* MDX dir may not exist at build time */ }
-  
-  return hardcoded.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 interface ProductLink {
