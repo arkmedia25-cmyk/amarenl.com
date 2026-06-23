@@ -12,8 +12,8 @@ export interface BlogPost {
   image?: string;
 }
 
-import fs from 'fs'
-import path from 'path'
+import { readFileSync, existsSync, readdirSync } from 'fs'
+import { join } from 'path'
 
 export const blogPosts: BlogPost[] = [
 {
@@ -2153,15 +2153,15 @@ export function getAllBlogPosts(): BlogPost[] {
   
   // Also scan MDX files from content/blog/
   try {
-    const mdxDir = path.join(process.cwd(), 'content/blog');
-    if (fs.existsSync(mdxDir)) {
+    const mdxDir = join(process.cwd(), 'content/blog');
+    if (existsSync(mdxDir)) {
       const existingSlugs = new Set(hardcoded.map(p => p.slug));
-      const files = fs.readdirSync(mdxDir).filter((f: string) => f.endsWith('.mdx'));
+      const files = readdirSync(mdxDir).filter((f: string) => f.endsWith('.mdx'));
       for (const file of files) {
         const slug = file.replace('.mdx', '');
         if (existingSlugs.has(slug)) continue;
-        const content = fs.readFileSync(path.join(mdxDir, file), 'utf-8');
-        const fm = content.match(/^---\n([\s\S]*?)\n---/);
+        const raw = readFileSync(join(mdxDir, file), 'utf-8');
+        const fm = raw.match(/^---\n([\s\S]*?)\n---/);
         if (!fm) continue;
         const meta: Record<string,string> = {};
         fm[1].split('\n').forEach((line: string) => {
@@ -2174,7 +2174,7 @@ export function getAllBlogPosts(): BlogPost[] {
           date: meta.date || '2026-01-01',
           category: meta.category || 'algemeen',
           excerpt: meta.excerpt || meta.metaDescription || '',
-          content: content.replace(/^---[\s\S]*?---\n/, ''),
+          content: raw.replace(/^---[\s\S]*?---\n/, ''),
         });
       }
     }
