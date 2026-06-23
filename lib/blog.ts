@@ -2146,7 +2146,40 @@ export function getBlogPostBySlug(slug: string): BlogPost | undefined {
 }
 
 export function getAllBlogPosts(): BlogPost[] {
-  return [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const hardcoded = [...blogPosts];
+  
+  // Also scan MDX files from content/blog/
+  try {
+    const fs = require('fs');
+    const path = require('path');
+    const mdxDir = path.join(process.cwd(), 'content/blog');
+    if (fs.existsSync(mdxDir)) {
+      const existingSlugs = new Set(hardcoded.map(p => p.slug));
+      const files = fs.readdirSync(mdxDir).filter((f: string) => f.endsWith('.mdx'));
+      for (const file of files) {
+        const slug = file.replace('.mdx', '');
+        if (existingSlugs.has(slug)) continue;
+        const content = fs.readFileSync(path.join(mdxDir, file), 'utf-8');
+        const fm = content.match(/^---\n([\s\S]*?)\n---/);
+        if (!fm) continue;
+        const meta: Record<string,string> = {};
+        fm[1].split('\n').forEach((line: string) => {
+          const m = line.match(/^(\w+):\s*"?(.+?)"?\s*$/);
+          if (m) meta[m[1]] = m[2];
+        });
+        hardcoded.push({
+          slug,
+          title: meta.title || slug,
+          date: meta.date || '2026-01-01',
+          category: meta.category || 'algemeen',
+          excerpt: meta.excerpt || meta.metaDescription || '',
+          content: content.replace(/^---[\s\S]*?---\n/, ''),
+        });
+      }
+    }
+  } catch(e) { /* ignore - MDX dir may not exist at build time */ }
+  
+  return hardcoded.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 interface ProductLink {
