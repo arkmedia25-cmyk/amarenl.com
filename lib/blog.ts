@@ -12,8 +12,11 @@ export interface BlogPost {
   image?: string;
 }
 
+import extraArticles from '@/data/extra-articles.json'
+
 export function getAllBlogPosts(): BlogPost[] {
-  return [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const all = [...blogPosts, ...(extraArticles as BlogPost[])];
+  return all.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 export const blogPosts: BlogPost[] = [
