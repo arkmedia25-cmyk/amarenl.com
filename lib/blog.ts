@@ -12,6 +12,9 @@ export interface BlogPost {
   image?: string;
 }
 
+import fs from 'fs'
+import path from 'path'
+
 export const blogPosts: BlogPost[] = [
 {
     slug: "beste-eiwitpoeder-2026-plantaardig-wei-vergelijking",
@@ -2150,8 +2153,6 @@ export function getAllBlogPosts(): BlogPost[] {
   
   // Also scan MDX files from content/blog/
   try {
-    const fs = require('fs');
-    const path = require('path');
     const mdxDir = path.join(process.cwd(), 'content/blog');
     if (fs.existsSync(mdxDir)) {
       const existingSlugs = new Set(hardcoded.map(p => p.slug));
@@ -2177,7 +2178,7 @@ export function getAllBlogPosts(): BlogPost[] {
         });
       }
     }
-  } catch(e) { /* ignore - MDX dir may not exist at build time */ }
+  } catch(e) { /* MDX dir may not exist at build time */ }
   
   return hardcoded.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
