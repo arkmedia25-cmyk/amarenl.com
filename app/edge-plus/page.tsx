@@ -77,23 +77,109 @@ export default function EdgePlusPage() {
       <div className="overflow-x-auto"><table className="w-full text-sm border-collapse"><thead><tr className="border-b-2 border-[var(--color-primary)] text-left"><th className="py-3 px-4 text-[10px] font-bold uppercase text-[var(--color-primary)]">Ingrediënt</th><th className="py-3 px-4 text-[10px] font-bold uppercase text-[var(--color-primary)]">Hoeveelheid</th><th className="py-3 px-4 text-[10px] font-bold uppercase text-[var(--color-primary)]">Functie</th></tr></thead><tbody>{ingredients.map((r, i) => (<tr key={i} className="border-b border-[var(--color-border)]"><td className="py-3 px-4 font-bold text-[var(--color-text)] align-top text-xs">{r.g}</td><td className="py-3 px-4 text-[var(--color-text-muted)] text-xs align-top">{r.a}</td><td className="py-3 px-4 text-[var(--color-text-muted)] text-xs align-top">{r.p}</td></tr>))}</tbody></table></div>
     </div></section>
 
-    <section className="py-12 bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-light)]"><div className="container-page max-w-3xl text-center">
-      <h2 className="text-2xl md:text-3xl font-cormorant font-bold text-white mb-3">Focus zonder cafeïne — het kan</h2>
-      <p className="text-sm text-white/80 mb-6 max-w-lg mx-auto">Probeer EDGE+ 30 dagen risicovrij.</p>
-      <AffiliateCTA label="Bestel EDGE+ → €77,28/maand" product="edge-mango" variant="urgency" />
-      <p className="mt-4 text-[10px] text-white/60">🛡️ 30 dagen geld-terug &middot; 🚚 Gratis verzending vanaf €175</p>
-    </div></section>
+    {/* ── Hoe gebruik je het? ── */}
+    <section className="py-16 bg-[var(--color-bg-soft)]">
+      <div className="container-page max-w-3xl">
+        <h2 className="text-2xl md:text-3xl font-cormorant font-bold text-[var(--color-text)] mb-6">Hoe gebruik je EDGE+?</h2>
+        <div className="bg-white rounded-xl p-6 border border-[var(--color-border)]">
+          <ol className="space-y-4">
+            <li className="flex gap-4"><span className="flex-shrink-0 w-7 h-7 rounded-full bg-[var(--color-primary)] text-white text-xs font-bold flex items-center justify-center">1</span><div><strong className="text-sm text-[var(--color-text)]">Meng 1 stickpack met 250 ml koud water</strong><p className="text-xs text-[var(--color-text-muted)] mt-1">Gebruik koud of lauw water — niet met kokend water mengen. Roer goed door tot het poeder volledig is opgelost. De Mango-smaak maakt het een aangenaam ochtendritueel.</p></div></li>
+            <li className="flex gap-4"><span className="flex-shrink-0 w-7 h-7 rounded-full bg-[var(--color-primary)] text-white text-xs font-bold flex items-center justify-center">2</span><div><strong className="text-sm text-[var(--color-text)]">Neem bij voorkeur in de ochtend of vroege middag</strong><p className="text-xs text-[var(--color-text-muted)] mt-1">EDGE+ is cafeïnevrij — dus ook geschikt voor de middag zonder dat het je nachtrust verstoort. Neem het bij het ontbijt of bij de lunch voor kalme, aanhoudende focus gedurende de dag.</p></div></li>
+            <li className="flex gap-4"><span className="flex-shrink-0 w-7 h-7 rounded-full bg-[var(--color-primary)] text-white text-xs font-bold flex items-center justify-center">3</span><div><strong className="text-sm text-[var(--color-text)]">Dagelijks gebruiken voor het beste resultaat</strong><p className="text-xs text-[var(--color-text-muted)] mt-1">EDGE+ is ontworpen voor dagelijkse inname. De adaptogenen en pantotheenzuur werken cumulatief — hoe consistenter je gebruik, hoe beter de resultaten. Maak het onderdeel van je ochtend- of middagritueel.</p></div></li>
+          </ol>
+          <div className="mt-6 p-4 bg-[var(--color-bg-soft)] rounded-lg text-xs text-[var(--color-text-muted)]">
+            <strong>⏰ Tijdsinvestering:</strong> Minder dan 1 minuut per dag.<br />
+            <strong>☕ Cafeïnevrij:</strong> Geschikt voor cafeïnegevoeligen — verstoort je nachtrust niet.<br />
+            <strong>📦 Inhoud:</strong> 30 stickpacks — 1 maand voorraad bij dagelijks gebruik.
+          </div>
+        </div>
+      </div>
+    </section>
 
+    {/* ── Wat kun je verwachten? ── */}
+    <section className="py-16 bg-white">
+      <div className="container-page max-w-3xl">
+        <h2 className="text-2xl md:text-3xl font-cormorant font-bold text-[var(--color-text)] mb-6">Wat kun je verwachten?</h2>
+        <p className="text-sm text-[var(--color-text-muted)] mb-8">Resultaten verschillen per persoon, maar dit is wat veel gebruikers rapporteren bij consistent dagelijks gebruik:</p>
+        <div className="grid sm:grid-cols-3 gap-4">
+          {[
+            { week: "Week 1-2", title: "Eerste signalen", items: ["Minder mentale vermoeidheid in de middag", "Betere focus tijdens het lezen", "Geen cafeïne-achtbaan meer"] },
+            { week: "Week 3-4", title: "Duidelijke verandering", items: ["Langere concentratieboog op werk/studie", "Kalmer maar alerter gevoel", "Minder afleiding door omgevingsgeluid"] },
+            { week: "Week 6-8", title: "Optimale resultaten", items: ["Consistente mentale helderheid", "Productieve dagen zonder dip", "Natuurlijke drive zonder stimulanten"] },
+          ].map((phase, i) => (
+            <div key={i} className="bg-[var(--color-bg-soft)] rounded-xl p-5 border border-[var(--color-border)]">
+              <div className="text-[10px] font-bold text-[var(--color-primary)] uppercase tracking-wider mb-2">{phase.week}</div>
+              <h3 className="font-bold text-sm text-[var(--color-text)] mb-2">{phase.title}</h3>
+              <ul className="space-y-1">{phase.items.map((item, j) => (<li key={j} className="text-xs text-[var(--color-text-muted)] flex gap-2"><span className="text-[var(--color-primary)]">✓</span> {item}</li>))}</ul>
+            </div>
+          ))}
+        </div>
+        <p className="mt-6 text-xs text-[var(--color-text-muted)] italic">* Deze ervaringen zijn gebaseerd op gebruikersrapportages en zijn niet beoordeeld door de NVWA. Individuele resultaten kunnen variëren. Voedingssupplementen zijn geen vervanging voor een gevarieerd dieet en gezonde levensstijl.</p>
+      </div>
+    </section>
+
+    {/* ── CTA #2 (Midden) ── */}
+    <section className="py-12 bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-light)]">
+      <div className="container-page max-w-3xl text-center">
+        <h2 className="text-2xl md:text-3xl font-cormorant font-bold text-white mb-3">Focus zonder cafeïne — het kan</h2>
+        <p className="text-sm text-white/80 mb-6 max-w-lg mx-auto">Probeer EDGE+ 30 dagen risicovrij. Niet tevreden? Geld terug.</p>
+        <AffiliateCTA label="Bestel EDGE+ → €77,28/maand" product="edge-mango" variant="urgency" />
+        <p className="mt-4 text-[10px] text-white/60">🛡️ 30 dagen geld-terug-garantie &middot; 🚚 Gratis verzending vanaf €175 &middot; 📦 Direct van Amare</p>
+      </div>
+    </section>
+
+    {/* ── Prijzen ── */}
+    <section className="py-16 bg-white">
+      <div className="container-page max-w-3xl">
+        <h2 className="text-2xl md:text-3xl font-cormorant font-bold text-[var(--color-text)] mb-6">Prijzen en besparingen</h2>
+        <div className="grid sm:grid-cols-2 gap-4">
+          <div className="bg-[var(--color-bg-soft)] rounded-xl p-6 border border-[var(--color-border)]">
+            <div className="text-[10px] font-bold text-[var(--color-primary)] uppercase tracking-wider mb-2">Abonnement — Bespaar 10%</div>
+            <div className="text-3xl font-bold text-[var(--color-text)] mb-1">€77,28<span className="text-sm font-normal text-[var(--color-text-muted)]">/maand</span></div>
+            <p className="text-xs text-[var(--color-text-muted)] mb-4">Elke maand automatisch geleverd. Op elk moment opzegbaar.</p>
+            <ul className="space-y-1 mb-4 text-xs text-[var(--color-text-muted)]"><li>✓ €8,72 goedkoper per maand</li><li>✓ Nooit zonder voorraad</li><li>✓ Gratis verzending</li></ul>
+            <AffiliateCTA label="Start abonnement →" product="edge-mango" variant="primary" />
+          </div>
+          <div className="rounded-xl p-6 border border-[var(--color-border)]">
+            <div className="text-[10px] font-bold text-[var(--color-text-muted)] uppercase tracking-wider mb-2">Eenmalige aankoop</div>
+            <div className="text-3xl font-bold text-[var(--color-text)] mb-1">€86,00</div>
+            <p className="text-xs text-[var(--color-text-muted)] mb-4">Eenmalig bestellen, geen verplichtingen.</p>
+            <ul className="space-y-1 mb-4 text-xs text-[var(--color-text-muted)]"><li>✓ Vrijblijvend</li><li>✓ 30 stickpacks per verpakking</li><li>✓ Verzending €4,95</li></ul>
+            <AffiliateCTA label="Eenmalig bestellen →" product="edge-mango" variant="secondary" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ── FAQ ── */}
     <section className="py-16 bg-[var(--color-bg-soft)]"><div className="container-page max-w-3xl">
       <h2 className="text-2xl md:text-3xl font-cormorant font-bold text-[var(--color-text)] mb-8">Veelgestelde vragen</h2>
       <div className="space-y-4">{faqs.map((faq, i) => (<details key={i} className="bg-white rounded-xl border border-[var(--color-border)] group"><summary className="p-5 cursor-pointer font-bold text-sm text-[var(--color-text)] list-none flex justify-between items-center">{faq.question}<span className="text-[var(--color-primary)] text-lg ml-2 group-open:rotate-45 transition-transform">+</span></summary><div className="px-5 pb-5 text-xs text-[var(--color-text-muted)] leading-relaxed">{faq.answer}</div></details>))}</div>
     </div></section>
 
-    <section className="py-12 bg-white"><div className="container-page max-w-3xl text-center">
-      <h2 className="text-xl md:text-2xl font-cormorant font-bold text-[var(--color-text)] mb-3">Ervaar het verschil van echte focus</h2>
-      <p className="text-sm text-[var(--color-text-muted)] mb-6 max-w-lg mx-auto">EDGE+ — cafeïnevrij nootropicum met pantotheenzuur en adaptogenen.</p>
-      <AffiliateCTA label="Bestel Amare EDGE+ →" product="edge-mango" variant="primary" />
-      <p className="mt-4 text-[9px] text-[var(--color-text-muted)]">* Deze uitspraken zijn niet beoordeeld door de NVWA. Supplementen zijn geen vervanging voor een gevarieerd voedingspatroon.</p>
-    </div></section>
+    {/* ── CTA #3 (Onderaan) ── */}
+    <section className="py-16 bg-white">
+      <div className="container-page max-w-2xl text-center">
+        <div className="bg-[var(--color-bg-soft)] rounded-2xl p-8 border border-[var(--color-border)]">
+          <h2 className="text-2xl font-cormorant font-bold text-[var(--color-text)] mb-3">Ervaar het verschil van echte focus</h2>
+          <p className="text-sm text-[var(--color-text-muted)] mb-6 max-w-md mx-auto">EDGE+ — cafeïnevrij nootropicum met pantotheenzuur en adaptogenen. 30 dagen risicovrij proberen.</p>
+          <div className="flex flex-col sm:flex-row justify-center gap-3 mb-4">
+            <AffiliateCTA label="Bestel Amare EDGE+ →" product="edge-mango" variant="primary" />
+            <AffiliateCTA label="Of bekijk alle producten" product="" variant="secondary" />
+          </div>
+          <div className="flex flex-wrap justify-center gap-4 text-[10px] font-bold text-[var(--color-text-muted)] uppercase tracking-wider">
+            <span>🛡️ 30 dagen garantie</span><span className="text-[var(--color-border)]">|</span>
+            <span>☕ Cafeïnevrij</span><span className="text-[var(--color-border)]">|</span>
+            <span>🌿 Plantaardig</span><span className="text-[var(--color-border)]">|</span>
+            <span>⭐ 10.000+ klanten</span>
+          </div>
+          <p className="mt-6 text-[9px] text-[var(--color-text-muted)]">
+            * Affiliate link — je betaalt hetzelfde bedrag, wij ontvangen een commissie.<br />
+            * Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl.<br />
+            * Raadpleeg bij aanhoudende klachten altijd een arts. Niet geschikt voor zwangere vrouwen, borstvoeding gevende vrouwen en kinderen jonger dan 18 jaar.
+          </p>
+        </div>
+      </div>
+    </section>
   </>);
 }
