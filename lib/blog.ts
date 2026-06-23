@@ -2195,7 +2195,7 @@ export const blogPosts: BlogPost[] = [
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
-  return blogPosts.find((p) => p.slug === slug);
+  return getAllBlogPosts().find((p) => p.slug === slug);
 }
 
 interface ProductLink {
