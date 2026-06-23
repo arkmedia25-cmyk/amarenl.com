@@ -194,6 +194,11 @@ export function generateProductSchema(input: ProductSchemaInput) {
           '@type': 'OfferShippingDetails',
           shippingRate: { '@type': 'MonetaryAmount', value: 4.95, currency: 'EUR' },
           shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'NL' },
+          deliveryTime: {
+            '@type': 'ShippingDeliveryTime',
+            handlingTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 1, unitCode: 'DAY' },
+            transitTime: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 2, unitCode: 'DAY' },
+          },
         },
         seller: {
           '@type': 'Organization',
