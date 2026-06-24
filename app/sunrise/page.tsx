@@ -144,6 +144,8 @@ export default function SunrisePage() {
               <p className="text-lg text-[var(--color-text-muted)] mb-2 leading-relaxed">
                 22 superfoods + 9 essentiële vitaminen in vloeibare ochtendformule — start je dag met een complete voedingsboost.
               </p>
+            <p className="mt-2 text-xs text-[var(--color-primary)] font-bold">🔗 <a href="/vitamine-d-supplement" className="hover:underline">Lees: Vitamine D tekort? Dit moet je weten →</a></p>
+
               <p className="text-sm text-[var(--color-text-muted)] mb-6">
                 Biotine (300% RI) voor haar en huid. B-vitamines voor energie.{" "}
                 <strong>Direct van Amare — premium kwaliteit.</strong>

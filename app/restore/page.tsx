@@ -159,6 +159,8 @@ export default function RestorePage() {
                 5 probiotische stammen + 5 spijsverteringsenzymen + 9 botanische
                 extracten — complete formule voor darmflora en vertering.
               </p>
+            <p className="mt-2 text-xs text-[var(--color-primary)] font-bold">🔗 <a href="/beste-probiotica" className="hover:underline">Lees: Beste probiotica — complete gids →</a></p>
+
               <p className="text-sm text-[var(--color-text-muted)] mb-6">
                 Inclusief lactase voor ondersteuning bij lactose-intolerantie.{" "}
                 <strong>Direct van Amare — premium kwaliteit.</strong>

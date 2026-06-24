@@ -140,6 +140,8 @@ export default function SunsetPage() {
                 Omega-3 avondformule met EPA 520 mg, DHA 223 mg, vitamine D3, A, E
                 en astaxanthine — voor hart, hersenen en nachtelijk herstel.
               </p>
+            <p className="mt-2 text-xs text-[var(--color-primary)] font-bold">🔗 <a href="/omega-3-supplement" className="hover:underline">Lees: Omega 3 — alles wat je moet weten →</a></p>
+
               <p className="text-sm text-[var(--color-text-muted)] mb-6">
                 Melatoninevrij. Onderdeel van de Triangle of Wellness.{" "}
                 <strong>Direct van Amare — premium kwaliteit.</strong>

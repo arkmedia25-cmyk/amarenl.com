@@ -165,6 +165,8 @@ export default function HL5Page() {
                 5 g gehydrolyseerd collageen (Type 1 & 3) per portie — vloeibare
                 formule voor maximale opname.
               </p>
+            <p className="mt-2 text-xs text-[var(--color-primary)] font-bold">🔗 <a href="/collageen-poeder" className="hover:underline">Lees: Collageen poeder — complete kopersgids →</a></p>
+
               <p className="text-sm text-[var(--color-text-muted)] mb-6">
                 Voor huid, haar, nagels, botten en bindweefsel.{" "}
                 <strong>Direct van Amare — premium kwaliteit.</strong>

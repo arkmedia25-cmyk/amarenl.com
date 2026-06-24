@@ -167,6 +167,8 @@ export default function MentaBioticsPage() {
                 Probiotica voor mentale veerkracht — met de klinisch onderzochte
                 Cerebiome® blend, prebiotica en magnesium.
               </p>
+            <p className="mt-2 text-xs text-[var(--color-primary)] font-bold">🔗 <a href="/magnesium-supplement" className="hover:underline">Lees: Welke magnesium heb jij nodig? →</a></p>
+
               <p className="text-sm text-[var(--color-text-muted)] mb-6">
                 Magnesium draagt bij aan een normale psychologische functie en
                 aan de vermindering van vermoeidheid.{" "}
