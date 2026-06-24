@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import AffiliateCTA from "@/components/ui/AffiliateCTA";
+import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import { getAffiliateUrl, getProduct } from "@/lib/products";
 import {
@@ -399,6 +400,7 @@ export default function HappyJuicePackPage() {
           </div>
         </div>
       </section>
+      <StickyMobileCTA product="happy-juice-pack-amare-edge-mango" subscriptionPrice="€155,33" oneTimePrice="€172,22" />
     </>
   );
 }
