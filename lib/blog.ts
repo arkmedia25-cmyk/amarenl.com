@@ -2191,7 +2191,15 @@ export const blogPosts: BlogPost[] = [
 <p>De meeste Nederlanders krijgen te weinig binnen. Twee porties vette vis per week is de eerste stap — maar voor wie dat niet haalt, is een kwalitatief supplement de evidence-based volgende stap. Let daarbij op de EPA:DHA-verhouding: voor stemming kies je EPA-dominant (minimaal 60% EPA), voor algemene hersengezondheid is 2:1 uitstekend, en voor cognitieve ondersteuning neigt de wetenschap naar gelijke delen of DHA-dominant.</p>
 <p><strong>Sunset</strong> (€70,23/maand) combineert een EPA-dominante omega-3 (520 mg EPA, 223 mg DHA) uit wilde Alaskan pollock met D3, K2, astaxanthine en tocotriënolen. Het is niet de goedkoopste omega-3 op de markt, maar wel een van de meest complete avondformules — en goedkoper dan deze voedingsstoffen los aanschaffen. Voor wie puur omega-3 zoekt, volstaat een eenvoudig visoliesupplement — zoek naar minimaal 500 mg EPA+DHA per capsule met een gespecificeerde verhouding.</p>
 <p><em>* Voedingssupplement. Geen geneesmiddel. Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij depressieve klachten, cognitieve problemen of gebruik van antistollingsmedicatie altijd een arts voordat je met hoge doseringen omega-3 begint.</em></p>
-<p><em>Bronnen: Gezondheidsraad (2015); EFSA (2012); Liao et al. (2019) Translational Psychiatry; Morris et al. (2003) Archives of Neurology; Grosso et al. (2014) PLoS ONE.</em></p>`}
+<p><em>Bronnen: Gezondheidsraad (2015); EFSA (2012); Liao et al. (2019) Translational Psychiatry; Morris et al. (2003) Archives of Neurology; Grosso et al. (2014) PLoS ONE.</em></p>`},
+  {
+    slug: "collageen-poeder-kopen-waar-op-letten",
+    title: "Collageen Poeder Kopen: Alles Wat Je Moet Weten (2026)",
+    date: "2026-06-23",
+    category: "schoonheid",
+    excerpt: "Collageen poeder is booming. Welk type heb je nodig? Hydrolysaat vs gelatine, Type 1 vs Type 2, dosering en kwaliteit.",
+    content: `<h2>Waarom collageen?</h2><p>Collageen is je meest voorkomende eiwit. Vanaf je 25e verlies je 1% per jaar. Poeder wint van pillen: effectieve dosis is 5-10g, pillen bevatten maar 500mg per stuk. Gehydrolyseerd = voorverteerd = betere opname.</p><p><strong>Amare HL5</strong> combineert 5 typen collageen (I, II, III, V, X) in 5g per dagelijkse portie — huid, haar, nagels én gewrichten in één formule. Met toegevoegde vitamine C als co-factor voor collageensynthese.</p><p>Let bij kopen op: hydrolysaat (niet gelatine), grasgevoerd, minimaal Type I+III, en altijd met vitamine C voor opname.</p><p><em>* Voedingssupplement. Geen geneesmiddel.</em></p>`
+  },
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
