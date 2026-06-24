@@ -70,10 +70,10 @@ export default function Page() {
               <h3 className="text-2xl font-bold text-[var(--color-text)] mb-2">HL5</h3>
               <p className="text-[var(--color-text-muted)] mb-4">5g vloeibaar collageen (5 typen) + vitamine C</p>
               <ul className="space-y-2 mb-6 text-sm">
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> 5 typen collageen (I,II,III,V,X)</li>
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> Vloeibaar - 90% opname in 6u</li>
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> Grasgevoerd, geen suiker</li>
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> 30 dagen geld-terug garantie</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> 5 typen collageen (I,II,III,V,X)</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> Vloeibaar - 90% opname in 6u</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> Grasgevoerd, geen suiker</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> 30 dagen geld-terug garantie</li>
               </ul>
               <AffiliateCTA label="Bestel HL5 → €130,42/maand" product="hl5-peach-2pack" variant="primary" />
             </div>
@@ -81,10 +81,10 @@ export default function Page() {
               <h3 className="text-2xl font-bold text-[var(--color-text)] mb-2">NeuCollagen</h3>
               <p className="text-[var(--color-text-muted)] mb-4">6-dimensionaal collageen</p>
               <ul className="space-y-2 mb-6 text-sm">
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> 6 typen collageen</li>
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> Extra hyaluronzuur</li>
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> Huid & gewrichten</li>
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> Premium formule</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> 6 typen collageen</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> Extra hyaluronzuur</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> Huid & gewrichten</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> Premium formule</li>
               </ul>
               <AffiliateCTA label="Bestel NeuCollagen → €90/maand" product="neucollagen" variant="secondary" />
             </div>

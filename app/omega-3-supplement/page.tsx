@@ -70,10 +70,10 @@ export default function Page() {
               <h3 className="text-2xl font-bold text-[var(--color-text)] mb-2">Sunset</h3>
               <p className="text-[var(--color-text-muted)] mb-4">Algenolie 1000mg + D3 + K2</p>
               <ul className="space-y-2 mb-6 text-sm">
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> Algenolie - duurzaam & puur</li>
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> 1000mg omega 3 per portie</li>
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> D3 + K2 voor opname</li>
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> 30 dagen geld-terug garantie</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> Algenolie - duurzaam & puur</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> 1000mg omega 3 per portie</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> D3 + K2 voor opname</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> 30 dagen geld-terug garantie</li>
               </ul>
               <AffiliateCTA label="Bestel Sunset → €70,23/maand" product="sunset" variant="primary" />
             </div>
@@ -81,10 +81,10 @@ export default function Page() {
               <h3 className="text-2xl font-bold text-[var(--color-text)] mb-2">Origin</h3>
               <p className="text-[var(--color-text-muted)] mb-4">Plantaardige shake met omega 3</p>
               <ul className="space-y-2 mb-6 text-sm">
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> 23g plantaardig eiwit</li>
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> Omega 3 + MCT olie</li>
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> 26 micronutrienten</li>
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> Veganistisch</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> 23g plantaardig eiwit</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> Omega 3 + MCT olie</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> 26 micronutrienten</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> Veganistisch</li>
               </ul>
               <AffiliateCTA label="Bestel Origin → €40/maand" product="kyani-origin-chocolate" variant="secondary" />
             </div>

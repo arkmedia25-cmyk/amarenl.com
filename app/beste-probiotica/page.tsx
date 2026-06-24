@@ -70,10 +70,10 @@ export default function Page() {
               <h3 className="text-2xl font-bold text-[var(--color-text)] mb-2">MentaBiotics</h3>
               <p className="text-[var(--color-text-muted)] mb-4">Cerebiome blend + magnesium + prebiotica</p>
               <ul className="space-y-2 mb-6 text-sm">
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> Klinisch onderzochte Cerebiome blend</li>
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> Magnesium voor stemming</li>
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> 5752mg prebiotische vezels</li>
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> 30 dagen geld-terug garantie</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> Klinisch onderzochte Cerebiome blend</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> Magnesium voor stemming</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> 5752mg prebiotische vezels</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> 30 dagen geld-terug garantie</li>
               </ul>
               <AffiliateCTA label="Bestel MentaBiotics → €71,83/maand" product="mentabiotics" variant="primary" />
             </div>
@@ -81,10 +81,10 @@ export default function Page() {
               <h3 className="text-2xl font-bold text-[var(--color-text)] mb-2">Restore</h3>
               <p className="text-[var(--color-text-muted)] mb-4">5 stammen + 5 enzymen</p>
               <ul className="space-y-2 mb-6 text-sm">
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> 5 probiotica stammen</li>
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> 5 spijsverteringsenzymen</li>
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> Dagelijkse ondersteuning</li>
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> Voordelige instap</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> 5 probiotica stammen</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> 5 spijsverteringsenzymen</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> Dagelijkse ondersteuning</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> Voordelige instap</li>
               </ul>
               <AffiliateCTA label="Bestel Restore → €29,70/maand" product="restore" variant="secondary" />
             </div>

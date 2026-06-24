@@ -70,10 +70,10 @@ export default function Page() {
               <h3 className="text-2xl font-bold text-[var(--color-text)] mb-2">Sunrise</h3>
               <p className="text-[var(--color-text-muted)] mb-4">22 superfoods + 9 vitaminen incl D3</p>
               <ul className="space-y-2 mb-6 text-sm">
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> Vitamine D3 in ochtendformule</li>
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> 22 plantaardige superfoods</li>
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> 9 essentiële vitaminen</li>
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> 30 dagen geld-terug garantie</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> Vitamine D3 in ochtendformule</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> 22 plantaardige superfoods</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> 9 essentiële vitaminen</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> 30 dagen geld-terug garantie</li>
               </ul>
               <AffiliateCTA label="Bestel Sunrise → €85,78/maand" product="sunrise" variant="primary" />
             </div>
@@ -81,10 +81,10 @@ export default function Page() {
               <h3 className="text-2xl font-bold text-[var(--color-text)] mb-2">Sunset</h3>
               <p className="text-[var(--color-text-muted)] mb-4">D3 + K2 + Omega 3</p>
               <ul className="space-y-2 mb-6 text-sm">
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> D3 + K2 voor optimale opname</li>
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> Omega 3 uit algenolie</li>
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> Astaxanthine antioxidant</li>
-                <li className="flex items-start gap-2"><Check size=16 className="text-green-500 mt-0.5 shrink-0" /> Melatoninevrij</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> D3 + K2 voor optimale opname</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> Omega 3 uit algenolie</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> Astaxanthine antioxidant</li>
+                <li className="flex items-start gap-2"><Check size={16} className="text-green-500 mt-0.5 shrink-0" /> Melatoninevrij</li>
               </ul>
               <AffiliateCTA label="Bestel Sunset → €70,23/maand" product="sunset" variant="secondary" />
             </div>
