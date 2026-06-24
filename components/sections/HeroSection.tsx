@@ -25,12 +25,12 @@ export default function HeroSection() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Link href="#products" className="btn-primary flex items-center justify-center gap-2 px-8 py-4 text-lg">
-              Bekijk Producten
+            <Link href="/happy-juice-pack" className="btn-primary flex items-center justify-center gap-2 px-8 py-4 text-lg shadow-xl">
+              🥇 Happy Juice Pack — €155,33/maand
               <ArrowRight size={20} />
             </Link>
-            <Link href="#newsletter" className="btn-secondary flex items-center justify-center gap-2 px-8 py-4 text-lg">
-              Ontvang €8 Korting
+            <Link href="/triangle-of-wellness-xtreme" className="flex items-center justify-center gap-2 px-8 py-4 text-lg border-2 border-[var(--color-primary)] text-[var(--color-primary)] rounded-full font-bold hover:bg-[var(--color-primary)] hover:text-white transition-all">
+              🔥 Triangle of Wellness — Va €123,55/maand
             </Link>
           </div>
           
