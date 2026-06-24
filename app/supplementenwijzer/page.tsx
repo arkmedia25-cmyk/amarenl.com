@@ -177,6 +177,11 @@ export default function SupplementenWijzerPage() {
                         <Link href={rec.url} className="inline-block mt-3 text-sm font-bold text-[var(--color-primary)] hover:underline">
                           Bekijk {rec.name} →
                         </Link>
+                        {i === 0 && (
+                          <Link href={rec.url} className="mt-4 w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-[var(--color-primary)] text-white rounded-full font-bold hover:opacity-90 transition-all text-sm shadow-lg">
+                            🛒 Bestel {rec.name.split(' ')[0]} nu → €8 korting
+                          </Link>
+                        )}
                       </div>
                     </div>
                   </div>
