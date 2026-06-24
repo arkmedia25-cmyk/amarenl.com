@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
 import AffiliateCTA from "@/components/ui/AffiliateCTA";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import { getProduct } from "@/lib/products";
@@ -636,7 +637,9 @@ export default function MentaBioticsPage() {
             </p>
           </div>
         </div>
-      </section>
+      
+      <StickyMobileCTA product="mentabiotics" subscriptionPrice="€71,83" />
+</section>
     </>
   );
 }

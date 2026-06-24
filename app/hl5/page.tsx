@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
 import AffiliateCTA from "@/components/ui/AffiliateCTA";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import { getProduct } from "@/lib/products";
@@ -613,7 +614,9 @@ export default function HL5Page() {
             </p>
           </div>
         </div>
-      </section>
+      
+      <StickyMobileCTA product="hl5-peach-2pack" subscriptionPrice="€130,42" />
+</section>
     </>
   );
 }
