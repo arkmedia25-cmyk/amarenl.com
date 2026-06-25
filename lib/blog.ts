@@ -2200,6 +2200,14 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Collageen poeder is booming. Welk type heb je nodig? Hydrolysaat vs gelatine, Type 1 vs Type 2, dosering en kwaliteit.",
     content: `<h2>Waarom collageen?</h2><p>Collageen is je meest voorkomende eiwit. Vanaf je 25e verlies je 1% per jaar. Poeder wint van pillen: effectieve dosis is 5-10g, pillen bevatten maar 500mg per stuk. Gehydrolyseerd = voorverteerd = betere opname.</p><p><strong>Amare HL5</strong> combineert 5 typen collageen (I, II, III, V, X) in 5g per dagelijkse portie — huid, haar, nagels én gewrichten in één formule. Met toegevoegde vitamine C als co-factor voor collageensynthese.</p><p>Let bij kopen op: hydrolysaat (niet gelatine), grasgevoerd, minimaal Type I+III, en altijd met vitamine C voor opname.</p><p><em>* Voedingssupplement. Geen geneesmiddel.</em></p>`
   },
+  {
+    slug: "beste-probiotica-2026-vergelijking",
+    title: "Beste Probiotica 2026: Dit Is Waar Je Op Moet Letten",
+    date: "2026-06-23",
+    category: "darmen",
+    excerpt: "Niet elke probiotica is hetzelfde. CFU's, stammen, maagsapresistentie — wij leggen uit waar je op moet letten en vergelijken de beste probiotica.",
+    content: `<h2>Probiotica is niet een ding</h2><p>Meer CFU is niet altijd beter. Een supplement met 1 miljard CFU van de juiste stammen werkt beter dan 50 miljard van de verkeerde. Het draait om stamspecificiteit en overleving in je darmen.</p><p>Voor stemming en stress: <strong>Lactobacillus rhamnosus</strong> en <strong>Bifidobacterium longum</strong>. Voor darmbarriere: <strong>Lactobacillus plantarum</strong>.</p><p><strong>MentaBiotics</strong> gebruikt de gepatenteerde Cerebiome blend — klinisch onderzocht op stemming en stress. <strong>Restore</strong> combineert 5 stammen met 5 spijsverteringsenzymen.</p><p>Probiotica zijn de zaadjes, prebiotica de mest — je hebt beide nodig.</p><p><em>* Voedingssupplement. Geen geneesmiddel.</em></p><p><strong>🔗 Lees onze complete Probiotica gids →</strong></p>`
+  },
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
