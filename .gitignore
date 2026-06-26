@@ -1,10 +1,7 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
 /node_modules
 /.pnp
 .pnp.js
-.yarn/install-state.gz
 
 # testing
 /coverage
@@ -25,7 +22,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
+# env
+.env
 .env*.local
 
 # vercel
@@ -40,4 +38,7 @@ content/weekly-report-*.md
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-.env.local
+
+# lead generation (local only)
+leadgen-os/
+leadgen-os/node_modules
