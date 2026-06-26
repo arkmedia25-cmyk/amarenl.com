@@ -8,6 +8,7 @@ import ReturnVisitorBanner from "@/components/layout/ReturnVisitorBanner";
 import VisitTracker from "@/components/layout/VisitTracker";
 import FloatingMobileCTA from "@/components/ui/FloatingMobileCTA";
 import ExitIntentPopup from "@/components/ui/ExitIntentPopup";
+import LeadPopup from "@/components/ui/LeadPopup";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import {
   generateOrganizationSchema,
@@ -97,6 +98,8 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <LeadPopup trigger="timed" delay={15000} />
+        <LeadPopup trigger="scroll" scrollPercent={60} />
         <ExitIntentPopup />
         <FloatingMobileCTA />
 

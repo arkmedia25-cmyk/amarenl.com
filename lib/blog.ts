@@ -2208,6 +2208,14 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Niet elke probiotica is hetzelfde. CFU's, stammen, maagsapresistentie — wij leggen uit waar je op moet letten en vergelijken de beste probiotica.",
     content: `<h2>Probiotica is niet een ding</h2><p>Meer CFU is niet altijd beter. Een supplement met 1 miljard CFU van de juiste stammen werkt beter dan 50 miljard van de verkeerde. Het draait om stamspecificiteit en overleving in je darmen.</p><p>Voor stemming en stress: <strong>Lactobacillus rhamnosus</strong> en <strong>Bifidobacterium longum</strong>. Voor darmbarriere: <strong>Lactobacillus plantarum</strong>.</p><p><strong>MentaBiotics</strong> gebruikt de gepatenteerde Cerebiome blend — klinisch onderzocht op stemming en stress. <strong>Restore</strong> combineert 5 stammen met 5 spijsverteringsenzymen.</p><p>Probiotica zijn de zaadjes, prebiotica de mest — je hebt beide nodig.</p><p><em>* Voedingssupplement. Geen geneesmiddel.</em></p><p><strong>🔗 Lees onze complete Probiotica gids →</strong></p>`
   },
+  {
+    slug: "omega-3-supplement-kopen-complete-gids",
+    title: "Omega 3 Supplement Kopen: Complete Gids voor EPA, DHA en ALA (2026)",
+    date: "2026-06-23",
+    category: "essentials",
+    excerpt: "Omega 3 is een van de best onderzochte supplementen ter wereld. Visolie, algenolie, EPA, DHA — wat heb je nodig?",
+    content: `<h2>De belangrijkste vetzuren</h2><p>ALA (plantaardig, uit lijnzaad) moet je lichaam omzetten naar EPA en DHA — slechts 5-15% efficient. EPA is ontstekingsremmend en ondersteunt hartgezondheid. DHA is cruciaal voor hersenfunctie — 20% van je brein bestaat uit DHA.</p><p>Visolie is de klassieker maar heeft nadelen: zware metalen, microplastics. Algenolie is de duurzame, veganistische variant.</p><p><strong>Sunset</strong> gebruikt algenolie als bron van DHA en EPA — 1000mg per portie in een uitgebalanceerde verhouding. Plus vitamine D3 en K2.</p><p>Dosering: ADH is 200mg/dag. Therapeutisch: 1000mg voor hart, 1000-2000mg EPA voor stemming.</p><p><em>* Voedingssupplement. Geen geneesmiddel.</em></p><p><strong>🔗 Lees onze complete Vitamine D gids →</strong></p>`
+  },
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {

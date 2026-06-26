@@ -1,0 +1,11 @@
+{"ts":"2026-06-25T13:54:11.004Z","level":"INFO","agent":"discovery","event":"start"}
+{"ts":"2026-06-25T13:54:11.009Z","level":"INFO","agent":"orchestrator","event":"llm_turn","turn":0,"model":"deepseek-chat"}
+{"ts":"2026-06-25T13:54:12.235Z","level":"INFO","agent":"orchestrator","event":"llm_turn","turn":1,"model":"deepseek-chat"}
+{"ts":"2026-06-25T13:54:14.935Z","level":"INFO","agent":"orchestrator","event":"llm_turn","turn":2,"model":"deepseek-chat"}
+{"ts":"2026-06-25T13:54:17.285Z","level":"INFO","agent":"orchestrator","event":"llm_turn","turn":3,"model":"deepseek-chat"}
+{"ts":"2026-06-25T13:54:19.995Z","level":"INFO","agent":"orchestrator","event":"llm_turn","turn":4,"model":"deepseek-chat"}
+{"ts":"2026-06-25T13:54:22.571Z","level":"INFO","agent":"orchestrator","event":"llm_turn","turn":5,"model":"deepseek-chat"}
+{"ts":"2026-06-25T13:54:24.868Z","level":"INFO","agent":"orchestrator","event":"llm_turn","turn":6,"model":"deepseek-chat"}
+{"ts":"2026-06-25T13:54:27.115Z","level":"INFO","agent":"orchestrator","event":"llm_turn","turn":7,"model":"deepseek-chat"}
+{"ts":"2026-06-25T13:54:29.574Z","level":"INFO","agent":"orchestrator","event":"llm_turn","turn":8,"model":"deepseek-chat"}
+{"ts":"2026-06-25T13:54:31.568Z","level":"INFO","agent":"orchestrator","event":"llm_turn","turn":9,"model":"deepseek-chat"}

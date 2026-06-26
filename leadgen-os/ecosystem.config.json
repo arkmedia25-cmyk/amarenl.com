@@ -1,0 +1,20 @@
+{
+  "apps": [
+    {
+      "name": "leadgen-os",
+      "script": "index.ts",
+      "interpreter": "tsx",
+      "cwd": "/Users/ark/projects/amarenl.com/leadgen-os",
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "watch": false,
+      "autorestart": true,
+      "max_restarts": 10,
+      "restart_delay": 5000,
+      "log_file": "./logs/pm2-out.log",
+      "error_file": "./logs/pm2-err.log",
+      "time": true
+    }
+  ]
+}
