@@ -2226,6 +2226,16 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Omega 3 is een van de best onderzochte supplementen ter wereld. Visolie, algenolie, EPA, DHA — wat heb je nodig?",
     content: `<h2>De belangrijkste vetzuren</h2><p>ALA (plantaardig, uit lijnzaad) moet je lichaam omzetten naar EPA en DHA — slechts 5-15% efficient. EPA is ontstekingsremmend en ondersteunt hartgezondheid. DHA is cruciaal voor hersenfunctie — 20% van je brein bestaat uit DHA.</p><p>Visolie is de klassieker maar heeft nadelen: zware metalen, microplastics. Algenolie is de duurzame, veganistische variant.</p><p><strong>Sunset</strong> gebruikt algenolie als bron van DHA en EPA — 1000mg per portie in een uitgebalanceerde verhouding. Plus vitamine D3 en K2.</p><p>Dosering: ADH is 200mg/dag. Therapeutisch: 1000mg voor hart, 1000-2000mg EPA voor stemming.</p><p><em>* Voedingssupplement. Geen geneesmiddel.</em></p><p><strong>🔗 Lees onze complete Vitamine D gids →</strong></p>`
   },
+  {
+    slug: "vitamine-d-tekort-herkennen-aanvullen",
+    title: "Vitamine D Tekort: Signalen Die Je Niet Mag Negeren",
+    date: "2026-06-23",
+    category: "essentials",
+    excerpt: "40-60% van de Nederlanders heeft een vitamine D tekort in de winter. Herken de symptomen en ontdek hoe je het aanvult.",
+    content: `<h2>Het zonneschijnvitamine</h2><p>Vitamine D is uniek: je lichaam maakt het zelf aan onder invloed van zonlicht. Maar in Nederland schijnt de zon van oktober tot maart onvoldoende om voldoende vitamine D aan te maken. Het resultaat: 40 tot 60% van de Nederlanders heeft een suboptimale vitamine D-status in de wintermaanden.</p><h2>Symptomen van een tekort</h2><p>Vermoeidheid die niet weggaat. Spierzwakte. Botpijn. Een somber humeur. Vaak terugkerende infecties. Dit zijn de klassieke signalen van een vitamine D tekort — en ze worden vaak gemist omdat ze vaag zijn.</p><h2>Hoeveel heb je nodig?</h2><p>De Gezondheidsraad adviseert 10 mcg per dag voor volwassenen tot 70 jaar, en 20 mcg voor 70-plussers. Maar veel onderzoekers vinden dit te laag en pleiten voor 25-50 mcg per dag, vooral in de winter.</p><h2>Vitamine D in Amare</h2><p><strong>Sunrise</strong> bevat vitamine D3 in combinatie met 22 superfoods en 9 vitaminen — een complete ochtendformule. <strong>Sunset</strong> combineert D3 met K2 en omega 3 voor optimale opname.</p><p><em>* Voedingssupplement. Geen geneesmiddel. Laat bij twijfel je bloedwaarden controleren.</em></p>
+<p><strong>🔗 Lees onze complete Vitamine D gids →</strong></p>
+<p><strong>🔗 Lees onze complete Omega 3 gids →</strong></p>`
+  },
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
