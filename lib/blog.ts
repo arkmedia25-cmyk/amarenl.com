@@ -330,6 +330,16 @@ export const blogPosts: BlogPost[] = [
     `,
     image: "/images/blog/beste-collageen-supplement-2026.jpg"
   },
+  {
+    slug: "magnesium-supplement-slapen-spieren-stress",
+    title: "Magnesium Supplement: Voor Slapen, Spieren en Stress — Complete Gids",
+    date: "2026-06-23",
+    category: "essentials",
+    excerpt: "Magnesium is betrokken bij 300+ processen in je lichaam. Welke vorm heb je nodig voor slaap, stress of spieren?",
+    content: `<h2>Het meest onderschatte mineraal</h2><p>Magnesium is betrokken bij meer dan 300 enzymatische reacties in je lichaam. Van spierontspanning tot energieproductie, van slaapkwaliteit tot stressregulatie — zonder magnesium functioneert vrijwel niets optimaal. Toch heeft 20-30% van de Nederlanders een suboptimale inname.</p><h2>Welke vorm heb je nodig?</h2><p><strong>Magnesiumbisglycinaat:</strong> De beste keuze voor slaap en stress. Glycinaat is gebonden aan het aminozuur glycine, wat kalmerend werkt. Hoge opneembaarheid, geen darmklachten.</p><p><strong>Magnesiumcitraat:</strong> Goed opneembaar en betaalbaar. Kan bij hoge doseringen laxerend werken.</p><p><strong>Magnesiummalaat:</strong> Gebonden aan appelzuur. Goed voor energie en spierherstel.</p><h2>Magnesium in Amare producten</h2><p><strong>Sunrise</strong> bevat magnesium in een uitgebalanceerde mix met andere mineralen en B-vitamines. <strong>MentaBiotics</strong> combineert magnesium met probiotica voor de darm-hersen-as — magnesium en psychobiotica versterken elkaar.</p><p><em>* Voedingssupplement. Geen geneesmiddel.</em></p>
+<p><strong>🔗 Lees onze complete Magnesium Supplement gids →</strong></p>
+<p><strong>🔗 Lees onze complete Probiotica gids →</strong></p>`
+  },
 
   {
     slug: "collageen-hl5-vs-supermarkt-vergelijken",
