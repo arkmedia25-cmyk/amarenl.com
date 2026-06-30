@@ -2236,6 +2236,15 @@ export const blogPosts: BlogPost[] = [
 <p><strong>🔗 Lees onze complete Vitamine D gids →</strong></p>
 <p><strong>🔗 Lees onze complete Omega 3 gids →</strong></p>`
   },
+  {
+    slug: "collageen-poeder-kopen-waar-op-letten",
+    title: "Collageen Poeder Kopen: Alles Wat Je Moet Weten (2026)",
+    date: "2026-06-23",
+    category: "schoonheid",
+    excerpt: "Collageen poeder is booming. Welk type heb je nodig? Hydrolysaat vs gelatine, Type 1 vs Type 2, dosering en kwaliteit.",
+    content: `<h2>Waarom collageen?</h2><p>Collageen is je meest voorkomende eiwit. Vanaf je 25e verlies je 1% per jaar. Poeder wint van pillen: effectieve dosis is 5-10g, pillen bevatten maar 500mg per stuk. Gehydrolyseerd = voorverteerd = betere opname.</p><p><strong>Amare HL5</strong> combineert 5 typen collageen (I, II, III, V, X) in 5g per dagelijkse portie — huid, haar, nagels én gewrichten in één formule. Met toegevoegde vitamine C als co-factor voor collageensynthese.</p><p>Let bij kopen op: hydrolysaat (niet gelatine), grasgevoerd, minimaal Type I+III, en altijd met vitamine C voor opname.</p><p><em>* Voedingssupplement. Geen geneesmiddel.</em></p>
+<p><strong>🔗 Lees onze complete Collageen Poeder gids →</strong></p>`
+  },
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
