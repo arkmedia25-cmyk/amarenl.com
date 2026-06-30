@@ -47,7 +47,7 @@ function createLLMClient(): OpenAI {
 
 const TOOLS: OpenAI.Chat.ChatCompletionTool[] = [
   { type: "function" as const, function: { name: "read_file", description: "Lees bestand", parameters: { type: "object", properties: { path: { type: "string" } }, required: ["path"] } } },
-  { type: "function" as const, function: { name: "write_file", description: "Schrijf JSON naar bestand", parameters: { type: "object", properties: { path: { type: "string" }, content: { type: "string" } }, required: ["path", "content"] } } },
+  { type: "function" as const, function: { name: "write_file", description: "Schrijf JSON naar data/leads-raw.json of data/leads-scored.json of data/outreach-log.json of data/pipeline.json", parameters: { type: "object", properties: { path: { type: "string", description: "ALLEEN: data/leads-raw.json data/leads-scored.json data/outreach-log.json data/pipeline.json data/analytics.json" }, content: { type: "string", description: "JSON string" } }, required: ["path", "content"] } } },
   { type: "function" as const, function: { name: "web_search", description: "Zoek op internet", parameters: { type: "object", properties: { query: { type: "string" } }, required: ["query"] } } },
   { type: "function" as const, function: { name: "send_telegram", description: "Stuur Telegram bericht", parameters: { type: "object", properties: { message: { type: "string" } }, required: ["message"] } } },
 ];
@@ -64,7 +64,11 @@ async function executeTool(name: string, input: Record<string, unknown>): Promis
     case "write_file": {
       const p = input.path as string; const c = (input.content as string) || "";
       if (!p || !c) return "ERROR: path+content vereist";
-      try { JSON.parse(c); } catch { return "ERROR: Alleen valide JSON! Parse error."; }
+      // Blokkeer verzonnen paden
+      if (!p.startsWith("data/") && !p.startsWith("logs/")) {
+        return `ERROR: Ongeldig pad '${p}'. Toegestaan: data/leads-raw.json, data/leads-scored.json, data/outreach-log.json, data/pipeline.json, data/analytics.json, data/weekly-report-*.json, data/weekly-report-*.md`;
+      }
+      try { JSON.parse(c); } catch { return "ERROR: Alleen valide JSON!"; }
       writeText(p, c);
       log("INFO", "tool", "write", { path: p, len: c.length });
       return `OK: ${c.length} chars naar ${p}`;
@@ -162,8 +166,10 @@ async function stepDiscoverLeads(): Promise<{ success: boolean; leadsFound: numb
   try {
     const sp = [
       "JE ENIGE TAAK: Vind Nederlandse bedrijven en schrijf naar data/leads-raw.json.",
+      "TOEGESTANE PADEN voor write_file: data/leads-raw.json, data/leads-scored.json, data/outreach-log.json, data/pipeline.json, data/analytics.json",
+      "GEBRUIK PRECIES DEZE PADEN. NIET /workspace, NIET /tmp, NIET zelf bedenken!",
       loadSkill("lead-discovery"),
-      "CRUCIAAL: 1) read_file bestaande leads 2) web_search naar NL bedrijven 3) ALS search faalt, gebruik je kennis van ECHTE NL bedrijven 4) write_file met merged JSON 5) send_telegram resultaat.",
+      "CRUCIAAL: 1) read_file data/leads-raw.json 2) web_search naar NL bedrijven 3) ALS search faalt, gebruik je kennis van ECHTE NL bedrijven 4) write_file data/leads-raw.json met merged JSON 5) send_telegram resultaat.",
     ].join("\n\n");
 
     const um = "VIND NEDERLANDSE LEADS. read_file data/leads-raw.json. web_search voor fysiotherapeut, diëtist, personal trainer, gezondheidsblogger, supplementen winkel in Nederlandse steden. Verzamel 10+ leads. write_file data/leads-raw.json (merge!). send_telegram.";
