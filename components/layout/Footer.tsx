@@ -15,6 +15,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-4 text-xs font-bold text-[var(--color-primary)]">
               <a href="https://amarereview.nl" className="hover:underline" target="_blank">AMAREREVIEW.NL</a>
+              <a href="https://wearkmedia.com" className="hover:underline" target="_blank">WEARKMEDIA</a>
             </div>
           </div>
 
