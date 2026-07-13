@@ -18,6 +18,8 @@ interface Props {
 
 function extractFAQItems(content: string) {
   const items: { question: string; answer: string }[] = [];
+
+  // Format 1: <h3>Vraag?</h3><p>Antwoord</p>
   const h3Regex = /<h3>(.+?)<\/h3>\s*<p>([\s\S]*?)<\/p>/g;
   let match: RegExpExecArray | null;
   while ((match = h3Regex.exec(content)) !== null) {
@@ -27,6 +29,24 @@ function extractFAQItems(content: string) {
       items.push({ question, answer });
     }
   }
+
+  // Format 2: <p><strong>Vraag: vraag?</strong></p><p>Antwoord</p>
+  const strongRegex = /<p>\s*<strong>\s*(?:Vraag:\s*)?(.+?)\s*<\/strong>\s*<\/p>\s*<p>([\s\S]*?)<\/p>/g;
+  let smatch: RegExpExecArray | null;
+  while ((smatch = strongRegex.exec(content)) !== null) {
+    const question = smatch[1].replace(/<[^>]*>/g, "").trim();
+    const answer = smatch[2].replace(/<[^>]*>/g, "").trim();
+    if (question.endsWith("?") && answer.length > 20) {
+      // Avoid duplicates
+      const alreadyExists = items.some(
+        (item) => item.question === question
+      );
+      if (!alreadyExists) {
+        items.push({ question, answer });
+      }
+    }
+  }
+
   return items;
 }
 

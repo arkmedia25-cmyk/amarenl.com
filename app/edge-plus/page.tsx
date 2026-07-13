@@ -46,9 +46,15 @@ export default function EdgePlusPage() {
             <div className="inline-flex items-center gap-2 mb-4"><span className="bg-[var(--color-primary)] text-white text-[9px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Cafeïnevrij</span><span className="text-[9px] text-[var(--color-text-muted)]">⭐ 4.5/5 (500+ reviews)</span></div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-cormorant font-bold text-[var(--color-text)] mb-4 leading-tight">Amare <span className="text-[var(--color-primary)]">EDGE+™</span> Mango</h1>
             <p className="text-lg text-[var(--color-text-muted)] mb-2 leading-relaxed">Het cafeïnevrije nootropicum voor focus, drive en dagelijkse mentale helderheid.</p>
-            <p className="text-sm text-[var(--color-text-muted)] mb-6">Plantaardig, adaptogeen, geen crash. <strong>Direct van Amare.</strong></p>
+            <p className="text-sm text-[var(--color-text-muted)] mb-4">Plantaardig, adaptogeen, geen crash. <strong>Direct van Amare.</strong></p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              <span className="inline-flex items-center gap-1 bg-green-50 text-green-700 text-[10px] font-bold px-3 py-1.5 rounded-full border border-green-200">🛡️ 30 dagen geld terug</span>
+              <span className="inline-flex items-center gap-1 bg-amber-50 text-amber-700 text-[10px] font-bold px-3 py-1.5 rounded-full border border-amber-200">🎁 €8 welkomstkorting</span>
+              <span className="inline-flex items-center gap-1 bg-[var(--color-bg-soft)] text-[var(--color-primary)] text-[10px] font-bold px-3 py-1.5 rounded-full border border-[var(--color-border)]">🚚 Gratis verzending &ge;€175</span>
+            </div>
+            <p className="text-[10px] text-[var(--color-text-muted)] mb-5 italic">Voedingssupplement. Geen geneesmiddel. De NVWA heeft de gezondheidsclaims van de gebruikte ingrediënten beoordeeld.</p>
             <div className="flex flex-col sm:flex-row gap-3 mb-4">
-              <AffiliateCTA label="Bestel bij Amare → €77,28/maand" product="edge-mango" variant="primary" />
+              <AffiliateCTA label="Probeer nu → €77,28/maand" product="edge-mango" variant="primary" />
               <AffiliateCTA label="Of eenmalig €86,00" product="edge-mango" variant="secondary" />
             </div>
             <p className="text-[9px] text-[var(--color-text-muted)]">* Ook verkrijgbaar in Watermelon. Abonnement op elk moment opzegbaar.</p>

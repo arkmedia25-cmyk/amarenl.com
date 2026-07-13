@@ -112,6 +112,7 @@ export default function Page() {
       </section>
 
       <StickyMobileCTA product="sunrise" subscriptionPrice="€85,78" />
+      <p className="text-center text-[9px] text-[var(--color-text-muted)] py-8">* Voedingssupplement. Geen geneesmiddel. Deze uitspraken zijn niet beoordeeld door de NVWA. Supplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl.</p>
     </>
   );
 }

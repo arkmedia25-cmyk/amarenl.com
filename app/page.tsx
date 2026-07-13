@@ -12,6 +12,13 @@ import NewsletterForm from "@/components/sections/NewsletterForm";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import { generateBreadcrumbSchema } from "@/lib/schema";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
 
 const symptoms = [
   { q: "😴 Altijd moe?", a: "Ontdek natuurlijke energieboosters", href: "/blogs/nieuws/supplementen-voor-meer-energie-dit-werkt-echt" },

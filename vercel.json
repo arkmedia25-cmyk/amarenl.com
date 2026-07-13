@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/blog",
+      "destination": "/blogs/nieuws",
+      "permanent": true
+    },
+    {
       "source": "/blog/:slug",
       "destination": "/blogs/nieuws/:slug",
       "permanent": true
@@ -8,6 +13,16 @@
     {
       "source": "/nieuws/:slug",
       "destination": "/blogs/nieuws/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/hello-world",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/hello-world/",
+      "destination": "/",
       "permanent": true
     }
   ]

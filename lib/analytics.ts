@@ -56,3 +56,42 @@ export function ctaClick(label: string, location: string) {
     event_category: "engagement",
   });
 }
+
+/** Track blog article views for content performance */
+export function articleView(slug: string, title: string, category: string) {
+  trackEvent("article_view", {
+    article_slug: slug,
+    article_title: title,
+    article_category: category,
+    event_category: "content",
+  });
+}
+
+/** Track affiliate outbound clicks (Amare.com redirects) */
+export function affiliateConversion(productId: string, productName: string, clickLocation: string) {
+  trackEvent("affiliate_conversion", {
+    product_id: productId,
+    product_name: productName,
+    click_location: clickLocation,
+    event_category: "conversion",
+    event_label: productName,
+  });
+}
+
+/** Track how far users scroll on content pages */
+export function scrollDepth(depth: 25 | 50 | 75 | 100, slug: string) {
+  trackEvent("scroll_depth", {
+    scroll_depth: depth,
+    article_slug: slug,
+    event_category: "engagement",
+  });
+}
+
+/** Track external outbound links */
+export function outboundLink(url: string, label: string) {
+  trackEvent("outbound_link", {
+    outbound_url: url,
+    link_label: label,
+    event_category: "navigation",
+  });
+}

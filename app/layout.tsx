@@ -41,9 +41,8 @@ export const metadata: Metadata = {
   other: {
     "p:domain_verify": "f1dafe74931e565325530d7434f9fddf",
   },
-  alternates: {
-    canonical: "/",
-  },
+  // NOTE: canonical is set per-page via generateMetadata().
+  // Do NOT set a blanket canonical here — it would point all pages to homepage.
   verification: {
     google: "Ss_zLWuGuXmzgf5vuuOzoIE4PEAGskWPIlWwuYgloHE",
   },

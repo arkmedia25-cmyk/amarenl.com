@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Star, TrendingUp } from "lucide-react";
 import AffiliateCTA from "@/components/ui/AffiliateCTA";
 
@@ -17,12 +18,12 @@ export default function FeaturedProducts() {
     {
       name: "Triangle of Wellness Xtreme™",
       tagline: "Meest Compleet",
-      description: "De ultieme drietapak: gut-brain-beauty in perfecte balans",
-      benefits: ["Mentale fitness", "Darmgezondheid", "Huid & schoonheid"],
+      description: "Dag-nacht systeem: Sunrise ☀️ energie, Nitro ⚡ focus, Sunset 🌙 herstel — alles in één pakket",
+      benefits: ["Ochtendenergie", "Middagfocus", "Nachtrust & herstel"],
       badge: "🔥 PREMIUM",
       image: "https://amarecdn.azureedge.net/webassets/web/prod/products/Triangle-of-Wellness-Xtreme2-EU-800_25.jpg",
       product: "triangle-of-wellness-xtreme",
-      color: "from-gold-500 to-gold-600",
+      color: "from-amber-500 to-amber-600",
     },
   ];
 
@@ -51,19 +52,21 @@ export default function FeaturedProducts() {
               className="group rounded-2xl overflow-hidden border border-[var(--color-border)] bg-[var(--color-bg-soft)] hover:shadow-2xl transition-all duration-500 animate-slide-up"
               style={{ animationDelay: `${idx * 100}ms` }}
             >
-              {/* Image Container */}
-              <div className="relative h-80 overflow-hidden bg-gradient-to-br from-[var(--color-primary)]/5 to-[var(--color-accent)]/5">
-                <Image
-                  src={item.image}
-                  alt={item.name}
-                  fill
-                  className="object-contain group-hover:scale-110 transition-transform duration-500 p-8"
-                />
-                {/* Badge */}
-                <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-[var(--color-primary)]">
-                  {item.badge}
+              {/* Image Container — klikbaar naar productpagina */}
+              <Link href={`/${item.product}`} className="block">
+                <div className="relative h-80 overflow-hidden bg-gradient-to-br from-[var(--color-primary)]/5 to-[var(--color-accent)]/5 cursor-pointer">
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    fill
+                    className="object-contain group-hover:scale-110 transition-transform duration-500 p-8"
+                  />
+                  {/* Badge */}
+                  <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-[var(--color-primary)]">
+                    {item.badge}
+                  </div>
                 </div>
-              </div>
+              </Link>
 
               {/* Content */}
               <div className="p-8">
@@ -81,9 +84,11 @@ export default function FeaturedProducts() {
                   </span>
                 </div>
 
-                <h3 className="text-2xl font-cormorant font-bold text-[var(--color-text)] mb-2">
-                  {item.name}
-                </h3>
+                <Link href={`/${item.product}`} className="block hover:text-[var(--color-primary)] transition-colors">
+                  <h3 className="text-2xl font-cormorant font-bold text-[var(--color-text)] mb-2">
+                    {item.name}
+                  </h3>
+                </Link>
                 <p className="text-sm text-[var(--color-primary)] font-semibold mb-4">
                   {item.tagline}
                 </p>
@@ -102,7 +107,7 @@ export default function FeaturedProducts() {
                   ))}
                 </ul>
 
-                {/* CTA */}
+                {/* CTA — aparte knop naar Amare, niet binnen Link */}
                 <AffiliateCTA
                   label="Bestel nu →"
                   product={item.product}

@@ -1,10 +1,60 @@
 # AmareNL Article Queue — SEO-GEO-AEO İçerik Planı
-> Laatste update: 2026-06-22
-> Status: 20/20 TIER ✅ | 3 vergelijkingsartikelen ✅ | 1 bonus darm-huid artikel ✅ | 1 prebiotica artikel ✅ | Totaal 42 artikelen live
+> Laatste update: 2026-07-13
+> Status: 20/20 TIER ✅ | 3 vergelijkingsartikelen ✅ | NIEUWE BATCH: 15/15 ✅ | Totaal 57+ artikelen live
 > Deploy: Vercel production ✅
 > Metodoloji: NL search volume × commercial intent × product match × GEO query fan-out
 > Yayın takvimi: 2 günde bir (cron — article-scheduler skill)
-> Bron: amarenl-agent-keywords.md (12 artikelen) + 8 aanvullende TIER-artikelen
+> Bron: amarenl-agent-keywords.md + keywords-onderzoek.md + GEO/AIO audit (juli 2026)
+
+---
+
+## 🆕 NIEUWE BATCH — Juli 2026 (15 artikelen)
+
+> **Legenda:** ⏳ = te schrijven | ✍️ = in progress | ✅ = gepubliceerd
+
+### 🔴 TIER 1 — High Volume + High Commercial Intent (4 artikelen)
+
+| # | Makale Başlığı (NL) | Slug | Kategori | Hedef Ürün | Arama* | Status |
+|---|---------------------|------|----------|------------|--------|--------|
+| N1 | Haaruitval bij Vrouwen: Oorzaken & Natuurlijke Oplossingen | haaruitval-vrouwen-oorzaken-natuurlijke-oplossingen | schoonheid | HL5, NeuCollagen | 2.600 | ✅ |
+| N2 | Overgang en Supplementen: Natuurlijke Ondersteuning bij de Menopauze | overgang-supplementen-menopauze-natuurlijk-ondersteuning | hormonen | Ignite Her, Sunset | 2.300 | ✅ |
+| N3 | Prebiotica vs Probiotica: Wat is het Verschil en Heb je Beide Nodig? | prebiotica-probiotica-verschil-darmen-uitleg | darmen | MentaBiotics, SeedFiber | 900 | ✅ |
+| N4 | Vitamine D Tekort in Nederland: Oorzaken, Symptomen & Oplossingen | vitamine-d-tekort-nederland-oorzaken-oplossingen | essentials | Sunrise, Sunset | 5.100 | ✅ |
+
+### 🟡 TIER 2 — Medium Volume + Specific Intent (5 artikelen)
+
+| # | Makale Başlığı (NL) | Slug | Kategori | Hedef Ürün | Arama* | Status |
+|---|---------------------|------|----------|------------|--------|--------|
+| N5 | Darm-Huid Connectie: Hoe Je Darmen Je Huid Beïnvloeden | darm-huid-connectie-probiotica-stralende-huid | darmen | DermaBiotics, MentaBiotics | 1.200 | ✅ |
+| N6 | Beste Supplementen voor de Overgang: Complete Gids 2026 | beste-supplementen-overgang-menopauze-2026 | hormonen | Ignite Her, Sunset, HL5 | 1.500 | ✅ |
+| N7 | Collageen en Gewrichten: Werkt Het Echt voor Pijnverlichting? | collageen-gewrichten-pijnverlichting-supplement | schoonheid | HL5, NeuCollagen | 1.100 | ✅ |
+| N8 | Natuurlijke Ontstekingsremmers: Supplementen Die Werken | natuurlijke-ontstekingsremmers-supplementen | essentials | OmMega, Restore, Sunrise | 1.800 | ✅ |
+| N9 | Ashwagandha vs Rhodiola: Welk Adaptogeen Past Bij Jou? | ashwagandha-vs-rhodiola-adaptogeen-vergelijking | mentaal | MentaBiotics, EDGE+ | 950 | ✅ |
+
+### 🟢 TIER 3 — Emerging Niches & GEO Queries (6 artikelen)
+
+| # | Makale Başlığı (NL) | Slug | Kategori | Hedef Ürün | Arama* | Status |
+|---|---------------------|------|----------|------------|--------|--------|
+| N10 | Wat Zijn Adaptogenen? De Complete Beginnersgids | adaptogenen-beginnersgids-wat-zijn-het | mentaal | EDGE+, MentaFocus | 700 | ✅ |
+| N11 | Hoe Herken Je een Vitamine D Tekort? Symptomen & Test | vitamine-d-tekort-symptomen-test | essentials | Sunrise, VitaGBX | 800 | ✅ |
+| N12 | Darmgezondheid Verbeteren: 10 Dagelijkse Gewoontes | darmgezondheid-verbeteren-dagelijkse-gewoontes | darmen | MentaBiotics, Restore, SeedFiber | 1.300 | ✅ |
+| N13 | Collageen Poeder vs Pillen: Wat is Beter? | collageen-poeder-vs-pillen-vergelijking | schoonheid | HL5, NeuCollagen | 600 | ✅ |
+| N14 | Supplementen bij Winterdip: Voorkomen & Behandelen | supplementen-winterdip-voorkomen-behandelen | mentaal | Sunrise, Sunset, Energy+ | 500 | ✅ |
+| N15 | De Gut-Brain Axis en Slaap: De Connectie Uitgelegd | gut-brain-axis-slaap-connectie-nachtrust | darmen | Sleep+, MentaBiotics, Sunset | 650 | ✅ |
+
+> *Tahmini aylık NL arama hacmi
+
+### 📅 Yayın Takvimi (2 günde bir)
+
+```
+Week 1: N1 (ma) → N2 (wo) → N3 (vr)
+Week 2: N4 (ma) → N5 (wo) → N6 (vr)
+Week 3: N7 (ma) → N8 (wo) → N9 (vr)
+Week 4: N10 (ma) → N11 (wo) → N12 (vr)
+Week 5: N13 (ma) → N14 (wo) → N15 (vr)
+```
+
+---
 
 ## 📊 Dutch Market Priority Matrix — Mayıs 2026
 

@@ -4,10 +4,10 @@
   "nameNL": "Triangle of Wellness Xtreme™",
   "shortNameNL": "Triangle of Wellness Xtreme™",
   "category": "essentials",
-  "taglineNL": "Dagelijkse basisondersteuning",
+  "taglineNL": "Compleet dag-nacht systeem: energie, focus en herstel in één pakket",
   "description": {
     "short": "Dagelijkse basisondersteuning",
-    "long": "Triangle of Wellness Xtreme™ is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+    "long": "Triangle of Wellness Xtreme™ is Amare's meest complete supplementensysteem. Drie op elkaar afgestemde producten — Sunrise (ochtend), Nitro Xtreme (middag) en Sunset (avond) — werken synergetisch samen om je natuurlijke circadiaanse ritme te ondersteunen. Het enige pakket dat je hele dag dekt: van ochtendenergie tot diepe nachtrust. Wetenschappelijk onderbouwd, gemaakt met natuurlijke ingrediënten, en de slimste keuze voor wie serieus werk wil maken van zijn dagelijkse vitaliteit."
   },
   "pricing": {
     "subscription": 123.55,
@@ -21,9 +21,12 @@
     "alt": "Triangle of Wellness Xtreme™ — Amare supplement"
   },
   "benefits": [
-    "Hoogwaardige ingrediënten",
-    "Wetenschappelijk onderbouwd",
-    "gemaakt met natuurlijke ingrediënten"
+    "Complete dag-nacht dekking — energie, focus én herstel",
+    "Drie producten synergetisch op elkaar afgestemd",
+    "Voordeliger dan los kopen (bespaar tot 25%)",
+    "Volgt je natuurlijke circadiaanse ritme",
+    "30 dagen geld-terug garantie",
+    "Premium kwaliteit — wetenschappelijk onderbouwd"
   ],
   "usage": {
     "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
@@ -34,17 +37,35 @@
     "url": "https://www.amare.com/2075008/nl-nl/triangle-of-wellness-xtreme",
     "sourceTag": "amarenl-product-page"
   },
-  "relatedProducts": [],
+  "relatedProducts": [
+    "happy-juice-pack",
+    "mentabiotics",
+    "energy",
+    "sunrise",
+    "sunset",
+    "nitro-xtreme"
+  ],
   "tags": [],
   "seo": {
-    "title": "Triangle of Wellness Xtreme™ Kopen | Beste Prijs Nederland 2026",
-    "description": "Dagelijkse basisondersteuning",
-    "keywords": []
+    "title": "Triangle of Wellness Xtreme™ Kopen — Compleet Dag-Nacht Systeem (2026) | AmareNL",
+    "description": "Amare's #1 complete supplementensysteem: Sunrise voor ochtendenergie, Nitro Xtreme voor focus, Sunset voor herstel. Drie producten, één pakket. 30 dagen risicovrij proberen.",
+    "keywords": [
+      "triangle of wellness xtreme",
+      "amare dag nacht systeem",
+      "sunrise nitro sunset",
+      "supplementen dagelijks pakket",
+      "circadian rhythm supplementen"
+    ]
   },
   "isNew": false,
-  "isBestseller": false,
+  "isBestseller": true,
   "isPack": true,
-  "priority": 19,
+  "priority": 1,
   "publishedAt": "2024-01-15",
-  "updatedAt": "2026-05-17"
+  "updatedAt": "2026-05-17",
+  "ratings": {
+    "average": 4.8,
+    "count": 420,
+    "source": "Amare Global"
+  }
 }

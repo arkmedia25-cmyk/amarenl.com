@@ -53,10 +53,12 @@ export interface ArticleInput {
   image?: string;
   slug: string;
   category?: string;
+  /** External authoritative sources cited in the article */
+  citations?: { author: string; name: string; url?: string }[];
 }
 
 export function generateArticleSchema(input: ArticleInput) {
-  return {
+  const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: input.title,
@@ -80,8 +82,18 @@ export function generateArticleSchema(input: ArticleInput) {
       },
     },
     inLanguage: "nl-NL",
+    isAccessibleForFree: true,
     ...(input.category && { articleSection: input.category }),
   };
+  if (input.citations?.length) {
+    schema.citation = input.citations.map(c => ({
+      "@type": "ScholarlyArticle" as const,
+      author: { "@type": "Person" as const, name: c.author },
+      name: c.name,
+      ...(c.url && { url: c.url }),
+    }));
+  }
+  return schema;
 }
 
 export interface FAQItem {
@@ -295,14 +307,113 @@ export function combineSchemas(...schemas: object[]) {
 }
 
 /**
+ * HowTo schema — for step-by-step guide articles.
+ * Google's HowTo rich results appear prominently in AI Overviews.
+ */
+export interface HowToInput {
+  name: string;
+  description: string;
+  steps: { name: string; text: string; image?: string }[];
+  slug: string;
+  totalTime?: string; // ISO 8601 duration e.g. "PT10M"
+  tools?: string[];
+  supplies?: string[];
+}
+
+export function generateHowToSchema(input: HowToInput) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: input.name,
+    description: input.description,
+    ...(input.totalTime && { totalTime: input.totalTime }),
+    ...(input.tools?.length && { tool: input.tools.map(t => ({ "@type": "HowToTool", name: t })) }),
+    ...(input.supplies?.length && { supply: input.supplies.map(s => ({ "@type": "HowToSupply", name: s })) }),
+    step: input.steps.map((step, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: step.name,
+      itemListElement: {
+        "@type": "HowToDirection",
+        text: step.text,
+      },
+      ...(step.image && { image: step.image.startsWith('http') ? step.image : `${SITE_URL}${step.image}` }),
+    })),
+  };
+}
+
+/**
+ * MedicalWebPage / HealthTopic schema — for health-related content pages.
+ * Boosts E-E-A-T signals for YMYL (Your Money or Your Life) content.
+ */
+export interface MedicalWebPageInput {
+  headline: string;
+  description: string;
+  datePublished: string;
+  dateModified?: string;
+  slug: string;
+  about: string; // e.g. "Probiotica", "Darmgezondheid"
+  audience?: string;
+  reviewedBy?: { name: string; affiliation: string };
+}
+
+export function generateMedicalWebPageSchema(input: MedicalWebPageInput) {
+  const schema: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    headline: input.headline,
+    description: input.description,
+    datePublished: input.datePublished,
+    dateModified: input.dateModified || input.datePublished,
+    about: {
+      "@type": "MedicalEntity",
+      name: input.about,
+    },
+    url: `${SITE_URL}/blogs/nieuws/${input.slug}`,
+    inLanguage: "nl-NL",
+    publisher: {
+      "@type": "Organization",
+      name: ORG_NAME,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/images/amarenl-logo.png`,
+      },
+    },
+  };
+  if (input.audience) {
+    schema.audience = {
+      "@type": "MedicalAudience",
+      audienceType: input.audience,
+    };
+  }
+  if (input.reviewedBy) {
+    schema.reviewedBy = {
+      "@type": "Person",
+      name: input.reviewedBy.name,
+      affiliation: {
+        "@type": "Organization",
+        name: input.reviewedBy.affiliation,
+      },
+    };
+  }
+  return schema;
+}
+
+/**
  * Speakable schema — marks content sections as eligible for voice search (Google Assistant, Siri).
- * Use on blog posts only. CSS selectors target the first 2-3 substantive sections.
+ * Use on blog posts only. XPath selectors target the first 2-3 substantive H2 sections + conclusion.
+ * NOTE: Uses XPath selectors (not CSS IDs) to match actual rendered HTML structure.
  */
 export function generateSpeakableSchema(slug: string, headings: string[]) {
   return {
     "@context": "https://schema.org",
     "@type": "SpeakableSpecification",
-    cssSelector: headings.map((_, i) => `#speakable-section-${i}`).concat([`#speakable-conclusie`]),
+    xpath: [
+      "/html/body/main/article/section[1]",
+      "/html/body/main/article/section[2]",
+      "/html/body/main/article/section[3]",
+      "/html/body/main/article/section[last()]",
+    ],
     url: `${SITE_URL}/blogs/nieuws/${slug}`,
   };
 }

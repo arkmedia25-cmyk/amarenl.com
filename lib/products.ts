@@ -288,3 +288,51 @@ export function getAffiliateUrl(productId: string): string {
   if (!p) return AFFILIATE_BASE_URL;
   return p.affiliateUrl || `${AFFILIATE_BASE_URL}${productId}`;
 }
+
+/**
+ * Product slugs die een DEEP interne productpagina hebben (app/[slug]/page.tsx).
+ * Deze pagina's hebben 1000+ woorden handgeschreven content, FAQ schema, en CTA's naar Amare.
+ */
+const DEEP_PRODUCT_PAGES = new Set([
+  'happy-juice-pack',
+  'mentabiotics',
+  'energy',
+  'hl5',
+  'origin',
+  'restore',
+  'sunrise',
+  'fit20',
+  'sunset',
+  'edge-plus',
+  'ignite-for-her',
+  'nitro-xtreme',
+  'triangle-of-wellness-xtreme',
+  'magnesium-supplement',
+  'omega-3-supplement',
+  'vitamine-d-supplement',
+]);
+
+/**
+ * Retourneert de interne pagina-URL voor elk product:
+ * - Deep pages (1000+ woorden) → /[slug] (handgeschreven content)
+ * - Overige producten → /producten/[slug] (auto-gegenereerd uit product data)
+ *
+ * Gebruik deze functie voor ALLE product links op categoriepagina's,
+ * product grids, en overal waar producten worden gelinkt.
+ */
+export function getProductPageUrl(productId: string): string | null {
+  if (DEEP_PRODUCT_PAGES.has(productId)) {
+    return `/${productId}`;
+  }
+  // Alle 43 producten hebben een pagina via /producten/[slug]
+  return `/producten/${productId}`;
+}
+
+/**
+ * Controleert of een product een interne pagina heeft (deep of dynamisch).
+ * Nu alle 43 producten gedekt: 16 deep + 27 via /producten/[slug].
+ */
+export function hasInternalPage(productId: string): boolean {
+  // Alle producten in de database hebben nu een interne pagina
+  return true;
+}

@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { products, categories, getAffiliateUrl } from "@/lib/products";
+import Link from "next/link";
+import { products, categories, getAffiliateUrl, getProductPageUrl } from "@/lib/products";
 import { storeAffiliateVisit } from "@/lib/affiliate";
 
 export default function ProductGrid() {
@@ -57,63 +58,87 @@ export default function ProductGrid() {
 
         {/* Products Grid - Structured for 3-4 columns */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8 max-w-6xl mx-auto">
-          {filteredProducts.map((product) => (
-            <a
-              key={product.id}
-              href={getAffiliateUrl(product.id)}
-              target="_blank"
-              rel="nofollow noopener noreferrer"
-              onClick={storeAffiliateVisit}
-              className="group bg-white rounded-3xl border border-[var(--color-border)] p-4 hover:shadow-xl transition-all duration-500 flex flex-col w-full"
-            >
-              {/* Product Image */}
-              <div className="relative aspect-square rounded-2xl overflow-hidden mb-4 bg-[var(--color-bg-soft)]">
-                <Image
-                  src={product.image}
-                  alt={product.nameNL}
-                  fill
-                  className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
-                />
-                {product.isBestseller && (
-                  <div className="absolute top-2 left-2 bg-[var(--color-primary)] text-white text-[8px] font-bold px-2 py-0.5 rounded-full uppercase tracking-tighter">
-                    Best
-                  </div>
-                )}
-                {product.isNew && (
-                  <div className="absolute top-2 right-2 bg-[var(--color-accent)] text-white text-[8px] font-bold px-2 py-0.5 rounded-full uppercase tracking-tighter">
-                    Nieuw
-                  </div>
-                )}
-              </div>
+          {filteredProducts.map((product) => {
+            const internalUrl = getProductPageUrl(product.id);
+            const isExternal = !internalUrl;
+            const href = isExternal ? getAffiliateUrl(product.id) : internalUrl;
 
-              {/* Product Info */}
-              <div className="flex-1">
-                <h3 className="text-sm font-bold text-[var(--color-text)] mb-1 line-clamp-1">
-                  {product.nameNL}
-                </h3>
-                <p className="text-[10px] text-[var(--color-text-muted)] line-clamp-1 mb-3">
-                  {product.taglineNL}
-                </p>
+            const cardContent = (
+              <>
+                {/* Product Image */}
+                <div className="relative aspect-square rounded-2xl overflow-hidden mb-4 bg-[var(--color-bg-soft)]">
+                  <Image
+                    src={product.image}
+                    alt={product.nameNL}
+                    fill
+                    className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+                  />
+                  {product.isBestseller && (
+                    <div className="absolute top-2 left-2 bg-[var(--color-primary)] text-white text-[8px] font-bold px-2 py-0.5 rounded-full uppercase tracking-tighter">
+                      Best
+                    </div>
+                  )}
+                  {product.isNew && (
+                    <div className="absolute top-2 right-2 bg-[var(--color-accent)] text-white text-[8px] font-bold px-2 py-0.5 rounded-full uppercase tracking-tighter">
+                      Nieuw
+                    </div>
+                  )}
+                </div>
 
-                {/* Price */}
-                <div className="flex flex-col gap-0.5 mb-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-[9px] text-[var(--color-primary)] font-bold uppercase tracking-tighter">Abonnement</span>
-                    <span className="text-sm font-bold text-[var(--color-primary)]">€{product.priceSubscription.toFixed(2)}</span>
-                  </div>
-                  <div className="flex justify-between items-center opacity-40">
-                    <span className="text-[8px] uppercase">Eenmalig</span>
-                    <span className="text-[10px] font-medium">€{product.priceRetail.toFixed(2)}</span>
+                {/* Product Info */}
+                <div className="flex-1">
+                  <h3 className="text-sm font-bold text-[var(--color-text)] mb-1 line-clamp-1">
+                    {product.nameNL}
+                  </h3>
+                  <p className="text-[10px] text-[var(--color-text-muted)] line-clamp-1 mb-3">
+                    {product.taglineNL}
+                  </p>
+
+                  {/* Price */}
+                  <div className="flex flex-col gap-0.5 mb-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-[9px] text-[var(--color-primary)] font-bold uppercase tracking-tighter">Abonnement</span>
+                      <span className="text-sm font-bold text-[var(--color-primary)]">€{product.priceSubscription.toFixed(2)}</span>
+                    </div>
+                    <div className="flex justify-between items-center opacity-40">
+                      <span className="text-[8px] uppercase">Eenmalig</span>
+                      <span className="text-[10px] font-medium">€{product.priceRetail.toFixed(2)}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* CTA */}
-              <div className="py-2.5 rounded-xl bg-[var(--color-primary)] text-white text-center text-[10px] font-bold group-hover:opacity-90 shadow-md transition-all">
-                Bestel bij Amare →
-              </div>
-            </a>
-          ))}
+                {/* CTA */}
+                <div className="py-2.5 rounded-xl bg-[var(--color-primary)] text-white text-center text-[10px] font-bold group-hover:opacity-90 shadow-md transition-all">
+                  {isExternal ? "Bestel bij Amare →" : "Bekijk product →"}
+                </div>
+              </>
+            );
+
+            if (isExternal) {
+              return (
+                <a
+                  key={product.id}
+                  href={href}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  onClick={storeAffiliateVisit}
+                  className="group bg-white rounded-3xl border border-[var(--color-border)] p-4 hover:shadow-xl transition-all duration-500 flex flex-col w-full"
+                >
+                  {cardContent}
+                </a>
+              );
+            }
+
+            return (
+              <Link
+                key={product.id}
+                href={href}
+                className="group bg-white rounded-3xl border border-[var(--color-border)] p-4 hover:shadow-xl transition-all duration-500 flex flex-col w-full"
+              >
+                {cardContent}
+              </Link>
+            );
+          })}
         </div>
 
         {/* Trust Badges - Smaller */}

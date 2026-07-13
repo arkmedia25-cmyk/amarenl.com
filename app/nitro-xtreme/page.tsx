@@ -51,9 +51,15 @@ export default function NitroXtremePage() {
             <div className="inline-flex items-center gap-2 mb-4"><span className="bg-[var(--color-primary)] text-white text-[9px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Triangle of Wellness</span><span className="text-[9px] text-[var(--color-text-muted)]">⭐ 4.5/5 (250+ reviews)</span></div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-cormorant font-bold text-[var(--color-text)] mb-4 leading-tight">Amare <span className="text-[var(--color-primary)]">Nitro Xtreme</span></h1>
             <p className="text-lg text-[var(--color-text-muted)] mb-2 leading-relaxed">De middagboost van de Triangle of Wellness — noni, B-vitamines, zink en CoQ10.</p>
-            <p className="text-sm text-[var(--color-text-muted)] mb-6">Vloeibaar concentraat, 1 maand per flesje. <strong>Direct van Amare.</strong></p>
+            <p className="text-sm text-[var(--color-text-muted)] mb-4">Vloeibaar concentraat, 1 maand per flesje. <strong>Direct van Amare.</strong></p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              <span className="inline-flex items-center gap-1 bg-green-50 text-green-700 text-[10px] font-bold px-3 py-1.5 rounded-full border border-green-200">🛡️ 30 dagen geld terug</span>
+              <span className="inline-flex items-center gap-1 bg-amber-50 text-amber-700 text-[10px] font-bold px-3 py-1.5 rounded-full border border-amber-200">🎁 €8 welkomstkorting</span>
+              <span className="inline-flex items-center gap-1 bg-[var(--color-bg-soft)] text-[var(--color-primary)] text-[10px] font-bold px-3 py-1.5 rounded-full border border-[var(--color-border)]">🚚 Gratis verzending &ge;€175</span>
+            </div>
+            <p className="text-[10px] text-[var(--color-text-muted)] mb-5 italic">Voedingssupplement. Geen geneesmiddel. De NVWA heeft de gezondheidsclaims van de gebruikte ingrediënten beoordeeld.</p>
             <div className="flex flex-col sm:flex-row gap-3 mb-4">
-              <AffiliateCTA label="Bestel bij Amare → €53,74/maand" product="nitro-xtreme-56ml" variant="primary" />
+              <AffiliateCTA label="Probeer nu → €53,74/maand" product="nitro-xtreme-56ml" variant="primary" />
               <AffiliateCTA label="Of eenmalig €59,71" product="nitro-xtreme-56ml" variant="secondary" />
             </div>
             <p className="text-[9px] text-[var(--color-text-muted)]">* Ook onderdeel van Triangle of Wellness Xtreme bundel. Abonnement opzegbaar.</p>

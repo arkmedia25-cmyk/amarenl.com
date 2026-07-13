@@ -1,7 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: "https://amarenl.com",
-  generateRobotsTxt: true,
+  generateRobotsTxt: false, // Static robots.txt with AI crawler rules
   generateIndexSitemap: false,
   changefreq: "weekly",
   priority: 0.7,
