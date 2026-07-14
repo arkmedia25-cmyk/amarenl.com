@@ -2,7 +2,7 @@
  * Google Analytics 4 event helpers voor amarenl.com
  */
 
-export const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-XXXXXXXXXX";
+export const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-W57PZEGYM9";
 
 declare global {
   interface Window {
