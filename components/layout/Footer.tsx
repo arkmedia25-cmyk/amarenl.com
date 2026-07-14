@@ -41,6 +41,7 @@ export default function Footer() {
               <li><Link href="/blogs/nieuws/ervaringen-gebruikers-amare-supplementen" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">Ervaringen</Link></li>
               <li><Link href="/contact/" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">Klantenservice</Link></li>
               <li><Link href="/privacy-beleid/" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">Privacy & Cookies</Link></li>
+              <li><Link href="/sitemap.html" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">Sitemap</Link></li>
             </ul>
           </div>
 
