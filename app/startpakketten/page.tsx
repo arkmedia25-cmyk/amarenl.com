@@ -12,7 +12,7 @@ const packs = [
     desc: "Het meest complete pakket. Volledig Amare assortiment, hoogste commissie, premium training en exclusieve events.",
     price: "€649,64",
     priceOnce: "€721,10",
-    href: "https://www.amare.com/2075008/nl-nl/happy-lifestyle-pack-pro",
+    href: "/happy-lifestyle-pack-pro",
     image: "https://amarecdn.azureedge.net/webassets/web/prod/products/Happy-Lifestyle-Pack-Pro-EU-new-800.jpg",
     badge: "Meest gekozen",
     benefits: ["Volledige productlijn", "Hoogste commissie %", "Premium events", "Persoonlijke coaching"],
@@ -22,7 +22,7 @@ const packs = [
     desc: "3x Triangle of Wellness Xtreme. Gebruik 1 set zelf, deel de andere 2 met klanten. Perfect voor social media marketing.",
     price: "€399,00",
     priceOnce: "€443,00",
-    href: "https://www.amare.com/2075008/nl-nl/triangle-marketing-pack",
+    href: "/triangle-marketing-pack",
     image: "https://amarecdn.azureedge.net/webassets/web/prod/products/Triangle-of-Wellness-Xtreme2-EU-800.jpg",
     badge: "Beste voor delen",
     benefits: ["3x Triangle set", "1 voor jezelf", "2 om te delen", "Marketingmateriaal"],
@@ -32,7 +32,7 @@ const packs = [
     desc: "De voordeligste instap. Essentiële Amare producten + toegang tot het Brand Partner platform. Start klein, groei later.",
     price: "€277,68",
     priceOnce: "€308,22",
-    href: "https://www.amare.com/2075008/nl-nl/shop-all?category=Launch%20Packs",
+    href: "/happy-lifestyle-pack-basic",
     image: "https://amarecdn.azureedge.net/webassets/web/prod/products/Happy-Lifestyle-Pack-Basic-EU-new-800.jpg",
     badge: "Voordeligste",
     benefits: ["Laagste instap", "Essentiële producten", "Platform toegang", "Training inbegrepen"],
@@ -62,11 +62,9 @@ export default function StartpakkettenPage() {
         <div className="container-page max-w-5xl">
           <div className="grid md:grid-cols-3 gap-6">
             {packs.map((pack, i) => (
-              <a
+              <Link
                 key={pack.name}
                 href={pack.href}
-                target="_blank"
-                rel="nofollow noopener noreferrer"
                 className={`group bg-white rounded-2xl border-2 overflow-hidden transition-all hover:shadow-xl flex flex-col ${
                   i === 0 ? "border-[var(--color-primary)] shadow-lg" : "border-[var(--color-border)] hover:border-[var(--color-primary)]"
                 }`}
@@ -109,10 +107,10 @@ export default function StartpakkettenPage() {
                   <div className={`py-3 rounded-xl text-center text-sm font-bold transition-all ${
                     i === 0 ? "bg-[var(--color-accent)] text-white group-hover:opacity-90 shadow-md" : "bg-[var(--color-primary)] text-white group-hover:opacity-90"
                   }`}>
-                    Bestel bij Amare →
+                    Bekijk dit pakket →
                   </div>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
