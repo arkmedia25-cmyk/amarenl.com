@@ -8,21 +8,25 @@
 
 ---
 
-## 🆕 BATCH 3 — Juli 2026 (6 artikelen)
+## 🆕 BATCH 3 — Hızlı Trafik Kuyruğu (Temmuz 2026)
 
-> **Legenda:** ⏳ = te schrijven | ✍️ = in progress | ✅ = gepubliceerd
-> Yayın: 2 günde bir, Pzt-Çrş-Cum
+> Gerçek NL arama hacimleri (Ahrefs + Google Ads verisi)
+> **Strateji:** En yüksek hacimli KAPSANMAMIŞ anahtar kelimeler önce
 
-| # | Makale Başlığı (NL) | Slug | Kategori | Hedef Ürün | Arama* | Status |
-|---|---------------------|------|----------|------------|--------|--------|
-| B3-1 | Waar Zit Magnesium In? Voedingsbronnen & Supplementen Gids | magnesium-voedingsbronnen-supplementen-gids | essentials | Sunrise, Sunset | 4.600 | ⏳ |
-| B3-2 | Immuunsysteem Versterken: Supplementen die Je Weerstand Ondersteunen | immuunsysteem-versterken-supplementen-weerstand | essentials | Sunrise, VitaGBX, Restore | 2.100 | ⏳ |
-| B3-3 | Spierherstel Na Sporten: Supplementen voor Sneller Herstel | spierherstel-sporten-supplementen-sneller-herstel | essentials | FIT20, Origin, Energy+ | 1.800 | ⏳ |
-| B3-4 | Supplementen voor Vrouwen 40+: Energie, Hormonen & Huid | supplementen-vrouwen-40-plus-energie-hormonen-huid | hormonen | Ignite Her, HL5, Sunset | 1.600 | ⏳ |
-| B3-5 | Waar Zit Vitamine C In? Natuurlijke Bronnen vs Supplementen | vitamine-c-voedingsbronnen-vs-supplementen | essentials | Sunrise, VitaGBX | 1.700 | ⏳ |
-| B3-6 | Ochtendroutine voor Meer Energie: Supplementen & Gewoontes | ochtendroutine-energie-supplementen-gewoontes | lifestyle | Sunrise, Energy+, Happy Juice | 1.200 | ⏳ |
+| # | Makale Başlığı (NL) | Anahtar Kelime | Arama* | Ürün | Status |
+|---|---------------------|---------------|--------|------|--------|
+| 1 | Waar Zit Magnesium In? Voedingsbronnen & Supplementen | waar zit magnesium in | **4.600** | Sunrise | ⏳ |
+| 2 | Supplementen voor Meer Energie: Dit Werkt Echt (2026) | supplementen voor meer energie | **2.100** | Energy+, Happy Juice | ⏳ |
+| 3 | Immuunsysteem Versterken met Supplementen: Complete Gids | immuunsysteem versterken supplementen | **2.100** | VitaGBX, Sunrise | ⏳ |
+| 4 | Spierherstel Na Sporten: Beste Supplementen voor Herstel | spierherstel supplementen | **1.800** | FIT20, Origin | ⏳ |
+| 5 | Waar Zit Vitamine C In? Voeding vs Supplementen | waar zit vitamine c in | **1.700** | Sunrise | ⏳ |
+| 6 | Supplementen voor Vrouwen 40+: Energie & Hormonen | supplementen vrouwen 40+ | **1.600** | Ignite Her, HL5 | ⏳ |
 
-> *Tahmini aylık NL arama hacmi
+> *Gerçek aylık NL arama hacmi (Ahrefs/Google Ads)
+> Yayın: 2 günde bir (Pzt-Çrş-Cum) → 2 haftada tamamlanır
+> Toplam potansiyel: ~13.900 aylık arama
+
+---
 
 ### 📅 Yayın Takvimi
 
