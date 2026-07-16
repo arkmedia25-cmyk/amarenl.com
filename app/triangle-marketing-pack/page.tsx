@@ -5,7 +5,7 @@ import { ShoppingCart, CheckCircle2, Share2, Gift, Users } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Triangle Marketing Pack — 3x Triangle of Wellness | Word Brand Partner | AmareNL",
-  description: "Start als Amare Brand Partner met 3 complete Triangle of Wellness Xtreme sets. Ervaar zelf, deel met klanten, verdien commissie. €399/maand.",
+  description: "Start als Amare Brand Partner met 3 complete Triangle of Wellness Xtreme sets. Ervaar zelf, deel met klanten, verdien commissie. €511,21/maand.",
   alternates: { canonical: "/triangle-marketing-pack" },
   openGraph: { title: "Triangle Marketing Pack — 3x Set | AmareNL", description: "3x Triangle of Wellness Xtreme — jouw Brand Partner startkit. Ervaar, deel & verdien.", url: "/triangle-marketing-pack", siteName: "AmareNL", locale: "nl_NL" },
 };
@@ -41,8 +41,8 @@ export default function TriangleMarketingPage() {
               </div>
               <div className="bg-white/10 rounded-xl p-4 inline-block">
                 <p className="text-sm text-white/70">Abonnement</p>
-                <p className="text-3xl font-bold">€399,00<span className="text-lg font-normal text-white/70">/maand</span></p>
-                <p className="text-xs text-white/50">Eenmalig: €443,00</p>
+                <p className="text-3xl font-bold">€511,21<span className="text-lg font-normal text-white/70">/maand</span></p>
+                <p className="text-xs text-white/50">Eenmalig: €568,01</p>
               </div>
             </div>
           </div>
