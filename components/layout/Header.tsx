@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Menu, X, ArrowRight, ChevronDown } from "lucide-react";
 
 const categoryLinks = [
-  ["🚀 Startpakketten", "/startpakketten/"],
+  ["🚀 Startpakketten", "/pakketten/"],
   ["🧠 Mentale Wellness", "/supplementen/"],
   ["💧 Collageen", "/hl5"],
   ["🦠 Darmgezondheid", "/darmgezondheid/"],
@@ -41,10 +41,10 @@ const productLinks = [
     ["FIT20", "/fit20"],
   ]},
   { label: "🚀 Startpakketten", items: [
-    ["Happy Lifestyle Pack Pro ⭐", "https://www.amare.com/2075008/nl-nl/happy-lifestyle-pack-pro"],
-    ["Triangle Marketing Pack", "https://www.amare.com/2075008/nl-nl/triangle-marketing-pack"],
-    ["Happy Lifestyle Pack Basic", "https://www.amare.com/2075008/nl-nl/shop-all?category=Launch%20Packs"],
-    ["→ Alle Startpakketten", "/startpakketten/"],
+    ["Happy Lifestyle Pack Pro ⭐", "/happy-lifestyle-pack-pro"],
+    ["Triangle Marketing Pack", "/triangle-marketing-pack"],
+    ["Happy Lifestyle Pack Basic", "/happy-lifestyle-pack-basic"],
+    ["→ Meer info & advies", "/pakketten/"],
   ]},
   { label: "Alle Producten", items: [
     ["→ Bekijk alle producten", "/essentials/"],
