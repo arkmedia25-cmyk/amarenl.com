@@ -5,18 +5,22 @@ import Link from "next/link";
 import { Menu, X, ArrowRight, ChevronDown } from "lucide-react";
 
 const categoryLinks = [
-  ["Mentale Wellness", "/supplementen/"],
-  ["Darmgezondheid", "/darmgezondheid/"],
-  ["Schoonheid", "/schoonheid/"],
-  ["Essentials", "/essentials/"],
-  ["Pakketten", "/pakketten/"],
-  ["Gewichtsbeheer", "/gewichtsbeheer/"],
+  ["🎁 Aanbiedingen", "/pakketten/"],
+  ["🧠 Mentale Wellness", "/supplementen/"],
+  ["💧 Collageen", "/hl5"],
+  ["🦠 Darmgezondheid", "/darmgezondheid/"],
+  ["✨ Schoonheid", "/schoonheid/"],
+  ["🌿 Essentials", "/essentials/"],
 ];
 
 const productLinks = [
-  { label: "Mentale Wellness", items: [
+  { label: "⭐ Bestsellers", items: [
     ["Happy Juice Pack", "/happy-juice-pack"],
+    ["HL5 Collageen", "/hl5"],
+    ["Triangle of Wellness Xtreme", "/triangle-of-wellness-xtreme"],
     ["MentaBiotics", "/mentabiotics"],
+  ]},
+  { label: "Mentale Wellness", items: [
     ["EDGE+", "/edge-plus"],
     ["Energy+", "/energy"],
     ["Amare ON", "/on"],
@@ -35,7 +39,6 @@ const productLinks = [
     ["Sunset", "/sunset"],
     ["Origin", "/origin"],
     ["FIT20", "/fit20"],
-    ["Triangle of Wellness Xtreme", "/triangle-of-wellness-xtreme"],
   ]},
   { label: "Alle Producten", items: [
     ["→ Bekijk alle producten", "/essentials/"],
@@ -99,12 +102,12 @@ export default function Header() {
           </div>
 
           <Link href="/blogs/nieuws" className="text-xs font-bold text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors">Blog</Link>
-          <Link href="/supplementenwijzer" className="text-xs font-bold text-[var(--color-accent)] hover:text-[var(--color-primary)] transition-colors">Supplementenwijzer</Link>
+          <Link href="/gratis-gut-brain-gids" className="text-xs font-bold text-[var(--color-accent)] hover:text-[var(--color-primary)] transition-colors">🎁 Gratis Gids</Link>
         </nav>
 
         <div className="flex items-center gap-4">
-          <a href="#newsletter" className="hidden sm:flex items-center gap-2 px-5 py-2.5 bg-[var(--color-primary)] text-white rounded-full text-sm font-bold hover:opacity-90 transition-all">
-            Claim €8 Korting <ArrowRight size={16} />
+          <a href="https://www.amare.com/2075008/nl-nl" target="_blank" rel="nofollow noopener noreferrer" className="hidden sm:flex items-center gap-2 px-5 py-2.5 bg-[var(--color-accent)] text-white rounded-full text-sm font-bold hover:opacity-90 transition-all shadow-md">
+            Bestel bij Amare <ArrowRight size={16} />
           </a>
           <button className="lg:hidden p-2 text-[var(--color-text)]" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle Menu">
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -139,8 +142,11 @@ export default function Header() {
             ].map(([label, href]) => (
               <Link key={label} href={href} onClick={() => setIsMenuOpen(false)} className="text-xl font-bold text-[var(--color-text)] border-b border-[var(--color-border)] pb-4">{label}</Link>
             ))}
-            <a href="#newsletter" onClick={() => setIsMenuOpen(false)} className="flex items-center justify-center gap-2 w-full py-4 bg-[var(--color-primary)] text-white rounded-xl font-bold">
-              Claim mijn €8 korting <ArrowRight size={20} />
+            <a href="https://www.amare.com/2075008/nl-nl" target="_blank" rel="nofollow noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="flex items-center justify-center gap-2 w-full py-4 bg-[var(--color-accent)] text-white rounded-xl font-bold text-lg shadow-lg">
+              Bestel bij Amare → <ArrowRight size={20} />
+            </a>
+            <a href="/gratis-gut-brain-gids" onClick={() => setIsMenuOpen(false)} className="flex items-center justify-center gap-2 w-full py-3 bg-[var(--color-primary)] text-white rounded-xl font-bold">
+              📖 Gratis Gut-Brain Gids
             </a>
           </nav>
         </div>
