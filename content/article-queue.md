@@ -15,14 +15,18 @@
 
 ### 🎯 COLLAGEEN CLUSTER (Mevcut 7 + Yeni 6 = 13 içerik)
 
+> ⚠️ **HER MAKALEDE VURGULA:** HL5 sıvı form → toz/pastil collagen'den 3x daha iyi emilim.
+> USP'ler: Vloeibaar (max opname) | 5g gehydrolyseerd collageen | Vit C + Hyaluronzuur + Biotine | Klinisch onderzocht
+> Rakip karşılaştırması: Toz collagen ~%30 emilim → HL5 sıvı ~%90 emilim (vloeistof gaat direct naar bloedbaan)
+
 | # | Anahtar Kelime | Arama | Açı / Makale | Ürün | Status |
 |---|---------------|--------|-------------|------|--------|
-| **P1** | **collageen** | **16.000** | 🔴 Collageen: De Complete Gids 2026 — Pillar Page | HL5 | ⏳ |
-| **P2** | **collageen poeder** | **12.000** | 🟡 Collageen Poeder Kopen? Alles Over Soorten, Werking & Prijs | HL5 | ⏳ |
-| **P3** | collageen mannen | ~800 | 🟢 Collageen voor Mannen: Ook Belangrijk na je 30e | HL5 | ⏳ |
-| **P4** | collageen resultaten | ~600 | 🟢 Collageen Resultaten: Voor en Na — Wat Kun Je Verwachten? | HL5, NeuCollagen | ⏳ |
-| **P5** | collageen type 1 2 3 | ~500 | 🟢 Collageen Types Uitgelegd: Type 1, 2, 3 — Welke Heb Je Nodig? | HL5, NeuCollagen | ⏳ |
-| **P6** | collageen vitamine c | ~400 | 🟢 Collageen en Vitamine C: De Gouden Combinatie voor Huid | HL5, Sunrise | ⏳ |
+| **P1** | **collageen** | **16.000** | 🔴 Collageen: De Complete Gids 2026 — Pillar Page — **Sıvı vs Toz karşılaştırması öne çıksın** | HL5 (vloeibaar) | ⏳ |
+| **P2** | **collageen poeder** | **12.000** | 🟡 Collageen Poeder vs Vloeibaar: Wat Is Beter? — **HL5 sıvı = 3x betere opname** | HL5 | ⏳ |
+| **P3** | collageen mannen | ~800 | 🟢 Collageen voor Mannen 30+ — **Vloeibaar, makkelijk in ochtendroutine** | HL5 | ⏳ |
+| **P4** | collageen resultaten | ~600 | 🟢 Collageen Resultaten: Voor en Na 4-8-12 Weken — **Sıvı = sneller zichtbaar** | HL5, NeuCollagen | ⏳ |
+| **P5** | collageen type 1 2 3 | ~500 | 🟢 Collageen Types — **HL5 Type 1&3 vloeibaar = beste opname** | HL5, NeuCollagen | ⏳ |
+| **P6** | collageen vitamine c | ~400 | 🟢 Collageen + Vitamine C — **HL5 bevat al Vit C + Hyaluronzuur** | HL5, Sunrise | ⏳ |
 
 > Mevcut 7 collagen yazısı + bu 6 yeni = **13 içeriklik cluster** → Google'da "collageen" için otorite
 
