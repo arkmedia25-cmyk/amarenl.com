@@ -20,9 +20,21 @@ interface Slide {
 
 const slides: Slide[] = [
   {
+    id: "hl5-collageen",
+    icon: <Droplets size={18} />,
+    badge: "BESTE COLLAGEEN",
+    title: "HL5 Vloeibare Collageen — 3x Betere Opname dan Poeder",
+    subtitle: "Sıvı formül = maximale absorptie. Huid, haar, nagels & gewrichten.",
+    cta: "Ontdek HL5",
+    href: "/hl5",
+    isExternal: false,
+    bgFrom: "#C88080",
+    bgTo: "#C8A951",
+  },
+  {
     id: "mei-verzending",
     icon: <Flame size={18} />,
-    badge: "MEI 2026",
+    badge: "ZOMER 2026",
     title: "Gratis verzending vanaf €175 + 10% abonnementskorting",
     subtitle: "Schrijf je in en ontvang elke maand extra voordeel",
     cta: "Bekijk aanbieding",
@@ -33,8 +45,8 @@ const slides: Slide[] = [
   },
   {
     id: "sunset-omega",
-    icon: <Droplets size={18} />,
-    badge: "NIEUW — OMEGA-3",
+    icon: <Leaf size={18} />,
+    badge: "OMEGA-3 DRUPPELS",
     title: "Amare Sunset: dagelijkse omega-3 druppels",
     subtitle: "Vloeibare omega-3 voor hart, hersenen en gewrichten",
     cta: "Bestel Sunset",
@@ -42,18 +54,6 @@ const slides: Slide[] = [
     isExternal: true,
     bgFrom: "#C8A951",
     bgTo: "#C88040",
-  },
-  {
-    id: "rootist",
-    icon: <Leaf size={18} />,
-    badge: "NIEUW — HAARVERZORGING",
-    title: "The Rootist: Roots Transformation Pack",
-    subtitle: "Complete biotische haarverzorging voor sterker en voller haar",
-    cta: "Bestel Rootist",
-    href: getAmareUrl("roots-transformation-pack"),
-    isExternal: true,
-    bgFrom: "#6B8C6B",
-    bgTo: "#4A7C4F",
   },
 ];
 

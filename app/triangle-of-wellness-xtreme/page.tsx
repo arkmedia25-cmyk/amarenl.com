@@ -163,11 +163,11 @@ export default function TriangleOfWellnessXtremePage() {
                 <span className="text-[var(--color-primary)]">Xtreme™</span>
               </h1>
               <p className="text-lg text-[var(--color-text-muted)] mb-2 leading-relaxed">
-                Het complete dag-nacht systeem: Sunrise voor je ochtend, Nitro voor je middag, Sunset voor je avond.
+                Van uitgeput naar energiek — het complete dag-nacht systeem. Sunrise voor je ochtend, Nitro voor je middag, Sunset voor je avond.
               </p>
               <p className="text-sm text-[var(--color-text-muted)] mb-6">
                 Eén pakket, drie producten — energie, focus en herstel.{" "}
-                <strong>Direct van Amare — premium kwaliteit.</strong>
+                <strong>30 dagen geld-terug garantie.</strong>
               </p>
               <div className="flex flex-col sm:flex-row gap-3 mb-4">
                 <AffiliateCTA
@@ -186,6 +186,26 @@ export default function TriangleOfWellnessXtremePage() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Video */}
+      <section className="py-12 bg-white">
+        <div className="container-page max-w-sm mx-auto">
+          <video
+            className="w-full rounded-2xl shadow-xl"
+            autoPlay
+            loop
+            muted
+            playsInline
+            controls
+            poster="/images/og-default.jpg"
+          >
+            <source src="/videos/triangle-wellness-xtreme.mp4" type="video/mp4" />
+          </video>
+          <p className="text-center text-xs text-[var(--color-text-muted)] mt-3">
+            Bekijk de video — 20 seconden
+          </p>
         </div>
       </section>
 

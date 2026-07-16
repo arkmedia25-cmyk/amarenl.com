@@ -13,10 +13,6 @@ export default function Footer() {
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
               Jouw gids naar natuurlijke mentale wellness en darmgezondheid. Onafhankelijke partner van Amare Global in Nederland.
             </p>
-            <div className="flex items-center gap-4 text-xs font-bold text-[var(--color-primary)]">
-              <a href="https://amarereview.nl" className="hover:underline" target="_blank">AMAREREVIEW.NL</a>
-              <a href="https://wearkmedia.com" className="hover:underline" target="_blank">WEARKMEDIA</a>
-            </div>
           </div>
 
           {/* Links Column 1 */}

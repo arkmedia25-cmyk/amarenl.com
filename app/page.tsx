@@ -30,12 +30,12 @@ const symptoms = [
 ];
 
 const popular = [
+  { title: "Collageen: De Complete Gids 2026 — Waarom Vloeibaar Beter Is", href: "/blogs/nieuws/beste-collageen-supplement-2026-werkt-echt" },
+  { title: "HL5 vs Supermarkt Collageen: Wat is het Verschil?", href: "/blogs/nieuws/collageen-hl5-vs-supermarkt-vergelijken" },
   { title: "Magnesium: Het Meest Onderschatte Mineraal", href: "/blogs/nieuws/magnesium-supplement-kopen-welke-vorm-nodig" },
-  { title: "Supplementen voor Meer Energie — Dit Werkt Écht", href: "/blogs/nieuws/supplementen-voor-meer-energie-dit-werkt-echt" },
   { title: "De Gut-Brain Connectie: Darmen & Stemming", href: "/blogs/nieuws/gut-brain-connectie-darmen-stemming-mentaal" },
-  { title: "Vitamine B12 Tekort: Symptomen & Oplossing", href: "/blogs/nieuws/vitamine-b12-tekort-symptomen-supplement" },
+  { title: "Supplementen voor Meer Energie — Dit Werkt Écht", href: "/blogs/nieuws/supplementen-voor-meer-energie-dit-werkt-echt" },
   { title: "Supplementen bij Stress & Burn-out", href: "/blogs/nieuws/supplementen-stress-burn-out-wat-helpt-echt" },
-  { title: "Collageen voor Stralende Huid & Sterk Haar", href: "/blogs/nieuws/beste-supplementen-haar-nagels-werkt-echt" },
 ];
 
 export default function Home() {
