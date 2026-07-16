@@ -94,22 +94,22 @@ const ingredientGroups = [
 ];
 
 export default function HL5Page() {
-  const product = getProduct("hl5-2-pack");
+  const product = getProduct("hl5-peach");
   const productImage =
     product?.image ||
     "https://amarecdn.azureedge.net/webassets/web/prod/products/HL5-Peach-2pk-EU-800.jpg";
 
   const productSchema = generateProductSchema({
-    name: "Amare HL5 2-Pack",
-    nameNL: "Amare HL5 2-Pack",
+    name: "Amare HL5 Vloeibare Collageen",
+    nameNL: "Amare HL5 Vloeibare Collageen (Perzik)",
     description:
-      "Amare HL5 levert 5 gram grasgevoerd, gehydrolyseerd collageen (Type 1 & 3) per portie in vloeibare vorm voor maximale opname. Type 1 collageen vormt 90% van al het collageen in het lichaam — essentieel voor huid, haar, nagels, botten en bindweefsel. Perzik smaak, lactosevrij.",
+      "Amare HL5 levert 5 gram gehydrolyseerd collageen (Type 1 & 3) per portie in vloeibare vorm voor maximale opname — tot 3x betere absorptie dan collageenpoeder. Met Vitamine C, Hyaluronzuur en Biotine. Perzik smaak, lactosevrij.",
     image: productImage,
     slug: "hl5",
-    priceRetail: 144.90,
-    priceSubscription: 130.42,
-    ratingValue: 4.5,
-    ratingCount: 500,
+    priceRetail: 85.87,
+    priceSubscription: 77.28,
+    ratingValue: 4.8,
+    ratingCount: 89,
     affiliateUrl: "https://www.amare.com/2075008/nl-nl/hl5-peach",
   });
 
@@ -159,7 +159,7 @@ export default function HL5Page() {
               </div>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-cormorant font-bold text-[var(--color-text)] mb-4 leading-tight">
                 Amare <span className="text-[var(--color-primary)]">HL5</span>{" "}
-                2-Pack
+                30 Sachets
               </h1>
               <p className="text-lg text-[var(--color-text-muted)] mb-2 leading-relaxed">
                 5 g gehydrolyseerd collageen (Type 1 & 3) per portie — vloeibare
@@ -173,13 +173,13 @@ export default function HL5Page() {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 mb-4">
                 <AffiliateCTA
-                  label="Bestel bij Amare → €130,42/maand"
-                  product="hl5-2-pack"
+                  label="Bestel bij Amare → €77,28/maand"
+                  product="hl5-peach"
                   variant="primary"
                 />
                 <AffiliateCTA
-                  label="Of eenmalig €144,90"
-                  product="hl5-2-pack"
+                  label="Of eenmalig €85,87"
+                  product="hl5-peach"
                   variant="secondary"
                 />
               </div>
@@ -226,7 +226,7 @@ export default function HL5Page() {
               dagelijkse toevoeging.
             </p>
             <p>
-              Het 2-Pack bevat twee maandvoorraden — voordeliger dan losse
+              Eén verpakking bevat 30 sachets — een volledige maandvoorraad
               aankoop en je hebt meteen voorraad voor een volledige kuur.
             </p>
           </div>
@@ -389,7 +389,7 @@ export default function HL5Page() {
               <strong>⚠ Niet geschikt voor:</strong> Veganisten (bevat dierlijk
               collageen).
               <br />
-              <strong>📦 Inhoud:</strong> 2-Pack = 60 sachets (2 maanden
+              <strong>📦 Inhoud:</strong> 30 sachets (1 maand
               voorraad).
             </div>
           </div>
@@ -480,8 +480,8 @@ export default function HL5Page() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3">
             <AffiliateCTA
-              label="Bestel nu — Abonnement €130,42/maand"
-              product="hl5-2-pack"
+              label="Bestel nu — Abonnement €77,28/maand"
+              product="hl5-peach"
               variant="urgency"
             />
           </div>
@@ -504,7 +504,7 @@ export default function HL5Page() {
                 Abonnement — Bespaar 10%
               </div>
               <div className="text-3xl font-bold text-[var(--color-text)] mb-1">
-                €130,42
+                €77,28
                 <span className="text-sm font-normal text-[var(--color-text-muted)]">
                   /maand
                 </span>
@@ -519,7 +519,7 @@ export default function HL5Page() {
               </ul>
               <AffiliateCTA
                 label="Start abonnement →"
-                product="hl5-2-pack"
+                product="hl5-peach"
                 variant="primary"
               />
             </div>
@@ -528,19 +528,19 @@ export default function HL5Page() {
                 Eenmalige aankoop
               </div>
               <div className="text-3xl font-bold text-[var(--color-text)] mb-1">
-                €144,90
+                €85,87
               </div>
               <p className="text-xs text-[var(--color-text-muted)] mb-4">
                 Eenmalig bestellen, geen verplichtingen.
               </p>
               <ul className="space-y-1 mb-4 text-xs text-[var(--color-text-muted)]">
                 <li>✓ Vrijblijvend</li>
-                <li>✓ 2 maanden voorraad (60 sachets)</li>
+                <li>✓ 30 sachets — 1 maand voorraad</li>
                 <li>✓ Verzending €4,95</li>
               </ul>
               <AffiliateCTA
                 label="Eenmalig bestellen →"
-                product="hl5-2-pack"
+                product="hl5-peach"
                 variant="secondary"
               />
             </div>
@@ -590,7 +590,7 @@ export default function HL5Page() {
             <div className="flex flex-col sm:flex-row justify-center gap-3 mb-4">
               <AffiliateCTA
                 label="Bestel HL5 bij Amare →"
-                product="hl5-2-pack"
+                product="hl5-peach"
                 variant="primary"
               />
               <AffiliateCTA
@@ -617,7 +617,7 @@ export default function HL5Page() {
           </div>
         </div>
       
-      <StickyMobileCTA product="hl5-peach-2pack" subscriptionPrice="€130,42" />
+      <StickyMobileCTA product="hl5-peach" subscriptionPrice="€77,28" />
 </section>
     </>
   );
