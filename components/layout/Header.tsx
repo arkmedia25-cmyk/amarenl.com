@@ -74,30 +74,30 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`sticky top-0 z-[60] transition-all duration-300 ${isScrolled ? "bg-white/80 backdrop-blur-lg shadow-md py-2" : "bg-white py-4"}`}>
-      <div className="container-page flex items-center justify-between">
-        <Link href="/" className="text-2xl font-bold font-cormorant text-[var(--color-primary)]">AmareNL</Link>
+    <header className={`sticky top-0 z-[60] transition-all duration-300 ${isScrolled ? "bg-white/90 backdrop-blur-lg shadow-md py-2" : "bg-white py-5"}`}>
+      <div className="container-page flex items-center justify-between gap-6">
+        <Link href="/" className="text-2xl font-bold font-cormorant text-[var(--color-primary)] shrink-0">AmareNL</Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-6">
+        <nav className="hidden lg:flex items-center gap-10">
           {categoryLinks.map(([label, href]) => (
-            <Link key={label} href={href} className="text-xs font-bold text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors">
+            <Link key={label} href={href} className="text-[11px] font-bold text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors whitespace-nowrap">
               {label}
             </Link>
           ))}
 
           {/* Product Dropdown */}
           <div ref={dropdownRef} className="relative">
-            <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="flex items-center gap-1 text-xs font-bold text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors">
-              Producten <ChevronDown size={14} className={`transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
+            <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="flex items-center gap-1.5 text-[11px] font-bold text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors whitespace-nowrap">
+              Alle Producten <ChevronDown size={14} className={`transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
             </button>
             {isDropdownOpen && (
-              <div className="absolute top-full left-0 mt-2 bg-white border border-[var(--color-border)] rounded-xl shadow-lg py-3 min-w-[600px] z-50 grid grid-cols-3 gap-4 px-4">
+              <div className="absolute top-full left-0 mt-3 bg-white border border-[var(--color-border)] rounded-2xl shadow-xl py-5 min-w-[640px] z-50 grid grid-cols-3 gap-6 px-6">
                 {productLinks.map((group) => (
                   <div key={group.label}>
-                    <span className="block px-2 py-1 text-[9px] font-bold text-[var(--color-text-muted)] uppercase tracking-wider">{group.label}</span>
+                    <span className="block px-2 py-1.5 text-[9px] font-bold text-[var(--color-text-muted)] uppercase tracking-wider border-b border-[var(--color-border)] mb-2">{group.label}</span>
                     {group.items.map(([label, href]) => (
-                      <Link key={label} href={href} onClick={() => setIsDropdownOpen(false)} className="block px-2 py-1.5 text-sm text-[var(--color-text)] hover:bg-[var(--color-bg-soft)] hover:text-[var(--color-primary)] rounded transition-colors">
+                      <Link key={label} href={href} onClick={() => setIsDropdownOpen(false)} className="block px-2 py-2 text-[13px] text-[var(--color-text)] hover:bg-[var(--color-bg-soft)] hover:text-[var(--color-primary)] rounded-lg transition-colors">
                         {label}
                       </Link>
                     ))}
@@ -107,12 +107,15 @@ export default function Header() {
             )}
           </div>
 
-          <Link href="/blogs/nieuws" className="text-xs font-bold text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors">Blog</Link>
-          <Link href="/gratis-gut-brain-gids" className="text-xs font-bold text-[var(--color-accent)] hover:text-[var(--color-primary)] transition-colors">🎁 Gratis Gids</Link>
+          {/* Separator */}
+          <span className="w-px h-5 bg-[var(--color-border)]" />
+
+          <Link href="/blogs/nieuws" className="text-[11px] font-bold text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors whitespace-nowrap">📝 Blog</Link>
+          <Link href="/gratis-gut-brain-gids" className="text-[11px] font-bold text-[var(--color-accent)] hover:text-[var(--color-primary)] transition-colors whitespace-nowrap">🎁 Gratis Gids</Link>
         </nav>
 
         <div className="flex items-center gap-4">
-          <a href="https://www.amare.com/2075008/nl-nl" target="_blank" rel="nofollow noopener noreferrer" className="hidden sm:flex items-center gap-2 px-5 py-2.5 bg-[var(--color-accent)] text-white rounded-full text-sm font-bold hover:opacity-90 transition-all shadow-md">
+          <a href="https://www.amare.com/2075008/nl-nl" target="_blank" rel="nofollow noopener noreferrer" className="hidden sm:inline-flex items-center gap-2 px-6 py-3 bg-[var(--color-accent)] text-white rounded-full text-[13px] font-bold hover:opacity-90 transition-all shadow-md shrink-0">
             Bestel bij Amare <ArrowRight size={16} />
           </a>
           <button className="lg:hidden p-2 text-[var(--color-text)]" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle Menu">
