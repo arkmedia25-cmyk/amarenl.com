@@ -43,7 +43,7 @@ const productLinks = [
   { label: "🚀 Startpakketten", items: [
     ["Happy Lifestyle Pack Pro ⭐", "/happy-lifestyle-pack-pro"],
     ["Triangle Marketing Pack", "/triangle-marketing-pack"],
-    ["Happy Lifestyle Pack Basic", "/happy-lifestyle-pack-basic"],
+    ["Zelf Samenstellen (Share)", "https://www.amare.com/2075008/nl-nl/share"],
     ["→ Meer info & advies", "/pakketten/"],
   ]},
   { label: "Alle Producten", items: [

@@ -22,14 +22,14 @@ const PACKS = [
     benefits: ["3x Triangle set", "1 voor jezelf", "2 om te delen", "Marketingmateriaal"],
   },
   {
-    slug: "happy-lifestyle-pack-basic",
-    href: "/happy-lifestyle-pack-basic",
-    name: "Happy Lifestyle Pack — Basic",
-    tagline: "Voordelige instap — start vandaag",
-    priceSub: "277,68",
-    priceOnce: "308,22",
+    slug: "share",
+    href: "https://www.amare.com/2075008/nl-nl/share",
+    name: "Zelf Samenstellen",
+    tagline: "Kies je eigen producten + €35 licentiekosten",
+    priceSub: "—",
+    priceOnce: "—",
     isPro: false,
-    benefits: ["Laagste instap", "Essentiële producten", "Platform toegang", "Training inbegrepen"],
+    benefits: ["Kies zelf je producten", "€35 licentie voor toegang", "Bouw je eigen pakket", "Maximale flexibiliteit"],
   },
 ];
 
