@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
-  { q: "Wat zit er in het Triangle Marketing Pack?", a: "Je ontvangt 3 complete Triangle of Wellness Xtreme sets. Elke set bevat Sunrise (ochtendenergie), Nitro Xtreme (middagfocus) en Sunset (avondherstel). In totaal 90 porties van elk product — genoeg voor 3 maanden. Plus marketingmateriaal en toegang tot het Brand Partner platform." },
-  { q: "Waarom 3 sets?", a: "Het idee is simpel: gebruik 1 set zelf om de producten te ervaren, en gebruik de andere 2 sets om samples te delen met potentiële klanten. Mensen die de producten zelf proberen, worden veel sneller klant. Dit is de meest effectieve manier om te starten als Brand Partner." },
-  { q: "Hoe verdien ik met het Triangle Marketing Pack?", a: "Je deelt jouw persoonlijke Amare link met mensen die de producten willen proberen. Elke aankoop via jouw link levert commissie op — zowel eenmalig als terugkerend op abonnementen. De Triangle of Wellness is Amare's #1 bestseller — makkelijk te verkopen omdat het resultaat merkbaar is." },
-  { q: "Is dit pakket geschikt voor social media?", a: "Absoluut. De Triangle of Wellness is visueel aantrekkelijk (ochtend-middag-avond verhaal) en leent zich perfect voor Instagram, TikTok en Facebook. Veel Brand Partners gebruiken de extra sets om unboxing video's, before/after content en sample weggeefacties te doen." },
+  { question: "Wat zit er in het Triangle Marketing Pack?", answer: "Je ontvangt 3 complete Triangle of Wellness Xtreme sets. Elke set bevat Sunrise (ochtendenergie), Nitro Xtreme (middagfocus) en Sunset (avondherstel). In totaal 90 porties van elk product — genoeg voor 3 maanden. Plus marketingmateriaal en toegang tot het Brand Partner platform." },
+  { question: "Waarom 3 sets?", answer: "Het idee is simpel: gebruik 1 set zelf om de producten te ervaren, en gebruik de andere 2 sets om samples te delen met potentiële klanten. Mensen die de producten zelf proberen, worden veel sneller klant. Dit is de meest effectieve manier om te starten als Brand Partner." },
+  { question: "Hoe verdien ik met het Triangle Marketing Pack?", answer: "Je deelt jouw persoonlijke Amare link met mensen die de producten willen proberen. Elke aankoop via jouw link levert commissie op — zowel eenmalig als terugkerend op abonnementen. De Triangle of Wellness is Amare's #1 bestseller — makkelijk te verkopen omdat het resultaat merkbaar is." },
+  { question: "Is dit pakket geschikt voor social media?", answer: "Absoluut. De Triangle of Wellness is visueel aantrekkelijk (ochtend-middag-avond verhaal) en leent zich perfect voor Instagram, TikTok en Facebook. Veel Brand Partners gebruiken de extra sets om unboxing video's, before/after content en sample weggeefacties te doen." },
 ];
 
 export default function TriangleMarketingPage() {
@@ -109,8 +109,8 @@ export default function TriangleMarketingPage() {
           <div className="space-y-3">
             {faqs.map((faq, i) => (
               <details key={i} className="bg-white rounded-xl border border-[var(--color-border)] group">
-                <summary className="p-5 cursor-pointer font-bold text-sm text-[var(--color-text)] list-none flex justify-between items-center">{faq.q}<span className="text-[var(--color-primary)] text-lg group-open:rotate-45 transition-transform">+</span></summary>
-                <div className="px-5 pb-5 text-sm text-[var(--color-text-muted)]">{faq.a}</div>
+                <summary className="p-5 cursor-pointer font-bold text-sm text-[var(--color-text)] list-none flex justify-between items-center">{faq.question}<span className="text-[var(--color-primary)] text-lg group-open:rotate-45 transition-transform">+</span></summary>
+                <div className="px-5 pb-5 text-sm text-[var(--color-text-muted)]">{faq.answer}</div>
               </details>
             ))}
           </div>

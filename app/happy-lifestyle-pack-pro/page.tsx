@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
-  { q: "Wat zit er in het Happy Lifestyle Pack Pro?", a: "Het Pro pack bevat het volledige Amare assortiment: Happy Juice Pack (Energy+ + MentaBiotics + MentaFocus), Triangle of Wellness Xtreme (Sunrise + Nitro + Sunset), HL5 Collageen, en alle essentiële supplementen. Dit is het meest complete pakket dat Amare aanbiedt." },
-  { q: "Wat is het verschil tussen Basic en Pro?", a: "Pro geeft je het volledige assortiment (niet slechts een selectie), het hoogste commissiepercentage, toegang tot exclusieve Brand Partner events, persoonlijke coaching, en premium marketingmateriaal. Basic is de voordeligere instap met een selectie van de belangrijkste producten." },
-  { q: "Hoeveel commissie verdien ik met het Pro pack?", a: "Met het Pro pack krijg je het hoogste commissiepercentage op al je verkopen — zowel eenmalige aankopen als terugkerende abonnementen. Hoe meer je deelt, hoe meer je verdient. Veel Pro partners bouwen een stabiel maandelijks inkomen op." },
-  { q: "Kan ik later upgraden van Basic naar Pro?", a: "Ja, je kunt op elk moment upgraden. Neem contact op met Amare of je sponsor voor de upgrade mogelijkheden." },
-  { q: "Is er een geld-terug garantie op het Pro pack?", a: "Launch Packs zijn business starter kits. Dit is een investering in je eigen Brand Partner business. Twijfel je? Begin met het Basic pack (€277,68/maand) als voordeligere instap." },
+  { question: "Wat zit er in het Happy Lifestyle Pack Pro?", answer: "Het Pro pack bevat het volledige Amare assortiment: Happy Juice Pack (Energy+ + MentaBiotics + MentaFocus), Triangle of Wellness Xtreme (Sunrise + Nitro + Sunset), HL5 Collageen, en alle essentiële supplementen. Dit is het meest complete pakket dat Amare aanbiedt." },
+  { question: "Wat is het verschil tussen Basic en Pro?", answer: "Pro geeft je het volledige assortiment (niet slechts een selectie), het hoogste commissiepercentage, toegang tot exclusieve Brand Partner events, persoonlijke coaching, en premium marketingmateriaal. Basic is de voordeligere instap met een selectie van de belangrijkste producten." },
+  { question: "Hoeveel commissie verdien ik met het Pro pack?", answer: "Met het Pro pack krijg je het hoogste commissiepercentage op al je verkopen — zowel eenmalige aankopen als terugkerende abonnementen. Hoe meer je deelt, hoe meer je verdient. Veel Pro partners bouwen een stabiel maandelijks inkomen op." },
+  { question: "Kan ik later upgraden van Basic naar Pro?", answer: "Ja, je kunt op elk moment upgraden. Neem contact op met Amare of je sponsor voor de upgrade mogelijkheden." },
+  { question: "Is er een geld-terug garantie op het Pro pack?", answer: "Launch Packs zijn business starter kits. Dit is een investering in je eigen Brand Partner business. Twijfel je? Begin met het Basic pack (€277,68/maand) als voordeligere instap." },
 ];
 
 export default function HappyLifestyleProPage() {
@@ -109,8 +109,8 @@ export default function HappyLifestyleProPage() {
           <div className="space-y-3">
             {faqs.map((faq, i) => (
               <details key={i} className="bg-white rounded-xl border border-[var(--color-border)] group">
-                <summary className="p-5 cursor-pointer font-bold text-sm text-[var(--color-text)] list-none flex justify-between items-center">{faq.q}<span className="text-[var(--color-primary)] text-lg group-open:rotate-45 transition-transform">+</span></summary>
-                <div className="px-5 pb-5 text-sm text-[var(--color-text-muted)]">{faq.a}</div>
+                <summary className="p-5 cursor-pointer font-bold text-sm text-[var(--color-text)] list-none flex justify-between items-center">{faq.question}<span className="text-[var(--color-primary)] text-lg group-open:rotate-45 transition-transform">+</span></summary>
+                <div className="px-5 pb-5 text-sm text-[var(--color-text-muted)]">{faq.answer}</div>
               </details>
             ))}
           </div>

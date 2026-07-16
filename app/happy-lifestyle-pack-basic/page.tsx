@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
-  { q: "Wat zit er in het Happy Lifestyle Pack Basic?", a: "Het Basic pack bevat de essentiële Amare producten om te starten: de Happy Juice Pack (Energy+ + MentaBiotics + MentaFocus) voor de gut-brain connectie, plus basis dagelijkse supplementen. Je krijgt ook direct toegang tot het Brand Partner platform met je persoonlijke affiliate link, training en marketingmateriaal." },
-  { q: "Is het Basic pack genoeg om te starten?", a: "Ja, absoluut. Het Basic pack geeft je alles wat je nodig hebt om te beginnen als Brand Partner. Je kunt de producten zelf ervaren, je verhaal delen, en commissie verdienen. Veel succesvolle Brand Partners zijn met Basic gestart en later gegroeid." },
-  { q: "Wat is het verschil met het Pro pack?", a: "Het Pro pack (€649,64/maand) bevat het volledige Amare assortiment, hogere commissiepercentages, exclusieve events en persoonlijke coaching. Basic is de voordeligere instap — perfect als je het eerst wilt uitproberen. Je kunt later altijd upgraden." },
-  { q: "Kan ik later upgraden naar Pro?", a: "Ja, je kunt op elk moment upgraden van Basic naar Pro. Veel partners starten met Basic, bouwen hun netwerk op, en upgraden zodra ze klaar zijn voor de volgende stap." },
+  { question: "Wat zit er in het Happy Lifestyle Pack Basic?", answer: "Het Basic pack bevat de essentiële Amare producten om te starten: de Happy Juice Pack (Energy+ + MentaBiotics + MentaFocus) voor de gut-brain connectie, plus basis dagelijkse supplementen. Je krijgt ook direct toegang tot het Brand Partner platform met je persoonlijke affiliate link, training en marketingmateriaal." },
+  { question: "Is het Basic pack genoeg om te starten?", answer: "Ja, absoluut. Het Basic pack geeft je alles wat je nodig hebt om te beginnen als Brand Partner. Je kunt de producten zelf ervaren, je verhaal delen, en commissie verdienen. Veel succesvolle Brand Partners zijn met Basic gestart en later gegroeid." },
+  { question: "Wat is het verschil met het Pro pack?", answer: "Het Pro pack (€649,64/maand) bevat het volledige Amare assortiment, hogere commissiepercentages, exclusieve events en persoonlijke coaching. Basic is de voordeligere instap — perfect als je het eerst wilt uitproberen. Je kunt later altijd upgraden." },
+  { question: "Kan ik later upgraden naar Pro?", answer: "Ja, je kunt op elk moment upgraden van Basic naar Pro. Veel partners starten met Basic, bouwen hun netwerk op, en upgraden zodra ze klaar zijn voor de volgende stap." },
 ];
 
 export default function HappyLifestyleBasicPage() {
@@ -108,8 +108,8 @@ export default function HappyLifestyleBasicPage() {
           <div className="space-y-3">
             {faqs.map((faq, i) => (
               <details key={i} className="bg-white rounded-xl border border-[var(--color-border)] group">
-                <summary className="p-5 cursor-pointer font-bold text-sm text-[var(--color-text)] list-none flex justify-between items-center">{faq.q}<span className="text-[var(--color-primary)] text-lg group-open:rotate-45 transition-transform">+</span></summary>
-                <div className="px-5 pb-5 text-sm text-[var(--color-text-muted)]">{faq.a}</div>
+                <summary className="p-5 cursor-pointer font-bold text-sm text-[var(--color-text)] list-none flex justify-between items-center">{faq.question}<span className="text-[var(--color-primary)] text-lg group-open:rotate-45 transition-transform">+</span></summary>
+                <div className="px-5 pb-5 text-sm text-[var(--color-text-muted)]">{faq.answer}</div>
               </details>
             ))}
           </div>
