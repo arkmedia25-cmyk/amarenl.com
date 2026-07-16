@@ -8,23 +8,23 @@
 
 ---
 
-## 🆕 BATCH 3 — Hızlı Trafik Kuyruğu (Temmuz 2026)
+## 🆕 BATCH 3 — Hızlı Trafik Kuyruğu (Ahrefs Gerçek Veri)
 
-> Gerçek NL arama hacimleri (Ahrefs + Google Ads verisi)
-> **Strateji:** En yüksek hacimli KAPSANMAMIŞ anahtar kelimeler önce
+> Kaynak: Ahrefs NL arama hacimleri (Temmuz 2026)
+> **Strateji:** En yüksek hacimli boşluklar + rakip anahtar kelimelerden çalma
 
-| # | Makale Başlığı (NL) | Anahtar Kelime | Arama* | Ürün | Status |
-|---|---------------------|---------------|--------|------|--------|
-| 1 | Waar Zit Magnesium In? Voedingsbronnen & Supplementen | waar zit magnesium in | **4.600** | Sunrise | ⏳ |
-| 2 | Supplementen voor Meer Energie: Dit Werkt Echt (2026) | supplementen voor meer energie | **2.100** | Energy+, Happy Juice | ⏳ |
-| 3 | Immuunsysteem Versterken met Supplementen: Complete Gids | immuunsysteem versterken supplementen | **2.100** | VitaGBX, Sunrise | ⏳ |
-| 4 | Spierherstel Na Sporten: Beste Supplementen voor Herstel | spierherstel supplementen | **1.800** | FIT20, Origin | ⏳ |
-| 5 | Waar Zit Vitamine C In? Voeding vs Supplementen | waar zit vitamine c in | **1.700** | Sunrise | ⏳ |
-| 6 | Supplementen voor Vrouwen 40+: Energie & Hormonen | supplementen vrouwen 40+ | **1.600** | Ignite Her, HL5 | ⏳ |
+| # | Anahtar Kelime | Arama | Makale | Ürün | Status |
+|---|---------------|--------|--------|------|--------|
+| **1** | **collageen** | **16.000** | Collageen: De Complete Gids 2026 (Pillar Page) | HL5, NeuCollagen | ⏳ |
+| **2** | **collageen poeder** | **12.000** | Collageen Poeder Kopen: Alles Wat Je Moet Weten | HL5 | ⏳ |
+| **3** | **waar zit magnesium in** | **4.600** | Waar Zit Magnesium In? Voedingsbronnen & Supplementen | Sunrise | ⏳ |
+| **4** | **supplementen abonnement** | **2.900*** | Supplementen Abonnement: Elke Maand in Huis (Amare vs VitaminesPerPost) | Happy Juice Pack | ⏳ |
+| **5** | **waar zit vitamine c in** | **1.700** | Waar Zit Vitamine C In? Voeding vs Supplementen | Sunrise | ⏳ |
+| **6** | **zwangerschap supplementen** | **1.300*** | Zwangerschap en Supplementen: Wat Mag Wel en Niet? | VitaGBX, OmMega | ⏳ |
 
-> *Gerçek aylık NL arama hacmi (Ahrefs/Google Ads)
-> Yayın: 2 günde bir (Pzt-Çrş-Cum) → 2 haftada tamamlanır
-> Toplam potansiyel: ~13.900 aylık arama
+> \* Rakip anahtar kelimeden türetilmiş eşdeğer hedef
+> Toplam potansiyel: **~38.500 aylık arama**
+> Yayın: 2 günde bir → 2 haftada tamamlanır
 
 ---
 
