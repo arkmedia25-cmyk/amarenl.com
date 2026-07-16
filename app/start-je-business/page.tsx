@@ -8,12 +8,12 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Start Je Eigen Wellness Business — Verdien met Amare | AmareNL",
+  title: "Start Je Eigen Wellness Business — Aanvullend Inkomen met Amare | AmareNL",
   description:
     "Wil je extra inkomen naast je baan? Start je eigen wellness business met het Triangle Marketing Pack. Alles wat je nodig hebt in één pakket. Ontdek hoe het werkt.",
   alternates: { canonical: "/start-je-business" },
   openGraph: {
-    title: "Start Je Eigen Wellness Business — Verdien met Amare | AmareNL",
+    title: "Start Je Eigen Wellness Business — Aanvullend Inkomen met Amare | AmareNL",
     description: "Extra inkomen met wellness producten? Begin vandaag nog.",
     url: "/start-je-business",
     type: "website",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Start Je Eigen Wellness Business — Verdien met Amare | AmareNL",
+    title: "Start Je Eigen Wellness Business — Aanvullend Inkomen met Amare | AmareNL",
     description: "Extra inkomen met wellness producten? Begin vandaag nog.",
     images: ["/images/og-default.jpg"],
   },
@@ -38,7 +38,7 @@ const faqs = [
   {
     question: "Hoeveel kan ik verdienen als Brand Partner?",
     answer:
-      "Dat hangt helemaal van jou af. De meeste Brand Partners beginnen naast hun baan en verdienen €200-800 per maand bij. Sommigen bouwen het uit tot een fulltime inkomen. Je verdient commissie op je eigen verkopen én op de verkopen van je team. Er is geen minimum — je bepaalt zelf hoeveel tijd je erin steekt.",
+      "Dat hangt helemaal van jou af. De meeste Brand Partners beginnen naast hun baan en verdienen een betekenisvol aanvullend inkomen. Sommigen bouwen het uit tot hun hoofdinkomen — maar dat vraagt tijd, inzet en doorzettingsvermogen. Je verdient commissie op je eigen verkopen én op de verkopen van je team. Je bepaalt zelf hoeveel tijd je erin steekt.",
   },
   {
     question: "Moet ik ervaring hebben met sales of marketing?",
@@ -84,8 +84,8 @@ const benefits = [
     icon: "🤝",
   },
   {
-    title: "Ongelimiteerd inkomen",
-    desc: "Er is geen plafond. Hoe meer je deelt, hoe meer je verdient. Plus: je bouwt een team dat blijft verkopen — passief inkomen.",
+    title: "Flexibel inkomen",
+    desc: "Jij bepaalt hoeveel tijd je erin steekt. Hoe actiever je deelt, hoe meer je verdient. Plus: je bouwt een team dat blijft groeien — extra inkomstenstroom.",
     icon: "💰",
   },
   {
@@ -130,7 +130,7 @@ export default function StartJeBusinessPage() {
                 <span className="text-[var(--color-primary)]">wellness business</span>
               </h1>
               <p className="text-lg text-[var(--color-text-muted)] mb-4 leading-relaxed">
-                Verdien extra inkomen — of bouw een fulltime bedrijf — door premium wellness
+                Verdien een aanvullend inkomen door premium wellness
                 producten te delen die je zelf gebruikt. Het Triangle Marketing Pack geeft je
                 alles wat je nodig hebt om vandaag nog te beginnen.
               </p>
@@ -160,8 +160,8 @@ export default function StartJeBusinessPage() {
                 <div className="text-center p-8">
                   <div className="text-8xl mb-6">🚀</div>
                   <p className="text-2xl font-serif text-[var(--color-primary)] font-semibold">
-                    "Ik begon parttime. <br />
-                    Nu verdien ik €800/maand bij."
+                    "Ik begon parttime naast mijn baan. <br />
+                    Nu heb ik een fijn extra inkomen."
                   </p>
                   <p className="text-[var(--color-text-muted)] mt-3">— Lisa, 38, Rotterdam</p>
                 </div>
@@ -190,9 +190,9 @@ export default function StartJeBusinessPage() {
             <div className="bg-green-50 rounded-xl p-6 border border-green-100">
               <h3 className="text-lg font-semibold text-green-700 mb-3">✅ Met Amare Business</h3>
               <ul className="space-y-2 text-[var(--color-text-muted)] text-sm">
-                <li>✅ Jij bepaalt je inkomen — geen plafond</li>
+                <li>✅ Jij bepaalt hoeveel je verdient — meer inzet = meer inkomen</li>
                 <li>✅ Werk wanneer en waar je wilt</li>
-                <li>✅ Bouw een team → blijvend passief inkomen</li>
+                <li>✅ Bouw een team → groeiende inkomstenstroom</li>
                 <li>✅ Meer vrijheid, meer tijd voor wat écht telt</li>
               </ul>
             </div>
@@ -317,9 +317,11 @@ export default function StartJeBusinessPage() {
               </tbody>
             </table>
           </div>
-          <p className="text-xs text-[var(--color-text-muted)] text-center mt-4">
-            * Dit zijn realistische schattingen op basis van gemiddelde bestelwaardes en commissiepercentages. 
-            Jouw resultaten hangen af van jouw inzet. Dit is geen garantie op inkomen.
+          <p className="text-xs text-[var(--color-text-muted)] text-center mt-4 font-medium">
+            * Dit zijn voorbeelden op basis van resultaten van actieve Brand Partners. 
+            De meeste Brand Partners kopen producten uitsluitend voor persoonlijk gebruik 
+            en verdienen weinig of geen inkomen. Jouw resultaten zijn afhankelijk van jouw 
+            inzet, netwerk en marktomstandigheden. Dit is geen garantie op inkomen.
           </p>
         </div>
       </section>

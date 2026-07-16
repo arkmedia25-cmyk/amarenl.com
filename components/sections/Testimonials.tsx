@@ -30,7 +30,7 @@ export default function Testimonials() {
             Wat onze klanten zeggen
           </h2>
           <p className="text-[var(--color-text-muted)] text-lg">
-            Honderden mensen in Nederland hebben hun mentale en fysieke welzijn al verbeterd met Amare.
+            Ontdek waarom steeds meer mensen in Nederland voor Amare kiezen als onderdeel van hun dagelijkse routine.
           </p>
         </div>
 

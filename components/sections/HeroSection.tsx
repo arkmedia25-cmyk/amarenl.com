@@ -44,8 +44,8 @@ export default function HeroSection() {
               <span className="text-[10px] uppercase tracking-widest text-[var(--color-text-muted)] font-bold">Natuurlijke Basis</span>
             </div>
             <div className="flex flex-col gap-1">
-              <span className="text-2xl font-bold font-cormorant text-[var(--color-primary)]">10K+</span>
-              <span className="text-[10px] uppercase tracking-widest text-[var(--color-text-muted)] font-bold">Tevreden Klanten</span>
+              <span className="text-2xl font-bold font-cormorant text-[var(--color-primary)]">2016</span>
+              <span className="text-[10px] uppercase tracking-widest text-[var(--color-text-muted)] font-bold">Premium Supplementen</span>
             </div>
           </div>
         </div>
