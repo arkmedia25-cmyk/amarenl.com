@@ -8,23 +8,36 @@
 
 ---
 
-## 🆕 BATCH 3 — Hızlı Trafik Kuyruğu (Ahrefs Gerçek Veri)
+## 🆕 BATCH 3 — Collageen Content Cluster + Trafik Kuyruğu
 
-> Kaynak: Ahrefs NL arama hacimleri (Temmuz 2026)
-> **Strateji:** En yüksek hacimli boşluklar + rakip anahtar kelimelerden çalma
+> Kaynak: Ahrefs NL (Temmuz 2026)
+> **Strateji:** "Collageen" (16K) + "collageen poeder" (12K) = içerik kümesiyle domine et
+
+### 🎯 COLLAGEEN CLUSTER (Mevcut 7 + Yeni 6 = 13 içerik)
+
+| # | Anahtar Kelime | Arama | Açı / Makale | Ürün | Status |
+|---|---------------|--------|-------------|------|--------|
+| **P1** | **collageen** | **16.000** | 🔴 Collageen: De Complete Gids 2026 — Pillar Page | HL5 | ⏳ |
+| **P2** | **collageen poeder** | **12.000** | 🟡 Collageen Poeder Kopen? Alles Over Soorten, Werking & Prijs | HL5 | ⏳ |
+| **P3** | collageen mannen | ~800 | 🟢 Collageen voor Mannen: Ook Belangrijk na je 30e | HL5 | ⏳ |
+| **P4** | collageen resultaten | ~600 | 🟢 Collageen Resultaten: Voor en Na — Wat Kun Je Verwachten? | HL5, NeuCollagen | ⏳ |
+| **P5** | collageen type 1 2 3 | ~500 | 🟢 Collageen Types Uitgelegd: Type 1, 2, 3 — Welke Heb Je Nodig? | HL5, NeuCollagen | ⏳ |
+| **P6** | collageen vitamine c | ~400 | 🟢 Collageen en Vitamine C: De Gouden Combinatie voor Huid | HL5, Sunrise | ⏳ |
+
+> Mevcut 7 collagen yazısı + bu 6 yeni = **13 içeriklik cluster** → Google'da "collageen" için otorite
+
+### 🔥 DİĞER YÜKSEK HACİMLİ HEDEFLER
 
 | # | Anahtar Kelime | Arama | Makale | Ürün | Status |
 |---|---------------|--------|--------|------|--------|
-| **1** | **collageen** | **16.000** | Collageen: De Complete Gids 2026 (Pillar Page) | HL5, NeuCollagen | ⏳ |
-| **2** | **collageen poeder** | **12.000** | Collageen Poeder Kopen: Alles Wat Je Moet Weten | HL5 | ⏳ |
-| **3** | **waar zit magnesium in** | **4.600** | Waar Zit Magnesium In? Voedingsbronnen & Supplementen | Sunrise | ⏳ |
-| **4** | **supplementen abonnement** | **2.900*** | Supplementen Abonnement: Elke Maand in Huis (Amare vs VitaminesPerPost) | Happy Juice Pack | ⏳ |
-| **5** | **waar zit vitamine c in** | **1.700** | Waar Zit Vitamine C In? Voeding vs Supplementen | Sunrise | ⏳ |
-| **6** | **zwangerschap supplementen** | **1.300*** | Zwangerschap en Supplementen: Wat Mag Wel en Niet? | VitaGBX, OmMega | ⏳ |
+| **7** | **waar zit magnesium in** | **4.600** | Waar Zit Magnesium In? Voedingsbronnen & Supplementen Gids | Sunrise | ⏳ |
+| **8** | **supplementen abonnement** | **2.900*** | Supplementen Abonnement: Elke Maand in Huis (Amare vs VitaminesPerPost) | Happy Juice Pack | ⏳ |
+| **9** | **waar zit vitamine c in** | **1.700** | Waar Zit Vitamine C In? Voeding vs Supplementen | Sunrise | ⏳ |
+| **10** | **zwangerschap supplementen** | **1.300*** | Zwangerschap en Supplementen: Wat Mag Wel en Niet? | VitaGBX | ⏳ |
 
-> \* Rakip anahtar kelimeden türetilmiş eşdeğer hedef
-> Toplam potansiyel: **~38.500 aylık arama**
-> Yayın: 2 günde bir → 2 haftada tamamlanır
+> \* Rakip anahtar kelimeden türetilmiş (vitaminesperpost, davitamon)
+> Toplam potansiyel: **~40.800 aylık arama**
+> Yayın takvimi: 2 günde bir (Pzt-Çrş-Cum) → 3 haftada tamamlanır
 
 ---
 
