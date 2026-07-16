@@ -95,3 +95,21 @@ export function outboundLink(url: string, label: string) {
     event_category: "navigation",
   });
 }
+
+/** Track lead magnet downloads (Gut-Brain Gids, Supplementen Wijzer, etc.) */
+export function leadMagnetDownload(magnetName: string, source: string) {
+  trackEvent("lead_magnet_download", {
+    magnet_name: magnetName,
+    traffic_source: source,
+    event_category: "conversion",
+    event_label: magnetName,
+  });
+}
+
+/** Track email subscribe completions */
+export function emailSubscribe(source: string) {
+  trackEvent("email_subscribe", {
+    subscribe_source: source,
+    event_category: "conversion",
+  });
+}

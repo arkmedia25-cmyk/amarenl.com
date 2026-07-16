@@ -5,6 +5,8 @@ import Link from "next/link";
 import { AMARE_BASE, storeAffiliateVisit } from "@/lib/affiliate";
 
 const messages = [
+  { text: "🔥 Zomer Wellness Actie — Ontdek de Happy Juice Pack voor energie, focus & stemming!", link: "/happy-juice-pack" },
+  { text: "📖 GRATIS: Download de Gut-Brain Gids + ontdek welk supplement bij jou past →", link: "/gratis-gut-brain-gids" },
   { text: "🎁 Nieuwe klant? Claim je €8 welkomstkorting op je eerste bestelling!", link: "#newsletter" },
   { text: "🚚 Gratis verzending vanaf €175 + 10% korting op abonnementen!", link: AMARE_BASE },
   { text: "🛡️ 30 dagen geld-terug-garantie — zelfs als de verpakking leeg is!", link: AMARE_BASE },

@@ -9,6 +9,7 @@ import VisitTracker from "@/components/layout/VisitTracker";
 import FloatingMobileCTA from "@/components/ui/FloatingMobileCTA";
 import ExitIntentPopup from "@/components/ui/ExitIntentPopup";
 import LeadPopup from "@/components/ui/LeadPopup";
+import SocialProofToast from "@/components/ui/SocialProofToast";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import {
   generateOrganizationSchema,
@@ -100,6 +101,7 @@ export default function RootLayout({
         <LeadPopup trigger="timed" delay={15000} />
         <LeadPopup trigger="scroll" scrollPercent={60} />
         <ExitIntentPopup />
+        <SocialProofToast />
         <FloatingMobileCTA />
 
         {/* Google Analytics 4 */}
