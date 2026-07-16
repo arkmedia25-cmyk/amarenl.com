@@ -23,6 +23,7 @@ export default function FeaturedProducts() {
       badge: "💧 NIEUW — SIVI FORM",
       image: "https://amarecdn.azureedge.net/webassets/web/prod/products/HL5-Peach2pk-EU-800_25.jpg",
       product: "hl5-2-pack",
+      internalPage: "/hl5",
       color: "from-pink-500 to-rose-600",
     },
     {
@@ -63,7 +64,7 @@ export default function FeaturedProducts() {
               style={{ animationDelay: `${idx * 100}ms` }}
             >
               {/* Image Container — klikbaar naar productpagina */}
-              <Link href={`/${item.product}`} className="block">
+              <Link href={item.internalPage || `/${item.product}`} className="block">
                 <div className="relative h-64 overflow-hidden bg-gradient-to-br from-[var(--color-primary)]/5 to-[var(--color-accent)]/5 cursor-pointer">
                   <Image
                     src={item.image}
@@ -94,7 +95,7 @@ export default function FeaturedProducts() {
                   </span>
                 </div>
 
-                <Link href={`/${item.product}`} className="block hover:text-[var(--color-primary)] transition-colors">
+                <Link href={item.internalPage || `/${item.product}`} className="block hover:text-[var(--color-primary)] transition-colors">
                   <h3 className="text-xl font-cormorant font-bold text-[var(--color-text)] mb-2">
                     {item.name}
                   </h3>
