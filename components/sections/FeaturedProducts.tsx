@@ -22,7 +22,7 @@ export default function FeaturedProducts() {
       benefits: ["Vloeibaar = 90% opname", "5g collageen + Vit C + Hyaluronzuur", "Zichtbaar resultaat in 4-8 weken"],
       badge: "💧 NIEUW — SIVI FORM",
       image: "https://amarecdn.azureedge.net/webassets/web/prod/products/HL5-Peach2pk-EU-800_25.jpg",
-      product: "hl5",
+      product: "hl5-2-pack",
       color: "from-pink-500 to-rose-600",
     },
     {

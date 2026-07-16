@@ -110,7 +110,7 @@ export default function HL5Page() {
     priceSubscription: 130.42,
     ratingValue: 4.5,
     ratingCount: 500,
-    affiliateUrl: "https://www.amare.com/2075008/nl-nl/hl5-peach-2pack",
+    affiliateUrl: "https://www.amare.com/2075008/nl-nl/hl5-peach",
   });
 
   const combinedSchema = combineSchemas(
