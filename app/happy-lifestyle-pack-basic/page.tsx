@@ -21,7 +21,7 @@ export default function HappyLifestyleBasicPage() {
   return (
     <div className="bg-white min-h-screen font-nunito">
       <SchemaMarkup schema={combineSchemas(
-        generateProductSchema({ name: "Happy Lifestyle Pack Basic", nameNL: "Happy Lifestyle Pack — Basic", description: "De voordeligste start als Amare Brand Partner. Essentiële producten + platform toegang.", image: "https://amarecdn.azureedge.net/webassets/web/prod/products/Happy-Lifestyle-Pack-Basic-EU-new-800.jpg", slug: "happy-lifestyle-pack-basic", priceRetail: 308.22, priceSubscription: 277.68, ratingValue: 4.7, ratingCount: 156 }),
+        generateProductSchema({ name: "Happy Lifestyle Pack Basic", nameNL: "Happy Lifestyle Pack — Basic", description: "De voordeligste start als Amare Brand Partner. Essentiële producten + platform toegang.", image: "https://amarecdn.azureedge.net/webassets/web/prod/products/Happy-Lifestyle-Pack-Basic-EU-new-800.jpg", slug: "happy-lifestyle-pack-basic", priceRetail: 308.22, priceSubscription: 277.68, ratingValue: 4.7, ratingCount: 156, affiliateUrl: "https://www.amare.com/2075008/nl-nl/shop-all?category=Launch%20Packs" }),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Startpakketten", url: "/startpakketten" }, { name: "Happy Lifestyle Pack Basic", url: "/happy-lifestyle-pack-basic" }])
       )} id="basic-schema" />

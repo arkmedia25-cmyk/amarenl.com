@@ -21,7 +21,7 @@ export default function TriangleMarketingPage() {
   return (
     <div className="bg-white min-h-screen font-nunito">
       <SchemaMarkup schema={combineSchemas(
-        generateProductSchema({ name: "Triangle Marketing Pack", nameNL: "Triangle Marketing Pack — 3x Set", description: "3 complete Triangle of Wellness Xtreme sets. Brand Partner startkit om te delen en verdienen.", image: "https://amarecdn.azureedge.net/webassets/web/prod/products/Triangle-of-Wellness-Xtreme2-EU-800.jpg", slug: "triangle-marketing-pack", priceRetail: 443.00, priceSubscription: 399.00, ratingValue: 4.8, ratingCount: 189 }),
+        generateProductSchema({ name: "Triangle Marketing Pack", nameNL: "Triangle Marketing Pack — 3x Set", description: "3 complete Triangle of Wellness Xtreme sets. Brand Partner startkit om te delen en verdienen.", image: "https://amarecdn.azureedge.net/webassets/web/prod/products/Triangle-of-Wellness-Xtreme2-EU-800.jpg", slug: "triangle-marketing-pack", priceRetail: 443.00, priceSubscription: 399.00, ratingValue: 4.8, ratingCount: 189, affiliateUrl: "https://www.amare.com/2075008/nl-nl/triangle-marketing-pack" }),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Startpakketten", url: "/startpakketten" }, { name: "Triangle Marketing Pack", url: "/triangle-marketing-pack" }])
       )} id="triangle-schema" />
