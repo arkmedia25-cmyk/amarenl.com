@@ -9,10 +9,11 @@ import { storeAffiliateVisit } from "@/lib/affiliate";
 export default function ProductGrid() {
   const [activeCategory, setActiveCategory] = useState("alle");
 
+  const visibleProducts = products.filter((p) => !(p as any).isHidden);
   const filteredProducts =
     activeCategory === "alle"
-      ? products
-      : products.filter((p) => p.category === activeCategory);
+      ? visibleProducts
+      : visibleProducts.filter((p) => p.category === activeCategory);
 
   return (
     <section className="py-24 bg-white" id="products">

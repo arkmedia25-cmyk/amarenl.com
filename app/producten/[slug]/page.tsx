@@ -16,7 +16,7 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return getAllProducts().map((p) => ({ slug: p.slug }));
+  return getAllProducts().filter((p) => !(p as any).isHidden).map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

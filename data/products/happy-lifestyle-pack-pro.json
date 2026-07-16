@@ -47,7 +47,7 @@
   },
   "isNew": false,
   "isBestseller": true,
-  "isPack": true,
+  "isPack": true, "isHidden": true,
   "priority": 1,
   "publishedAt": "2024-01-15",
   "updatedAt": "2026-07-16"
