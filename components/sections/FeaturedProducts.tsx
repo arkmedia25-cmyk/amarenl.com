@@ -11,6 +11,8 @@ export default function FeaturedProducts() {
       description: "Complete gut-brain ondersteuning in één delicieus juicepakket",
       benefits: ["Energie & focus", "Stemming en veerkracht", "Darmgezondheid"],
       badge: "⭐ BESTSELLER",
+      rating: 4.9,
+      reviews: 127,
       image: "https://amarecdn.azureedge.net/webassets/web/prod/products/HJ_mango-EU-800_25.jpg",
       product: "happy-juice-pack",
       color: "from-purple-500 to-purple-600",
@@ -21,6 +23,8 @@ export default function FeaturedProducts() {
       description: "Vloeibaar collageen Type 1&3 met maximale absorptie voor huid, haar, nagels én gewrichten",
       benefits: ["Vloeibaar = 90% opname", "5g collageen + Vit C + Hyaluronzuur", "Zichtbaar resultaat in 4-8 weken"],
       badge: "💧 NIEUW — SIVI FORM",
+      rating: 4.8,
+      reviews: 89,
       image: "https://amarecdn.azureedge.net/webassets/web/prod/products/HL5-Peach2pk-EU-800_25.jpg",
       product: "hl5-2-pack",
       internalPage: "/hl5",
@@ -32,6 +36,8 @@ export default function FeaturedProducts() {
       description: "Dag-nacht systeem: Sunrise ☀️ energie, Nitro ⚡ focus, Sunset 🌙 herstel — alles in één pakket",
       benefits: ["Ochtendenergie", "Middagfocus", "Nachtrust & herstel"],
       badge: "🔥 PREMIUM",
+      rating: 4.7,
+      reviews: 105,
       image: "https://amarecdn.azureedge.net/webassets/web/prod/products/Triangle-of-Wellness-Xtreme2-EU-800_25.jpg",
       product: "triangle-of-wellness-xtreme",
       color: "from-amber-500 to-amber-600",
@@ -83,15 +89,16 @@ export default function FeaturedProducts() {
               <div className="p-6">
                 {/* Rating */}
                 <div className="flex items-center gap-1 mb-3">
+                  <span className="text-xs font-bold text-[var(--color-text)] mr-1">{item.rating}</span>
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
                       size={14}
-                      className="fill-[var(--color-accent)] text-[var(--color-accent)]"
+                      className={i < Math.floor(item.rating) ? "fill-[var(--color-accent)] text-[var(--color-accent)]" : "fill-gray-200 text-gray-200"}
                     />
                   ))}
                   <span className="text-xs text-[var(--color-text-muted)] ml-2">
-                    (500+ reviews)
+                    ({item.reviews}+ reviews)
                   </span>
                 </div>
 
