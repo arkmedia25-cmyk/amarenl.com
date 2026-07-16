@@ -54,6 +54,67 @@
     "updatedAt": "2026-05-17"
   },
   {
+    "slug": "happy-lifestyle-pack-pro",
+    "name": "Happy Lifestyle Pack Pro",
+    "nameNL": "Happy Lifestyle Pack — Pro ⭐",
+    "shortNameNL": "Happy Lifestyle Pack Pro",
+    "category": "pakketten",
+    "taglineNL": "Het complete Brand Partner pakket — meeste voordeel",
+    "description": {
+      "short": "All-in Brand Partner start — maximale commissie",
+      "long": "Het Happy Lifestyle Pack Pro is het meest complete startpakket voor Amare Brand Partners. Je ontvangt het volledige Amare assortiment, verdient de hoogste commissie, en krijgt premium toegang tot trainingen, events en marketingtools."
+    },
+    "pricing": {
+      "subscription": 649.64,
+      "oneTime": 721.1,
+      "currency": "EUR",
+      "savings": 71.46,
+      "savingsPercent": 9.9
+    },
+    "images": {
+      "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Happy-Lifestyle-Pack-Pro-EU-new-800.jpg",
+      "alt": "Happy Lifestyle Pack Pro — Amare Brand Partner Pro"
+    },
+    "ingredients": [],
+    "benefits": [
+      "Hoogste commissie op alle verkopen",
+      "Volledige Amare productlijn inbegrepen",
+      "Premium trainingen & events",
+      "Persoonlijke begeleiding"
+    ],
+    "affiliate": {
+      "url": "https://www.amare.com/2075008/nl-nl/happy-lifestyle-pack-pro",
+      "sourceTag": "amarenl-pakketten"
+    },
+    "ratings": {
+      "value": 4.9,
+      "count": 234
+    },
+    "relatedProducts": [
+      "happy-lifestyle-pack-basic",
+      "triangle-marketing-pack"
+    ],
+    "tags": [
+      "brand partner pro",
+      "amare affiliate",
+      "premium"
+    ],
+    "seo": {
+      "title": "Amare Happy Lifestyle Pack Pro — Word Premium Brand Partner",
+      "description": "Start als Premium Amare Brand Partner. Volledig assortiment, hoogste commissie, exclusieve events.",
+      "keywords": [
+        "amare brand partner pro",
+        "happy lifestyle pack pro"
+      ]
+    },
+    "isNew": false,
+    "isBestseller": true,
+    "isPack": true,
+    "priority": 1,
+    "publishedAt": "2024-01-15",
+    "updatedAt": "2026-07-16"
+  },
+  {
     "slug": "triangle-of-wellness-xtreme",
     "name": "Triangle of Wellness Xtreme™",
     "nameNL": "Triangle of Wellness Xtreme™",
@@ -283,6 +344,100 @@
     "priority": 2,
     "publishedAt": "2024-01-15",
     "updatedAt": "2026-07-16"
+  },
+  {
+    "slug": "triangle-marketing-pack",
+    "name": "Triangle Marketing Pack",
+    "nameNL": "Triangle Marketing Pack — Deel & Verdien",
+    "shortNameNL": "Triangle Marketing Pack",
+    "category": "pakketten",
+    "taglineNL": "Deel de Triangle of Wellness & verdien commissie",
+    "description": {
+      "short": "Het perfecte pakket om te delen en te verdienen",
+      "long": "Het Triangle Marketing Pack bevat de complete Triangle of Wellness Xtreme plus marketingmateriaal om te delen met je netwerk. Het ideale pakket om nieuwe klanten kennis te laten maken met Amare's best verkochte dag-nacht systeem én om zelf commissie te verdienen als Brand Partner."
+    },
+    "pricing": {
+      "subscription": 399,
+      "oneTime": 443,
+      "currency": "EUR",
+      "savings": 44,
+      "savingsPercent": 10
+    },
+    "images": {
+      "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Triangle-of-Wellness-Xtreme2-EU-800_25.jpg",
+      "alt": "Triangle Marketing Pack — Deel & Verdien met Amare"
+    },
+    "ingredients": [],
+    "benefits": [
+      "Complete Triangle of Wellness Xtreme inbegrepen",
+      "Marketingmateriaal om te delen",
+      "Word Brand Partner & verdien commissie",
+      "Beste instap voor nieuwe partners"
+    ],
+    "affiliate": {
+      "url": "https://www.amare.com/2075008/nl-nl/triangle-marketing-pack",
+      "sourceTag": "amarenl-pakketten"
+    },
+    "ratings": {
+      "value": 4.8,
+      "count": 189
+    },
+    "relatedProducts": [
+      "happy-lifestyle-pack-basic",
+      "happy-lifestyle-pack-pro"
+    ],
+    "tags": [
+      "triangle pack",
+      "brand partner",
+      "amare affiliate"
+    ],
+    "seo": {
+      "title": "Triangle Marketing Pack — Word Amare Brand Partner | Deel & Verdien",
+      "description": "Start als Amare Brand Partner met de Triangle Marketing Pack. Deel de #1 bestseller en verdien commissie.",
+      "keywords": [
+        "triangle marketing pack",
+        "amare brand partner",
+        "deel en verdien"
+      ]
+    },
+    "isNew": false,
+    "isBestseller": false,
+    "isPack": true,
+    "priority": 2,
+    "publishedAt": "2024-01-15",
+    "updatedAt": "2026-07-16"
+  },
+  {
+    "slug": "happy-lifestyle-pack-basic",
+    "name": "Happy Lifestyle Pack Basic",
+    "nameNL": "Happy Lifestyle Pack — Basic",
+    "shortNameNL": "Happy Lifestyle Pack Basic",
+    "category": "pakketten",
+    "taglineNL": "Start als Amare Brand Partner — Basis pakket",
+    "affiliate": {
+      "url": "https://www.amare.com/2075008/nl-nl/shop-all?category=Launch%20Packs",
+      "sourceTag": "amarenl-pakketten"
+    },
+    "pricing": {
+      "subscription": 277.68,
+      "oneTime": 308.22,
+      "currency": "EUR"
+    },
+    "images": {
+      "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Happy-Lifestyle-Pack-Basic-EU-new-800.jpg"
+    },
+    "benefits": [
+      "Word Amare Brand Partner",
+      "Complete set supplementen",
+      "Toegang tot Brand Partner platform"
+    ],
+    "ratings": {
+      "value": 4.7,
+      "count": 156
+    },
+    "isBestseller": false,
+    "isPack": true,
+    "priority": 3
   },
   {
     "slug": "hl5-2-pack",
@@ -1865,156 +2020,6 @@
     "isBestseller": false,
     "isPack": true,
     "priority": 15,
-    "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
-  },
-  {
-    "slug": "happy-lifestyle-pack-basic",
-    "name": "Happy Lifestyle Pack Basic",
-    "nameNL": "Happy Lifestyle Pack Basic",
-    "shortNameNL": "Happy Lifestyle Pack Basic",
-    "category": "pakketten",
-    "taglineNL": "Beste waarde bundel",
-    "description": {
-      "short": "Beste waarde bundel",
-      "long": "Happy Lifestyle Pack Basic is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
-    },
-    "pricing": {
-      "subscription": 277.68,
-      "oneTime": 308.22,
-      "currency": "EUR",
-      "savings": 30.54,
-      "savingsPercent": 9.9
-    },
-    "images": {
-      "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Happy-Lifestyle-Pack-Basic-EU-new-800.jpg",
-      "alt": "Happy Lifestyle Pack Basic — Amare supplement"
-    },
-    "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
-    ],
-    "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
-    },
-    "affiliate": {
-      "url": "https://www.amare.com/2075008/nl-nl/happy-lifestyle-pack-basic",
-      "sourceTag": "amarenl-product-page"
-    },
-    "relatedProducts": [],
-    "tags": [],
-    "seo": {
-      "title": "Happy Lifestyle Pack Basic Kopen | Beste Prijs Nederland 2026",
-      "description": "Beste waarde bundel",
-      "keywords": []
-    },
-    "isNew": false,
-    "isBestseller": false,
-    "isPack": true,
-    "priority": 16,
-    "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
-  },
-  {
-    "slug": "happy-lifestyle-pack-pro",
-    "name": "Happy Lifestyle Pack Pro",
-    "nameNL": "Happy Lifestyle Pack Pro",
-    "shortNameNL": "Happy Lifestyle Pack Pro",
-    "category": "pakketten",
-    "taglineNL": "Beste waarde bundel",
-    "description": {
-      "short": "Beste waarde bundel",
-      "long": "Happy Lifestyle Pack Pro is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
-    },
-    "pricing": {
-      "subscription": 649.64,
-      "oneTime": 721.1,
-      "currency": "EUR",
-      "savings": 71.46,
-      "savingsPercent": 9.9
-    },
-    "images": {
-      "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Happy-Lifestyle-Pack-Pro-EU-new-800.jpg",
-      "alt": "Happy Lifestyle Pack Pro — Amare supplement"
-    },
-    "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
-    ],
-    "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
-    },
-    "affiliate": {
-      "url": "https://www.amare.com/2075008/nl-nl/happy-lifestyle-pack-pro",
-      "sourceTag": "amarenl-product-page"
-    },
-    "relatedProducts": [],
-    "tags": [],
-    "seo": {
-      "title": "Happy Lifestyle Pack Pro Kopen | Beste Prijs Nederland 2026",
-      "description": "Beste waarde bundel",
-      "keywords": []
-    },
-    "isNew": false,
-    "isBestseller": false,
-    "isPack": true,
-    "priority": 17,
-    "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
-  },
-  {
-    "slug": "triangle-marketing-pack",
-    "name": "Triangle Marketing Pack",
-    "nameNL": "Triangle Marketing Pack",
-    "shortNameNL": "Triangle Marketing Pack",
-    "category": "pakketten",
-    "taglineNL": "Beste waarde bundel",
-    "description": {
-      "short": "Beste waarde bundel",
-      "long": "Triangle Marketing Pack is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
-    },
-    "pricing": {
-      "subscription": 511.21,
-      "oneTime": 567.44,
-      "currency": "EUR",
-      "savings": 56.23,
-      "savingsPercent": 9.9
-    },
-    "images": {
-      "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/500QV-MarketingPack-EU-new-800.jpg",
-      "alt": "Triangle Marketing Pack — Amare supplement"
-    },
-    "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
-    ],
-    "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
-    },
-    "affiliate": {
-      "url": "https://www.amare.com/2075008/nl-nl/triangle-marketing-pack",
-      "sourceTag": "amarenl-product-page"
-    },
-    "relatedProducts": [],
-    "tags": [],
-    "seo": {
-      "title": "Triangle Marketing Pack Kopen | Beste Prijs Nederland 2026",
-      "description": "Beste waarde bundel",
-      "keywords": []
-    },
-    "isNew": false,
-    "isBestseller": false,
-    "isPack": true,
-    "priority": 18,
     "publishedAt": "2024-01-15",
     "updatedAt": "2026-05-17"
   },

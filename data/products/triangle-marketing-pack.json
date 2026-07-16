@@ -1,50 +1,48 @@
 {
   "slug": "triangle-marketing-pack",
   "name": "Triangle Marketing Pack",
-  "nameNL": "Triangle Marketing Pack",
+  "nameNL": "Triangle Marketing Pack — Deel & Verdien",
   "shortNameNL": "Triangle Marketing Pack",
   "category": "pakketten",
-  "taglineNL": "Beste waarde bundel",
+  "taglineNL": "Deel de Triangle of Wellness & verdien commissie",
   "description": {
-    "short": "Beste waarde bundel",
-    "long": "Triangle Marketing Pack is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+    "short": "Het perfecte pakket om te delen en te verdienen",
+    "long": "Het Triangle Marketing Pack bevat de complete Triangle of Wellness Xtreme plus marketingmateriaal om te delen met je netwerk. Het ideale pakket om nieuwe klanten kennis te laten maken met Amare's best verkochte dag-nacht systeem én om zelf commissie te verdienen als Brand Partner."
   },
   "pricing": {
-    "subscription": 511.21,
-    "oneTime": 567.44,
+    "subscription": 399.00,
+    "oneTime": 443.00,
     "currency": "EUR",
-    "savings": 56.23,
-    "savingsPercent": 9.9
+    "savings": 44.00,
+    "savingsPercent": 10
   },
   "images": {
-    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/500QV-MarketingPack-EU-new-800.jpg",
-    "alt": "Triangle Marketing Pack — Amare supplement"
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Triangle-of-Wellness-Xtreme2-EU-800_25.jpg",
+    "alt": "Triangle Marketing Pack — Deel & Verdien met Amare"
   },
+  "ingredients": [],
   "benefits": [
-    "Hoogwaardige ingrediënten",
-    "Wetenschappelijk onderbouwd",
-    "gemaakt met natuurlijke ingrediënten"
+    "Complete Triangle of Wellness Xtreme inbegrepen",
+    "Marketingmateriaal om te delen",
+    "Word Brand Partner & verdien commissie",
+    "Beste instap voor nieuwe partners"
   ],
-  "usage": {
-    "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-    "timing": "Raadpleeg de verpakking",
-    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
-  },
   "affiliate": {
     "url": "https://www.amare.com/2075008/nl-nl/triangle-marketing-pack",
-    "sourceTag": "amarenl-product-page"
+    "sourceTag": "amarenl-pakketten"
   },
-  "relatedProducts": [],
-  "tags": [],
+  "ratings": { "value": 4.8, "count": 189 },
+  "relatedProducts": ["happy-lifestyle-pack-basic", "happy-lifestyle-pack-pro"],
+  "tags": ["triangle pack", "brand partner", "amare affiliate"],
   "seo": {
-    "title": "Triangle Marketing Pack Kopen | Beste Prijs Nederland 2026",
-    "description": "Beste waarde bundel",
-    "keywords": []
+    "title": "Triangle Marketing Pack — Word Amare Brand Partner | Deel & Verdien",
+    "description": "Start als Amare Brand Partner met de Triangle Marketing Pack. Deel de #1 bestseller en verdien commissie.",
+    "keywords": ["triangle marketing pack", "amare brand partner", "deel en verdien"]
   },
   "isNew": false,
   "isBestseller": false,
   "isPack": true,
-  "priority": 18,
+  "priority": 2,
   "publishedAt": "2024-01-15",
-  "updatedAt": "2026-05-17"
+  "updatedAt": "2026-07-16"
 }

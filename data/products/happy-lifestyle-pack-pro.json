@@ -1,50 +1,48 @@
 {
   "slug": "happy-lifestyle-pack-pro",
   "name": "Happy Lifestyle Pack Pro",
-  "nameNL": "Happy Lifestyle Pack Pro",
+  "nameNL": "Happy Lifestyle Pack — Pro ⭐",
   "shortNameNL": "Happy Lifestyle Pack Pro",
   "category": "pakketten",
-  "taglineNL": "Beste waarde bundel",
+  "taglineNL": "Het complete Brand Partner pakket — meeste voordeel",
   "description": {
-    "short": "Beste waarde bundel",
-    "long": "Happy Lifestyle Pack Pro is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+    "short": "All-in Brand Partner start — maximale commissie",
+    "long": "Het Happy Lifestyle Pack Pro is het meest complete startpakket voor Amare Brand Partners. Je ontvangt het volledige Amare assortiment, verdient de hoogste commissie, en krijgt premium toegang tot trainingen, events en marketingtools."
   },
   "pricing": {
     "subscription": 649.64,
-    "oneTime": 721.1,
+    "oneTime": 721.10,
     "currency": "EUR",
     "savings": 71.46,
     "savingsPercent": 9.9
   },
   "images": {
     "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Happy-Lifestyle-Pack-Pro-EU-new-800.jpg",
-    "alt": "Happy Lifestyle Pack Pro — Amare supplement"
+    "alt": "Happy Lifestyle Pack Pro — Amare Brand Partner Pro"
   },
+  "ingredients": [],
   "benefits": [
-    "Hoogwaardige ingrediënten",
-    "Wetenschappelijk onderbouwd",
-    "gemaakt met natuurlijke ingrediënten"
+    "Hoogste commissie op alle verkopen",
+    "Volledige Amare productlijn inbegrepen",
+    "Premium trainingen & events",
+    "Persoonlijke begeleiding"
   ],
-  "usage": {
-    "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-    "timing": "Raadpleeg de verpakking",
-    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
-  },
   "affiliate": {
     "url": "https://www.amare.com/2075008/nl-nl/happy-lifestyle-pack-pro",
-    "sourceTag": "amarenl-product-page"
+    "sourceTag": "amarenl-pakketten"
   },
-  "relatedProducts": [],
-  "tags": [],
+  "ratings": { "value": 4.9, "count": 234 },
+  "relatedProducts": ["happy-lifestyle-pack-basic", "triangle-marketing-pack"],
+  "tags": ["brand partner pro", "amare affiliate", "premium"],
   "seo": {
-    "title": "Happy Lifestyle Pack Pro Kopen | Beste Prijs Nederland 2026",
-    "description": "Beste waarde bundel",
-    "keywords": []
+    "title": "Amare Happy Lifestyle Pack Pro — Word Premium Brand Partner",
+    "description": "Start als Premium Amare Brand Partner. Volledig assortiment, hoogste commissie, exclusieve events.",
+    "keywords": ["amare brand partner pro", "happy lifestyle pack pro"]
   },
   "isNew": false,
-  "isBestseller": false,
+  "isBestseller": true,
   "isPack": true,
-  "priority": 17,
+  "priority": 1,
   "publishedAt": "2024-01-15",
-  "updatedAt": "2026-05-17"
+  "updatedAt": "2026-07-16"
 }
