@@ -1,10 +1,35 @@
 # AmareNL Article Queue — SEO-GEO-AEO İçerik Planı
-> Laatste update: 2026-07-13
-> Status: 20/20 TIER ✅ | 3 vergelijkingsartikelen ✅ | NIEUWE BATCH: 15/15 ✅ | Totaal 57+ artikelen live
+> Laatste update: 2026-07-16
+> Status: 20/20 TIER ✅ | 3 vergelijkingsartikelen ✅ | NIEUWE BATCH: 15/15 ✅ | **BATCH 3: 0/6 ⏳** | Totaal 74+ artikelen live
 > Deploy: Vercel production ✅
 > Metodoloji: NL search volume × commercial intent × product match × GEO query fan-out
 > Yayın takvimi: 2 günde bir (cron — article-scheduler skill)
 > Bron: amarenl-agent-keywords.md + keywords-onderzoek.md + GEO/AIO audit (juli 2026)
+
+---
+
+## 🆕 BATCH 3 — Juli 2026 (6 artikelen)
+
+> **Legenda:** ⏳ = te schrijven | ✍️ = in progress | ✅ = gepubliceerd
+> Yayın: 2 günde bir, Pzt-Çrş-Cum
+
+| # | Makale Başlığı (NL) | Slug | Kategori | Hedef Ürün | Arama* | Status |
+|---|---------------------|------|----------|------------|--------|--------|
+| B3-1 | Waar Zit Magnesium In? Voedingsbronnen & Supplementen Gids | magnesium-voedingsbronnen-supplementen-gids | essentials | Sunrise, Sunset | 4.600 | ⏳ |
+| B3-2 | Immuunsysteem Versterken: Supplementen die Je Weerstand Ondersteunen | immuunsysteem-versterken-supplementen-weerstand | essentials | Sunrise, VitaGBX, Restore | 2.100 | ⏳ |
+| B3-3 | Spierherstel Na Sporten: Supplementen voor Sneller Herstel | spierherstel-sporten-supplementen-sneller-herstel | essentials | FIT20, Origin, Energy+ | 1.800 | ⏳ |
+| B3-4 | Supplementen voor Vrouwen 40+: Energie, Hormonen & Huid | supplementen-vrouwen-40-plus-energie-hormonen-huid | hormonen | Ignite Her, HL5, Sunset | 1.600 | ⏳ |
+| B3-5 | Waar Zit Vitamine C In? Natuurlijke Bronnen vs Supplementen | vitamine-c-voedingsbronnen-vs-supplementen | essentials | Sunrise, VitaGBX | 1.700 | ⏳ |
+| B3-6 | Ochtendroutine voor Meer Energie: Supplementen & Gewoontes | ochtendroutine-energie-supplementen-gewoontes | lifestyle | Sunrise, Energy+, Happy Juice | 1.200 | ⏳ |
+
+> *Tahmini aylık NL arama hacmi
+
+### 📅 Yayın Takvimi
+
+```
+Week 1: B3-1 (Pzt 21 jul) → B3-2 (Çrş 23 jul) → B3-3 (Cum 25 jul)
+Week 2: B3-4 (Pzt 28 jul) → B3-5 (Çrş 30 jul) → B3-6 (Cum 1 aug)
+```
 
 ---
 

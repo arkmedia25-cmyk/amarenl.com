@@ -99,6 +99,16 @@ cron.schedule("0 8 * * *", async () => {
   }
 });
 
+// --- HTTP Health Server (Fly.io health check) ---
+import { createServer } from "http";
+const PORT = parseInt(process.env.PORT || "3001", 10);
+createServer((_req, res) => {
+  res.writeHead(200, { "Content-Type": "application/json" });
+  res.end(JSON.stringify({ status: "ok", uptime: process.uptime() }));
+}).listen(PORT, () => {
+  console.log(`💓 Health server: http://0.0.0.0:${PORT}`);
+});
+
 // Her 30 saniyede bir manuel tetikleyicileri kontrol et (setInterval, cron'dan daha güvenilir)
 setInterval(async () => {
   if (state.manualPublishRequested) {
