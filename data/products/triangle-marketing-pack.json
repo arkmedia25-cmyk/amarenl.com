@@ -1,13 +1,13 @@
 {
   "slug": "triangle-marketing-pack",
   "name": "Triangle Marketing Pack",
-  "nameNL": "Triangle Marketing Pack — Deel & Verdien",
+  "nameNL": "Triangle Marketing Pack — 3x Complete Set",
   "shortNameNL": "Triangle Marketing Pack",
   "category": "pakketten",
-  "taglineNL": "Deel de Triangle of Wellness & verdien commissie",
+  "taglineNL": "3 maanden Triangle of Wellness — deel, ervaar & verdien",
   "description": {
-    "short": "Het perfecte pakket om te delen en te verdienen",
-    "long": "Het Triangle Marketing Pack bevat de complete Triangle of Wellness Xtreme plus marketingmateriaal om te delen met je netwerk. Het ideale pakket om nieuwe klanten kennis te laten maken met Amare's best verkochte dag-nacht systeem én om zelf commissie te verdienen als Brand Partner."
+    "short": "3x Triangle of Wellness Xtreme — jouw Brand Partner startkit",
+    "long": "Het Triangle Marketing Pack is jouw complete Brand Partner startkit. Je ontvangt 3 volledige Triangle of Wellness Xtreme sets — genoeg voor 3 maanden. Gebruik 1 set zelf om de producten te ervaren, en gebruik de andere 2 sets om samples te delen met potentiële klanten. Het perfecte pakket om te starten met delen en verdienen als Amare Brand Partner."
   },
   "pricing": {
     "subscription": 399.00,
@@ -17,15 +17,20 @@
     "savingsPercent": 10
   },
   "images": {
-    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Triangle-of-Wellness-Xtreme2-EU-800_25.jpg",
-    "alt": "Triangle Marketing Pack — Deel & Verdien met Amare"
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Triangle-of-Wellness-Xtreme2-EU-800.jpg",
+    "alt": "Triangle Marketing Pack — 3x Triangle of Wellness Xtreme"
   },
-  "ingredients": [],
+  "ingredients": [
+    { "name": "3x Sunrise (ochtendformule)", "amount": "90 porties totaal" },
+    { "name": "3x Nitro Xtreme (middagfocus)", "amount": "90 porties totaal" },
+    { "name": "3x Sunset (avondherstel)", "amount": "90 porties totaal" }
+  ],
   "benefits": [
-    "Complete Triangle of Wellness Xtreme inbegrepen",
-    "Marketingmateriaal om te delen",
+    "3 complete Triangle of Wellness Xtreme sets",
+    "1 set voor jezelf — ervaar het zelf",
+    "2 sets om te delen met potentiële klanten",
     "Word Brand Partner & verdien commissie",
-    "Beste instap voor nieuwe partners"
+    "Inclusief marketingmateriaal en training"
   ],
   "affiliate": {
     "url": "https://www.amare.com/2075008/nl-nl/triangle-marketing-pack",
@@ -33,11 +38,11 @@
   },
   "ratings": { "value": 4.8, "count": 189 },
   "relatedProducts": ["happy-lifestyle-pack-basic", "happy-lifestyle-pack-pro"],
-  "tags": ["triangle pack", "brand partner", "amare affiliate"],
+  "tags": ["triangle pack", "brand partner", "3x set", "deel en verdien"],
   "seo": {
-    "title": "Triangle Marketing Pack — Word Amare Brand Partner | Deel & Verdien",
-    "description": "Start als Amare Brand Partner met de Triangle Marketing Pack. Deel de #1 bestseller en verdien commissie.",
-    "keywords": ["triangle marketing pack", "amare brand partner", "deel en verdien"]
+    "title": "Triangle Marketing Pack — 3x Set | Word Amare Brand Partner",
+    "description": "Start als Brand Partner met 3 complete Triangle of Wellness Xtreme sets. Ervaar zelf, deel met anderen, verdien commissie.",
+    "keywords": ["triangle marketing pack", "3x triangle", "brand partner startkit"]
   },
   "isNew": false,
   "isBestseller": false,

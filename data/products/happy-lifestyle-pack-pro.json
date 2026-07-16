@@ -4,10 +4,10 @@
   "nameNL": "Happy Lifestyle Pack — Pro ⭐",
   "shortNameNL": "Happy Lifestyle Pack Pro",
   "category": "pakketten",
-  "taglineNL": "Het complete Brand Partner pakket — meeste voordeel",
+  "taglineNL": "Volledig Amare assortiment — maximale commissie",
   "description": {
-    "short": "All-in Brand Partner start — maximale commissie",
-    "long": "Het Happy Lifestyle Pack Pro is het meest complete startpakket voor Amare Brand Partners. Je ontvangt het volledige Amare assortiment, verdient de hoogste commissie, en krijgt premium toegang tot trainingen, events en marketingtools."
+    "short": "Het complete Brand Partner pakket",
+    "long": "Het Happy Lifestyle Pack Pro is het meest complete Brand Partner startpakket. Je ontvangt het volledige Amare assortiment — alle populaire producten in één pakket. Dit is het pakket voor wie serieus wil starten: hoogste commissie, volledige productlijn, premium trainingen en exclusieve events. Deel het volledige Amare verhaal, niet slechts één product."
   },
   "pricing": {
     "subscription": 649.64,
@@ -18,14 +18,20 @@
   },
   "images": {
     "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Happy-Lifestyle-Pack-Pro-EU-new-800.jpg",
-    "alt": "Happy Lifestyle Pack Pro — Amare Brand Partner Pro"
+    "alt": "Happy Lifestyle Pack Pro — Volledig Amare assortiment"
   },
-  "ingredients": [],
+  "ingredients": [
+    { "name": "Happy Juice Pack", "amount": "Energy+ + EDGE+ + MentaBiotics" },
+    { "name": "Triangle of Wellness Xtreme", "amount": "Sunrise + Nitro + Sunset" },
+    { "name": "HL5 Collageen", "amount": "Vloeibare formule" },
+    { "name": "Extra producten", "amount": "Volledig assortiment" }
+  ],
   "benefits": [
-    "Hoogste commissie op alle verkopen",
-    "Volledige Amare productlijn inbegrepen",
-    "Premium trainingen & events",
-    "Persoonlijke begeleiding"
+    "Volledige Amare productlijn in één pakket",
+    "Hoogste commissiepercentage op alle verkopen",
+    "Premium trainingen & exclusieve events",
+    "Persoonlijke begeleiding bij je start",
+    "Deel het complete Amare verhaal"
   ],
   "affiliate": {
     "url": "https://www.amare.com/2075008/nl-nl/happy-lifestyle-pack-pro",
@@ -33,11 +39,11 @@
   },
   "ratings": { "value": 4.9, "count": 234 },
   "relatedProducts": ["happy-lifestyle-pack-basic", "triangle-marketing-pack"],
-  "tags": ["brand partner pro", "amare affiliate", "premium"],
+  "tags": ["brand partner pro", "volledig pakket", "premium", "max commissie"],
   "seo": {
-    "title": "Amare Happy Lifestyle Pack Pro — Word Premium Brand Partner",
-    "description": "Start als Premium Amare Brand Partner. Volledig assortiment, hoogste commissie, exclusieve events.",
-    "keywords": ["amare brand partner pro", "happy lifestyle pack pro"]
+    "title": "Amare Happy Lifestyle Pack Pro — Volledig Brand Partner Pakket",
+    "description": "Het complete Brand Partner startpakket. Volledig Amare assortiment, hoogste commissie, exclusieve events. Start als pro.",
+    "keywords": ["happy lifestyle pack pro", "volledig amare pakket", "brand partner premium"]
   },
   "isNew": false,
   "isBestseller": true,

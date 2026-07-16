@@ -59,10 +59,10 @@
     "nameNL": "Happy Lifestyle Pack — Pro ⭐",
     "shortNameNL": "Happy Lifestyle Pack Pro",
     "category": "pakketten",
-    "taglineNL": "Het complete Brand Partner pakket — meeste voordeel",
+    "taglineNL": "Volledig Amare assortiment — maximale commissie",
     "description": {
-      "short": "All-in Brand Partner start — maximale commissie",
-      "long": "Het Happy Lifestyle Pack Pro is het meest complete startpakket voor Amare Brand Partners. Je ontvangt het volledige Amare assortiment, verdient de hoogste commissie, en krijgt premium toegang tot trainingen, events en marketingtools."
+      "short": "Het complete Brand Partner pakket",
+      "long": "Het Happy Lifestyle Pack Pro is het meest complete Brand Partner startpakket. Je ontvangt het volledige Amare assortiment — alle populaire producten in één pakket. Dit is het pakket voor wie serieus wil starten: hoogste commissie, volledige productlijn, premium trainingen en exclusieve events. Deel het volledige Amare verhaal, niet slechts één product."
     },
     "pricing": {
       "subscription": 649.64,
@@ -73,14 +73,32 @@
     },
     "images": {
       "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Happy-Lifestyle-Pack-Pro-EU-new-800.jpg",
-      "alt": "Happy Lifestyle Pack Pro — Amare Brand Partner Pro"
+      "alt": "Happy Lifestyle Pack Pro — Volledig Amare assortiment"
     },
-    "ingredients": [],
+    "ingredients": [
+      {
+        "name": "Happy Juice Pack",
+        "amount": "Energy+ + EDGE+ + MentaBiotics"
+      },
+      {
+        "name": "Triangle of Wellness Xtreme",
+        "amount": "Sunrise + Nitro + Sunset"
+      },
+      {
+        "name": "HL5 Collageen",
+        "amount": "Vloeibare formule"
+      },
+      {
+        "name": "Extra producten",
+        "amount": "Volledig assortiment"
+      }
+    ],
     "benefits": [
-      "Hoogste commissie op alle verkopen",
-      "Volledige Amare productlijn inbegrepen",
-      "Premium trainingen & events",
-      "Persoonlijke begeleiding"
+      "Volledige Amare productlijn in één pakket",
+      "Hoogste commissiepercentage op alle verkopen",
+      "Premium trainingen & exclusieve events",
+      "Persoonlijke begeleiding bij je start",
+      "Deel het complete Amare verhaal"
     ],
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/happy-lifestyle-pack-pro",
@@ -96,15 +114,17 @@
     ],
     "tags": [
       "brand partner pro",
-      "amare affiliate",
-      "premium"
+      "volledig pakket",
+      "premium",
+      "max commissie"
     ],
     "seo": {
-      "title": "Amare Happy Lifestyle Pack Pro — Word Premium Brand Partner",
-      "description": "Start als Premium Amare Brand Partner. Volledig assortiment, hoogste commissie, exclusieve events.",
+      "title": "Amare Happy Lifestyle Pack Pro — Volledig Brand Partner Pakket",
+      "description": "Het complete Brand Partner startpakket. Volledig Amare assortiment, hoogste commissie, exclusieve events. Start als pro.",
       "keywords": [
-        "amare brand partner pro",
-        "happy lifestyle pack pro"
+        "happy lifestyle pack pro",
+        "volledig amare pakket",
+        "brand partner premium"
       ]
     },
     "isNew": false,
@@ -348,13 +368,13 @@
   {
     "slug": "triangle-marketing-pack",
     "name": "Triangle Marketing Pack",
-    "nameNL": "Triangle Marketing Pack — Deel & Verdien",
+    "nameNL": "Triangle Marketing Pack — 3x Complete Set",
     "shortNameNL": "Triangle Marketing Pack",
     "category": "pakketten",
-    "taglineNL": "Deel de Triangle of Wellness & verdien commissie",
+    "taglineNL": "3 maanden Triangle of Wellness — deel, ervaar & verdien",
     "description": {
-      "short": "Het perfecte pakket om te delen en te verdienen",
-      "long": "Het Triangle Marketing Pack bevat de complete Triangle of Wellness Xtreme plus marketingmateriaal om te delen met je netwerk. Het ideale pakket om nieuwe klanten kennis te laten maken met Amare's best verkochte dag-nacht systeem én om zelf commissie te verdienen als Brand Partner."
+      "short": "3x Triangle of Wellness Xtreme — jouw Brand Partner startkit",
+      "long": "Het Triangle Marketing Pack is jouw complete Brand Partner startkit. Je ontvangt 3 volledige Triangle of Wellness Xtreme sets — genoeg voor 3 maanden. Gebruik 1 set zelf om de producten te ervaren, en gebruik de andere 2 sets om samples te delen met potentiële klanten. Het perfecte pakket om te starten met delen en verdienen als Amare Brand Partner."
     },
     "pricing": {
       "subscription": 399,
@@ -364,15 +384,29 @@
       "savingsPercent": 10
     },
     "images": {
-      "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Triangle-of-Wellness-Xtreme2-EU-800_25.jpg",
-      "alt": "Triangle Marketing Pack — Deel & Verdien met Amare"
+      "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Triangle-of-Wellness-Xtreme2-EU-800.jpg",
+      "alt": "Triangle Marketing Pack — 3x Triangle of Wellness Xtreme"
     },
-    "ingredients": [],
+    "ingredients": [
+      {
+        "name": "3x Sunrise (ochtendformule)",
+        "amount": "90 porties totaal"
+      },
+      {
+        "name": "3x Nitro Xtreme (middagfocus)",
+        "amount": "90 porties totaal"
+      },
+      {
+        "name": "3x Sunset (avondherstel)",
+        "amount": "90 porties totaal"
+      }
+    ],
     "benefits": [
-      "Complete Triangle of Wellness Xtreme inbegrepen",
-      "Marketingmateriaal om te delen",
+      "3 complete Triangle of Wellness Xtreme sets",
+      "1 set voor jezelf — ervaar het zelf",
+      "2 sets om te delen met potentiële klanten",
       "Word Brand Partner & verdien commissie",
-      "Beste instap voor nieuwe partners"
+      "Inclusief marketingmateriaal en training"
     ],
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/triangle-marketing-pack",
@@ -389,15 +423,16 @@
     "tags": [
       "triangle pack",
       "brand partner",
-      "amare affiliate"
+      "3x set",
+      "deel en verdien"
     ],
     "seo": {
-      "title": "Triangle Marketing Pack — Word Amare Brand Partner | Deel & Verdien",
-      "description": "Start als Amare Brand Partner met de Triangle Marketing Pack. Deel de #1 bestseller en verdien commissie.",
+      "title": "Triangle Marketing Pack — 3x Set | Word Amare Brand Partner",
+      "description": "Start als Brand Partner met 3 complete Triangle of Wellness Xtreme sets. Ervaar zelf, deel met anderen, verdien commissie.",
       "keywords": [
         "triangle marketing pack",
-        "amare brand partner",
-        "deel en verdien"
+        "3x triangle",
+        "brand partner startkit"
       ]
     },
     "isNew": false,
@@ -413,31 +448,70 @@
     "nameNL": "Happy Lifestyle Pack — Basic",
     "shortNameNL": "Happy Lifestyle Pack Basic",
     "category": "pakketten",
-    "taglineNL": "Start als Amare Brand Partner — Basis pakket",
-    "affiliate": {
-      "url": "https://www.amare.com/2075008/nl-nl/shop-all?category=Launch%20Packs",
-      "sourceTag": "amarenl-pakketten"
+    "taglineNL": "Voordelige instap — word Brand Partner",
+    "description": {
+      "short": "De voordeligste start als Amare Brand Partner",
+      "long": "Het Happy Lifestyle Pack Basic is de meest toegankelijke manier om Amare Brand Partner te worden. Je ontvangt de essentiële Amare producten om zelf te starten en te delen. Perfect als je het Brand Partner programma wilt uitproberen zonder grote investering. Alle producten, training en tools die je nodig hebt om te beginnen met verdienen."
     },
     "pricing": {
       "subscription": 277.68,
       "oneTime": 308.22,
-      "currency": "EUR"
+      "currency": "EUR",
+      "savings": 30.54,
+      "savingsPercent": 9.9
     },
     "images": {
-      "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Happy-Lifestyle-Pack-Basic-EU-new-800.jpg"
+      "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Happy-Lifestyle-Pack-Basic-EU-new-800.jpg",
+      "alt": "Happy Lifestyle Pack Basic — Betaalbare Brand Partner start"
     },
-    "benefits": [
-      "Word Amare Brand Partner",
-      "Complete set supplementen",
-      "Toegang tot Brand Partner platform"
+    "ingredients": [
+      {
+        "name": "Happy Juice Pack",
+        "amount": "Energy+ + EDGE+ + MentaBiotics"
+      },
+      {
+        "name": "Essentials",
+        "amount": "Basis dagelijkse supplementen"
+      }
     ],
+    "benefits": [
+      "Voordeligste ingang als Brand Partner",
+      "Essentiële Amare producten inbegrepen",
+      "Toegang tot Brand Partner platform",
+      "Training en marketingmateriaal",
+      "Start met delen en verdienen"
+    ],
+    "affiliate": {
+      "url": "https://www.amare.com/2075008/nl-nl/shop-all?category=Launch%20Packs",
+      "sourceTag": "amarenl-pakketten"
+    },
     "ratings": {
       "value": 4.7,
       "count": 156
     },
+    "relatedProducts": [
+      "happy-lifestyle-pack-pro",
+      "triangle-marketing-pack"
+    ],
+    "tags": [
+      "brand partner basic",
+      "start pakket",
+      "voordelig"
+    ],
+    "seo": {
+      "title": "Happy Lifestyle Pack Basic — Voordelig Amare Brand Partner Worden",
+      "description": "Word Amare Brand Partner met het voordeligste pakket. Essentiële producten, training en tools. Start vandaag.",
+      "keywords": [
+        "happy lifestyle pack basic",
+        "brand partner voordelig"
+      ]
+    },
+    "isNew": false,
     "isBestseller": false,
     "isPack": true,
-    "priority": 3
+    "priority": 3,
+    "publishedAt": "2024-01-15",
+    "updatedAt": "2026-07-16"
   },
   {
     "slug": "hl5-2-pack",
