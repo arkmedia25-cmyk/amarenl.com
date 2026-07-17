@@ -124,35 +124,58 @@ async function main() {
   writeText(mdxPath, content);
   console.log(`✅ MDX saved: ${mdxPath} (${content.length} chars)`);
 
-  // Parse MDX frontmatter
-  const fmMatch = content.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
-  const frontmatter = fmMatch?.[1] || '';
-  const bodyContent = fmMatch?.[2] || content;
+  // Parse MDX: strip frontmatter and imports, keep body
+  let bodyContent = content
+    .replace(/^---[\s\S]*?---\n*/, '')  // remove frontmatter
+    .replace(/^import\s+.*?\n/gm, '');    // remove MDX imports
 
+  // Extract metadata from original content
+  const fmMatch = content.match(/^---\n([\s\S]*?)\n---/);
+  const frontmatter = fmMatch?.[1] || '';
   const getFM = (key: string) => {
     const m = frontmatter.match(new RegExp(`${key}:\\s*(.+)`));
-    return m ? m[1].trim().replace(/^["']|["']$/g, '') : '';
+    return m ? m[1].trim().replace(/^["']|["']$/g, '').replace(/^[🔴🟡🟢]\s*/, '') : '';
   };
 
-  const title = getFM('title') || articleTopic;
-  const date = getFM('date') || new Date().toISOString().split('T')[0];
-  const category = getFM('category') || 'schoonheid';
+  const title = getFM('title') || articleTopic.replace(/^[🔴🟡🟢]\s*/, '');
+  const date = new Date().toISOString().split('T')[0];
+  const category = 'schoonheid';
   const excerpt = getFM('excerpt') || title;
   const metaDesc = getFM('metaDescription') || excerpt;
 
-  // Convert MDX body to HTML (basic)
+  // Convert MDX body to proper HTML (paragraph-based)
   let html = bodyContent
-    .replace(/^# (.+)$/gm, '<h1>$1</h1>')
-    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+    .trim()
+    // Headings
     .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+    .replace(/^# (.+)$/gm, '')  // remove H1 (title is in the page header)
+    // Bold/italic
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    // Links
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
-    .replace(/\n\n/g, '</p><p>')
-    .replace(/\n- (.+)/g, '\n<li>$1</li>');
+    // Lists
+    .replace(/^- (.+)$/gm, '<li>$1</li>')
+    .replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>');
 
-  html = '<p>' + html.replace(/\n/g, ' ') + '</p>';
-  html = html.replace(/<p>\s*<\/p>/g, '').replace(/<p><h/g, '<h').replace(/<\/h><\/p>/g, '</h>');
+  // Wrap text blocks in <p> tags (non-tag content)
+  html = html
+    .split('\n\n')
+    .map(block => {
+      block = block.trim();
+      if (!block) return '';
+      if (block.startsWith('<h') || block.startsWith('<ul') || block.startsWith('<li')) return block;
+      return '<p>' + block.replace(/\n/g, '<br/>') + '</p>';
+    })
+    .join('\n');
+
+  // Clean up
+  html = html
+    .replace(/<p>\s*<\/p>/g, '')
+    .replace(/<p><h(\d)/g, '<h$1')
+    .replace(/<\/h(\d)><\/p>/g, '</h$1>')
+    .replace(/\n{3,}/g, '\n\n');
 
   // Add to extra-articles.json
   const extraPath = "data/extra-articles.json";
