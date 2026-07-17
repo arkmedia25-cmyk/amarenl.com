@@ -24,6 +24,106 @@
       "source": "/hello-world/",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/home/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/on-4pack/",
+      "destination": "/producten/on-4-pack",
+      "permanent": true
+    },
+    {
+      "source": "/on-4pack",
+      "destination": "/producten/on-4-pack",
+      "permanent": true
+    },
+    {
+      "source": "/hl5-2pack/",
+      "destination": "/hl5",
+      "permanent": true
+    },
+    {
+      "source": "/hl5-2pack",
+      "destination": "/hl5",
+      "permanent": true
+    },
+    {
+      "source": "/amare-sunset/",
+      "destination": "/sunset",
+      "permanent": true
+    },
+    {
+      "source": "/amare-sunset",
+      "destination": "/sunset",
+      "permanent": true
+    },
+    {
+      "source": "/mentale-fitheid/",
+      "destination": "/supplementen",
+      "permanent": true
+    },
+    {
+      "source": "/mentale-fitheid",
+      "destination": "/supplementen",
+      "permanent": true
+    },
+    {
+      "source": "/energie-focus/",
+      "destination": "/supplementen",
+      "permanent": true
+    },
+    {
+      "source": "/energie-focus",
+      "destination": "/supplementen",
+      "permanent": true
+    },
+    {
+      "source": "/haarverzorging/",
+      "destination": "/schoonheid",
+      "permanent": true
+    },
+    {
+      "source": "/haarverzorging",
+      "destination": "/schoonheid",
+      "permanent": true
+    },
+    {
+      "source": "/category/:slug/",
+      "destination": "/blogs/nieuws",
+      "permanent": true
+    },
+    {
+      "source": "/category/:slug",
+      "destination": "/blogs/nieuws",
+      "permanent": true
+    },
+    {
+      "source": "/optimist/",
+      "destination": "/supplementen",
+      "permanent": true
+    },
+    {
+      "source": "/optimist",
+      "destination": "/supplementen",
+      "permanent": true
+    },
+    {
+      "source": "/densifying-serum/",
+      "destination": "/schoonheid",
+      "permanent": true
+    },
+    {
+      "source": "/densifying-serum",
+      "destination": "/schoonheid",
+      "permanent": true
     }
   ]
 }

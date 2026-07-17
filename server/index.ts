@@ -99,14 +99,42 @@ cron.schedule("0 8 * * *", async () => {
   }
 });
 
-// --- HTTP Health Server (Fly.io health check) ---
-import { createServer } from "http";
+// --- HTTP Server (Health + Manual Trigger) ---
+import { createServer, IncomingMessage, ServerResponse } from "http";
 const PORT = parseInt(process.env.PORT || "3001", 10);
-createServer((_req, res) => {
-  res.writeHead(200, { "Content-Type": "application/json" });
-  res.end(JSON.stringify({ status: "ok", uptime: process.uptime() }));
-}).listen(PORT, () => {
-  console.log(`💓 Health server: http://0.0.0.0:${PORT}`);
+
+async function handleRequest(req: IncomingMessage, res: ServerResponse) {
+  const url = req.url || "/";
+
+  // Health check
+  if (url === "/" || url === "/health") {
+    res.writeHead(200, { "Content-Type": "application/json" });
+    res.end(JSON.stringify({ status: "ok", uptime: process.uptime(), nextPublish: "Pzt 07:57, Çrş 09:57, Cum 09:57" }));
+    return;
+  }
+
+  // Manual publish trigger
+  if (url === "/publish") {
+    res.writeHead(200, { "Content-Type": "application/json" });
+    res.end(JSON.stringify({ status: "triggered", message: "Publish started — check logs" }));
+    state.manualPublishRequested = true;
+    return;
+  }
+
+  // Manual research trigger
+  if (url === "/research") {
+    res.writeHead(200, { "Content-Type": "application/json" });
+    res.end(JSON.stringify({ status: "triggered", message: "Research started — check logs" }));
+    state.manualResearchRequested = true;
+    return;
+  }
+
+  res.writeHead(404);
+  res.end("Not found");
+}
+
+createServer(handleRequest).listen(PORT, () => {
+  console.log(`💓 Server: http://0.0.0.0:${PORT} (health + /publish + /research)`);
 });
 
 // Her 30 saniyede bir manuel tetikleyicileri kontrol et (setInterval, cron'dan daha güvenilir)

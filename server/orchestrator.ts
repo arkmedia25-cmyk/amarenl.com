@@ -25,9 +25,11 @@ export interface OrchestratorState {
   pipelineActive: boolean;
 }
 
-const PROJECT_ROOT = process.env.PROJECT_ROOT || "/opt/AmareNL.com";
+const PROJECT_ROOT = process.env.PROJECT_ROOT || "/tmp/amarenl";
 
 function rel(p: string): string {
+  // If path already starts with PROJECT_ROOT, use as-is (prevents doubling)
+  if (p.startsWith(PROJECT_ROOT)) return p;
   return join(PROJECT_ROOT, p);
 }
 
