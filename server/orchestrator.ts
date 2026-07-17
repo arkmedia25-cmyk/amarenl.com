@@ -1,12 +1,11 @@
 /**
- * AmareNL Content Orchestrator v2
+ * AmareNL Content Orchestrator v3
  *
- * Claude API tool-use ile gerçek dosya işlemleri yapar.
- * Telegram /publish → sıradaki makaleyi yazar, MDX+blog.ts+queue günceller.
+ * Groq API (OpenAI-compatible) ile makale yazar, dosya işlemleri yapar.
+ * HTTP /publish → sıradaki makaleyi yazar, MDX+blog.ts+queue günceller.
  */
 
-import { Anthropic } from "@anthropic-ai/sdk";
-import type { Tool, MessageParam, ToolUseBlock } from "@anthropic-ai/sdk/resources/messages";
+import OpenAI from "openai";
 import { readFileSync, writeFileSync, appendFileSync, existsSync, readdirSync } from "fs";
 import { join } from "path";
 import { exec } from "child_process";
@@ -55,10 +54,10 @@ function log(level: string, agent: string, event: string, data: Record<string, u
 }
 
 // --- Claude API with tool use ---
-function createClaudeClient(): Anthropic {
-  const apiKey = process.env.ANTHROPIC_API_KEY;
-  if (!apiKey) throw new Error("ANTHROPIC_API_KEY not set");
-  return new Anthropic({ apiKey });
+function createGroqClient(): Groq {
+  const apiKey = process.env.GROQ_API_KEY;
+  if (!apiKey) throw new Error("GROQ_API_KEY not set");
+  return new Groq({ apiKey });
 }
 
 // --- Tool definitions for Claude ---
