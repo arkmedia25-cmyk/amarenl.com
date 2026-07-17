@@ -8,10 +8,33 @@
 
 ---
 
-## 🆕 BATCH 3 — Collageen Content Cluster + Trafik Kuyruğu
+## 🆕 30 GÜNLÜK PLAN — 15 Makale, 2 Günde Bir (17 Tem — 15 Ağu 2026)
 
-> Kaynak: Ahrefs NL (Temmuz 2026)
-> **Strateji:** "Collageen" (16K) + "collageen poeder" (12K) = içerik kümesiyle domine et
+> Kaynak: Ahrefs NL + Google Ads + keywords-onderzoek.md
+> **Strateji:** En yüksek hacimli kapsanmamış anahtar kelimeler × ticari niyet
+
+| Gün | Tarih | # | Anahtar Kelime | Arama | Makale | Ürün |
+|-----|-------|---|---------------|--------|--------|------|
+| 1 | 17 Tem | P1 | **collageen** | **16.000** | ✅ Collageen Complete Gids — yayında | HL5 |
+| 2 | 19 Tem | P2 | **collageen poeder** | **12.000** | Collageen Poeder vs Vloeibaar: Wat Is Beter? | HL5 |
+| 3 | 21 Tem | M1 | **waar zit magnesium in** | **4.600** | Waar Zit Magnesium In? Voedingsbronnen & Supplementen | Sunrise |
+| 4 | 23 Tem | M2 | **magnesium slaap** | **4.200** | Magnesium en Slapen: De Complete Gids voor Diepe Nachtrust | Sleep+, Sunset |
+| 5 | 25 Tem | V1 | **vitamine d voeding** | **5.100** | Vitamine D in Voeding: Welke Producten Helpen Echt? | Sunrise |
+| 6 | 27 Tem | V2 | **vitamine c tekort** | **1.700** | Vitamine C Tekort: Symptomen, Oorzaken & Oplossingen | Sunrise, VitaGBX |
+| 7 | 29 Tem | O1 | **omega-3 bijwerkingen** | **3.800** | Omega-3 Bijwerkingen en Voordelen: Eerlijk Verhaal | Sunset, OmMega |
+| 8 | 31 Tem | S1 | **natuurlijke ontstekingsremmers** | **1.800** | Natuurlijke Ontstekingsremmers: Supplementen Die Werken | Restore, OmMega |
+| 9 | 2 Ağu | H1 | **overgang supplementen** | **2.300** | Overgang en Supplementen: Complete Gids 2026 | Ignite Her, Sunset |
+| 10 | 4 Ağu | E1 | **supplementen abonnement** | **2.900** | Supplementen Abonnement: Elke Maand in Huis | Happy Juice Pack |
+| 11 | 6 Ağu | I1 | **ijzertekort supplementen** | **1.400** | IJzertekort: Supplementen Die Echt Helpen | Sunrise |
+| 12 | 8 Ağu | C1 | **collageen mannen** | **800** | Collageen voor Mannen 30+: Ook Belangrijk | HL5 |
+| 13 | 10 Ağu | C2 | **collageen resultaten** | **600** | Collageen Resultaten: Voor en Na 4-8-12 Weken | HL5 |
+| 14 | 12 Ağu | Z1 | **zwangerschap supplementen** | **1.300** | Zwangerschap en Supplementen: Wat Mag Wel en Niet? | VitaGBX |
+| 15 | 14 Ağu | W1 | **winter supplementen** | **800** | Supplementen Tegen Winterdip: Voorbereiden op de Kou | Sunrise, Sunset |
+
+> **Toplam potansiyel: ~58.000 aylık arama**
+> Kural: Her makale ≥1200 kelime, 4+ H2, FAQ, NVWA, iç linkler
+
+### 🎯 COLLAGEEN CLUSTER (arka planda devam)
 
 ### 🎯 COLLAGEEN CLUSTER (Mevcut 7 + Yeni 6 = 13 içerik)
 
