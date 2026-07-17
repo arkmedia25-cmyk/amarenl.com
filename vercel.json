@@ -124,6 +124,201 @@
       "source": "/densifying-serum",
       "destination": "/schoonheid",
       "permanent": true
+    },
+    {
+      "source": "/collections/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/pages/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/urun/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/products/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/producten/",
+      "destination": "/essentials",
+      "permanent": true
+    },
+    {
+      "source": "/producten",
+      "destination": "/essentials",
+      "permanent": true
+    },
+    {
+      "source": "/wp-content/:path*",
+      "destination": "/",
+      "statusCode": 410
+    },
+    {
+      "source": "/wp-:path*.php",
+      "destination": "/",
+      "statusCode": 410
+    },
+    {
+      "source": "/cdn",
+      "destination": "/",
+      "statusCode": 410
+    },
+    {
+      "source": "/wpm",
+      "destination": "/",
+      "statusCode": 410
+    },
+    {
+      "source": "/nl/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/sample-page/",
+      "destination": "/",
+      "statusCode": 410
+    },
+    {
+      "source": "/sample-page",
+      "destination": "/",
+      "statusCode": 410
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy-beleid",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy/",
+      "destination": "/privacy-beleid",
+      "permanent": true
+    },
+    {
+      "source": "/policies/privacy-policy",
+      "destination": "/privacy-beleid",
+      "permanent": true
+    },
+    {
+      "source": "/policies/privacy-policy/",
+      "destination": "/privacy-beleid",
+      "permanent": true
+    },
+    {
+      "source": "/happy-lifestyle-pack-pro-2/",
+      "destination": "/happy-lifestyle-pack-pro",
+      "permanent": true
+    },
+    {
+      "source": "/happy-lifestyle-pack-pro-2",
+      "destination": "/happy-lifestyle-pack-pro",
+      "permanent": true
+    },
+    {
+      "source": "/triangle-marketing-pack-2/",
+      "destination": "/triangle-marketing-pack",
+      "permanent": true
+    },
+    {
+      "source": "/triangle-marketing-pack-2",
+      "destination": "/triangle-marketing-pack",
+      "permanent": true
+    },
+    {
+      "source": "/triangle-of-wellness-xtreme-2-pack/",
+      "destination": "/triangle-of-wellness-xtreme",
+      "permanent": true
+    },
+    {
+      "source": "/triangle-of-wellness-xtreme-2-pack",
+      "destination": "/triangle-of-wellness-xtreme",
+      "permanent": true
+    },
+    {
+      "source": "/triangle-of-wellness-xtreme-3-pack/",
+      "destination": "/triangle-of-wellness-xtreme",
+      "permanent": true
+    },
+    {
+      "source": "/triangle-of-wellness-xtreme-3-pack",
+      "destination": "/triangle-of-wellness-xtreme",
+      "permanent": true
+    },
+    {
+      "source": "/vitamine-d-tekort-nederland-supplement/",
+      "destination": "/blogs/nieuws/vitamine-d-tekort-nederland-oorzaken-oplossingen",
+      "permanent": true
+    },
+    {
+      "source": "/vitamine-d-tekort-nederland-supplement",
+      "destination": "/blogs/nieuws/vitamine-d-tekort-nederland-oorzaken-oplossingen",
+      "permanent": true
+    },
+    {
+      "source": "/skin-to-mind/",
+      "destination": "/schoonheid",
+      "permanent": true
+    },
+    {
+      "source": "/skin-to-mind",
+      "destination": "/schoonheid",
+      "permanent": true
+    },
+    {
+      "source": "/amare-hl5-peach-collagen/",
+      "destination": "/hl5",
+      "permanent": true
+    },
+    {
+      "source": "/amare-hl5-peach-collagen",
+      "destination": "/hl5",
+      "permanent": true
+    },
+    {
+      "source": "/hl5-peach-2pack/",
+      "destination": "/hl5",
+      "permanent": true
+    },
+    {
+      "source": "/hl5-peach-2pack",
+      "destination": "/hl5",
+      "permanent": true
+    },
+    {
+      "source": "/kyani-hl5-peach/",
+      "destination": "/hl5",
+      "permanent": true
+    },
+    {
+      "source": "/kyani-hl5-peach",
+      "destination": "/hl5",
+      "permanent": true
+    },
+    {
+      "source": "/ignite-for-him/",
+      "destination": "/ignite-for-her",
+      "permanent": true
+    },
+    {
+      "source": "/ignite-for-him",
+      "destination": "/ignite-for-her",
+      "permanent": true
+    },
+    {
+      "source": "/levelup-pack/",
+      "destination": "/triangle-of-wellness-xtreme",
+      "permanent": true
+    },
+    {
+      "source": "/levelup-pack",
+      "destination": "/triangle-of-wellness-xtreme",
+      "permanent": true
     }
   ]
 }
