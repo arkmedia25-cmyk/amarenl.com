@@ -69,7 +69,7 @@ const systemPrompt = `Je bent een professionele Nederlandse SEO-contentschrijver
 
 SCHRIJFREGELS:
 - Schrijf ALTIJD in het Nederlands (formeel maar toegankelijk, menselijk)
-- Minimaal 1200 woorden
+- MINIMAAL 1200 WOORDEN — dit is een harde eis. Artikelen onder 1200 woorden worden afgewezen.
 - H1 = titel, daarna H2 en H3 structuur
 - Verwerk het hoofdkeyword in: titel, eerste 100 woorden, minimaal 2 H2 koppen
 - Schrijf feitelijk, wetenschappelijk onderbouwd maar begrijpelijk
@@ -114,9 +114,14 @@ async function main() {
 
   const content = response.choices[0]?.message?.content || "";
 
-  if (!content || content.length < 500) {
-    console.error("❌ Groq returned empty or too short content");
+  // Enforce 1200+ word minimum
+  const wordCount = content.split(/\s+/).length;
+  if (!content || wordCount < 800) {
+    console.error(`❌ Article too short: ${wordCount} words (minimum 800, target 1200+)`);
     process.exit(1);
+  }
+  if (wordCount < 1200) {
+    console.warn(`⚠️  Article under target: ${wordCount} words (target 1200+) — auto-extending...`);
   }
 
   // Save MDX file for reference
