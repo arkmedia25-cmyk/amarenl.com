@@ -119,10 +119,59 @@ async function main() {
     process.exit(1);
   }
 
-  // Save MDX file
+  // Save MDX file for reference
   const mdxPath = `content/blog/${slug}.mdx`;
   writeText(mdxPath, content);
   console.log(`✅ MDX saved: ${mdxPath} (${content.length} chars)`);
+
+  // Parse MDX frontmatter
+  const fmMatch = content.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+  const frontmatter = fmMatch?.[1] || '';
+  const bodyContent = fmMatch?.[2] || content;
+
+  const getFM = (key: string) => {
+    const m = frontmatter.match(new RegExp(`${key}:\\s*(.+)`));
+    return m ? m[1].trim().replace(/^["']|["']$/g, '') : '';
+  };
+
+  const title = getFM('title') || articleTopic;
+  const date = getFM('date') || new Date().toISOString().split('T')[0];
+  const category = getFM('category') || 'schoonheid';
+  const excerpt = getFM('excerpt') || title;
+  const metaDesc = getFM('metaDescription') || excerpt;
+
+  // Convert MDX body to HTML (basic)
+  let html = bodyContent
+    .replace(/^# (.+)$/gm, '<h1>$1</h1>')
+    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
+    .replace(/\n\n/g, '</p><p>')
+    .replace(/\n- (.+)/g, '\n<li>$1</li>');
+
+  html = '<p>' + html.replace(/\n/g, ' ') + '</p>';
+  html = html.replace(/<p>\s*<\/p>/g, '').replace(/<p><h/g, '<h').replace(/<\/h><\/p>/g, '</h>');
+
+  // Add to extra-articles.json
+  const extraPath = "data/extra-articles.json";
+  const extraRaw = readText(extraPath);
+  const extraArticles = JSON.parse(extraRaw);
+
+  extraArticles.unshift({
+    slug,
+    title,
+    date,
+    category,
+    excerpt,
+    metaDescription: metaDesc,
+    content: html,
+    tags: [],
+  });
+
+  writeText(extraPath, JSON.stringify(extraArticles, null, 2));
+  console.log(`✅ Added to extra-articles.json (${extraArticles.length} total)`);
 
   // Mark as published in queue (⏳ → ✅)
   const updatedQueue = queueText.replace(
