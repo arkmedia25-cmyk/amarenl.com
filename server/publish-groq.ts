@@ -114,15 +114,37 @@ async function main() {
 
   const content = response.choices[0]?.message?.content || "";
 
-  // Enforce 1200+ word minimum
-  const wordCount = content.split(/\s+/).length;
-  if (!content || wordCount < 800) {
-    console.error(`❌ Article too short: ${wordCount} words (minimum 800, target 1200+)`);
+  // === QUALITY GATES ===
+  const errors: string[] = [];
+
+  // 1. Word count (1200+ mandatory)
+  if (!content || content.length < 500) {
+    console.error('❌ Groq returned empty content');
     process.exit(1);
   }
-  if (wordCount < 1200) {
-    console.warn(`⚠️  Article under target: ${wordCount} words (target 1200+) — auto-extending...`);
+  const wordCount = content.split(/\s+/).length;
+  if (wordCount < 1200) errors.push(`Word count: ${wordCount} (minimum 1200)`);
+
+  // 2. H2 headings (minimum 4)
+  const h2Count = (bodyContent.match(/^## /gm) || []).length;
+  if (h2Count < 4) errors.push(`H2 headings: ${h2Count} (minimum 4)`);
+
+  // 3. FAQ section
+  if (!bodyContent.includes('Veelgestelde vragen') && !bodyContent.includes('FAQ')) {
+    errors.push('Missing FAQ section');
   }
+
+  // 4. NVWA disclaimer
+  if (!bodyContent.includes('NVWA')) {
+    errors.push('Missing NVWA disclaimer');
+  }
+
+  if (errors.length > 0) {
+    console.error(`❌ Quality gate failed:\n  - ${errors.join('\n  - ')}`);
+    process.exit(1);
+  }
+
+  console.log(`✅ Quality: ${wordCount} words, ${h2Count} H2s, FAQ+NVWA OK`);
 
   // Save MDX file for reference
   const mdxPath = `content/blog/${slug}.mdx`;
@@ -181,6 +203,22 @@ async function main() {
     .replace(/<p><h(\d)/g, '<h$1')
     .replace(/<\/h(\d)><\/p>/g, '</h$1>')
     .replace(/\n{3,}/g, '\n\n');
+
+  // === POST-PROCESS: Auto-add internal links if missing ===
+  const hasInternalLinks = (html.match(/href="\/blogs\/nieuws\//g) || []).length >= 2;
+  const hasProductLink = (html.match(/href="\/hl5|href="\/mentabiotics|href="\/sunrise|href="\/sunset|href="\/energy|href="\/edge-plus|href="\/happy-juice|href="\/restore/g) || []).length >= 1;
+
+  if (!hasInternalLinks || !hasProductLink) {
+    console.warn('⚠️  Adding internal links (missing in Groq output)...');
+    // Add 2 standard internal links if missing
+    if ((html.match(/href="\/blogs\/nieuws\//g) || []).length < 2) {
+      html += '<p><strong>Lees ook:</strong> <a href="/blogs/nieuws/beste-collageen-supplement-2026-werkt-echt">Beste Collageen Supplement 2026</a> — <a href="/blogs/nieuws/collageen-hl5-vs-supermarkt-vergelijken">HL5 vs Supermarkt Collageen</a></p>';
+    }
+    if (!hasProductLink) {
+      html += '<p><a href="/hl5" class="btn-primary">Bekijk HL5 Vloeibare Collageen →</a></p>';
+    }
+  }
+  console.log(`✅ Links: ${(html.match(/href="\/blogs\/nieuws\//g) || []).length} internal, ${(html.match(/href="\/hl5/g) || []).length} product`);
 
   // Add to extra-articles.json
   const extraPath = "data/extra-articles.json";
