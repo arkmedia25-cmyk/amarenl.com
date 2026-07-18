@@ -63,4 +63,8 @@
 
 ---
 
-*Son güncelleme: 2026-07-18 — Rollback sonrası*
+| 32 | 2026-07-18 | ~14:00 | dpl_2ifet4gP9byJWq4h5sGo2Y3Yfa9w | Remote sync + DEPLOY_LOG.md + tüm fix'ler geri yüklendi | ✅ Live |
+
+---
+
+*Son güncelleme: 2026-07-18 — Başarılı deploy*
