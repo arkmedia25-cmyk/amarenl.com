@@ -83,9 +83,13 @@ public/images/              # Statische assets
 
 ### SEO & Schema
 - JSON-LD Product+FAQ+Breadcrumb schema op alle 7 deep product pages
-- JSON-LD Organization, Article, FAQ op blogpagina's
-- Auto sitemap via next-sitemap (31 routes)
+- JSON-LD **MedicalWebPage** schema op gezondheidsblogs (E-E-A-T boost)
+- JSON-LD **HowTo** schema op stapsgewijze handleidingen
+- JSON-LD **SiteLinksSearch** schema op hele site
+- JSON-LD Organization, Article, FAQ, Speakable, Person op blogpagina's
+- Auto sitemap via next-sitemap (202 routes, blog posts met echte lastmod)
 - Google Search Console geverifieerd
+- AI crawlers expliciet toegestaan (GPTBot, CCBot, anthropic-ai, PerplexityBot)
 
 ### Producten
 - **43** producten in database
@@ -112,6 +116,20 @@ public/images/              # Statische assets
 - Next.js 16.2.6 (latest stable)
 - 0 npm vulnerabilities (high-severity)
 - Clean console (geen debug logs)
+- **HSTS** (max-age=63072000; includeSubDomains; preload)
+- **X-Content-Type-Options: nosniff**
+- **X-Frame-Options: DENY**
+- **Referrer-Policy: strict-origin-when-cross-origin**
+
+### GEO/AEO (🆕 19 Tem 2026)
+- **11** JSON-LD schema types in lib/schema.ts
+- **36** interne links toegevoegd aan 10 blog artikelen
+- **8** wetenschappelijke bronvermeldingen (RIVM, Voedingscentrum, PubMed, Gezondheidsraad)
+- MedicalWebPage schema voor alle YMYL gezondheidscontent
+- HowTo schema auto-detectie voor stapsgewijze handleidingen
+- Speakable schema voor voice search (Google Assistant, Siri)
+- SiteLinksSearch schema voor branded SERP
+- Crawl-delay: 1 (snelle indexatie)
 
 ---
 
@@ -184,14 +202,27 @@ npm start
 
 ---
 
-## Deployment
+## ⚠️ Deployment — KRİTİK KURALLAR
 
-**GitHub → Vercel auto-deploy is gebroken.** Gebruik CLI:
+**ASLA uncommitted değişiklikle deploy etme!** `vercel --prod` lokaldeki dosyaları yükler, git'i değil.
 
+### Deploy Kontrol Listesi (HER SEFERİNDE)
 ```bash
+git status                    # Temiz mi?
+git pull origin main          # Remote güncel mi?
+npm run build                 # Build başarılı mı?
+git add -A && git commit -m "..."
 git push origin main
-vercel --prod --yes
+vercel --prod --yes           # Deploy
 ```
+
+### Rollback (acil durum)
+```bash
+vercel list                   # Son deployment ID'sini bul
+vercel promote <DEPLOY_ID>    # Önceki sürüme dön
+```
+
+GitHub → Vercel auto-deploy kullanılmıyor. Manuel CLI deploy.
 
 ---
 

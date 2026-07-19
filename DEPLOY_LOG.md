@@ -9,8 +9,11 @@
 
 | # | Tarih | Saat | Deploy ID | Değişiklik | Sonuç |
 |---|-------|------|-----------|------------|-------|
-| 31 | 2026-07-18 | ~12:00 | — | ~~Makale #15 (Huidverzorging)~~ — Ürün sayfalarını kırdı, rollback yapıldı | ❌ ROLLBACK |
-| 30 | 2026-07-17 | 18:11 | dpl_9cKWut2JKj61AJyHgLSzX8M3hCuT | Ürün sayfaları + header + kategoriler + NeuCollagen homepage (önceki session) | ✅ Live |
+| 34 | 2026-07-19 | ~16:00 | dpl_CWaRYWvo6sxUG1FzHzRrXcfN4w7Z | GEO/AEO optimizasyonu FAZ 1-3: MedicalWebPage+HowTo schema, 36 iç link, 8 referans, güvenlik header'ları | ✅ Live |
+| 33 | 2026-07-18 | ~15:00 | dpl_2ifet4gP9byJWq4h5sGo2Y3Yfa9w | Remote sync + tüm fix'ler geri yüklendi (115+ blog, 43 ürün) | ✅ Live |
+| 32 | 2026-07-18 | ~14:00 | — | ~~DEPLOY_LOG.md eklendi~~ | ✅ |
+| 31 | 2026-07-18 | ~12:00 | — | ~~Makale #15~~ — Ürün sayfalarını kırdı, rollback yapıldı | ❌ ROLLBACK |
+| 30 | 2026-07-17 | 18:11 | dpl_9cKWut2JKj61AJyHgLSzX8M3hCuT | Ürün sayfaları + header + kategoriler + NeuCollagen homepage | ✅ |
 | 29 | 2026-06-18 | 07:27 | — | Makale #14 (Collageen Peptiden) | ✅ |
 | 28 | 2026-06-18 | 07:17 | — | Makale #13 (Beste Eiwitpoeder 2026) | ✅ |
 | 27 | 2026-06-16 | — | — | 3 karşılaştırma makalesi (B1-B3) | ✅ |
@@ -63,7 +66,7 @@
 
 ---
 
-| 32 | 2026-07-18 | ~14:00 | dpl_2ifet4gP9byJWq4h5sGo2Y3Yfa9w | Remote sync + DEPLOY_LOG.md + tüm fix'ler geri yüklendi | ✅ Live |
+| 32 | 2026-07-18 | ~14:00 | dpl_2ifet4gP9byJWq4h5sGo2Y3Yfa9w | Remote sync + ProductGrid fix + tüm sayfalar geri yüklendi | ✅ Live |
 
 ---
 
