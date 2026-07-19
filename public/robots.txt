@@ -28,7 +28,7 @@ User-agent: FacebookBot
 Allow: /
 
 # Crawl-delay (respectvol voor server)
-Crawl-delay: 5
+Crawl-delay: 1
 
 # Host
 Host: https://amarenl.com

@@ -7,6 +7,7 @@ export interface BlogPost {
   title: string;
   date: string;
   excerpt: string;
+  metaDescription?: string;
   category: string;
   content: string;
   image?: string;

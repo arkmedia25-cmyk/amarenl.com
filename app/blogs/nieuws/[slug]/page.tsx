@@ -9,8 +9,24 @@ import {
   generateBreadcrumbSchema,
   generateSpeakableSchema,
   generatePersonSchema,
+  generateMedicalWebPageSchema,
+  generateHowToSchema,
   combineSchemas,
 } from "@/lib/schema";
+
+/** YMYL health categories that get MedicalWebPage schema for E-E-A-T boost */
+const HEALTH_CATEGORIES = ["darmen", "mentaal", "hormonen", "essentials", "schoonheid", "gewichtsbeheer", "energie"];
+
+/** Detect step-by-step guide patterns (### 1. / ### 2. etc.) for HowTo schema */
+function extractHowToSteps(content: string): { name: string; text: string }[] {
+  const steps: { name: string; text: string }[] = [];
+  const stepRegex = /<h3>(\d+)[.)]\s*(.+?)<\/h3>\s*<p>([\s\S]*?)<\/p>/g;
+  let match: RegExpExecArray | null;
+  while ((match = stepRegex.exec(content)) !== null) {
+    steps.push({ name: match[2].trim(), text: match[3].replace(/<[^>]*>/g, "").trim() });
+  }
+  return steps;
+}
 
 interface Props {
   params: { slug: string };
@@ -61,13 +77,14 @@ export async function generateMetadata({ params }: Props) {
   if (!post) return { title: "Niet gevonden | AmareNL" };
   const url = `https://amarenl.com/blogs/nieuws/${slug}`;
   const imageUrl = post.image || "/images/og-default.jpg";
+  const metaDesc = post.metaDescription || post.excerpt;
   return {
     title: `${post.title} | AmareNL`,
-    description: post.excerpt,
+    description: metaDesc,
     alternates: { canonical: url },
     openGraph: {
       title: `${post.title} | AmareNL`,
-      description: post.excerpt,
+      description: metaDesc,
       type: "article",
       url,
       images: [{ url: imageUrl, width: 1200, height: 630 }],
@@ -78,7 +95,7 @@ export async function generateMetadata({ params }: Props) {
     twitter: {
       card: "summary_large_image",
       title: `${post.title} | AmareNL`,
-      description: post.excerpt,
+      description: metaDesc,
       images: [imageUrl],
     },
   };
@@ -114,9 +131,41 @@ export default async function BlogPostPage({ params }: Props) {
   }
   const speakableSchema = generateSpeakableSchema(post.slug, headings.slice(0, 3));
   const personSchema = generatePersonSchema();
-  const combinedSchema = faqItems.length
-    ? combineSchemas(articleSchema, generateFAQSchema(faqItems), breadcrumbSchema, speakableSchema, personSchema)
-    : combineSchemas(articleSchema, breadcrumbSchema, speakableSchema, personSchema);
+
+  // Build schemas array for combineSchemas
+  const schemas: object[] = [breadcrumbSchema, speakableSchema, personSchema];
+
+  // Use MedicalWebPage for health/YMYL content, Article for others
+  if (HEALTH_CATEGORIES.includes(post.category)) {
+    const medicalSchema = generateMedicalWebPageSchema({
+      headline: post.title,
+      description: post.excerpt,
+      datePublished: post.date,
+      slug: post.slug,
+      about: post.category,
+      audience: "Nederlandse volwassenen",
+    });
+    schemas.unshift(medicalSchema);
+  } else {
+    schemas.unshift(articleSchema);
+  }
+
+  // Add FAQ if present
+  if (faqItems.length) schemas.push(generateFAQSchema(faqItems));
+
+  // Add HowTo if step-by-step guide detected (3+ steps)
+  const howToSteps = extractHowToSteps(post.content);
+  if (howToSteps.length >= 3) {
+    const howToSchema = generateHowToSchema({
+      name: post.title,
+      description: post.excerpt,
+      steps: howToSteps,
+      slug: post.slug,
+    });
+    schemas.push(howToSchema);
+  }
+
+  const combinedSchema = combineSchemas(...schemas);
 
   return (
     <>
