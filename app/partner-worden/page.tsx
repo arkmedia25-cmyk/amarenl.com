@@ -446,6 +446,54 @@ export default function PartnerWordenPage() {
           </div>
         </section>
 
+        {/* TWIJFELS */}
+        <section className="py-24 bg-white">
+          <div className="container-page max-w-4xl">
+            <div className="text-center mb-16">
+              <span className="text-xs font-bold uppercase tracking-widest text-[var(--color-text-muted)]">
+                Eerlijk is eerlijk
+              </span>
+              <h2 className="text-3xl md:text-4xl font-cormorant font-bold text-[var(--color-text)] mt-3">
+                "Maar ik ben niet zo'n verkoper..."
+              </h2>
+              <p className="text-[var(--color-text-muted)] mt-4 max-w-2xl mx-auto">
+                De twee meest gehoorde twijfels — en waarom ze je niet hoeven tegen te houden.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-10">
+              <div className="bg-[var(--color-bg-soft)] rounded-3xl p-10 border border-[var(--color-border)]">
+                <div className="text-4xl mb-4">🤐</div>
+                <h3 className="text-xl font-bold text-[var(--color-text)] mb-4">
+                  "Ik ben helemaal niet zo sociaal"
+                </h3>
+                <p className="text-[var(--color-text-muted)] leading-relaxed mb-4">
+                  Je hoeft geen netwerker te zijn die op feestjes producten staat aan te prijzen. De meeste succesvolle Brand Partners zijn juist <strong>introvert</strong> — ze bouwen rustig een website, schrijven blogs, delen op Instagram of sturen af en toe een appje naar iemand die toch al om advies vroeg.
+                </p>
+                <p className="text-[var(--color-text-muted)] leading-relaxed">
+                  Deze site — amarenl.com — is daar het bewijs van. Geen verkoopgesprekken, geen DM's sturen naar vreemden. Gewoon content maken die mensen zélf vinden via Google. Jij deelt je kennis, Amare handelt de rest af.
+                </p>
+              </div>
+
+              <div className="bg-[var(--color-bg-soft)] rounded-3xl p-10 border border-[var(--color-border)]">
+                <div className="text-4xl mb-4">😬</div>
+                <h3 className="text-xl font-bold text-[var(--color-text)] mb-4">
+                  "Mijn vrienden vinden het vast vervelend als ik ze iets 'verkoop'"
+                </h3>
+                <p className="text-[var(--color-text-muted)] leading-relaxed mb-4">
+                  Logisch. Niemand houdt van opdringerige verkopers. Daarom is de Amare-aanpak fundamenteel anders: <strong>je verkoopt niet — je deelt wat je zelf gebruikt.</strong>
+                </p>
+                <p className="text-[var(--color-text-muted)] leading-relaxed mb-4">
+                  Denk aan de laatste keer dat jij een goed restaurant, een fijne kapper of een serie aanraadde aan een vriend. Dat voelde niet als verkopen, toch? Dat voelde als helpen. Precies zo werkt het met Amare: jij gebruikt de producten, jij merkt resultaat, en als iemand vraagt "wat gebruik jij eigenlijk?" — dan heb je een eerlijk antwoord én een link.
+                </p>
+                <p className="text-[var(--color-text-muted)] leading-relaxed">
+                  <strong>Je bent gebruiker eerst, partner tweede.</strong> Mensen prikken feilloos door neppe verkooppraatjes heen. Maar oprechte ervaring? Dat voelt voor niemand als "verkopen".
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ */}
         <section className="py-24 bg-[var(--color-bg-soft)] border-t border-[var(--color-border)]">
           <div className="container-page max-w-3xl">
