@@ -330,8 +330,8 @@ export default async function BlogPostPage({ params }: Props) {
           <h2 className="text-3xl font-bold text-[var(--color-text)] mb-12 text-center font-cormorant">Gerelateerde Artikelen</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {getAllBlogPosts()
-              .filter((p) => p.slug !== post.slug)
-              .slice(0, 2)
+              .filter((p) => p.slug !== post.slug && p.category === post.category)
+              .slice(0, 3)
               .map((rp) => (
                 <Link
                   key={rp.slug}

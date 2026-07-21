@@ -110,6 +110,7 @@ export default function Header() {
           {/* Separator */}
           <span className="w-px h-5 bg-[var(--color-border)]" />
 
+          <Link href="/partner-worden" className="text-[11px] font-bold text-emerald-700 hover:text-emerald-800 transition-colors whitespace-nowrap">🤝 Partner Worden</Link>
           <Link href="/blogs/nieuws" className="text-[11px] font-bold text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors whitespace-nowrap">📝 Blog</Link>
           <Link href="/gratis-gut-brain-gids" className="text-[11px] font-bold text-[var(--color-accent)] hover:text-[var(--color-primary)] transition-colors whitespace-nowrap">🎁 Gratis Gids</Link>
         </nav>
@@ -144,6 +145,7 @@ export default function Header() {
               </div>
             </div>
             {[
+              ["🤝 Partner Worden", "/partner-worden"],
               ["Blog", "/blogs/nieuws"],
               ["Over AmareNL", "/over-ons/"],
               ["Gratis Supplementen Wijzer", "/blogs/nieuws/supplementen-wijzer-gratis"],
