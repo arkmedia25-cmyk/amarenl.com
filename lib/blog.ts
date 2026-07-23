@@ -2897,6 +2897,12 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "NeuCollagen", url: `${AFFILIATE_BASE}/neucollagen`, isInternal: false, price: "~€90/maand", tagline: "6-dimensionaal collageen — huid, haar, nagels & gewrichten" },
     { name: "Sunrise", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "IJzer + Zink + Vitamine C + B-complex — complete basis" },
   ],
+  "middagdip-oplossen-zonder-koffie-nitro-xtreme": [
+    { name: "Nitro Xtreme", url: "/nitro-xtreme", isInternal: true, price: "€53.74/maand", tagline: "Sublinguaal concentraat — CoQ10, B-vitamines & chroom voor cellulaire energie" },
+    { name: "Amare Nitro Xtreme", url: `${AFFILIATE_BASE}/nitro-xtreme`, isInternal: false, price: "€53.74/maand", tagline: "Sublinguaal — directe opname, geen cafeïnecrash" },
+    { name: "Sunrise", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "Ochtendbasis van de Triangle of Wellness" },
+    { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Avondherstel van de Triangle of Wellness" },
+  ],
 };
 
 export function getProductLinksForArticle(slug: string): ProductLink[] {
