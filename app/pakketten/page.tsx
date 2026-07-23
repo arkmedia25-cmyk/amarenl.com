@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     question: "Welk Launch Pack past bij mij?",
-    answer: "Pro (€649,64/maand) = volledig assortiment, hoogste commissie. Triangle (€511,21/maand) = 3x sets om te delen. Zelf Samenstellen = eigen producten + €35 licentiekosten. Laat je gegevens achter, dan helpen we je persoonlijk kiezen."
+    answer: "Pro (eenmalig €649,64) = volledig assortiment, hoogste commissie. Triangle (eenmalig €511,21) = 3x sets om te delen. Zelf Samenstellen = eigen producten + €35 licentiekosten. Laat je gegevens achter, dan helpen we je persoonlijk kiezen."
   },
   {
     question: "Hoeveel kan ik verdienen?",

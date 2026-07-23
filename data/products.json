@@ -66,10 +66,11 @@
     },
     "pricing": {
       "subscription": 649.64,
-      "oneTime": 721.1,
+      "oneTime": 649.64,
       "currency": "EUR",
-      "savings": 71.46,
-      "savingsPercent": 9.9
+      "oneTimeOnly": true,
+      "savings": 0,
+      "savingsPercent": 0
     },
     "images": {
       "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Happy-Lifestyle-Pack-Pro-EU-new-800.jpg",
@@ -379,10 +380,11 @@
     },
     "pricing": {
       "subscription": 511.21,
-      "oneTime": 568.01,
+      "oneTime": 511.21,
       "currency": "EUR",
-      "savings": 56.8,
-      "savingsPercent": 10
+      "oneTimeOnly": true,
+      "savings": 0,
+      "savingsPercent": 0
     },
     "images": {
       "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Triangle-of-Wellness-Xtreme-EU-800.jpg",

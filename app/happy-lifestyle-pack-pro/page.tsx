@@ -5,7 +5,7 @@ import { ShoppingCart, CheckCircle2, Rocket, Users, BookOpen, Headphones } from 
 
 export const metadata: Metadata = {
   title: "Happy Lifestyle Pack Pro — Volledig Amare Brand Partner Pakket | AmareNL",
-  description: "Start als Premium Amare Brand Partner met het Pro pakket. Volledig assortiment, hoogste commissie, exclusieve events. €649,64/maand. Direct bestellen bij Amare.",
+  description: "Start als Premium Amare Brand Partner met het Pro pakket. Volledig assortiment, hoogste commissie, exclusieve events. Eenmalig €649,64. Direct bestellen bij Amare.",
   alternates: { canonical: "/happy-lifestyle-pack-pro" },
   openGraph: { title: "Happy Lifestyle Pack Pro — Premium Brand Partner | AmareNL", description: "Het meest complete Amare startpakket. Volledig assortiment + hoogste commissie.", url: "/happy-lifestyle-pack-pro", siteName: "AmareNL", locale: "nl_NL" },
 };
@@ -15,14 +15,14 @@ const faqs = [
   { question: "Wat is het verschil tussen Basic en Pro?", answer: "Pro geeft je het volledige assortiment (niet slechts een selectie), het hoogste commissiepercentage, toegang tot exclusieve Brand Partner events, persoonlijke coaching, en premium marketingmateriaal. Basic is de voordeligere instap met een selectie van de belangrijkste producten." },
   { question: "Hoeveel commissie verdien ik met het Pro pack?", answer: "Met het Pro pack krijg je het hoogste commissiepercentage op al je verkopen — zowel eenmalige aankopen als terugkerende abonnementen. Hoe meer je deelt, hoe meer je verdient. Veel Pro partners bouwen een stabiel maandelijks inkomen op." },
   { question: "Kan ik later upgraden van Basic naar Pro?", answer: "Ja, je kunt op elk moment upgraden. Neem contact op met Amare of je sponsor voor de upgrade mogelijkheden." },
-  { question: "Is er een geld-terug garantie op het Pro pack?", answer: "Launch Packs zijn business starter kits. Dit is een investering in je eigen Brand Partner business. Twijfel je? Begin met het Basic pack (€277,68/maand) als voordeligere instap." },
+  { question: "Is er een geld-terug garantie op het Pro pack?", answer: "Launch Packs zijn business starter kits — een eenmalige aankoop, geen abonnement. Dit is een investering in je eigen Brand Partner business. Twijfel je? Begin met het Basic pack (€277,68 eenmalig) als voordeligere instap." },
 ];
 
 export default function HappyLifestyleProPage() {
   return (
     <div className="bg-white min-h-screen font-nunito">
       <SchemaMarkup schema={combineSchemas(
-        generateProductSchema({ name: "Happy Lifestyle Pack Pro", nameNL: "Happy Lifestyle Pack — Pro", description: "Het meest complete Amare Brand Partner startpakket. Volledig assortiment + hoogste commissie.", image: "https://amarecdn.azureedge.net/webassets/web/prod/products/Happy-Lifestyle-Pack-Pro-EU-new-800.jpg", slug: "happy-lifestyle-pack-pro", priceRetail: 721.10, priceSubscription: 649.64, ratingValue: 4.9, ratingCount: 234, affiliateUrl: "https://www.amare.com/2075008/nl-nl/happy-lifestyle-pack-pro" }),
+        generateProductSchema({ name: "Happy Lifestyle Pack Pro", nameNL: "Happy Lifestyle Pack — Pro", description: "Het meest complete Amare Brand Partner startpakket. Volledig assortiment + hoogste commissie.", image: "https://amarecdn.azureedge.net/webassets/web/prod/products/Happy-Lifestyle-Pack-Pro-EU-new-800.jpg", slug: "happy-lifestyle-pack-pro", priceRetail: 649.64, priceSubscription: 649.64, oneTimeOnly: true, ratingValue: 4.9, ratingCount: 234, affiliateUrl: "https://www.amare.com/2075008/nl-nl/happy-lifestyle-pack-pro" }),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Startpakketten", url: "/startpakketten" }, { name: "Happy Lifestyle Pack Pro", url: "/happy-lifestyle-pack-pro" }])
       )} id="pro-schema" />
@@ -41,9 +41,9 @@ export default function HappyLifestyleProPage() {
                 <span className="bg-white/20 px-3 py-1 rounded-full text-xs">📦 Volledig assortiment</span>
               </div>
               <div className="bg-white/10 rounded-xl p-4 inline-block">
-                <p className="text-sm text-white/70">Abonnement</p>
-                <p className="text-3xl font-bold">€649,64<span className="text-lg font-normal text-white/70">/maand</span></p>
-                <p className="text-xs text-white/50">Eenmalig: €721,10</p>
+                <p className="text-sm text-white/70">Eenmalige aankoop</p>
+                <p className="text-3xl font-bold">€649,64</p>
+                <p className="text-xs text-white/50">Geen abonnement — je koopt dit pakket eenmalig om Brand Partner te worden</p>
               </div>
             </div>
           </div>
