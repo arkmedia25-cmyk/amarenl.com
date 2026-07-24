@@ -2903,6 +2903,9 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "Sunrise", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "Ochtendbasis van de Triangle of Wellness" },
     { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Avondherstel van de Triangle of Wellness" },
   ],
+  "natuurlijke-slaap-supplementen-beter-slapen-zonder-melatonine": [
+    { name: "Sleep+", url: `${AFFILIATE_BASE}/sleep-plus`, isInternal: false, tagline: "Magnesium + L-theanine + GABA + ashwagandha — melatoninevrije slaapformule" },
+  ],
 };
 
 export function getProductLinksForArticle(slug: string): ProductLink[] {
