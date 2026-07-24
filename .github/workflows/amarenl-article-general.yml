@@ -1,0 +1,62 @@
+name: AmareNL — Genel Makale (2 günde bir)
+
+on:
+  schedule:
+    # 23:00 UTC = 02:00 TRT, om de 2 dagen
+    - cron: "0 23 */2 * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: amarenl-article-publish
+  cancel-in-progress: false
+
+jobs:
+  generate-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate article (DeepSeek, non-streaming)
+        id: generate
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: node scripts/generate-article.mjs general
+
+      - name: Type-check
+        run: npx tsc --noEmit -p tsconfig.json
+
+      - name: Build (production sanity check)
+        run: npm run build
+
+      - name: Commit and push
+        run: |
+          git config user.name "AmareNL Article Bot"
+          git config user.email "actions@github.com"
+          git add data/extra-articles.json public/sitemap.xml
+          git commit -m "publish: ${{ steps.generate.outputs.slug }} (auto — general)"
+          git push origin main
+
+      - name: Deploy to Vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        run: |
+          npx vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
+          npx vercel build --prod --token="$VERCEL_TOKEN"
+          npx vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN"
