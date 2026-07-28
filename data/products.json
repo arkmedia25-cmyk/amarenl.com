@@ -7,8 +7,8 @@
     "category": "hersenen",
     "taglineNL": "Mentale focus & veerkracht",
     "description": {
-      "short": "Mentale focus & veerkracht",
-      "long": "Amare Happy Juice Pack® - Amare EDGE+™ Mango is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+      "short": "Bundel van EDGE+ Mango, Energy+ en MentaBiotics voor complete mentale ondersteuning",
+      "long": "Het Amare Happy Juice Pack® combineert drie mentale-wellnessproducten in één bundel: Amare EDGE+™ Mango (cafeïnevrij nootropicum voor focus), Energy+ (natuurlijke energie zonder crash) en MentaBiotics® (probiotica voor mentale veerkracht). Samen bieden ze een holistische aanpak voor energie, focus, stemming en darmgezondheid — de drie pijlers van de gut-brain connectie."
     },
     "pricing": {
       "subscription": 155.33,
@@ -22,14 +22,15 @@
       "alt": "Amare Happy Juice Pack® - Amare EDGE+™ Mango — Amare supplement"
     },
     "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
+      "Complete gut-brain ondersteuning in één pakket",
+      "Combineert focus (EDGE+), energie (Energy+) en darmgezondheid (MentaBiotics)",
+      "Cafeïnevrije focus-ondersteuning",
+      "Drie producten, één samenhangende dagelijkse routine"
     ],
     "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+      "dosage": "1 stick/sachet van elk product, dagelijks.",
+      "timing": "Volgens de aanbevolen inname per product; niet op een lege maag.",
+      "duration": "Eerste effecten doorgaans na 3-4 weken consistent gebruik."
     },
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/happy-juice-edge-plus-mango",
@@ -51,7 +52,28 @@
     "isPack": false,
     "priority": 1,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
+    "updatedAt": "2026-05-17",
+    "mechanismNL": "Neem dagelijks 1 stick EDGE+ (250 ml water), 1 sachet Energy+ (250 ml water) en 1 stick MentaBiotics (250 ml water), elk volgens de eigen aanbevolen inname. Vitamine C in Energy+ ondersteunt het energiemetabolisme; magnesium in MentaBiotics draagt bij aan normaal psychologisch functioneren.",
+    "ingredients": [
+      {
+        "name": "1x Amare EDGE+™ Mango",
+        "amount": "Cafeïnevrij nootropicum"
+      },
+      {
+        "name": "1x Energy+",
+        "amount": "Inuline, glycine, vitamine C, plantextracten"
+      },
+      {
+        "name": "1x MentaBiotics®",
+        "amount": "3 bacteriestammen, vezels, magnesium"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "In welke volgorde gebruik ik de drie producten?",
+        "a": "Je kunt ze op elk gewenst moment van de dag nemen; veel gebruikers combineren EDGE+ 's ochtends met MentaBiotics en nemen Energy+ als middagboost."
+      }
+    ]
   },
   {
     "slug": "happy-lifestyle-pack-pro",
@@ -143,8 +165,8 @@
     "category": "essentials",
     "taglineNL": "Compleet dag-nacht systeem: energie, focus en herstel in één pakket",
     "description": {
-      "short": "Dagelijkse basisondersteuning",
-      "long": "Triangle of Wellness Xtreme™ is Amare's meest complete supplementensysteem. Drie op elkaar afgestemde producten — Sunrise (ochtend), Nitro Xtreme (middag) en Sunset (avond) — werken synergetisch samen om je natuurlijke circadiaanse ritme te ondersteunen. Het enige pakket dat je hele dag dekt: van ochtendenergie tot diepe nachtrust. Wetenschappelijk onderbouwd, gemaakt met natuurlijke ingrediënten, en de slimste keuze voor wie serieus werk wil maken van zijn dagelijkse vitaliteit."
+      "short": "Dag-nacht systeem van Sunrise, Nitro Xtreme en Sunset voor complete dagelijkse ondersteuning",
+      "long": "Triangle of Wellness Xtreme™ combineert drie complementaire producten tot één dag-nacht systeem: Amare Sunrise™ (een mix van 21 superfoods en 9 vitamines om de ochtend te starten), Amare Nitro Xtreme™ (met nonivruchtenconcentraat, de 'verbindende factor' die helpt bij opname) en Amare Sunset™ (met omega-3 uit vis en vitamine E voor de avond). Samen ondersteunen ze energie, immuunsysteem en herstel gedurende de hele dag."
     },
     "pricing": {
       "subscription": 123.55,
@@ -158,17 +180,15 @@
       "alt": "Triangle of Wellness Xtreme™ — Amare supplement"
     },
     "benefits": [
-      "Complete dag-nacht dekking — energie, focus én herstel",
-      "Drie producten synergetisch op elkaar afgestemd",
-      "Voordeliger dan los kopen (bespaar tot 25%)",
-      "Volgt je natuurlijke circadiaanse ritme",
-      "30 dagen geld-terug garantie",
-      "Premium kwaliteit — wetenschappelijk onderbouwd"
+      "Compleet dag-nacht systeem: energie, focus en herstel",
+      "9 vitamines dragen bij aan energiemetabolisme en vermindering van vermoeidheid",
+      "Omega-3 en vitamine E in Sunset voor de avond",
+      "21 superfoods in Sunrise voor de ochtend"
     ],
     "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+      "dosage": "1 pouch Sunrise (30 ml) 's ochtends; Nitro Xtreme volgens eigen dosering overdag; Sunset 's avonds.",
+      "timing": "Sunrise 's ochtends, Sunset 's avonds — een dag-nacht ritme.",
+      "duration": "Onderdeel van een dagelijkse routine voor doorlopende ondersteuning."
     },
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/triangle-of-wellness-xtreme",
@@ -204,7 +224,36 @@
       "average": 4.8,
       "count": 420,
       "source": "Amare Global"
-    }
+    },
+    "mechanismNL": "Begin je dag met 1 pouch Sunrise (30 ml). De 9 vitamines dragen onder andere bij aan een normaal energieleverend metabolisme, normale werking van het zenuwstelsel en vermindering van vermoeidheid, mits aanwezig in voldoende hoeveelheid volgens EU-Verordening 432/2012.",
+    "ingredients": [
+      {
+        "name": "Amare Sunrise™",
+        "amount": "21 superfoods, 9 vitamines — ochtend"
+      },
+      {
+        "name": "Amare Nitro Xtreme™",
+        "amount": "Nonivruchtenconcentraat — verbindende factor"
+      },
+      {
+        "name": "Amare Sunset™",
+        "amount": "Omega-3 (vis), vitamine E — avond"
+      },
+      {
+        "name": "Vitamine C, B1, B2, B3, B5, B6, B12, foliumzuur, biotine",
+        "amount": "9 vitamines in Sunrise"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Wat zit er in Triangle of Wellness Xtreme?",
+        "a": "Het pakket bevat Amare Sunrise™, Amare Nitro Xtreme™ en Amare Sunset™ — een compleet dag-nacht systeem."
+      },
+      {
+        "q": "Wat is het verschil tussen de 1-, 2-, 3- en 6-pack?",
+        "a": "Dezelfde drie producten in dezelfde samenstelling — alleen de hoeveelheid maanden voorraad verschilt, met oplopend voordeel bij grotere packs."
+      }
+    ]
   },
   {
     "slug": "happy-juice-pack-amare-edge-watermelon",
@@ -214,8 +263,8 @@
     "category": "hersenen",
     "taglineNL": "Mentale focus & veerkracht",
     "description": {
-      "short": "Mentale focus & veerkracht",
-      "long": "Amare Happy Juice Pack® - Amare EDGE+™ Watermelon is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+      "short": "Bundel van EDGE+ Watermelon, Energy+ en MentaBiotics voor complete mentale ondersteuning",
+      "long": "Het Amare Happy Juice Pack® combineert drie mentale-wellnessproducten in één bundel: Amare EDGE+™ Watermelon (cafeïnevrij nootropicum voor focus), Energy+ (natuurlijke energie zonder crash) en MentaBiotics® (probiotica voor mentale veerkracht). Samen bieden ze een holistische aanpak voor energie, focus, stemming en darmgezondheid — de drie pijlers van de gut-brain connectie."
     },
     "pricing": {
       "subscription": 155.33,
@@ -229,14 +278,15 @@
       "alt": "Amare Happy Juice Pack® - Amare EDGE+™ Watermelon — Amare supplement"
     },
     "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
+      "Complete gut-brain ondersteuning in één pakket",
+      "Combineert focus (EDGE+), energie (Energy+) en darmgezondheid (MentaBiotics)",
+      "Cafeïnevrije focus-ondersteuning",
+      "Drie producten, één samenhangende dagelijkse routine"
     ],
     "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+      "dosage": "1 stick/sachet van elk product, dagelijks.",
+      "timing": "Volgens de aanbevolen inname per product; niet op een lege maag.",
+      "duration": "Eerste effecten doorgaans na 3-4 weken consistent gebruik."
     },
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/happy-juice-edge-plus-watermelon",
@@ -258,7 +308,23 @@
     "isPack": false,
     "priority": 2,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
+    "updatedAt": "2026-05-17",
+    "mechanismNL": "Neem dagelijks 1 stick EDGE+ (250 ml water), 1 sachet Energy+ (250 ml water) en 1 stick MentaBiotics (250 ml water), elk volgens de eigen aanbevolen inname. Vitamine C in Energy+ ondersteunt het energiemetabolisme; magnesium in MentaBiotics draagt bij aan normaal psychologisch functioneren.",
+    "ingredients": [
+      {
+        "name": "1x Amare EDGE+™ Watermelon",
+        "amount": "Cafeïnevrij nootropicum"
+      },
+      {
+        "name": "1x Energy+",
+        "amount": "Inuline, glycine, vitamine C, plantextracten"
+      },
+      {
+        "name": "1x MentaBiotics®",
+        "amount": "3 bacteriestammen, vezels, magnesium"
+      }
+    ],
+    "faqs": []
   },
   {
     "slug": "hl5-peach",
@@ -583,8 +649,8 @@
     "category": "hersenen",
     "taglineNL": "Mentale focus & veerkracht",
     "description": {
-      "short": "Mentale focus & veerkracht",
-      "long": "Amare ON is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+      "short": "Focus-drankje met natuurlijke guarana-cafeïne en nootropics",
+      "long": "Amare ON combineert de kracht van natuurlijke guarana-cafeïne voor duurzame energie met een mix van geoptimaliseerde nootropics — waaronder Bacopa monnieri, ashwagandha, groene thee-extract en citicoline — ontworpen om concentratie, aandacht en helderheid te ondersteunen. Met slechts 3 gram suiker en 30 calorieën levert ON een boost zonder de suikerpiek en -dip van gangbare energiedrankjes."
     },
     "pricing": {
       "subscription": 27.41,
@@ -598,14 +664,15 @@
       "alt": "Amare ON — Amare supplement"
     },
     "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
+      "Duurzame energie uit natuurlijke guarana-cafeïne",
+      "Ondersteunt aandacht, focus en helderheid via nootropics",
+      "Slechts 3 gram suiker en 30 calorieën",
+      "Vegan, lactosevrij en Cologne List-conform"
     ],
     "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+      "dosage": "1 volledig zakje (60 ml), maximaal 3 per dag op basis van cafeïnegehalte.",
+      "timing": "Niet op een lege maag; effect duurt doorgaans 4-6 uur.",
+      "duration": "Plan je slaapschema rond het gebruik gezien de werkingsduur."
     },
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/onshots",
@@ -627,7 +694,44 @@
     "isPack": false,
     "priority": 4,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
+    "updatedAt": "2026-05-17",
+    "mechanismNL": "ON bevat vitamines B1, B2, B3, B6 en B12, die bijdragen aan de normale werking van het zenuwstelsel, normale psychologische functie en vermindering van vermoeidheid en moeheid. De natuurlijke cafeïne uit guarana stimuleert het centrale zenuwstelsel en verhoogt in gematigde doses de alertheid.",
+    "ingredients": [
+      {
+        "name": "Guaranazaadextract (cafeïne)",
+        "amount": "Getitreerd op cafeïnegehalte"
+      },
+      {
+        "name": "Groene thee-extract (theanine)",
+        "amount": "Getitreerd op theanine"
+      },
+      {
+        "name": "Bacopa monnieri",
+        "amount": "Hele plant extract"
+      },
+      {
+        "name": "Ashwagandhawortelextract",
+        "amount": ""
+      },
+      {
+        "name": "Citicoline, L-citrulline, taurine",
+        "amount": ""
+      },
+      {
+        "name": "Vitamines B1, B2, B3, B6, B12",
+        "amount": ""
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Hoeveel cafeïne zit er in Amare ON?",
+        "a": "De cafeïne is afkomstig van natuurlijk guaranazaadextract en getitreerd; maximaal 3 zakjes per dag wordt aangeraden op basis van het cafeïnegehalte."
+      },
+      {
+        "q": "Is ON geschikt voor kinderen of zwangere vrouwen?",
+        "a": "Nee, ON wordt afgeraden voor kinderen, zwangere of borstvoedende vrouwen en mensen die gevoelig zijn voor cafeïne."
+      }
+    ]
   },
   {
     "slug": "on-4-pack",
@@ -637,8 +741,8 @@
     "category": "hersenen",
     "taglineNL": "Mentale focus & veerkracht",
     "description": {
-      "short": "Mentale focus & veerkracht",
-      "long": "Amare ON 4-Pack is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+      "short": "4-pack van Amare ON — focus-drankje met natuurlijke guarana-cafeïne",
+      "long": "Het Amare ON 4-Pack biedt een voordelige voorraad van hetzelfde focus-drankje: natuurlijke guarana-cafeïne gecombineerd met nootropics als Bacopa monnieri, ashwagandha en citicoline, voor duurzame energie en mentale helderheid met slechts 3 gram suiker en 30 calorieën per zakje."
     },
     "pricing": {
       "subscription": 98.37,
@@ -652,14 +756,15 @@
       "alt": "Amare ON 4-Pack — Amare supplement"
     },
     "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
+      "Voordelige 4-pack van het populaire ON focus-drankje",
+      "Duurzame energie zonder suikerpiek (3g suiker, 30 kcal)",
+      "Ondersteunt aandacht, focus en helderheid",
+      "Vegan, lactosevrij en Cologne List-conform"
     ],
     "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+      "dosage": "1 volledig zakje (60 ml) per keer, maximaal 3 per dag.",
+      "timing": "Niet op een lege maag; effect duurt doorgaans 4-6 uur.",
+      "duration": "4 zakjes per pack — voorraad voor meerdere gebruiksmomenten."
     },
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/onshots-4pack",
@@ -681,7 +786,23 @@
     "isPack": false,
     "priority": 5,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
+    "updatedAt": "2026-05-17",
+    "mechanismNL": "Elk zakje bevat vitamines B1, B2, B3, B6 en B12 die bijdragen aan de normale werking van het zenuwstelsel en vermindering van vermoeidheid. Neem 1 volledig zakje (60 ml), goed geschud, tot maximaal 3 per dag.",
+    "ingredients": [
+      {
+        "name": "Guaranazaadextract (cafeïne)",
+        "amount": "Getitreerd op cafeïnegehalte"
+      },
+      {
+        "name": "Groene thee-extract, Bacopa monnieri, ashwagandha",
+        "amount": ""
+      },
+      {
+        "name": "Vitamines B1, B2, B3, B6, B12",
+        "amount": ""
+      }
+    ],
+    "faqs": []
   },
   {
     "slug": "energy",
@@ -1115,8 +1236,8 @@
     "category": "hersenen",
     "taglineNL": "Mentale focus & veerkracht",
     "description": {
-      "short": "Mentale focus & veerkracht",
-      "long": "Amare EDGE+™ Watermelon is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+      "short": "Cafeïnevrij nootropicum voor focus, met watermeloensmaak",
+      "long": "Amare EDGE+™ Watermelon is een cafeïnevrij, plantaardig nootropicum dat mentale helderheid en focus ondersteunt via pantotheenzuur (vitamine B5) en zorgvuldig gekozen adaptogene plantenextracten — mango-extract, gojivrucht (Lycium barbarum) en wierook (Boswellia serrata). Zonder cafeïne, synthetische stimulanten of proprietary blends: elke stof is bewust gekozen voor kalme, aanhoudende focus."
     },
     "pricing": {
       "subscription": 77.28,
@@ -1130,14 +1251,15 @@
       "alt": "Amare EDGE+™ Watermelon — Amare supplement"
     },
     "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
+      "Cafeïnevrij — geschikt voor cafeïnegevoeligen",
+      "Ondersteunt kalme, aanhoudende focus zonder crash",
+      "Plantaardige adaptogenen: mango, goji, wierook, zwarte mirabolaan",
+      "Ook geschikt voor de middag zonder invloed op nachtrust"
     ],
     "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+      "dosage": "1 stick mengen met 250 ml water.",
+      "timing": "Dagelijks, geschikt voor ochtend of middag — cafeïnevrij, verstoort de nachtrust niet.",
+      "duration": "Eerste effecten na 3-4 weken consistent gebruik."
     },
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/amareedge-plus-watermelon",
@@ -1155,7 +1277,44 @@
     "isPack": false,
     "priority": 9,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
+    "updatedAt": "2026-05-17",
+    "mechanismNL": "Meng 1 stick met 250 ml water en drink dagelijks. Pantotheenzuur draagt bij aan een normaal energieleverend metabolisme, normale mentale prestaties en vermindering van vermoeidheid en moeheid.",
+    "ingredients": [
+      {
+        "name": "Isomalto-oligosacharide",
+        "amount": "Prebiotische vezel"
+      },
+      {
+        "name": "Pantotheenzuur (vitamine B5)",
+        "amount": "D-calciumpantothenaat"
+      },
+      {
+        "name": "Extract van zwarte mirabolaan (Terminalia chebula)†",
+        "amount": ""
+      },
+      {
+        "name": "Mango (Mangifera indica) vruchtextract",
+        "amount": ""
+      },
+      {
+        "name": "Wierook (Boswellia serrata) gom-hars extract†",
+        "amount": ""
+      },
+      {
+        "name": "Goji (Lycium barbarum) vruchtextract",
+        "amount": ""
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Bevat EDGE+ Watermelon cafeïne?",
+        "a": "Nee, EDGE+ is volledig cafeïnevrij. De focus-ondersteuning komt van pantotheenzuur (vitamine B5) en plantaardige adaptogenen."
+      },
+      {
+        "q": "Wat is het verschil met EDGE+ Mango?",
+        "a": "Dezelfde cafeïnevrije formule met dezelfde werkzame ingrediënten — het enige verschil is de smaak."
+      }
+    ]
   },
   {
     "slug": "restore",
@@ -1986,8 +2145,8 @@
     "category": "essentials",
     "taglineNL": "Dagelijkse basisondersteuning",
     "description": {
-      "short": "Dagelijkse basisondersteuning",
-      "long": "Amare Xtreme 56ml 2-Pack is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+      "short": "Amare Nitro Xtreme 56ml — 2-pack, de verbindende factor van de Triangle of Wellness",
+      "long": "Amare Xtreme 56ml 2-Pack bevat twee flessen Nitro Xtreme, geformuleerd met een hoge concentratie nonivruchtconcentraat plus extra componenten voor een extra boost. Nitro Xtreme is de 'verbindende factor' binnen de Triangle of Wellness en bevat zink, chroom en de vitamines B1 en B3, die bijdragen aan een normaal energieleverend metabolisme."
     },
     "pricing": {
       "subscription": 100.66,
@@ -2001,14 +2160,15 @@
       "alt": "Amare Xtreme 56ml 2-Pack — Amare supplement"
     },
     "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
+      "Ondersteunt een normaal energieleverend metabolisme",
+      "Zink draagt bij aan macronutriënten- en vetzuurmetabolisme",
+      "Chroom draagt bij aan instandhouding van normale bloedsuikerspiegel",
+      "Vegan en lactosevrij"
     ],
     "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+      "dosage": "1 ml (20 druppels), tot 3 keer per dag — maximaal 60 druppels (3 ml) per dag.",
+      "timing": "Bij voorkeur vóór Sunrise en Sunset voor optimale opname.",
+      "duration": "2-pack biedt 2 maanden voorraad bij regelmatig gebruik."
     },
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/nitro-xtreme-56ml-2pack",
@@ -2026,7 +2186,36 @@
     "isPack": true,
     "priority": 15,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
+    "updatedAt": "2026-05-17",
+    "mechanismNL": "Gebruik 1 ml (20 druppels) tot drie keer per dag, goed geschud vóór gebruik. Neem Nitro bij voorkeur vóór Sunrise en Sunset voor optimale opname van voedingsstoffen gedurende de dag.",
+    "ingredients": [
+      {
+        "name": "Nonivruchtconcentraat",
+        "amount": "Amare's eigen mengsel, extra geconcentreerd t.o.v. Nitro FX"
+      },
+      {
+        "name": "Zinksulfaat",
+        "amount": "Draagt bij aan macronutriënten- en vetzuurmetabolisme"
+      },
+      {
+        "name": "Chroom(III)chloride",
+        "amount": "Draagt bij aan normale bloedsuikerspiegel"
+      },
+      {
+        "name": "Thiamine (B1), Nicotinamide (B3)",
+        "amount": "Energieleverend metabolisme"
+      },
+      {
+        "name": "Micro-ingekapseld co-enzym Q10",
+        "amount": ""
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Wat is het verschil tussen Nitro FX en Nitro Xtreme?",
+        "a": "Beide bevatten Amare's nonivruchtconcentraat, maar Nitro Xtreme bevat een hogere concentratie plus extra componenten voor een extra boost."
+      }
+    ]
   },
   {
     "slug": "triangle-of-wellness-xtreme-2-pack",
@@ -2036,8 +2225,8 @@
     "category": "essentials",
     "taglineNL": "Dagelijkse basisondersteuning",
     "description": {
-      "short": "Dagelijkse basisondersteuning",
-      "long": "Triangle of Wellness Xtreme™ 2-Pack is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+      "short": "Triangle of Wellness Xtreme — 2 maanden voorraad met voordeel",
+      "long": "De 2-pack van Triangle of Wellness Xtreme™ bevat twee maanden voorraad van hetzelfde dag-nacht systeem — Amare Sunrise™, Nitro Xtreme™ en Sunset™ — tegen een voordeliger prijs per maand dan losse aankoop. Ideaal als je het systeem al kent en niet elke maand opnieuw wilt bestellen."
     },
     "pricing": {
       "subscription": 205.96,
@@ -2051,14 +2240,15 @@
       "alt": "Triangle of Wellness Xtreme™ 2-Pack — Amare supplement"
     },
     "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
+      "2 maanden voorraad tegen een voordeliger prijs per maand",
+      "Compleet dag-nacht systeem: energie, focus en herstel",
+      "Geen maandelijkse herbestelling nodig",
+      "Zelfde bewezen samenstelling als de losse versie"
     ],
     "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+      "dosage": "1 pouch Sunrise 's ochtends, Nitro Xtreme overdag, Sunset 's avonds.",
+      "timing": "Dagelijks dag-nacht ritme, 2 maanden voorraad.",
+      "duration": "2 maanden ononderbroken gebruik."
     },
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/triangle-of-wellness-xtreme-2pack",
@@ -2076,7 +2266,23 @@
     "isPack": true,
     "priority": 20,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
+    "updatedAt": "2026-05-17",
+    "mechanismNL": "Begin elke dag met 1 pouch Sunrise (30 ml), gebruik Nitro Xtreme overdag en sluit af met Sunset 's avonds — twee maanden lang.",
+    "ingredients": [
+      {
+        "name": "2x Amare Sunrise™",
+        "amount": "21 superfoods, 9 vitamines — ochtend"
+      },
+      {
+        "name": "2x Amare Nitro Xtreme™",
+        "amount": "Nonivruchtenconcentraat"
+      },
+      {
+        "name": "2x Amare Sunset™",
+        "amount": "Omega-3 (vis), vitamine E — avond"
+      }
+    ],
+    "faqs": []
   },
   {
     "slug": "triangle-of-wellness-xtreme-3-pack",
@@ -2086,8 +2292,8 @@
     "category": "essentials",
     "taglineNL": "Dagelijkse basisondersteuning",
     "description": {
-      "short": "Dagelijkse basisondersteuning",
-      "long": "Triangle of Wellness Xtreme™ 3-Pack is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+      "short": "Triangle of Wellness Xtreme — 3 maanden voorraad met voordeel",
+      "long": "De 3-pack van Triangle of Wellness Xtreme™ bevat drie maanden voorraad van hetzelfde dag-nacht systeem — Amare Sunrise™, Nitro Xtreme™ en Sunset™ — tegen het beste voordeel per maand. Ideaal voor wie het systeem structureel wil integreren in de dagelijkse routine zonder vaak te herbestellen."
     },
     "pricing": {
       "subscription": 320.41,
@@ -2101,14 +2307,15 @@
       "alt": "Triangle of Wellness Xtreme™ 3-Pack — Amare supplement"
     },
     "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
+      "3 maanden voorraad tegen het beste prijsvoordeel per maand",
+      "Compleet dag-nacht systeem: energie, focus en herstel",
+      "Ideaal voor structureel dagelijks gebruik",
+      "Zelfde bewezen samenstelling als de losse versie"
     ],
     "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+      "dosage": "1 pouch Sunrise 's ochtends, Nitro Xtreme overdag, Sunset 's avonds.",
+      "timing": "Dagelijks dag-nacht ritme, 3 maanden voorraad.",
+      "duration": "3 maanden ononderbroken gebruik."
     },
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/triangle-of-wellness-xtreme-3pack",
@@ -2126,7 +2333,23 @@
     "isPack": true,
     "priority": 21,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
+    "updatedAt": "2026-05-17",
+    "mechanismNL": "Begin elke dag met 1 pouch Sunrise (30 ml), gebruik Nitro Xtreme overdag en sluit af met Sunset 's avonds — drie maanden lang.",
+    "ingredients": [
+      {
+        "name": "3x Amare Sunrise™",
+        "amount": "21 superfoods, 9 vitamines — ochtend"
+      },
+      {
+        "name": "3x Amare Nitro Xtreme™",
+        "amount": "Nonivruchtenconcentraat"
+      },
+      {
+        "name": "3x Amare Sunset™",
+        "amount": "Omega-3 (vis), vitamine E — avond"
+      }
+    ],
+    "faqs": []
   },
   {
     "slug": "xtreme-triangle-of-wellness-level-up",
@@ -2136,8 +2359,8 @@
     "category": "essentials",
     "taglineNL": "Dagelijkse basisondersteuning",
     "description": {
-      "short": "Dagelijkse basisondersteuning",
-      "long": "Xtreme Triangle of Wellness Level Up is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+      "short": "Triangle of Wellness Xtreme aangevuld met HL5 vloeibaar collageen",
+      "long": "Xtreme Triangle of Wellness Level Up voegt Amare HL5™ vloeibaar collageen toe aan het bewezen dag-nacht systeem van Sunrise, Nitro Xtreme en Sunset. HL5 bevat gehydrolyseerd collageen (5 g eiwit per portie), dat bijdraagt aan het behoud van normale botten en spiermassa. Dit pack combineert dagelijkse energie- en herstelondersteuning met huid-, haar- en gewrichtsondersteuning vanuit collageen."
     },
     "pricing": {
       "subscription": 176.2,
@@ -2151,14 +2374,15 @@
       "alt": "Xtreme Triangle of Wellness Level Up — Amare supplement"
     },
     "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
+      "Combineert het complete dag-nacht systeem met collageen",
+      "HL5 ondersteunt behoud van normale botten en spiermassa",
+      "Eiwit draagt bij aan groei van spiermassa",
+      "Complete 4-in-1 dagelijkse wellnessroutine"
     ],
     "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+      "dosage": "Sunrise 1 pouch, Nitro 1ml tot 3x daags, Sunset 3 capsules, HL5 1 sachet — allemaal dagelijks.",
+      "timing": "Sunrise 's ochtends, Sunset bij het diner, HL5 op een moment naar keuze.",
+      "duration": "Dagelijkse routine voor doorlopende ondersteuning."
     },
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/triangle-of-wellness-levelup-pack",
@@ -2176,7 +2400,32 @@
     "isPack": true,
     "priority": 22,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
+    "updatedAt": "2026-05-17",
+    "mechanismNL": "Sunrise 's ochtends (1 pouch, 30 ml), Nitro Xtreme overdag (1 ml / 20 druppels, tot 3x daags), Sunset 's avonds bij het diner (3 capsules), en HL5 dagelijks (1 sachet, 's ochtends, 's avonds of tussen de maaltijden).",
+    "ingredients": [
+      {
+        "name": "Amare Sunrise™",
+        "amount": "21 superfoods, 9 vitamines — ochtend"
+      },
+      {
+        "name": "Amare Nitro Xtreme™",
+        "amount": "Nonivruchtenconcentraat"
+      },
+      {
+        "name": "Amare Sunset™",
+        "amount": "Omega-3 (vis), vitamine E — avond"
+      },
+      {
+        "name": "Amare HL5™",
+        "amount": "Gehydrolyseerd collageen, 5g eiwit per portie"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Wat is het verschil met de reguliere Triangle of Wellness Xtreme?",
+        "a": "Level Up bevat exact hetzelfde dag-nacht systeem (Sunrise, Nitro Xtreme, Sunset), aangevuld met Amare HL5 vloeibaar collageen."
+      }
+    ]
   },
   {
     "slug": "triangle-of-wellness-xtreme-6-pack",
@@ -2186,8 +2435,8 @@
     "category": "essentials",
     "taglineNL": "Dagelijkse basisondersteuning",
     "description": {
-      "short": "Dagelijkse basisondersteuning",
-      "long": "Triangle of Wellness Xtreme™ 6-Pack is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+      "short": "Triangle of Wellness Xtreme — 6 maanden voorraad, maximaal voordeel",
+      "long": "De 6-pack van Triangle of Wellness Xtreme™ bevat een half jaar voorraad van hetzelfde dag-nacht systeem — Amare Sunrise™, Nitro Xtreme™ en Sunset™ — met het grootste prijsvoordeel per maand. De ideale keuze voor wie zeker weet dat dit systeem bij de dagelijkse routine past en voor lange tijd verzekerd wil zijn van voorraad."
     },
     "pricing": {
       "subscription": 613.4,
@@ -2201,14 +2450,15 @@
       "alt": "Triangle of Wellness Xtreme™ 6-Pack — Amare supplement"
     },
     "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
+      "6 maanden voorraad met het grootste prijsvoordeel per maand",
+      "Compleet dag-nacht systeem: energie, focus en herstel",
+      "Nooit meer zonder voorraad zitten",
+      "Zelfde bewezen samenstelling als de losse versie"
     ],
     "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+      "dosage": "1 pouch Sunrise 's ochtends, Nitro Xtreme overdag, Sunset 's avonds.",
+      "timing": "Dagelijks dag-nacht ritme, 6 maanden voorraad.",
+      "duration": "6 maanden ononderbroken gebruik."
     },
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/triangle-of-wellness-xtreme-6pack",
@@ -2226,7 +2476,23 @@
     "isPack": true,
     "priority": 23,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
+    "updatedAt": "2026-05-17",
+    "mechanismNL": "Begin elke dag met 1 pouch Sunrise (30 ml), gebruik Nitro Xtreme overdag en sluit af met Sunset 's avonds — zes maanden lang.",
+    "ingredients": [
+      {
+        "name": "6x Amare Sunrise™",
+        "amount": "21 superfoods, 9 vitamines — ochtend"
+      },
+      {
+        "name": "6x Amare Nitro Xtreme™",
+        "amount": "Nonivruchtenconcentraat"
+      },
+      {
+        "name": "6x Amare Sunset™",
+        "amount": "Omega-3 (vis), vitamine E — avond"
+      }
+    ],
+    "faqs": []
   },
   {
     "slug": "skin-to-mind-neuday-brighten-revitalize-serum",
@@ -2236,8 +2502,8 @@
     "category": "schoonheid",
     "taglineNL": "Huid, haar & nagels verzorging",
     "description": {
-      "short": "Huid, haar & nagels verzorging",
-      "long": "Skin to Mind NeuDay™ Brighten + Revitalize Serum is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+      "short": "Ochtendserum met HuG Cell-technologie™ voor een heldere, stralende huid",
+      "long": "Skin to Mind NeuDay™ Brighten + Revitalize Serum is een multi-action ochtendserum, samengesteld met gepatenteerde HuG Cell-technologie™, dat fijne lijntjes helpt verminderen en de huid zichtbaar verheldert voor een stralende, gezond ogende teint. Het is het ochtendritueel binnen de Skin to Mind™ lijn, ontworpen om huid en geest voor te bereiden op de dag."
     },
     "pricing": {
       "subscription": 87.58,
@@ -2251,14 +2517,15 @@
       "alt": "Skin to Mind NeuDay™ Brighten + Revitalize Serum — Amare supplement"
     },
     "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
+      "Vermindert fijne lijntjes",
+      "Verheldert de huid zichtbaar",
+      "Ondersteunt een stralende, gezond ogende teint",
+      "Werkt via duurzame HuG Cell-technologie™"
     ],
     "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+      "dosage": "2-4 pompjes per toepassing.",
+      "timing": "Elke ochtend, op een schone huid.",
+      "duration": "Onderdeel van een dagelijks ochtendritueel."
     },
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/skin-mind-neuday",
@@ -2276,7 +2543,20 @@
     "isPack": false,
     "priority": 24,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
+    "updatedAt": "2026-05-17",
+    "mechanismNL": "Breng elke ochtend 2-4 pompjes aan op een schone huid. Masseer zachtjes in gezicht en hals tot volledig opgenomen en volg met een vochtinbrengende crème en zonnebrandcrème. Gebruik 's avonds het bijpassende NeuNight™ Serum.",
+    "ingredients": [
+      {
+        "name": "HuG Cell-technologie™",
+        "amount": "Exclusief plantaardig complex, volledige plant benut i.p.v. alleen extract"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Wat is HuG Cell-technologie™?",
+        "a": "Een exclusief Amare-ingrediënt dat de volledige kracht van de plant benut in plaats van alleen een extract, met betere opname en een duurzame, onbeperkte vermenigvuldigingscapaciteit zonder de plant zelf te belasten."
+      }
+    ]
   },
   {
     "slug": "ignite-her",
@@ -2411,8 +2691,8 @@
     "category": "schoonheid",
     "taglineNL": "Huid, haar & nagels verzorging",
     "description": {
-      "short": "Huid, haar & nagels verzorging",
-      "long": "Skin to Mind NeuNight™ Restore + Renew Serum is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+      "short": "Rijk avondserum met HuG Cell-technologie™ voor nachtelijk huidherstel",
+      "long": "Skin to Mind NeuNight™ Restore + Renew Serum is een rijk crèmeserum, samengesteld met gepatenteerde HuG Cell-technologie™, dat de nachtelijke vochtverversing van de huid ondersteunt, fijne lijntjes vermindert en een stevige, jeugdig ogende huid bevordert. Het is het avondritueel binnen de Skin to Mind™ lijn — herstel van een stressvolle dag terwijl je slaapt."
     },
     "pricing": {
       "subscription": 97.89,
@@ -2426,14 +2706,15 @@
       "alt": "Skin to Mind NeuNight™ Restore + Renew Serum — Amare supplement"
     },
     "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
+      "Ondersteunt de nachtelijke vochtverversing van de huid",
+      "Vermindert fijne lijntjes",
+      "Bevordert een stevige, jeugdig ogende huid",
+      "Rijke, crèmige textuur voor 's avonds"
     ],
     "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+      "dosage": "2-4 pompjes per toepassing.",
+      "timing": "Elke avond, op een schone huid.",
+      "duration": "Onderdeel van een dagelijks avondritueel."
     },
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/skin-mind-neunight",
@@ -2451,7 +2732,20 @@
     "isPack": false,
     "priority": 25,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
+    "updatedAt": "2026-05-17",
+    "mechanismNL": "Breng 's avonds 2-4 pompjes aan op een schone huid. Masseer zachtjes in gezicht, hals en borst tot volledig opgenomen, om te ontspannen en voor te bereiden op nachtelijke vochtverversing. Volg indien nodig met een vochtinbrengende crème of gezichtsolie. Gebruik 's ochtends het bijpassende NeuDay™ Serum.",
+    "ingredients": [
+      {
+        "name": "HuG Cell-technologie™",
+        "amount": "Exclusief plantaardig complex, volledige plant benut i.p.v. alleen extract"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Kan ik dit serum ook overdag gebruiken?",
+        "a": "Het is speciaal samengesteld voor 's avonds, om aan te sluiten op het natuurlijke nachtelijke herstelproces van de huid. Gebruik overdag het NeuDay™ Serum."
+      }
+    ]
   },
   {
     "slug": "ignite-him",
@@ -2577,8 +2871,8 @@
     "category": "schoonheid",
     "taglineNL": "Huid, haar & nagels verzorging",
     "description": {
-      "short": "Huid, haar & nagels verzorging",
-      "long": "Skin to Mind OptiMIST™ Awaken + Glow Facial Mist is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+      "short": "Ultralichte gezichtsmist die een doffe huid direct verfrist",
+      "long": "Skin to Mind OptiMIST™ Awaken + Glow Facial Mist is een ultralichte gezichtsmist die een doffe, vermoeide of gestreste huid transformeert naar een gehydrateerde, zachte en stralende huid. De mist is ontworpen als 'all-day glow-to': gebruik hem 's ochtends om de toon te zetten, midden op de dag voor een oppepper, of wanneer je huid — of stemming — wat dof aanvoelt."
     },
     "pricing": {
       "subscription": 51.5,
@@ -2592,14 +2886,15 @@
       "alt": "Skin to Mind OptiMIST™ Awaken + Glow Facial Mist — Amare supplement"
     },
     "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
+      "Verfrist een doffe, vermoeide of gestreste huid direct",
+      "Fixeert of frist make-up op gedurende de dag",
+      "Ultralichte, niet-plakkerige formule",
+      "Draagbaar en geschikt voor onderweg"
     ],
     "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+      "dosage": "5-8 sprays op een gereinigd gezicht en hals.",
+      "timing": "'s Ochtends, tijdens de dag, of wanneer nodig als opfrisser.",
+      "duration": "Direct verfrissend effect."
     },
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/skin-mind-optimist",
@@ -2617,7 +2912,20 @@
     "isPack": false,
     "priority": 26,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
+    "updatedAt": "2026-05-17",
+    "mechanismNL": "Sprayen met gesloten ogen, 5-8 keer op een gereinigd gezicht en hals, vóór serum of moisturizer. Ook te gebruiken om make-up te fixeren of op te frissen gedurende de dag.",
+    "ingredients": [
+      {
+        "name": "Verfrissend hydraterend complex",
+        "amount": "Gezichtsmist"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Wanneer gebruik ik deze mist?",
+        "a": "Elk moment dat je huid of stemming een oppepper nodig heeft: 's ochtends, midden op de dag, of als fixatie over make-up heen."
+      }
+    ]
   },
   {
     "slug": "skin-to-mind-collection",
@@ -2627,8 +2935,8 @@
     "category": "schoonheid",
     "taglineNL": "Huid, haar & nagels verzorging",
     "description": {
-      "short": "Huid, haar & nagels verzorging",
-      "long": "Skin to Mind™ Collection is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+      "short": "Compleet dagelijks huidverzorgingsritueel gebaseerd op de huid-geestverbinding",
+      "long": "De Skin to Mind™ Collection is een dagelijks huidverzorgingsritueel gebaseerd op neurowetenschap, ontworpen om via de huid-geestverbinding te werken. De collectie helpt de huid reageren op dagelijkse veroudering, omgevings- en emotionele stressoren, en roept tegelijk een gevoel van welzijn op. De set bevat de OptiMIST™ Awaken + Glow Facial Mist, het NeuDay™ Brighten + Revitalize Serum voor overdag en het NeuNight™ Restore + Renew Serum voor 's nachts."
     },
     "pricing": {
       "subscription": 195.83,
@@ -2642,14 +2950,15 @@
       "alt": "Skin to Mind™ Collection — Amare supplement"
     },
     "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
+      "Ondersteunt de huid via de huid-geestverbinding",
+      "Vermindert fijne lijntjes en verheldert de teint (NeuDay/NeuNight)",
+      "Verfrist een doffe, gestreste huid direct (OptiMIST)",
+      "Compleet dag-en-nachtritueel in één collectie"
     ],
     "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+      "dosage": "NeuDay 2-4 pompjes 's ochtends, NeuNight 2-4 pompjes 's avonds, OptiMIST 5-8 sprays naar behoefte.",
+      "timing": "Ochtend- en avondritueel, plus overdag naar behoefte.",
+      "duration": "Onderdeel van een dagelijkse huidverzorgingsroutine."
     },
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/skin-mind-collection",
@@ -2667,7 +2976,28 @@
     "isPack": false,
     "priority": 27,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
+    "updatedAt": "2026-05-17",
+    "mechanismNL": "Gebruik OptiMIST™ gedurende de dag als verfrissende mist. Breng 's ochtends NeuDay™ Serum aan voor een heldere, egale teint en 's avonds NeuNight™ Serum om huidherstel tijdens de slaap te ondersteunen — samen een compleet dag-en-nachtritueel.",
+    "ingredients": [
+      {
+        "name": "OptiMIST™ Awaken + Glow Facial Mist",
+        "amount": "Dagelijkse verfrissing"
+      },
+      {
+        "name": "NeuDay™ Brighten + Revitalize Serum",
+        "amount": "HuG Cell-technologie™, ochtendgebruik"
+      },
+      {
+        "name": "NeuNight™ Restore + Renew Serum",
+        "amount": "HuG Cell-technologie™, avondgebruik"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "In welke volgorde gebruik ik deze producten?",
+        "a": "Gebruik OptiMIST als verfrissende mist gedurende de dag, NeuDay Serum 's ochtends op een schone huid, en NeuNight Serum 's avonds voor het slapengaan."
+      }
+    ]
   },
   {
     "slug": "ahaacv-pre-shampoo-hoofdhuid-verhelderende-spoelin",
@@ -2677,8 +3007,8 @@
     "category": "schoonheid",
     "taglineNL": "Huid, haar & nagels verzorging",
     "description": {
-      "short": "Huid, haar & nagels verzorging",
-      "long": "AHA+ACV Pre-Shampoo Hoofdhuid Verhelderende Spoeling is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+      "short": "Gefermenteerde pre-shampoo spoeling die de hoofdhuid voorbereidt op reiniging",
+      "long": "AHA+ACV Pre-Shampoo Hoofdhuid Verhelderende Spoeling is een gefermenteerde hoofdhuid-reset met Rootbiomic Ferment™, AHA en appelciderazijn. Voorafgaand aan het wassen verwijdert deze spoeling vuil, overtollige olie en productophoping, zodat shampoo en conditioner daarna beter kunnen werken. De formule exfolieert zacht zonder vocht te onttrekken en is geschikt voor alle hoofdhuid- en haartypes, inclusief gekleurd haar."
     },
     "pricing": {
       "subscription": 28.81,
@@ -2692,14 +3022,15 @@
       "alt": "AHA+ACV Pre-Shampoo Hoofdhuid Verhelderende Spoeling — Amare supplement"
     },
     "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
+      "Verwijdert overtollige olie en productophoping",
+      "Exfolieert de hoofdhuid zacht zonder uit te drogen",
+      "Brengt de pH-balans van de hoofdhuid in evenwicht",
+      "Bereidt de hoofdhuid voor op een effectievere reiniging"
     ],
     "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+      "dosage": "Breng aan op de hoofdhuid van haarlijn tot kruin en masseer goed in, vóór het shampooën.",
+      "timing": "Vóór het wassen, 1-meerdere keren per week afhankelijk van ophoping.",
+      "duration": "10-15 minuten laten intrekken, dan grondig uitspoelen en vervolgen met shampoo en conditioner."
     },
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/pre-shampoo-clarifying-rinse",
@@ -2717,7 +3048,32 @@
     "isPack": false,
     "priority": 28,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
+    "updatedAt": "2026-05-17",
+    "mechanismNL": "Voor het wassen maak je met het mondstuk kleine scheidingen in het haar, breng je de spoeling aan van haarlijn tot kruin en masseer je goed in. Na 10-15 minuten inwerktijd spoel je grondig uit en volg je met shampoo en conditioner.",
+    "ingredients": [
+      {
+        "name": "Rootbiomic Ferment™",
+        "amount": "Gefermenteerd complex"
+      },
+      {
+        "name": "AHA (alfahydroxyzuur)",
+        "amount": "Exfolieert zacht"
+      },
+      {
+        "name": "Appelciderazijn",
+        "amount": "Balanceert de hoofdhuid-pH"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Hoe vaak gebruik ik deze pre-shampoo spoeling?",
+        "a": "Dat hangt af van hoeveel ophoping je hoofdhuid heeft — de meeste mensen gebruiken het 1 tot enkele keren per week, altijd vóór het shampooën."
+      },
+      {
+        "q": "Is dit geschikt voor gekleurd haar?",
+        "a": "Ja, de formule is geformuleerd om effectief maar zacht te zijn en is geschikt voor alle hoofdhuid- en haartypes, inclusief gekleurd haar."
+      }
+    ]
   },
   {
     "slug": "biobrew-gefermenteerd-versterkend-serum",
@@ -2727,8 +3083,8 @@
     "category": "schoonheid",
     "taglineNL": "Huid, haar & nagels verzorging",
     "description": {
-      "short": "Huid, haar & nagels verzorging",
-      "long": "BioBrew™ Gefermenteerd Versterkend Serum is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+      "short": "Leave-in serum dat kroezen, schade en hoofdhuidbalans in één stap aanpakt",
+      "long": "BioBrew™ Gefermenteerd Versterkend Serum is een leave-in treatment die klinisch is aangetoond kroezen onder controle te houden, glans te stimuleren, te beschermen tegen hitte tot 232°C en haar tot 3x sterker te maken na één gebruik. Voor de hoofdhuid is het microbioomvriendelijk en dermatologisch getest om balans en hydratatie te herstellen — het vervangt in feite je hittebeschermer, haarolie, leave-in conditioner en hoofdhuidserum in één product."
     },
     "pricing": {
       "subscription": 30.88,
@@ -2742,14 +3098,15 @@
       "alt": "BioBrew™ Gefermenteerd Versterkend Serum — Amare supplement"
     },
     "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
+      "Klinisch bewezen schadeherstel, glans en pluiscontrole",
+      "Tot 3x minder haarbreuk na één gebruik*",
+      "Beschermt haar tegen hitte tot 232°C",
+      "Houdt kroezen tot 72 uur onder controle bij 80% luchtvochtigheid"
     ],
     "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+      "dosage": "3 pompjes op de hoofdhuid, 3-5 pompjes op de haarlengtes, afhankelijk van dikte en lengte.",
+      "timing": "2-3x per week, op vochtig handdoekdroog haar.",
+      "duration": "Klinisch aangetoond effect al na één gebruik; tot 3x sterker haar."
     },
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/biobrew-fermented-strengthening-serum",
@@ -2767,7 +3124,24 @@
     "isPack": false,
     "priority": 29,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
+    "updatedAt": "2026-05-17",
+    "mechanismNL": "Spray op vochtig, handdoekdroog haar van 2-3 inch afstand van de hoofdhuid tot de punten. Gemiddeld gebruik is 3 pompjes op de hoofdhuid en 3-5 pompjes op de lengtes, 2-3x per week. Masseer de hoofdhuid zachtjes in, kam door en spoel niet uit.",
+    "ingredients": [
+      {
+        "name": "Gefermenteerd complex",
+        "amount": "Microbioomvriendelijk, dermatologisch getest"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Moet ik dit serum uitspoelen?",
+        "a": "Nee, het is een leave-in serum. Breng het aan, masseer zachtjes in en kam door — niet uitspoelen."
+      },
+      {
+        "q": "Vervangt dit andere haarproducten?",
+        "a": "Het is ontworpen om je hittebeschermer, haarolie, leave-in conditioner, frizz shield en hoofdhuidserum te vervangen in één product."
+      }
+    ]
   },
   {
     "slug": "clarify-balancing-serum-voor-een-vette-hoofdhuid",
@@ -2777,8 +3151,8 @@
     "category": "schoonheid",
     "taglineNL": "Huid, haar & nagels verzorging",
     "description": {
-      "short": "Huid, haar & nagels verzorging",
-      "long": "Clarify Balancing Serum voor een vette hoofdhuid is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+      "short": "Lichtgewicht salicylzuurserum tegen een vette hoofdhuid",
+      "long": "Clarify Balancing Serum voor een vette hoofdhuid is een lichtgewicht, leave-in salicylzuurserum dat overtollige talg bij de wortel aanpakt en vermindert. Het richt zich specifiek op vette hoofdhuid- en haarproblemen zonder uit te drogen, zodat de hoofdhuid gehydrateerd en gekalmeerd blijft terwijl olie onder controle wordt gehouden. Geschikt voor alle haartypes met een vette hoofdhuid."
     },
     "pricing": {
       "subscription": 44.28,
@@ -2792,14 +3166,15 @@
       "alt": "Clarify Balancing Serum voor een vette hoofdhuid — Amare supplement"
     },
     "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
+      "Vermindert overtollig talg en verfrist de hoofdhuid",
+      "Herbalanceert overtollige olieproductie",
+      "Helpt irritatie te verzachten",
+      "Lichtgewicht formule verzwaart het haar niet"
     ],
     "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+      "dosage": "Gemiddeld 2 volle druppelaars, gelijkmatig verdeeld over de kruin.",
+      "timing": "2-3 keer per week, 's ochtends of 's avonds.",
+      "duration": "Niet afspoelen; onderdeel van een doorlopende haarroutine."
     },
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/clarify-balancing-serum-oily-scalp",
@@ -2817,7 +3192,24 @@
     "isPack": false,
     "priority": 30,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
+    "updatedAt": "2026-05-17",
+    "mechanismNL": "Breng 2-3 keer per week aan op een schone of handdoekdroge hoofdhuid, met de nadruk op vette zones. Masseer grondig in — niet afspoelen. Kan 's ochtends of 's avonds worden gebruikt; gemiddeld 2 volle druppelaars per toepassing, gelijkmatig verdeeld over de kruin.",
+    "ingredients": [
+      {
+        "name": "Salicylzuur",
+        "amount": "Leave-in formule"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Moet ik dit serum afspoelen?",
+        "a": "Nee, het is een leave-in serum — breng aan, masseer in en stijl daarna zoals gewoonlijk."
+      },
+      {
+        "q": "Voor wie is dit serum geschikt?",
+        "a": "Voor alle haartypes met een vette hoofdhuid die olie onder controle willen houden zonder uit te drogen."
+      }
+    ]
   },
   {
     "slug": "collectie-voor-vette-hoofdhuid-en-fijn-haar",
@@ -2827,8 +3219,8 @@
     "category": "schoonheid",
     "taglineNL": "Huid, haar & nagels verzorging",
     "description": {
-      "short": "Huid, haar & nagels verzorging",
-      "long": "Collectie voor vette hoofdhuid en fijn haar is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+      "short": "Complete 5-stappen routine voor een vette hoofdhuid en fijn haar",
+      "long": "De Collectie voor vette hoofdhuid en fijn haar is een complete, op de hoofdhuid gerichte routine die een vette hoofdhuid verfrist en tegelijk het natuurlijke volume en de lichtheid van fijn haar ondersteunt. De set combineert diepe maar milde reiniging met lichte verzorging en gerichte hoofdhuidverzorging om ophoping te verwijderen, overtollig talg te balanceren en een schone, gezond ogende hoofdhuid te ondersteunen — de basis voor voller aanvoelend, levendig haar."
     },
     "pricing": {
       "subscription": 151.55,
@@ -2842,14 +3234,15 @@
       "alt": "Collectie voor vette hoofdhuid en fijn haar — Amare supplement"
     },
     "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
+      "Een schonere, meer gebalanceerde hoofdhuid",
+      "Minder zwaarte en ophoping",
+      "Lichter, voller uitziend haar",
+      "Langdurige frisheid tussen wasbeurten"
     ],
     "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+      "dosage": "Gebruik de 5 producten volgens hun individuele routine (pre-shampoo → shampoo → conditioner → serum/droogshampoo naar behoefte).",
+      "timing": "Pre-shampoo en shampoo/conditioner bij het wassen; serum en droogshampoo naar behoefte tussendoor.",
+      "duration": "Doorlopende routine voor blijvend resultaat."
     },
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/collection-oily-scalp-fine-hair",
@@ -2867,7 +3260,36 @@
     "isPack": false,
     "priority": 31,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
+    "updatedAt": "2026-05-17",
+    "mechanismNL": "De routine begint met de AHA+ACV Pre-Shampoo Spoeling om onzuiverheden los te maken, gevolgd door de Verdichten Geconcentreerde Shampoo en Conditioner voor reiniging zonder te verzwaren. Het Clarify Balancing Serum houdt de hoofdhuid de hele dag fris, en de Verduidelijk Droogshampoo absorbeert olie tussen wasbeurten.",
+    "ingredients": [
+      {
+        "name": "1x Verdichten Geconcentreerde Shampoo",
+        "amount": "Reiniging"
+      },
+      {
+        "name": "1x Verdichten Geconcentreerde Conditioner",
+        "amount": "Lichte hydratatie"
+      },
+      {
+        "name": "1x AHA+ACV Pre-Shampoo Hoofdhuid Verhelderende Spoeling",
+        "amount": "Voorbereiding"
+      },
+      {
+        "name": "1x Clarify Balancing Serum voor een vette hoofdhuid",
+        "amount": "Dagelijkse balans"
+      },
+      {
+        "name": "1x Verduidelijk Droogshampoo Poeder",
+        "amount": "Tussen wasbeurten"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Wat zit er in deze collectie?",
+        "a": "De Verdichten Geconcentreerde Shampoo en Conditioner, de AHA+ACV Pre-Shampoo Spoeling, het Clarify Balancing Serum en de Verduidelijk Droogshampoo Poeder."
+      }
+    ]
   },
   {
     "slug": "geconcentreerde-conditioner-versterken",
@@ -2877,8 +3299,8 @@
     "category": "schoonheid",
     "taglineNL": "Huid, haar & nagels verzorging",
     "description": {
-      "short": "Huid, haar & nagels verzorging",
-      "long": "Geconcentreerde conditioner versterken is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+      "short": "Siliconenvrije, ultrageconcentreerde conditioner tegen haarbreuk",
+      "long": "Geconcentreerde Conditioner Versterken is een siliconenvrije conditioner die breuk helpt minimaliseren, kroezen gladstrijkt en de glans vergroot bij beschadigd haar. De formule is ultrageconcentreerd en zonder toegevoegd water gemaakt, waardoor je slechts de helft van je gebruikelijke hoeveelheid nodig hebt — elke fles staat gelijk aan een dubbel zo grote fles. Vocht wordt dieper in het haar getrokken in plaats van er alleen overheen gelegd, voor voeding die je echt kunt zien en voelen."
     },
     "pricing": {
       "subscription": 28.81,
@@ -2892,14 +3314,15 @@
       "alt": "Geconcentreerde conditioner versterken — Amare supplement"
     },
     "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
+      "Herstelt beschadigd haar en minimaliseert breuk",
+      "Vermindert kroezen en verbetert gladheid en glans",
+      "Trekt vocht diep in het haar in plaats van het te bedekken",
+      "Ultrageconcentreerd — minder verspilling, meer resultaat"
     ],
     "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+      "dosage": "Halve dosis ten opzichte van reguliere conditioners.",
+      "timing": "Na het wassen, elke keer dat je shampoot.",
+      "duration": "Direct voelbaar effect; regelmatig gebruik voor blijvend resultaat."
     },
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/strengthen-concentrated-conditioner",
@@ -2917,7 +3340,20 @@
     "isPack": false,
     "priority": 32,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
+    "updatedAt": "2026-05-17",
+    "mechanismNL": "Pomp na het wassen de helft van je gebruikelijke hoeveelheid in de handpalm. Masseer rechtstreeks in de haarlengtes vanaf de oren naar beneden. Grondig afspoelen.",
+    "ingredients": [
+      {
+        "name": "Peptidencomplex",
+        "amount": "Ultrageconcentreerd, siliconenvrij"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Waarom is deze conditioner geconcentreerd?",
+        "a": "De formule bevat geen toegevoegd water, waardoor je maar de helft van je gebruikelijke hoeveelheid nodig hebt — elke fles doet het werk van een dubbel zo grote fles."
+      }
+    ]
   },
   {
     "slug": "haarverdikkende-collectie-voor-volume",
@@ -2927,8 +3363,8 @@
     "category": "schoonheid",
     "taglineNL": "Huid, haar & nagels verzorging",
     "description": {
-      "short": "Huid, haar & nagels verzorging",
-      "long": "Haarverdikkende Collectie voor Volume is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+      "short": "Complete 4-stappen routine voor meer volume en dikker uitziend haar",
+      "long": "De Haarverdikkende Collectie voor Volume is een complete verzorgingsroutine die de uitstraling van voller en dikker aanvoelend haar ondersteunt terwijl de hoofdhuid fris en comfortabel blijft. De set combineert zuiverende hoofdhuidverzorging, geconcentreerde reiniging, lichte conditioning en het klinisch bewezen Verdikkend Serum om ophopingen te verwijderen en volume en haardichtheid te verbeteren."
     },
     "pricing": {
       "subscription": 132.02,
@@ -2942,14 +3378,15 @@
       "alt": "Haarverdikkende Collectie voor Volume — Amare supplement"
     },
     "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
+      "Helpt haar er voller en volumineuzer uitzien zonder te verzwaren",
+      "Verfrist en balanceert de hoofdhuid",
+      "Verwijdert ophoping die het haar kan verzwaren",
+      "Ondersteunt natuurlijke body en veerkracht na verloop van tijd"
     ],
     "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+      "dosage": "Gebruik de 4 producten volgens hun individuele routine.",
+      "timing": "Pre-shampoo en shampoo/conditioner bij het wassen; serum dagelijks.",
+      "duration": "Zichtbaar volume-effect binnen 90 dagen bij consistent gebruik van het serum."
     },
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/collection-densifying-for-volume",
@@ -2967,7 +3404,32 @@
     "isPack": false,
     "priority": 33,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
+    "updatedAt": "2026-05-17",
+    "mechanismNL": "De routine begint met de AHA+ACV Pre-Shampoo Spoeling, gevolgd door de Verdichten Geconcentreerde Shampoo en Conditioner voor reiniging zonder te verzwaren. Het Verdikkend Serum ondersteunt tot slot voller, dichter haar en verbetert glans en handelbaarheid.",
+    "ingredients": [
+      {
+        "name": "1x Verdichten Geconcentreerde Shampoo",
+        "amount": "Reiniging"
+      },
+      {
+        "name": "1x Verdichten Geconcentreerde Conditioner",
+        "amount": "Gewichtloze hydratatie"
+      },
+      {
+        "name": "1x AHA+ACV Pre-Shampoo Hoofdhuid Verhelderende Spoeling",
+        "amount": "Voorbereiding"
+      },
+      {
+        "name": "1x Verdikkend serum voor fijn haar*",
+        "amount": "Klinisch bewezen volume"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Wat zit er in deze collectie?",
+        "a": "De Verdichten Geconcentreerde Shampoo en Conditioner, de AHA+ACV Pre-Shampoo Spoeling en het klinisch geteste Verdikkend serum voor fijn haar."
+      }
+    ]
   },
   {
     "slug": "rootist-dynamic-pack",
@@ -2977,8 +3439,8 @@
     "category": "schoonheid",
     "taglineNL": "Huid, haar & nagels verzorging",
     "description": {
-      "short": "Huid, haar & nagels verzorging",
-      "long": "Rootist Dynamic Pack is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+      "short": "Volledig personaliseerbaar hair-wellnesssysteem: kies je eigen serum, shampoo en conditioner",
+      "long": "Het Rootist Dynamic Pack laat je een volledig gepersonaliseerd hair-wellnesssysteem samenstellen, afgestemd op de conditie van je hoofdhuid, je doelen voor haardichtheid en je verzorgingsvoorkeuren. Je kiest zelf één serum (Clarify Balancing Serum of Densifying Serum), één shampoo (Strengthen, Densify of de Pre-Shampoo Clarifying Rinse) en één conditioner (Strengthen of Densify) uit het Rootist-assortiment. Elke formule is opgebouwd uit botanische extracten en versterkende actieve stoffen die de hoofdhuid ondersteunen en de haarvezel helpen beschermen."
     },
     "pricing": {
       "subscription": 96.8,
@@ -2992,14 +3454,15 @@
       "alt": "Rootist Dynamic Pack — Amare supplement"
     },
     "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
+      "Volledig aanpasbaar aan jouw specifieke hoofdhuid- en haarbehoeften",
+      "Kies balancerende, verdikkende of versterkende formules",
+      "EU-conforme formules met hoogwaardige plantaardige actieve stoffen",
+      "Waardevoordeel ten opzichte van los kopen"
     ],
     "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+      "dosage": "Kies 1 serum + 1 shampoo + 1 conditioner naar keuze.",
+      "timing": "Volgens de gebruiksaanwijzing van elk gekozen product.",
+      "duration": "Doorlopende 3-stappenroutine, aangepast aan jouw hoofdhuid- en haarbehoeften."
     },
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/rootist-dynamic-pack",
@@ -3017,7 +3480,20 @@
     "isPack": false,
     "priority": 34,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
+    "updatedAt": "2026-05-17",
+    "mechanismNL": "Het pack werkt in drie stappen: het serum geeft gerichte ondersteuning aan de hoofdhuid (balans of dichtheid), de shampoo reinigt en activeert, en de conditioner voedt en beschermt de haarvezel tegen dagelijkse stress. Samen ondersteunen ze de gezondheid van de hoofdhuid en de haarsterkte.",
+    "ingredients": [
+      {
+        "name": "Rootbiomic Ferment™",
+        "amount": "In alle gekozen formules"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Hoe stel ik mijn Dynamic Pack samen?",
+        "a": "Je kiest zelf één serum, één shampoo en één conditioner uit de Rootist-lijn, afgestemd op jouw hoofdhuid (vet of dun) en haardoel (balans of volume)."
+      }
+    ]
   },
   {
     "slug": "verdichten-geconcentreerde-conditioner",
@@ -3027,8 +3503,8 @@
     "category": "schoonheid",
     "taglineNL": "Huid, haar & nagels verzorging",
     "description": {
-      "short": "Huid, haar & nagels verzorging",
-      "long": "Verdichten Geconcentreerde Conditioner is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+      "short": "Siliconenvrije conditioner voor dikker, voller aanvoelend haar",
+      "long": "Verdichten Geconcentreerde Conditioner is een siliconenvrije, ultrageconcentreerde conditioner die fijn haar dikker en gladder laat aanvoelen zonder het volume te verzwaren. In combinatie met de bijpassende Verdichten Shampoo en het Verdikkend Serum toonde een expertbeoordeling bij 34 panelleden minder haaruitval door breuk en een gezondere omgeving voor dikker, voller uitziend haar. Geschikt voor fijn haar en chemisch behandeld of gekleurd haar."
     },
     "pricing": {
       "subscription": 28.81,
@@ -3042,14 +3518,15 @@
       "alt": "Verdichten Geconcentreerde Conditioner — Amare supplement"
     },
     "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
+      "Laat fijn haar dikker en gladder aanvoelen",
+      "Verzwaart het haar niet",
+      "Minimaliseert haaruitval als gevolg van breuk*",
+      "Geschikt voor chemisch behandeld en gekleurd haar"
     ],
     "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+      "dosage": "Halve dosis ten opzichte van reguliere conditioners.",
+      "timing": "Na het wassen, elke keer dat je shampoot.",
+      "duration": "Beste resultaat in combinatie met de Verdichten Shampoo en het Verdikkend Serum."
     },
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/densify-concentrated-conditioner",
@@ -3067,7 +3544,15 @@
     "isPack": false,
     "priority": 35,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
+    "updatedAt": "2026-05-17",
+    "mechanismNL": "Pomp na het wassen de helft van je gebruikelijke hoeveelheid in de handpalm en masseer rechtstreeks in de haarlengtes vanaf de oren naar beneden. Grondig afspoelen.",
+    "ingredients": [
+      {
+        "name": "Rootbiomic Ferment™",
+        "amount": "Ultrageconcentreerd, siliconenvrij"
+      }
+    ],
+    "faqs": []
   },
   {
     "slug": "verdichten-geconcentreerde-shampoo",
@@ -3077,8 +3562,8 @@
     "category": "schoonheid",
     "taglineNL": "Huid, haar & nagels verzorging",
     "description": {
-      "short": "Huid, haar & nagels verzorging",
-      "long": "Verdichten Geconcentreerde Shampoo is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+      "short": "Volumegevende shampoo voor fijn, dun haar",
+      "long": "Verdichten Geconcentreerde Shampoo is een sulfaatvrije (SLS/SLES-vrije) shampoo die volume toevoegt en haarlokken verdikt voor voller uitziend haar. In een expertbeoordeling bij 34 panelleden zorgde gebruik van de Verdichten Shampoo, Conditioner en Serum samen voor minder haaruitval door breuk (dry-comb-test na 120 dagen) en een gezondere, evenwichtige omgeving voor dikker haar. Geschikt voor fijn haar, alle haartypes die extra volume nodig hebben, en chemisch behandeld of gekleurd haar."
     },
     "pricing": {
       "subscription": 27.78,
@@ -3092,14 +3577,15 @@
       "alt": "Verdichten Geconcentreerde Shampoo — Amare supplement"
     },
     "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
+      "Voegt volume en veerkracht toe aan fijn haar",
+      "Minimaliseert haaruitval als gevolg van breuk*",
+      "Bevordert een gezonde, evenwichtige omgeving voor dikker haar",
+      "Geschikt voor chemisch behandeld en gekleurd haar"
     ],
     "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+      "dosage": "Halve dosis ten opzichte van reguliere shampoos.",
+      "timing": "Bij elke wasbeurt.",
+      "duration": "Beste resultaat in combinatie met de Verdichten Conditioner en het Verdikkend Serum, gedurende 90-120 dagen."
     },
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/densify-concentrated-shampoo",
@@ -3117,7 +3603,20 @@
     "isPack": false,
     "priority": 36,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
+    "updatedAt": "2026-05-17",
+    "mechanismNL": "Pomp de helft van je gebruikelijke hoeveelheid in de handpalm, emulgeer tot schuim en masseer in de hoofdhuid. Grondig afspoelen en volg met de Verdichten Conditioner.",
+    "ingredients": [
+      {
+        "name": "Rootbiomic Ferment™",
+        "amount": "Ultrageconcentreerd, sulfaatvrij"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Werkt deze shampoo het beste alleen of in combinatie?",
+        "a": "De beste, klinisch onderbouwde resultaten (minder breuk, voller haar) zijn gemeten bij gebruik van de Verdichten Shampoo, Conditioner én het Verdikkend Serum samen."
+      }
+    ]
   },
   {
     "slug": "verduidelijk-droogshampoo-poeder",
@@ -3127,8 +3626,8 @@
     "category": "schoonheid",
     "taglineNL": "Huid, haar & nagels verzorging",
     "description": {
-      "short": "Huid, haar & nagels verzorging",
-      "long": "Verduidelijk Droogshampoo Poeder is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+      "short": "Talkvrije droogshampoo die olie en zweet direct absorbeert",
+      "long": "Verduidelijk Droogshampoo Poeder is een talkvrije, met ferment doordrenkte droogshampoo die werkt als een spons om olie en zweet direct en gedurende de dag te absorberen. Het laat het haar schoon aanvoelen en ruiken zonder zich op te hopen in het haar of op de hoofdhuid. De ingebouwde borstel zorgt voor een nauwkeurige, knoeivrije applicatie precies op de wortels, ideaal voor onderweg."
     },
     "pricing": {
       "subscription": 29.85,
@@ -3142,14 +3641,15 @@
       "alt": "Verduidelijk Droogshampoo Poeder — Amare supplement"
     },
     "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
+      "Absorbeert olie en zweet direct en gedurende de dag",
+      "Laat haar direct schoon en zacht aanvoelen",
+      "Hoopt zich niet op in het haar dankzij de fermentbasis",
+      "Vanishing tint gaat naadloos op in het haar"
     ],
     "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+      "dosage": "Tik de borstel op de wortels waar volume/verfrissing nodig is.",
+      "timing": "Tussen wasbeurten, naar behoefte.",
+      "duration": "Direct effect — geen inwerktijd nodig."
     },
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/clarify-dry-shampoo-powder",
@@ -3167,7 +3667,20 @@
     "isPack": false,
     "priority": 37,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
+    "updatedAt": "2026-05-17",
+    "mechanismNL": "Tik de ingebouwde borstel direct op de wortels, waar het haar opgefrist en meer volume moet krijgen. Masseer de hoofdhuid met de vingertoppen om het product in het haar te werken.",
+    "ingredients": [
+      {
+        "name": "Ferment-doordrenkt poeder",
+        "amount": "Talkvrij"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Zie ik witte resten in mijn haar?",
+        "a": "Nee, het poeder heeft een vanishing tint die naadloos in het haar overgaat, ook bij donker haar."
+      }
+    ]
   },
   {
     "slug": "versterken-geconcentreerde-shampoo",
@@ -3177,8 +3690,8 @@
     "category": "schoonheid",
     "taglineNL": "Huid, haar & nagels verzorging",
     "description": {
-      "short": "Huid, haar & nagels verzorging",
-      "long": "Versterken Geconcentreerde Shampoo is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+      "short": "Sulfaatvrije, ultrageconcentreerde shampoo tegen haarbreuk",
+      "long": "Versterken Geconcentreerde Shampoo is een sulfaatvrije (SLS/SLES-vrije) shampoo die is ontworpen om breuk te minimaliseren, kroezen glad te strijken en glans te vergroten bij beschadigd haar, terwijl wortels, hoofdhuid en haar de voeding krijgen die nodig is voor sterker haar. De formule is ultrageconcentreerd zonder toegevoegd water — je hebt maar de helft van je gebruikelijke hoeveelheid nodig, met een luxueus schuim ondanks de lagere dosering."
     },
     "pricing": {
       "subscription": 27.78,
@@ -3192,14 +3705,15 @@
       "alt": "Versterken Geconcentreerde Shampoo — Amare supplement"
     },
     "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
+      "Herstelt beschadigd haar en minimaliseert breuk",
+      "Behoudt de balans en hydratatie van de hoofdhuid",
+      "Vermindert kroezen en geeft glans een boost",
+      "Sulfaatvrij met een luxueus schuim"
     ],
     "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+      "dosage": "Halve dosis ten opzichte van reguliere shampoos.",
+      "timing": "Bij elke wasbeurt.",
+      "duration": "Volg direct met de bijpassende conditioner."
     },
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/strengthen-concentrated-shampoo",
@@ -3217,7 +3731,20 @@
     "isPack": false,
     "priority": 38,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
+    "updatedAt": "2026-05-17",
+    "mechanismNL": "Pomp de helft van je gebruikelijke hoeveelheid in de handpalm, emulgeer tot schuim en masseer in de hoofdhuid. Grondig afspoelen en volg met conditioner.",
+    "ingredients": [
+      {
+        "name": "Sulfaatvrije reinigingsbasis",
+        "amount": "Ultrageconcentreerd"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Waarom is deze shampoo sulfaatvrij?",
+        "a": "Sulfaatvrije (SLS/SLES-vrije) formules reinigen zachter en behouden de vochtbalans van de hoofdhuid beter dan traditionele sulfaatshampoos."
+      }
+    ]
   },
   {
     "slug": "versterkende-collectie-voor-haarherstel",
@@ -3227,8 +3754,8 @@
     "category": "schoonheid",
     "taglineNL": "Huid, haar & nagels verzorging",
     "description": {
-      "short": "Huid, haar & nagels verzorging",
-      "long": "Versterkende Collectie voor Haarherstel is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+      "short": "Complete 4-stappen routine voor fijn haar dat kracht en herstel nodig heeft",
+      "long": "De Versterkende Collectie voor Haarherstel is een complete routine die fijn haar ondersteunt dat behoefte heeft aan kracht, balans en lichte verzorging. De set combineert een zuiverende pre-wash stap met geconcentreerde shampoo en conditioner, samen met het BioBrew™ Gefermenteerde Versterkende Serum, om ophoping te verwijderen, de hoofdhuid fris te houden en gladder, veerkrachtiger haar te ondersteunen."
     },
     "pricing": {
       "subscription": 110.47,
@@ -3242,14 +3769,15 @@
       "alt": "Versterkende Collectie voor Haarherstel — Amare supplement"
     },
     "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
+      "Helpt haar sterker en veerkrachtiger aan te laten voelen",
+      "Verwijdert zachtjes ophoping voor een frissere hoofdhuid",
+      "Laat het haar gladder, zachter en gezonder ogen",
+      "Biedt lichte hydratatie zonder fijne lokken te verzwaren"
     ],
     "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+      "dosage": "Gebruik de 4 producten volgens hun individuele routine.",
+      "timing": "Pre-shampoo en shampoo/conditioner bij het wassen; BioBrew serum 2-3x per week.",
+      "duration": "Doorlopende routine voor zichtbaar sterker, gladder haar."
     },
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/collection-hair-repair",
@@ -3267,7 +3795,32 @@
     "isPack": false,
     "priority": 39,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
+    "updatedAt": "2026-05-17",
+    "mechanismNL": "De routine begint met de AHA+ACV Pre-Shampoo Spoeling die onzuiverheden verwijdert, gevolgd door de Versterken Geconcentreerde Shampoo en Conditioner die zacht reinigen en gewichtloos hydrateren. Het BioBrew™ Serum rondt de routine af en ondersteunt kracht en glans.",
+    "ingredients": [
+      {
+        "name": "1x Versterken Geconcentreerde Shampoo",
+        "amount": "Reiniging"
+      },
+      {
+        "name": "1x Geconcentreerde Conditioner Versterken",
+        "amount": "Gewichtloze hydratatie"
+      },
+      {
+        "name": "1x AHA+ACV Pre-Shampoo Hoofdhuid Verhelderende Spoeling",
+        "amount": "Voorbereiding"
+      },
+      {
+        "name": "1x BioBrew™ Gefermenteerd Versterkend Serum",
+        "amount": "Kracht en glans"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Wat zit er in deze collectie?",
+        "a": "De Versterken Geconcentreerde Shampoo en Conditioner, de AHA+ACV Pre-Shampoo Spoeling en het BioBrew™ Gefermenteerde Versterkende Serum."
+      }
+    ]
   },
   {
     "slug": "verdikkend-serum-voor-fijn-haar",
@@ -3277,8 +3830,8 @@
     "category": "schoonheid",
     "taglineNL": "Huid, haar & nagels verzorging",
     "description": {
-      "short": "Huid, haar & nagels verzorging",
-      "long": "„Verdikkend serum voor fijn haar*” is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+      "short": "Klinisch bewezen hoofdhuidserum voor zichtbaar dikker haar in 90 dagen",
+      "long": "„Verdikkend serum voor fijn haar*” is een klinisch bewezen hoofdhuidserum, ontworpen om elke fase van de haarcyclus te ondersteunen. In een expertbeoordeling bij 34 panelleden verminderde gebruik van dit serum samen met de Verdichten Shampoo en Conditioner haaruitval door breuk met tot 85% en zorgde het voor zichtbaar dikker en voller haar binnen 90 dagen. Het geeft ook volume bij de hoofdhuid voor voller uitziende scheidingen en haarlijnen. Lichtgewicht en niet-vet, geschikt voor vochtig of droog haar."
     },
     "pricing": {
       "subscription": 53.56,
@@ -3292,14 +3845,15 @@
       "alt": "„Verdikkend serum voor fijn haar*” — Amare supplement"
     },
     "benefits": [
-      "Hoogwaardige ingrediënten",
-      "Wetenschappelijk onderbouwd",
-      "gemaakt met natuurlijke ingrediënten"
+      "Vermindert haaruitval door breuk tot 85%* in combinatie met Verdichten Shampoo en Conditioner",
+      "Maakt haar zichtbaar dikker en voller in 90 dagen**",
+      "Geeft volume bij de hoofdhuid voor voller uitziende scheidingen",
+      "Lichtgewicht, niet-vette formule verzwaart het haar niet"
     ],
     "usage": {
-      "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-      "timing": "Raadpleeg de verpakking",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+      "dosage": "Gemiddeld twee volle druppelaars per toepassing.",
+      "timing": "Eenmaal daags op droog of handdoekdroog haar.",
+      "duration": "Zichtbaar dikker en voller haar binnen 90 dagen bij dagelijks gebruik."
     },
     "affiliate": {
       "url": "https://www.amare.com/2075008/nl-nl/densifying-serum-thinning-hair",
@@ -3317,6 +3871,19 @@
     "isPack": false,
     "priority": 40,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
+    "updatedAt": "2026-05-17",
+    "mechanismNL": "Breng eenmaal daags aan op een droge of handdoekdroge hoofdhuid — het haar hoeft niet vers gewassen te zijn. Verdeel gelijkmatig, met focus op de kruin, scheiding en haarlijn. Masseer grondig in en spoel niet uit. Gemiddeld gebruik is twee volle druppelaars.",
+    "ingredients": [
+      {
+        "name": "Rootbiomic Ferment™",
+        "amount": "Klinisch getest complex"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Hoe snel zie ik resultaat?",
+        "a": "In een expertbeoordeling bij 34 panelleden was het haar zichtbaar dikker en voller na 90 dagen consistent gebruik, in combinatie met de Verdichten Shampoo en Conditioner."
+      }
+    ]
   }
 ]

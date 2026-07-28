@@ -331,6 +331,351 @@
       "source": "/levelup-pack",
       "destination": "/triangle-of-wellness-xtreme",
       "permanent": true
+    },
+    {
+      "source": "/amare-edge-plus-watermelon/",
+      "destination": "/producten/edge-watermelon",
+      "permanent": true
+    },
+    {
+      "source": "/amare-edge-plus-watermelon",
+      "destination": "/producten/edge-watermelon",
+      "permanent": true
+    },
+    {
+      "source": "/amare-edge-watermelon/",
+      "destination": "/producten/edge-watermelon",
+      "permanent": true
+    },
+    {
+      "source": "/amare-edge-watermelon",
+      "destination": "/producten/edge-watermelon",
+      "permanent": true
+    },
+    {
+      "source": "/amareedge-plus-watermelon/",
+      "destination": "/producten/edge-watermelon",
+      "permanent": true
+    },
+    {
+      "source": "/amareedge-plus-watermelon",
+      "destination": "/producten/edge-watermelon",
+      "permanent": true
+    },
+    {
+      "source": "/happy-juice-edge-plus-watermelon/",
+      "destination": "/producten/happy-juice-pack-amare-edge-watermelon",
+      "permanent": true
+    },
+    {
+      "source": "/happy-juice-edge-plus-watermelon",
+      "destination": "/producten/happy-juice-pack-amare-edge-watermelon",
+      "permanent": true
+    },
+    {
+      "source": "/amare-edge-mango-2/",
+      "destination": "/edge-plus",
+      "permanent": true
+    },
+    {
+      "source": "/amare-edge-mango-2",
+      "destination": "/edge-plus",
+      "permanent": true
+    },
+    {
+      "source": "/pre-shampoo/",
+      "destination": "/producten/ahaacv-pre-shampoo-hoofdhuid-verhelderende-spoelin",
+      "permanent": true
+    },
+    {
+      "source": "/pre-shampoo",
+      "destination": "/producten/ahaacv-pre-shampoo-hoofdhuid-verhelderende-spoelin",
+      "permanent": true
+    },
+    {
+      "source": "/origin-chocolate/",
+      "destination": "/origin",
+      "permanent": true
+    },
+    {
+      "source": "/origin-chocolate",
+      "destination": "/origin",
+      "permanent": true
+    },
+    {
+      "source": "/huidverzorging/",
+      "destination": "/schoonheid",
+      "permanent": true
+    },
+    {
+      "source": "/huidverzorging",
+      "destination": "/schoonheid",
+      "permanent": true
+    },
+    {
+      "source": "/personal-care/",
+      "destination": "/schoonheid",
+      "permanent": true
+    },
+    {
+      "source": "/personal-care",
+      "destination": "/schoonheid",
+      "permanent": true
+    },
+    {
+      "source": "/nitro-2pack/",
+      "destination": "/nitro-xtreme",
+      "permanent": true
+    },
+    {
+      "source": "/nitro-2pack",
+      "destination": "/nitro-xtreme",
+      "permanent": true
+    },
+    {
+      "source": "/energy-pom/",
+      "destination": "/energy",
+      "permanent": true
+    },
+    {
+      "source": "/energy-pom",
+      "destination": "/energy",
+      "permanent": true
+    },
+    {
+      "source": "/energy-plus-dragonfruit/",
+      "destination": "/energy",
+      "permanent": true
+    },
+    {
+      "source": "/energy-plus-dragonfruit",
+      "destination": "/energy",
+      "permanent": true
+    },
+    {
+      "source": "/sunrise-2pack/",
+      "destination": "/sunrise",
+      "permanent": true
+    },
+    {
+      "source": "/sunrise-2pack",
+      "destination": "/sunrise",
+      "permanent": true
+    },
+    {
+      "source": "/versterkende-collectie-voor-haarherstel-2/",
+      "destination": "/producten/versterkende-collectie-voor-haarherstel",
+      "permanent": true
+    },
+    {
+      "source": "/versterkende-collectie-voor-haarherstel-2",
+      "destination": "/producten/versterkende-collectie-voor-haarherstel",
+      "permanent": true
+    },
+    {
+      "source": "/onshots/",
+      "destination": "/on",
+      "permanent": true
+    },
+    {
+      "source": "/onshots",
+      "destination": "/on",
+      "permanent": true
+    },
+    {
+      "source": "/neuday/",
+      "destination": "/producten/skin-to-mind-neuday-brighten-revitalize-serum",
+      "permanent": true
+    },
+    {
+      "source": "/neuday",
+      "destination": "/producten/skin-to-mind-neuday-brighten-revitalize-serum",
+      "permanent": true
+    },
+    {
+      "source": "/neunight/",
+      "destination": "/producten/skin-to-mind-neunight-restore-renew-serum",
+      "permanent": true
+    },
+    {
+      "source": "/neunight",
+      "destination": "/producten/skin-to-mind-neunight-restore-renew-serum",
+      "permanent": true
+    },
+    {
+      "source": "/haarverdikkende-collectie-voor-volume-2/",
+      "destination": "/producten/haarverdikkende-collectie-voor-volume",
+      "permanent": true
+    },
+    {
+      "source": "/haarverdikkende-collectie-voor-volume-2",
+      "destination": "/producten/haarverdikkende-collectie-voor-volume",
+      "permanent": true
+    },
+    {
+      "source": "/dry-shampoo/",
+      "destination": "/producten/verduidelijk-droogshampoo-poeder",
+      "permanent": true
+    },
+    {
+      "source": "/dry-shampoo",
+      "destination": "/producten/verduidelijk-droogshampoo-poeder",
+      "permanent": true
+    },
+    {
+      "source": "/verdikkend-serum-voor-fijn-haar/",
+      "destination": "/producten/verdikkend-serum-voor-fijn-haar",
+      "permanent": true
+    },
+    {
+      "source": "/strengthen-conditioner/",
+      "destination": "/producten/geconcentreerde-conditioner-versterken",
+      "permanent": true
+    },
+    {
+      "source": "/strengthen-conditioner",
+      "destination": "/producten/geconcentreerde-conditioner-versterken",
+      "permanent": true
+    },
+    {
+      "source": "/strengthen-shampoo/",
+      "destination": "/producten/versterken-geconcentreerde-shampoo",
+      "permanent": true
+    },
+    {
+      "source": "/strengthen-shampoo",
+      "destination": "/producten/versterken-geconcentreerde-shampoo",
+      "permanent": true
+    },
+    {
+      "source": "/densify-conditioner/",
+      "destination": "/producten/verdichten-geconcentreerde-conditioner",
+      "permanent": true
+    },
+    {
+      "source": "/densify-conditioner",
+      "destination": "/producten/verdichten-geconcentreerde-conditioner",
+      "permanent": true
+    },
+    {
+      "source": "/densify-shampoo/",
+      "destination": "/producten/verdichten-geconcentreerde-shampoo",
+      "permanent": true
+    },
+    {
+      "source": "/densify-shampoo",
+      "destination": "/producten/verdichten-geconcentreerde-shampoo",
+      "permanent": true
+    },
+    {
+      "source": "/verdichten-geconcentreerde-conditioner/",
+      "destination": "/producten/verdichten-geconcentreerde-conditioner",
+      "permanent": true
+    },
+    {
+      "source": "/mentabiotics-3/",
+      "destination": "/mentabiotics",
+      "permanent": true
+    },
+    {
+      "source": "/mentabiotics-3",
+      "destination": "/mentabiotics",
+      "permanent": true
+    },
+    {
+      "source": "/biobrew-serum/",
+      "destination": "/producten/biobrew-gefermenteerd-versterkend-serum",
+      "permanent": true
+    },
+    {
+      "source": "/biobrew-serum",
+      "destination": "/producten/biobrew-gefermenteerd-versterkend-serum",
+      "permanent": true
+    },
+    {
+      "source": "/collectie-voor-vette-hoofdhuid-en-fijn-haar-2/",
+      "destination": "/producten/collectie-voor-vette-hoofdhuid-en-fijn-haar",
+      "permanent": true
+    },
+    {
+      "source": "/collectie-voor-vette-hoofdhuid-en-fijn-haar-2",
+      "destination": "/producten/collectie-voor-vette-hoofdhuid-en-fijn-haar",
+      "permanent": true
+    },
+    {
+      "source": "/clarify-serum/",
+      "destination": "/producten/clarify-balancing-serum-voor-een-vette-hoofdhuid",
+      "permanent": true
+    },
+    {
+      "source": "/clarify-serum",
+      "destination": "/producten/clarify-balancing-serum-voor-een-vette-hoofdhuid",
+      "permanent": true
+    },
+    {
+      "source": "/amare-wellness-home/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/amare-wellness-home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/amarenl/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/amarenl",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/amare-global-nederland-officieel-wellness-assortiment/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/amare-global-nederland-officieel-wellness-assortiment",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/amare-wellness/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/amare-wellness",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/fit20-2pack/",
+      "destination": "/fit20",
+      "permanent": true
+    },
+    {
+      "source": "/fit20-2pack",
+      "destination": "/fit20",
+      "permanent": true
+    },
+    {
+      "source": "/author/:path*",
+      "destination": "/",
+      "statusCode": 410
+    },
+    {
+      "source": "/blogs/nieuws/amare-happy-juice-review-ervaringen-ingredienten-en-voor-wie-het-geschikt-is",
+      "destination": "/blogs/nieuws",
+      "permanent": true
+    },
+    {
+      "source": "/category/:path*",
+      "destination": "/blogs/nieuws",
+      "permanent": true
     }
   ]
 }
