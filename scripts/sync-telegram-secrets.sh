@@ -31,6 +31,18 @@ printf '%s' "$TELEGRAM_CHAT_ID"   | gh secret set TELEGRAM_CHAT_ID
 if [[ -n "${TELEGRAM_THREAD_ID:-}" ]]; then
   printf '%s' "$TELEGRAM_THREAD_ID" | gh secret set TELEGRAM_THREAD_ID
 fi
+if [[ -n "${OPENROUTER_API_KEY:-}" ]]; then
+  printf '%s' "$OPENROUTER_API_KEY" | gh secret set OPENROUTER_API_KEY
+  echo "  ✓ OPENROUTER_API_KEY set"
+else
+  echo "  ⚠ OPENROUTER_API_KEY boş — makale üretimi çalışmayacak, doldurup script'i tekrar çalıştır"
+fi
+if [[ -n "${VERCEL_TOKEN:-}" ]]; then
+  printf '%s' "$VERCEL_TOKEN" | gh secret set VERCEL_TOKEN
+  echo "  ✓ VERCEL_TOKEN set"
+else
+  echo "  ⚠ VERCEL_TOKEN boş — otomatik deploy adımı başarısız olmaya devam edecek, doldurup script'i tekrar çalıştır"
+fi
 echo "  ✓ TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID$( [[ -n "${TELEGRAM_THREAD_ID:-}" ]] && echo ', TELEGRAM_THREAD_ID' ) set"
 
 echo "== Vercel env (production) =="

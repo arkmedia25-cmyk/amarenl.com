@@ -2,14 +2,15 @@
 /**
  * AmareNL Article Generator — GitHub Actions pipeline
  *
- * Generates ONE validated blog article via DeepSeek (non-streaming) and appends
- * it to data/extra-articles.json. Replaces the old Hermes cron pipeline —
- * runs entirely inside GitHub Actions, no dependency on Hermes or a local Mac.
+ * Generates ONE validated blog article via OpenRouter (non-streaming) and
+ * appends it to data/extra-articles.json. Replaces the old Hermes cron
+ * pipeline — runs entirely inside GitHub Actions, no dependency on Hermes
+ * or a local Mac.
  *
  * Usage: node scripts/generate-article.mjs <general|product>
  *
- * Required env: DEEPSEEK_API_KEY
- * Optional env: DEEPSEEK_MODEL (default: deepseek-chat), DEEPSEEK_BASE_URL
+ * Required env: OPENROUTER_API_KEY
+ * Optional env: OPENROUTER_MODEL (default: google/gemma-4-31b-it:free), OPENROUTER_BASE_URL
  */
 
 import OpenAI from "openai";
@@ -26,14 +27,14 @@ if (!["general", "product"].includes(MODE)) {
   process.exit(1);
 }
 
-const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY;
-if (!DEEPSEEK_API_KEY) {
-  console.error("ERROR: DEEPSEEK_API_KEY not set");
+const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
+if (!OPENROUTER_API_KEY) {
+  console.error("ERROR: OPENROUTER_API_KEY not set");
   process.exit(1);
 }
 
-const MODEL = process.env.DEEPSEEK_MODEL || "deepseek-chat";
-const BASE_URL = process.env.DEEPSEEK_BASE_URL || "https://api.deepseek.com/v1";
+const MODEL = process.env.OPENROUTER_MODEL || "google/gemma-4-31b-it:free";
+const BASE_URL = process.env.OPENROUTER_BASE_URL || "https://openrouter.ai/api/v1";
 const MAX_ATTEMPTS = 3;
 
 const TOPIC_POOLS = {
@@ -225,7 +226,14 @@ async function generateArticle(client, topic, existingArticles, systemPrompt) {
 }
 
 async function main() {
-  const client = new OpenAI({ apiKey: DEEPSEEK_API_KEY, baseURL: BASE_URL });
+  const client = new OpenAI({
+    apiKey: OPENROUTER_API_KEY,
+    baseURL: BASE_URL,
+    defaultHeaders: {
+      "HTTP-Referer": "https://amarenl.com",
+      "X-Title": "AmareNL Article Generator",
+    },
+  });
 
   const existingArticles = collectExistingArticles();
   const articleQualitySkill = readText(".claude/skills/article-quality.md");

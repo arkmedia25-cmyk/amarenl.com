@@ -32,10 +32,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Generate article (DeepSeek, non-streaming)
+      - name: Generate article (OpenRouter, non-streaming)
         id: generate
         env:
-          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: node scripts/generate-article.mjs general
 
       - name: Type-check
