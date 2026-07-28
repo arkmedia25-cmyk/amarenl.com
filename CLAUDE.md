@@ -812,3 +812,68 @@ Fase 9 — Data & Infrastructuur — 2026-05-17
 - **6** skills (.claude/skills/: orchestrator, scheduler, writer, research, keyword, traffic)
 - **1** server paketi (server/: orchestrator + Telegram bot)
 - **0** openstaande artikelopdrachten 🎉
+
+> ⚠️ **VEROUDERD (zie sectie 20):** de `server/` package + Telegram bot hierboven is **niet** het huidige
+> systeem. Er bleek ook een aparte, écht-actieve automatische bot te draaien buiten deze repo (Hermes
+> gateway LaunchAgent, `AmareNL_Orchestrator_Bot`) — die is stopgezet op 28-07-2026. Het huidige,
+> geverifieerde systeem is de Faz 1/2 GitHub Actions pipeline in sectie 20.
+
+---
+
+## 20. AGENCY OS STATUS — 28 juli 2026
+
+### Faz 1 — Telegram-onaygate (KLAAR)
+Artikel-workflows committen niet meer direct naar `main`. Ze openen een `draft/<slug>` PR,
+sturen een Telegram-bericht met ✅/❌ knoppen (`app/api/telegram/webhook/route.ts`), en pas na
+onaply merget/deployt `.github/workflows/amarenl-promote-draft.yml` automatisch.
+
+**Bekende bug (gevonden + opgelost 28-07-2026):** een PR (#5) bleef OPEN staan ondanks dat de
+gebruiker "reject" had geklikt in Telegram — na diagnose bleek de webhook zelf prima te werken (een
+handmatige test-call met het juiste `TELEGRAM_WEBHOOK_SECRET` sloot de PR direct). Vermoedelijke
+oorzaak: menselijke misklik tussen de vele PR-berichten, niet een codefout. **Als dit weer gebeurt:**
+test de webhook direct met een curl-call (zie sessie-log) vóór je verder zoekt — dat isoleert snel of
+het serverside of Telegram-side is.
+
+### Faz 2 — Claude API content-motor (KLAAR, uitgebreid met research-context)
+`scripts/generate-article-claude.mjs` draait op een echte cron (ma/wo/vr, `amarenl-article-claude.yml`)
+en kiest zelf het volgende onderwerp uit `content/article-queue.md`. Sinds 28-07-2026 twee-staps:
+1. Lichte "kies onderwerp + PubMed-zoektermen" call
+2. Echte PubMed-abstracts opgehaald via de publieke E-utilities API (geen scraping, geen key nodig) →
+   primaire bron voor wetenschappelijke claims (niet het parametrisch geheugen van het model)
+3. Plus optionele context uit `tools/competitor-scraper/snapshot/` en `tools/youtube-research/snapshot/`
+   — **altijd puur thema-inspiratie, nooit letterlijk overgenomen**
+
+Beide research-tools draaien wekelijks (zondag) via eigen GitHub Actions crons en committen hun
+snapshot rechtstreeks naar `main` (brondata, geen PR nodig).
+
+### Concurrentie-scraper (`tools/competitor-scraper/`)
+Eigen geïsoleerde `package.json` (alleen cheerio), geen impact op de Next.js dependencies. Nu
+uitgelijnd op vitaminstore.nl (prijs/voorraad/reviews, categorie vitamine D). Uitbreiden naar meer
+concurrenten/categorieën = nieuwe URLs in `urls.txt` + eventueel nieuwe `SELECTORS` per site
+(zie `tools/competitor-scraper/CLAUDE.md` voor de aanpassings-flow).
+
+### YouTube research (`tools/youtube-research/`)
+Officiële YouTube Data API v3, 12 Nederlandse zoektermen (2 per productcategorie) met Engelstalige
+fallback als een NL-zoekterm te weinig resultaten oplevert (kleine NL-markt op YouTube). Haalt
+video-titels + topcomments op als thema-signaal.
+
+### 28-07-2026 — Vercel free-plan upload-limiet geraakt
+Te veel test-deploys op één dag → `DeploymentError: Too many requests - try again in 24 hours
+(code: "api-upload-free")`. PR-merges lukken nog wel (merge gebeurt vóór deploy), maar de site
+update niet totdat de limiet reset. Gebruiker koos bewust voor **wachten** i.p.v. Vercel Pro.
+**Als dit weer gebeurt:** check `vercel ls` voor de laatste succesvolle deploy-tijd, en overweeg
+Vercel Pro als dit vaker voorkomt bij actief testen.
+
+### Openstaand voor volgende sessie
+- [ ] **17 PR's** in de Telegram-approval-queue (13 gecorrigeerde stash-artikelen #6-18 + 2
+      Faz 2-testartikelen #19-20) — moeten nog door de gebruiker beoordeeld worden
+- [ ] Vercel-deploy inhalen zodra de 24u-limiet reset (~28-07-2026 ~13:00 UTC) — bekijk
+      `gh run list --workflow=amarenl-promote-draft.yml` voor gefaalde deploys die opnieuw moeten
+- [ ] **Faz 3** — video (Higgsfield: faceless explainer + product showcase), bewust uitgesteld naar
+      een verse sessie (grote nieuwe scope, eigen API/credentials nodig)
+- [ ] **Faz 4** — social copy drafts (Instagram/Pinterest/TikTok/YouTube), via Telegram, geen
+      auto-posting
+- [ ] Overweeg: algemene web-search API (naast PubMed) voor bredere onderwerp-research, besproken
+      maar niet geïmplementeerd
+- [ ] `server/` package (sectie 19) opruimen of expliciet archiveren — momenteel misleidende
+      documentatie die een niet-actief systeem beschrijft alsof het draait
