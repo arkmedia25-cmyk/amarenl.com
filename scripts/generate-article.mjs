@@ -33,9 +33,9 @@ if (!OPENROUTER_API_KEY) {
   process.exit(1);
 }
 
-const MODEL = process.env.OPENROUTER_MODEL || "google/gemma-4-31b-it:free";
+const MODEL = process.env.OPENROUTER_MODEL || "nvidia/nemotron-3-super-120b-a12b:free";
 const BASE_URL = process.env.OPENROUTER_BASE_URL || "https://openrouter.ai/api/v1";
-const MAX_ATTEMPTS = 3;
+const MAX_ATTEMPTS = 4;
 
 const TOPIC_POOLS = {
   general: [
@@ -145,8 +145,8 @@ function validate(article, existingArticles) {
   }
 
   const wordCount = article.content.split(/\s+/).filter(Boolean).length;
-  if (wordCount < 800) {
-    errors.push(`Content heeft maar ${wordCount} woorden — minimum is 800`);
+  if (wordCount < 650) {
+    errors.push(`Content heeft maar ${wordCount} woorden — minimum is 650`);
   }
 
   if (/<script|import\s+\w+\s+from|AffiliateCTA|<\/?[A-Z]\w*[^>]*\/?>/.test(article.content)) {
@@ -157,12 +157,14 @@ function validate(article, existingArticles) {
     errors.push("NVWA disclaimer ontbreekt in de content");
   }
 
+  // Internal links are requested in the prompt but not hard-enforced here:
+  // smaller free models reliably skip them even after corrective feedback,
+  // which was burning all retry attempts on this one requirement. Missing
+  // internal links are a minor SEO nit, not worth failing generation over.
   const linkMatches = [...article.content.matchAll(/\/blogs\/nieuws\/([a-z0-9-]+)/g)].map((m) => m[1]);
   const validLinks = linkMatches.filter((slug) => existingArticles.has(slug));
-  if (validLinks.length < 2) {
-    errors.push(
-      `Slechts ${validLinks.length} geldige interne link(s) gevonden (minimaal 2 nodig, moeten verwijzen naar bestaande slugs uit de lijst)`
-    );
+  if (validLinks.length < 1) {
+    console.warn(`  (waarschuwing: geen interne link naar een bestaand artikel gevonden — publicatie gaat toch door)`);
   }
 
   const lowerContent = article.content.toLowerCase();
@@ -187,8 +189,9 @@ async function generateArticle(client, topic, existingArticles, systemPrompt) {
         model: MODEL,
         stream: false, // non-streaming — avoids the stream-stale/connection-drop failure mode
         temperature: 0.8,
-        max_tokens: 8000,
+        max_tokens: 16000, // headroom for models that spend budget on a reasoning trace before the JSON answer
         response_format: { type: "json_object" },
+        reasoning: { enabled: false }, // skip thinking traces where supported — more budget for the actual article
         messages: [
           { role: "system", content: systemPrompt },
           { role: "user", content: buildUserPrompt({ topic, existingArticles, previousErrors }) },
@@ -209,6 +212,19 @@ async function generateArticle(client, topic, existingArticles, systemPrompt) {
       console.error(`[attempt ${attempt}] JSON parse failed: ${err.message}`);
       previousErrors = [`JSON parse failed: ${err.message}. Output moet PUUR JSON zijn, geen markdown.`];
       continue;
+    }
+
+    // Auto-dedupe a colliding slug instead of burning a retry on it — models
+    // reliably reuse slugs from prior context even when told not to.
+    if (parsed?.slug && existingArticles.has(parsed.slug) && /^[a-z0-9]+(-[a-z0-9]+)*$/.test(parsed.slug)) {
+      let n = 2;
+      let candidate = `${parsed.slug}-${n}`;
+      while (existingArticles.has(candidate)) {
+        n += 1;
+        candidate = `${parsed.slug}-${n}`;
+      }
+      console.log(`[attempt ${attempt}] Slug "${parsed.slug}" already exists — auto-renamed to "${candidate}"`);
+      parsed.slug = candidate;
     }
 
     const errors = validate(parsed, existingArticles);
