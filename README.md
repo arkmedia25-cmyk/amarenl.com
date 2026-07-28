@@ -227,3 +227,5 @@ GitHub → Vercel auto-deploy kullanılmıyor. Manuel CLI deploy.
 ---
 
 Zie `CLAUDE.md` voor volledige projectdocumentatie, codeerregels en SEO-eisen.
+
+<!-- Telegram onay akışı testi — 2026-07-28T09:42:02Z -->
