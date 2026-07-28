@@ -8,13 +8,14 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 concurrency:
   group: amarenl-article-publish
   cancel-in-progress: false
 
 jobs:
-  generate-and-publish:
+  generate-and-propose:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -43,20 +44,66 @@ jobs:
       - name: Build (production sanity check)
         run: npm run build
 
-      - name: Commit and push
+      - name: Create draft branch and commit
+        id: branch
+        env:
+          SLUG: ${{ steps.generate.outputs.slug }}
         run: |
+          BRANCH="draft/${SLUG}"
           git config user.name "AmareNL Article Bot"
           git config user.email "actions@github.com"
+          git checkout -b "$BRANCH"
           git add data/extra-articles.json public/sitemap.xml
-          git commit -m "publish: ${{ steps.generate.outputs.slug }} (auto — product SEO)"
-          git push origin main
+          git commit -m "publish: ${SLUG} (auto — product SEO, pending approval)"
+          git push origin "$BRANCH"
+          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
 
-      - name: Deploy to Vercel
+      - name: Open PR
+        id: pr
         env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: ${{ steps.branch.outputs.branch }}
+          TITLE: ${{ steps.generate.outputs.title }}
+          SLUG: ${{ steps.generate.outputs.slug }}
+          EXCERPT: ${{ steps.generate.outputs.excerpt }}
         run: |
-          npx vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
-          npx vercel build --prod --token="$VERCEL_TOKEN"
-          npx vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN"
+          BODY=$(printf 'Otomatik üretilen product SEO makalesi — onay bekliyor.\n\n**Slug:** `%s`\n**Özet:** %s\n\nBu PR, Telegram'"'"'dan ✅ onaylanınca otomatik merge + deploy edilecek. ❌ Reddedilirse kapatılır ve main hiç değişmez.' \
+            "$SLUG" "$EXCERPT")
+          URL=$(gh pr create --title "🛒 ${TITLE}" --body "$BODY" --base main --head "$BRANCH")
+          NUMBER=$(gh pr view "$URL" --json number -q .number)
+          echo "url=$URL" >> "$GITHUB_OUTPUT"
+          echo "number=$NUMBER" >> "$GITHUB_OUTPUT"
+
+      - name: Notify Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_THREAD_ID: ${{ secrets.TELEGRAM_THREAD_ID }}
+          TITLE: ${{ steps.generate.outputs.title }}
+          EXCERPT: ${{ steps.generate.outputs.excerpt }}
+          PR_URL: ${{ steps.pr.outputs.url }}
+          PR_NUMBER: ${{ steps.pr.outputs.number }}
+        run: |
+          TEXT=$(printf '🛒 Yeni ürün SEO makale taslağı\n\n%s\n\n%s\n\nPR: %s' \
+            "$TITLE" "$EXCERPT" "$PR_URL")
+
+          PAYLOAD=$(jq -n \
+            --arg chat_id "$TELEGRAM_CHAT_ID" \
+            --arg text "$TEXT" \
+            --arg thread_id "${TELEGRAM_THREAD_ID:-}" \
+            --arg approve "approve:${PR_NUMBER}" \
+            --arg reject "reject:${PR_NUMBER}" \
+            '{
+              chat_id: $chat_id,
+              text: $text,
+              reply_markup: {
+                inline_keyboard: [[
+                  {text: "✅ Onayla ve Yayınla", callback_data: $approve},
+                  {text: "❌ Reddet", callback_data: $reject}
+                ]]
+              }
+            } + (if $thread_id != "" then {message_thread_id: ($thread_id | tonumber)} else {} end)')
+
+          curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -H "Content-Type: application/json" \
+            -d "$PAYLOAD"

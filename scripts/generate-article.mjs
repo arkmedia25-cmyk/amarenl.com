@@ -256,7 +256,20 @@ async function main() {
   console.log(`\nSUCCESS: "${article.title}" (${article.slug}) added to data/extra-articles.json`);
 
   if (process.env.GITHUB_OUTPUT) {
-    writeFileSync(process.env.GITHUB_OUTPUT, `slug=${article.slug}\ntitle=${article.title}\n`, { flag: "a" });
+    // Use the heredoc delimiter form for title/excerpt — safe even if the
+    // generated text contains quotes, colons or (unexpectedly) newlines.
+    const delim = `ghadelim_${Math.random().toString(36).slice(2)}`;
+    const out = [
+      `slug=${article.slug}`,
+      `title<<${delim}`,
+      article.title,
+      delim,
+      `excerpt<<${delim}`,
+      article.excerpt,
+      delim,
+      "",
+    ].join("\n");
+    writeFileSync(process.env.GITHUB_OUTPUT, out, { flag: "a" });
   }
 }
 

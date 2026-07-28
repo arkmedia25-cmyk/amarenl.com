@@ -1,0 +1,90 @@
+name: AmareNL — Onaylanan Taslağı Yayınla
+
+on:
+  repository_dispatch:
+    types: [promote-draft]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: amarenl-article-publish
+  cancel-in-progress: false
+
+jobs:
+  merge-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Merge approved PR
+        id: merge
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.client_payload.pr_number }}
+        run: |
+          gh pr merge "$PR_NUMBER" --squash --delete-branch
+          echo "Merged PR #$PR_NUMBER"
+
+      - name: Pull merged main
+        run: git pull origin main
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type-check
+        run: npx tsc --noEmit -p tsconfig.json
+
+      - name: Build (production sanity check)
+        run: npm run build
+
+      - name: Deploy to Vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        run: |
+          npx vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
+          npx vercel build --prod --token="$VERCEL_TOKEN"
+          npx vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN"
+
+      - name: Notify Telegram (success)
+        if: success()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_THREAD_ID: ${{ secrets.TELEGRAM_THREAD_ID }}
+          PR_NUMBER: ${{ github.event.client_payload.pr_number }}
+        run: |
+          TEXT=$(printf '✅ PR #%s canlıya alındı — https://amarenl.com' "$PR_NUMBER")
+          PAYLOAD=$(jq -n --arg chat_id "$TELEGRAM_CHAT_ID" --arg text "$TEXT" \
+            --arg thread_id "${TELEGRAM_THREAD_ID:-}" \
+            '{chat_id: $chat_id, text: $text} + (if $thread_id != "" then {message_thread_id: ($thread_id | tonumber)} else {} end)')
+          curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -H "Content-Type: application/json" -d "$PAYLOAD"
+
+      - name: Notify Telegram (failure)
+        if: failure()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_THREAD_ID: ${{ secrets.TELEGRAM_THREAD_ID }}
+          PR_NUMBER: ${{ github.event.client_payload.pr_number }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          TEXT=$(printf '⚠️ PR #%s onaylandı ama merge/build/deploy sırasında hata oluştu.\n\n%s' "$PR_NUMBER" "$RUN_URL")
+          PAYLOAD=$(jq -n --arg chat_id "$TELEGRAM_CHAT_ID" --arg text "$TEXT" \
+            --arg thread_id "${TELEGRAM_THREAD_ID:-}" \
+            '{chat_id: $chat_id, text: $text} + (if $thread_id != "" then {message_thread_id: ($thread_id | tonumber)} else {} end)')
+          curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -H "Content-Type: application/json" -d "$PAYLOAD"
