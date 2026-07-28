@@ -154,6 +154,37 @@ function buildCompetitorContext() {
   return parts.join("\n\n");
 }
 
+// ── YouTube research-context (uit tools/youtube-research/snapshot/, wekelijks bijgewerkt) ──
+function buildYoutubeContext() {
+  const videosPath = join(ROOT, "tools/youtube-research/snapshot/videos.csv");
+  const commentsPath = join(ROOT, "tools/youtube-research/snapshot/comments.csv");
+  if (!existsSync(videosPath) && !existsSync(commentsPath)) return "";
+
+  const parts = [];
+  if (existsSync(videosPath)) {
+    const rows = readFileSync(videosPath, "utf-8").split(/\r?\n/).filter(Boolean).slice(1).map(parseCsvLine);
+    const topTitles = rows
+      .sort((a, b) => (parseInt(b[5], 10) || 0) - (parseInt(a[5], 10) || 0))
+      .slice(0, 15)
+      .map((c) => `- "${c[2]}" (${c[4]}, ${c[5] || "?"} views) — zoekterm: ${c[0]}`);
+    if (topTitles.length) {
+      parts.push("Populaire YouTube-video's rond onze categorieën (titel/kanaal/views):\n" + topTitles.join("\n"));
+    }
+  }
+  if (existsSync(commentsPath)) {
+    const rows = readFileSync(commentsPath, "utf-8").split(/\r?\n/).filter(Boolean).slice(1).map(parseCsvLine);
+    const sample = rows.slice(0, 15).filter((c) => c[3]).map((c) => `- ${c[3]}`);
+    if (sample.length) {
+      parts.push(
+        "Voorbeelden van echte kijkersvragen/opmerkingen onder die video's (alleen thema-inspiratie,\n" +
+          "NOOIT letterlijk overnemen):\n" +
+          sample.join("\n")
+      );
+    }
+  }
+  return parts.join("\n\n");
+}
+
 function buildSystemPrompt(articleQualitySkill, claudeMdExcerpt) {
   return [
     "Jij bent een ervaren Nederlandse gezondheidsjournalist die blogartikelen schrijft voor amarenl.com.",
@@ -189,7 +220,7 @@ function buildTopicPrompt({ queueDoc, existingArticles }) {
   ].join("\n");
 }
 
-function buildUserPrompt({ queueDoc, productSummary, existingArticles, previousErrors, topic, pubmedContext, competitorContext }) {
+function buildUserPrompt({ queueDoc, productSummary, existingArticles, previousErrors, topic, pubmedContext, competitorContext, youtubeContext }) {
   const linkCandidates = [...existingArticles.entries()]
     .slice(0, 80)
     .map(([slug, title]) => `- ${slug} — ${title}`)
@@ -224,6 +255,15 @@ function buildUserPrompt({ queueDoc, productSummary, existingArticles, previousE
       "=== CONCURRENTIE-CONTEXT (alleen thema-inspiratie — NOOIT letterlijke tekst overnemen,",
       "puur signaal over wat klanten daadwerkelijk vragen/belangrijk vinden) ===",
       competitorContext,
+      ""
+    );
+  }
+
+  if (youtubeContext) {
+    parts.push(
+      "=== YOUTUBE-CONTEXT (alleen thema-inspiratie — NOOIT letterlijke tekst overnemen, puur signaal",
+      "over wat mensen al bekijken/vragen rond dit onderwerp) ===",
+      youtubeContext,
       ""
     );
   }
@@ -417,6 +457,7 @@ async function main() {
   const queueDoc = readText("content/article-queue.md");
   const productSummary = buildProductSummary();
   const competitorContext = buildCompetitorContext();
+  const youtubeContext = buildYoutubeContext();
 
   console.log("Onderwerp kiezen + PubMed-zoektermen bepalen...");
   const topicPick = await pickTopic(client, { queueDoc, existingArticles }, systemPrompt);
@@ -434,7 +475,7 @@ async function main() {
 
   const article = await generateArticle(
     client,
-    { queueDoc, productSummary, existingArticles, topic: topicPick?.topic, pubmedContext, competitorContext },
+    { queueDoc, productSummary, existingArticles, topic: topicPick?.topic, pubmedContext, competitorContext, youtubeContext },
     systemPrompt
   );
 
