@@ -1,9 +1,9 @@
-name: AmareNL — Product SEO Makale (3 günde bir)
+name: AmareNL — Product SEO Makale (manuel/yedek)
 
+# Otomatik cron devre dışı (Faz 2) — içerik üretimi artık zamanlanmış
+# Claude ajanı üzerinden yürüyor (bkz. /Users/ark/.claude/plans/smooth-churning-cat.md).
+# Bu workflow manuel yedek olarak kalıyor: gh workflow run amarenl-article-product.yml
 on:
-  schedule:
-    # 23:30 UTC = 02:30 TRT, om de 3 dagen (30 min offset t.o.v. general workflow)
-    - cron: "30 23 */3 * *"
   workflow_dispatch: {}
 
 permissions:

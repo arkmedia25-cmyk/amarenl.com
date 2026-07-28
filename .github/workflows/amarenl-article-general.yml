@@ -1,9 +1,9 @@
-name: AmareNL — Genel Makale (2 günde bir)
+name: AmareNL — Genel Makale (manuel/yedek)
 
+# Otomatik cron devre dışı (Faz 2) — içerik üretimi artık zamanlanmış
+# Claude ajanı üzerinden yürüyor (bkz. /Users/ark/.claude/plans/smooth-churning-cat.md).
+# Bu workflow manuel yedek olarak kalıyor: gh workflow run amarenl-article-general.yml
 on:
-  schedule:
-    # 23:00 UTC = 02:00 TRT, om de 2 dagen
-    - cron: "0 23 */2 * *"
   workflow_dispatch: {}
 
 permissions:
