@@ -14,7 +14,7 @@
  */
 
 import Anthropic from "@anthropic-ai/sdk";
-import { readFileSync, writeFileSync } from "fs";
+import { readFileSync, writeFileSync, existsSync } from "fs";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 
@@ -70,6 +70,90 @@ function buildProductSummary() {
     .join("\n\n");
 }
 
+// ── PubMed (real, public E-utilities API — no key required, no scraping) ──────
+const PUBMED_BASE = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils";
+
+async function fetchPubMedAbstracts(searchTerms) {
+  const blocks = [];
+  for (const term of (searchTerms || []).slice(0, 3)) {
+    try {
+      const searchUrl = `${PUBMED_BASE}/esearch.fcgi?db=pubmed&retmode=json&retmax=3&sort=relevance&term=${encodeURIComponent(term)}`;
+      const searchRes = await fetch(searchUrl, { signal: AbortSignal.timeout(15000) });
+      const searchJson = await searchRes.json();
+      const ids = searchJson?.esearchresult?.idlist || [];
+      if (!ids.length) {
+        console.log(`  PubMed: geen resultaten voor "${term}"`);
+        continue;
+      }
+
+      const fetchUrl = `${PUBMED_BASE}/efetch.fcgi?db=pubmed&rettype=abstract&retmode=text&id=${ids.join(",")}`;
+      const abstractRes = await fetch(fetchUrl, { signal: AbortSignal.timeout(15000) });
+      const text = (await abstractRes.text()).trim();
+      if (text) {
+        console.log(`  PubMed: ${ids.length} resultaat/resultaten voor "${term}"`);
+        blocks.push(`--- PubMed resultaten voor zoekterm "${term}" ---\n${text.slice(0, 4000)}`);
+      }
+      await new Promise((r) => setTimeout(r, 400)); // NCBI: max 3 req/sec zonder API key
+    } catch (err) {
+      console.warn(`  PubMed fetch mislukt voor "${term}": ${err.message}`);
+    }
+  }
+  return blocks.join("\n\n");
+}
+
+// ── Concurrentie-context (uit tools/competitor-scraper/snapshot/, wekelijks bijgewerkt) ──
+function parseCsvLine(line) {
+  const out = [];
+  let cur = "";
+  let inQuotes = false;
+  for (let i = 0; i < line.length; i++) {
+    const ch = line[i];
+    if (inQuotes) {
+      if (ch === '"') {
+        if (line[i + 1] === '"') { cur += '"'; i++; }
+        else inQuotes = false;
+      } else cur += ch;
+    } else if (ch === '"') inQuotes = true;
+    else if (ch === ",") { out.push(cur); cur = ""; }
+    else cur += ch;
+  }
+  out.push(cur);
+  return out;
+}
+
+function buildCompetitorContext() {
+  const dataPath = join(ROOT, "tools/competitor-scraper/snapshot/data.csv");
+  const reviewsPath = join(ROOT, "tools/competitor-scraper/snapshot/reviews.csv");
+  if (!existsSync(dataPath) && !existsSync(reviewsPath)) return "";
+
+  const parts = [];
+  if (existsSync(dataPath)) {
+    const rows = readFileSync(dataPath, "utf-8").split(/\r?\n/).filter(Boolean).slice(1);
+    const prices = rows.map((l) => parseFloat(parseCsvLine(l)[3])).filter((n) => Number.isFinite(n));
+    if (prices.length) {
+      parts.push(
+        `Concurrent prijsrange (vitaminstore.nl): €${Math.min(...prices).toFixed(2)} - €${Math.max(...prices).toFixed(2)} (${prices.length} producten).`
+      );
+    }
+  }
+  if (existsSync(reviewsPath)) {
+    const rows = readFileSync(reviewsPath, "utf-8").split(/\r?\n/).filter(Boolean).slice(1);
+    const sample = rows
+      .slice(0, 12)
+      .map((l) => parseCsvLine(l))
+      .filter((c) => c[6])
+      .map((c) => `- "${c[5] || ""}": ${c[6]}`);
+    if (sample.length) {
+      parts.push(
+        "Voorbeelden van echte klantvragen/opmerkingen bij concurrent-producten (alleen als thema-inspiratie,\n" +
+          "NOOIT letterlijk overnemen):\n" +
+          sample.join("\n")
+      );
+    }
+  }
+  return parts.join("\n\n");
+}
+
 function buildSystemPrompt(articleQualitySkill, claudeMdExcerpt) {
   return [
     "Jij bent een ervaren Nederlandse gezondheidsjournalist die blogartikelen schrijft voor amarenl.com.",
@@ -83,25 +167,68 @@ function buildSystemPrompt(articleQualitySkill, claudeMdExcerpt) {
   ].join("\n");
 }
 
-function buildUserPrompt({ queueDoc, productSummary, existingArticles, previousErrors }) {
+function buildTopicPrompt({ queueDoc, existingArticles }) {
+  const existingSlugSet = [...existingArticles.keys()].join(", ");
+  return [
+    "Hieronder staat de volledige content/article-queue.md van amarenl.com — een redactieplan met",
+    "meerdere tabellen (30-dagen planning, keyword-clusters, TIER-lijsten). Sommige onderwerpen zijn",
+    "al gemarkeerd als voltooid (✅ / doorgestreept / 'live'), andere staan nog open (⏳).",
+    "",
+    "Kies het beste nog-niet-geschreven onderwerp — hoogste zoekvolume × commerciële intentie die nog",
+    "geen ⏳→✅ transitie heeft gehad. Kies er precies één.",
+    "Geef ook 2-3 Engelstalige PubMed-zoektermen die relevant wetenschappelijk onderzoek voor dit",
+    "onderwerp zouden opleveren (PubMed indexeert vrijwel uitsluitend Engelstalige literatuur).",
+    "",
+    "=== content/article-queue.md ===",
+    queueDoc,
+    "",
+    `VERBODEN SLUGS (al in gebruik): ${existingSlugSet}`,
+    "",
+    "Output ALLEEN dit JSON object (geen backticks, geen markdown):",
+    '{"topic":"korte omschrijving van het gekozen onderwerp uit de queue","category":"darmen|mentaal|schoonheid|essentials|energie|gewichtsbeheer","pubmed_search_terms":["term1","term2"]}',
+  ].join("\n");
+}
+
+function buildUserPrompt({ queueDoc, productSummary, existingArticles, previousErrors, topic, pubmedContext, competitorContext }) {
   const linkCandidates = [...existingArticles.entries()]
     .slice(0, 80)
     .map(([slug, title]) => `- ${slug} — ${title}`)
     .join("\n");
   const existingSlugSet = [...existingArticles.keys()].join(", ");
 
-  const parts = [
-    "Hieronder staat de volledige content/article-queue.md van amarenl.com — een redactieplan met",
-    "meerdere tabellen (30-dagen planning, keyword-clusters, TIER-lijsten). Sommige onderwerpen zijn",
-    "al gemarkeerd als voltooid (✅ / doorgestreept / 'live'), andere staan nog open (⏳).",
-    "",
-    "STAP 1: Kies zelf het beste nog-niet-geschreven onderwerp uit dit document — hoogste",
-    "zoekvolume × commerciële intentie die nog geen ⏳→✅ transitie heeft gehad. Kies er precies één.",
-    "STAP 2: Schrijf daar een compleet artikel over volgens de kwaliteitsregels.",
-    "",
-    "=== content/article-queue.md ===",
-    queueDoc,
-    "",
+  const parts = topic
+    ? [`Het onderwerp is al gekozen: "${topic}". Schrijf hier een compleet artikel over volgens de kwaliteitsregels.`]
+    : [
+        "Hieronder staat de volledige content/article-queue.md van amarenl.com — een redactieplan met",
+        "meerdere tabellen (30-dagen planning, keyword-clusters, TIER-lijsten). Sommige onderwerpen zijn",
+        "al gemarkeerd als voltooid (✅ / doorgestreept / 'live'), andere staan nog open (⏳).",
+        "",
+        "STAP 1: Kies zelf het beste nog-niet-geschreven onderwerp uit dit document — hoogste",
+        "zoekvolume × commerciële intentie die nog geen ⏳→✅ transitie heeft gehad. Kies er precies één.",
+        "STAP 2: Schrijf daar een compleet artikel over volgens de kwaliteitsregels.",
+      ];
+
+  parts.push("", "=== content/article-queue.md (voor context/toon/doelgroep) ===", queueDoc, "");
+
+  if (pubmedContext) {
+    parts.push(
+      "=== ECHTE PUBMED-ONDERZOEKSRESULTATEN (gebruik dit als primaire bron voor wetenschappelijke claims —",
+      "parafraseer in natuurlijk Nederlands, verzin GEEN extra details die hier niet in staan) ===",
+      pubmedContext,
+      ""
+    );
+  }
+
+  if (competitorContext) {
+    parts.push(
+      "=== CONCURRENTIE-CONTEXT (alleen thema-inspiratie — NOOIT letterlijke tekst overnemen,",
+      "puur signaal over wat klanten daadwerkelijk vragen/belangrijk vinden) ===",
+      competitorContext,
+      ""
+    );
+  }
+
+  parts.push(
     "=== PRODUCTGEGEVENS (enige toegestane bron voor product-/ingrediëntclaims — verzin NOOIT",
     "een ingrediënt, werkingsmechanisme of claim die hier niet in staat) ===",
     productSummary,
@@ -112,8 +239,8 @@ function buildUserPrompt({ queueDoc, productSummary, existingArticles, previousE
     `VERBODEN SLUGS (al in gebruik, kies een nieuwe unieke slug voor je nieuwe artikel): ${existingSlugSet}`,
     "",
     "Output ALLEEN dit JSON object (geen backticks, geen markdown):",
-    '{"slug":"...","title":"...","category":"darmen|mentaal|schoonheid|essentials|energie|gewichtsbeheer","excerpt":"...","content":"<h2>...</h2><p>...</p>...","queue_topic_matched":"korte omschrijving van het gekozen onderwerp uit de queue, voor logging"}',
-  ];
+    '{"slug":"...","title":"...","category":"darmen|mentaal|schoonheid|essentials|energie|gewichtsbeheer","excerpt":"...","content":"<h2>...</h2><p>...</p>...","queue_topic_matched":"korte omschrijving van het gekozen onderwerp uit de queue, voor logging"}'
+  );
 
   if (previousErrors?.length) {
     parts.push("", "=== VORIGE POGING MISLUKTE — CORRIGEER DIT ===", previousErrors.map((e) => `- ${e}`).join("\n"));
@@ -181,6 +308,26 @@ function validate(article, existingArticles) {
   }
 
   return errors;
+}
+
+async function pickTopic(client, ctx, systemPrompt) {
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    try {
+      const response = await client.messages.create({
+        model: MODEL,
+        max_tokens: 2000,
+        system: systemPrompt,
+        messages: [{ role: "user", content: buildTopicPrompt(ctx) }],
+      });
+      const raw = response.content?.find((b) => b.type === "text")?.text || "";
+      const cleaned = raw.trim().replace(/^```json\s*/i, "").replace(/```\s*$/, "");
+      const parsed = JSON.parse(cleaned);
+      if (parsed?.topic) return parsed;
+    } catch (err) {
+      console.warn(`[topic-pick attempt ${attempt}] mislukt: ${err.message}`);
+    }
+  }
+  return null;
 }
 
 async function generateArticle(client, ctx, systemPrompt) {
@@ -266,10 +413,25 @@ async function main() {
 
   const queueDoc = readText("content/article-queue.md");
   const productSummary = buildProductSummary();
+  const competitorContext = buildCompetitorContext();
+
+  console.log("Onderwerp kiezen + PubMed-zoektermen bepalen...");
+  const topicPick = await pickTopic(client, { queueDoc, existingArticles }, systemPrompt);
+
+  let pubmedContext = "";
+  if (topicPick?.topic) {
+    console.log(`  Gekozen onderwerp: ${topicPick.topic}`);
+    if (topicPick.pubmed_search_terms?.length) {
+      console.log(`  PubMed-zoektermen: ${topicPick.pubmed_search_terms.join(", ")}`);
+      pubmedContext = await fetchPubMedAbstracts(topicPick.pubmed_search_terms);
+    }
+  } else {
+    console.warn("  Onderwerp-selectie mislukt — val terug op zelf-kiezende flow zonder PubMed-context.");
+  }
 
   const article = await generateArticle(
     client,
-    { queueDoc, productSummary, existingArticles },
+    { queueDoc, productSummary, existingArticles, topic: topicPick?.topic, pubmedContext, competitorContext },
     systemPrompt
   );
 
