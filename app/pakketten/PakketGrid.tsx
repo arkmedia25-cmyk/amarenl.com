@@ -6,8 +6,7 @@ const PACKS = [
     href: "/happy-lifestyle-pack-pro",
     name: "Happy Lifestyle Pack — Pro ⭐",
     tagline: "Volledig assortiment — hoogste commissie",
-    priceSub: "649,64",
-    priceOnce: "721,10",
+    price: "649,64",
     isPro: true,
     benefits: ["Volledige productlijn", "Hoogste commissie %", "Premium events", "Persoonlijke coaching"],
   },
@@ -16,8 +15,7 @@ const PACKS = [
     href: "/triangle-marketing-pack",
     name: "Triangle Marketing Pack",
     tagline: "3x Triangle of Wellness — deel & verdien",
-    priceSub: "511,21",
-    priceOnce: "568,01",
+    price: "511,21",
     isPro: false,
     benefits: ["3x Triangle set", "1 voor jezelf", "2 om te delen", "Marketingmateriaal"],
   },
@@ -26,8 +24,7 @@ const PACKS = [
     href: "https://www.amare.com/2075008/nl-nl/share",
     name: "Zelf Samenstellen",
     tagline: "Kies je eigen producten + €35 licentiekosten",
-    priceSub: "—",
-    priceOnce: "—",
+    price: "—",
     isPro: false,
     benefits: ["Kies zelf je producten", "€35 licentie voor toegang", "Bouw je eigen pakket", "Maximale flexibiliteit"],
   },
@@ -57,11 +54,11 @@ export default function PakketGrid() {
             </div>
 
             <div className="mb-4 p-4 bg-[var(--color-bg-soft)] rounded-xl text-center">
-              <p className="text-[10px] text-[var(--color-text-muted)] uppercase tracking-wider mb-1">Abonnement</p>
+              <p className="text-[10px] text-[var(--color-text-muted)] uppercase tracking-wider mb-1">Eenmalige aankoop</p>
               <p className="text-2xl font-bold text-[var(--color-primary)]">
-                €{pack.priceSub}<span className="text-sm font-normal text-[var(--color-text-muted)]">/maand</span>
+                {pack.price === "—" ? pack.price : `€${pack.price}`}
               </p>
-              <p className="text-[10px] text-[var(--color-text-muted)] mt-1">Eenmalig: €{pack.priceOnce}</p>
+              <p className="text-[10px] text-[var(--color-text-muted)] mt-1">Geen abonnement</p>
             </div>
 
             <ul className="space-y-2 mb-6 flex-1">

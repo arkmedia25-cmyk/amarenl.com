@@ -51,7 +51,7 @@ const faqItems = [
   {
     question: "Welk Launch Pack past bij mij?",
     answer:
-      "Pro (€649,64/maand) = volledig assortiment, hoogste commissiepercentage, toegang tot premium events en persoonlijke coaching. Triangle (€511,21/maand) = 3x Triangle of Wellness sets — één voor jezelf, twee om weg te geven aan potentiële klanten. Zelf Samenstellen = kies je eigen producten + €35 licentiekosten voor toegang tot het partnerprogramma.",
+      "Pro (eenmalig €649,64) = volledig assortiment, hoogste commissiepercentage, toegang tot premium events en persoonlijke coaching. Triangle (eenmalig €511,21) = 3x Triangle of Wellness sets — één voor jezelf, twee om weg te geven aan potentiële klanten. Zelf Samenstellen = kies je eigen producten + €35 licentiekosten voor toegang tot het partnerprogramma.",
   },
   {
     question: "Hoeveel kan ik verdienen?",

@@ -134,6 +134,8 @@ export interface ProductSchemaInput {
   ratingCount?: number;
   /** Affiliate URL */
   affiliateUrl: string;
+  /** Launch Packs: eenmalige aankoop, geen abonnement — één vaste prijs (gebruik priceSubscription als de prijs) */
+  oneTimeOnly?: boolean;
 }
 
 export function generateProductSchema(input: ProductSchemaInput) {
@@ -161,7 +163,34 @@ export function generateProductSchema(input: ProductSchemaInput) {
       name: 'Amare',
     },
     category: 'Voedingssupplementen',
-    offers: [
+    offers: input.oneTimeOnly
+      ? [
+          {
+            '@type': 'Offer',
+            url: input.affiliateUrl,
+            priceCurrency: currency,
+            price: input.priceSubscription,
+            availability,
+            priceValidUntil,
+            itemCondition: 'https://schema.org/NewCondition',
+            name: 'Eenmalige aankoop',
+            shippingDetails: {
+              '@type': 'OfferShippingDetails',
+              shippingRate: { '@type': 'MonetaryAmount', value: 0, currency: 'EUR' },
+              shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'NL' },
+              deliveryTime: {
+                '@type': 'ShippingDeliveryTime',
+                handlingTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 1, unitCode: 'DAY' },
+                transitTime: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 2, unitCode: 'DAY' },
+              },
+            },
+            seller: {
+              '@type': 'Organization',
+              name: 'Amare Global',
+            },
+          },
+        ]
+      : [
       {
         '@type': 'Offer',
         url: input.affiliateUrl,

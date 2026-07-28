@@ -9,6 +9,7 @@
 
 | # | Tarih | Saat | Deploy ID | Değişiklik | Sonuç |
 |---|-------|------|-----------|------------|-------|
+| 35 | 2026-07-23 | — | dpl_GvicP4UQzmYEgAyBFkQoj97Kdf13 | **ACİL DÜZELTME:** 21 Temmuz "humanize" commit'i (6cd8fa6) `data/extra-articles.json`'ı 57→4 makaleye düşürmüştü — 51 endekslenmiş makale 2 gün boyunca 404 vermiş (GSC düşüşünün olası nedeni). 51 makale geri yüklendi + `middagdip-oplossen-zonder-koffie-nitro-xtreme` makalesi (yarım kalmış otomatik yayın) tamamlandı. Tüm URL'ler doğrulandı. | ✅ Live |
 | 34 | 2026-07-19 | ~16:00 | dpl_CWaRYWvo6sxUG1FzHzRrXcfN4w7Z | GEO/AEO optimizasyonu FAZ 1-3: MedicalWebPage+HowTo schema, 36 iç link, 8 referans, güvenlik header'ları | ✅ Live |
 | 33 | 2026-07-18 | ~15:00 | dpl_2ifet4gP9byJWq4h5sGo2Y3Yfa9w | Remote sync + tüm fix'ler geri yüklendi (115+ blog, 43 ürün) | ✅ Live |
 | 32 | 2026-07-18 | ~14:00 | — | ~~DEPLOY_LOG.md eklendi~~ | ✅ |

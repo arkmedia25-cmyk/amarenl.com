@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
+
+/** Launch Packs met een eigen dedicated pagina — voorkom duplicate content op /producten/[slug] */
+const CANONICAL_REDIRECTS: Record<string, string> = {
+  "happy-lifestyle-pack-pro": "/happy-lifestyle-pack-pro",
+  "triangle-marketing-pack": "/triangle-marketing-pack",
+};
 import Image from "next/image";
 import AffiliateCTA from "@/components/ui/AffiliateCTA";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
@@ -21,6 +27,9 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
+  if (CANONICAL_REDIRECTS[slug]) {
+    return { alternates: { canonical: CANONICAL_REDIRECTS[slug] } };
+  }
   const p = getProduct(slug);
   if (!p) return { title: "Product niet gevonden | AmareNL" };
   return {
@@ -47,6 +56,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ProductPage({ params }: Props) {
   const { slug } = await params;
+  if (CANONICAL_REDIRECTS[slug]) permanentRedirect(CANONICAL_REDIRECTS[slug]);
   const product = getProduct(slug);
   if (!product) notFound();
 

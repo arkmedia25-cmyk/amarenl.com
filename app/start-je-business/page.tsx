@@ -46,9 +46,9 @@ const faqs = [
       "Nee. De meeste succesvolle Brand Partners hadden nul ervaring toen ze begonnen. Je deelt wat je zelf gebruikt en waar je enthousiast over bent. AmareNL helpt je met content, een persoonlijke website en marketingmateriaal — zodat jij je kunt focussen op delen en connecten met mensen.",
   },
   {
-    question: "Wat als de producten niet voor mij werken?",
+    question: "Geldt de 30-dagen garantie ook voor het Triangle Marketing Pack?",
     answer:
-      "Amare biedt 30 dagen niet-tevreden-geld-terug garantie. Als de producten niet bij je passen, krijg je je geld terug. Geen risico — je probeert het gewoon uit. De meeste mensen merken binnen 2-4 weken verschil in energie, slaap en focus.",
+      "Het Triangle Marketing Pack is een business starter kit — een eenmalige investering in je eigen Brand Partner business, geen gewone productbestelling. De standaard 30-dagen geld-terug garantie van Amare geldt hier niet voor. Twijfel je welk pakket het beste bij je past? Neem contact op, dan denken we met je mee.",
   },
   {
     question: "Hoe begin ik?",
@@ -89,8 +89,8 @@ const benefits = [
     icon: "💰",
   },
   {
-    title: "30 dagen geld-terug",
-    desc: "Probeer de producten zonder risico. Bevalt het niet? Geld terug. Je hebt niets te verliezen.",
+    title: "Eerlijk & transparant",
+    desc: "Geen verborgen kosten, geen verplicht abonnement. Je weet vooraf precies wat je krijgt en wat het kost.",
     icon: "🛡️",
   },
 ];
@@ -152,7 +152,7 @@ export default function StartJeBusinessPage() {
                 </a>
               </div>
               <p className="text-xs text-[var(--color-text-muted)] mt-4">
-                * Triangle Marketing Pack: €511,21. 30 dagen geld-terug garantie. Geen verplichtingen.
+                * Triangle Marketing Pack: €511,21. Eenmalige investering. Geen abonnement.
               </p>
             </div>
             <div className="relative hidden md:block">
@@ -403,7 +403,7 @@ export default function StartJeBusinessPage() {
             variant="urgency"
           />
           <p className="text-white/60 text-xs mt-4">
-            €511,21 • 30 dagen geld-terug garantie • Gratis verzending vanaf €175
+            €511,21 • Eenmalige investering • Gratis verzending vanaf €175
           </p>
         </div>
       </section>

@@ -5,7 +5,7 @@ import { ShoppingCart, CheckCircle2, Share2, Gift, Users } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Triangle Marketing Pack — 3x Triangle of Wellness | Word Brand Partner | AmareNL",
-  description: "Start als Amare Brand Partner met 3 complete Triangle of Wellness Xtreme sets. Ervaar zelf, deel met klanten, verdien commissie. €511,21/maand.",
+  description: "Start als Amare Brand Partner met 3 complete Triangle of Wellness Xtreme sets. Ervaar zelf, deel met klanten, verdien commissie. Eenmalig €511,21.",
   alternates: { canonical: "/triangle-marketing-pack" },
   openGraph: { title: "Triangle Marketing Pack — 3x Set | AmareNL", description: "3x Triangle of Wellness Xtreme — jouw Brand Partner startkit. Ervaar, deel & verdien.", url: "/triangle-marketing-pack", siteName: "AmareNL", locale: "nl_NL" },
 };
@@ -21,7 +21,7 @@ export default function TriangleMarketingPage() {
   return (
     <div className="bg-white min-h-screen font-nunito">
       <SchemaMarkup schema={combineSchemas(
-        generateProductSchema({ name: "Triangle Marketing Pack", nameNL: "Triangle Marketing Pack — 3x Set", description: "3 complete Triangle of Wellness Xtreme sets. Brand Partner startkit om te delen en verdienen.", image: "https://amarecdn.azureedge.net/webassets/web/prod/products/Triangle-of-Wellness-Xtreme2-EU-800.jpg", slug: "triangle-marketing-pack", priceRetail: 443.00, priceSubscription: 399.00, ratingValue: 4.8, ratingCount: 189, affiliateUrl: "https://www.amare.com/2075008/nl-nl/triangle-marketing-pack" }),
+        generateProductSchema({ name: "Triangle Marketing Pack", nameNL: "Triangle Marketing Pack — 3x Set", description: "3 complete Triangle of Wellness Xtreme sets. Brand Partner startkit om te delen en verdienen.", image: "https://amarecdn.azureedge.net/webassets/web/prod/products/Triangle-of-Wellness-Xtreme2-EU-800.jpg", slug: "triangle-marketing-pack", priceRetail: 511.21, priceSubscription: 511.21, oneTimeOnly: true, ratingValue: 4.8, ratingCount: 189, affiliateUrl: "https://www.amare.com/2075008/nl-nl/triangle-marketing-pack" }),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Startpakketten", url: "/startpakketten" }, { name: "Triangle Marketing Pack", url: "/triangle-marketing-pack" }])
       )} id="triangle-schema" />
@@ -40,9 +40,9 @@ export default function TriangleMarketingPage() {
                 <span className="bg-white/20 px-3 py-1 rounded-full text-xs">🌙 3x Sunset</span>
               </div>
               <div className="bg-white/10 rounded-xl p-4 inline-block">
-                <p className="text-sm text-white/70">Abonnement</p>
-                <p className="text-3xl font-bold">€511,21<span className="text-lg font-normal text-white/70">/maand</span></p>
-                <p className="text-xs text-white/50">Eenmalig: €568,01</p>
+                <p className="text-sm text-white/70">Eenmalige aankoop</p>
+                <p className="text-3xl font-bold">€511,21</p>
+                <p className="text-xs text-white/50">Geen abonnement — je koopt dit pakket eenmalig om Brand Partner te worden</p>
               </div>
             </div>
           </div>
