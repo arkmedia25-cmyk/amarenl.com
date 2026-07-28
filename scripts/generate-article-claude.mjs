@@ -315,7 +315,10 @@ async function pickTopic(client, ctx, systemPrompt) {
     try {
       const response = await client.messages.create({
         model: MODEL,
-        max_tokens: 2000,
+        // Extended thinking shares this budget — a small cap here (like a plain
+        // 2000-token guess) leaves zero room for the actual JSON text block once
+        // thinking eats into it, same failure mode fixed for generateArticle().
+        max_tokens: 6000,
         system: systemPrompt,
         messages: [{ role: "user", content: buildTopicPrompt(ctx) }],
       });
