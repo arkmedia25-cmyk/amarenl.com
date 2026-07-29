@@ -864,16 +864,49 @@ update niet totdat de limiet reset. Gebruiker koos bewust voor **wachten** i.p.v
 **Als dit weer gebeurt:** check `vercel ls` voor de laatste succesvolle deploy-tijd, en overweeg
 Vercel Pro als dit vaker voorkomt bij actief testen.
 
+### 29-07-2026 — Faz 3 gestart, on hold (account/betaling)
+Higgsfield MCP (`https://mcp.higgsfield.ai/mcp`) gekoppeld + companion skills geïnstalleerd
+(`npx skills add higgsfield-ai/skills` → `.agents/skills/higgsfield-*`, 3 ervan door de installer
+zelf als "High Risk" gemarkeerd: `marketplace-cards`, `product-photoshoot`, `websites` — nog niet
+geïnspecteerd, niet gebruiken zonder eerst de SKILL.md's te lezen).
+
+Gekozen flow: **ugc-product-flow** (product-only, voiceover, geen nep-persoon die het product
+"aanbeveelt" — bewust gekozen boven een pratende "creator"-testimonial, dat zou een nep-review zijn
+en botst met Nederlandse reclameregels/ACM + de eigen NVWA/anti-fabricatie-regels van dit project).
+
+**Kredieten:** het gekoppelde account is een gratis/proefaccount (10 credits). De workflow's
+gepinde modellen (`gpt_image_2` board + `seedance_2_0` video) kosten samen ~97 credits voor
+één 10s clip — ver buiten budget. Goedkoper alternatief gevonden en getest: `nano_banana_2` voor
+het board (2 credits) + `veo3_1_lite` voor de video (6 credits @ 6s, geen audio) = 8 credits totaal.
+Resultaat: 1 stille, 6s productshot van Happy Juice Pack — **gebruiker vond het niet overtuigend**
+("1 product, te kort, stil, zegt niks"). Terechte kritiek: een echte boodschap heeft seslendirme +
+meerdere shots/beats nodig, wat weer een veelvoud aan credits kost.
+
+**Account-verwarring:** de OAuth-koppeling ging naar een "proefaccount", niet het account waar de
+gebruiker echt op wil betalen. Er is geen MCP-tool om binnen een sessie van account te wisselen —
+vereist het loskoppelen/herverbinden van de Higgsfield MCP-server (`/mcp` in Claude Code) om een
+nieuw Google-login-scherm te forceren. Gebruiker wilde dit niet meteen doen, **Faz 3 staat on hold**
+tot ze beslist welk account/betaalplan ze gebruikt (opties gecheckt: 3-daagse gratis trial met 100
+credits — kaart vereist, auto-renew naar $49/mo Plus tenzij geannuleerd — of direct Plus/Ultra
+abonnement, geen eenmalige credit-topup beschikbaar op dit moment).
+
+**Belangrijke les:** geen enkel eenmalig-credit-topup-pad bestond op het moment van testen — alleen
+abonnementen of de kaart-vereiste trial. Vraag de gebruiker VOORAF welk account ze willen koppelen,
+vóórdat je de OAuth-flow start, om dit soort omwisselen te voorkomen.
+
 ### Openstaand voor volgende sessie
-- [ ] **17 PR's** in de Telegram-approval-queue (13 gecorrigeerde stash-artikelen #6-18 + 2
-      Faz 2-testartikelen #19-20) — moeten nog door de gebruiker beoordeeld worden
-- [ ] Vercel-deploy inhalen zodra de 24u-limiet reset (~28-07-2026 ~13:00 UTC) — bekijk
-      `gh run list --workflow=amarenl-promote-draft.yml` voor gefaalde deploys die opnieuw moeten
-- [ ] **Faz 3** — video (Higgsfield: faceless explainer + product showcase), bewust uitgesteld naar
-      een verse sessie (grote nieuwe scope, eigen API/credentials nodig)
+- [ ] **15 PR's** staan nog open in de Telegram-approval-queue (#3, #6-18, #20 — #5 en #19 zijn al
+      gesloten) — moeten nog door de gebruiker beoordeeld worden
+- [ ] Vercel-deploy nog steeds geblokkeerd (retry om 05:22 UTC 29-07 faalde nog met dezelfde
+      upload-limiet) — probeer opnieuw ná ~28-07 ~12:09 UTC + 24u, via
+      `gh run rerun 30357588885` of `gh workflow run amarenl-promote-draft.yml`
+- [ ] **Faz 3** — Higgsfield gekoppeld maar ON HOLD: gebruiker moet beslissen welk Higgsfield-account
+      + betaalplan (zie hierboven), dan pas verder met een echte, meerdere-shots + voiceover video
 - [ ] **Faz 4** — social copy drafts (Instagram/Pinterest/TikTok/YouTube), via Telegram, geen
       auto-posting
 - [ ] Overweeg: algemene web-search API (naast PubMed) voor bredere onderwerp-research, besproken
       maar niet geïmplementeerd
 - [ ] `server/` package (sectie 19) opruimen of expliciet archiveren — momenteel misleidende
       documentatie die een niet-actief systeem beschrijft alsof het draait
+- [ ] De 3 "High Risk" Higgsfield skills (`marketplace-cards`, `product-photoshoot`, `websites`)
+      nog niet geïnspecteerd — lees de SKILL.md's voordat ze gebruikt worden
