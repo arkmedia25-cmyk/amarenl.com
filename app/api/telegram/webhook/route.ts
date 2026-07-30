@@ -65,6 +65,28 @@ async function githubClosePr(prNumber: number) {
   if (!res.ok) {
     throw new Error(`GitHub PR close failed: ${res.status} ${await res.text()}`);
   }
+
+  // Delete the draft branch too — otherwise a future run that picks the same
+  // topic again (the generator has no memory of rejected-but-unmerged PRs)
+  // fails at `git push` because the old branch name still exists on origin.
+  const pr = (await res.json()) as { head?: { ref?: string } };
+  const branch = pr.head?.ref;
+  if (branch) {
+    const delRes = await fetch(
+      `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/git/refs/heads/${encodeURIComponent(branch)}`,
+      {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          Accept: "application/vnd.github+json",
+        },
+      }
+    );
+    // 422/404 just means it's already gone — not worth failing the whole callback over.
+    if (!delRes.ok && delRes.status !== 422 && delRes.status !== 404) {
+      console.error(`[telegram-webhook] branch delete failed for ${branch}: ${delRes.status} ${await delRes.text()}`);
+    }
+  }
 }
 
 interface PinQueueItem {
