@@ -15,6 +15,7 @@
 
 import Anthropic from "@anthropic-ai/sdk";
 import { readFileSync, writeFileSync, existsSync } from "fs";
+import { execSync } from "child_process";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 
@@ -51,6 +52,30 @@ function collectExistingArticles() {
   for (const s of slugs) bySlug.set(s, s);
   for (const a of extraJson) bySlug.set(a.slug, a.title || a.slug);
   return bySlug;
+}
+
+/**
+ * Titles from PRs that were closed WITHOUT merging — i.e. rejected via the
+ * Telegram ❌ button. These never make it into extra-articles.json, so
+ * without this check the generator has zero memory of them and will happily
+ * pick the same topic again under a slightly different slug (this happened
+ * twice: vitamine D "in voeding" vs "tekort", omega-3 "bijwerkingen" vs
+ * "vetzuren" — a human reviewer sees these as duplicates, Claude doesn't
+ * unless told). Best-effort: if `gh` isn't available or the call fails,
+ * just return an empty list rather than blocking article generation.
+ */
+function fetchRejectedTopics() {
+  try {
+    const raw = execSync("gh pr list --state closed --json title,mergedAt --limit 100", {
+      encoding: "utf-8",
+      timeout: 15000,
+    });
+    const prs = JSON.parse(raw);
+    return prs.filter((p) => !p.mergedAt).map((p) => p.title.replace(/^📝\s*/, ""));
+  } catch (err) {
+    console.warn(`  (waarschuwing: kon afgewezen PR-titels niet ophalen: ${err.message})`);
+    return [];
+  }
 }
 
 /** Trimmed product summary — full products.json is too large for the prompt
@@ -198,8 +223,11 @@ function buildSystemPrompt(articleQualitySkill, claudeMdExcerpt) {
   ].join("\n");
 }
 
-function buildTopicPrompt({ queueDoc, existingArticles }) {
-  const existingSlugSet = [...existingArticles.keys()].join(", ");
+function buildTopicPrompt({ queueDoc, existingArticles, rejectedTopics }) {
+  const existingTitles = [...existingArticles.values()].join("\n- ");
+  const rejectedList = rejectedTopics?.length
+    ? rejectedTopics.map((t) => `- ${t}`).join("\n")
+    : "(geen)";
   return [
     "Hieronder staat de volledige content/article-queue.md van amarenl.com — een redactieplan met",
     "meerdere tabellen (30-dagen planning, keyword-clusters, TIER-lijsten). Sommige onderwerpen zijn",
@@ -207,13 +235,24 @@ function buildTopicPrompt({ queueDoc, existingArticles }) {
     "",
     "Kies het beste nog-niet-geschreven onderwerp — hoogste zoekvolume × commerciële intentie die nog",
     "geen ⏳→✅ transitie heeft gehad. Kies er precies één.",
+    "",
+    "BELANGRIJK: kies GEEN onderwerp dat inhoudelijk overlapt met een titel hieronder — ook niet onder",
+    "een andere invalshoek (bv. 'X in voeding' vs 'X tekort', 'X bijwerkingen' vs 'X vetzuren' worden",
+    "door de menselijke reviewer als hetzelfde onderwerp gezien en afgewezen). Beoordeel op ONDERWERP,",
+    "niet op exacte woordovereenkomst.",
+    "",
+    "=== BESTAANDE ARTIKEL-TITELS (al gepubliceerd — kies geen overlappend onderwerp) ===",
+    `- ${existingTitles}`,
+    "",
+    "=== AFGEWEZEN ONDERWERPEN (mens heeft dit al beoordeeld en geweigerd — probeer dit niet opnieuw",
+    "onder een andere titel/invalshoek, tenzij de queue een expliciet nieuw sub-onderwerp aangeeft) ===",
+    rejectedList,
+    "",
     "Geef ook 2-3 Engelstalige PubMed-zoektermen die relevant wetenschappelijk onderzoek voor dit",
     "onderwerp zouden opleveren (PubMed indexeert vrijwel uitsluitend Engelstalige literatuur).",
     "",
     "=== content/article-queue.md ===",
     queueDoc,
-    "",
-    `VERBODEN SLUGS (al in gebruik): ${existingSlugSet}`,
     "",
     "Output ALLEEN dit JSON object (geen backticks, geen markdown):",
     '{"topic":"korte omschrijving van het gekozen onderwerp uit de queue","category":"darmen|mentaal|schoonheid|essentials|energie|gewichtsbeheer","pubmed_search_terms":["term1","term2"]}',
@@ -459,8 +498,13 @@ async function main() {
   const competitorContext = buildCompetitorContext();
   const youtubeContext = buildYoutubeContext();
 
+  const rejectedTopics = fetchRejectedTopics();
+  if (rejectedTopics.length) {
+    console.log(`  ${rejectedTopics.length} eerder afgewezen onderwerp(en) meegegeven als context: ${rejectedTopics.join(" | ")}`);
+  }
+
   console.log("Onderwerp kiezen + PubMed-zoektermen bepalen...");
-  const topicPick = await pickTopic(client, { queueDoc, existingArticles }, systemPrompt);
+  const topicPick = await pickTopic(client, { queueDoc, existingArticles, rejectedTopics }, systemPrompt);
 
   let pubmedContext = "";
   if (topicPick?.topic) {
