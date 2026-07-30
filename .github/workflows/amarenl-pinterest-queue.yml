@@ -1,0 +1,46 @@
+name: AmareNL — Pinterest Kuyruğu (Faz 4)
+
+on:
+  schedule:
+    # 07:00 UTC ≈ 09:00 Amsterdam (zomertijd), Pazartesi/Çarşamba/Cuma/Cumartesi
+    - cron: "0 7 * * 1,3,5,6"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: amarenl-pinterest-queue
+  cancel-in-progress: false
+
+jobs:
+  notify-next-pin:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Send next queued pin to Telegram
+        id: notify
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_THREAD_ID: ${{ secrets.TELEGRAM_THREAD_ID }}
+        run: node scripts/pinterest-queue-notify.mjs
+
+      - name: Commit queue status update
+        if: steps.notify.outputs.changed == 'true'
+        run: |
+          git config user.name "AmareNL Pinterest Bot"
+          git config user.email "actions@github.com"
+          git add content/pinterest-queue.json
+          git commit -m "pin: sıradaki pin Telegram'a gönderildi (onay bekliyor)"
+          git push origin HEAD:main

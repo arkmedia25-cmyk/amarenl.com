@@ -894,16 +894,75 @@ abonnement, geen eenmalige credit-topup beschikbaar op dit moment).
 abonnementen of de kaart-vereiste trial. Vraag de gebruiker VOORAF welk account ze willen koppelen,
 vóórdat je de OAuth-flow start, om dit soort omwisselen te voorkomen.
 
+### 30-07-2026 — GSC-check + PR #4 deploy hersteld + Faz 4 (Pinterest) opgezet, blocked op Pinterest Standard access
+
+**GSC-snapshot (3 maanden):** gemiddelde positie 32,8 (was 56,8 op 24-07, dus herstel loopt maar
+nog ver van de oude ~9). Merk-zoektermen ("amare global" etc.) scoren goed (positie 4-10); nieuwe
+informatieve blogartikelen scoren nog slecht (positie 40-90 — normaal voor nieuwe content zonder
+autoriteit). Twee technische issues gevonden: (1) duplicate URL's door trailing-slash-verschil
+(`/happy-juice-pack` vs `/happy-juice-pack/`, `/darmgezondheid` vs `/darmgezondheid/` — splitst
+ranking-signaal), (2) 100 pagina's "Ontdekt — nog niet geïndexeerd" in Coverage-report. De 117
+404's in Coverage dateren van vóór de redirect-fix van 28-07 (nog niet herscand door Google, geen
+nieuw probleem).
+
+**PR #4 deploy hersteld:** was 28-07 gemerged maar deploy faalde op de Vercel-uploadlimiet
+("Upload aborted"). 24u-window was voorbij → `gh run rerun 30357588885 --failed` opnieuw gedraaid,
+nu volledig geslaagd (build + deploy + Telegram-notificatie). Magnesium-artikel staat nu live.
+
+**Faz 4 (Pinterest) — infrastructuur gebouwd, wacht op Pinterest-goedkeuring:**
+- Ontdekt: een oude, nooit afgemaakte Pinterest-poging uit 20-06-2026 lag al in de repo
+  (`content/PINTEREST_PLAN.md` met 10 kant-en-klare pins, `public/images/pins/` met 15 afbeeldingen,
+  `scripts/pinterest-auth.ts`, `scripts/pinterest-pin.ts`, `app/api/pinterest/callback/route.ts`) —
+  maar `PINTEREST_ACCESS_TOKEN` in `.env.local` stond leeg, OAuth was nooit voltooid.
+- Vercel's `PINTEREST_CLIENT_ID`/`PINTEREST_CLIENT_SECRET` (9 dagen oud) bleken verouderd/onjuist →
+  vervangen door de actuele waarden uit het Pinterest developer-dashboard (App-ID 1582959,
+  "Amarenl.com" app) + opnieuw gedeployed.
+- **Kernprobleem gevonden:** de volledige OAuth `authorization_code`-flow (`/v5/oauth/token`) faalt
+  consistent met `{"code":2,"message":"Authentication failed."}` — ook mét correcte credentials, ook
+  met alléén read-scopes. De app-eigen "Token genereren"-snelknop in het dashboard werkt wél (bewijst
+  dat App-ID/secret kloppen). Conclusie: **Pinterest Trial-toegang staat de normale OAuth-flow niet
+  toe** — alleen de ingebouwde dashboard-snelknop (levert een 24u-durend, read-only token: pins:read,
+  boards:read, user_accounts:read, ads:read, catalogs:read — geen pins:write). Dit app heeft
+  "Upgrade naar Standard-toegang" **in afwachting** staan; pas na goedkeuring werkt de echte OAuth-flow
+  met `pins:write`.
+- **Gebruiker koos bewust: wachten op Pinterest-goedkeuring**, niet de 10 pins nu handmatig posten
+  (was aangeboden als snel alternatief, afgewezen — zie [[feedback-amarenl-workflow]] voor waarom
+  automatisering/controle hier zwaarder weegt dan snelheid).
+- **Gebouwd, klaar om te activeren zodra Standard access is goedgekeurd:**
+  - `content/pinterest-queue.json` — de 10 pins uit PINTEREST_PLAN.md, elk met stabiele `id`,
+    gekoppelde afbeelding, en een `boardCategory`-label (board wordt bij het posten dynamisch
+    opgezocht via naam, geen hardgecodeerde board-ID's nodig — boards bestaan mogelijk nog niet).
+  - `scripts/pinterest-queue-notify.mjs` — pakt de eerstvolgende `"queued"` pin, stuurt 'm naar
+    Telegram (`sendPhoto` + ✅/❌ inline-knoppen), zet status op `"pending"`.
+  - `.github/workflows/amarenl-pinterest-queue.yml` — cron ma/wo/vr/za 09:00 Amsterdam, draait de
+    notify-script en commit't de queue-statuswijziging.
+  - `app/api/telegram/webhook/route.ts` uitgebreid: `pin_approve:<id>` / `pin_reject:<id>`
+    callback_data. Bij afwijzen: status → `rejected` via GitHub Contents API. Bij goedkeuren: haalt
+    `PINTEREST_ACCESS_TOKEN` uit env, zoekt board-ID op via naam, post de pin via Pinterest API v5,
+    zet status → `posted`. **Als `PINTEREST_ACCESS_TOKEN` nog niet gezet is, geeft de bot een
+    duidelijke Telegram-melding** ("Pinterest henüz bağlı değil") in plaats van te crashen.
+- **Activatiestappen voor de volgende sessie (zodra Pinterest Standard access goedkeurt):**
+  1. Check goedkeuringsstatus op `https://developers.pinterest.com/apps/1582959/` (tab "Configureren").
+  2. Voltooi de OAuth-flow met scope `pins:read,pins:write,boards:read` via
+     `https://www.pinterest.com/oauth/?client_id=1582959&redirect_uri=https%3A%2F%2Famarenl.com%2Fapi%2Fpinterest%2Fcallback&response_type=code&scope=pins%3Aread%2Cpins%3Awrite%2Cboards%3Aread`
+     (callback-pagina toont access_token + refresh_token).
+  3. Zet `PINTEREST_ACCESS_TOKEN` (en `PINTEREST_REFRESH_TOKEN` voor later) als Vercel
+     production env var, `vercel deploy --prod`.
+  4. Maak de 5 boards aan op het Pinterest-account als ze nog niet bestaan (namen in
+     `content/PINTEREST_PLAN.md` sectie 2 — moeten exact overeenkomen met `boardCategory` in de queue).
+  5. Trigger de workflow handmatig (`gh workflow run amarenl-pinterest-queue.yml`) of wacht op de cron.
+
 ### Openstaand voor volgende sessie
 - [ ] **15 PR's** staan nog open in de Telegram-approval-queue (#3, #6-18, #20 — #5 en #19 zijn al
       gesloten) — moeten nog door de gebruiker beoordeeld worden
-- [ ] Vercel-deploy nog steeds geblokkeerd (retry om 05:22 UTC 29-07 faalde nog met dezelfde
-      upload-limiet) — probeer opnieuw ná ~28-07 ~12:09 UTC + 24u, via
-      `gh run rerun 30357588885` of `gh workflow run amarenl-promote-draft.yml`
+- [x] ~~Vercel-deploy geblokkeerd~~ — opgelost 30-07: `gh run rerun 30357588885 --failed` geslaagd,
+      PR #4 (magnesium-artikel) staat nu live.
 - [ ] **Faz 3** — Higgsfield gekoppeld maar ON HOLD: gebruiker moet beslissen welk Higgsfield-account
       + betaalplan (zie hierboven), dan pas verder met een echte, meerdere-shots + voiceover video
-- [ ] **Faz 4** — social copy drafts (Instagram/Pinterest/TikTok/YouTube), via Telegram, geen
-      auto-posting
+- [ ] **Faz 4 (Pinterest)** — infrastructuur volledig gebouwd 30-07, **wacht op Pinterest Standard
+      access-goedkeuring** (app 1582959, Trial-toegang staat de OAuth-flow nog niet toe). Zie sectie
+      hierboven voor exacte activatiestappen zodra goedgekeurd. Instagram/TikTok/YouTube copy-drafts
+      nog niet gebouwd (kan hetzelfde queue+Telegram-patroon hergebruiken, geen API nodig — copy-paste).
 - [ ] Overweeg: algemene web-search API (naast PubMed) voor bredere onderwerp-research, besproken
       maar niet geïmplementeerd
 - [ ] `server/` package (sectie 19) opruimen of expliciet archiveren — momenteel misleidende
