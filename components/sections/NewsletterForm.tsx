@@ -25,7 +25,7 @@ export default function NewsletterForm() {
       const data = await res.json();
       if (data.success) {
         setIsSubmitted(true);
-        trackLeadConversion("newsletter", "newsletter-section");
+        trackLeadConversion("newsletter", "newsletter-section", { email });
       } else {
         alert("Er ging iets mis. Probeer het opnieuw.");
       }

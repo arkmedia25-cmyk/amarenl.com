@@ -98,7 +98,7 @@ export default function SupplementenWijzerPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, source: "supplementenwijzer" }),
       });
-      trackLeadConversion("supplementenwijzer", "supplementenwijzer");
+      trackLeadConversion("supplementenwijzer", "supplementenwijzer", { email });
     } catch {}
   };
 

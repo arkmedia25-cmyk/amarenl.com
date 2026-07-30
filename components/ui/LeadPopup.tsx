@@ -71,7 +71,7 @@ export default function LeadPopup({ trigger, delay = 10000, scrollPercent = 50 }
         body: JSON.stringify({ email, source: `popup-${trigger}` }),
       });
       setSubmitted(true);
-      trackLeadConversion(`popup-${trigger}`, `popup-${trigger}`);
+      trackLeadConversion(`popup-${trigger}`, `popup-${trigger}`, { email });
     } catch {}
   };
 

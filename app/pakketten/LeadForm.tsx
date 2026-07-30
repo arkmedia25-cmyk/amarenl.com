@@ -27,7 +27,7 @@ export default function LeadForm() {
         }),
       });
       setSubmitted(true);
-      trackLeadConversion("brand-partner", "pakketten-leadform");
+      trackLeadConversion("brand-partner", "pakketten-leadform", { email, phone: phone || undefined });
     } catch {}
     setIsLoading(false);
   };

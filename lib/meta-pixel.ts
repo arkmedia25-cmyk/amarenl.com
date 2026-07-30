@@ -19,6 +19,23 @@
 
 export const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || "";
 
+/** Meta requires em/ph as SHA-256 hex hashes of the *normalized* (trimmed,
+ *  lowercase) value — never send raw PII. Node's `crypto` is only available
+ *  server-side, so these must stay out of any client bundle. */
+function sha256Hex(value: string): string {
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const { createHash } = require("crypto") as typeof import("crypto");
+  return createHash("sha256").update(value.trim().toLowerCase()).digest("hex");
+}
+
+/** NL-biased phone normalization: strip everything but digits, swap a
+ *  leading trunk "0" for the "31" country code Meta expects. */
+function normalizePhone(raw: string): string {
+  let digits = raw.replace(/\D/g, "");
+  if (digits.startsWith("0")) digits = "31" + digits.slice(1);
+  return digits;
+}
+
 declare global {
   interface Window {
     fbq: ((...args: unknown[]) => void) & {
@@ -105,7 +122,11 @@ export function contact() {
  * lead magnet, quiz result, brand-partner interest, etc.) right after a
  * successful submission.
  */
-export function trackLeadConversion(contentName: string, source: string) {
+export function trackLeadConversion(
+  contentName: string,
+  source: string,
+  contact?: { email?: string; phone?: string }
+) {
   subscribe(source);
   lead(contentName, source);
 
@@ -119,6 +140,8 @@ export function trackLeadConversion(contentName: string, source: string) {
         event_name: eventName,
         event_source_url: eventSourceUrl,
         custom_data: { content_name: contentName, source },
+        email: contact?.email || undefined,
+        phone: contact?.phone || undefined,
       }),
       keepalive: true,
     }).catch(() => {});
@@ -136,6 +159,9 @@ interface CAPIServerEvent {
     client_user_agent?: string;
     fbc?: string;
     fbp?: string;
+    /** Raw email/phone — hashed in sendCAPIEvent() right before sending, never logged or forwarded as-is. */
+    email?: string;
+    phone?: string;
   };
   custom_data: Record<string, unknown>;
 }
@@ -145,8 +171,9 @@ interface CAPIServerEvent {
  * Gebruik dit voor events die client-side gemist kunnen worden
  * (affiliate outbound clicks, ad-blocker gevallen).
  *
- * IMPORTANT: Dit endpoint stuurt GEEN persoonlijke data —
- * alleen gehashte identifiers die Meta nodig heeft voor matching.
+ * IMPORTANT: Dit endpoint stuurt GEEN rauwe persoonlijke data naar Meta —
+ * email/telefoon worden hier ge-SHA-256-hasht (Meta's vereiste formaat)
+ * vlak voordat het request de deur uit gaat.
  */
 export async function sendCAPIEvent(event: CAPIServerEvent): Promise<boolean> {
   const PIXEL_ID = META_PIXEL_ID;
@@ -157,13 +184,18 @@ export async function sendCAPIEvent(event: CAPIServerEvent): Promise<boolean> {
     return false;
   }
 
+  const { email, phone, ...restUserData } = event.user_data;
+  const user_data: Record<string, unknown> = { ...restUserData };
+  if (email) user_data.em = [sha256Hex(email)];
+  if (phone) user_data.ph = [sha256Hex(normalizePhone(phone))];
+
   try {
     const url = `https://graph.facebook.com/v18.0/${PIXEL_ID}/events?access_token=${ACCESS_TOKEN}`;
     const response = await fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        data: [event],
+        data: [{ ...event, user_data }],
         test_event_code: process.env.META_TEST_EVENT_CODE || undefined,
       }),
     });

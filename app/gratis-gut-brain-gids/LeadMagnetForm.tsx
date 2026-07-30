@@ -27,7 +27,7 @@ export default function LeadMagnetForm() {
       });
       if (res.ok) {
         setSubmitted(true);
-        trackLeadConversion("gut-brain-gids", "gut-brain-gids-page");
+        trackLeadConversion("gut-brain-gids", "gut-brain-gids-page", { email });
       }
     } catch {}
     setIsLoading(false);

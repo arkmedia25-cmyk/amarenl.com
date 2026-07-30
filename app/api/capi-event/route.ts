@@ -8,14 +8,20 @@ import { sendCAPIEvent } from "@/lib/meta-pixel";
  * ad blockers and Safari/iOS tracking restrictions that drop the browser one.
  */
 export async function POST(req: NextRequest) {
-  let body: { event_name?: string; custom_data?: Record<string, unknown>; event_source_url?: string };
+  let body: {
+    event_name?: string;
+    custom_data?: Record<string, unknown>;
+    event_source_url?: string;
+    email?: string;
+    phone?: string;
+  };
   try {
     body = await req.json();
   } catch {
     return NextResponse.json({ ok: false, error: "invalid json" }, { status: 400 });
   }
 
-  const { event_name, custom_data, event_source_url } = body;
+  const { event_name, custom_data, event_source_url, email, phone } = body;
   if (!event_name || !event_source_url) {
     return NextResponse.json({ ok: false, error: "event_name and event_source_url required" }, { status: 400 });
   }
@@ -33,6 +39,8 @@ export async function POST(req: NextRequest) {
       client_user_agent: req.headers.get("user-agent") || undefined,
       fbp,
       fbc,
+      email,
+      phone,
     },
     custom_data: custom_data || {},
   });
