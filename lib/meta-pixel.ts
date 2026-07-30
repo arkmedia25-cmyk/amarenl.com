@@ -99,6 +99,32 @@ export function contact() {
   }
 }
 
+/**
+ * Fire a Lead+Subscribe conversion on both the browser pixel and the server
+ * (CAPI mirror) in one call. Use this from any lead-capture form (newsletter,
+ * lead magnet, quiz result, brand-partner interest, etc.) right after a
+ * successful submission.
+ */
+export function trackLeadConversion(contentName: string, source: string) {
+  subscribe(source);
+  lead(contentName, source);
+
+  if (typeof window === "undefined") return;
+  const eventSourceUrl = window.location.href;
+  for (const eventName of ["Subscribe", "Lead"]) {
+    fetch("/api/capi-event", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        event_name: eventName,
+        event_source_url: eventSourceUrl,
+        custom_data: { content_name: contentName, source },
+      }),
+      keepalive: true,
+    }).catch(() => {});
+  }
+}
+
 // --- Server-side Conversions API (CAPI) ---
 
 interface CAPIServerEvent {

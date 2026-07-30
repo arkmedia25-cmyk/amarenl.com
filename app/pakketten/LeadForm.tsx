@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Mail, ArrowRight, User, CheckCircle2 } from "lucide-react";
+import { trackLeadConversion } from "@/lib/meta-pixel";
 
 export default function LeadForm() {
   const [email, setEmail] = useState("");
@@ -26,6 +27,7 @@ export default function LeadForm() {
         }),
       });
       setSubmitted(true);
+      trackLeadConversion("brand-partner", "pakketten-leadform");
     } catch {}
     setIsLoading(false);
   };

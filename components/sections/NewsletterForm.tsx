@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Mail, ArrowRight, CheckCircle2, Tag } from "lucide-react";
+import { trackLeadConversion } from "@/lib/meta-pixel";
 
 export default function NewsletterForm() {
   const [email, setEmail] = useState("");
@@ -24,6 +25,7 @@ export default function NewsletterForm() {
       const data = await res.json();
       if (data.success) {
         setIsSubmitted(true);
+        trackLeadConversion("newsletter", "newsletter-section");
       } else {
         alert("Er ging iets mis. Probeer het opnieuw.");
       }
