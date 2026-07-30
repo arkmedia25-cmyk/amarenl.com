@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { X, Gift, ArrowRight, BookOpen, Mail, ShieldCheck } from "lucide-react";
+import { subscribe, lead } from "@/lib/meta-pixel";
 
 export default function ExitIntentPopup() {
   const [isVisible, setIsVisible] = useState(false);
@@ -43,7 +44,26 @@ export default function ExitIntentPopup() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, name, source: "exit-intent" }),
       });
-      if (res.ok) setSubmitted(true);
+      if (res.ok) {
+        setSubmitted(true);
+        // Meta Pixel tracking
+        subscribe("exit-intent");
+        lead("gut-brain-gids", "exit-intent");
+        // Server-side mirror (CAPI) — survives ad blockers / Safari ITP
+        const eventSourceUrl = window.location.href;
+        for (const eventName of ["Subscribe", "Lead"]) {
+          fetch("/api/capi-event", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              event_name: eventName,
+              event_source_url: eventSourceUrl,
+              custom_data: { content_name: "gut-brain-gids", source: "exit-intent" },
+            }),
+            keepalive: true,
+          }).catch(() => {});
+        }
+      }
     } catch {}
     setIsLoading(false);
   };
