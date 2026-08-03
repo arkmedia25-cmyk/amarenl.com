@@ -82,9 +82,17 @@ jobs:
           PR_NUMBER: ${{ github.event.client_payload.pr_number }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
-          TEXT=$(printf '⚠️ PR #%s onaylandı ama merge/build/deploy sırasında hata oluştu.\n\n%s' "$PR_NUMBER" "$RUN_URL")
+          TEXT=$(printf '🚨 KRİTİK: PR #%s onaylandı ama merge/build/deploy sırasında hata oluştu.\n\n%s' "$PR_NUMBER" "$RUN_URL")
           PAYLOAD=$(jq -n --arg chat_id "$TELEGRAM_CHAT_ID" --arg text "$TEXT" \
             --arg thread_id "${TELEGRAM_THREAD_ID:-}" \
             '{chat_id: $chat_id, text: $text} + (if $thread_id != "" then {message_thread_id: ($thread_id | tonumber)} else {} end)')
-          curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
-            -H "Content-Type: application/json" -d "$PAYLOAD"
+          RESPONSE=$(curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -H "Content-Type: application/json" -d "$PAYLOAD")
+          echo "$RESPONSE"
+          MESSAGE_ID=$(echo "$RESPONSE" | jq -r '.result.message_id // empty')
+          if [ -n "$MESSAGE_ID" ]; then
+            curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/pinChatMessage" \
+              -H "Content-Type: application/json" \
+              -d "$(jq -n --arg chat_id "$TELEGRAM_CHAT_ID" --argjson message_id "$MESSAGE_ID" '{chat_id: $chat_id, message_id: $message_id}')" \
+              || echo "::warning::Mesaj pinlenemedi (bot izni olmayabilir), ama bildirim gönderildi."
+          fi

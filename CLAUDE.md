@@ -812,3 +812,160 @@ Fase 9 — Data & Infrastructuur — 2026-05-17
 - **6** skills (.claude/skills/: orchestrator, scheduler, writer, research, keyword, traffic)
 - **1** server paketi (server/: orchestrator + Telegram bot)
 - **0** openstaande artikelopdrachten 🎉
+
+> ⚠️ **VEROUDERD (zie sectie 20):** de `server/` package + Telegram bot hierboven is **niet** het huidige
+> systeem. Er bleek ook een aparte, écht-actieve automatische bot te draaien buiten deze repo (Hermes
+> gateway LaunchAgent, `AmareNL_Orchestrator_Bot`) — die is stopgezet op 28-07-2026. Het huidige,
+> geverifieerde systeem is de Faz 1/2 GitHub Actions pipeline in sectie 20.
+
+---
+
+## 20. AGENCY OS STATUS — 28 juli 2026
+
+### Faz 1 — Telegram-onaygate (KLAAR)
+Artikel-workflows committen niet meer direct naar `main`. Ze openen een `draft/<slug>` PR,
+sturen een Telegram-bericht met ✅/❌ knoppen (`app/api/telegram/webhook/route.ts`), en pas na
+onaply merget/deployt `.github/workflows/amarenl-promote-draft.yml` automatisch.
+
+**Bekende bug (gevonden + opgelost 28-07-2026):** een PR (#5) bleef OPEN staan ondanks dat de
+gebruiker "reject" had geklikt in Telegram — na diagnose bleek de webhook zelf prima te werken (een
+handmatige test-call met het juiste `TELEGRAM_WEBHOOK_SECRET` sloot de PR direct). Vermoedelijke
+oorzaak: menselijke misklik tussen de vele PR-berichten, niet een codefout. **Als dit weer gebeurt:**
+test de webhook direct met een curl-call (zie sessie-log) vóór je verder zoekt — dat isoleert snel of
+het serverside of Telegram-side is.
+
+### Faz 2 — Claude API content-motor (KLAAR, uitgebreid met research-context)
+`scripts/generate-article-claude.mjs` draait op een echte cron (ma/wo/vr, `amarenl-article-claude.yml`)
+en kiest zelf het volgende onderwerp uit `content/article-queue.md`. Sinds 28-07-2026 twee-staps:
+1. Lichte "kies onderwerp + PubMed-zoektermen" call
+2. Echte PubMed-abstracts opgehaald via de publieke E-utilities API (geen scraping, geen key nodig) →
+   primaire bron voor wetenschappelijke claims (niet het parametrisch geheugen van het model)
+3. Plus optionele context uit `tools/competitor-scraper/snapshot/` en `tools/youtube-research/snapshot/`
+   — **altijd puur thema-inspiratie, nooit letterlijk overgenomen**
+
+Beide research-tools draaien wekelijks (zondag) via eigen GitHub Actions crons en committen hun
+snapshot rechtstreeks naar `main` (brondata, geen PR nodig).
+
+### Concurrentie-scraper (`tools/competitor-scraper/`)
+Eigen geïsoleerde `package.json` (alleen cheerio), geen impact op de Next.js dependencies. Nu
+uitgelijnd op vitaminstore.nl (prijs/voorraad/reviews, categorie vitamine D). Uitbreiden naar meer
+concurrenten/categorieën = nieuwe URLs in `urls.txt` + eventueel nieuwe `SELECTORS` per site
+(zie `tools/competitor-scraper/CLAUDE.md` voor de aanpassings-flow).
+
+### YouTube research (`tools/youtube-research/`)
+Officiële YouTube Data API v3, 12 Nederlandse zoektermen (2 per productcategorie) met Engelstalige
+fallback als een NL-zoekterm te weinig resultaten oplevert (kleine NL-markt op YouTube). Haalt
+video-titels + topcomments op als thema-signaal.
+
+### 28-07-2026 — Vercel free-plan upload-limiet geraakt
+Te veel test-deploys op één dag → `DeploymentError: Too many requests - try again in 24 hours
+(code: "api-upload-free")`. PR-merges lukken nog wel (merge gebeurt vóór deploy), maar de site
+update niet totdat de limiet reset. Gebruiker koos bewust voor **wachten** i.p.v. Vercel Pro.
+**Als dit weer gebeurt:** check `vercel ls` voor de laatste succesvolle deploy-tijd, en overweeg
+Vercel Pro als dit vaker voorkomt bij actief testen.
+
+### 29-07-2026 — Faz 3 gestart, on hold (account/betaling)
+Higgsfield MCP (`https://mcp.higgsfield.ai/mcp`) gekoppeld + companion skills geïnstalleerd
+(`npx skills add higgsfield-ai/skills` → `.agents/skills/higgsfield-*`, 3 ervan door de installer
+zelf als "High Risk" gemarkeerd: `marketplace-cards`, `product-photoshoot`, `websites` — nog niet
+geïnspecteerd, niet gebruiken zonder eerst de SKILL.md's te lezen).
+
+Gekozen flow: **ugc-product-flow** (product-only, voiceover, geen nep-persoon die het product
+"aanbeveelt" — bewust gekozen boven een pratende "creator"-testimonial, dat zou een nep-review zijn
+en botst met Nederlandse reclameregels/ACM + de eigen NVWA/anti-fabricatie-regels van dit project).
+
+**Kredieten:** het gekoppelde account is een gratis/proefaccount (10 credits). De workflow's
+gepinde modellen (`gpt_image_2` board + `seedance_2_0` video) kosten samen ~97 credits voor
+één 10s clip — ver buiten budget. Goedkoper alternatief gevonden en getest: `nano_banana_2` voor
+het board (2 credits) + `veo3_1_lite` voor de video (6 credits @ 6s, geen audio) = 8 credits totaal.
+Resultaat: 1 stille, 6s productshot van Happy Juice Pack — **gebruiker vond het niet overtuigend**
+("1 product, te kort, stil, zegt niks"). Terechte kritiek: een echte boodschap heeft seslendirme +
+meerdere shots/beats nodig, wat weer een veelvoud aan credits kost.
+
+**Account-verwarring:** de OAuth-koppeling ging naar een "proefaccount", niet het account waar de
+gebruiker echt op wil betalen. Er is geen MCP-tool om binnen een sessie van account te wisselen —
+vereist het loskoppelen/herverbinden van de Higgsfield MCP-server (`/mcp` in Claude Code) om een
+nieuw Google-login-scherm te forceren. Gebruiker wilde dit niet meteen doen, **Faz 3 staat on hold**
+tot ze beslist welk account/betaalplan ze gebruikt (opties gecheckt: 3-daagse gratis trial met 100
+credits — kaart vereist, auto-renew naar $49/mo Plus tenzij geannuleerd — of direct Plus/Ultra
+abonnement, geen eenmalige credit-topup beschikbaar op dit moment).
+
+**Belangrijke les:** geen enkel eenmalig-credit-topup-pad bestond op het moment van testen — alleen
+abonnementen of de kaart-vereiste trial. Vraag de gebruiker VOORAF welk account ze willen koppelen,
+vóórdat je de OAuth-flow start, om dit soort omwisselen te voorkomen.
+
+### 30-07-2026 — GSC-check + PR #4 deploy hersteld + Faz 4 (Pinterest) opgezet, blocked op Pinterest Standard access
+
+**GSC-snapshot (3 maanden):** gemiddelde positie 32,8 (was 56,8 op 24-07, dus herstel loopt maar
+nog ver van de oude ~9). Merk-zoektermen ("amare global" etc.) scoren goed (positie 4-10); nieuwe
+informatieve blogartikelen scoren nog slecht (positie 40-90 — normaal voor nieuwe content zonder
+autoriteit). Twee technische issues gevonden: (1) duplicate URL's door trailing-slash-verschil
+(`/happy-juice-pack` vs `/happy-juice-pack/`, `/darmgezondheid` vs `/darmgezondheid/` — splitst
+ranking-signaal), (2) 100 pagina's "Ontdekt — nog niet geïndexeerd" in Coverage-report. De 117
+404's in Coverage dateren van vóór de redirect-fix van 28-07 (nog niet herscand door Google, geen
+nieuw probleem).
+
+**PR #4 deploy hersteld:** was 28-07 gemerged maar deploy faalde op de Vercel-uploadlimiet
+("Upload aborted"). 24u-window was voorbij → `gh run rerun 30357588885 --failed` opnieuw gedraaid,
+nu volledig geslaagd (build + deploy + Telegram-notificatie). Magnesium-artikel staat nu live.
+
+**Faz 4 (Pinterest) — infrastructuur gebouwd, wacht op Pinterest-goedkeuring:**
+- Ontdekt: een oude, nooit afgemaakte Pinterest-poging uit 20-06-2026 lag al in de repo
+  (`content/PINTEREST_PLAN.md` met 10 kant-en-klare pins, `public/images/pins/` met 15 afbeeldingen,
+  `scripts/pinterest-auth.ts`, `scripts/pinterest-pin.ts`, `app/api/pinterest/callback/route.ts`) —
+  maar `PINTEREST_ACCESS_TOKEN` in `.env.local` stond leeg, OAuth was nooit voltooid.
+- Vercel's `PINTEREST_CLIENT_ID`/`PINTEREST_CLIENT_SECRET` (9 dagen oud) bleken verouderd/onjuist →
+  vervangen door de actuele waarden uit het Pinterest developer-dashboard (App-ID 1582959,
+  "Amarenl.com" app) + opnieuw gedeployed.
+- **Kernprobleem gevonden:** de volledige OAuth `authorization_code`-flow (`/v5/oauth/token`) faalt
+  consistent met `{"code":2,"message":"Authentication failed."}` — ook mét correcte credentials, ook
+  met alléén read-scopes. De app-eigen "Token genereren"-snelknop in het dashboard werkt wél (bewijst
+  dat App-ID/secret kloppen). Conclusie: **Pinterest Trial-toegang staat de normale OAuth-flow niet
+  toe** — alleen de ingebouwde dashboard-snelknop (levert een 24u-durend, read-only token: pins:read,
+  boards:read, user_accounts:read, ads:read, catalogs:read — geen pins:write). Dit app heeft
+  "Upgrade naar Standard-toegang" **in afwachting** staan; pas na goedkeuring werkt de echte OAuth-flow
+  met `pins:write`.
+- **Gebruiker koos bewust: wachten op Pinterest-goedkeuring**, niet de 10 pins nu handmatig posten
+  (was aangeboden als snel alternatief, afgewezen — zie [[feedback-amarenl-workflow]] voor waarom
+  automatisering/controle hier zwaarder weegt dan snelheid).
+- **Gebouwd, klaar om te activeren zodra Standard access is goedgekeurd:**
+  - `content/pinterest-queue.json` — de 10 pins uit PINTEREST_PLAN.md, elk met stabiele `id`,
+    gekoppelde afbeelding, en een `boardCategory`-label (board wordt bij het posten dynamisch
+    opgezocht via naam, geen hardgecodeerde board-ID's nodig — boards bestaan mogelijk nog niet).
+  - `scripts/pinterest-queue-notify.mjs` — pakt de eerstvolgende `"queued"` pin, stuurt 'm naar
+    Telegram (`sendPhoto` + ✅/❌ inline-knoppen), zet status op `"pending"`.
+  - `.github/workflows/amarenl-pinterest-queue.yml` — cron ma/wo/vr/za 09:00 Amsterdam, draait de
+    notify-script en commit't de queue-statuswijziging.
+  - `app/api/telegram/webhook/route.ts` uitgebreid: `pin_approve:<id>` / `pin_reject:<id>`
+    callback_data. Bij afwijzen: status → `rejected` via GitHub Contents API. Bij goedkeuren: haalt
+    `PINTEREST_ACCESS_TOKEN` uit env, zoekt board-ID op via naam, post de pin via Pinterest API v5,
+    zet status → `posted`. **Als `PINTEREST_ACCESS_TOKEN` nog niet gezet is, geeft de bot een
+    duidelijke Telegram-melding** ("Pinterest henüz bağlı değil") in plaats van te crashen.
+- **Activatiestappen voor de volgende sessie (zodra Pinterest Standard access goedkeurt):**
+  1. Check goedkeuringsstatus op `https://developers.pinterest.com/apps/1582959/` (tab "Configureren").
+  2. Voltooi de OAuth-flow met scope `pins:read,pins:write,boards:read` via
+     `https://www.pinterest.com/oauth/?client_id=1582959&redirect_uri=https%3A%2F%2Famarenl.com%2Fapi%2Fpinterest%2Fcallback&response_type=code&scope=pins%3Aread%2Cpins%3Awrite%2Cboards%3Aread`
+     (callback-pagina toont access_token + refresh_token).
+  3. Zet `PINTEREST_ACCESS_TOKEN` (en `PINTEREST_REFRESH_TOKEN` voor later) als Vercel
+     production env var, `vercel deploy --prod`.
+  4. Maak de 5 boards aan op het Pinterest-account als ze nog niet bestaan (namen in
+     `content/PINTEREST_PLAN.md` sectie 2 — moeten exact overeenkomen met `boardCategory` in de queue).
+  5. Trigger de workflow handmatig (`gh workflow run amarenl-pinterest-queue.yml`) of wacht op de cron.
+
+### Openstaand voor volgende sessie
+- [ ] **15 PR's** staan nog open in de Telegram-approval-queue (#3, #6-18, #20 — #5 en #19 zijn al
+      gesloten) — moeten nog door de gebruiker beoordeeld worden
+- [x] ~~Vercel-deploy geblokkeerd~~ — opgelost 30-07: `gh run rerun 30357588885 --failed` geslaagd,
+      PR #4 (magnesium-artikel) staat nu live.
+- [ ] **Faz 3** — Higgsfield gekoppeld maar ON HOLD: gebruiker moet beslissen welk Higgsfield-account
+      + betaalplan (zie hierboven), dan pas verder met een echte, meerdere-shots + voiceover video
+- [ ] **Faz 4 (Pinterest)** — infrastructuur volledig gebouwd 30-07, **wacht op Pinterest Standard
+      access-goedkeuring** (app 1582959, Trial-toegang staat de OAuth-flow nog niet toe). Zie sectie
+      hierboven voor exacte activatiestappen zodra goedgekeurd. Instagram/TikTok/YouTube copy-drafts
+      nog niet gebouwd (kan hetzelfde queue+Telegram-patroon hergebruiken, geen API nodig — copy-paste).
+- [ ] Overweeg: algemene web-search API (naast PubMed) voor bredere onderwerp-research, besproken
+      maar niet geïmplementeerd
+- [ ] `server/` package (sectie 19) opruimen of expliciet archiveren — momenteel misleidende
+      documentatie die een niet-actief systeem beschrijft alsof het draait
+- [ ] De 3 "High Risk" Higgsfield skills (`marketplace-cards`, `product-photoshoot`, `websites`)
+      nog niet geïnspecteerd — lees de SKILL.md's voordat ze gebruikt worden
