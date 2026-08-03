@@ -1,0 +1,50 @@
+name: AmareNL — Concurrentie Snapshot (wekelijks)
+
+on:
+  schedule:
+    # 05:00 UTC ≈ 07:00 Amsterdam (zomertijd), zondag
+    - cron: "0 5 * * 0"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  scrape-and-snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install scraper dependencies
+        working-directory: tools/competitor-scraper
+        run: npm ci
+
+      - name: Run scraper (urls.txt -> data.csv / reviews.csv)
+        working-directory: tools/competitor-scraper
+        run: node scrape.js
+
+      - name: Update committed snapshot
+        working-directory: tools/competitor-scraper
+        run: |
+          mkdir -p snapshot
+          [ -f data.csv ] && cp data.csv snapshot/data.csv || true
+          [ -f reviews.csv ] && cp reviews.csv snapshot/reviews.csv || true
+
+      - name: Commit snapshot (if changed)
+        run: |
+          git config user.name "AmareNL Scraper Bot"
+          git config user.email "actions@github.com"
+          git add tools/competitor-scraper/snapshot
+          if git diff --cached --quiet; then
+            echo "Geen wijziging in snapshot, commit overgeslagen."
+          else
+            git commit -m "chore: concurrentie-data snapshot bijwerken (wekelijks)"
+            git push origin main
+          fi

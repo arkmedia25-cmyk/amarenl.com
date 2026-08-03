@@ -4,6 +4,7 @@ import { useState, useCallback } from "react";
 import Link from "next/link";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import { generateBreadcrumbSchema } from "@/lib/schema";
+import { trackLeadConversion } from "@/lib/meta-pixel";
 
 interface Question {
   q: string;
@@ -97,6 +98,7 @@ export default function SupplementenWijzerPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, source: "supplementenwijzer" }),
       });
+      trackLeadConversion("supplementenwijzer", "supplementenwijzer", { email });
     } catch {}
   };
 
