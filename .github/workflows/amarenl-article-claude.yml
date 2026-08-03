@@ -36,6 +36,7 @@ jobs:
         id: generate
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/generate-article-claude.mjs
 
       - name: Type-check
@@ -75,6 +76,7 @@ jobs:
           echo "number=$NUMBER" >> "$GITHUB_OUTPUT"
 
       - name: Notify Telegram
+        if: success()
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -107,3 +109,26 @@ jobs:
           curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
             -H "Content-Type: application/json" \
             -d "$PAYLOAD"
+
+      - name: Notify Telegram (failure)
+        if: failure()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_THREAD_ID: ${{ secrets.TELEGRAM_THREAD_ID }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          TEXT=$(printf '🚨 KRİTİK: Makale üretim workflow'"'"'u başarısız oldu (Faz 2).\n\n%s' "$RUN_URL")
+          PAYLOAD=$(jq -n --arg chat_id "$TELEGRAM_CHAT_ID" --arg text "$TEXT" \
+            --arg thread_id "${TELEGRAM_THREAD_ID:-}" \
+            '{chat_id: $chat_id, text: $text} + (if $thread_id != "" then {message_thread_id: ($thread_id | tonumber)} else {} end)')
+          RESPONSE=$(curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -H "Content-Type: application/json" -d "$PAYLOAD")
+          echo "$RESPONSE"
+          MESSAGE_ID=$(echo "$RESPONSE" | jq -r '.result.message_id // empty')
+          if [ -n "$MESSAGE_ID" ]; then
+            curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/pinChatMessage" \
+              -H "Content-Type: application/json" \
+              -d "$(jq -n --arg chat_id "$TELEGRAM_CHAT_ID" --argjson message_id "$MESSAGE_ID" '{chat_id: $chat_id, message_id: $message_id}')" \
+              || echo "::warning::Mesaj pinlenemedi, ama bildirim gönderildi."
+          fi
