@@ -64,6 +64,20 @@ jobs:
           git push origin "$BRANCH:$BRANCH"
           git checkout main
 
+      - name: Wait for PR to become mergeable
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.client_payload.pr_number }}
+        run: |
+          for i in $(seq 1 15); do
+            STATE=$(gh pr view "$PR_NUMBER" --json mergeable -q .mergeable)
+            echo "mergeable=$STATE (attempt $i)"
+            [ "$STATE" = "MERGEABLE" ] && exit 0
+            sleep 3
+          done
+          echo "::error::PR #$PR_NUMBER never became mergeable (last state: $STATE)"
+          exit 1
+
       - name: Merge approved PR
         id: merge
         env:
