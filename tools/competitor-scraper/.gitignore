@@ -1,0 +1,27 @@
+# Bağımlılıklar
+node_modules/
+
+# Üretilen runtime artefaktları (her koşuda değişir, repoyu kirletmesin)
+# Kök seviyesine ankorlanmış (/) — snapshot/data.csv ve snapshot/reviews.csv KASITLI commit edilir,
+# içerik motorunun (generate-article-claude.mjs) okuyabilmesi için.
+/data.csv
+/reviews.csv
+/changes.log
+/errors.txt
+/digest.md
+/run.log
+
+# scrape.js.bak — break-selector.sh'nin yedeği
+scrape.js.bak
+
+# Secrets (bu scraper'ın secret'ı yok ama gelecekte eklenirse korusun)
+.env
+.env.*
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# NOT: reference/data.sample.csv KASITLI commit edilir — bu yüzden *.csv wildcard YOK.
