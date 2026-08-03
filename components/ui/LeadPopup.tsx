@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { X, Gift, ArrowRight, Download } from "lucide-react";
+import { trackLeadConversion } from "@/lib/meta-pixel";
 
 interface LeadPopupProps {
   /** Which trigger to use */
@@ -70,6 +71,7 @@ export default function LeadPopup({ trigger, delay = 10000, scrollPercent = 50 }
         body: JSON.stringify({ email, source: `popup-${trigger}` }),
       });
       setSubmitted(true);
+      trackLeadConversion(`popup-${trigger}`, `popup-${trigger}`, { email });
     } catch {}
   };
 

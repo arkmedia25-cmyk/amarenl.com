@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Mail, ArrowRight, CheckCircle2, User } from "lucide-react";
+import { trackLeadConversion } from "@/lib/meta-pixel";
 
 export default function LeadMagnetForm() {
   const [email, setEmail] = useState("");
@@ -24,7 +25,10 @@ export default function LeadMagnetForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, name, source: "gut-brain-gids" }),
       });
-      if (res.ok) setSubmitted(true);
+      if (res.ok) {
+        setSubmitted(true);
+        trackLeadConversion("gut-brain-gids", "gut-brain-gids-page", { email });
+      }
     } catch {}
     setIsLoading(false);
   };

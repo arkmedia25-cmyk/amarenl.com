@@ -9,6 +9,7 @@
 
 | # | Tarih | Saat | Deploy ID | Değişiklik | Sonuç |
 |---|-------|------|-----------|------------|-------|
+| 36 | 2026-07-28 | 09:00-14:00 UTC | çeşitli | **Agency OS Faz 1+2:** Telegram onay-kapısı, Claude API içerik motoru (PubMed + rakip scraper + YouTube bağlamı), 13 stash makale düzeltmesi (#6-18), 2 test makalesi (#19-20). Ayrı bir rogue otomasyon (Hermes gateway bot) bulunup durduruldu. **Bilinen sorun:** çok fazla test-deploy → Vercel free-plan upload limiti (5000/24s) doldu, deploy adımı ~24 saat başarısız olacak (PR merge'ler etkilenmiyor, sadece deploy). Detay: `CLAUDE.md` sectie 20. | ⚠️ Merge OK, deploy 24s bloklu |
 | 35 | 2026-07-23 | — | dpl_GvicP4UQzmYEgAyBFkQoj97Kdf13 | **ACİL DÜZELTME:** 21 Temmuz "humanize" commit'i (6cd8fa6) `data/extra-articles.json`'ı 57→4 makaleye düşürmüştü — 51 endekslenmiş makale 2 gün boyunca 404 vermiş (GSC düşüşünün olası nedeni). 51 makale geri yüklendi + `middagdip-oplossen-zonder-koffie-nitro-xtreme` makalesi (yarım kalmış otomatik yayın) tamamlandı. Tüm URL'ler doğrulandı. | ✅ Live |
 | 34 | 2026-07-19 | ~16:00 | dpl_CWaRYWvo6sxUG1FzHzRrXcfN4w7Z | GEO/AEO optimizasyonu FAZ 1-3: MedicalWebPage+HowTo schema, 36 iç link, 8 referans, güvenlik header'ları | ✅ Live |
 | 33 | 2026-07-18 | ~15:00 | dpl_2ifet4gP9byJWq4h5sGo2Y3Yfa9w | Remote sync + tüm fix'ler geri yüklendi (115+ blog, 43 ürün) | ✅ Live |
