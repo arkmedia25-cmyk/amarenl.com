@@ -1,0 +1,59 @@
+name: AmareNL — Haftalık Durum Özeti
+
+on:
+  schedule:
+    # 06:00 UTC ≈ 08:00 Amsterdam (zomertijd), Pazartesi
+    - cron: "0 6 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  actions: read
+  pull-requests: read
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Build and send status summary
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_THREAD_ID: ${{ secrets.TELEGRAM_THREAD_ID }}
+        run: |
+          runstatus() {
+            # $1 = workflow file name
+            gh run list --workflow="$1" --limit 1 --json conclusion,createdAt,status \
+              --jq 'if length == 0 then "henüz hiç çalışmadı" else .[0] | (if .status != "completed" then "çalışıyor" elif .conclusion == "success" then "✅ başarılı (\(.createdAt))" else "❌ BAŞARISIZ (\(.createdAt))" end) end'
+          }
+
+          ARTICLE_STATUS=$(runstatus "amarenl-article-claude.yml")
+          PINTEREST_STATUS=$(runstatus "amarenl-pinterest-queue.yml")
+          DEPLOY_STATUS=$(runstatus "amarenl-promote-draft.yml")
+
+          OPEN_PRS=$(gh pr list --state open --json number --jq 'length')
+
+          if [ -f content/pinterest-queue.json ]; then
+            QUEUE_SUMMARY=$(jq -r '
+              group_by(.status) | map("\(.[0].status): \(length)") | join(", ")
+            ' content/pinterest-queue.json)
+          else
+            QUEUE_SUMMARY="dosya bulunamadı"
+          fi
+
+          TEXT=$(printf '📊 Haftalık AmareNL Agency OS Durumu\n\n📝 Faz 2 (makale üretimi): %s\n📌 Faz 4 (Pinterest kuyruğu): %s\n🚀 Son deploy: %s\n\n📋 Telegram onay kuyruğunda bekleyen PR: %s\n📌 Pin kuyruğu durumu: %s' \
+            "$ARTICLE_STATUS" "$PINTEREST_STATUS" "$DEPLOY_STATUS" "$OPEN_PRS" "$QUEUE_SUMMARY")
+
+          PAYLOAD=$(jq -n --arg chat_id "$TELEGRAM_CHAT_ID" --arg text "$TEXT" \
+            --arg thread_id "${TELEGRAM_THREAD_ID:-}" \
+            '{chat_id: $chat_id, text: $text} + (if $thread_id != "" then {message_thread_id: ($thread_id | tonumber)} else {} end)')
+
+          curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -H "Content-Type: application/json" -d "$PAYLOAD"

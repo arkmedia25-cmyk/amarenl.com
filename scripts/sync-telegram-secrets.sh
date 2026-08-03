@@ -47,6 +47,10 @@ if [[ -n "${ANTHROPIC_API_KEY:-}" ]]; then
   printf '%s' "$ANTHROPIC_API_KEY" | gh secret set ANTHROPIC_API_KEY
   echo "  ✓ ANTHROPIC_API_KEY set"
 fi
+if [[ -n "${YOUTUBE_API_KEY:-}" ]]; then
+  printf '%s' "$YOUTUBE_API_KEY" | gh secret set YOUTUBE_API_KEY
+  echo "  ✓ YOUTUBE_API_KEY set"
+fi
 echo "  ✓ TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID$( [[ -n "${TELEGRAM_THREAD_ID:-}" ]] && echo ', TELEGRAM_THREAD_ID' ) set"
 
 echo "== Vercel env (production) =="
