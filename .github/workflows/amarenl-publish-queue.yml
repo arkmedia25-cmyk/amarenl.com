@@ -27,7 +27,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          fetch-depth: 0
 
       - name: Find next queued PR
         id: next
@@ -54,6 +54,45 @@ jobs:
       - name: Install dependencies
         if: steps.next.outputs.empty == 'false'
         run: npm ci
+
+      - name: Sync PR branch with main (auto-resolve known conflicts)
+        if: steps.next.outputs.empty == 'false'
+        id: sync
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ steps.next.outputs.pr }}
+        run: |
+          # Draft branches sit open for days while main keeps moving (new
+          # queue publishes + the Mon/Wed/Fri article cron both touch
+          # data/extra-articles.json + public/sitemap.xml). Without this,
+          # `gh pr merge` fails with "merge conflicts" every single run once
+          # main has moved past the branch's base — this is what happened to
+          # PR #3 on the first run of this workflow (2026-08-03).
+          BRANCH=$(gh pr view "$PR_NUMBER" --json headRefName -q .headRefName)
+          git config user.name "AmareNL Publish Queue Bot"
+          git config user.email "actions@github.com"
+          git fetch origin "$BRANCH"
+          git checkout -B "$BRANCH" "origin/$BRANCH"
+
+          if git merge origin/main --no-edit; then
+            echo "Branch already up to date or merged cleanly."
+          else
+            CONFLICTS=$(git diff --name-only --diff-filter=U)
+            UNEXPECTED=$(echo "$CONFLICTS" | grep -vE '^(data/extra-articles\.json|public/sitemap\.xml)$' || true)
+            if [ -n "$UNEXPECTED" ]; then
+              echo "::error::Unexpected conflict outside the known-safe files: $UNEXPECTED"
+              git merge --abort
+              exit 1
+            fi
+            node scripts/resolve-article-conflict.mjs
+            git checkout --theirs public/sitemap.xml
+            git add data/extra-articles.json public/sitemap.xml
+            jq . data/extra-articles.json > /dev/null   # fail loudly if invalid
+            git commit -m "queue: sync ${BRANCH} met main (auto-resolved article conflict)"
+          fi
+
+          git push origin "$BRANCH:$BRANCH"
+          git checkout main
 
       - name: Merge queued PR
         if: steps.next.outputs.empty == 'false'
