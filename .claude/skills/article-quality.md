@@ -8,6 +8,13 @@ description: Quality rules for AmareNL article writing — human language, struc
 > Deze regels gelden voor élk artikel dat voor amarenl.com geschreven wordt.
 > Overtreding = artikel wordt niet gepubliceerd tot het gecorrigeerd is.
 
+## 0. VASTE REGELS (NIET ONDERHANDELBAAR)
+
+Deze twee regels zijn hard en veranderen nooit, ongeacht welk model of welke sessie het artikel schrijft:
+
+- **Uitsluitend Nederlands, geen enkel ander woord.** Geen Turkse, Engelse of andere vreemde woorden binnen een Nederlandse zin (bv. niet "Sıvı formül" i.p.v. "Vloeibare formule"). Lees de volledige tekst na afloop nog één keer door specifiek op vreemde-taal-lekken, ook losse woorden.
+- **Geen ruwe markdown-tekens in de output.** Nooit een letterlijke `#`, `##`, `###`, `**` of soortgelijk teken vóór of na een kop of woord laten staan — dat verraadt direct dat het AI-gegenereerd is. Koppen zijn altijd echte `<h2>`/`<h3>` HTML-tags, tekst binnen die tags bevat geen markdown-restjes. Koppen en paragrafen lezen als een menselijke redacteur ze getypt zou hebben — klassieke, natuurlijke opbouw, geen robotische sjabloonformulering.
+
 ## 1. MENSELIJKE TAAL (Anti-AI Slop)
 
 - **Natuurlijk Nederlands**: Schrijf zoals een ervaren gezondheidsjournalist — niet als een chatbot.

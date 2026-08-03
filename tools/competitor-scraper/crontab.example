@@ -1,0 +1,22 @@
+# data-autopilot — cron / autopilot examples
+# Install:  crontab -e   (then paste ONE of the lines below)
+# List:     crontab -l
+# Remove:   crontab -e   -> delete the line
+#
+# Paths assume the project lives at ~/Downloads/scraper — adjust the `cd` if yours differs.
+# cron runs with a minimal PATH, so `node` / `claude` are given as absolute paths below.
+
+# ── Level 1: simplest — every day 07:00, scrape + log everything (FREE, no AI) ──
+# Best for small/stable data. `node scrape.js` costs nothing; moves land in changes.log.
+0 7 * * * cd ~/Downloads/scraper && /opt/homebrew/bin/node scrape.js >> run.log 2>&1
+
+
+# ── Level 2: autopilot + AI digest — after scraping, let Claude explain what moved (headless) ──
+# `claude -p` = print/headless mode (no chat window). Read+Write only, runs unattended.
+# NOTE: each headless run draws from your normal Claude usage limit — only wake the brain
+#       when a page actually changed if you want to keep that cheap.
+0 7 * * * cd ~/Downloads/scraper && /opt/homebrew/bin/node scrape.js && /opt/homebrew/bin/claude -p --no-session-persistence --permission-mode acceptEdits --allowedTools "Read,Write" "Read changes.log from the last 24 hours. Write a 3-line plain-English summary of what moved and what I should care about. Append it to digest.md with today's date." >> run.log 2>&1
+
+
+# ── (Optional) stricter/unattended: --bare skips all hooks / CLAUDE.md / plugins ──
+# /opt/homebrew/bin/claude -p --bare --no-session-persistence --permission-mode acceptEdits --allowedTools "Read,Write" "..."
