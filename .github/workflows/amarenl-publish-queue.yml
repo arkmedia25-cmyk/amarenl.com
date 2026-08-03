@@ -1,0 +1,146 @@
+name: AmareNL — Yayın Kuyruğu (staggered, 2 günde bir)
+
+# Onaylanmış 15 PR'ı tek seferde değil, kuyruktan sırayla — her seferinde bir
+# tanesini — merge+build+deploy eder. content/publish-queue.json içindeki ilk
+# "pending" kaydı işler, "published" olarak işaretler, bir sonrakini bir
+# sonraki çalışmaya bırakır.
+on:
+  schedule:
+    # 08:00 UTC ≈ 10:00 Amsterdam (zomertijd). Ayın tek günlerinde çalışır
+    # (1,3,5,...31) — pratikte ~2 günde bir. Kuyruk 15 madde × 2 gün ≈ 30 gün.
+    - cron: "0 8 */2 * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: amarenl-article-publish
+  cancel-in-progress: false
+
+jobs:
+  publish-next:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Find next queued PR
+        id: next
+        run: |
+          NEXT_PR=$(jq -r '[.[] | select(.status=="pending")][0].pr // empty' content/publish-queue.json)
+          NEXT_TITLE=$(jq -r '[.[] | select(.status=="pending")][0].title // empty' content/publish-queue.json)
+          REMAINING=$(jq '[.[] | select(.status=="pending")] | length' content/publish-queue.json)
+          if [ -z "$NEXT_PR" ]; then
+            echo "📭 Yayın kuyruğu boş — işlenecek PR yok."
+            echo "empty=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "empty=false" >> "$GITHUB_OUTPUT"
+            echo "pr=$NEXT_PR" >> "$GITHUB_OUTPUT"
+            echo "title=$NEXT_TITLE" >> "$GITHUB_OUTPUT"
+            echo "remaining_after=$((REMAINING - 1))" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Setup Node
+        if: steps.next.outputs.empty == 'false'
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        if: steps.next.outputs.empty == 'false'
+        run: npm ci
+
+      - name: Merge queued PR
+        if: steps.next.outputs.empty == 'false'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ steps.next.outputs.pr }}
+        run: |
+          gh pr merge "$PR_NUMBER" --squash --delete-branch
+          echo "Merged PR #$PR_NUMBER"
+
+      - name: Pull merged main
+        if: steps.next.outputs.empty == 'false'
+        run: git pull origin main
+
+      - name: Type-check
+        if: steps.next.outputs.empty == 'false'
+        run: npx tsc --noEmit -p tsconfig.json
+
+      - name: Build (production sanity check)
+        if: steps.next.outputs.empty == 'false'
+        run: npm run build
+
+      - name: Deploy to Vercel
+        if: steps.next.outputs.empty == 'false'
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        run: |
+          npx vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
+          npx vercel build --prod --token="$VERCEL_TOKEN"
+          npx vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN"
+
+      - name: Mark PR as published in queue
+        if: steps.next.outputs.empty == 'false'
+        env:
+          PR_NUMBER: ${{ steps.next.outputs.pr }}
+        run: |
+          NOW=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          jq --argjson pr "$PR_NUMBER" --arg date "$NOW" \
+            'map(if .pr == $pr then . + {status: "published", published_at: $date} else . end)' \
+            content/publish-queue.json > /tmp/queue.json
+          mv /tmp/queue.json content/publish-queue.json
+          git config user.name "AmareNL Publish Queue Bot"
+          git config user.email "actions@github.com"
+          git add content/publish-queue.json
+          git commit -m "queue: PR #$PR_NUMBER yayınlandı (staggered publish)"
+          git push origin HEAD:main
+
+      - name: Notify Telegram (success)
+        if: steps.next.outputs.empty == 'false'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_THREAD_ID: ${{ secrets.TELEGRAM_THREAD_ID }}
+          PR_NUMBER: ${{ steps.next.outputs.pr }}
+          TITLE: ${{ steps.next.outputs.title }}
+          REMAINING: ${{ steps.next.outputs.remaining_after }}
+        run: |
+          TEXT=$(printf '✅ Kuyruktan yayınlandı — PR #%s\n\n%s\n\nhttps://amarenl.com\n\n📋 Kuyrukta kalan: %s makale (2 günde bir devam edecek)' \
+            "$PR_NUMBER" "$TITLE" "$REMAINING")
+          PAYLOAD=$(jq -n --arg chat_id "$TELEGRAM_CHAT_ID" --arg text "$TEXT" \
+            --arg thread_id "${TELEGRAM_THREAD_ID:-}" \
+            '{chat_id: $chat_id, text: $text} + (if $thread_id != "" then {message_thread_id: ($thread_id | tonumber)} else {} end)')
+          curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -H "Content-Type: application/json" -d "$PAYLOAD"
+
+      - name: Notify Telegram (failure)
+        if: failure()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_THREAD_ID: ${{ secrets.TELEGRAM_THREAD_ID }}
+          PR_NUMBER: ${{ steps.next.outputs.pr }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          TEXT=$(printf '🚨 KRİTİK: Yayın kuyruğu workflow'"'"'u başarısız oldu (PR #%s).\n\n%s' "$PR_NUMBER" "$RUN_URL")
+          PAYLOAD=$(jq -n --arg chat_id "$TELEGRAM_CHAT_ID" --arg text "$TEXT" \
+            --arg thread_id "${TELEGRAM_THREAD_ID:-}" \
+            '{chat_id: $chat_id, text: $text} + (if $thread_id != "" then {message_thread_id: ($thread_id | tonumber)} else {} end)')
+          RESPONSE=$(curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -H "Content-Type: application/json" -d "$PAYLOAD")
+          echo "$RESPONSE"
+          MESSAGE_ID=$(echo "$RESPONSE" | jq -r '.result.message_id // empty')
+          if [ -n "$MESSAGE_ID" ]; then
+            curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/pinChatMessage" \
+              -H "Content-Type: application/json" \
+              -d "$(jq -n --arg chat_id "$TELEGRAM_CHAT_ID" --argjson message_id "$MESSAGE_ID" '{chat_id: $chat_id, message_id: $message_id}')" \
+              || echo "::warning::Mesaj pinlenemedi, ama bildirim gönderildi."
+          fi

@@ -131,6 +131,20 @@ public/images/              # Statische assets
 - SiteLinksSearch schema voor branded SERP
 - Crawl-delay: 1 (snelle indexatie)
 
+### 🆕 Agency OS — Faz 1 & 2 (28 Tem 2026)
+Volledig geautomatiseerde, maar **mens-gecontroleerde** content-pipeline. Details + openstaande
+punten: zie `CLAUDE.md` sectie 20 ("AGENCY OS STATUS"). Kort:
+- **Telegram-onaygate**: elk gegenereerd artikel wordt een `draft/<slug>` PR, nooit direct naar `main`.
+  Onaply via ✅/❌ in Telegram → automatische merge + deploy.
+- **Claude API content-motor** (`scripts/generate-article-claude.mjs`, cron ma/wo/vr): kiest zelf het
+  volgende onderwerp uit `content/article-queue.md`, onderbouwt wetenschappelijke claims met **echte**
+  PubMed-abstracts (publieke E-utilities API), en gebruikt concurrentie- + YouTube-signaal als
+  thema-inspiratie (nooit als letterlijke bron).
+- **`tools/competitor-scraper/`** — vitaminstore.nl prijs/voorraad/reviews, wekelijkse snapshot-cron.
+- **`tools/youtube-research/`** — YouTube Data API v3, wekelijkse snapshot-cron.
+- Oude vaste `TOPIC_POOLS` DeepSeek/OpenRouter-workflows staan nog als `workflow_dispatch`-only
+  handmatige fallback (schedule uitgezet, geen dubbele publicatie meer).
+
 ---
 
 ## Nog te doen
@@ -141,26 +155,36 @@ public/images/              # Statische assets
 - [ ] 1 extra pagina voor 10 totaal (Skin to Mind of VitaGBX)
 
 ### Blog Content
-- [ ] 20 makale kuyrukta (content/article-queue.md)
-- [x] Orchestrator + Telegram bot (server/)
+- [x] Agency OS Faz 1+2 content-motor (zie hierboven) — vervangt de handmatige queue-aanpak
+- [ ] **17 PR's** wachten op Telegram-goedkeuring (13 gecorrigeerde stash-artikelen + 2 testartikelen)
 - [ ] 3 pillar pages (Gut-Brain Axis, Probiotica Stammen, Adaptogenen) — kısmen yazıldı
 
 ### Infrastructuur
 - [ ] E-mail API route (/api/subscribe) — Mailchimp integratie
 - [ ] Mail credentials in .env.local
-- [ ] GitHub → Vercel auto-deploy herstellen (nu CLI: `vercel --prod --yes`)
 - [ ] GA4 conversion tracking voor affiliate clicks (TASK 12.1)
 - [ ] verdikkend-serum-voor-fijn-haar → Amare server 500 (buiten onze controle)
+- [ ] **Vercel deploy inhalen** zodra de 24u free-plan upload-limiet reset (geraakt 28-07-2026, te veel
+      test-deploys op één dag) — zie `CLAUDE.md` sectie 20
+- [ ] **Faz 3** (video, Higgsfield) en **Faz 4** (social copy drafts) — bewust uitgesteld naar een
+      verse sessie, nog niet gestart
 
 ### Bekende Issues
 - `verdikkend-serum-voor-fijn-haar` — HTTP 500 op Amare.com (server-side)
-- GitHub auto-deploy naar Vercel werkt niet → handmatig deployen via CLI
+- GitHub auto-deploy naar Vercel werkt niet → Actions-workflows deployen expliciet via `vercel --prod`
 
 ---
 
-## Content Orchestrator (🆕 13 Haz 2026)
+## ⚠️ Content Orchestrator (13 Haz 2026) — VEROUDERD, NIET GEBRUIKEN
 
-### Kurulum
+Dit `server/`-package hieronder is **vervangen** door de Agency OS Faz 1/2 pipeline hierboven. Laat
+staan als historisch referentiemateriaal, maar start dit niet opnieuw op — er bleek ook een aparte,
+écht-actieve automatische bot buiten deze repo te draaien (Hermes gateway LaunchAgent,
+`AmareNL_Orchestrator_Bot`, zelfde Telegram chat_id), die op 28-07-2026 is stopgezet. Twee parallelle
+publicatiesystemen was precies het soort ongecontroleerde automatisering die tot de ranking-crash
+leidde die deze hele Agency OS-inspanning heeft getriggerd.
+
+### Kurulum (historisch, niet gebruiken)
 ```bash
 cd server
 cp .env.example .env
@@ -172,7 +196,7 @@ npm install
 npm start
 ```
 
-### Telegram Bot Komutları
+### Telegram Bot Komutları (historisch)
 | Komut | İşlev |
 |-------|-------|
 | `/status` | Sistem durumu |
@@ -184,21 +208,13 @@ npm start
 | `/logs` | Son 10 log kaydı |
 | `/build` | Build durumu |
 
-### Cron Takvimi
+### Cron Takvimi (historisch)
 | Gün | Saat (Amsterdam) | Görev |
 |-----|-----------------|-------|
 | Pazartesi | 07:57 | Tam pipeline (research + publish + report) |
 | Çarşamba | 09:57 | Makale yayını |
 | Cuma | 09:57 | Makale yayını |
 | Her gün | 10:00 | Build kontrolü |
-
-### Telegram Bot Nasıl Oluşturulur
-1. Telegram'da [@BotFather](https://t.me/BotFather) ile konuş
-2. `/newbot` yaz, isim ver (örn: `AmareNL_Orchestrator_Bot`)
-3. Token'ı `.env` dosyasına kopyala
-4. Bot'una mesaj at
-5. `curl https://api.telegram.org/bot<TOKEN>/getUpdates` ile chat ID'ni al
-6. Chat ID'ni `.env`'e `TELEGRAM_ADMIN_CHAT_IDS` olarak ekle
 
 ---
 

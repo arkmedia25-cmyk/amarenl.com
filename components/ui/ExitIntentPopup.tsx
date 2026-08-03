@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { X, Gift, ArrowRight, BookOpen, Mail, ShieldCheck } from "lucide-react";
+import { trackLeadConversion } from "@/lib/meta-pixel";
 
 export default function ExitIntentPopup() {
   const [isVisible, setIsVisible] = useState(false);
@@ -43,7 +44,10 @@ export default function ExitIntentPopup() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, name, source: "exit-intent" }),
       });
-      if (res.ok) setSubmitted(true);
+      if (res.ok) {
+        setSubmitted(true);
+        trackLeadConversion("gut-brain-gids", "exit-intent", { email });
+      }
     } catch {}
     setIsLoading(false);
   };
