@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{font-family:'Hanken Grotesk',system-ui,sans-serif;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  ::selection{background:var(--accent-soft)}
+  ::-webkit-scrollbar{width:10px;height:10px}
+  ::-webkit-scrollbar-thumb{background:var(--border-strong);border-radius:8px;border:3px solid transparent;background-clip:content-box}
+  ::-webkit-scrollbar-thumb:hover{background:var(--mute);background-clip:content-box}
+  ::-webkit-scrollbar-track{background:transparent}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @keyframes shimmer{0%{opacity:.55}50%{opacity:1}100%{opacity:.55}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  @keyframes toastIn{from{opacity:0;transform:translateY(12px) scale(.96)}to{opacity:1;transform:none}}
+  @keyframes barGrow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+</style>
+</helmet>
+<div ref="{{ setRoot }}" style="height:100vh;display:flex;background:var(--bg);color:var(--text);font-size:14px;overflow:hidden;position:relative">
+
+  <!-- ░░ SIDEBAR ░░ -->
+  <aside style="{{ sidebarStyle }}">
+    <div style="display:flex;align-items:center;gap:11px;padding:6px 8px 4px;margin-bottom:22px;min-height:34px">
+      <div style="width:32px;height:32px;border-radius:9px;background:linear-gradient(140deg,var(--accent),color-mix(in oklab,var(--accent),#000 22%));display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px -4px var(--accent-soft);flex:0 0 auto">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="m6.3 6.3 2.9 2.9"/><path d="M2 12h4"/><path d="M12 22a10 10 0 1 0 0-20"/><circle cx="12" cy="12" r="3"/></svg>
+      </div>
+      <div class="om-brand" style="{{ brandStyle }}">
+        <div style="font-weight:800;letter-spacing:-.02em;font-size:15px;line-height:1">Data Autopilot</div>
+        <div style="font-size:11px;color:var(--mute);font-weight:500;margin-top:2px">Scraper control room</div>
+      </div>
+    </div>
+
+    <nav style="display:flex;flex-direction:column;gap:2px">
+      <sc-for list="{{ nav }}" as="n" hint-placeholder-count="7">
+        <button onClick="{{ n.onClick }}" title="{{ n.label }}" style="{{ n.style }}">
+          <span style="display:flex;align-items:center;justify-content:center;width:18px;color:{{ n.iconColor }}">{{ n.icon }}</span>
+          <span class="om-navlabel" style="{{ n.labelStyle }}">{{ n.label }}</span>
+          <sc-if value="{{ n.badge }}" hint-placeholder-val="">
+            <span style="{{ n.badgeStyle }}">{{ n.badge }}</span>
+          </sc-if>
+        </button>
+      </sc-for>
+    </nav>
+
+    <div style="margin-top:auto;padding-top:14px">
+      <div style="{{ healthMiniStyle }}">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:9px">
+          <span style="width:7px;height:7px;border-radius:50%;background:{{ health.color }};box-shadow:0 0 0 3px {{ health.soft }}"></span>
+          <span style="font-size:12px;font-weight:700;letter-spacing:.02em;text-transform:uppercase;color:{{ health.color }}">{{ health.label }}</span>
+        </div>
+        <div class="om-navlabel" style="font-size:11.5px;color:var(--dim);line-height:1.45">{{ health.note }}</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ░░ MAIN ░░ -->
+  <div style="flex:1;display:flex;flex-direction:column;min-width:0;position:relative">
+    <sc-if value="{{ running }}" hint-placeholder-val="">
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;z-index:60;overflow:hidden">
+        <div style="height:100%;width:40%;background:var(--accent);border-radius:2px;animation:spin .9s linear infinite;transform-origin:left;box-shadow:0 0 10px var(--accent)"></div>
+      </div>
+    </sc-if>
+
+    <!-- TOP BAR -->
+    <header style="height:60px;flex:0 0 auto;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:14px;padding:0 22px;background:color-mix(in oklab,var(--panel),transparent 8%);backdrop-filter:blur(8px);z-index:20">
+      <div style="min-width:0">
+        <div style="font-size:16px;font-weight:700;letter-spacing:-.01em;line-height:1.1">{{ viewTitle }}</div>
+        <div style="font-size:12px;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ viewSub }}</div>
+      </div>
+      <div style="flex:1"></div>
+
+      <div class="om-runmeta" style="display:flex;align-items:center;gap:18px;margin-right:4px">
+        <div style="text-align:right">
+          <div style="font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);font-weight:600">Last run</div>
+          <div style="font-size:13px;font-weight:600">{{ lastRunRel }}</div>
+        </div>
+        <div style="width:1px;height:26px;background:var(--border)"></div>
+        <div style="text-align:right">
+          <div style="font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);font-weight:600">Next run</div>
+          <div style="font-size:13px;font-weight:700;font-family:'JetBrains Mono',monospace;color:var(--accent)">{{ countdown }}</div>
+        </div>
+      </div>
+
+      <div style="{{ healthPillStyle }}">
+        <span style="width:7px;height:7px;border-radius:50%;background:{{ health.color }};box-shadow:0 0 0 3px {{ health.soft }}"></span>
+        <span style="font-size:12px;font-weight:700;color:{{ health.color }}">{{ health.label }}</span>
+      </div>
+
+      <button onClick="{{ runNow }}" style="{{ runBtnStyle }}">
+        <span style="display:flex">{{ runIcon }}</span>
+        <span class="om-runlabel">{{ runLabel }}</span>
+      </button>
+
+      <button onClick="{{ toggleTheme }}" title="Toggle theme" style="width:38px;height:38px;flex:0 0 auto;border-radius:10px;border:1px solid var(--border);background:var(--surface);color:var(--dim);cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="color:var(--text);border-color:var(--border-strong)">{{ themeIcon }}</button>
+    </header>
+
+    <!-- CONTENT -->
+    <main ref="{{ setScroll }}" style="flex:1;overflow-y:auto;overflow-x:hidden;padding:24px 22px 60px">
+
+      <!-- ===== OVERVIEW ===== -->
+      <sc-if value="{{ isOverview }}" hint-placeholder-val="{{ true }}">
+        <div style="max-width:1320px;margin:0 auto">
+          <!-- KPI ROW -->
+          <div style="display:grid;grid-template-columns:{{ kpiCols }};gap:14px;margin-bottom:16px">
+            <sc-for list="{{ kpis }}" as="k" hint-placeholder-count="6">
+              <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:16px 16px 12px;box-shadow:var(--shadow);animation:fadeUp .4s both;position:relative;overflow:hidden">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+                  <span style="font-size:12px;color:var(--dim);font-weight:600;letter-spacing:.01em">{{ k.label }}</span>
+                  <span style="width:26px;height:26px;border-radius:8px;display:flex;align-items:center;justify-content:center;background:{{ k.iconBg }};color:{{ k.iconColor }}">{{ k.icon }}</span>
+                </div>
+                <div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap">
+                  <span style="font-size:26px;font-weight:800;letter-spacing:-.02em;line-height:1">{{ k.value }}</span>
+                  <span style="{{ k.deltaStyle }}">{{ k.deltaIcon }}{{ k.deltaText }}</span>
+                </div>
+                <div style="font-size:11.5px;color:var(--mute);margin-top:5px;min-height:15px">{{ k.sub }}</div>
+                <svg viewBox="0 0 120 34" preserveAspectRatio="none" style="width:100%;height:32px;margin-top:8px;display:block;overflow:visible">
+                  <path d="{{ k.spark.area }}" fill="{{ k.sparkFill }}" stroke="none"></path>
+                  <path d="{{ k.spark.line }}" fill="none" stroke="{{ k.iconColor }}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </sc-for>
+          </div>
+
+          <div style="display:grid;grid-template-columns:{{ ovCols }};gap:16px;align-items:start">
+            <!-- LEFT COLUMN -->
+            <div style="display:flex;flex-direction:column;gap:16px;min-width:0">
+              <!-- Activity chart -->
+              <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:18px 20px;box-shadow:var(--shadow)">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+                  <div>
+                    <div style="font-weight:700;font-size:14px">Scrape activity</div>
+                    <div style="font-size:12px;color:var(--mute)">Changes detected per run · last 14 runs</div>
+                  </div>
+                  <div style="display:flex;gap:14px;font-size:11.5px;color:var(--dim)">
+                    <span style="display:flex;align-items:center;gap:6px"><span style="width:9px;height:9px;border-radius:3px;background:var(--accent)"></span>Changes</span>
+                    <span style="display:flex;align-items:center;gap:6px"><span style="width:9px;height:9px;border-radius:3px;background:var(--red)"></span>Failures</span>
+                  </div>
+                </div>
+                <div style="display:flex;align-items:flex-end;gap:6px;height:120px">
+                  <sc-for list="{{ runBars }}" as="b" hint-placeholder-count="14">
+                    <div title="{{ b.title }}" style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;gap:2px;height:100%;cursor:default">
+                      <div style="{{ b.failStyle }}"></div>
+                      <div style="{{ b.barStyle }}"></div>
+                      <div style="font-size:9px;color:var(--mute);text-align:center;font-family:'JetBrains Mono',monospace">{{ b.day }}</div>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+
+              <!-- Recent changes preview -->
+              <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);overflow:hidden">
+                <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px 12px">
+                  <div style="font-weight:700;font-size:14px">Recent changes</div>
+                  <a href="#" onClick="{{ gotoChanges }}" style="font-size:12px;font-weight:600;display:flex;align-items:center;gap:4px">View all {{ changeArrow }}</a>
+                </div>
+                <div>
+                  <sc-for list="{{ recentChanges }}" as="c" hint-placeholder-count="5">
+                    <div style="display:flex;align-items:center;gap:12px;padding:11px 20px;border-top:1px solid var(--border)">
+                      <span style="width:30px;height:30px;flex:0 0 auto;border-radius:9px;display:flex;align-items:center;justify-content:center;background:{{ c.bg }};color:{{ c.color }}">{{ c.icon }}</span>
+                      <div style="min-width:0;flex:1">
+                        <div style="font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ c.product }}</div>
+                        <div style="font-size:11.5px;color:var(--mute)">{{ c.label }} · {{ c.detail }}</div>
+                      </div>
+                      <span style="font-size:11px;color:var(--mute);white-space:nowrap;font-family:'JetBrains Mono',monospace">{{ c.rel }}</span>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div style="display:flex;flex-direction:column;gap:16px;min-width:0">
+              <!-- Selector health -->
+              <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:18px 20px;box-shadow:var(--shadow)">
+                <div style="display:flex;align-items:center;gap:9px;margin-bottom:4px">
+                  <span style="color:var(--purple);display:flex">{{ wrenchIcon }}</span>
+                  <div style="font-weight:700;font-size:14px">Selector health</div>
+                </div>
+                <div style="font-size:12px;color:var(--mute);margin-bottom:14px">Auto-recovers when a page's HTML changes</div>
+                <div style="display:flex;flex-direction:column;gap:8px">
+                  <sc-for list="{{ selectorHealth }}" as="s" hint-placeholder-count="3">
+                    <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;background:var(--surface-2);border-radius:10px">
+                      <div>
+                        <div style="font-size:12.5px;font-weight:600;text-transform:capitalize">{{ s.field }}</div>
+                        <div style="font-size:11px;color:var(--mute);font-family:'JetBrains Mono',monospace">{{ s.selector }}</div>
+                      </div>
+                      <span style="{{ s.badgeStyle }}">{{ s.status }}</span>
+                    </div>
+                  </sc-for>
+                </div>
+                <div style="margin-top:14px;border-top:1px solid var(--border);padding-top:12px">
+                  <div style="font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);font-weight:700;margin-bottom:9px">Recent self-heals</div>
+                  <sc-for list="{{ selfHeals }}" as="h" hint-placeholder-count="2">
+                    <div style="display:flex;gap:9px;margin-bottom:9px">
+                      <span style="color:var(--purple);display:flex;margin-top:1px">{{ wrenchIconSm }}</span>
+                      <div style="min-width:0">
+                        <div style="font-size:12px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ h.product }}</div>
+                        <div style="font-size:11px;color:var(--mute)">{{ h.fallback }} · {{ h.rel }}</div>
+                      </div>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+
+              <!-- Latest digest -->
+              <div style="{{ digestCardStyle }}">
+                <div style="display:flex;align-items:center;gap:9px;margin-bottom:12px">
+                  <span style="color:var(--accent);display:flex">{{ sparkIcon }}</span>
+                  <div style="font-weight:700;font-size:14px">Today's AI digest</div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:10px">
+                  <sc-for list="{{ topDigestLines }}" as="l" hint-placeholder-count="3">
+                    <div style="display:flex;gap:10px;font-size:12.5px;line-height:1.5;color:var(--dim)">
+                      <span style="color:var(--accent);font-weight:800;flex:0 0 auto">{{ l.n }}</span>
+                      <span style="text-wrap:pretty">{{ l.text }}</span>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+
+      <!-- ===== PRODUCTS ===== -->
+      <sc-if value="{{ isProducts }}" hint-placeholder-val="">
+        <div style="max-width:1320px;margin:0 auto">
+          <!-- toolbar -->
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap">
+            <div style="position:relative;flex:1;min-width:220px;max-width:420px">
+              <span style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--mute);display:flex">{{ searchIcon }}</span>
+              <input ref="{{ setSearch }}" value="{{ search }}" onInput="{{ onSearch }}" placeholder="Search name or URL…  ( / )" style="width:100%;height:40px;padding:0 12px 0 38px;border-radius:11px;border:1px solid var(--border);background:var(--surface);color:var(--text);font-size:13.5px;font-family:inherit;outline:none" style-focus="border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)">
+            </div>
+            <sc-for list="{{ filterChips }}" as="f" hint-placeholder-count="3">
+              <button onClick="{{ f.onClick }}" style="{{ f.style }}">{{ f.label }}<sc-if value="{{ f.count }}" hint-placeholder-val=""><span style="opacity:.7">·{{ f.count }}</span></sc-if></button>
+            </sc-for>
+            <div style="flex:1"></div>
+            <button onClick="{{ toggleDensity }}" title="Row density" style="height:40px;padding:0 13px;border-radius:11px;border:1px solid var(--border);background:var(--surface);color:var(--dim);cursor:pointer;font-size:12.5px;font-weight:600;display:flex;align-items:center;gap:7px;font-family:inherit" style-hover="color:var(--text)">{{ densityIcon }}{{ densityLabel }}</button>
+          </div>
+
+          <!-- bulk bar -->
+          <sc-if value="{{ hasChecked }}" hint-placeholder-val="">
+            <div style="display:flex;align-items:center;gap:12px;padding:10px 16px;background:var(--accent-soft);border:1px solid color-mix(in oklab,var(--accent),transparent 55%);border-radius:12px;margin-bottom:12px;animation:fadeUp .25s both">
+              <span style="font-weight:700;font-size:13px;color:var(--accent)">{{ checkedCount }} selected</span>
+              <div style="flex:1"></div>
+              <button onClick="{{ rescanChecked }}" style="height:34px;padding:0 14px;border-radius:9px;border:1px solid var(--accent);background:var(--accent);color:var(--accent-fg);font-weight:700;font-size:12.5px;cursor:pointer;display:flex;align-items:center;gap:7px;font-family:inherit">{{ refreshIconSm }}Re-scan</button>
+              <button onClick="{{ removeChecked }}" style="height:34px;padding:0 14px;border-radius:9px;border:1px solid var(--border-strong);background:transparent;color:var(--red);font-weight:700;font-size:12.5px;cursor:pointer;display:flex;align-items:center;gap:7px;font-family:inherit">{{ trashIconSm }}Remove</button>
+              <button onClick="{{ clearChecked }}" style="height:34px;padding:0 10px;border-radius:9px;border:none;background:transparent;color:var(--dim);font-weight:600;font-size:12.5px;cursor:pointer;font-family:inherit">Clear</button>
+            </div>
+          </sc-if>
+
+          <!-- table -->
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);overflow:hidden">
+            <div style="overflow-x:auto">
+              <table style="width:100%;border-collapse:collapse;min-width:820px">
+                <thead>
+                  <tr style="background:var(--surface-2)">
+                    <th style="width:42px;padding:0 0 0 16px;text-align:left"><div onClick="{{ toggleAll }}" style="{{ allCheckStyle }}">{{ allCheckMark }}</div></th>
+                    <sc-for list="{{ columns }}" as="col" hint-placeholder-count="7">
+                      <th onClick="{{ col.onSort }}" style="{{ col.style }}"><span style="display:inline-flex;align-items:center;gap:5px">{{ col.label }}<span style="color:var(--accent);display:flex">{{ col.sortIcon }}</span></span></th>
+                    </sc-for>
+                  </tr>
+                </thead>
+                <tbody>
+                  <sc-for list="{{ pageRows }}" as="r" hint-placeholder-count="10">
+                    <tr onClick="{{ r.onOpen }}" style="{{ r.rowStyle }}">
+                      <td style="padding:0 0 0 16px" onClick="{{ r.stop }}"><div onClick="{{ r.onCheck }}" style="{{ r.checkStyle }}">{{ r.checkMark }}</div></td>
+                      <td style="{{ r.cellPad }}">
+                        <div style="font-weight:600;font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:280px">{{ r.name }}</div>
+                      </td>
+                      <td style="{{ r.cellPad }}">
+                        <div style="display:flex;align-items:center;gap:6px">
+                          <span style="font-size:12px;color:var(--dim);font-family:'JetBrains Mono',monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:190px">{{ r.urlShort }}</span>
+                          <button onClick="{{ r.onCopy }}" title="Copy URL" style="width:24px;height:24px;flex:0 0 auto;border:none;background:transparent;color:var(--mute);cursor:pointer;border-radius:6px;display:flex;align-items:center;justify-content:center" style-hover="background:var(--hover);color:var(--text)">{{ copyIconSm }}</button>
+                        </div>
+                      </td>
+                      <td style="{{ r.cellPadR }}"><span style="font-weight:700;font-size:13.5px;{{ r.priceColor }}">{{ r.priceText }}</span></td>
+                      <td style="{{ r.cellPad }}"><span style="{{ r.stockStyle }}">{{ r.stockLabel }}</span></td>
+                      <td style="{{ r.cellPad }}">
+                        <svg viewBox="0 0 88 26" preserveAspectRatio="none" style="width:88px;height:24px;display:block;overflow:visible">
+                          <path d="{{ r.spark.line }}" fill="none" stroke="{{ r.sparkColor }}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </td>
+                      <td style="{{ r.cellPadR }}"><span style="font-size:12px;color:var(--mute);font-family:'JetBrains Mono',monospace;white-space:nowrap">{{ r.checkedRel }}</span></td>
+                      <td style="{{ r.cellPad }};padding-right:16px"><span style="color:{{ r.trendColor }};display:flex">{{ r.trendIcon }}</span></td>
+                    </tr>
+                  </sc-for>
+                </tbody>
+              </table>
+            </div>
+            <sc-if value="{{ noResults }}" hint-placeholder-val="">
+              <div style="padding:56px 20px;text-align:center;color:var(--mute)">
+                <div style="font-size:14px;font-weight:600;color:var(--dim);margin-bottom:4px">No products match</div>
+                <div style="font-size:12.5px">Try clearing filters or search.</div>
+              </div>
+            </sc-if>
+            <!-- pagination -->
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 18px;border-top:1px solid var(--border)">
+              <span style="font-size:12px;color:var(--mute)">{{ pageInfo }}</span>
+              <div style="display:flex;align-items:center;gap:6px">
+                <button onClick="{{ prevPage }}" style="{{ prevStyle }}">Prev</button>
+                <span style="font-size:12.5px;color:var(--dim);font-weight:600;padding:0 6px">{{ pageLabel }}</span>
+                <button onClick="{{ nextPage }}" style="{{ nextStyle }}">Next</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+
+      <!-- ===== URL MANAGER ===== -->
+      <sc-if value="{{ isUrls }}" hint-placeholder-val="">
+        <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:{{ urlCols }};gap:18px;align-items:start">
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px;box-shadow:var(--shadow)">
+              <div style="font-weight:700;font-size:15px;margin-bottom:3px">Bulk add URLs</div>
+              <div style="font-size:12.5px;color:var(--mute);margin-bottom:14px">Paste one product URL per line. Duplicates and invalid lines are flagged automatically.</div>
+              <textarea value="{{ urlText }}" onInput="{{ onUrlInput }}" placeholder="https://store.example.com/product/widget-pro&#10;https://shop.example.com/item/42" spellcheck="false" style="width:100%;height:200px;resize:vertical;padding:13px 14px;border-radius:12px;border:1px solid var(--border);background:var(--bg);color:var(--text);font-family:'JetBrains Mono',monospace;font-size:12.5px;line-height:1.6;outline:none" style-focus="border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)"></textarea>
+              <div style="display:flex;align-items:center;gap:16px;margin-top:12px;flex-wrap:wrap">
+                <span style="display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:var(--green)"><span style="width:8px;height:8px;border-radius:50%;background:var(--green)"></span>{{ validCount }} valid</span>
+                <span style="display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:var(--red)"><span style="width:8px;height:8px;border-radius:50%;background:var(--red)"></span>{{ invalidCount }} invalid</span>
+                <span style="display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:var(--dim)"><span style="width:8px;height:8px;border-radius:50%;background:var(--mute)"></span>{{ dupCount }} duplicate</span>
+                <div style="flex:1"></div>
+                <button onClick="{{ addUrls }}" style="{{ addBtnStyle }}">{{ plusIcon }}<span>Add {{ addCount }} URL{{ addPlural }}</span></button>
+              </div>
+            </div>
+
+            <!-- drop zone -->
+            <div ref="{{ setDrop }}" onClick="{{ pickFile }}" style="{{ dropStyle }}">
+              <span style="color:var(--dim);display:flex">{{ uploadIcon }}</span>
+              <div style="font-size:13.5px;font-weight:600">{{ dropLabel }}</div>
+              <div style="font-size:12px;color:var(--mute)">Drag &amp; drop a .csv or .txt file, or click to browse</div>
+              <input ref="{{ setFileInput }}" type="file" accept=".csv,.txt,text/plain" onChange="{{ onFile }}" style="display:none">
+            </div>
+
+            <!-- live validation list -->
+            <sc-if value="{{ hasLines }}" hint-placeholder-val="">
+              <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;max-height:320px;overflow-y:auto">
+                <sc-for list="{{ parsedLines }}" as="p" hint-placeholder-count="4">
+                  <div style="display:flex;align-items:center;gap:10px;padding:8px 16px;border-bottom:1px solid var(--border);font-family:'JetBrains Mono',monospace;font-size:12px">
+                    <span style="color:{{ p.color }};display:flex;flex:0 0 auto">{{ p.icon }}</span>
+                    <span style="flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:{{ p.textColor }}">{{ p.raw }}</span>
+                    <span style="font-size:11px;color:{{ p.color }};font-weight:600;font-family:'Hanken Grotesk',sans-serif;flex:0 0 auto">{{ p.tag }}</span>
+                  </div>
+                </sc-for>
+                <sc-if value="{{ moreLines }}" hint-placeholder-val=""><div style="padding:9px 16px;font-size:11.5px;color:var(--mute)">+ {{ moreLines }} more lines…</div></sc-if>
+              </div>
+            </sc-if>
+          </div>
+
+          <!-- watchlist side -->
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;position:sticky;top:0">
+            <div style="padding:16px 18px;border-bottom:1px solid var(--border)">
+              <div style="display:flex;align-items:baseline;justify-content:space-between">
+                <div style="font-weight:700;font-size:14px">Current watchlist</div>
+                <div style="font-size:22px;font-weight:800;color:var(--accent)">{{ watchCount }}</div>
+              </div>
+              <div style="font-size:12px;color:var(--mute)">URLs being monitored</div>
+            </div>
+            <div style="max-height:440px;overflow-y:auto">
+              <sc-for list="{{ watchlist }}" as="w" hint-placeholder-count="8">
+                <div style="display:flex;align-items:center;gap:10px;padding:10px 18px;border-bottom:1px solid var(--border)">
+                  <div style="min-width:0;flex:1">
+                    <div style="font-size:12.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ w.name }}</div>
+                    <div style="font-size:11px;color:var(--mute);font-family:'JetBrains Mono',monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ w.host }}</div>
+                  </div>
+                  <button onClick="{{ w.onRemove }}" title="Remove" style="width:28px;height:28px;flex:0 0 auto;border:none;background:transparent;color:var(--mute);cursor:pointer;border-radius:7px;display:flex;align-items:center;justify-content:center" style-hover="background:var(--redbg);color:var(--red)">{{ trashIconSm }}</button>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+
+      <!-- ===== CHANGES ===== -->
+      <sc-if value="{{ isChanges }}" hint-placeholder-val="">
+        <div style="max-width:900px;margin:0 auto">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;flex-wrap:wrap">
+            <sc-for list="{{ changeFilters }}" as="f" hint-placeholder-count="5">
+              <button onClick="{{ f.onClick }}" style="{{ f.style }}">{{ f.label }}</button>
+            </sc-for>
+          </div>
+          <sc-for list="{{ changeGroups }}" as="g" hint-placeholder-count="3">
+            <div style="margin-bottom:22px">
+              <div style="font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);font-weight:700;margin-bottom:10px;position:sticky;top:-24px;background:var(--bg);padding:6px 0;z-index:2">{{ g.day }}</div>
+              <div style="display:flex;flex-direction:column;gap:9px">
+                <sc-for list="{{ g.items }}" as="c" hint-placeholder-count="3">
+                  <div style="display:flex;align-items:center;gap:14px;background:var(--surface);border:1px solid var(--border);border-left:3px solid {{ c.color }};border-radius:12px;padding:13px 16px;box-shadow:var(--shadow)">
+                    <span style="width:36px;height:36px;flex:0 0 auto;border-radius:10px;display:flex;align-items:center;justify-content:center;background:{{ c.bg }};color:{{ c.color }}">{{ c.icon }}</span>
+                    <div style="min-width:0;flex:1">
+                      <div style="font-size:13.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ c.product }}</div>
+                      <div style="font-size:12px;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ c.host }}</div>
+                    </div>
+                    <div style="text-align:right;flex:0 0 auto">
+                      <div style="font-size:13px;font-weight:700;color:{{ c.color }}">{{ c.detail }}</div>
+                      <div style="font-size:11px;color:var(--mute);font-family:'JetBrains Mono',monospace">{{ c.rel }}</div>
+                    </div>
+                  </div>
+                </sc-for>
+              </div>
+            </div>
+          </sc-for>
+          <sc-if value="{{ noChanges }}" hint-placeholder-val=""><div style="padding:56px;text-align:center;color:var(--mute);font-size:13px">No changes of this type.</div></sc-if>
+        </div>
+      </sc-if>
+
+      <!-- ===== ERRORS ===== -->
+      <sc-if value="{{ isErrors }}" hint-placeholder-val="">
+        <div style="max-width:900px;margin:0 auto">
+          <sc-for list="{{ loudErrors }}" as="e" hint-placeholder-count="1">
+            <div style="display:flex;gap:16px;background:var(--redbg);border:1px solid var(--red);border-radius:14px;padding:18px 20px;margin-bottom:14px;box-shadow:0 8px 24px -14px var(--red)">
+              <span style="width:40px;height:40px;flex:0 0 auto;border-radius:11px;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center">{{ alertIcon }}</span>
+              <div style="flex:1;min-width:0">
+                <div style="font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:800;color:var(--red);margin-bottom:3px">Critical · needs attention</div>
+                <div style="font-size:14px;font-weight:700;line-height:1.35;margin-bottom:5px">{{ e.reason }}</div>
+                <div style="font-size:12px;color:var(--dim);font-family:'JetBrains Mono',monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ e.url }}</div>
+              </div>
+              <button onClick="{{ e.onGoto }}" style="align-self:center;flex:0 0 auto;height:38px;padding:0 16px;border-radius:10px;border:none;background:var(--red);color:#fff;font-weight:700;font-size:12.5px;cursor:pointer;display:flex;align-items:center;gap:7px;font-family:inherit">Look here {{ arrowIcon }}</button>
+            </div>
+          </sc-for>
+
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);overflow:hidden">
+            <div style="padding:14px 18px;border-bottom:1px solid var(--border);font-weight:700;font-size:13.5px;display:flex;justify-content:space-between"><span>Failure log</span><span style="color:var(--mute);font-weight:500">{{ errorCount }} entries</span></div>
+            <sc-for list="{{ mutedErrors }}" as="e" hint-placeholder-count="4">
+              <div onClick="{{ e.onGoto }}" style="display:flex;align-items:center;gap:14px;padding:12px 18px;border-top:1px solid var(--border);cursor:pointer" style-hover="background:var(--surface-2)">
+                <span style="width:9px;height:9px;border-radius:50%;background:var(--amber);flex:0 0 auto"></span>
+                <div style="min-width:0;flex:1">
+                  <div style="font-size:13px;font-weight:600">{{ e.reason }}</div>
+                  <div style="font-size:11.5px;color:var(--mute);font-family:'JetBrains Mono',monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ e.url }}</div>
+                </div>
+                <span style="font-size:11.5px;color:var(--mute);font-family:'JetBrains Mono',monospace;white-space:nowrap">{{ e.rel }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-if>
+
+      <!-- ===== SCHEDULE ===== -->
+      <sc-if value="{{ isSchedule }}" hint-placeholder-val="">
+        <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:{{ schedCols }};gap:16px;align-items:start">
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px;box-shadow:var(--shadow)">
+              <div style="font-weight:700;font-size:15px;margin-bottom:14px">Schedule</div>
+              <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+                <div style="flex:1;min-width:180px">
+                  <div style="font-size:12px;color:var(--mute);margin-bottom:4px">Runs</div>
+                  <div style="font-size:20px;font-weight:800;letter-spacing:-.01em">{{ schedHuman }}</div>
+                  <div style="display:inline-flex;margin-top:8px;padding:5px 10px;background:var(--bg);border:1px solid var(--border);border-radius:8px;font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--dim)">{{ schedCron }}</div>
+                </div>
+                <div style="text-align:center;padding:14px 22px;background:var(--accent-soft);border-radius:14px">
+                  <div style="font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);font-weight:700;margin-bottom:4px">Next run in</div>
+                  <div style="font-size:26px;font-weight:800;font-family:'JetBrains Mono',monospace;color:var(--accent);line-height:1">{{ countdown }}</div>
+                </div>
+              </div>
+            </div>
+
+            <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px;box-shadow:var(--shadow)">
+              <div style="font-weight:700;font-size:15px;margin-bottom:4px">Run mode</div>
+              <div style="font-size:12.5px;color:var(--mute);margin-bottom:14px">Choose whether each run also produces a Claude-written digest.</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+                <button onClick="{{ setFreeMode }}" style="{{ freeModeStyle }}">
+                  <div style="font-weight:700;font-size:13.5px;margin-bottom:3px">Free</div>
+                  <div style="font-size:11.5px;color:var(--mute);line-height:1.4">Scrape only. Detect price &amp; stock changes.</div>
+                </button>
+                <button onClick="{{ setAiMode }}" style="{{ aiModeStyle }}">
+                  <div style="display:flex;align-items:center;gap:6px;font-weight:700;font-size:13.5px;margin-bottom:3px">AI digest {{ aiSparkIcon }}</div>
+                  <div style="font-size:11.5px;color:var(--mute);line-height:1.4">Scrape + a daily plain-English Claude summary.</div>
+                </button>
+              </div>
+            </div>
+
+            <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)">
+              <div style="padding:14px 18px;font-weight:700;font-size:13.5px;border-bottom:1px solid var(--border)">Run history</div>
+              <div style="max-height:280px;overflow-y:auto">
+                <sc-for list="{{ runHistory }}" as="r" hint-placeholder-count="6">
+                  <div style="display:flex;align-items:center;gap:14px;padding:11px 18px;border-bottom:1px solid var(--border)">
+                    <span style="width:9px;height:9px;border-radius:50%;background:{{ r.dot }};flex:0 0 auto"></span>
+                    <div style="flex:1;font-size:12.5px;font-weight:600">{{ r.when }}</div>
+                    <span style="font-size:12px;color:var(--green);font-weight:600">{{ r.ok }} ok</span>
+                    <span style="font-size:12px;color:{{ r.failColor }};font-weight:600">{{ r.failed }} failed</span>
+                    <span style="font-size:12px;color:var(--dim)">{{ r.changes }} chg</span>
+                    <span style="font-size:11.5px;color:var(--mute);font-family:'JetBrains Mono',monospace;width:46px;text-align:right">{{ r.dur }}</span>
+                  </div>
+                </sc-for>
+              </div>
+            </div>
+          </div>
+
+          <!-- live log -->
+          <div style="background:#07080a;border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;height:520px">
+            <div style="padding:12px 16px;border-bottom:1px solid #1b1d22;display:flex;align-items:center;gap:9px">
+              <span style="width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:shimmer 1.6s infinite"></span>
+              <span style="font-size:12.5px;font-weight:700;color:#e6e8ec">run.log</span>
+              <span style="font-size:11px;color:#666;font-family:'JetBrains Mono',monospace">— live tail</span>
+            </div>
+            <div ref="{{ setLogEl }}" style="flex:1;overflow-y:auto;padding:12px 16px;font-family:'JetBrains Mono',monospace;font-size:11.5px;line-height:1.7">
+              <sc-for list="{{ logLines }}" as="l" hint-placeholder-count="10">
+                <div style="white-space:pre-wrap;word-break:break-word"><span style="color:#5a6270">{{ l.time }} </span><span style="color:{{ l.color }}">{{ l.text }}</span></div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </sc-if>
+
+      <!-- ===== DIGEST ===== -->
+      <sc-if value="{{ isDigest }}" hint-placeholder-val="">
+        <div style="max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:16px">
+          <sc-for list="{{ digestCards }}" as="d" hint-placeholder-count="3">
+            <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px 22px;box-shadow:var(--shadow)">
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+                <span style="width:32px;height:32px;border-radius:10px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center">{{ sparkIcon }}</span>
+                <div>
+                  <div style="font-weight:700;font-size:14px">{{ d.pretty }}</div>
+                  <div style="font-size:11.5px;color:var(--mute)">AI digest · {{ d.date }}</div>
+                </div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:11px">
+                <sc-for list="{{ d.lines }}" as="l" hint-placeholder-count="3">
+                  <div style="display:flex;gap:11px;font-size:13.5px;line-height:1.55">
+                    <span style="color:var(--accent);font-weight:800;flex:0 0 auto">{{ l.n }}</span>
+                    <span style="text-wrap:pretty;color:var(--dim)">{{ l.text }}</span>
+                  </div>
+                </sc-for>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </sc-if>
+    </main>
+  </div>
+
+  <!-- ░░ SLIDE-OVER DETAIL ░░ -->
+  <div onClick="{{ closeDetail }}" style="{{ scrimStyle }}"></div>
+  <aside style="{{ detailStyle }}">
+    <sc-if value="{{ detail }}" hint-placeholder-val="">
+      <div style="height:100%;display:flex;flex-direction:column">
+        <div style="padding:20px 22px 16px;border-bottom:1px solid var(--border)">
+          <div style="display:flex;align-items:flex-start;gap:12px">
+            <div style="flex:1;min-width:0">
+              <div style="font-size:17px;font-weight:800;letter-spacing:-.01em;line-height:1.25;text-wrap:pretty">{{ detail.name }}</div>
+              <a href="{{ detail.url }}" target="_blank" style="font-size:12px;font-family:'JetBrains Mono',monospace;display:inline-flex;align-items:center;gap:5px;margin-top:6px">{{ detail.host }} {{ externalIcon }}</a>
+            </div>
+            <button onClick="{{ closeDetail }}" style="width:34px;height:34px;flex:0 0 auto;border-radius:9px;border:1px solid var(--border);background:var(--surface);color:var(--dim);cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="color:var(--text)">{{ closeIcon }}</button>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;margin-top:16px">
+            <div>
+              <div style="font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:.05em;font-weight:700">Current price</div>
+              <div style="font-size:28px;font-weight:800;letter-spacing:-.02em">{{ detail.priceText }}</div>
+            </div>
+            <span style="{{ detail.stockStyle }}">{{ detail.stockLabel }}</span>
+            <div style="flex:1"></div>
+            <div style="text-align:right">
+              <div style="font-size:11px;color:var(--mute)">30-day range</div>
+              <div style="font-size:13px;font-weight:600;font-family:'JetBrains Mono',monospace">{{ detail.range }}</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="flex:1;overflow-y:auto;padding:20px 22px">
+          <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);margin-bottom:10px">Price history · 14 days</div>
+          <div style="background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:14px 12px 6px;margin-bottom:20px">
+            <svg viewBox="0 0 440 140" preserveAspectRatio="none" style="width:100%;height:130px;display:block;overflow:visible">
+              <defs><linearGradient id="pgrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--accent)" stop-opacity="0.28"/><stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient></defs>
+              <path d="{{ detail.chart.area }}" fill="url(#pgrad)"></path>
+              <path d="{{ detail.chart.line }}" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+
+          <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);margin-bottom:10px">Stock timeline</div>
+          <div style="display:flex;gap:3px;margin-bottom:22px">
+            <sc-for list="{{ detail.stockTimeline }}" as="t" hint-placeholder-count="14">
+              <div title="{{ t.title }}" style="flex:1;height:26px;border-radius:4px;background:{{ t.color }}"></div>
+            </sc-for>
+          </div>
+
+          <sc-if value="{{ detail.hasEvents }}" hint-placeholder-val="">
+            <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);margin-bottom:10px">Events</div>
+            <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:22px">
+              <sc-for list="{{ detail.events }}" as="ev" hint-placeholder-count="2">
+                <div style="display:flex;align-items:center;gap:11px;padding:9px 12px;background:var(--surface-2);border-radius:10px">
+                  <span style="color:{{ ev.color }};display:flex">{{ ev.icon }}</span>
+                  <span style="flex:1;font-size:12.5px;font-weight:600">{{ ev.label }}</span>
+                  <span style="font-size:11px;color:var(--mute);font-family:'JetBrains Mono',monospace">{{ ev.rel }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </sc-if>
+
+          <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);margin-bottom:10px">Raw scrape history</div>
+          <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden">
+            <sc-for list="{{ detail.rawHistory }}" as="h" hint-placeholder-count="6">
+              <div style="display:flex;align-items:center;gap:10px;padding:9px 13px;border-bottom:1px solid var(--border);font-size:12px;font-family:'JetBrains Mono',monospace">
+                <span style="color:var(--mute);flex:1">{{ h.t }}</span>
+                <span style="font-weight:700">{{ h.price }}</span>
+                <span style="color:{{ h.stockColor }};width:70px;text-align:right">{{ h.stock }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="padding:16px 22px;border-top:1px solid var(--border);display:flex;gap:10px">
+          <button onClick="{{ detail.onRescan }}" style="flex:1;height:42px;border-radius:11px;border:1px solid var(--accent);background:var(--accent);color:var(--accent-fg);font-weight:700;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;font-family:inherit">{{ refreshIconSm }}Re-scan now</button>
+          <button onClick="{{ detail.onRemove }}" style="height:42px;padding:0 16px;border-radius:11px;border:1px solid var(--border-strong);background:transparent;color:var(--red);font-weight:700;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;font-family:inherit">{{ trashIconSm }}Remove</button>
+        </div>
+      </div>
+    </sc-if>
+  </aside>
+
+  <!-- ░░ TOASTS ░░ -->
+  <div style="position:fixed;bottom:22px;right:22px;z-index:200;display:flex;flex-direction:column;gap:10px;align-items:flex-end">
+    <sc-for list="{{ toasts }}" as="t" hint-placeholder-count="0">
+      <div style="display:flex;align-items:center;gap:11px;padding:12px 16px;background:var(--surface);border:1px solid var(--border-strong);border-radius:12px;box-shadow:0 12px 32px -12px rgba(0,0,0,.5);animation:toastIn .28s cubic-bezier(.2,.8,.2,1) both;min-width:220px">
+        <span style="width:24px;height:24px;flex:0 0 auto;border-radius:7px;display:flex;align-items:center;justify-content:center;background:{{ t.bg }};color:{{ t.color }}">{{ t.icon }}</span>
+        <span style="font-size:13px;font-weight:600">{{ t.msg }}</span>
+      </div>
+    </sc-for>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#7c74ff&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;},&quot;theme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;dark&quot;,&quot;light&quot;],&quot;default&quot;:&quot;dark&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;},&quot;density&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;comfortable&quot;,&quot;compact&quot;],&quot;default&quot;:&quot;comfortable&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Table&quot;}}">
+const ICONS = {
+  activity:[['polyline',{points:'22 12 18 12 15 21 9 3 6 12 2 12'}]],
+  package:[['path',{d:'M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z'}],['path',{d:'m3.3 7 8.7 5 8.7-5'}],['path',{d:'M12 22V12'}]],
+  link:[['path',{d:'M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71'}],['path',{d:'M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71'}]],
+  bell:[['path',{d:'M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9'}],['path',{d:'M10.3 21a1.94 1.94 0 0 0 3.4 0'}]],
+  alert:[['path',{d:'m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z'}],['path',{d:'M12 9v4'}],['path',{d:'M12 17h.01'}]],
+  clock:[['circle',{cx:12,cy:12,r:10}],['polyline',{points:'12 6 12 12 16 14'}]],
+  calendar:[['rect',{width:18,height:18,x:3,y:4,rx:2}],['path',{d:'M3 10h18'}],['path',{d:'M8 2v4'}],['path',{d:'M16 2v4'}]],
+  sparkles:[['path',{d:'M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .962 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.962 0z'}]],
+  play:[['polygon',{points:'6 3 20 12 6 21 6 3'}]],
+  sun:[['circle',{cx:12,cy:12,r:4}],['path',{d:'M12 2v2'}],['path',{d:'M12 20v2'}],['path',{d:'m4.93 4.93 1.41 1.41'}],['path',{d:'m17.66 17.66 1.41 1.41'}],['path',{d:'M2 12h2'}],['path',{d:'M20 12h2'}],['path',{d:'m6.34 17.66-1.41 1.41'}],['path',{d:'m19.07 4.93-1.41 1.41'}]],
+  moon:[['path',{d:'M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z'}]],
+  search:[['circle',{cx:11,cy:11,r:8}],['path',{d:'m21 21-4.3-4.3'}]],
+  copy:[['rect',{width:14,height:14,x:8,y:8,rx:2,ry:2}],['path',{d:'M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2'}]],
+  external:[['path',{d:'M15 3h6v6'}],['path',{d:'M10 14 21 3'}],['path',{d:'M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'}]],
+  up:[['path',{d:'m5 12 7-7 7 7'}],['path',{d:'M12 19V5'}]],
+  down:[['path',{d:'M12 5v14'}],['path',{d:'m19 12-7 7-7-7'}]],
+  wrench:[['path',{d:'M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z'}]],
+  refresh:[['path',{d:'M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8'}],['path',{d:'M21 3v5h-5'}],['path',{d:'M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16'}],['path',{d:'M8 16H3v5'}]],
+  x:[['path',{d:'M18 6 6 18'}],['path',{d:'m6 6 12 12'}]],
+  check:[['path',{d:'M20 6 9 17l-5-5'}]],
+  trash:[['path',{d:'M3 6h18'}],['path',{d:'M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6'}],['path',{d:'M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2'}]],
+  chevron:[['path',{d:'m6 9 6 6 6-6'}]],
+  chevronUp:[['path',{d:'m18 15-6-6-6 6'}]],
+  upload:[['path',{d:'M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'}],['path',{d:'m17 8-5-5-5 5'}],['path',{d:'M12 3v12'}]],
+  plus:[['path',{d:'M5 12h14'}],['path',{d:'M12 5v14'}]],
+  dot:[['circle',{cx:12,cy:12,r:9}]],
+  rows:[['rect',{width:18,height:18,x:3,y:3,rx:2}],['path',{d:'M3 9h18'}],['path',{d:'M3 15h18'}]],
+  arrow:[['path',{d:'M5 12h14'}],['path',{d:'m12 5 7 7-7 7'}]],
+};
+function ic(name, size = 16, sw = 1.75) {
+  const defs = ICONS[name] || [];
+  return React.createElement('svg', { width: size, height: size, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: sw, strokeLinecap: 'round', strokeLinejoin: 'round', style: { display: 'block', flex: '0 0 auto' } },
+    defs.map((d, i) => React.createElement(d[0], { key: i, ...d[1] })));
+}
+
+const DARK = { '--bg':'#0a0b0d','--panel':'#0f1013','--surface':'#141518','--surface-2':'#191b1f','--hover':'#1f2126','--border':'#232529','--border-strong':'#2f3239','--text':'#f3f4f6','--dim':'#9aa1a9','--mute':'#61676e','--shadow':'0 1px 2px rgba(0,0,0,.5), 0 14px 34px -18px rgba(0,0,0,.75)','--green':'#34d399','--amber':'#fbbf24','--blue':'#38bdf8','--purple':'#a78bfa','--red':'#f87171','--greenbg':'rgba(52,211,153,.14)','--amberbg':'rgba(251,191,36,.14)','--bluebg':'rgba(56,189,248,.14)','--purplebg':'rgba(167,139,250,.16)','--redbg':'rgba(248,113,113,.13)' };
+const LIGHT = { '--bg':'#f5f6f8','--panel':'#ffffff','--surface':'#ffffff','--surface-2':'#f4f5f7','--hover':'#eef0f3','--border':'#e7e9ec','--border-strong':'#d6d9dd','--text':'#0d1117','--dim':'#586170','--mute':'#89919c','--shadow':'0 1px 2px rgba(16,24,40,.06), 0 14px 34px -20px rgba(16,24,40,.20)','--green':'#0a9d57','--amber':'#c07600','--blue':'#0284c7','--purple':'#7c3aed','--red':'#dc2626','--greenbg':'rgba(10,157,87,.10)','--amberbg':'rgba(192,118,0,.11)','--bluebg':'rgba(2,132,199,.10)','--purplebg':'rgba(124,58,237,.10)','--redbg':'rgba(220,38,38,.08)' };
+
+function hexToRgba(hex, a) {
+  const h = (hex || '#7c74ff').replace('#', '');
+  const n = h.length === 3 ? h.split('').map(c => c + c).join('') : h;
+  const r = parseInt(n.slice(0,2),16), g = parseInt(n.slice(2,4),16), b = parseInt(n.slice(4,6),16);
+  return `rgba(${r},${g},${b},${a})`;
+}
+
+// sparkline path builder
+function spark(vals, w = 120, h = 32, pad = 3) {
+  const clean = vals.filter(v => v != null && !isNaN(v));
+  if (clean.length < 2) return { line: '', area: '', up: true };
+  const min = Math.min(...clean), max = Math.max(...clean), span = (max - min) || 1;
+  const step = w / (clean.length - 1);
+  const pts = clean.map((v, i) => [i * step, pad + (h - pad * 2) * (1 - (v - min) / span)]);
+  const line = pts.map((p, i) => (i ? 'L' : 'M') + p[0].toFixed(1) + ' ' + p[1].toFixed(1)).join(' ');
+  const area = line + ` L${w} ${h} L0 ${h} Z`;
+  return { line, area, up: clean[clean.length - 1] >= clean[0] };
+}
+
+const DAY = 86400000;
+
+class Component extends DCLogic {
+  state = {
+    dark: true, view: 'overview', loading: true,
+    products: [], changes: [], errors: [], runs: [], schedule: null, digests: [],
+    now: Date.now(), count: 0,
+    search: '', sort: { key: 'lastChecked', dir: 'desc' },
+    filters: { inStock: false, changed: false, error: false },
+    density: 'comfortable', page: 0,
+    checked: {}, detailUrl: null,
+    urlText: '', toasts: [], running: false, narrow: false, mobile: false,
+    dragOver: false, logLines: [],
+  };
+
+  componentDidMount() {
+    const dark = (this.props.theme || 'dark') !== 'light';
+    const density = this.props.density || 'comfortable';
+    this.setState({ dark, density });
+    this.applyTheme(dark);
+    this.setState({ logLines: SEED_LOG.map((t, i) => this.logRow(t, i)) });
+    import('./api.js').then(api => { this.api = api; this.loadAll(); });
+    this._tick = setInterval(() => this.setState({ now: Date.now() }), 1000);
+    this._log = setInterval(() => this.tailLog(), 2800);
+    this._onKey = (e) => {
+      const tag = (e.target && e.target.tagName || '').toLowerCase();
+      if (e.key === '/' && tag !== 'input' && tag !== 'textarea') {
+        e.preventDefault();
+        this.setState({ view: 'products' }, () => this.searchEl && this.searchEl.focus());
+      } else if (e.key === 'Escape') this.setState({ detailUrl: null });
+    };
+    window.addEventListener('keydown', this._onKey);
+    this._onResize = () => this.setState({ narrow: window.innerWidth < 1000, mobile: window.innerWidth < 640 });
+    window.addEventListener('resize', this._onResize); this._onResize();
+  }
+  componentWillUnmount() {
+    clearInterval(this._tick); clearInterval(this._log);
+    window.removeEventListener('keydown', this._onKey);
+    window.removeEventListener('resize', this._onResize);
+    cancelAnimationFrame(this._raf);
+  }
+
+  setRoot = el => { this.root = el; if (el) this.applyTheme(this.state.dark); };
+  setScroll = el => { this.scrollEl = el; };
+  setSearch = el => { this.searchEl = el; };
+  setLogEl = el => { this.logEl = el; };
+  setDrop = el => {
+    this.dropEl = el;
+    if (el && !el._wired) {
+      el._wired = true;
+      el.addEventListener('dragover', e => { e.preventDefault(); this.setState({ dragOver: true }); });
+      el.addEventListener('dragleave', () => this.setState({ dragOver: false }));
+      el.addEventListener('drop', e => {
+        e.preventDefault(); this.setState({ dragOver: false });
+        const f = e.dataTransfer.files[0]; if (f) this.readFile(f);
+      });
+    }
+  };
+  setFileInput = el => { this.fileInput = el; };
+
+  applyTheme(dark) {
+    if (!this.root) return;
+    const map = dark ? DARK : LIGHT;
+    Object.entries(map).forEach(([k, v]) => this.root.style.setProperty(k, v));
+    const accent = this.props.accent || '#7c74ff';
+    this.root.style.setProperty('--accent', accent);
+    this.root.style.setProperty('--accent-soft', hexToRgba(accent, dark ? 0.18 : 0.12));
+    this.root.style.setProperty('--accent-fg', '#ffffff');
+  }
+
+  async loadAll() {
+    const a = this.api;
+    const [products, changes, errors, runs, schedule, digests] = await Promise.all([
+      a.getProducts(), a.getChanges(), a.getErrors(), a.getRuns(), a.getSchedule(), a.getDigests()
+    ]);
+    this.setState({ products, changes, errors, runs, schedule, digests, loading: false }, () => this.startCount());
+  }
+  startCount() {
+    const start = performance.now(), dur = 780;
+    const step = t => {
+      let p = Math.min(1, (t - start) / dur); p = 1 - Math.pow(1 - p, 3);
+      this.setState({ count: p });
+      if (p < 1) this._raf = requestAnimationFrame(step);
+    };
+    this._raf = requestAnimationFrame(step);
+  }
+
+  logRow(text, i) {
+    const now = new Date(Date.now() - (0) * 1000);
+    const time = new Date().toTimeString().slice(0, 8);
+    let color = '#c7ccd4';
+    if (/OK|✓|done|healthy/i.test(text)) color = '#34d399';
+    else if (/warn|retry|degraded|fallback/i.test(text)) color = '#fbbf24';
+    else if (/fail|error|!!!/i.test(text)) color = '#f87171';
+    else if (/change|drop|rise|restock/i.test(text)) color = '#38bdf8';
+    return { time, text, color, _k: Date.now() + '-' + i + '-' + Math.random() };
+  }
+  tailLog() {
+    if (this.state.view !== 'schedule') return;
+    const line = LOG_SAMPLES[Math.floor(Math.random() * LOG_SAMPLES.length)];
+    this.setState(s => ({ logLines: [...s.logLines.slice(-120), this.logRow(line, s.logLines.length)] }), () => {
+      if (this.logEl) this.logEl.scrollTop = this.logEl.scrollHeight;
+    });
+  }
+
+  toast(msg, kind = 'check') {
+    const id = Date.now() + Math.random();
+    this.setState(s => ({ toasts: [...s.toasts, { id, msg, kind }] }));
+    setTimeout(() => this.setState(s => ({ toasts: s.toasts.filter(t => t.id !== id) })), 3200);
+  }
+
+  go = (view) => (e) => { if (e) e.preventDefault(); this.setState({ view, detailUrl: null }); };
+  toggleTheme = () => { const dark = !this.state.dark; this.setState({ dark }); this.applyTheme(dark); this.toast(dark ? 'Dark mode' : 'Light mode', 'check'); };
+  onSearch = e => this.setState({ search: e.target.value, page: 0 });
+  toggleFilter = key => () => this.setState(s => ({ filters: { ...s.filters, [key]: !s.filters[key] }, page: 0 }));
+  toggleDensity = () => this.setState(s => ({ density: s.density === 'comfortable' ? 'compact' : 'comfortable', page: 0 }));
+  sortBy = key => () => this.setState(s => ({ sort: { key, dir: s.sort.key === key && s.sort.dir === 'asc' ? 'desc' : 'asc' }, page: 0 }));
+  openDetail = url => () => this.setState({ detailUrl: url });
+  closeDetail = () => this.setState({ detailUrl: null });
+  stop = e => { e.stopPropagation(); };
+  toggleCheck = url => e => { e.stopPropagation(); this.setState(s => { const c = { ...s.checked }; if (c[url]) delete c[url]; else c[url] = true; return { checked: c }; }); };
+  clearChecked = () => this.setState({ checked: {} });
+  copyUrl = url => e => { e.stopPropagation(); if (navigator.clipboard) navigator.clipboard.writeText(url); this.toast('URL copied', 'copy'); };
+
+  async runNow() {
+    if (this.state.running || !this.api) return;
+    this.setState({ running: true });
+    const { run } = await this.api.runScrapeNow();
+    const [products, runs, schedule] = await Promise.all([this.api.getProducts(), this.api.getRuns(), this.api.getSchedule()]);
+    this.setState({ products, runs, schedule, running: false });
+    this.toast(`Scrape complete · ${run.ok} ok, ${run.failed} failed`, 'check');
+  }
+  async rescanUrls(urls) {
+    if (!urls.length || !this.api) return;
+    await this.api.rescan(urls);
+    const products = await this.api.getProducts();
+    this.setState({ products });
+    this.toast(`Re-scanned ${urls.length} URL${urls.length > 1 ? 's' : ''}`, 'refresh');
+  }
+  async removeUrls(urls) {
+    if (!urls.length || !this.api) return;
+    await this.api.removeUrls(urls);
+    const products = await this.api.getProducts();
+    this.setState(s => {
+      const c = { ...s.checked }; urls.forEach(u => delete c[u]);
+      const detailUrl = urls.includes(s.detailUrl) ? null : s.detailUrl;
+      return { products, checked: c, detailUrl };
+    });
+    this.toast(`Removed ${urls.length} URL${urls.length > 1 ? 's' : ''}`, 'trash');
+  }
+  rescanChecked = () => this.rescanUrls(Object.keys(this.state.checked));
+  removeChecked = () => this.removeUrls(Object.keys(this.state.checked));
+
+  onUrlInput = e => this.setState({ urlText: e.target.value });
+  pickFile = () => this.fileInput && this.fileInput.click();
+  onFile = e => { const f = e.target.files[0]; if (f) this.readFile(f); };
+  readFile(f) {
+    const r = new FileReader();
+    r.onload = () => {
+      const text = String(r.result || '');
+      const urls = text.split(/[\n,;]+/).map(s => s.trim()).filter(Boolean);
+      this.setState(s => ({ urlText: (s.urlText ? s.urlText + '\n' : '') + urls.join('\n') }));
+      this.toast(`Loaded ${urls.length} lines from ${f.name}`, 'upload');
+    };
+    r.readAsText(f);
+  }
+  parseUrlLines() {
+    const existing = new Set(this.state.products.map(p => p.url));
+    const seen = new Set();
+    const lines = this.state.urlText.split(/\n/).map(l => l.trim()).filter(l => l.length);
+    return lines.map(raw => {
+      const valid = /^https?:\/\/[^\s]+\.[^\s]+/.test(raw);
+      let status = 'valid';
+      if (!valid) status = 'invalid';
+      else if (existing.has(raw) || seen.has(raw)) status = 'dup';
+      if (valid) seen.add(raw);
+      return { raw, status };
+    });
+  }
+  async addUrls() {
+    const parsed = this.parseUrlLines();
+    const toAdd = parsed.filter(p => p.status === 'valid').map(p => p.raw);
+    if (!toAdd.length) { this.toast('No new valid URLs to add', 'alert'); return; }
+    const { added } = await this.api.addUrls(toAdd);
+    const products = await this.api.getProducts();
+    this.setState({ products, urlText: '', view: 'products' });
+    this.toast(`Added ${added} URL${added > 1 ? 's' : ''}`, 'check');
+  }
+  setMode = mode => async () => {
+    this.setState(s => ({ schedule: { ...s.schedule, mode } }));
+    this.toast(mode === 'ai_digest' ? 'AI digest enabled' : 'Free mode (scrape only)', 'check');
+  };
+
+  // ── helpers ──
+  gbp(n) { return n == null ? '—' : '£' + Number(n).toLocaleString('en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+  host(url) { try { return new URL(url).hostname; } catch (e) { return url; } }
+  short(url) { try { const u = new URL(url); return u.hostname + u.pathname; } catch (e) { return url; } }
+  rel(t) {
+    if (!t) return 'never';
+    const d = this.state.now - new Date(t).getTime();
+    if (d < 0) return 'now';
+    const m = Math.floor(d / 60000);
+    if (m < 1) return 'just now';
+    if (m < 60) return m + 'm ago';
+    const h = Math.floor(m / 60); if (h < 24) return h + 'h ago';
+    return Math.floor(h / 24) + 'd ago';
+  }
+  countdown() {
+    if (!this.state.schedule) return '--:--:--';
+    let d = new Date(this.state.schedule.nextRun).getTime() - this.state.now;
+    if (d < 0) d = 0;
+    const h = Math.floor(d / 3600000), m = Math.floor(d % 3600000 / 60000), s = Math.floor(d % 60000 / 1000);
+    return [h, m, s].map(x => String(x).padStart(2, '0')).join(':');
+  }
+  prodMap() { const m = {}; this.state.products.forEach(p => m[p.url] = p); return m; }
+  lastPrices(p) { return (p.history || []).map(h => h.price); }
+  trend(p) {
+    const v = this.lastPrices(p).filter(x => x != null);
+    if (v.length < 2) return 0;
+    const a = v[v.length - 2], b = v[v.length - 1];
+    return b > a ? 1 : b < a ? -1 : 0;
+  }
+
+  navStyle(active) {
+    return `display:flex;align-items:center;gap:11px;width:100%;padding:9px 11px;border:none;border-radius:10px;cursor:pointer;font-family:inherit;font-size:13.5px;font-weight:600;text-align:left;transition:background .12s;background:${active ? 'var(--accent-soft)' : 'transparent'};color:${active ? 'var(--accent)' : 'var(--dim)'}`;
+  }
+
+  renderVals() {
+    const S = this.state;
+    const c = S.count;
+    const pm = this.prodMap();
+    const collapsed = S.narrow;
+
+    // ── nav ──
+    const loudCount = S.errors.filter(e => e.loud).length;
+    const change24 = S.changes.filter(x => this.state.now - new Date(x.t).getTime() < DAY).length;
+    const navDefs = [
+      ['overview', 'Overview', 'activity', null],
+      ['products', 'Products', 'package', S.products.length || null],
+      ['urls', 'URL Manager', 'link', null],
+      ['changes', 'Changes', 'bell', change24 || null],
+      ['errors', 'Errors', 'alert', loudCount || null],
+      ['schedule', 'Schedule', 'clock', null],
+      ['digest', 'AI Digest', 'sparkles', null],
+    ];
+    const nav = navDefs.map(([key, label, icon, badge]) => {
+      const active = S.view === key;
+      const loud = key === 'errors' && loudCount;
+      return {
+        key, label, badge, onClick: this.go(key),
+        icon: ic(icon, 17, active ? 2 : 1.8),
+        iconColor: active ? 'var(--accent)' : 'var(--mute)',
+        style: this.navStyle(active),
+        labelStyle: `flex:1;white-space:nowrap;overflow:hidden;${collapsed ? 'display:none' : ''}`,
+        badgeStyle: `font-size:11px;font-weight:700;padding:1px 7px;border-radius:20px;${collapsed ? 'display:none;' : ''}background:${loud ? 'var(--red)' : (active ? 'var(--accent)' : 'var(--surface-2)')};color:${loud ? '#fff' : (active ? 'var(--accent-fg)' : 'var(--dim)')}`,
+      };
+    });
+
+    // ── health ──
+    const broken = S.errors.some(e => e.loud);
+    const degraded = S.errors.length > 2;
+    const health = broken
+      ? { label: 'Broken', color: 'var(--red)', soft: 'var(--redbg)', note: 'A previously-working URL lost all selectors. Self-heal is retrying.' }
+      : degraded
+      ? { label: 'Degraded', color: 'var(--amber)', soft: 'var(--amberbg)', note: 'Some URLs are failing but the scraper is running.' }
+      : { label: 'Healthy', color: 'var(--green)', soft: 'var(--greenbg)', note: 'All monitors are reading cleanly.' };
+
+    // ── KPI cards ──
+    const inStock = S.products.filter(p => p.in_stock === true).length;
+    const outStock = S.products.filter(p => p.in_stock === false).length;
+    const prices = S.products.map(p => p.price).filter(x => x != null);
+    const avgNow = prices.length ? prices.reduce((a, b) => a + b, 0) / prices.length : 0;
+    const priceChg24 = S.changes.filter(x => (x.type === 'PRICE_DROP' || x.type === 'PRICE_RISE') && this.state.now - new Date(x.t).getTime() < DAY).length;
+    const fails24 = S.errors.filter(e => this.state.now - new Date(e.t).getTime() < DAY).length;
+    const heals24 = S.changes.filter(x => x.type === 'SELF_HEALED' && this.state.now - new Date(x.t).getTime() < DAY).length;
+
+    const days = 14;
+    const inStockSeries = Array.from({ length: days }, (_, d) => S.products.reduce((n, p) => n + ((p.history[d] && p.history[d].in_stock) ? 1 : 0), 0));
+    const avgSeries = Array.from({ length: days }, (_, d) => {
+      const vals = S.products.map(p => p.history[d] && p.history[d].price).filter(x => x != null);
+      return vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : null;
+    });
+    const chgSeries = Array.from({ length: days }, (_, d) => {
+      const dayStart = this.state.now - (days - 1 - d) * DAY;
+      return S.changes.filter(x => { const t = new Date(x.t).getTime(); return t >= dayStart - DAY / 2 && t < dayStart + DAY / 2; }).length;
+    });
+    const failSeries = S.runs.map(r => r.failed);
+    const healSeries = Array.from({ length: days }, (_, d) => Math.max(0, (d === days - 1 ? heals24 : (d % 6 === 0 ? 1 : 0))));
+    const urlSeries = Array.from({ length: days }, (_, d) => Math.max(1, S.products.length - Math.round((days - 1 - d) * 0.4)));
+
+    const ci = n => Math.round(n * c);
+    const kpiRaw = [
+      { label: 'URLs tracked', value: String(ci(S.products.length)), sub: 'Active monitors', icon: 'link', color: 'var(--accent)', bg: 'var(--accent-soft)', series: urlSeries, delta: { text: '+3', dir: 'up', good: true } },
+      { label: 'In stock', value: String(ci(inStock)), sub: `${outStock} out of stock`, icon: 'package', color: 'var(--green)', bg: 'var(--greenbg)', series: inStockSeries, delta: { text: '+2', dir: 'up', good: true } },
+      { label: 'Price changes (24h)', value: String(ci(priceChg24)), sub: 'Drops & rises', icon: 'bell', color: 'var(--blue)', bg: 'var(--bluebg)', series: chgSeries, delta: { text: 'vs 5 prev', dir: 'flat', good: true } },
+      { label: 'Avg price', value: this.gbp(avgNow * c), sub: 'Across watchlist', icon: 'activity', color: 'var(--accent)', bg: 'var(--accent-soft)', series: avgSeries, delta: { text: '-1.2%', dir: 'down', good: true } },
+      { label: 'Failures (24h)', value: String(ci(fails24)), sub: broken ? '1 critical' : 'Transient only', icon: 'alert', color: 'var(--red)', bg: 'var(--redbg)', series: failSeries, delta: { text: '+1', dir: 'up', good: false } },
+      { label: 'Self-heals (24h)', value: String(ci(heals24)), sub: 'Selectors recovered', icon: 'wrench', color: 'var(--purple)', bg: 'var(--purplebg)', series: healSeries, delta: { text: 'auto', dir: 'flat', good: true } },
+    ];
+    const kpis = kpiRaw.map(k => {
+      const sp = spark(k.series, 120, 32);
+      const good = k.delta.good;
+      const dcol = k.delta.dir === 'flat' ? 'var(--mute)' : (good ? 'var(--green)' : 'var(--red)');
+      return {
+        ...k, spark: sp, icon: ic(k.icon, 15, 2),
+        iconColor: k.color, iconBg: k.bg,
+        sparkFill: 'color-mix(in oklab,' + k.color + ' 14%, transparent)',
+        deltaIcon: k.delta.dir === 'up' ? '↑ ' : k.delta.dir === 'down' ? '↓ ' : '',
+        deltaText: k.delta.text,
+        deltaStyle: `font-size:12px;font-weight:700;color:${dcol}`,
+      };
+    });
+
+    // ── run bars ──
+    const maxChg = Math.max(1, ...S.runs.map(r => r.changes));
+    const runBars = S.runs.map(r => {
+      const dd = new Date(r.t);
+      const h = (r.changes / maxChg) * 100;
+      const fh = r.failed ? (r.failed / maxChg) * 100 : 0;
+      return {
+        title: `${dd.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })}: ${r.changes} changes, ${r.failed} failed`,
+        day: String(dd.getDate()),
+        barStyle: `width:100%;background:var(--accent);border-radius:4px;height:${(h * c).toFixed(1)}%;min-height:3px;transition:height .5s cubic-bezier(.2,.8,.2,1)`,
+        failStyle: fh ? `width:100%;background:var(--red);border-radius:4px 4px 0 0;height:${(fh * c).toFixed(1)}%;min-height:2px` : 'display:none',
+      };
+    });
+
+    // ── change styling helper ──
+    const CH = {
+      PRICE_DROP: { color: 'var(--green)', bg: 'var(--greenbg)', icon: 'down', label: 'Price drop' },
+      PRICE_RISE: { color: 'var(--amber)', bg: 'var(--amberbg)', icon: 'up', label: 'Price rise' },
+      BACK_IN_STOCK: { color: 'var(--blue)', bg: 'var(--bluebg)', icon: 'refresh', label: 'Back in stock' },
+      SELF_HEALED: { color: 'var(--purple)', bg: 'var(--purplebg)', icon: 'wrench', label: 'Self-healed' },
+    };
+    const chDetail = x => {
+      if (x.type === 'PRICE_DROP' || x.type === 'PRICE_RISE') {
+        const pct = x.from ? ((x.to - x.from) / x.from * 100).toFixed(1) : '0';
+        return `${this.gbp(x.from)} → ${this.gbp(x.to)} (${pct > 0 ? '+' : ''}${pct}%)`;
+      }
+      if (x.type === 'BACK_IN_STOCK') return 'Now available';
+      return 'Selector recovered';
+    };
+    const decorate = x => {
+      const d = CH[x.type];
+      const p = pm[x.url];
+      return {
+        ...d, icon: ic(d.icon, 16, 2),
+        product: p ? p.name : this.short(x.url),
+        host: this.host(x.url), url: x.url,
+        detail: chDetail(x), rel: this.rel(x.t),
+      };
+    };
+    const recentChanges = S.changes.slice(0, 5).map(decorate);
+
+    // ── selector health ──
+    const selectorHealth = [
+      { field: 'name', selector: 'h1.product-title', status: 'OK' },
+      { field: 'price', selector: broken ? '.price-current (broken)' : 'span[data-price]', status: broken ? 'Degraded' : 'OK' },
+      { field: 'stock', selector: '.availability .in-stock', status: 'OK' },
+    ].map(s => {
+      const map = { OK: ['var(--green)', 'var(--greenbg)'], Degraded: ['var(--amber)', 'var(--amberbg)'], Broken: ['var(--red)', 'var(--redbg)'] };
+      const [col, bg] = map[s.status];
+      return { ...s, badgeStyle: `font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;background:${bg};color:${col}` };
+    });
+    const selfHeals = S.changes.filter(x => x.type === 'SELF_HEALED').slice(0, 3).map(x => ({
+      product: pm[x.url] ? pm[x.url].name : this.short(x.url),
+      fallback: '.price-now → [data-price]', rel: this.rel(x.t),
+    }));
+
+    // ── digest ──
+    const topDigestLines = (S.digests[0] ? S.digests[0].lines : []).map((text, i) => ({ n: (i + 1) + '.', text }));
+    const digestCards = S.digests.map(d => ({
+      date: d.date,
+      pretty: new Date(d.date).toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' }),
+      lines: d.lines.map((text, i) => ({ n: (i + 1) + '.', text })),
+    }));
+
+    // ── products table ──
+    const q = S.search.trim().toLowerCase();
+    const changedUrls = new Set(S.changes.filter(x => this.state.now - new Date(x.t).getTime() < 2 * DAY).map(x => x.url));
+    const errorUrls = new Set(S.errors.map(e => e.url));
+    let rows = S.products.filter(p => {
+      if (q && !(p.name.toLowerCase().includes(q) || p.url.toLowerCase().includes(q))) return false;
+      if (S.filters.inStock && p.in_stock !== true) return false;
+      if (S.filters.changed && !changedUrls.has(p.url)) return false;
+      if (S.filters.error && !errorUrls.has(p.url)) return false;
+      return true;
+    });
+    const dir = S.sort.dir === 'asc' ? 1 : -1;
+    rows = [...rows].sort((a, b) => {
+      const k = S.sort.key;
+      let av, bv;
+      if (k === 'name') { av = a.name.toLowerCase(); bv = b.name.toLowerCase(); }
+      else if (k === 'price') { av = a.price == null ? -1 : a.price; bv = b.price == null ? -1 : b.price; }
+      else if (k === 'stock') { av = a.in_stock ? 1 : 0; bv = b.in_stock ? 1 : 0; }
+      else { av = a.lastChecked ? new Date(a.lastChecked).getTime() : 0; bv = b.lastChecked ? new Date(b.lastChecked).getTime() : 0; }
+      return av < bv ? -dir : av > bv ? dir : 0;
+    });
+    const pageSize = S.density === 'compact' ? 20 : 12;
+    const totalPages = Math.max(1, Math.ceil(rows.length / pageSize));
+    const page = Math.min(S.page, totalPages - 1);
+    const pageRows = rows.slice(page * pageSize, page * pageSize + pageSize);
+    const pad = S.density === 'compact' ? 'padding:7px 12px' : 'padding:12px 12px';
+    const stockPill = (v) => {
+      const base = 'display:inline-block;white-space:nowrap;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;';
+      if (v == null) return base + 'background:var(--surface-2);color:var(--mute)';
+      return base + (v ? 'background:var(--greenbg);color:var(--green)' : 'background:var(--redbg);color:var(--red)');
+    };
+    const rowsOut = pageRows.map(p => {
+      const tr = this.trend(p);
+      const chk = !!S.checked[p.url];
+      return {
+        name: p.name, urlShort: this.short(p.url),
+        priceText: this.gbp(p.price),
+        priceColor: p.price == null ? 'color:var(--mute)' : '',
+        stockLabel: p.in_stock == null ? 'No read' : p.in_stock ? 'In stock' : 'Out of stock',
+        stockStyle: stockPill(p.in_stock),
+        spark: spark(this.lastPrices(p).filter(x => x != null), 88, 24),
+        sparkColor: tr < 0 ? 'var(--green)' : tr > 0 ? 'var(--amber)' : 'var(--mute)',
+        checkedRel: this.rel(p.lastChecked),
+        trendIcon: tr === 0 ? ic('dot', 8, 0) : ic(tr > 0 ? 'up' : 'down', 15, 2.2),
+        trendColor: tr > 0 ? 'var(--amber)' : tr < 0 ? 'var(--green)' : 'var(--mute)',
+        rowStyle: `border-top:1px solid var(--border);cursor:pointer;background:${chk ? 'var(--accent-soft)' : 'transparent'}`,
+        cellPad: pad, cellPadR: pad + ';text-align:right',
+        checkStyle: this.checkBox(chk), checkMark: chk ? ic('check', 12, 3) : '',
+        onOpen: this.openDetail(p.url), onCheck: this.toggleCheck(p.url),
+        onCopy: this.copyUrl(p.url), stop: this.stop,
+      };
+    });
+    const allChecked = pageRows.length && pageRows.every(p => S.checked[p.url]);
+    const colDefs = [['name', 'Name'], ['url', 'URL'], ['price', 'Price'], ['stock', 'Stock'], ['spark', '7-day'], ['lastChecked', 'Last checked'], ['trend', '']];
+    const sortable = { name: 1, price: 1, stock: 1, lastChecked: 1 };
+    const columns = colDefs.map(([key, label]) => {
+      const s = sortable[key];
+      const isRight = key === 'price' || key === 'lastChecked';
+      const active = S.sort.key === key;
+      return {
+        label, onSort: s ? this.sortBy(key) : (e => {}),
+        sortIcon: active ? ic(S.sort.dir === 'asc' ? 'chevronUp' : 'chevron', 13, 2.2) : '',
+        style: `${pad};text-align:${isRight ? 'right' : 'left'};font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);font-weight:700;user-select:none;${s ? 'cursor:pointer' : ''};white-space:nowrap`,
+      };
+    });
+
+    // ── URL manager ──
+    const parsed = this.parseUrlLines();
+    const validCount = parsed.filter(p => p.status === 'valid').length;
+    const invalidCount = parsed.filter(p => p.status === 'invalid').length;
+    const dupCount = parsed.filter(p => p.status === 'dup').length;
+    const lineMap = { valid: ['var(--green)', 'valid', 'var(--dim)'], invalid: ['var(--red)', 'invalid', 'var(--red)'], dup: ['var(--mute)', 'duplicate', 'var(--mute)'] };
+    const parsedLines = parsed.slice(0, 120).map(p => {
+      const [color, tag, textColor] = lineMap[p.status];
+      return { raw: p.raw, color, tag, textColor, icon: ic(p.status === 'valid' ? 'check' : p.status === 'dup' ? 'refresh' : 'x', 13, 2.4) };
+    });
+    const watchlist = S.products.map(p => ({ name: p.name, host: this.host(p.url), onRemove: (e) => { e.stopPropagation(); this.removeUrls([p.url]); } }));
+
+    // ── changes view ──
+    const typeFilter = S.changeType || 'all';
+    const cfDefs = [['all', 'All'], ['PRICE_DROP', 'Price drops'], ['PRICE_RISE', 'Price rises'], ['BACK_IN_STOCK', 'Restocks'], ['SELF_HEALED', 'Self-heals']];
+    const changeFilters = cfDefs.map(([key, label]) => {
+      const active = typeFilter === key;
+      return { label, onClick: () => this.setState({ changeType: key }), style: `height:34px;padding:0 14px;border-radius:9px;border:1px solid ${active ? 'var(--accent)' : 'var(--border)'};background:${active ? 'var(--accent-soft)' : 'var(--surface)'};color:${active ? 'var(--accent)' : 'var(--dim)'};font-weight:600;font-size:12.5px;cursor:pointer;font-family:inherit` };
+    });
+    const filteredChanges = S.changes.filter(x => typeFilter === 'all' || x.type === typeFilter);
+    const groupsMap = {};
+    filteredChanges.forEach(x => {
+      const key = new Date(x.t).toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' });
+      (groupsMap[key] = groupsMap[key] || []).push(decorate(x));
+    });
+    const changeGroups = Object.entries(groupsMap).map(([day, items]) => ({ day, items }));
+
+    // ── errors ──
+    const decorateErr = e => ({ ...e, rel: this.rel(e.t), onGoto: () => this.setState({ view: 'products', search: this.short(e.url), page: 0, changeType: undefined }) });
+    const loudErrors = S.errors.filter(e => e.loud).map(decorateErr);
+    const mutedErrors = S.errors.filter(e => !e.loud).map(decorateErr);
+
+    // ── schedule ──
+    const sch = S.schedule || {};
+    const runHistory = [...S.runs].reverse().map(r => ({
+      when: new Date(r.t).toLocaleString('en-GB', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }),
+      ok: r.ok, failed: r.failed, changes: r.changes,
+      dur: Math.round(r.durationMs / 1000) + 's',
+      dot: r.failed > 2 ? 'var(--red)' : r.failed ? 'var(--amber)' : 'var(--green)',
+      failColor: r.failed ? 'var(--red)' : 'var(--mute)',
+    }));
+    const modeBtn = on => `padding:14px;border-radius:12px;text-align:left;cursor:pointer;font-family:inherit;border:1.5px solid ${on ? 'var(--accent)' : 'var(--border)'};background:${on ? 'var(--accent-soft)' : 'var(--surface-2)'};color:var(--text)`;
+
+    // ── detail slide-over ──
+    let detail = null;
+    if (S.detailUrl && pm[S.detailUrl]) {
+      const p = pm[S.detailUrl];
+      const hist = p.history || [];
+      const pv = hist.map(h => h.price).filter(x => x != null);
+      const mn = pv.length ? Math.min(...pv) : null, mx = pv.length ? Math.max(...pv) : null;
+      const evs = [...S.changes.filter(x => x.url === p.url), ...S.errors.filter(e => e.url === p.url).map(e => ({ t: e.t, type: e.loud ? 'ERR_LOUD' : 'ERR', reason: e.reason }))]
+        .sort((a, b) => new Date(b.t) - new Date(a.t)).slice(0, 6);
+      const EVI = { PRICE_DROP: ['down', 'var(--green)', 'Price dropped'], PRICE_RISE: ['up', 'var(--amber)', 'Price rose'], BACK_IN_STOCK: ['refresh', 'var(--blue)', 'Back in stock'], SELF_HEALED: ['wrench', 'var(--purple)', 'Selector self-healed'], ERR: ['alert', 'var(--amber)', 'Scrape failed'], ERR_LOUD: ['alert', 'var(--red)', 'All selectors failed'] };
+      detail = {
+        name: p.name, url: p.url, host: this.host(p.url),
+        priceText: this.gbp(p.price),
+        stockLabel: p.in_stock == null ? 'No read' : p.in_stock ? 'In stock' : 'Out of stock',
+        stockStyle: stockPill(p.in_stock),
+        range: mn != null ? `${this.gbp(mn)}–${this.gbp(mx)}` : '—',
+        chart: spark(pv, 440, 130, 6),
+        stockTimeline: hist.map(h => ({ color: h.in_stock ? 'var(--green)' : 'var(--red)', title: new Date(h.t).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }) + ': ' + (h.in_stock ? 'in stock' : 'out') })),
+        rawHistory: [...hist].reverse().slice(0, 8).map(h => ({
+          t: new Date(h.t).toLocaleString('en-GB', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' }),
+          price: this.gbp(h.price),
+          stock: h.in_stock ? 'in stock' : 'out',
+          stockColor: h.in_stock ? 'var(--green)' : 'var(--red)',
+        })),
+        hasEvents: evs.length > 0,
+        events: evs.map(e => { const d = EVI[e.type] || ['dot', 'var(--mute)', 'Event']; return { icon: ic(d[0], 15, 2), color: d[1], label: e.reason || d[2], rel: this.rel(e.t) }; }),
+        onRescan: () => this.rescanUrls([p.url]),
+        onRemove: () => this.removeUrls([p.url]),
+      };
+    }
+
+    const detailOpen = !!detail;
+    const sideW = S.mobile ? '100%' : '480px';
+
+    // toasts
+    const TI = { check: ['check', 'var(--green)', 'var(--greenbg)'], copy: ['copy', 'var(--accent)', 'var(--accent-soft)'], refresh: ['refresh', 'var(--blue)', 'var(--bluebg)'], trash: ['trash', 'var(--red)', 'var(--redbg)'], upload: ['upload', 'var(--accent)', 'var(--accent-soft)'], alert: ['alert', 'var(--amber)', 'var(--amberbg)'] };
+    const toasts = S.toasts.map(t => { const d = TI[t.kind] || TI.check; return { msg: t.msg, icon: ic(d[0], 14, 2.2), color: d[1], bg: d[2] }; });
+
+    const titles = { overview: ['Overview', 'Live status across every monitored URL'], products: ['Products', `${S.products.length} URLs · click a row for full history`], urls: ['URL Manager', 'Bulk-add and curate your watchlist'], changes: ['Changes', 'Every price & stock event, newest first'], errors: ['Errors', 'Failures and critical selector breakages'], schedule: ['Schedule & Automation', 'Cron, run mode, and live logs'], digest: ['AI Digest', 'Daily plain-English summaries'] };
+    const [viewTitle, viewSub] = titles[S.view] || titles.overview;
+
+    return {
+      setRoot: this.setRoot, setScroll: this.setScroll, setSearch: this.setSearch, setLogEl: this.setLogEl, setDrop: this.setDrop, setFileInput: this.setFileInput,
+      sidebarStyle: `width:${collapsed ? '64px' : '240px'};flex:0 0 auto;background:var(--panel);border-right:1px solid var(--border);padding:16px 12px;display:flex;flex-direction:column;transition:width .2s`,
+      brandStyle: collapsed ? 'display:none' : '',
+      nav, health,
+      healthMiniStyle: `background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:12px;${collapsed ? 'display:none' : ''}`,
+      healthPillStyle: `display:flex;align-items:center;gap:8px;padding:7px 13px;border-radius:20px;background:${health.soft};border:1px solid color-mix(in oklab,${health.color} 40%,transparent)`,
+
+      viewTitle, viewSub,
+      lastRunRel: sch.lastRun ? this.rel(sch.lastRun) : '—',
+      countdown: this.countdown(),
+      running: S.running,
+      runIcon: S.running ? ic('refresh', 15, 2.2) : ic('play', 14, 2.4),
+      runLabel: S.running ? 'Running…' : 'Run scrape now',
+      runBtnStyle: `height:38px;padding:0 15px;border-radius:10px;border:none;background:var(--accent);color:var(--accent-fg);font-weight:700;font-size:13px;cursor:${S.running ? 'wait' : 'pointer'};display:flex;align-items:center;gap:8px;font-family:inherit;opacity:${S.running ? .8 : 1};box-shadow:0 4px 14px -6px var(--accent)`,
+      toggleTheme: this.toggleTheme,
+      themeIcon: S.dark ? ic('sun', 17) : ic('moon', 17),
+      runNow: () => this.runNow(),
+
+      // view flags
+      isOverview: S.view === 'overview', isProducts: S.view === 'products', isUrls: S.view === 'urls',
+      isChanges: S.view === 'changes', isErrors: S.view === 'errors', isSchedule: S.view === 'schedule', isDigest: S.view === 'digest',
+
+      // overview
+      kpiCols: S.mobile ? 'repeat(2,1fr)' : S.narrow ? 'repeat(3,1fr)' : 'repeat(6,1fr)',
+      ovCols: S.narrow ? '1fr' : '1.5fr 1fr',
+      kpis, runBars, recentChanges,
+      gotoChanges: this.go('changes'), changeArrow: ic('arrow', 13, 2.2),
+      selectorHealth, selfHeals, topDigestLines,
+      wrenchIcon: ic('wrench', 17), wrenchIconSm: ic('wrench', 13, 2), sparkIcon: ic('sparkles', 16, 1.8),
+      digestCardStyle: 'background:linear-gradient(160deg,var(--accent-soft),var(--surface));border:1px solid color-mix(in oklab,var(--accent) 30%,var(--border));border-radius:16px;padding:18px 20px;box-shadow:var(--shadow)',
+
+      // products
+      search: S.search, onSearch: this.onSearch, searchIcon: ic('search', 16),
+      filterChips: [
+        { key: 'inStock', label: 'In stock' }, { key: 'changed', label: 'Changed' }, { key: 'error', label: 'Has error' }
+      ].map(f => { const on = S.filters[f.key]; const cnt = f.key === 'error' ? errorUrls.size : null; return { label: f.label, count: cnt, onClick: this.toggleFilter(f.key), style: `height:40px;padding:0 14px;border-radius:11px;border:1px solid ${on ? 'var(--accent)' : 'var(--border)'};background:${on ? 'var(--accent-soft)' : 'var(--surface)'};color:${on ? 'var(--accent)' : 'var(--dim)'};font-weight:600;font-size:12.5px;cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:5px;white-space:nowrap` }; }),
+      toggleDensity: this.toggleDensity, densityIcon: ic('rows', 15, 1.8), densityLabel: S.density === 'compact' ? 'Compact' : 'Comfortable',
+      hasChecked: Object.keys(S.checked).length > 0, checkedCount: Object.keys(S.checked).length,
+      rescanChecked: this.rescanChecked, removeChecked: this.removeChecked, clearChecked: this.clearChecked,
+      refreshIconSm: ic('refresh', 14, 2), trashIconSm: ic('trash', 14, 2), copyIconSm: ic('copy', 13, 1.9),
+      columns, pageRows: rowsOut,
+      toggleAll: () => this.setState(s => { const c2 = { ...s.checked }; if (allChecked) pageRows.forEach(p => delete c2[p.url]); else pageRows.forEach(p => c2[p.url] = true); return { checked: c2 }; }),
+      allCheckStyle: this.checkBox(allChecked), allCheckMark: allChecked ? ic('check', 12, 3) : '',
+      noResults: !S.loading && rows.length === 0,
+      pageInfo: rows.length ? `${page * pageSize + 1}–${Math.min(rows.length, page * pageSize + pageSize)} of ${rows.length}` : '0 results',
+      pageLabel: `${page + 1} / ${totalPages}`,
+      prevPage: () => this.setState(s => ({ page: Math.max(0, s.page - 1) })),
+      nextPage: () => this.setState({ page: Math.min(totalPages - 1, page + 1) }),
+      prevStyle: this.pageBtn(page === 0), nextStyle: this.pageBtn(page >= totalPages - 1),
+
+      // urls
+      urlCols: S.narrow ? '1fr' : '1.4fr 1fr',
+      urlText: S.urlText, onUrlInput: this.onUrlInput,
+      validCount, invalidCount, dupCount,
+      addCount: validCount, addPlural: validCount === 1 ? '' : 's',
+      addUrls: () => this.addUrls(), plusIcon: ic('plus', 14, 2.4),
+      addBtnStyle: `height:40px;padding:0 18px;border-radius:11px;border:none;background:${validCount ? 'var(--accent)' : 'var(--surface-2)'};color:${validCount ? 'var(--accent-fg)' : 'var(--mute)'};font-weight:700;font-size:13px;cursor:${validCount ? 'pointer' : 'not-allowed'};display:flex;align-items:center;gap:8px;font-family:inherit`,
+      dropStyle: `background:var(--surface);border:1.5px dashed ${S.dragOver ? 'var(--accent)' : 'var(--border-strong)'};border-radius:16px;padding:26px;text-align:center;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:8px;transition:border-color .15s;${S.dragOver ? 'background:var(--accent-soft)' : ''}`,
+      dropLabel: S.dragOver ? 'Drop to import' : 'Import from CSV / TXT',
+      uploadIcon: ic('upload', 22, 1.8),
+      pickFile: this.pickFile, onFile: this.onFile,
+      parsedLines, hasLines: parsed.length > 0, moreLines: parsed.length > 120 ? parsed.length - 120 : null,
+      watchlist, watchCount: S.products.length,
+
+      // changes
+      changeFilters, changeGroups, noChanges: !S.loading && filteredChanges.length === 0,
+
+      // errors
+      loudErrors, mutedErrors, errorCount: S.errors.length,
+      alertIcon: ic('alert', 20, 2), arrowIcon: ic('arrow', 15, 2.2),
+
+      // schedule
+      schedCols: S.narrow ? '1fr' : '1.2fr 1fr',
+      schedHuman: sch.human || '—', schedCron: sch.cron || '—',
+      setFreeMode: this.setMode('free'), setAiMode: this.setMode('ai_digest'),
+      freeModeStyle: modeBtn(sch.mode === 'free'), aiModeStyle: modeBtn(sch.mode === 'ai_digest'),
+      aiSparkIcon: ic('sparkles', 13, 1.8), aiSparkIconInline: ic('sparkles', 13, 1.8),
+      runHistory, logLines: S.logLines,
+
+      // digest
+      digestCards,
+
+      // detail
+      detail, closeDetail: this.closeDetail,
+      externalIcon: ic('external', 12, 2), closeIcon: ic('x', 16, 2.2),
+      scrimStyle: `position:fixed;inset:0;background:rgba(0,0,0,${detailOpen ? .45 : 0});backdrop-filter:blur(${detailOpen ? '2px' : '0'});z-index:100;transition:background .25s;pointer-events:${detailOpen ? 'auto' : 'none'}`,
+      detailStyle: `position:fixed;top:0;right:0;bottom:0;width:${sideW};max-width:100vw;background:var(--panel);border-left:1px solid var(--border);box-shadow:-20px 0 50px -20px rgba(0,0,0,.6);z-index:101;transform:translateX(${detailOpen ? '0' : '100%'});transition:transform .32s cubic-bezier(.3,.9,.3,1)`,
+
+      // toasts
+      toasts,
+    };
+  }
+
+  checkBox(on) {
+    return `width:18px;height:18px;border-radius:5px;border:1.5px solid ${on ? 'var(--accent)' : 'var(--border-strong)'};background:${on ? 'var(--accent)' : 'transparent'};color:var(--accent-fg);cursor:pointer;display:flex;align-items:center;justify-content:center;flex:0 0 auto`;
+  }
+  pageBtn(disabled) {
+    return `height:32px;padding:0 13px;border-radius:9px;border:1px solid var(--border);background:var(--surface);color:${disabled ? 'var(--mute)' : 'var(--dim)'};font-weight:600;font-size:12.5px;cursor:${disabled ? 'not-allowed' : 'pointer'};font-family:inherit;opacity:${disabled ? .5 : 1}`;
+  }
+}
+
+const SEED_LOG = [
+  '[cron] scheduler started — next fire 07:00',
+  'scrape run #4821 begin — 30 targets',
+  'GET sony.example.com/p/... 200 OK  £259.00  in_stock=true',
+  'GET dyson.example.com/p/... 200 OK  £449.00  in_stock=true  ↓ price drop',
+  'GET samsung.example.com/p/... selector .price-current MISSED',
+  'self-heal: trying fallback [data-price] … recovered ✓',
+  'run #4821 done — 29 ok, 1 failed, 3 changes in 41.2s',
+];
+const LOG_SAMPLES = [
+  'GET apple.example.com/p/... 200 OK  £189.00  in_stock=true',
+  'GET nintendo.example.com/p/... 200 OK  £289.99  in_stock=false',
+  'GET lego.example.com/p/... 200 OK  £34.99  ↓ price drop -8.3%',
+  'GET anker.example.com/p/... HTTP 404 — retry scheduled',
+  'self-heal: fallback selector recovered price field ✓',
+  'GET bose.example.com/p/... 200 OK  £229.95  restock detected',
+  'append changes.log — 1 event written',
+  'GET dji.example.com/p/... 200 OK  £649.00  in_stock=true',
+  'digest: composing daily summary via Claude…',
+  'warn: samsung.example.com slow response 8.4s',
+];
+
+</script>
+</body>
+</html>
