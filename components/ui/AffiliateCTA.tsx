@@ -3,6 +3,7 @@
 import { ArrowRight } from "lucide-react";
 import { getAffiliateUrl } from "@/lib/products";
 import { storeAffiliateVisit } from "@/lib/affiliate";
+import { initiateCheckout } from "@/lib/meta-pixel";
 
 type Variant = "primary" | "secondary" | "urgency";
 
@@ -32,6 +33,19 @@ export default function AffiliateCTA({
 
   const handleClick = () => {
     storeAffiliateVisit();
+    // Meta Pixel: track affiliate outbound as InitiateCheckout
+    initiateCheckout(product, product);
+    // Server-side mirror (CAPI) — survives ad blockers / Safari ITP
+    fetch("/api/capi-event", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        event_name: "InitiateCheckout",
+        event_source_url: window.location.href,
+        custom_data: { content_name: product, content_ids: [product], currency: "EUR" },
+      }),
+      keepalive: true,
+    }).catch(() => {});
     window.open(url, "_blank", "noopener noreferrer");
   };
 
