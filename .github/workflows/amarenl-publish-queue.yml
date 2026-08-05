@@ -1,8 +1,15 @@
-name: AmareNL — Onaylanan Taslağı Yayınla
+name: AmareNL — Yayın Kuyruğu (staggered, 2 günde bir)
 
+# Onaylanmış 15 PR'ı tek seferde değil, kuyruktan sırayla — her seferinde bir
+# tanesini — merge+build+deploy eder. content/publish-queue.json içindeki ilk
+# "pending" kaydı işler, "published" olarak işaretler, bir sonrakini bir
+# sonraki çalışmaya bırakır.
 on:
-  repository_dispatch:
-    types: [promote-draft]
+  schedule:
+    # 08:00 UTC ≈ 10:00 Amsterdam (zomertijd). Ayın tek günlerinde çalışır
+    # (1,3,5,...31) — pratikte ~2 günde bir. Kuyruk 15 madde × 2 gün ≈ 30 gün.
+    - cron: "0 8 */2 * *"
+  workflow_dispatch: {}
 
 permissions:
   contents: write
@@ -13,7 +20,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  merge-and-deploy:
+  publish-next:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -22,24 +29,47 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Find next queued PR
+        id: next
+        run: |
+          NEXT_PR=$(jq -r '[.[] | select(.status=="pending")][0].pr // empty' content/publish-queue.json)
+          NEXT_TITLE=$(jq -r '[.[] | select(.status=="pending")][0].title // empty' content/publish-queue.json)
+          REMAINING=$(jq '[.[] | select(.status=="pending")] | length' content/publish-queue.json)
+          if [ -z "$NEXT_PR" ]; then
+            echo "📭 Yayın kuyruğu boş — işlenecek PR yok."
+            echo "empty=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "empty=false" >> "$GITHUB_OUTPUT"
+            echo "pr=$NEXT_PR" >> "$GITHUB_OUTPUT"
+            echo "title=$NEXT_TITLE" >> "$GITHUB_OUTPUT"
+            echo "remaining_after=$((REMAINING - 1))" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Setup Node
+        if: steps.next.outputs.empty == 'false'
         uses: actions/setup-node@v4
         with:
           node-version: "22"
 
+      - name: Install dependencies
+        if: steps.next.outputs.empty == 'false'
+        run: npm ci
+
       - name: Sync PR branch with main (auto-resolve known conflicts)
+        if: steps.next.outputs.empty == 'false'
         id: sync
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR_NUMBER: ${{ github.event.client_payload.pr_number }}
+          PR_NUMBER: ${{ steps.next.outputs.pr }}
         run: |
-          # Draft branches can sit open for days while main keeps moving (new
+          # Draft branches sit open for days while main keeps moving (new
           # queue publishes + the Mon/Wed/Fri article cron both touch
           # data/extra-articles.json + public/sitemap.xml). Without this,
-          # `gh pr merge` fails with "merge conflicts" for any PR approved
-          # after main has moved past its base.
+          # `gh pr merge` fails with "merge conflicts" every single run once
+          # main has moved past the branch's base — this is what happened to
+          # PR #3 on the first run of this workflow (2026-08-03).
           BRANCH=$(gh pr view "$PR_NUMBER" --json headRefName -q .headRefName)
-          git config user.name "AmareNL Article Bot"
+          git config user.name "AmareNL Publish Queue Bot"
           git config user.email "actions@github.com"
           git fetch origin "$BRANCH"
           git checkout -B "$BRANCH" "origin/$BRANCH"
@@ -57,7 +87,7 @@ jobs:
             node scripts/resolve-article-conflict.mjs
             git checkout --theirs public/sitemap.xml
             git add data/extra-articles.json public/sitemap.xml
-            jq . data/extra-articles.json > /dev/null
+            jq . data/extra-articles.json > /dev/null   # fail loudly if invalid
             git commit -m "queue: sync ${BRANCH} met main (auto-resolved article conflict)"
           fi
 
@@ -65,10 +95,14 @@ jobs:
           git checkout main
 
       - name: Wait for PR to become mergeable
+        if: steps.next.outputs.empty == 'false'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR_NUMBER: ${{ github.event.client_payload.pr_number }}
+          PR_NUMBER: ${{ steps.next.outputs.pr }}
         run: |
+          # GitHub recomputes mergeable state async after a push — calling
+          # `gh pr merge` immediately after can hit "Pull Request is not
+          # mergeable" even though the conflict is already resolved.
           for i in $(seq 1 15); do
             STATE=$(gh pr view "$PR_NUMBER" --json mergeable -q .mergeable)
             echo "mergeable=$STATE (attempt $i)"
@@ -78,28 +112,29 @@ jobs:
           echo "::error::PR #$PR_NUMBER never became mergeable (last state: $STATE)"
           exit 1
 
-      - name: Merge approved PR
-        id: merge
+      - name: Merge queued PR
+        if: steps.next.outputs.empty == 'false'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR_NUMBER: ${{ github.event.client_payload.pr_number }}
+          PR_NUMBER: ${{ steps.next.outputs.pr }}
         run: |
           gh pr merge "$PR_NUMBER" --squash --delete-branch
           echo "Merged PR #$PR_NUMBER"
 
       - name: Pull merged main
+        if: steps.next.outputs.empty == 'false'
         run: git pull origin main
 
-      - name: Install dependencies
-        run: npm ci
-
       - name: Type-check
+        if: steps.next.outputs.empty == 'false'
         run: npx tsc --noEmit -p tsconfig.json
 
       - name: Build (production sanity check)
+        if: steps.next.outputs.empty == 'false'
         run: npm run build
 
       - name: Deploy to Vercel
+        if: steps.next.outputs.empty == 'false'
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
@@ -109,15 +144,34 @@ jobs:
           npx vercel build --prod --token="$VERCEL_TOKEN"
           npx vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN"
 
+      - name: Mark PR as published in queue
+        if: steps.next.outputs.empty == 'false'
+        env:
+          PR_NUMBER: ${{ steps.next.outputs.pr }}
+        run: |
+          NOW=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          jq --argjson pr "$PR_NUMBER" --arg date "$NOW" \
+            'map(if .pr == $pr then . + {status: "published", published_at: $date} else . end)' \
+            content/publish-queue.json > /tmp/queue.json
+          mv /tmp/queue.json content/publish-queue.json
+          git config user.name "AmareNL Publish Queue Bot"
+          git config user.email "actions@github.com"
+          git add content/publish-queue.json
+          git commit -m "queue: PR #$PR_NUMBER yayınlandı (staggered publish)"
+          git push origin HEAD:main
+
       - name: Notify Telegram (success)
-        if: success()
+        if: steps.next.outputs.empty == 'false'
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TELEGRAM_THREAD_ID: ${{ secrets.TELEGRAM_THREAD_ID }}
-          PR_NUMBER: ${{ github.event.client_payload.pr_number }}
+          PR_NUMBER: ${{ steps.next.outputs.pr }}
+          TITLE: ${{ steps.next.outputs.title }}
+          REMAINING: ${{ steps.next.outputs.remaining_after }}
         run: |
-          TEXT=$(printf '✅ PR #%s canlıya alındı — https://amarenl.com' "$PR_NUMBER")
+          TEXT=$(printf '✅ Kuyruktan yayınlandı — PR #%s\n\n%s\n\nhttps://amarenl.com\n\n📋 Kuyrukta kalan: %s makale (2 günde bir devam edecek)' \
+            "$PR_NUMBER" "$TITLE" "$REMAINING")
           PAYLOAD=$(jq -n --arg chat_id "$TELEGRAM_CHAT_ID" --arg text "$TEXT" \
             --arg thread_id "${TELEGRAM_THREAD_ID:-}" \
             '{chat_id: $chat_id, text: $text} + (if $thread_id != "" then {message_thread_id: ($thread_id | tonumber)} else {} end)')
@@ -130,10 +184,10 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TELEGRAM_THREAD_ID: ${{ secrets.TELEGRAM_THREAD_ID }}
-          PR_NUMBER: ${{ github.event.client_payload.pr_number }}
+          PR_NUMBER: ${{ steps.next.outputs.pr }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
-          TEXT=$(printf '🚨 KRİTİK: PR #%s onaylandı ama merge/build/deploy sırasında hata oluştu.\n\n%s' "$PR_NUMBER" "$RUN_URL")
+          TEXT=$(printf '🚨 KRİTİK: Yayın kuyruğu workflow'"'"'u başarısız oldu (PR #%s).\n\n%s' "$PR_NUMBER" "$RUN_URL")
           PAYLOAD=$(jq -n --arg chat_id "$TELEGRAM_CHAT_ID" --arg text "$TEXT" \
             --arg thread_id "${TELEGRAM_THREAD_ID:-}" \
             '{chat_id: $chat_id, text: $text} + (if $thread_id != "" then {message_thread_id: ($thread_id | tonumber)} else {} end)')
@@ -145,5 +199,5 @@ jobs:
             curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/pinChatMessage" \
               -H "Content-Type: application/json" \
               -d "$(jq -n --arg chat_id "$TELEGRAM_CHAT_ID" --argjson message_id "$MESSAGE_ID" '{chat_id: $chat_id, message_id: $message_id}')" \
-              || echo "::warning::Mesaj pinlenemedi (bot izni olmayabilir), ama bildirim gönderildi."
+              || echo "::warning::Mesaj pinlenemedi, ama bildirim gönderildi."
           fi
