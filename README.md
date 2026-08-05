@@ -131,6 +131,33 @@ public/images/              # Statische assets
 - SiteLinksSearch schema voor branded SERP
 - Crawl-delay: 1 (snelle indexatie)
 
+### 🆕 GSC 404 Temizliği (04 Agu 2026)
+
+**Sorun:** Google Search Console 117 URL'i 404 olarak raporluyordu (eski WordPress/Shopify kalıntıları + geçiş sırasında kaybolan sayfalar).
+
+**Yapılanlar:**
+
+1. **vercel.json — 10 yeni yönlendirme eklendi** (toplam 143 redirect):
+   - `/amare-edge-grape` → `/edge-plus`
+   - `/urun/restore` → `/restore` (spesifik, wildcard'dan önce)
+   - `/urun/edge` → `/edge-plus` (spesifik, wildcard'dan önce)
+   - `/products/amare-happy-juice-edge-plus-watermelon` → `/happy-juice-pack`
+   - `/products/amare-ignite-for-her` → `/ignite-for-her`
+   - Tüm redirect'ler `permanent: true` (301)
+
+2. **robots.txt güncellendi** — WordPress/Shopify sistem URL'leri Disallow:
+   - `/?page_id=`, `/wp-content/`, `/wp-admin/`, `/feed=`, `/author/`
+   - `/sample-page/`, `/collections/`, `/policies/`, `/cdn`, `/wpm`
+   - Google'ın bu kalıntıları tekrar taraması caydırıldı
+
+3. **Sonraki adım (manuel — Musa yapacak):**
+   - Deploy ettikten sonra GSC'de URL Inspection ile birkaç eski URL'i kontrol et
+   - GSC > Coverage > Not Found listesini "Doğrula" butonu ile güncelle
+
+**Not:** `nitro-xtreme`, `sunset`, `fit20` sayfaları zaten mevcut — GSC'de bunların 404 görünmesi önbellek/gecikmeli indeks sorunu, kod tarafında sorun yok.
+
+---
+
 ### 🆕 Agency OS — Faz 1 & 2 (28 Tem 2026)
 Volledig geautomatiseerde, maar **mens-gecontroleerde** content-pipeline. Details + openstaande
 punten: zie `CLAUDE.md` sectie 20 ("AGENCY OS STATUS"). Kort:
