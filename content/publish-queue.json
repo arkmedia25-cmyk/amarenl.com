@@ -1,17 +1,79 @@
 [
-  { "pr": 3, "title": "Wat je nachtcrème doet terwijl jij slaapt — de wetenschap van huidherstel", "status": "pending" },
-  { "pr": 6, "title": "Waarom je hoofdhuid net zoveel aandacht verdient als je gezicht", "status": "pending" },
-  { "pr": 7, "title": "Wat er met je libido gebeurt na je 35e — en wat je eraan kunt doen", "status": "pending" },
-  { "pr": 8, "title": "Testosteron daalt niet alleen door leeftijd — de echte oorzaken", "status": "pending" },
-  { "pr": 9, "title": "Intimiteit begint niet in bed — het begint in je hormonen", "status": "pending" },
-  { "pr": 10, "title": "Happy Juice Pack vs Triangle of Wellness — welke past bij jou?", "status": "pending" },
-  { "pr": 11, "title": "Waarom je méér resultaat haalt uit een pakket dan losse supplementen — de synergie-wetenschap", "status": "pending" },
-  { "pr": 12, "title": "Hoe lees je een supplementenlabel zonder opgelicht te worden?", "status": "pending" },
-  { "pr": 13, "title": "30 dagen Happy Juice — dagboek van een gebruiker", "status": "pending" },
-  { "pr": 14, "title": "Van 3 koffie per dag naar 0 — hoe Nitro mijn middagritueel veranderde", "status": "pending" },
-  { "pr": 15, "title": "Supplementen bewaren in de zomer — dit moet je weten", "status": "pending" },
-  { "pr": 16, "title": "De waarheid over 'natuurlijke' supplementen — waar let je op?", "status": "pending" },
-  { "pr": 17, "title": "Waarom je in de herfst anders moet supplementeren dan in de zomer", "status": "pending" },
-  { "pr": 18, "title": "Terug naar kantoor? Dit hebben je darmen nodig na maanden thuiswerken", "status": "pending" },
-  { "pr": 21, "title": "Supplementen Abonnement: Amare vs Losse Aankoop", "status": "pending" }
+  {
+    "pr": 3,
+    "title": "Wat je nachtcrème doet terwijl jij slaapt — de wetenschap van huidherstel",
+    "status": "merged_deploy_pending",
+    "note": "Vercel free-plan upload limitine takıldı — main'e merge oldu, deploy henüz yapılmadı, limit temizlenince manuel/cron ile deploy edilecek",
+    "published_at": "2026-08-03T12:16:11Z"
+  },
+  {
+    "pr": 6,
+    "title": "Waarom je hoofdhuid net zoveel aandacht verdient als je gezicht",
+    "status": "pending"
+  },
+  {
+    "pr": 7,
+    "title": "Wat er met je libido gebeurt na je 35e — en wat je eraan kunt doen",
+    "status": "pending"
+  },
+  {
+    "pr": 8,
+    "title": "Testosteron daalt niet alleen door leeftijd — de echte oorzaken",
+    "status": "pending"
+  },
+  {
+    "pr": 9,
+    "title": "Intimiteit begint niet in bed — het begint in je hormonen",
+    "status": "pending"
+  },
+  {
+    "pr": 10,
+    "title": "Happy Juice Pack vs Triangle of Wellness — welke past bij jou?",
+    "status": "pending"
+  },
+  {
+    "pr": 11,
+    "title": "Waarom je méér resultaat haalt uit een pakket dan losse supplementen — de synergie-wetenschap",
+    "status": "pending"
+  },
+  {
+    "pr": 12,
+    "title": "Hoe lees je een supplementenlabel zonder opgelicht te worden?",
+    "status": "pending"
+  },
+  {
+    "pr": 13,
+    "title": "30 dagen Happy Juice — dagboek van een gebruiker",
+    "status": "pending"
+  },
+  {
+    "pr": 14,
+    "title": "Van 3 koffie per dag naar 0 — hoe Nitro mijn middagritueel veranderde",
+    "status": "pending"
+  },
+  {
+    "pr": 15,
+    "title": "Supplementen bewaren in de zomer — dit moet je weten",
+    "status": "pending"
+  },
+  {
+    "pr": 16,
+    "title": "De waarheid over 'natuurlijke' supplementen — waar let je op?",
+    "status": "pending"
+  },
+  {
+    "pr": 17,
+    "title": "Waarom je in de herfst anders moet supplementeren dan in de zomer",
+    "status": "pending"
+  },
+  {
+    "pr": 18,
+    "title": "Terug naar kantoor? Dit hebben je darmen nodig na maanden thuiswerken",
+    "status": "pending"
+  },
+  {
+    "pr": 21,
+    "title": "Supplementen Abonnement: Amare vs Losse Aankoop",
+    "status": "pending"
+  }
 ]
