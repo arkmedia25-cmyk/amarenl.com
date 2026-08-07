@@ -952,6 +952,100 @@ nu volledig geslaagd (build + deploy + Telegram-notificatie). Magnesium-artikel 
      `content/PINTEREST_PLAN.md` sectie 2 — moeten exact overeenkomen met `boardCategory` in de queue).
   5. Trigger de workflow handmatig (`gh workflow run amarenl-pinterest-queue.yml`) of wacht op de cron.
 
+### Faz 5 — Meta Ads Lead Generation (05-08-2026 gestart)
+
+**Doel:** betaald NL-verkeer naar `/gratis-gut-brain-gids` sturen, e-maillijst laten groeien via
+bestaande Pixel/CAPI-tracking — geen nieuwe infrastructuur nodig, alles staat al.
+
+**Bestaande infrastructuur (hergebruikt, niet opnieuw gebouwd):**
+- `lib/meta-pixel.ts` — Pixel + CAPI, events: PageView/ViewContent/Lead/Subscribe/Contact/
+  InitiateCheckout, PII SHA-256 gehasht vóór verzending
+- `NEXT_PUBLIC_META_PIXEL_ID` + `META_CAPI_TOKEN` — al 8 dagen live in Vercel production
+- Landingspagina `/gratis-gut-brain-gids` (`LeadMagnetForm.tsx`) → `/api/subscribe` → MailerLite
+  (`nl-audience` groep, non-blocking sync), `trackLeadConversion` vuurt Pixel+CAPI direct na
+  succesvolle submit
+
+**Business Manager:** gebruiker heeft al een Meta Business Manager — geen nieuwe aanmaken. Ad-account
+onder dat bestaande BM opzetten.
+
+**Budget:** €10-15/dag (~€300-450/maand), 1 campagne, 1 ad set — te klein budget om over meerdere
+ad sets te spreiden.
+
+**Campagnestructuur:**
+- Objective: Leads (website conversion, geoptimaliseerd op `Lead` pixel event)
+- Ad set: NL, 25-45 jaar, interesses wellness/energie/stress/slaap (matcht bestaande ICP)
+- 2-3 creative-varianten binnen dezelfde ad set (mini-A/B)
+
+**Creative:** statisch beeld bij launch — Faz 3 (Higgsfield video) staat on hold, dus geen video.
+Copy: value-first, geen agressieve verkooptaal, binnen EFSA/ACM-grenzen (zelfde discipline als de
+rest van de site — geen sahte testimonials/overclaims).
+
+**Belangrijke beperking:** geen Meta Marketing API-koppeling deze sessie — campagne moet handmatig in
+Ads Manager UI opgezet worden. Claude bereidt targeting/copy/creative-richting voor en begeleidt
+stap voor stap, voert de campagne niet zelf uit.
+
+### 07-08-2026 — kritieke lead-capture bug gevonden + gefixt, concurrentie-analyse ververst, eerste creative-scenario opgesteld
+
+**Kritieke bug (bleek NIET "niet blokkerend" te zijn, zoals hierboven eerder aangenomen — gecorrigeerd):**
+Elke form-submit op `/gratis-gut-brain-gids` (en de 5 andere lead-formulieren) gaf een 500-error.
+Root cause was twee-traps: (1) `writeSubscribers()` deed `fs.writeFileSync` naar `data/subscribers.json`
+vóór de MailerLite-sync, en dat crasht op Vercel's read-only serverless filesystem — de MailerLite-call
+werd dus nooit bereikt; (2) zelfs na het verwijderen van de lokale file-write bleek de MailerLite-call
+zelf ook stuk: `groups: ['nl-audience']` — MailerLite's API verwacht een numerieke group-id, geen slug,
+en gaf 422 terug. Omdat deze call vóór de fix `.catch(() => {})` had (fire-and-forget), werd die 422
+altijd stil geslikt en toonde het formulier altijd "succesvol" terwijl er nooit een lead aankwam.
+**Praktisch effect: vermoedelijk zijn alle leads via deze formulieren de afgelopen periode verloren
+gegaan, niet alleen sinds recent.** Beide bugs gefixt (`app/api/subscribe/route.ts`, group-id nu
+`185294849333790257` = "Amare NL Leads"), gededuped naar main, live geverifieerd met een test-submit
+(HTTP 200 + echte MailerLite-inschrijving). **Dit was een harde blocker voor Faz 5 — zonder deze fix
+zou betaald verkeer naar een kapotte formulier zijn gestuurd.**
+
+**Concurrentie-analyse ververst (`analytics/` ClickHouse-stack):** Docker Desktop stond uit (start niet
+automatisch op login), dus de dagelijkse cron faalde stil sinds ~05-08. Handmatig herstart + verse
+`track-competitor-ads.mjs`-run (token zit in `/Users/ark/projects/amarenl.com/analytics/.env`, niet in
+deze checkout). Belangrijkste bevindingen (volledig rapport: zie artifact-link in sessie, of herhaal de
+queries in `analytics/competitor-analysis-queries.sql` filtered op eigen brand-page):
+- **"Vitals" als concurrent is onbruikbaar** — alle 2766+ "Vitals"-advertenties zijn romance-novel-apps,
+  niet Vitals Vitamins. Bekend risico uit `competitors.json`, nu bevestigd. Voortaan negeren of pas
+  herinstellen zodra de echte `page_id` bekend is.
+- Vitakruid/Orthica ruwe totalen zijn opgeblazen door reseller/drogist-pagina's (24pharma, Vitaminstore,
+  Etos, etc.) — alleen cijfers gefilterd op de eigen merkpagina zijn betrouwbaar: Vitakruid 49 actieve
+  ads (~18 dagen gem. looptijd, snelle rotatie), Nutriphyt 30 actieve ads (~58 dagen gem., stickiest
+  creative), Orthica maar 4 (nauwelijks eigen paid spend, leunt op resellers).
+- **Sterkste signaal:** Nutriphyt's Methialyn-advertentie (B-complex/energie, emoji + symptoomvraag +
+  genoemd mechanisme) draait ononderbroken al **409 dagen** — duidelijkste "winnende formule" in de
+  markt. Vitakruid's patroon is juist quiz/keuzehulp-gedreven or educatief, geen harde productclaims.
+  Geen van de 3 legitieme concurrenten startte nieuwe creative in de laatste 7 dagen (rustig venster).
+
+**Eerste creative-scenario (nog NIET geïmplementeerd, ligt klaar voor review):** 3 copy-varianten
+opgesteld, getoetst aan `scripts/efsa-audit.js`'s verboden-patronenlijst (geen "geneest/behandelt/
+klinisch bewezen/100% veilig", taal blijft "ondersteunt"-vorm):
+- **A — symptoom+mechanisme** (Nutriphyt-patroon): "😴 Moe, gespannen of slaap je slecht? ... gut-brain
+  axis ..." → afbeelding: abstracte gut-brain-illustratie, merkkleuren (`#6B4C8C`/`#9B7FBE`/`#C8A951`
+  uit `app/globals.css`), **al gegenereerd en goedgekeurd** (Higgsfield `nano_banana_flash`,
+  `content/meta-ads-drafts/creative-1-gutbrain-illustration.png`).
+- **B — nieuwsgierigheid/vraag**: "Wist je dat je darmen vaak de 'tweede hersenen' worden genoemd?..."
+  → afbeelding: gids/boek-mockup met gut-brain-diagram, **nog niet gegenereerd**.
+- **C — vertrouwen/anti-hype** (matcht NL-doelgroep uit de brief: logica-gedreven, houdt niet van
+  overdrijving): "Geen wondermiddel, geen overdreven beloftes..." → afbeelding: rustig lifestyle-moment
+  (thee, notitieboek, raamlicht), **gegenereerd maar kleurgrading klopt niet** (kwam bruin/groen uit
+  i.p.v. merkkleuren `#6B4C8C`/`#C8A951`) — **moet opnieuw met sterkere kleurinstructie**,
+  `content/meta-ads-drafts/creative-2-lifestyle-moment.png` (huidige, af te keuren versie).
+- **Open beslissing:** met €10-15/dag is 3 varianten mogelijk te dun voor de leerfase — voorstel was A+C
+  (sterkste twee, meest onderscheidend), B laten vallen. Nog niet met gebruiker besloten.
+
+**Volgende stappen:**
+1. Scenario (boven) samen doornemen en vastleggen — welke 2-3 varianten definitief
+2. Creative-2 opnieuw genereren met sterkere merkkleur-instructie; creative-3 (indien B blijft) maken
+3. Pixel live-check in Events Manager (Test Events) vóór launch — CAPI-kant nog niet expliciet bevestigd,
+   alleen client-side Pixel (`fbq` laadt, geen network-request gezien i.v.m. ad-blocker in test-browser)
+4. Ad-account onder bestaande BM koppelen, betaalmethode + €10-15/dag budget instellen (gebruiker)
+5. Campagne live zetten, 1-2 weken laten lopen vóór evaluatie (leerfase niet te vroeg afbreken)
+6. Wekelijkse CPL/lead-rapportage — kan als RemoteTrigger routine geautomatiseerd worden (zelfde
+   patroon als Postiz/AmareNL reply-watch)
+7. Overweeg: Docker Desktop auto-start bij login instellen, zodat de concurrentie-cron niet meer stil
+   faalt zoals deze keer (~2 dagen data-gat ontstaan doordat Docker niet draaide)
+
 ### Openstaand voor volgende sessie
 - [ ] **15 PR's** staan nog open in de Telegram-approval-queue (#3, #6-18, #20 — #5 en #19 zijn al
       gesloten) — moeten nog door de gebruiker beoordeeld worden
@@ -963,6 +1057,8 @@ nu volledig geslaagd (build + deploy + Telegram-notificatie). Magnesium-artikel 
       access-goedkeuring** (app 1582959, Trial-toegang staat de OAuth-flow nog niet toe). Zie sectie
       hierboven voor exacte activatiestappen zodra goedgekeurd. Instagram/TikTok/YouTube copy-drafts
       nog niet gebouwd (kan hetzelfde queue+Telegram-patroon hergebruiken, geen API nodig — copy-paste).
+- [ ] **Faz 5 (Meta Ads)** — plan vastgelegd 07-08-2026, nog niet gestart. Volgende stap: Pixel
+      live-check + ad-account onder bestaande Business Manager koppelen (zie sectie hierboven).
 - [ ] Overweeg: algemene web-search API (naast PubMed) voor bredere onderwerp-research, besproken
       maar niet geïmplementeerd
 - [ ] `server/` package (sectie 19) opruimen of expliciet archiveren — momenteel misleidende
