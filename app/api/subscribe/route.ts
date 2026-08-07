@@ -22,7 +22,7 @@ async function addToMailerLite(email: string, name: string, source: string) {
       body: JSON.stringify({
         email,
         fields,
-        groups: ['nl-audience'], // tag all Dutch subscribers
+        groups: ['185294849333790257'], // "Amare NL Leads" group
         status: 'active', // skip double opt-in for now, trust the form
       }),
     })
