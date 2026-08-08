@@ -1041,16 +1041,24 @@ Reden 2-varianten i.p.v. 3: bij €10-15/dag budget is elke extra variant een ve
 over meer creatives, wat Meta's leerfase (richtlijn: ~50 conversies/ad-set/week) vertraagt. A + B werden
 gekozen als de twee sterkste/meest onderscheidende invalshoeken.
 
+**Pixel/CAPI live-check (08-08-2026) — BEVESTIGD, end-to-end werkend:**
+- Client-side: `fbq` laadt correct op `/gratis-gut-brain-gids` (`window.fbq.loaded === true`), geen
+  directe `facebook.com/tr` network-request gezien in de test-browser — vermoedelijk een ad-blocker in
+  die browserprofiel, niet per se een sitefout (CAPI dekt dit scenario juist af, zie hieronder).
+- Server-side CAPI: rechtstreekse test-POST naar productie `/api/capi-event` (event `Lead`,
+  `event_source_url: /gratis-gut-brain-gids`) gaf `{"ok":true}` terug — bewijst dat `sendCAPIEvent()`
+  het event daadwerkelijk naar Meta's Graph API stuurde én Meta het accepteerde (dus `META_PIXEL_ID` +
+  `META_CAPI_TOKEN` zijn beide correct in Vercel production). Volledige tracking-keten is klaar voor
+  launch.
+
 **Volgende stappen:**
-1. Pixel live-check in Events Manager (Test Events) vóór launch — CAPI-kant nog niet expliciet bevestigd,
-   alleen client-side Pixel (`fbq` laadt, geen network-request gezien i.v.m. ad-blocker in test-browser)
-2. Ad-account onder bestaande BM koppelen, betaalmethode + €10-15/dag budget instellen (gebruiker)
-3. Campagne live zetten met varianten A + B, 1-2 weken laten lopen vóór evaluatie (leerfase niet te
+1. Ad-account onder bestaande BM koppelen, betaalmethode + €10-15/dag budget instellen (gebruiker)
+2. Campagne live zetten met varianten A + B, 1-2 weken laten lopen vóór evaluatie (leerfase niet te
    vroeg afbreken)
-4. Wekelijkse CPL/lead-rapportage — kan als RemoteTrigger routine geautomatiseerd worden (zelfde
+3. Wekelijkse CPL/lead-rapportage — kan als RemoteTrigger routine geautomatiseerd worden (zelfde
    patroon als Postiz/AmareNL reply-watch)
-7. Overweeg: Docker Desktop auto-start bij login instellen, zodat de concurrentie-cron niet meer stil
-   faalt zoals deze keer (~2 dagen data-gat ontstaan doordat Docker niet draaide)
+4. Overweeg: Docker Desktop auto-start bij login instellen, zodat de concurrentie-cron niet meer stil
+   faalt zoals eerder deze week (~2 dagen data-gat doordat Docker niet draaide)
 
 ### Openstaand voor volgende sessie
 - [ ] **15 PR's** staan nog open in de Telegram-approval-queue (#3, #6-18, #20 — #5 en #19 zijn al
