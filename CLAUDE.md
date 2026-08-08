@@ -1017,39 +1017,37 @@ queries in `analytics/competitor-analysis-queries.sql` filtered op eigen brand-p
   markt. Vitakruid's patroon is juist quiz/keuzehulp-gedreven or educatief, geen harde productclaims.
   Geen van de 3 legitieme concurrenten startte nieuwe creative in de laatste 7 dagen (rustig venster).
 
-### 08-08-2026 — creative-scenario compleet: 3 opties, alle merkkleur-conform (nog GEEN definitieve keuze)
+### 08-08-2026 — creative-scenario compleet, DEFINITIEVE keuze: varianten A + B
 
-Alle 3 copy-varianten hebben nu een afbeelding die merkkleuren (`#6B4C8C`/`#9B7FBE`/`#C8A951` uit
+Alle 3 copy-varianten kregen een afbeelding die merkkleuren (`#6B4C8C`/`#9B7FBE`/`#C8A951` uit
 `app/globals.css`) correct toepast, getoetst aan `scripts/efsa-audit.js`'s verboden-patronenlijst (geen
-"geneest/behandelt/klinisch bewezen/100% veilig", taal blijft "ondersteunt"-vorm). **Dit zijn OPTIES,
-géén vastgelegde eindkeuze** — volledige side-by-side ad-mockup-review (Instagram/Facebook feed-vorm)
-gepubliceerd als sessie-artifact, of reproduceerbaar met de bestanden hieronder.
+"geneest/behandelt/klinisch bewezen/100% veilig", taal blijft "ondersteunt"-vorm). Volledige side-by-
+side ad-mockup-review (Instagram/Facebook feed-vorm) werd gepubliceerd als sessie-artifact.
 
+**Gebruiker koos A + B voor de campagne, C valt af:**
 - **A — symptoom+mechanisme** (Nutriphyt-patroon): "😴 Moe, gespannen of slaap je slecht? ... gut-brain
   axis ..." → `content/meta-ads-drafts/creative-1-gutbrain-illustration.png` — abstracte gut-brain-
-  illustratie (silhouet + gloeiende verbindingslijn hoofd↔buik). **Goedgekeurd, geen wijzigingen nodig.**
+  illustratie (silhouet + gloeiende verbindingslijn hoofd↔buik). **Definitief, klaar voor gebruik.**
 - **B — nieuwsgierigheid/vraag**: "Wist je dat je darmen vaak de 'tweede hersenen' worden genoemd?..."
   → `content/meta-ads-drafts/creative-3-gids-mockup.png` — premium hardcover gids-mockup, paars kaft,
   goudfolie gut-brain-embleem (zelfde visuele symbool als A, geen leesbare tekst op de kaft = geen risico
   op AI-tekstvervorming). Toont de gids als tastbaar waardevol object i.p.v. "gratis PDF"-gevoel.
-- **C — vertrouwen/anti-hype** (matcht NL-doelgroep: logica-gedreven, houdt niet van overdrijving):
-  "Geen wondermiddel, geen overdreven beloftes..." → `content/meta-ads-drafts/creative-2-lifestyle-
-  moment-v2.png` — rustig lifestyle-moment (thee, notitieboek, raamlicht), **na 1 mislukte generatie
-  (content-moderation fail) en 1 kleur-correctie-ronde nu paars/goud-conform** (was eerst bruin/groen,
-  zie oudere `creative-2-lifestyle-moment.png` = afgekeurde v1, blijft staan als referentie).
+  **Definitief, klaar voor gebruik.**
+- **C — vertrouwen/anti-hype — AFGEVALLEN**, niet meegenomen naar de campagne. Bestanden
+  (`creative-2-lifestyle-moment-v2.png` en de afgekeurde v1) blijven staan als referentie/toekomstige
+  optie, niet actief gebruikt.
 
-**Open beslissing (nog NIET met gebruiker vastgesteld):** met €10-15/dag budget is 3 varianten in
-dezelfde ad set mogelijk te dun voor Meta's leerfase (richtlijn: ~50 conversies/ad-set/week nodig om
-de leerfase af te sluiten). Voorstel op tafel: 2 varianten kiezen i.p.v. 3, sterkste/meest onderscheidende
-twee. Welke twee (of alle drie) definitief meegaan is een aanstaande beslissing, geen vastgelegd feit.
+Reden 2-varianten i.p.v. 3: bij €10-15/dag budget is elke extra variant een verdunning van het budget
+over meer creatives, wat Meta's leerfase (richtlijn: ~50 conversies/ad-set/week) vertraagt. A + B werden
+gekozen als de twee sterkste/meest onderscheidende invalshoeken.
 
 **Volgende stappen:**
-1. Definitieve keuze: 2 of 3 varianten, en welke — nog te bespreken
-2. Pixel live-check in Events Manager (Test Events) vóór launch — CAPI-kant nog niet expliciet bevestigd,
+1. Pixel live-check in Events Manager (Test Events) vóór launch — CAPI-kant nog niet expliciet bevestigd,
    alleen client-side Pixel (`fbq` laadt, geen network-request gezien i.v.m. ad-blocker in test-browser)
-3. Ad-account onder bestaande BM koppelen, betaalmethode + €10-15/dag budget instellen (gebruiker)
-4. Campagne live zetten, 1-2 weken laten lopen vóór evaluatie (leerfase niet te vroeg afbreken)
-5. Wekelijkse CPL/lead-rapportage — kan als RemoteTrigger routine geautomatiseerd worden (zelfde
+2. Ad-account onder bestaande BM koppelen, betaalmethode + €10-15/dag budget instellen (gebruiker)
+3. Campagne live zetten met varianten A + B, 1-2 weken laten lopen vóór evaluatie (leerfase niet te
+   vroeg afbreken)
+4. Wekelijkse CPL/lead-rapportage — kan als RemoteTrigger routine geautomatiseerd worden (zelfde
    patroon als Postiz/AmareNL reply-watch)
 7. Overweeg: Docker Desktop auto-start bij login instellen, zodat de concurrentie-cron niet meer stil
    faalt zoals deze keer (~2 dagen data-gat ontstaan doordat Docker niet draaide)

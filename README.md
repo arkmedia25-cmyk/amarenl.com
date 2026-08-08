@@ -162,9 +162,9 @@ public/images/              # Statische assets
 Betaald NL-verkeer naar `/gratis-gut-brain-gids`. **07-08:** kritieke lead-capture bug gevonden en
 gefixt (formulieren gaven altijd 500/verloren leads stil via MailerLite 422), concurrentie-analyse
 ververst (Vitakruid/Nutriphyt/Orthica — Nutriphyt's 409-dagen-lopende advertentie is het sterkste
-signaal). **08-08:** creative-scenario compleet — 3 copy-varianten (A/B/C), alle 3 nu met een
-merkkleur-conforme afbeelding (`content/meta-ads-drafts/`), dit zijn OPTIES, nog geen definitieve
-keuze. Nog niet live. Volledige details + volgende stappen: zie `CLAUDE.md` sectie 20, subsectie "Faz 5".
+signaal). **08-08:** creative-scenario compleet, definitieve keuze gemaakt: **varianten A (gut-brain
+illustratie) + B (gids-mockup)**, variant C afgevallen. Nog niet live — volgende stap is de Pixel-
+CAPI-check en ad-account setup. Volledige details: zie `CLAUDE.md` sectie 20, subsectie "Faz 5".
 
 ### 🆕 Agency OS — Faz 1 & 2 (28 Tem 2026)
 Volledig geautomatiseerde, maar **mens-gecontroleerde** content-pipeline. Details + openstaande
