@@ -7,7 +7,23 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - name: Get webhook info
+      - name: Get webhook info (before)
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        run: |
+          curl -sS "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/getWebhookInfo" | jq .
+
+      - name: Set webhook (fix — url was empty, Telegram had nowhere to deliver callbacks)
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_WEBHOOK_SECRET: ${{ secrets.TELEGRAM_WEBHOOK_SECRET }}
+        run: |
+          curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/setWebhook" \
+            -H "Content-Type: application/json" \
+            -d "$(jq -n --arg url "https://amarenl.com/api/telegram/webhook" --arg secret "$TELEGRAM_WEBHOOK_SECRET" \
+              '{url: $url, secret_token: $secret, allowed_updates: ["callback_query"]}')" | jq .
+
+      - name: Get webhook info (after)
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         run: |
