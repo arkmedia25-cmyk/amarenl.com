@@ -1,0 +1,78 @@
+name: AmareNL — Sosyal Medya Günlük (Faz 6, Instagram)
+
+# Blog üretiminden (Mon/Wed/Fri) BAĞIMSIZ, paralel çalışır — her gün bir
+# Instagram gönderi taslağı üretir ve Telegram onayına gönderir. Marka/ürün
+# adı yok, amaç lead generation (bkz. scripts/generate-social-caption.mjs
+# üstündeki açıklama).
+
+on:
+  schedule:
+    # 07:30 UTC ≈ 09:30 Amsterdam (zomertijd), her gün
+    - cron: "30 7 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: amarenl-social-daily
+  cancel-in-progress: false
+
+jobs:
+  generate-and-notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Ensure Telegram webhook is registered (self-healing)
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_WEBHOOK_SECRET: ${{ secrets.TELEGRAM_WEBHOOK_SECRET }}
+        run: bash scripts/ensure-telegram-webhook.sh
+
+      - name: Generate today's social caption
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/generate-social-caption.mjs
+
+      - name: Commit updated queue
+        run: |
+          git config user.name "AmareNL Social Bot"
+          git config user.email "actions@github.com"
+          git add content/social-queue.json
+          git commit -m "social: günün Instagram taslağı üretildi" || echo "Değişiklik yok"
+          git push origin HEAD:main
+
+      - name: Notify Telegram for approval
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_THREAD_ID: ${{ secrets.TELEGRAM_THREAD_ID }}
+        run: node scripts/social-queue-notify.mjs
+
+      - name: Notify Telegram (failure)
+        if: failure()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_THREAD_ID: ${{ secrets.TELEGRAM_THREAD_ID }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          TEXT=$(printf '🚨 Sosyal medya günlük workflow başarısız oldu.\n\n%s' "$RUN_URL")
+          PAYLOAD=$(jq -n --arg chat_id "$TELEGRAM_CHAT_ID" --arg text "$TEXT" \
+            --arg thread_id "${TELEGRAM_THREAD_ID:-}" \
+            '{chat_id: $chat_id, text: $text} + (if $thread_id != "" then {message_thread_id: ($thread_id | tonumber)} else {} end)')
+          curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -H "Content-Type: application/json" -d "$PAYLOAD"
