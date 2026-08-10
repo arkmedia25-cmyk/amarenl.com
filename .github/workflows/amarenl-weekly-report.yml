@@ -21,12 +21,37 @@ jobs:
         with:
           fetch-depth: 1
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Fetch GSC summary
+        id: gsc
+        env:
+          GSC_SERVICE_ACCOUNT_JSON_B64: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON_B64 }}
+        run: |
+          if [ -z "$GSC_SERVICE_ACCOUNT_JSON_B64" ]; then
+            echo "summary=GSC bağlı değil (secret eksik)" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          mkdir -p /tmp/gsc
+          echo "$GSC_SERVICE_ACCOUNT_JSON_B64" | base64 -d > /tmp/gsc/service-account.json
+          GSC_KEY_PATH=/tmp/gsc/service-account.json OUTPUT=$(node scripts/gsc-report.mjs summary 7 2>&1) || OUTPUT="GSC sorgusu başarısız: $OUTPUT"
+          rm -f /tmp/gsc/service-account.json
+          {
+            echo "summary<<GSC_EOF"
+            echo "$OUTPUT"
+            echo "GSC_EOF"
+          } >> "$GITHUB_OUTPUT"
+
       - name: Build and send status summary
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TELEGRAM_THREAD_ID: ${{ secrets.TELEGRAM_THREAD_ID }}
+          GSC_SUMMARY: ${{ steps.gsc.outputs.summary }}
         run: |
           runstatus() {
             # $1 = workflow file name
@@ -48,8 +73,8 @@ jobs:
             QUEUE_SUMMARY="dosya bulunamadı"
           fi
 
-          TEXT=$(printf '📊 Haftalık AmareNL Agency OS Durumu\n\n📝 Faz 2 (makale üretimi): %s\n📌 Faz 4 (Pinterest kuyruğu): %s\n🚀 Son deploy: %s\n\n📋 Telegram onay kuyruğunda bekleyen PR: %s\n📌 Pin kuyruğu durumu: %s' \
-            "$ARTICLE_STATUS" "$PINTEREST_STATUS" "$DEPLOY_STATUS" "$OPEN_PRS" "$QUEUE_SUMMARY")
+          TEXT=$(printf '📊 Haftalık AmareNL Agency OS Durumu\n\n📝 Faz 2 (makale üretimi): %s\n📌 Faz 4 (Pinterest kuyruğu): %s\n🚀 Son deploy: %s\n\n📋 Telegram onay kuyruğunda bekleyen PR: %s\n📌 Pin kuyruğu durumu: %s\n\n🔎 GSC (son 7 gün):\n%s' \
+            "$ARTICLE_STATUS" "$PINTEREST_STATUS" "$DEPLOY_STATUS" "$OPEN_PRS" "$QUEUE_SUMMARY" "$GSC_SUMMARY")
 
           PAYLOAD=$(jq -n --arg chat_id "$TELEGRAM_CHAT_ID" --arg text "$TEXT" \
             --arg thread_id "${TELEGRAM_THREAD_ID:-}" \
