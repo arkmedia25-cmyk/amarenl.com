@@ -9,7 +9,9 @@
   {
     "pr": 6,
     "title": "Waarom je hoofdhuid net zoveel aandacht verdient als je gezicht",
-    "status": "pending"
+    "status": "published",
+    "note": "Telegram üzerinden manuel onaylanıp bu kuyruğu atlayarak merge edilmişti — kuyruk dosyası güncellenmemişti, bu yüzden workflow silinmiş dalı (branch) arayıp 5 kez üst üste başarısız oldu (03-08 ile 09-08 arası). 10-08'de elle düzeltildi.",
+    "published_at": "2026-08-05T10:29:10Z"
   },
   {
     "pr": 7,
@@ -74,6 +76,14 @@
   {
     "pr": 21,
     "title": "Supplementen Abonnement: Amare vs Losse Aankoop",
-    "status": "pending"
+    "status": "published",
+    "note": "Telegram üzerinden manuel onaylanıp bu kuyruğu atlayarak merge edilmişti — kuyruk dosyası güncellenmemişti. 10-08'de elle düzeltildi (bkz. PR #6 notu).",
+    "published_at": "2026-08-05T09:32:52Z"
+  },
+  {
+    "pr": 23,
+    "title": "Collageen voor Mannen 30+: Waarom Het Ertoe Doet",
+    "status": "pending",
+    "note": "Kuyruk dosyasına hiç eklenmemişti (07-08'de açılmış, muhtemelen article-generation script'i bu dosyayı güncellemedi) — 10-08'de elle eklendi."
   }
 ]
