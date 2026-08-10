@@ -380,9 +380,15 @@ function validate(article, existingArticles) {
     console.warn("  (waarschuwing: geen interne link naar een bestaand artikel gevonden — publicatie gaat toch door)");
   }
 
+  const NVWA_ALTERNATIVES = "ondersteunt, draagt bij aan, kan helpen bij, is betrokken bij";
   for (const claim of FORBIDDEN_CLAIMS) {
     if (lowerContent.includes(claim)) {
-      errors.push(`Verboden medische claim gevonden: "${claim}"`);
+      errors.push(
+        `Verboden medische claim gevonden: "${claim}". Dit woord (en elke vervoeging ervan) mag ` +
+        `NERGENS in het artikel voorkomen, in geen enkele zin, ook niet herformuleerd. Herschrijf ` +
+        `het hele betreffende concept met toegestane taal (bijvoorbeeld: ${NVWA_ALTERNATIVES}) in ` +
+        `plaats van simpelweg een synoniem te zoeken voor "${claim}".`
+      );
     }
   }
 
