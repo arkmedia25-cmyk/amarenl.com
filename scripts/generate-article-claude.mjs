@@ -78,6 +78,29 @@ function fetchRejectedTopics() {
   }
 }
 
+/**
+ * Titles from PRs that are still OPEN — awaiting Telegram approval, not yet
+ * merged or rejected. Zonder deze check heeft de generator geen zicht op wat
+ * er al in de wachtrij staat en kan hij hetzelfde onderwerp meerdere keren
+ * kiezen (11-08-2026: "Collageen voor Mannen 30+" driemaal onder net andere
+ * titels — PR #23, #24, #25 — omdat elke run blind was voor de eerdere,
+ * nog-niet-beoordeelde PRs). Best-effort: als `gh` niet beschikbaar is of de
+ * call faalt, gewoon een lege lijst teruggeven i.p.v. generatie te blokkeren.
+ */
+function fetchOpenPendingTopics() {
+  try {
+    const raw = execSync("gh pr list --state open --json title --limit 100", {
+      encoding: "utf-8",
+      timeout: 15000,
+    });
+    const prs = JSON.parse(raw);
+    return prs.map((p) => p.title.replace(/^📝\s*/, ""));
+  } catch (err) {
+    console.warn(`  (waarschuwing: kon open PR-titels niet ophalen: ${err.message})`);
+    return [];
+  }
+}
+
 /** Trimmed product summary — full products.json is too large for the prompt
  *  and most fields (pricing, images, seo, tags) aren't needed for fact-checking. */
 function buildProductSummary() {
@@ -223,10 +246,13 @@ function buildSystemPrompt(articleQualitySkill, claudeMdExcerpt) {
   ].join("\n");
 }
 
-function buildTopicPrompt({ queueDoc, existingArticles, rejectedTopics }) {
+function buildTopicPrompt({ queueDoc, existingArticles, rejectedTopics, openPendingTopics }) {
   const existingTitles = [...existingArticles.values()].join("\n- ");
   const rejectedList = rejectedTopics?.length
     ? rejectedTopics.map((t) => `- ${t}`).join("\n")
+    : "(geen)";
+  const openPendingList = openPendingTopics?.length
+    ? openPendingTopics.map((t) => `- ${t}`).join("\n")
     : "(geen)";
   return [
     "Hieronder staat de volledige content/article-queue.md van amarenl.com — een redactieplan met",
@@ -247,6 +273,11 @@ function buildTopicPrompt({ queueDoc, existingArticles, rejectedTopics }) {
     "=== AFGEWEZEN ONDERWERPEN (mens heeft dit al beoordeeld en geweigerd — probeer dit niet opnieuw",
     "onder een andere titel/invalshoek, tenzij de queue een expliciet nieuw sub-onderwerp aangeeft) ===",
     rejectedList,
+    "",
+    "=== NOG OPEN STAANDE PR's (al gegenereerd, wachten nog op Telegram-goedkeuring — kies GEEN",
+    "onderwerp dat hiermee overlapt, ook niet onder een andere titel/invalshoek — anders krijgt de",
+    "reviewer 2-3 keer hetzelfde onderwerp te beoordelen) ===",
+    openPendingList,
     "",
     "Geef ook 2-3 Engelstalige PubMed-zoektermen die relevant wetenschappelijk onderzoek voor dit",
     "onderwerp zouden opleveren (PubMed indexeert vrijwel uitsluitend Engelstalige literatuur).",
@@ -509,8 +540,13 @@ async function main() {
     console.log(`  ${rejectedTopics.length} eerder afgewezen onderwerp(en) meegegeven als context: ${rejectedTopics.join(" | ")}`);
   }
 
+  const openPendingTopics = fetchOpenPendingTopics();
+  if (openPendingTopics.length) {
+    console.log(`  ${openPendingTopics.length} nog open staande PR('s) meegegeven als context: ${openPendingTopics.join(" | ")}`);
+  }
+
   console.log("Onderwerp kiezen + PubMed-zoektermen bepalen...");
-  const topicPick = await pickTopic(client, { queueDoc, existingArticles, rejectedTopics }, systemPrompt);
+  const topicPick = await pickTopic(client, { queueDoc, existingArticles, rejectedTopics, openPendingTopics }, systemPrompt);
 
   let pubmedContext = "";
   if (topicPick?.topic) {
