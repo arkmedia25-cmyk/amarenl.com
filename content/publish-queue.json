@@ -22,7 +22,9 @@
   {
     "pr": 8,
     "title": "Testosteron daalt niet alleen door leeftijd — de echte oorzaken",
-    "status": "pending"
+    "status": "published",
+    "published_at": "2026-08-11T06:45:57Z",
+    "note": "Self-healing: kuyrukta pending görünüyordu ama GitHub durumu MERGED idi — muhtemelen kuyruğu atlayarak manuel onaylanmıştı. Otomatik düzeltildi."
   },
   {
     "pr": 9,
