@@ -89,5 +89,18 @@
     "title": "Collageen voor Mannen 30+: Waarom Het Ertoe Doet",
     "status": "pending",
     "note": "Kuyruk dosyasına hiç eklenmemişti (07-08'de açılmış, muhtemelen article-generation script'i bu dosyayı güncellemedi) — 10-08'de elle eklendi."
+  },
+  {
+    "pr": 24,
+    "title": "Collageen voor Mannen 30+: Huid, Spieren, Gewrichten",
+    "status": "pending",
+    "note": "Kuyruk dosyasına hiç eklenmemişti (10-08'de açılmış) — 11-08'de elle eklendi."
+  },
+  {
+    "pr": 25,
+    "title": "Collageen voor Mannen 30+: Ook Voor Jou Belangrijk",
+    "status": "published",
+    "note": "Kuyruk dosyasına hiç eklenmemişti — 10-08'de Telegram webhook düzeltme testinde onaylanıp merge edildi (deploy o zaman Vercel limitine takıldı, bugün 11-08'de limit temizlenince ayrıca deploy edildi). 11-08'de elle eklendi.",
+    "published_at": "2026-08-10T09:02:08Z"
   }
 ]
