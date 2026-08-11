@@ -1,9 +1,15 @@
 name: AmareNL — Pinterest Kuyruğu (Faz 4)
 
 on:
-  schedule:
-    # 07:00 UTC ≈ 09:00 Amsterdam (zomertijd), Pazartesi/Çarşamba/Cuma/Cumartesi
-    - cron: "0 7 * * 1,3,5,6"
+  # GEÇİCİ DURDURULDU (10-08-2026): Pinterest Standard access onayı hâlâ
+  # bekleniyor (Trial erişimi pins:write OAuth akışına izin vermiyor) —
+  # cron her çalıştığında yayınlanamayan bir pin daha kuyruğa ekleyip
+  # Telegram'a gereksiz "onay bekliyor" bildirimi gönderiyordu. Standard
+  # access onaylanınca `schedule:` bloğunu geri aç (aşağıdaki satırı
+  # uncomment et) — kuyruk dosyası ve script'ler değişmedi, hazır bekliyor.
+  # schedule:
+  #   # 07:00 UTC ≈ 09:00 Amsterdam (zomertijd), Pazartesi/Çarşamba/Cuma/Cumartesi
+  #   - cron: "0 7 * * 1,3,5,6"
   workflow_dispatch: {}
 
 permissions:

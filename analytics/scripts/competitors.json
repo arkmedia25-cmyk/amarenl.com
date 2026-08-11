@@ -1,0 +1,6 @@
+[
+  { "name": "Vitakruid", "search_terms": "Vitakruid" },
+  { "name": "Orthica", "search_terms": "Orthica" },
+  { "name": "Vitals", "search_terms": "Vitals Vitamins", "note": "'Vitals' alone is a generic English word and will return noise via free-text search. Once the first run surfaces their real page_id, switch this entry to search_page_ids for precision." },
+  { "name": "Nutriphyt", "search_terms": "Nutriphyt" }
+]
