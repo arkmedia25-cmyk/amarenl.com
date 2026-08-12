@@ -13,6 +13,40 @@ rollü yeni sistem kullanıcısı `amarenl-admin` ile test edildi, token
 `META_ACCESS_TOKEN_ADMIN` olarak `/Users/ark/projects/amarenl.com/analytics/.env`'de duruyor) —
 ama **"Maximumaantal advertentieaccounts: 1"** limitine takılıyor, bu da doğrudan Unverified
 Business'tan kaynaklanıyor. Yani rol/token sorunu değil, tamamen doğrulama meselesi — doğrulama
+
+## GÜNCELLEME — 11-08-2026 akşamı: Doğrulandı, ama İKİ engel de hâlâ AÇIK değil
+İşletme doğrulaması aynı gün onaylandı (Meta'nın ~2 iş günü tahmininden çok daha hızlı) —
+`verification_status: "verified"` API'den doğrulandı. Ama doğrulama sonrası HEMEN tekrar test
+edildi ve **hiçbiri henüz açılmadı**:
+
+1. **Yeni ad account limiti hâlâ 1** — hem API'den hem Business Settings → Bedrijfsgegevens'te
+   görsel olarak doğrulandı. Doğrulama tek başına limiti otomatik yükseltmedi (ya da henüz
+   yayılmadı/propagate olmadı).
+2. **Reklam kreatifi oluşturma hâlâ "development mode" hatası veriyor** — hem eski
+   (`amarenl-analytics`, zaten ad account'a atanmış) hem yeni (`amarenl-admin`) token'la denendi,
+   ikisi de aynı hata. Yani izin/atama sorunu değil — **uygulamanın kendisi (AmareNL Analytics,
+   app id 1936506310377907) hâlâ Development modunda, Live'a geçmemiş.**
+
+**Uygulamanın kendi Publish akışında ilerleme oldu:** App Settings → General'da **Privacy Policy
+URL hiç girilmemiş** olduğu bulundu (Terms of Service bile boş bir `facebook.com` placeholder'ına
+işaret ediyordu). Üçü de dolduruldu (Privacy Policy, Terms of Service, Data Deletion Instructions
+— hepsi `https://amarenl.com/privacy-beleid`). Bunun ardından Publish sayfası "All required app
+settings are complete" dedi — **ama yine de bir "Publish" butonu hiç çıkmadı.** Publish sayfasında
+"Use cases on this app" adında bir bölüm var (Create & Manage ads with Marketing API vb. listeleniyor)
+— muhtemelen Publish butonu ancak bu use case'ler tek tek onaylanınca/incelenince çıkacak.
+Oturum, bir use case'in içine girip detaylı gereksinim listesine bakmadan bitti.
+
+**Sonraki oturumda ilk iş — iki ayrı, muhtemelen birbirinden bağımsız konu:**
+- (a) Ad account limiti: `POST /1372325337373227/adaccount`'u soğuk kanlı tekrar dene — belki
+  sadece zaman/yayılma meselesiydi. Değilse, gerçek bir ödeme yöntemi eklemek (sadece doğrulama
+  değil) limiti açan tetikleyici olabilir.
+- (b) App Development mode: Publish sayfasında **"Use cases on this app"** listesindeki her bir
+  use case'e (özellikle "Create & Manage ads with Marketing API") tek tek gir, hangi gereksinimin
+  (App Review başvurusu, ekran kaydı, vb.) hâlâ eksik olduğunu bul — muhtemelen Development→Live
+  geçişinin gerçek son adımı burada.
+
+Detaylı log: memory `project_meta_ads_account_country_bug.md` (11-08-2026 akşam STATUS UPDATE
+bölümü).
 onaylanınca ya limit yükselecek ya da mevcut hesap düzeltilebilecek. Detay: memory
 `project_meta_ads_account_country_bug.md` (STATUS UPDATE — 2026-08-11 bölümü).
 
