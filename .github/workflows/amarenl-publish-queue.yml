@@ -27,16 +27,58 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          fetch-depth: 0
 
-      - name: Find next queued PR
+      - name: Ensure Telegram webhook is registered (self-healing)
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_WEBHOOK_SECRET: ${{ secrets.TELEGRAM_WEBHOOK_SECRET }}
+        run: bash scripts/ensure-telegram-webhook.sh
+
+      - name: Find next queued PR (self-healing — skips stale entries)
         id: next
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          NEXT_PR=$(jq -r '[.[] | select(.status=="pending")][0].pr // empty' content/publish-queue.json)
-          NEXT_TITLE=$(jq -r '[.[] | select(.status=="pending")][0].title // empty' content/publish-queue.json)
+          # KURAL (10-08-2026'da eklendi): kuyruk dosyası "pending" desin diye
+          # o PR'ın hâlâ gerçekten açık olduğuna güvenme — Telegram üzerinden
+          # manuel onay bu dosyayı atlayarak merge edebilir (PR #6/#21'de olduğu
+          # gibi), ve o zaman kuyruk var olmayan bir dalı arayıp 2 günde bir
+          # sessizce başarısız olur. Bu yüzden her "pending" adayı gerçekten
+          # OPEN mı diye TEK TEK doğrula; değilse kuyruğu otomatik düzelt ve
+          # bir sonrakine geç — asla insan müdahalesi beklemeden kilitlenme.
+          FIXED_ANY=false
+          NEXT_PR=""
+          NEXT_TITLE=""
+
+          for PR in $(jq -r '[.[] | select(.status=="pending")][].pr' content/publish-queue.json); do
+            STATE=$(gh pr view "$PR" --json state -q .state 2>/dev/null || echo "NOTFOUND")
+            if [ "$STATE" = "OPEN" ]; then
+              NEXT_PR="$PR"
+              NEXT_TITLE=$(jq -r --argjson pr "$PR" '.[] | select(.pr == $pr) | .title' content/publish-queue.json)
+              break
+            fi
+
+            echo "::warning::PR #$PR kuyrukta 'pending' ama gerçek durumu '$STATE' — kuyruk otomatik düzeltiliyor."
+            NOW=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+            jq --argjson pr "$PR" --arg date "$NOW" --arg state "$STATE" \
+              'map(if .pr == $pr then . + {status: "published", published_at: $date, note: ("Self-healing: kuyrukta pending görünüyordu ama GitHub durumu " + $state + " idi — muhtemelen kuyruğu atlayarak manuel onaylanmıştı. Otomatik düzeltildi.")} else . end)' \
+              content/publish-queue.json > /tmp/queue.json
+            mv /tmp/queue.json content/publish-queue.json
+            FIXED_ANY=true
+          done
+
+          if [ "$FIXED_ANY" = "true" ]; then
+            git config user.name "AmareNL Publish Queue Bot"
+            git config user.email "actions@github.com"
+            git add content/publish-queue.json
+            git commit -m "queue: self-healing — bayat 'pending' kayıtları gerçek GitHub durumuna göre düzeltildi"
+            git push origin HEAD:main
+          fi
+
           REMAINING=$(jq '[.[] | select(.status=="pending")] | length' content/publish-queue.json)
           if [ -z "$NEXT_PR" ]; then
-            echo "📭 Yayın kuyruğu boş — işlenecek PR yok."
+            echo "📭 Yayın kuyruğu boş (veya hepsi bayattı, hepsi düzeltildi) — işlenecek gerçek PR yok."
             echo "empty=true" >> "$GITHUB_OUTPUT"
           else
             echo "empty=false" >> "$GITHUB_OUTPUT"
@@ -54,6 +96,63 @@ jobs:
       - name: Install dependencies
         if: steps.next.outputs.empty == 'false'
         run: npm ci
+
+      - name: Sync PR branch with main (auto-resolve known conflicts)
+        if: steps.next.outputs.empty == 'false'
+        id: sync
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ steps.next.outputs.pr }}
+        run: |
+          # Draft branches sit open for days while main keeps moving (new
+          # queue publishes + the Mon/Wed/Fri article cron both touch
+          # data/extra-articles.json + public/sitemap.xml). Without this,
+          # `gh pr merge` fails with "merge conflicts" every single run once
+          # main has moved past the branch's base — this is what happened to
+          # PR #3 on the first run of this workflow (2026-08-03).
+          BRANCH=$(gh pr view "$PR_NUMBER" --json headRefName -q .headRefName)
+          git config user.name "AmareNL Publish Queue Bot"
+          git config user.email "actions@github.com"
+          git fetch origin "$BRANCH"
+          git checkout -B "$BRANCH" "origin/$BRANCH"
+
+          if git merge origin/main --no-edit; then
+            echo "Branch already up to date or merged cleanly."
+          else
+            CONFLICTS=$(git diff --name-only --diff-filter=U)
+            UNEXPECTED=$(echo "$CONFLICTS" | grep -vE '^(data/extra-articles\.json|public/sitemap\.xml)$' || true)
+            if [ -n "$UNEXPECTED" ]; then
+              echo "::error::Unexpected conflict outside the known-safe files: $UNEXPECTED"
+              git merge --abort
+              exit 1
+            fi
+            node scripts/resolve-article-conflict.mjs
+            git checkout --theirs public/sitemap.xml
+            git add data/extra-articles.json public/sitemap.xml
+            jq . data/extra-articles.json > /dev/null   # fail loudly if invalid
+            git commit -m "queue: sync ${BRANCH} met main (auto-resolved article conflict)"
+          fi
+
+          git push origin "$BRANCH:$BRANCH"
+          git checkout main
+
+      - name: Wait for PR to become mergeable
+        if: steps.next.outputs.empty == 'false'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ steps.next.outputs.pr }}
+        run: |
+          # GitHub recomputes mergeable state async after a push — calling
+          # `gh pr merge` immediately after can hit "Pull Request is not
+          # mergeable" even though the conflict is already resolved.
+          for i in $(seq 1 15); do
+            STATE=$(gh pr view "$PR_NUMBER" --json mergeable -q .mergeable)
+            echo "mergeable=$STATE (attempt $i)"
+            [ "$STATE" = "MERGEABLE" ] && exit 0
+            sleep 3
+          done
+          echo "::error::PR #$PR_NUMBER never became mergeable (last state: $STATE)"
+          exit 1
 
       - name: Merge queued PR
         if: steps.next.outputs.empty == 'false'

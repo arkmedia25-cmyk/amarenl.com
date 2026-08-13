@@ -3,11 +3,26 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "X-XSS-Protection", "value": "1; mode=block" }
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
       ]
     }
   ],
@@ -144,16 +159,6 @@
     },
     {
       "source": "/pages/:path*",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/urun/:path*",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/products/:path*",
       "destination": "/",
       "permanent": true
     },
@@ -675,6 +680,66 @@
     {
       "source": "/category/:path*",
       "destination": "/blogs/nieuws",
+      "permanent": true
+    },
+    {
+      "source": "/amare-edge-grape",
+      "destination": "/edge-plus",
+      "permanent": true
+    },
+    {
+      "source": "/amare-edge-grape/",
+      "destination": "/edge-plus",
+      "permanent": true
+    },
+    {
+      "source": "/urun/restore",
+      "destination": "/restore",
+      "permanent": true
+    },
+    {
+      "source": "/urun/restore/",
+      "destination": "/restore",
+      "permanent": true
+    },
+    {
+      "source": "/urun/edge",
+      "destination": "/edge-plus",
+      "permanent": true
+    },
+    {
+      "source": "/urun/edge/",
+      "destination": "/edge-plus",
+      "permanent": true
+    },
+    {
+      "source": "/products/amare-happy-juice-edge-plus-watermelon",
+      "destination": "/happy-juice-pack",
+      "permanent": true
+    },
+    {
+      "source": "/products/amare-happy-juice-edge-plus-watermelon/",
+      "destination": "/happy-juice-pack",
+      "permanent": true
+    },
+    {
+      "source": "/products/amare-ignite-for-her",
+      "destination": "/ignite-for-her",
+      "permanent": true
+    },
+    {
+      "source": "/products/amare-ignite-for-her/",
+      "destination": "/ignite-for-her",
+      "permanent": true
+    },
+    {
+      "source": "/urun/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/products/:path*",
+      "destination": "/",
       "permanent": true
     }
   ]
