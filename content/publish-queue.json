@@ -35,7 +35,9 @@
   {
     "pr": 10,
     "title": "Happy Juice Pack vs Triangle of Wellness — welke past bij jou?",
-    "status": "pending"
+    "status": "published",
+    "published_at": "2026-08-13T09:05:40Z",
+    "note": "Self-healing: kuyrukta pending görünüyordu ama GitHub durumu MERGED idi — muhtemelen kuyruğu atlayarak manuel onaylanmıştı. Otomatik düzeltildi."
   },
   {
     "pr": 11,
