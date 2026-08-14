@@ -2914,6 +2914,42 @@ const articleProductMap: Record<string, ProductLink[]> = {
   "natuurlijke-slaap-supplementen-beter-slapen-zonder-melatonine": [
     { name: "Sleep+", url: `${AFFILIATE_BASE}/sleep-plus`, isInternal: false, tagline: "Magnesium + L-theanine + GABA + ashwagandha — melatoninevrije slaapformule" },
   ],
+  "supplementenlabel-lezen-waar-let-je-op": [
+    { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — psychobioticum voor de darm-hersen-as" },
+  ],
+  "30-dagen-happy-juice-pack-dagboek-ervaring": [
+    { name: "Happy Juice Pack", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — MentaBiotics + Energy+ + EDGE+ in één bundel" },
+    { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — los verkrijgbaar, onderdeel van de bundel" },
+    { name: "Energy+", url: "/energy", isInternal: true, price: "€55.48/maand", tagline: "Natuurlijke energie zonder crash — onderdeel van Happy Juice Pack" },
+    { name: "EDGE+", url: `${AFFILIATE_BASE}/amareedge-plus-mango`, isInternal: false, price: "€77.28/maand", tagline: "Plantaardig nootropicum — los of in de bundel" },
+  ],
+  "van-koffie-naar-nitro-xtreme-middagritueel": [
+    { name: "Nitro Xtreme", url: `${AFFILIATE_BASE}/nitro-xtreme`, isInternal: false, price: "€80/maand", tagline: "Nitraten + 56 mineralen voor focus & energie" },
+    { name: "Triangle of Wellness", url: `${AFFILIATE_BASE}/triangle-of-wellness-xtreme`, isInternal: false, price: "€123.55/maand", tagline: "Sunrise + Nitro Xtreme + Sunset — complete dag-nacht routine" },
+    { name: "Sunrise", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "22 superfoods + 9 vitamines — de ochtendbasis" },
+    { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Omega-3 + D3 + K2 + magnesium — de avondformule" },
+  ],
+  "supplementen-bewaren-zomer-hitte-vocht-zonlicht": [
+    { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — psychobioticum voor de darm-hersen-as" },
+    { name: "EDGE+", url: `${AFFILIATE_BASE}/amareedge-plus-mango`, isInternal: false, price: "€77.28/maand", tagline: "Nootropic voor focus & energie — ondersteunt consistente training" },
+    { name: "Nitro Xtreme", url: `${AFFILIATE_BASE}/nitro-xtreme`, isInternal: false, price: "€80/maand", tagline: "Nitraten + 56 mineralen voor focus & energie" },
+  ],
+  "natuurlijke-supplementen-waarheid-marketing-mythe": [
+    { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — psychobioticum voor de darm-hersen-as" },
+  ],
+  "seizoensgebonden-supplementeren-herfst-winter-zomer": [
+    { name: "Nitro Xtreme", url: `${AFFILIATE_BASE}/nitro-xtreme`, isInternal: false, price: "€80/maand", tagline: "Nitraten + 56 mineralen voor focus & energie" },
+    { name: "Triangle of Wellness", url: `${AFFILIATE_BASE}/triangle-of-wellness-xtreme`, isInternal: false, price: "€123.55/maand", tagline: "Sunrise + Nitro Xtreme + Sunset — complete dag-nacht routine" },
+    { name: "Sunrise", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "22 superfoods + 9 vitamines — de ochtendbasis" },
+    { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Omega-3 + D3 + K2 + magnesium — de avondformule" },
+  ],
+  "terug-naar-kantoor-darmen-mentabiotics-restore": [
+    { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — probiotica voor stemming & mentale veerkracht" },
+    { name: "Restore", url: "/restore", isInternal: true, price: "€29.70/maand", tagline: "5 probiotica stammen + 5 spijsverteringsenzymen" },
+  ],
+  "collageen-mannen-30-huid-spieren-gewrichten": [
+    { name: "HL5", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "5g gehydrolyseerd collageen Type 1&3 — 2-pack beste waarde" },
+  ],
 };
 
 export function getProductLinksForArticle(slug: string): ProductLink[] {
