@@ -131,6 +131,41 @@ public/images/              # Statische assets
 - SiteLinksSearch schema voor branded SERP
 - Crawl-delay: 1 (snelle indexatie)
 
+### 🆕 GSC 404 Temizliği (04 Agu 2026)
+
+**Sorun:** Google Search Console 117 URL'i 404 olarak raporluyordu (eski WordPress/Shopify kalıntıları + geçiş sırasında kaybolan sayfalar).
+
+**Yapılanlar:**
+
+1. **vercel.json — 10 yeni yönlendirme eklendi** (toplam 143 redirect):
+   - `/amare-edge-grape` → `/edge-plus`
+   - `/urun/restore` → `/restore` (spesifik, wildcard'dan önce)
+   - `/urun/edge` → `/edge-plus` (spesifik, wildcard'dan önce)
+   - `/products/amare-happy-juice-edge-plus-watermelon` → `/happy-juice-pack`
+   - `/products/amare-ignite-for-her` → `/ignite-for-her`
+   - Tüm redirect'ler `permanent: true` (301)
+
+2. **robots.txt güncellendi** — WordPress/Shopify sistem URL'leri Disallow:
+   - `/?page_id=`, `/wp-content/`, `/wp-admin/`, `/feed=`, `/author/`
+   - `/sample-page/`, `/collections/`, `/policies/`, `/cdn`, `/wpm`
+   - Google'ın bu kalıntıları tekrar taraması caydırıldı
+
+3. **Sonraki adım (manuel — Musa yapacak):**
+   - Deploy ettikten sonra GSC'de URL Inspection ile birkaç eski URL'i kontrol et
+   - GSC > Coverage > Not Found listesini "Doğrula" butonu ile güncelle
+
+**Not:** `nitro-xtreme`, `sunset`, `fit20` sayfaları zaten mevcut — GSC'de bunların 404 görünmesi önbellek/gecikmeli indeks sorunu, kod tarafında sorun yok.
+
+---
+
+### 🆕 Faz 5 — Meta Ads Lead Generation (07-08 Aug 2026, in uitvoering)
+Betaald NL-verkeer naar `/gratis-gut-brain-gids`. **07-08:** kritieke lead-capture bug gevonden en
+gefixt (formulieren gaven altijd 500/verloren leads stil via MailerLite 422), concurrentie-analyse
+ververst (Vitakruid/Nutriphyt/Orthica — Nutriphyt's 409-dagen-lopende advertentie is het sterkste
+signaal). **08-08:** creative-scenario compleet, definitieve keuze gemaakt: **varianten A (gut-brain
+illustratie) + B (gids-mockup)**, variant C afgevallen. Nog niet live — volgende stap is de Pixel-
+CAPI-check en ad-account setup. Volledige details: zie `CLAUDE.md` sectie 20, subsectie "Faz 5".
+
 ### 🆕 Agency OS — Faz 1 & 2 (28 Tem 2026)
 Volledig geautomatiseerde, maar **mens-gecontroleerde** content-pipeline. Details + openstaande
 punten: zie `CLAUDE.md` sectie 20 ("AGENCY OS STATUS"). Kort:
@@ -160,14 +195,15 @@ punten: zie `CLAUDE.md` sectie 20 ("AGENCY OS STATUS"). Kort:
 - [ ] 3 pillar pages (Gut-Brain Axis, Probiotica Stammen, Adaptogenen) — kısmen yazıldı
 
 ### Infrastructuur
-- [ ] E-mail API route (/api/subscribe) — Mailchimp integratie
-- [ ] Mail credentials in .env.local
+- [x] ~~E-mail API route (/api/subscribe) — Mailchimp integratie~~ — bestaat al (MailerLite, niet
+      Mailchimp), maar gaf tot 07-08-2026 altijd 500/verloren leads — zie Faz 5 hierboven, nu gefixt
 - [ ] GA4 conversion tracking voor affiliate clicks (TASK 12.1)
 - [ ] verdikkend-serum-voor-fijn-haar → Amare server 500 (buiten onze controle)
 - [ ] **Vercel deploy inhalen** zodra de 24u free-plan upload-limiet reset (geraakt 28-07-2026, te veel
       test-deploys op één dag) — zie `CLAUDE.md` sectie 20
-- [ ] **Faz 3** (video, Higgsfield) en **Faz 4** (social copy drafts) — bewust uitgesteld naar een
-      verse sessie, nog niet gestart
+- [ ] **Faz 3** (video, Higgsfield) — nog steeds on hold (account/betaling, zie `CLAUDE.md`)
+- [ ] **Faz 4** (Pinterest) — infrastructuur klaar, wacht op Pinterest Standard access
+- [ ] **Faz 5** (Meta Ads) — gestart 07-08-2026, creative-scenario in review, nog niet live (zie hierboven)
 
 ### Bekende Issues
 - `verdikkend-serum-voor-fijn-haar` — HTTP 500 op Amare.com (server-side)

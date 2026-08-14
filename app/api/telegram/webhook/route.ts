@@ -99,7 +99,17 @@ interface PinQueueItem {
   status: string;
 }
 
+interface SocialQueueItem {
+  id: string;
+  topic: string;
+  caption: string;
+  image: string;
+  link: string;
+  status: string;
+}
+
 const PIN_QUEUE_PATH = "content/pinterest-queue.json";
+const SOCIAL_QUEUE_PATH = "content/social-queue.json";
 
 async function getPinQueueFile(): Promise<{ items: PinQueueItem[]; sha: string }> {
   const token = process.env.GH_DISPATCH_TOKEN;
@@ -142,6 +152,81 @@ async function updatePinQueueFile(items: PinQueueItem[], sha: string, message: s
     }
   );
   if (!res.ok) throw new Error(`GitHub update pin queue failed: ${res.status} ${await res.text()}`);
+}
+
+async function getSocialQueueFile(): Promise<{ items: SocialQueueItem[]; sha: string }> {
+  const token = process.env.GH_DISPATCH_TOKEN;
+  if (!token) throw new Error("GH_DISPATCH_TOKEN not configured");
+  const res = await fetch(
+    `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${SOCIAL_QUEUE_PATH}`,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        Accept: "application/vnd.github+json",
+      },
+      cache: "no-store",
+    }
+  );
+  if (!res.ok) throw new Error(`GitHub fetch social queue failed: ${res.status} ${await res.text()}`);
+  const data = (await res.json()) as { content: string; sha: string };
+  const items = JSON.parse(Buffer.from(data.content, "base64").toString("utf-8")) as SocialQueueItem[];
+  return { items, sha: data.sha };
+}
+
+async function updateSocialQueueFile(items: SocialQueueItem[], sha: string, message: string) {
+  const token = process.env.GH_DISPATCH_TOKEN;
+  if (!token) throw new Error("GH_DISPATCH_TOKEN not configured");
+  const content = Buffer.from(JSON.stringify(items, null, 2) + "\n", "utf-8").toString("base64");
+  const res = await fetch(
+    `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${SOCIAL_QUEUE_PATH}`,
+    {
+      method: "PUT",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        Accept: "application/vnd.github+json",
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        message,
+        content,
+        sha,
+        committer: { name: "AmareNL Social Bot", email: "actions@github.com" },
+      }),
+    }
+  );
+  if (!res.ok) throw new Error(`GitHub update social queue failed: ${res.status} ${await res.text()}`);
+}
+
+// Instagram Content Publishing API — iki adımlı: önce bir media container
+// oluşturulur (görsel URL'i + caption), sonra o container yayınlanır.
+async function createInstagramPost(accessToken: string, igUserId: string, item: SocialQueueItem): Promise<string> {
+  const createRes = await fetch(`https://graph.facebook.com/v21.0/${igUserId}/media`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      image_url: item.image,
+      caption: item.caption,
+      access_token: accessToken,
+    }),
+  });
+  const createData = (await createRes.json()) as { id?: string; error?: unknown };
+  if (!createRes.ok || !createData.id) {
+    throw new Error(`Instagram media oluşturma başarısız: ${JSON.stringify(createData)}`);
+  }
+
+  const publishRes = await fetch(`https://graph.facebook.com/v21.0/${igUserId}/media_publish`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      creation_id: createData.id,
+      access_token: accessToken,
+    }),
+  });
+  const publishData = (await publishRes.json()) as { id?: string; error?: unknown };
+  if (!publishRes.ok || !publishData.id) {
+    throw new Error(`Instagram yayınlama başarısız: ${JSON.stringify(publishData)}`);
+  }
+  return publishData.id;
 }
 
 async function resolvePinterestBoardId(accessToken: string, categoryName: string): Promise<string> {
@@ -270,6 +355,75 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ ok: true });
     } catch (err) {
       console.error("[telegram-webhook][pinterest]", err);
+      await telegramApi("answerCallbackQuery", {
+        callback_query_id: cq.id,
+        text: "⚠️ Bir hata oluştu, tekrar dene.",
+        show_alert: true,
+      }).catch(() => {});
+      return NextResponse.json({ ok: false }, { status: 500 });
+    }
+  }
+
+  if (action === "ig_approve" || action === "ig_reject") {
+    try {
+      const { items, sha } = await getSocialQueueFile();
+      const post = items.find((p) => p.id === id);
+
+      if (!post) {
+        await telegramApi("answerCallbackQuery", {
+          callback_query_id: cq.id,
+          text: "⚠️ Gönderi bulunamadı (kuyrukta yok).",
+          show_alert: true,
+        });
+        return NextResponse.json({ ok: false }, { status: 404 });
+      }
+
+      if (action === "ig_reject") {
+        post.status = "rejected";
+        await updateSocialQueueFile(items, sha, `social: reddedildi — ${post.id}`);
+        await telegramApi("answerCallbackQuery", {
+          callback_query_id: cq.id,
+          text: `❌ ${post.id} reddedildi.`,
+        });
+        await telegramApi("editMessageReplyMarkup", {
+          chat_id: cq.message.chat.id,
+          message_id: cq.message.message_id,
+          reply_markup: { inline_keyboard: [[{ text: "❌ Reddedildi", callback_data: "noop" }]] },
+        });
+        return NextResponse.json({ ok: true });
+      }
+
+      // ig_approve
+      const accessToken = process.env.META_IG_ACCESS_TOKEN;
+      const igUserId = process.env.META_IG_USER_ID;
+      if (!accessToken || !igUserId) {
+        await telegramApi("answerCallbackQuery", {
+          callback_query_id: cq.id,
+          text: "⚠️ Instagram henüz bağlı değil (META_IG_ACCESS_TOKEN/META_IG_USER_ID eksik).",
+          show_alert: true,
+        });
+        return NextResponse.json({ ok: false, error: "META_IG_ACCESS_TOKEN or META_IG_USER_ID not configured" }, { status: 500 });
+      }
+
+      const publishedId = await createInstagramPost(accessToken, igUserId, post);
+
+      post.status = "posted";
+      await updateSocialQueueFile(items, sha, `social: yayınlandı — ${post.id}`);
+
+      await telegramApi("answerCallbackQuery", {
+        callback_query_id: cq.id,
+        text: `✅ ${post.id} Instagram'a gönderildi!`,
+      });
+      await telegramApi("editMessageReplyMarkup", {
+        chat_id: cq.message.chat.id,
+        message_id: cq.message.message_id,
+        reply_markup: {
+          inline_keyboard: [[{ text: "✅ Yayınlandı", url: `https://www.instagram.com/p/${publishedId}/` }]],
+        },
+      });
+      return NextResponse.json({ ok: true });
+    } catch (err) {
+      console.error("[telegram-webhook][instagram]", err);
       await telegramApi("answerCallbackQuery", {
         callback_query_id: cq.id,
         text: "⚠️ Bir hata oluştu, tekrar dene.",
