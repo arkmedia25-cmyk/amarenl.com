@@ -45,6 +45,34 @@ jobs:
             echo "GSC_EOF"
           } >> "$GITHUB_OUTPUT"
 
+      - name: Fetch Meta Ads CPL summary
+        id: metaads
+        env:
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+        run: |
+          if [ -z "$META_ACCESS_TOKEN" ]; then
+            echo "summary=Meta Ads niet gekoppeld (secret ontbreekt)" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          RESPONSE=$(curl -sS "https://graph.facebook.com/v21.0/act_1523034172332806/insights?fields=spend,actions,impressions,clicks&date_preset=last_7d&access_token=${META_ACCESS_TOKEN}")
+          OUTPUT=$(echo "$RESPONSE" | jq -r '
+            if .error then "Meta API-fout: \(.error.message)"
+            else
+              (.data[0] // {}) as $d |
+              (($d.spend // "0") | tonumber) as $spend |
+              (($d.impressions // "0") | tonumber) as $impressions |
+              (($d.clicks // "0") | tonumber) as $clicks |
+              (($d.actions // []) | map(select(.action_type=="lead" or .action_type=="offsite_conversion.fb_pixel_lead")) | map(.value|tonumber) | add // 0) as $leads |
+              "Spend: €\($spend) · Impressies: \($impressions) · Clicks: \($clicks) · Leads: \($leads)" +
+              (if $leads > 0 then " · CPL: €\(($spend / $leads) * 100 | round / 100)" else " · CPL: n.v.t. (nog geen leads)" end)
+            end
+          ')
+          {
+            echo "summary<<META_EOF"
+            echo "$OUTPUT"
+            echo "META_EOF"
+          } >> "$GITHUB_OUTPUT"
+
       - name: Build and send status summary
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -52,6 +80,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TELEGRAM_THREAD_ID: ${{ secrets.TELEGRAM_THREAD_ID }}
           GSC_SUMMARY: ${{ steps.gsc.outputs.summary }}
+          META_SUMMARY: ${{ steps.metaads.outputs.summary }}
         run: |
           runstatus() {
             # $1 = workflow file name
@@ -73,8 +102,8 @@ jobs:
             QUEUE_SUMMARY="dosya bulunamadı"
           fi
 
-          TEXT=$(printf '📊 Haftalık AmareNL Agency OS Durumu\n\n📝 Faz 2 (makale üretimi): %s\n📌 Faz 4 (Pinterest kuyruğu): %s\n🚀 Son deploy: %s\n\n📋 Telegram onay kuyruğunda bekleyen PR: %s\n📌 Pin kuyruğu durumu: %s\n\n🔎 GSC (son 7 gün):\n%s' \
-            "$ARTICLE_STATUS" "$PINTEREST_STATUS" "$DEPLOY_STATUS" "$OPEN_PRS" "$QUEUE_SUMMARY" "$GSC_SUMMARY")
+          TEXT=$(printf '📊 Haftalık AmareNL Agency OS Durumu\n\n📝 Faz 2 (makale üretimi): %s\n📌 Faz 4 (Pinterest kuyruğu): %s\n🚀 Son deploy: %s\n\n📋 Telegram onay kuyruğunda bekleyen PR: %s\n📌 Pin kuyruğu durumu: %s\n\n💸 Faz 5 (Meta Ads, son 7 gün):\n%s\n\n🔎 GSC (son 7 gün):\n%s' \
+            "$ARTICLE_STATUS" "$PINTEREST_STATUS" "$DEPLOY_STATUS" "$OPEN_PRS" "$QUEUE_SUMMARY" "$META_SUMMARY" "$GSC_SUMMARY")
 
           PAYLOAD=$(jq -n --arg chat_id "$TELEGRAM_CHAT_ID" --arg text "$TEXT" \
             --arg thread_id "${TELEGRAM_THREAD_ID:-}" \
