@@ -37,7 +37,7 @@ jobs:
           fi
           mkdir -p /tmp/gsc
           echo "$GSC_SERVICE_ACCOUNT_JSON_B64" | base64 -d > /tmp/gsc/service-account.json
-          GSC_KEY_PATH=/tmp/gsc/service-account.json OUTPUT=$(node scripts/gsc-report.mjs summary 7 2>&1) || OUTPUT="GSC sorgusu başarısız: $OUTPUT"
+          OUTPUT=$(GSC_KEY_PATH=/tmp/gsc/service-account.json node scripts/gsc-report.mjs summary 7 2>&1) || OUTPUT="GSC sorgusu başarısız: $OUTPUT"
           rm -f /tmp/gsc/service-account.json
           {
             echo "summary<<GSC_EOF"
