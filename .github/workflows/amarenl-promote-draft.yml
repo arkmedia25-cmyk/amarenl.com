@@ -20,7 +20,63 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Sync PR branch with main (auto-resolve known conflicts)
+        id: sync
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.client_payload.pr_number }}
+        run: |
+          # Draft branches can sit open for days while main keeps moving (new
+          # queue publishes + the Mon/Wed/Fri article cron both touch
+          # data/extra-articles.json + public/sitemap.xml). Without this,
+          # `gh pr merge` fails with "merge conflicts" for any PR approved
+          # after main has moved past its base.
+          BRANCH=$(gh pr view "$PR_NUMBER" --json headRefName -q .headRefName)
+          git config user.name "AmareNL Article Bot"
+          git config user.email "actions@github.com"
+          git fetch origin "$BRANCH"
+          git checkout -B "$BRANCH" "origin/$BRANCH"
+
+          if git merge origin/main --no-edit; then
+            echo "Branch already up to date or merged cleanly."
+          else
+            CONFLICTS=$(git diff --name-only --diff-filter=U)
+            UNEXPECTED=$(echo "$CONFLICTS" | grep -vE '^(data/extra-articles\.json|public/sitemap\.xml)$' || true)
+            if [ -n "$UNEXPECTED" ]; then
+              echo "::error::Unexpected conflict outside the known-safe files: $UNEXPECTED"
+              git merge --abort
+              exit 1
+            fi
+            node scripts/resolve-article-conflict.mjs
+            git checkout --theirs public/sitemap.xml
+            git add data/extra-articles.json public/sitemap.xml
+            jq . data/extra-articles.json > /dev/null
+            git commit -m "queue: sync ${BRANCH} met main (auto-resolved article conflict)"
+          fi
+
+          git push origin "$BRANCH:$BRANCH"
+          git checkout main
+
+      - name: Wait for PR to become mergeable
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.client_payload.pr_number }}
+        run: |
+          for i in $(seq 1 15); do
+            STATE=$(gh pr view "$PR_NUMBER" --json mergeable -q .mergeable)
+            echo "mergeable=$STATE (attempt $i)"
+            [ "$STATE" = "MERGEABLE" ] && exit 0
+            sleep 3
+          done
+          echo "::error::PR #$PR_NUMBER never became mergeable (last state: $STATE)"
+          exit 1
 
       - name: Merge approved PR
         id: merge
@@ -33,11 +89,6 @@ jobs:
 
       - name: Pull merged main
         run: git pull origin main
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "22"
 
       - name: Install dependencies
         run: npm ci

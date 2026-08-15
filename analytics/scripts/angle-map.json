@@ -1,0 +1,6 @@
+{
+  "_comment": "Meta ad_name -> strategic angle. Add an entry per new ad you launch. Unmapped ad names fall back to 'unmapped' so nothing silently disappears from reporting.",
+  "Ad 1 - Nieuwsgierigheid Quiz": "curiosity_quiz",
+  "Ad 2 - Pijnpunt Energie": "pain_point_energy",
+  "Ad 3 - Social Proof": "social_proof"
+}

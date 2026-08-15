@@ -1,0 +1,4 @@
+file 'hook_slide.png'
+duration 3
+file 'main_slide.png'
+duration 10
