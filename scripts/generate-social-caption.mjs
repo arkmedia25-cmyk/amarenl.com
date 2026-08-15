@@ -12,11 +12,14 @@
  * kullanılıyor — tutarlılık için, sıfırdan icat etmiyoruz.
  *
  * NEDEN Higgsfield DEĞİL: kredi neredeyse sıfır (paylaşımlı havuz, bugün 403
- * hatası da verdi). Bu yüzden ÜRETİLMİŞ videolardan (leadgen-gutbrain,
- * leadgen-yorgunluk) çıkarılmış duruk kareler kullanılıyor — maliyet sıfır.
- * SADECE stres/tükenmişlik/kalp-damar konuları için henüz görsel YOK (o
- * videolar hiç üretilmedi) — TOPICS listesine onlar bilerek eklenmedi, ekleme
- * için önce o videoların üretilmesi (ya da yeni marka-nötr görsel) gerekiyor.
+ * hatası da verdi). İlk 3 konu (gutbrain, yorgunluk x2) ÜRETİLMİŞ videolardan
+ * (leadgen-gutbrain, leadgen-yorgunluk) çıkarılmış duruk kareler kullanıyor.
+ * 15-08-2026'da Kie.ai bağlandı (bkz. .env.local KIE_API_KEY, ayrı hesap,
+ * Higgsfield'den bağımsız kredi havuzu) — stres/tükenmişlik/slaap konuları
+ * için marka-nötr görseller (agentic-os/scripts/gen-image.ts, model
+ * nano-banana-2, aspect 4:5) bu kredilerle üretildi, TOPICS'e eklendi.
+ * Yeni konu eklemek istersen aynı yöntemi kullan: yüz yok, ürün/marka yok,
+ * sıcak/mor tonlu cinematic lifestyle foto, 4:5 aspect.
  *
  * NEDEN aynı yasaklı-iddia kontrolü var: bugün (10-08) makale üretiminde
  * "voorkomt" kelimesine takılıp sessizce 3 kez başarısız olan script aynı
@@ -50,6 +53,21 @@ const TOPICS = [
     key: "yorgunluk-mechanism",
     hookFact: "Waarom voel je je leeg, ook als je 'genoeg' slaapt? Het antwoord zit vaak niet in hoevéél je slaapt, maar in wat er op celniveau gebeurt terwijl je slaapt.",
     image: "content/social-assets/yorgunluk-mechanism.jpg",
+  },
+  {
+    key: "stress",
+    hookFact: "Aanhoudende stress houdt je lichaam continu in de 'aan'-stand. Dat kost energie die je niet terugkrijgt door alleen maar door te werken — herstel gebeurt niet vanzelf tussen twee taken door.",
+    image: "content/social-assets/social-stress.jpg",
+  },
+  {
+    key: "burnout",
+    hookFact: "Opgebrand voelen komt zelden van één drukke week. Het bouwt zich sluipend op — je merkt het pas als je lichaam je dwingt te stoppen, terwijl de signalen er allang waren.",
+    image: "content/social-assets/social-burnout.jpg",
+  },
+  {
+    key: "slaap",
+    hookFact: "Wakker liggen om 3 uur 's nachts, terwijl je lichaam doodmoe is? Dat is geen wilskwestie — het zegt iets over hoe je systeem omgaat met herstel, niet over hoeveel uur je in bed ligt.",
+    image: "content/social-assets/social-slaap.jpg",
   },
 ];
 
