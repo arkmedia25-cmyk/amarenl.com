@@ -718,6 +718,21 @@
       "permanent": true
     },
     {
+      "source": "/blogs/nieuws/beter-slapen-natuurlijke-slaapmiddelen-die-werken",
+      "destination": "/blogs/nieuws/natuurlijke-slaap-supplementen-beter-slapen-zonder-melatonine",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/magnesium-slaap-supplement-nederland",
+      "destination": "/blogs/nieuws/magnesium-supplement-slapen-spieren-stress",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/beter-slapen-zonder-medicatie-supplementen-nachtrust",
+      "destination": "/blogs/nieuws/natuurlijke-slaap-supplementen-beter-slapen-zonder-melatonine",
+      "permanent": true
+    },
+    {
       "source": "/category/:path*",
       "destination": "/blogs/nieuws",
       "permanent": true

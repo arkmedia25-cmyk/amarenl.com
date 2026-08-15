@@ -18,7 +18,7 @@
 | 1 | 17 Tem | P1 | **collageen** | **16.000** | ✅ Collageen Complete Gids — yayında | HL5 |
 | 2 | 19 Tem | P2 | **collageen poeder** | **12.000** | Collageen Poeder vs Vloeibaar: Wat Is Beter? | HL5 |
 | 3 | 21 Tem | M1 | **waar zit magnesium in** | **4.600** | Waar Zit Magnesium In? Voedingsbronnen & Supplementen | Sunrise |
-| 4 | 23 Tem | M2 | **magnesium slaap** | **4.200** | Magnesium en Slapen: De Complete Gids voor Diepe Nachtrust | Sleep+, Sunset |
+| 4 | 23 Tem | M2 | **magnesium slaap** | **4.200** | ✅ magnesium-supplement-slapen-spieren-stress — yayında (2 duplicate 15-08'de temizlendi) | Sleep+, Sunset |
 | 5 | 25 Tem | V1 | **vitamine d voeding** | **5.100** | Vitamine D in Voeding: Welke Producten Helpen Echt? | Sunrise |
 | 6 | 27 Tem | V2 | **vitamine c tekort** | **1.700** | Vitamine C Tekort: Symptomen, Oorzaken & Oplossingen | Sunrise, VitaGBX |
 | 7 | 29 Tem | O1 | **omega-3 bijwerkingen** | **3.800** | Omega-3 Bijwerkingen en Voordelen: Eerlijk Verhaal | Sunset, OmMega |
@@ -109,7 +109,7 @@ Week 2: B3-4 (Pzt 28 jul) → B3-5 (Çrş 30 jul) → B3-6 (Cum 1 aug)
 | N12 | Darmgezondheid Verbeteren: 10 Dagelijkse Gewoontes | darmgezondheid-verbeteren-dagelijkse-gewoontes | darmen | MentaBiotics, Restore, SeedFiber | 1.300 | ⏳ |
 | N13 | Collageen Poeder vs Pillen: Wat is Beter? | collageen-poeder-vs-pillen-vergelijking | schoonheid | HL5, NeuCollagen | 600 | ⏳ |
 | N14 | Supplementen bij Winterdip: Voorkomen & Behandelen | supplementen-winterdip-voorkomen-behandelen | mentaal | Sunrise, Sunset, Energy+ | 500 | ⏳ |
-| N15 | De Gut-Brain Axis en Slaap: De Connectie Uitgelegd | gut-brain-axis-slaap-connectie-nachtrust | darmen | Sleep+, MentaBiotics, Sunset | 650 | ⏳ |
+| N15 | De Gut-Brain Axis en Slaap: De Connectie Uitgelegd | gut-brain-axis-slaap-connectie-nachtrust | darmen | Sleep+, MentaBiotics, Sunset | 650 | ✅ (al live) |
 
 > *Tahmini aylık NL arama hacmi
 
@@ -143,7 +143,7 @@ Week 5: N13 (ma) → N14 (wo) → N15 (vr)
 | # | Makale Başlığı (NL) | Slug | Kategori | Hedef Ürün | Arama* | Status |
 |---|---------------------|------|----------|------------|--------|--------|
 | 5 | Vitamine D Tekort in Nederland | vitamine-d-tekort-nederland-oorzaken-oplossingen | essentials | Sunrise, Sunset | 5.100 | 🔄 |
-| 6 | Magnesium voor Slaap en Stress | magnesium-slaap-stress-spierontspanning-voordelen | essentials | MentaBiotics, Restore | 4.200 | ⏳ |
+| 6 | Magnesium voor Slaap en Stress | ~~magnesium-slaap-stress-spierontspanning-voordelen~~ → magnesium-supplement-slapen-spieren-stress | essentials | MentaBiotics, Restore | 4.200 | ✅ (al live onder ander slug) |
 | 7 | Omega-3: De Ultieme Gids | omega-3-hersenen-hart-voordelen-supplementen | essentials | Sunset, OmMega | 3.800 | ⏳ |
 | 8 | Haaruitval bij Vrouwen | haaruitval-vrouwen-oorzaken-natuurlijke-oplossingen | schoonheid | Rootist, HL5 | 2.600 | 🔄 |
 | 9 | Overgang en Supplementen | ~~overgang-supplementen-menopauze-natuurlijk-ondersteuning~~ → menopauze-supplement-natuurlijke-ondersteuning-overgang | hormonen | Ignite Her, Sunset | 2.300 | ✅ (duplicate opgeruimd 15-08) |
@@ -164,7 +164,7 @@ Week 5: N13 (ma) → N14 (wo) → N15 (vr)
 | # | Makale Başlığı (NL) | Slug | Kategori | Hedef Ürün | Arama* | Status |
 |---|---------------------|------|----------|------------|--------|--------|
 | 16 | Cortisol Verlagen | cortisol-verlagen-natuurlijk-stresshormoon-balans | hormonen | MentaBiotics, Ignite | 1.200 | ⏳ |
-| 17 | Beter Slapen Zonder Medicatie | beter-slapen-zonder-medicatie-supplementen-nachtrust | wellness | Sleep+, Sunset | 1.100 | ⏳ |
+| 17 | Beter Slapen Zonder Medicatie | ~~beter-slapen-zonder-medicatie-supplementen-nachtrust~~ → natuurlijke-slaap-supplementen-beter-slapen-zonder-melatonine | wellness | Sleep+, Sunset | 1.100 | ✅ (duplicate opgeruimd 15-08) |
 | 18 | Hormoonbalans Vrouw | hormoonbalans-vrouw-supplementen-levensfase | hormonen | Ignite Her, Sunset | 950 | ⏳ |
 | 19 | Prebiotica vs Probiotica | prebiotica-probiotica-verschil-darmen-uitleg | darmen | MentaBiotics, SeedFiber | 900 | 🔄 |
 | 20 | Kids en Supplementen | kids-supplementen-nodig-groei-focus-school | kids | Kids VitaGBX, Kids Mood+ | 700 | ⏳ |
