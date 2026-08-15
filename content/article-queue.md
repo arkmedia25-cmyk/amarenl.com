@@ -23,10 +23,10 @@
 | 6 | 27 Tem | V2 | **vitamine c tekort** | **1.700** | Vitamine C Tekort: Symptomen, Oorzaken & Oplossingen | Sunrise, VitaGBX |
 | 7 | 29 Tem | O1 | **omega-3 bijwerkingen** | **3.800** | Omega-3 Bijwerkingen en Voordelen: Eerlijk Verhaal | Sunset, OmMega |
 | 8 | 31 Tem | S1 | **natuurlijke ontstekingsremmers** | **1.800** | Natuurlijke Ontstekingsremmers: Supplementen Die Werken | Restore, OmMega |
-| 9 | 2 Ağu | H1 | **overgang supplementen** | **2.300** | Overgang en Supplementen: Complete Gids 2026 | Ignite Her, Sunset |
+| 9 | 2 Ağu | H1 | **overgang supplementen** | **2.300** | ✅ menopauze-supplement-natuurlijke-ondersteuning-overgang — yayında (2 duplicate 15-08'de temizlendi) | Ignite Her, Sunset |
 | 10 | 4 Ağu | E1 | **supplementen abonnement** | **2.900** | Supplementen Abonnement: Elke Maand in Huis | Happy Juice Pack |
 | 11 | 6 Ağu | I1 | **ijzertekort supplementen** | **1.400** | IJzertekort: Supplementen Die Echt Helpen | Sunrise |
-| 12 | 8 Ağu | C1 | **collageen mannen** | **800** | Collageen voor Mannen 30+: Ook Belangrijk | HL5 |
+| 12 | 8 Ağu | C1 | **collageen mannen** | **800** | ✅ collageen-mannen-30-huid-gewrichten-spierherstel — yayında (2 duplicate 15-08'de temizlendi) | HL5 |
 | 13 | 10 Ağu | C2 | **collageen resultaten** | **600** | Collageen Resultaten: Voor en Na 4-8-12 Weken | HL5 |
 | 14 | 12 Ağu | Z1 | **zwangerschap supplementen** | **1.300** | Zwangerschap en Supplementen: Wat Mag Wel en Niet? | VitaGBX |
 | 15 | 14 Ağu | W1 | **winter supplementen** | **800** | Supplementen Tegen Winterdip: Voorbereiden op de Kou | Sunrise, Sunset |
@@ -46,7 +46,7 @@
 |---|---------------|--------|-------------|------|--------|
 | **P1** | **collageen** | **16.000** | 🔴 Collageen: De Complete Gids 2026 — Pillar Page — **Sıvı vs Toz karşılaştırması öne çıksın** | HL5 (vloeibaar) | ⏳ |
 | **P2** | **collageen poeder** | **12.000** | 🟡 Collageen Poeder vs Vloeibaar: Wat Is Beter? — **HL5 sıvı = 3x betere opname** | HL5 | ⏳ |
-| **P3** | collageen mannen | ~800 | 🟢 Collageen voor Mannen 30+ — **Vloeibaar, makkelijk in ochtendroutine** | HL5 | ⏳ |
+| **P3** | collageen mannen | ~800 | 🟢 Collageen voor Mannen 30+ — **Vloeibaar, makkelijk in ochtendroutine** | HL5 | ✅ (collageen-mannen-30-huid-gewrichten-spierherstel, 2 duplicate 15-08 opgeruimd) |
 | **P4** | collageen resultaten | ~600 | 🟢 Collageen Resultaten: Voor en Na 4-8-12 Weken — **Sıvı = sneller zichtbaar** | HL5, NeuCollagen | ⏳ |
 | **P5** | collageen type 1 2 3 | ~500 | 🟢 Collageen Types — **HL5 Type 1&3 vloeibaar = beste opname** | HL5, NeuCollagen | ⏳ |
 | **P6** | collageen vitamine c | ~400 | 🟢 Collageen + Vitamine C — **HL5 bevat al Vit C + Hyaluronzuur** | HL5, Sunrise | ⏳ |
@@ -86,7 +86,7 @@ Week 2: B3-4 (Pzt 28 jul) → B3-5 (Çrş 30 jul) → B3-6 (Cum 1 aug)
 | # | Makale Başlığı (NL) | Slug | Kategori | Hedef Ürün | Arama* | Status |
 |---|---------------------|------|----------|------------|--------|--------|
 | N1 | Haaruitval bij Vrouwen: Oorzaken & Natuurlijke Oplossingen | haaruitval-vrouwen-oorzaken-natuurlijke-oplossingen | schoonheid | HL5, NeuCollagen | 2.600 | ⏳ |
-| N2 | Overgang en Supplementen: Natuurlijke Ondersteuning bij de Menopauze | overgang-supplementen-menopauze-natuurlijk-ondersteuning | hormonen | Ignite Her, Sunset | 2.300 | ⏳ |
+| N2 | Overgang en Supplementen: Natuurlijke Ondersteuning bij de Menopauze | ~~overgang-supplementen-menopauze-natuurlijk-ondersteuning~~ → menopauze-supplement-natuurlijke-ondersteuning-overgang | hormonen | Ignite Her, Sunset | 2.300 | ✅ (duplicate opgeruimd 15-08) |
 | N3 | Prebiotica vs Probiotica: Wat is het Verschil en Heb je Beide Nodig? | prebiotica-probiotica-verschil-darmen-uitleg | darmen | MentaBiotics, SeedFiber | 900 | ⏳ |
 | N4 | Vitamine D Tekort in Nederland: Oorzaken, Symptomen & Oplossingen | vitamine-d-tekort-nederland-oorzaken-oplossingen | essentials | Sunrise, Sunset | 5.100 | ⏳ |
 
@@ -94,8 +94,8 @@ Week 2: B3-4 (Pzt 28 jul) → B3-5 (Çrş 30 jul) → B3-6 (Cum 1 aug)
 
 | # | Makale Başlığı (NL) | Slug | Kategori | Hedef Ürün | Arama* | Status |
 |---|---------------------|------|----------|------------|--------|--------|
-| N5 | Darm-Huid Connectie: Hoe Je Darmen Je Huid Beïnvloeden | darm-huid-connectie-probiotica-stralende-huid | darmen | DermaBiotics, MentaBiotics | 1.200 | ⏳ |
-| N6 | Beste Supplementen voor de Overgang: Complete Gids 2026 | beste-supplementen-overgang-menopauze-2026 | hormonen | Ignite Her, Sunset, HL5 | 1.500 | ⏳ |
+| N5 | Darm-Huid Connectie: Hoe Je Darmen Je Huid Beïnvloeden | ~~darm-huid-connectie-probiotica-stralende-huid~~ → darm-huid-connectie-gezondheid-stralende-huid-probiotica | darmen | DermaBiotics, MentaBiotics | 1.200 | ✅ (duplicate opgeruimd 15-08) |
+| N6 | Beste Supplementen voor de Overgang: Complete Gids 2026 | ~~beste-supplementen-overgang-menopauze-2026~~ → menopauze-supplement-natuurlijke-ondersteuning-overgang | hormonen | Ignite Her, Sunset, HL5 | 1.500 | ✅ (duplicate opgeruimd 15-08) |
 | N7 | Collageen en Gewrichten: Werkt Het Echt voor Pijnverlichting? | collageen-gewrichten-pijnverlichting-supplement | schoonheid | HL5, NeuCollagen | 1.100 | ⏳ |
 | N8 | Natuurlijke Ontstekingsremmers: Supplementen Die Werken | natuurlijke-ontstekingsremmers-supplementen | essentials | OmMega, Restore, Sunrise | 1.800 | ⏳ |
 | N9 | Ashwagandha vs Rhodiola: Welk Adaptogeen Past Bij Jou? | ashwagandha-vs-rhodiola-adaptogeen-vergelijking | mentaal | MentaBiotics, EDGE+ | 950 | ⏳ |
@@ -105,7 +105,7 @@ Week 2: B3-4 (Pzt 28 jul) → B3-5 (Çrş 30 jul) → B3-6 (Cum 1 aug)
 | # | Makale Başlığı (NL) | Slug | Kategori | Hedef Ürün | Arama* | Status |
 |---|---------------------|------|----------|------------|--------|--------|
 | N10 | Wat Zijn Adaptogenen? De Complete Beginnersgids | adaptogenen-beginnersgids-wat-zijn-het | mentaal | EDGE+, MentaFocus | 700 | ⏳ |
-| N11 | Hoe Herken Je een Vitamine D Tekort? Symptomen & Test | vitamine-d-tekort-symptomen-test | essentials | Sunrise, VitaGBX | 800 | ⏳ |
+| N11 | Hoe Herken Je een Vitamine D Tekort? Symptomen & Test | ~~vitamine-d-tekort-symptomen-test~~ → vitamine-d-tekort-symptomen | essentials | Sunrise, VitaGBX | 800 | ✅ (duplicate opgeruimd 15-08) |
 | N12 | Darmgezondheid Verbeteren: 10 Dagelijkse Gewoontes | darmgezondheid-verbeteren-dagelijkse-gewoontes | darmen | MentaBiotics, Restore, SeedFiber | 1.300 | ⏳ |
 | N13 | Collageen Poeder vs Pillen: Wat is Beter? | collageen-poeder-vs-pillen-vergelijking | schoonheid | HL5, NeuCollagen | 600 | ⏳ |
 | N14 | Supplementen bij Winterdip: Voorkomen & Behandelen | supplementen-winterdip-voorkomen-behandelen | mentaal | Sunrise, Sunset, Energy+ | 500 | ⏳ |
@@ -146,8 +146,8 @@ Week 5: N13 (ma) → N14 (wo) → N15 (vr)
 | 6 | Magnesium voor Slaap en Stress | magnesium-slaap-stress-spierontspanning-voordelen | essentials | MentaBiotics, Restore | 4.200 | ⏳ |
 | 7 | Omega-3: De Ultieme Gids | omega-3-hersenen-hart-voordelen-supplementen | essentials | Sunset, OmMega | 3.800 | ⏳ |
 | 8 | Haaruitval bij Vrouwen | haaruitval-vrouwen-oorzaken-natuurlijke-oplossingen | schoonheid | Rootist, HL5 | 2.600 | 🔄 |
-| 9 | Overgang en Supplementen | overgang-supplementen-menopauze-natuurlijk-ondersteuning | hormonen | Ignite Her, Sunset | 2.300 | 🔄 |
-| 10 | Stress Verminderen met Supplementen | stress-verminderen-supplementen-cortisol-ontspanning | mentaal | MentaBiotics, MentaFocus | 2.100 | ⏳ |
+| 9 | Overgang en Supplementen | ~~overgang-supplementen-menopauze-natuurlijk-ondersteuning~~ → menopauze-supplement-natuurlijke-ondersteuning-overgang | hormonen | Ignite Her, Sunset | 2.300 | ✅ (duplicate opgeruimd 15-08) |
+| 10 | Stress Verminderen met Supplementen | stress-verminderen-supplementen-cortisol-ontspanning | mentaal | MentaBiotics, MentaFocus | 2.100 | ✅ (al live, duplicate stress-verminderen-supplementen-die-echt-werken opgeruimd 15-08) |
 
 ### 🟢 TIER 3 — Medium Volume + Specific Intent
 
