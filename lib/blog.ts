@@ -1505,16 +1505,16 @@ export const blogPosts: BlogPost[] = [
     title: "Origin Vegan Protein: MCT Olie & Plantaardig Eiwit voor Energie & Gewicht (2026)",
     date: "2026-04-05",
     category: "Metabolisme",
-    excerpt: "MCT-olie is razend populair in de wellness-wereld. Maar wat doet het precies voor je energie ve vetverbranding?",
+    excerpt: "MCT-olie is razend populair in de wellness-wereld. Maar wat doet het precies voor je energie en vetverbranding?",
     content: `
       <h2>Wat is MCT Olie?</h2>
-      <p>MCT staat voor Medium Chain Triglycerides. In tegenstelling tot andere vetten worden MCT's direct door de lever opgenomen ve omgezet in directe energie (ketonen).</p>
+      <p>MCT staat voor Medium Chain Triglycerides. In tegenstelling tot andere vetten worden MCT's direct door de lever opgenomen en omgezet in directe energie (ketonen).</p>
       
-      <h3>Focus ve Metabolisme</h3>
-      <p>Omdat MCT's zo snel worden verwerkt, bieden ze een directe bron van brandstof voor je hersenen, wat helpt bij focus ve mentale helderheid. Daarnaast kan het de vetverbranding stimuleren door het lichaam in een staat van thermogenese te brengen.</p>
+      <h3>Focus en Metabolisme</h3>
+      <p>Omdat MCT's zo snel worden verwerkt, bieden ze een directe bron van brandstof voor je hersenen, wat helpt bij focus en mentale helderheid. Daarnaast kan het de vetverbranding stimuleren door het lichaam in een staat van thermogenese te brengen.</p>
       
       <h3>Gebruik</h3>
-      <p>Begin met een kleine hoeveelheid (1 theelepel) ve bouw dit langzaam op naar 1-3 eetlepels per dag om je spijsvertering te laten wennen.</p>
+      <p>Begin met een kleine hoeveelheid (1 theelepel) en bouw dit langzaam op naar 1-3 eetlepels per dag om je spijsvertering te laten wennen.</p>
       
       <h3>Product Connectie</h3>
       <p>Je vindt hoogwaardige MCT's terug in onze <strong>Amare Origin Chocolate</strong> shake, ideaal als gezonde maaltijdvervanger of post-workout herstel.</p>
@@ -1544,16 +1544,16 @@ export const blogPosts: BlogPost[] = [
     title: "Sunset Omega-3: Essentiële Vetzuren voor Hersengezondheid & Focus (2026)",
     date: "2026-03-15",
     category: "Focus",
-    excerpt: "Je hersenen bestaan voor een groot deel uit vetten. Ontdek waarom Omega-3 essentieel is voor je focus ve stemming.",
+    excerpt: "Je hersenen bestaan voor een groot deel uit vetten. Ontdek waarom Omega-3 essentieel is voor je focus en stemming.",
     content: `
       <h2>De Kracht van Omega-3 (EPA/DHA)</h2>
-      <p>Omega-3 vetzuren zijn de bouwstenen van je hersencellen. Ze zijn essentieel voor de structuur van celmembranen ve ondersteunen de communicatie tussen zenuwcellen.</p>
+      <p>Omega-3 vetzuren zijn de bouwstenen van je hersencellen. Ze zijn essentieel voor de structuur van celmembranen en ondersteunen de communicatie tussen zenuwcellen.</p>
       
       <h3>Voordelen voor de focus</h3>
-      <p>Wetenschappelijk onderzoek toont aan dat een adequate inname van DHA bijdraagt aan het behoud van een normale hersenfunctie ve een positieve stemming ondersteunt.</p>
+      <p>Wetenschappelijk onderzoek toont aan dat een adequate inname van DHA bijdraagt aan het behoud van een normale hersenfunctie en een positieve stemming ondersteunt.</p>
       
       <h3>Duurzame Bronnen</h3>
-      <p>Bij Amare kiezen we voor Omega-3 uit in het wild gevangen vis, zoals in <strong>Amare Sunset</strong>, om de hoogste zuiverheid ve biologische beschikbaarheid te garanderen.</p>
+      <p>Bij Amare kiezen we voor Omega-3 uit in het wild gevangen vis, zoals in <strong>Amare Sunset</strong>, om de hoogste zuiverheid en biologische beschikbaarheid te garanderen.</p>
     `,
     image: "/images/blog/omega-3.jpg"
   },
@@ -1562,13 +1562,13 @@ export const blogPosts: BlogPost[] = [
     title: "MentaFocus & Happy Juice Pack: Adaptogenen tegen Stress — Ashwagandha & Rhodiola (2026)",
     date: "2026-03-05",
     category: "Mentaal Welzijn",
-    excerpt: "Adaptogenen zijn natuurlijke stoffen die je lichaam helpen om te gaan met stress ve vermoeidheid.",
+    excerpt: "Adaptogenen zijn natuurlijke stoffen die je lichaam helpen om te gaan met stress en vermoeidheid.",
     content: `
       <h2>Wat zijn Adaptogenen?</h2>
       <p>Adaptogenen zijn een unieke groep kruiden die de natuurlijke weerstand van het lichaam tegen stress verhogen. Ze werken door het reguleren van de balans in het lichaam (homeostase).</p>
       
-      <h3>Ashwagandha ve Cortisol</h3>
-      <p>Ashwagandha is een van de meest onderzochte adaptogenen. Het staat bekend om het ondersteunen van een gezond cortisolniveau, wat helpt bij het verminderen van gevoelens van angst ve stress.</p>
+      <h3>Ashwagandha en Cortisol</h3>
+      <p>Ashwagandha is een van de meest onderzochte adaptogenen. Het staat bekend om het ondersteunen van een gezond cortisolniveau, wat helpt bij het verminderen van gevoelens van angst en stress.</p>
       
       <h3>Product Focus</h3>
       <p>Je vindt deze krachtige adaptogenen terug in <strong>Amare MentaFocus</strong>, ontworpen om je mentale prestaties te ondersteunen onder druk.</p>
@@ -1583,13 +1583,13 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Collageen is het meest voorkomende eiwit in je lichaam. Ontdek waarom suppletie essentieel is bij het ouder worden.",
     content: `
       <h2>Waarom Collageen?</h2>
-      <p>Vanaf ons 25e levensjaar begint de natuurlijke productie van collageen af te nemen. Dit kan leiden tot rimpels, minder elastische huid ve gevoelige gewrichten.</p>
+      <p>Vanaf ons 25e levensjaar begint de natuurlijke productie van collageen af te nemen. Dit kan leiden tot rimpels, minder elastische huid en gevoelige gewrichten.</p>
       
-      <h3>Type I ve III</h3>
-      <p>Voor schoonheid ve weefselherstel zijn Type I ve III de belangrijkste vormen. Gehydrolyseerd collageen (peptiden) wordt het best door het lichaam opgenomen.</p>
+      <h3>Type I en III</h3>
+      <p>Voor schoonheid en weefselherstel zijn Type I en III de belangrijkste vormen. Gehydrolyseerd collageen (peptiden) wordt het best door het lichaam opgenomen.</p>
       
       <h3>Amare HL5</h3>
-      <p><strong>Amare HL5</strong> levert 5 gram hoogwaardig vloeibaar collageen per portie, specifiek geformuleerd voor maximale opname ve resultaat.</p>
+      <p><strong>Amare HL5</strong> levert 5 gram hoogwaardig vloeibaar collageen per portie, specifiek geformuleerd voor maximale opname en resultaat.</p>
     `,
     image: "/images/blog/collagen.jpg"
   },
@@ -1598,16 +1598,16 @@ export const blogPosts: BlogPost[] = [
     title: "Sunset & Origin: Calcium + D3 + K2 voor Sterke Botten & Spieren (2026)",
     date: "2026-05-01",
     category: "Wellness",
-    excerpt: "Leer waarom calcium essentieel is voor je botdichtheid ve hoe de synergie met vitamine D3 de opname optimaliseert.",
+    excerpt: "Leer waarom calcium essentieel is voor je botdichtheid en hoe de synergie met vitamine D3 de opname optimaliseert.",
     content: `
-      <h2>Botgezondheid ve Calcium</h2>
+      <h2>Botgezondheid en Calcium</h2>
       <p>Calcium is de belangrijkste bouwsteen voor onze botten. Echter, zonder de juiste hulpstoffen kan je lichaam calcium niet effectief opnemen of naar de juiste plaatsen transporteren.</p>
       
-      <h3>De Synergie met D3 ve K2</h3>
-      <p>Vitamine D3 helpt bij de opname van calcium uit de darmen, terwijl vitamine K2 ervoor zorgt dat het calcium daadwerkelijk in de botten terechtkomt ve niet in de slagaders verkalkt.</p>
+      <h3>De Synergie met D3 en K2</h3>
+      <p>Vitamine D3 helpt bij de opname van calcium uit de darmen, terwijl vitamine K2 ervoor zorgt dat het calcium daadwerkelijk in de botten terechtkomt en niet in de slagaders verkalkt.</p>
       
       <h3>Amare Ondersteuning</h3>
-      <p>Producten zoals <strong>Amare Sunset</strong> ve <strong>Amare Origin</strong> bieden de ideale combinatie van mineralen ve vitaminen om je botstructuur van binnenuit te versterken.</p>
+      <p>Producten zoals <strong>Amare Sunset</strong> en <strong>Amare Origin</strong> bieden de ideale combinatie van mineralen en vitaminen om je botstructuur van binnenuit te versterken.</p>
     `,
     image: "/images/blog/calcium.jpg"
   },
@@ -1673,10 +1673,10 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Wist je dat 90% van je serotonine in je darmen wordt aangemaakt? Leer hoe je darmgezondheid je mentale welzijn beïnvloedt.",
     content: `
       <h2>De Tweede Hersenen</h2>
-      <p>Je darmen ve hersenen staan constant in verbinding via de nervus vagus. Deze 'as' reguleert je stemming, slaap ve stressrespons.</p>
+      <p>Je darmen en hersenen staan constant in verbinding via de nervus vagus. Deze 'as' reguleert je stemming, slaap en stressrespons.</p>
       
-      <h3>Serotonine ve GABA</h3>
-      <p>Belangrijke neurotransmitters zoals serotonine (gelukshormoon) ve GABA (ontspanning) worden geproduceerd door specifieke bacteriestammen in je darmflora.</p>
+      <h3>Serotonine en GABA</h3>
+      <p>Belangrijke neurotransmitters zoals serotonine (gelukshormoon) en GABA (ontspanning) worden geproduceerd door specifieke bacteriestammen in je darmflora.</p>
       
       <h3>MentaBiotics Support</h3>
       <p>Met <strong>Amare MentaBiotics</strong> voer je de juiste bacteriën aan om deze communicatie te optimaliseren, wat direct effect heeft op je mentale veerkracht.</p>
@@ -1706,16 +1706,16 @@ export const blogPosts: BlogPost[] = [
     title: "Restore & MentaBiotics: Probiotica Stammen Kiezen voor Optimale Darmgezondheid (2026)",
     date: "2026-04-23",
     category: "Gut Health",
-    excerpt: "Niet alle probiotica zijn gelijk. Leer welke stammen zoals Lactobacillus ve Bifidobacterium het beste werken voor jouw darmflora.",
+    excerpt: "Niet alle probiotica zijn gelijk. Leer welke stammen zoals Lactobacillus en Bifidobacterium het beste werken voor jouw darmflora.",
     content: `
       <h2>Kwaliteit over Kwantiteit</h2>
-      <p>Het gaat niet alleen om het aantal bacteriën (CFU's), maar vooral om de specifieke stammen ve hun overlevingskans in je maagzuur.</p>
+      <p>Het gaat niet alleen om het aantal bacteriën (CFU's), maar vooral om de specifieke stammen en hun overlevingskans in je maagzuur.</p>
       
       <h3>Lactobacillus vs Bifidobacterium</h3>
       <p>Verschillende stammen hebben verschillende functies: van het ondersteunen van de spijsvertering tot het reguleren van het immuunsysteem.</p>
       
       <h3>Restore & MentaBiotics</h3>
-      <p>Onze producten zoals <strong>Restore</strong> ve <strong>MentaBiotics</strong> maken gebruik van gepatenteerde stammen die wetenschappelijk zijn bewezen om de darmbarrière te versterken.</p>
+      <p>Onze producten zoals <strong>Restore</strong> en <strong>MentaBiotics</strong> maken gebruik van gepatenteerde stammen die wetenschappelijk zijn bewezen om de darmbarrière te versterken.</p>
     `,
     image: "/images/blog/probiotics-guide.jpg"
   },
