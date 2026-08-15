@@ -2855,9 +2855,12 @@ export function linkifyProductMentions(html: string, slug: string): string {
     );
 
     // Standalone product name (eerste 3 occurrences)
+    // Let op: lookbehind/lookahead sluiten ook `/` en `"` uit — anders matcht deze regex
+    // per ongeluk de productnaam binnen een href/class attribuut die deze zelfde loop
+    // net heeft aangemaakt (bv. "hl5" binnen href="/hl5"), wat geneste <a>-tags oplevert.
     let count = 0;
     result = result.replace(
-      new RegExp(`(?<![a-zA-Z>=-])(${escaped})(?![a-zA-Z<=-])`, "gi"),
+      new RegExp(`(?<![a-zA-Z0-9>="/-])(${escaped})(?![a-zA-Z0-9<="/-])`, "gi"),
       (match: string) => {
         if (count < 3) { count++; return buildLink(target, match, isExternal); }
         return match;
@@ -2865,7 +2868,7 @@ export function linkifyProductMentions(html: string, slug: string): string {
     );
     // OOK: "Amare ProductName" standalone → link met behoud van prefix
     result = result.replace(
-      new RegExp(`(?<![a-zA-Z>=-])Amare (${escaped})(?![a-zA-Z<=-])`, "gi"),
+      new RegExp(`(?<![a-zA-Z0-9>="/-])Amare (${escaped})(?![a-zA-Z0-9<="/-])`, "gi"),
       (match: string, name: string) => {
         if (count < 4) { count++; return `Amare ${buildLink(target, name, isExternal)}`; }
         return match;
