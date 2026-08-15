@@ -25,7 +25,7 @@ export default function FeaturedProducts() {
       badge: "💧 BESTE COLLAGEEN",
       rating: 4.8,
       reviews: 89,
-      image: "https://amarecdn.azureedge.net/webassets/web/prod/products/HL5-Peach-2pk-EU-800.jpg",
+      image: "/images/products/hl5-2pack.jpg",
       product: "hl5-2-pack",
       internalPage: "/hl5",
       color: "from-pink-500 to-rose-600",

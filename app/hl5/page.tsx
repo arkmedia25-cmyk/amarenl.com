@@ -95,9 +95,7 @@ const ingredientGroups = [
 
 export default function HL5Page() {
   const product = getProduct("hl5-peach");
-  const productImage =
-    product?.image ||
-    "https://amarecdn.azureedge.net/webassets/web/prod/products/HL5-Peach-2pk-EU-800.jpg";
+  const productImage = product?.image || "/images/products/hl5-2pack.jpg";
 
   const productSchema = generateProductSchema({
     name: "Amare HL5 Vloeibare Collageen",
