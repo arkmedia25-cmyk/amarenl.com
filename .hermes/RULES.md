@@ -1,11 +1,30 @@
 # Hermes — Çalışma Kuralları (ZORUNLU)
 
 > Bu dosya Hermes gateway/bot bu repoya tekrar bağlanırsa okunmalı ve uyulmalıdır.
+
+## Kural 0 — Her işlemden ÖNCE README.md oku (istisnasız)
+
+Bu repoda (`amarenl.com`) herhangi bir işlem yapmadan — dosya okumadan/yazmadan, Telegram'a
+mesaj göndermeden, bir script çalıştırmadan **önce** her seferinde önce kök dizindeki
+`README.md`'yi oku. O dosya güncel proje durumunu, aktif otomasyon pipeline'larını ve neyin
+zaten yapılmış/yapılıyor olduğunu içerir. README'de anlatılan akışın **dışında** farklı bir
+işlem yapma — README neyi, hangi sistemle, hangi onay mekanizmasıyla yapılacağını söylüyorsa
+Hermes ona uyar, kendi başına alternatif bir yol icat etmez. Bu kural diğer tüm kuralların
+önkoşuludur; README okunmadan aşağıdaki kurallar da doğru uygulanamaz çünkü "kapsam" ve
+"mevcut pipeline" tanımı README'den geliyor.
 > Yazılma sebebi: 2026-07-21'de "humanize" commit'i `data/extra-articles.json`'ı
 > 57 makaleden 4'e düşürdü, 51 endekslenmiş sayfa 2 gün 404 verdi (bkz. `DEPLOY_LOG.md`
 > kayıt #35) — ve ayrıca bu repodan bağımsız, habersiz çalışan bir kopya (Hermes gateway
 > LaunchAgent, `AmareNL_Orchestrator_Bot`) uzun süre resmi pipeline ile aynı anda içerik
-> yayınladı (bkz. `CLAUDE.md` sectie 19-20, durduruldu 28-07-2026). Bu iki olay, sitenin
+> yayınladı (bkz. `CLAUDE.md` sectie 19-20, "durduruldu 28-07-2026" olarak not edilmişti — ama
+> 15-08-2026'da `launchctl list` ile kontrol edilince `ai.hermes.gateway-amarenl` LaunchAgent'ının
+> hâlâ çalıştığı görüldü, ~5 gündür kesintisiz; muhtemelen 28-07'de process öldürüldü ama
+> LaunchAgent `KeepAlive`/`RunAtLoad` ile kendini yeniden başlattı. Bu tarihte incelenen tek cron
+> görevi (`353c91b3a2f3`, günlük makale) zararsız çıktı — repoya hiç yazmıyor, ayrı bir proje
+> klasöründen (`~/projects/worldcup-shorts/social-media/artikelen`) statik metin okuyup sadece
+> Telegram'a gönderiyor — ama gateway'in kendisi genel amaçlı bir AI ajanı olduğu için, sohbet
+> üzerinden doğal dille "yayınla" gibi bir talimat verilirse ne yapacağı garanti değil. Detay:
+> `.hermes/LOGBOOK.md` 15-08-2026 girdisi.) Bu iki olay, sitenin
 aylardır süren trafik/ranking düşüşünün bilinen en olası nedenleridir.
 
 ## Kural 1 — Kapsam dışına çıkma

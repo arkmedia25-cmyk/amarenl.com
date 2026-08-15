@@ -209,19 +209,43 @@ commit-status ging `pending → success` in ~45s).
   productnamen die al in de tekst staan), en bij #12–#18 (die geen FAQ hadden) een "Veelgestelde
   vragen"-sectie met 3 vragen per artikel toegevoegd, rechtstreeks in elke PR-branch gepusht.
 
-**⏸️ Gepauzeerd hier — hervatten morgen:**
-- ✅ PR #12 is gemerged + live (via `amarenl-promote-draft.yml`, getriggerd met
-  `gh api repos/.../dispatches -f event_type=promote-draft -F 'client_payload[pr_number]=12'`).
-  Content bevestigd live incl. FAQ-sectie. De workflow's eigen `vercel deploy`-stap faalde met
-  "Upload aborted" (waarschijnlijk race condition met de nieuw-herstelde native auto-deploy die
-  hetzelfde moment ook al deployde) — **dit is onschadelijk**, productie stond al goed (bevestigd via
-  `gh api .../commits/main/status` → `success`), maar de workflow's Telegram-succesbericht is dus
-  NIET verstuurd (ging naar de failure-tak in plaats daarvan). Check dit soort false-negatives even
-  bij de volgende PR's ook.
-- ⏳ **Nog te triggeren, zelfde methode, in deze volgorde:** #13, #14, #15, #16, #17, #18, #24.
-  Elke branch heeft de FAQ/CTA-fix al gepusht liggen, klaar om te mergen. Gebruik hetzelfde
-  `repository_dispatch`-commando met het juiste PR-nummer, en controleer na elke run of de content
-  echt live staat (niet enkel op de workflow-conclusie vertrouwen, zie hierboven).
+**Update — alle 8 PR's gemerged (#12–#18, #24), elk individueel live geverifieerd** (HTTP 200 +
+FAQ + CTA aanwezig). De workflow's eigen `vercel deploy`-stap faalde bij een paar PR's met "Upload
+aborted" (race condition met de native auto-deploy) — steeds onschadelijk gebleken, productie stond
+al goed. #24 kreeg ook nog echt een transient Google Fonts fetch-failure tijdens de build (zelfde
+patroon als #15) — opgelost met een handmatige `vercel --prod --yes` retry.
+
+**Duplicate-URL cleanup (zelfde sessie, vervolg):** GSC's 158 pagina's uit de laatste 90 dagen
+allemaal getest. 2 echte 404's gevonden en gefixt (301 naar dichtstbijzijnde bestaande artikel).
+Belangrijker: **5 groepen dubbele artikelen** ontdekt — hetzelfde onderwerp met 2-3 losse
+publicaties (darm-huid connectie, vitamine D tekort, stress verminderen, menopauze x2, **en de
+net gemergede #24 zelf** — bleek een derde "Collageen voor Mannen 30+" te zijn, naast een al
+bestaand artikel van dezelfde dag dat bij de eerdere #23-vs-#24-vergelijking over het hoofd was
+gezien). In elk geval het oudste/langste artikel als canonical gehouden, de rest verwijderd uit
+`data/extra-articles.json` + 301-redirect toegevoegd in `vercel.json`. Alle 8 redirects + de
+overlevende canonical pagina's live geverifieerd (200, juiste bestemming, geen loops).
+
+**GSC-cijfers (echt, niet geschat):** laatste 90 dagen 88 clicks / 4.873 impressies / gem. positie
+38,5; laatste 28 dagen juist slechter (pos 52,0) dan het 90-dagen-gemiddelde. Root cause van de
+langdurige traffic-dip staat al in `DEPLOY_LOG.md` #35: een "humanize"-commit op 21-07 verkleinde
+`data/extra-articles.json` van 57 naar 4 artikelen, 51 geïndexeerde pagina's gaven 2 dagen 404.
+
+**🔎 Hermes-gateway onderzoek (belangrijk, nog niet afgerond):** de LaunchAgent
+`ai.hermes.gateway-amarenl` (het systeem achter `CLAUDE.md`'s "AmareNL_Orchestrator_Bot, gestopt
+28-07") bleek via `launchctl list` / `ps aux` **nog steeds te draaien**, al ~5 dagen — `KeepAlive`
++ `RunAtLoad` hebben het proces waarschijnlijk vanzelf herstart nadat het op 28-07 alleen gekilld
+werd zonder de LaunchAgent te unloaden. De cron die vandaag zonder goedkeuringsknoppen een artikel
+naar Musa's Telegram stuurde is onderzocht: `~/.hermes/profiles/amarenl/scripts/publish_next.py`
+schrijft **niet** naar deze repo — het leest statische `.md`-bestanden uit een totaal ander
+projectmapje (`~/projects/worldcup-shorts/social-media/artikelen`) en stuurt de tekst alleen door
+naar Telegram. Vandaag was dat toevallig hetzelfde artikel als het net gemergede #15 (gedeelde
+bronmateriaal, geen live schrijfconflict). Risico is dus lager dan gevreesd, maar niet nul: de
+gateway zelf is een general-purpose AI-agent zonder vastgelegde regels tot vandaag. Twee dingen
+toegevoegd: `.hermes/RULES.md` (Kural 0 — Hermes moet dit `README.md` lezen vóór elke actie in
+deze repo, mag niet buiten de hier beschreven pipeline om iets anders doen) en
+`.hermes/LOGBOOK.md` (verplicht logboek voor elke Hermes-actie). **Openstaande beslissing voor
+Musa:** de dagelijkse cron (`353c91b3a2f3`, elke ochtend 09:00) is nu puur ruis t.o.v. de officiële
+pipeline — uitzetten of laten staan is een keuze, niet iets dat automatisch is opgelost.
 
 ---
 
