@@ -158,13 +158,18 @@ public/images/              # Statische assets
 
 ---
 
-### 🆕 Faz 5 — Meta Ads Lead Generation (07-08 Aug 2026, in uitvoering)
+### ✅ Faz 5 — Meta Ads Lead Generation — LIVE sinds 15-08-2026
 Betaald NL-verkeer naar `/gratis-gut-brain-gids`. **07-08:** kritieke lead-capture bug gevonden en
 gefixt (formulieren gaven altijd 500/verloren leads stil via MailerLite 422), concurrentie-analyse
 ververst (Vitakruid/Nutriphyt/Orthica — Nutriphyt's 409-dagen-lopende advertentie is het sterkste
-signaal). **08-08:** creative-scenario compleet, definitieve keuze gemaakt: **varianten A (gut-brain
-illustratie) + B (gids-mockup)**, variant C afgevallen. Nog niet live — volgende stap is de Pixel-
-CAPI-check en ad-account setup. Volledige details: zie `CLAUDE.md` sectie 20, subsectie "Faz 5".
+signaal). **08-08:** creative-scenario compleet, definitieve keuze: **varianten A (gut-brain
+illustratie) + B (gids-mockup)**, variant C afgevallen. **14/15-08:** ad-account bleek zelf al hersteld
+(HolistiGlow, `act_1523034172332806` — actief, geldige betaalmethode); vóór launch nog 2 echte bugs
+gevonden+gefixt in de funnel zelf: gids-PDF stond nooit live (404) en blocking `alert()`-dialogen in
+de lead-formulieren. Na een live test-submit (welkomstmail + PDF werkten) is de campagne
+**geactiveerd**: `NL – Leadgen – Gut-Brain & Yorgunluk – Aug26`, €7/dag, 2 advertenties. **Niet
+aankomen tot ~eind augustus** (learning phase). Wekelijkse CPL-rapportage zit nu in de bestaande
+maandag-Telegram-report (zie hieronder). Volledige details: `CLAUDE.md` sectie 20, subsectie "Faz 5".
 
 ### 🆕 Agency OS — Faz 1 & 2 (28 Tem 2026)
 Volledig geautomatiseerde, maar **mens-gecontroleerde** content-pipeline. Details + openstaande
@@ -180,6 +185,44 @@ punten: zie `CLAUDE.md` sectie 20 ("AGENCY OS STATUS"). Kort:
 - Oude vaste `TOPIC_POOLS` DeepSeek/OpenRouter-workflows staan nog als `workflow_dispatch`-only
   handmatige fallback (schedule uitgezet, geen dubbele publicatie meer).
 
+### 🆕 Sessie 15-08-2026 — GitHub auto-deploy hersteld, funnel-bugs gefixt, PR-batch in uitvoering
+
+**GitHub → Vercel auto-deploy werkt weer** (was al maanden stuk zonder dat iemand het wist — de
+regel "manuel CLI deploy" verderop in dit bestand is nu **verouderd**, zie deployment-sectie
+hieronder). Root cause: de Vercel GitHub App-installatie had alleen toegang tot repo `wearkmedia`,
+`amarenl.com` stond niet in de repo-access-lijst
+(github.com/settings/installations → Vercel → Configure). Toegang toegevoegd + `vercel git connect`
+— sindsdien deployt elke push naar `main` automatisch (geverifieerd met een echte push, GitHub
+commit-status ging `pending → success` in ~45s).
+
+**Twee kleine maar echte bugs gefixt onderweg:**
+- `.github/workflows/amarenl-weekly-report.yml` — de GSC-stap gaf altijd "ENOENT" omdat
+  `GSC_KEY_PATH=... OUTPUT=$(node ...)` een klassieke bash-valkuil is (twee losse assignments, geen
+  echt commando-woord, dus de env var werd nooit ge-export naar het node-subprocess). Gefixt door
+  `GSC_KEY_PATH=...` direct vóór `node` te zetten. Zelfde workflow kreeg ook een nieuwe stap: Meta
+  Ads CPL (spend/leads/CPL laatste 7 dagen), rechtstreeks via de Graph API, geen lokale
+  Docker/ClickHouse-afhankelijkheid.
+- **9 open content-PR's gereviewd** (was in Telegram-queue): #23 gesloten als duplicate van #24
+  (zelfde onderwerp "Collageen voor Mannen 30+", cannibalisatierisico). Bij alle 8 overige
+  (#12–#18, #24) ontbrak een affiliate-CTA/FAQ-sectie — `articleProductMap` in `lib/blog.ts`
+  aangevuld per artikel (de bestaande `linkifyProductMentions()`-functie linkt dan automatisch
+  productnamen die al in de tekst staan), en bij #12–#18 (die geen FAQ hadden) een "Veelgestelde
+  vragen"-sectie met 3 vragen per artikel toegevoegd, rechtstreeks in elke PR-branch gepusht.
+
+**⏸️ Gepauzeerd hier — hervatten morgen:**
+- ✅ PR #12 is gemerged + live (via `amarenl-promote-draft.yml`, getriggerd met
+  `gh api repos/.../dispatches -f event_type=promote-draft -F 'client_payload[pr_number]=12'`).
+  Content bevestigd live incl. FAQ-sectie. De workflow's eigen `vercel deploy`-stap faalde met
+  "Upload aborted" (waarschijnlijk race condition met de nieuw-herstelde native auto-deploy die
+  hetzelfde moment ook al deployde) — **dit is onschadelijk**, productie stond al goed (bevestigd via
+  `gh api .../commits/main/status` → `success`), maar de workflow's Telegram-succesbericht is dus
+  NIET verstuurd (ging naar de failure-tak in plaats daarvan). Check dit soort false-negatives even
+  bij de volgende PR's ook.
+- ⏳ **Nog te triggeren, zelfde methode, in deze volgorde:** #13, #14, #15, #16, #17, #18, #24.
+  Elke branch heeft de FAQ/CTA-fix al gepusht liggen, klaar om te mergen. Gebruik hetzelfde
+  `repository_dispatch`-commando met het juiste PR-nummer, en controleer na elke run of de content
+  echt live staat (niet enkel op de workflow-conclusie vertrouwen, zie hierboven).
+
 ---
 
 ## Nog te doen
@@ -191,23 +234,26 @@ punten: zie `CLAUDE.md` sectie 20 ("AGENCY OS STATUS"). Kort:
 
 ### Blog Content
 - [x] Agency OS Faz 1+2 content-motor (zie hierboven) — vervangt de handmatige queue-aanpak
-- [ ] **17 PR's** wachten op Telegram-goedkeuring (13 gecorrigeerde stash-artikelen + 2 testartikelen)
+- [x] #23 gesloten als duplicate van #24 (15-08-2026)
+- [x] PR #12 gemerged + live (15-08-2026, FAQ + affiliate-CTA toegevoegd)
+- [ ] **PR's #13, #14, #15, #16, #17, #18, #24** — FAQ/CTA-fix al gepusht, wachten op merge-trigger
+      (zie sessielog hierboven voor het exacte commando en volgorde)
 - [ ] 3 pillar pages (Gut-Brain Axis, Probiotica Stammen, Adaptogenen) — kısmen yazıldı
 
 ### Infrastructuur
 - [x] ~~E-mail API route (/api/subscribe) — Mailchimp integratie~~ — bestaat al (MailerLite, niet
       Mailchimp), maar gaf tot 07-08-2026 altijd 500/verloren leads — zie Faz 5 hierboven, nu gefixt
+- [x] **GitHub → Vercel auto-deploy hersteld** (15-08-2026) — zie sessielog hierboven
+- [x] **GSC-rapportstap gefixt** (15-08-2026) — bash env-var bug, zie sessielog hierboven
+- [x] **Meta Ads CPL-rapportage** toegevoegd aan wekelijkse Telegram-report (15-08-2026)
 - [ ] GA4 conversion tracking voor affiliate clicks (TASK 12.1)
 - [ ] verdikkend-serum-voor-fijn-haar → Amare server 500 (buiten onze controle)
-- [ ] **Vercel deploy inhalen** zodra de 24u free-plan upload-limiet reset (geraakt 28-07-2026, te veel
-      test-deploys op één dag) — zie `CLAUDE.md` sectie 20
 - [ ] **Faz 3** (video, Higgsfield) — nog steeds on hold (account/betaling, zie `CLAUDE.md`)
 - [ ] **Faz 4** (Pinterest) — infrastructuur klaar, wacht op Pinterest Standard access
-- [ ] **Faz 5** (Meta Ads) — gestart 07-08-2026, creative-scenario in review, nog niet live (zie hierboven)
+- [x] **Faz 5** (Meta Ads) — LIVE sinds 15-08-2026 (zie hierboven), niet aankomen tot ~eind augustus
 
 ### Bekende Issues
 - `verdikkend-serum-voor-fijn-haar` — HTTP 500 op Amare.com (server-side)
-- GitHub auto-deploy naar Vercel werkt niet → Actions-workflows deployen expliciet via `vercel --prod`
 
 ---
 
@@ -256,25 +302,25 @@ npm start
 
 ## ⚠️ Deployment — KRİTİK KURALLAR
 
-**ASLA uncommitted değişiklikle deploy etme!** `vercel --prod` lokaldeki dosyaları yükler, git'i değil.
-
-### Deploy Kontrol Listesi (HER SEFERİNDE)
+**GitHub → Vercel auto-deploy artık ÇALIŞIYOR (15-08-2026'dan beri)** — `main`'e her push otomatik
+prod deploy tetikler (Vercel GitHub App'in repo-access listesinde `amarenl.com` eksikti, düzeltildi —
+detay için yukarıdaki "Sessie 15-08-2026" bölümüne bak). Normal akış artık sadece:
 ```bash
-git status                    # Temiz mi?
-git pull origin main          # Remote güncel mi?
-npm run build                 # Build başarılı mı?
-git add -A && git commit -m "..."
-git push origin main
-vercel --prod --yes           # Deploy
+git push origin main          # Bu kadar — Vercel otomatik build+deploy eder
 ```
+Birkaç saniye içinde `gh api repos/arkmedia25-cmyk/amarenl.com/commits/main/status` ile deploy
+durumunu kontrol edebilirsin (`pending` → `success`/`failure`).
+
+**Manuel `vercel --prod --yes` sadece şu durumlarda gerekli:** auto-deploy yine bozulursa (önce
+GitHub App repo-access'i kontrol et, Vercel proje ayarlarını değil), ya da acil bir durumda push
+beklemeden hemen deploy etmek istersen. **ASLA uncommitted değişiklikle deploy etme** — `vercel
+--prod` lokaldeki dosyaları yükler, git'i değil.
 
 ### Rollback (acil durum)
 ```bash
 vercel list                   # Son deployment ID'sini bul
 vercel promote <DEPLOY_ID>    # Önceki sürüme dön
 ```
-
-GitHub → Vercel auto-deploy kullanılmıyor. Manuel CLI deploy.
 
 ---
 

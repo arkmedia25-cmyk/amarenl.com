@@ -22,17 +22,22 @@
   {
     "pr": 8,
     "title": "Testosteron daalt niet alleen door leeftijd — de echte oorzaken",
-    "status": "pending"
+    "status": "published",
+    "published_at": "2026-08-11T06:45:57Z",
+    "note": "Self-healing: kuyrukta pending görünüyordu ama GitHub durumu MERGED idi — muhtemelen kuyruğu atlayarak manuel onaylanmıştı. Otomatik düzeltildi."
   },
   {
     "pr": 9,
     "title": "Intimiteit begint niet in bed — het begint in je hormonen",
-    "status": "pending"
+    "status": "published",
+    "published_at": "2026-08-11T06:48:36Z"
   },
   {
     "pr": 10,
     "title": "Happy Juice Pack vs Triangle of Wellness — welke past bij jou?",
-    "status": "pending"
+    "status": "published",
+    "published_at": "2026-08-13T09:05:40Z",
+    "note": "Self-healing: kuyrukta pending görünüyordu ama GitHub durumu MERGED idi — muhtemelen kuyruğu atlayarak manuel onaylanmıştı. Otomatik düzeltildi."
   },
   {
     "pr": 11,
@@ -86,5 +91,18 @@
     "title": "Collageen voor Mannen 30+: Waarom Het Ertoe Doet",
     "status": "pending",
     "note": "Kuyruk dosyasına hiç eklenmemişti (07-08'de açılmış, muhtemelen article-generation script'i bu dosyayı güncellemedi) — 10-08'de elle eklendi."
+  },
+  {
+    "pr": 24,
+    "title": "Collageen voor Mannen 30+: Huid, Spieren, Gewrichten",
+    "status": "pending",
+    "note": "Kuyruk dosyasına hiç eklenmemişti (10-08'de açılmış) — 11-08'de elle eklendi."
+  },
+  {
+    "pr": 25,
+    "title": "Collageen voor Mannen 30+: Ook Voor Jou Belangrijk",
+    "status": "published",
+    "note": "Kuyruk dosyasına hiç eklenmemişti — 10-08'de Telegram webhook düzeltme testinde onaylanıp merge edildi (deploy o zaman Vercel limitine takıldı, bugün 11-08'de limit temizlenince ayrıca deploy edildi). 11-08'de elle eklendi.",
+    "published_at": "2026-08-10T09:02:08Z"
   }
 ]
