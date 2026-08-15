@@ -69,6 +69,31 @@ const TOPICS = [
     hookFact: "Wakker liggen om 3 uur 's nachts, terwijl je lichaam doodmoe is? Dat is geen wilskwestie — het zegt iets over hoe je systeem omgaat met herstel, niet over hoeveel uur je in bed ligt.",
     image: "content/social-assets/social-slaap.jpg",
   },
+  {
+    key: "energie-natuurlijk",
+    hookFact: "Constante vermoeidheid overdag, ook met genoeg slaap? Energie ontstaat niet alleen door cafeïne — het draait om hoe goed je lichaam voedingsstoffen omzet in bruikbare energie op celniveau.",
+    image: "content/social-assets/social-energie.jpg",
+  },
+  {
+    key: "beter-slapen",
+    hookFact: "Uren wakker liggen voor je eindelijk in slaap valt, ook al ben je doodmoe? Vaak zit het probleem niet in vermoeidheid, maar in hoe moeilijk je systeem tot rust komt.",
+    image: "content/social-assets/social-beterslapen.jpg",
+  },
+  {
+    key: "darmflora",
+    hookFact: "Een opgeblazen gevoel, wisselende energie, of een humeur dat op en neer gaat — het kan allemaal beginnen in je darmen. Je darmflora beïnvloedt veel meer dan alleen je spijsvertering.",
+    image: "content/social-assets/social-darmflora.jpg",
+  },
+  {
+    key: "opgeblazen-gevoel",
+    hookFact: "Na bijna elke maaltijd een opgeblazen, strak gevoel rond je buik? Dat is niet 'gewoon iets wat je eet' — het is vaak een signaal dat je spijsvertering iets nodig heeft.",
+    image: "content/social-assets/social-opgeblazen.jpg",
+  },
+  {
+    key: "collageen",
+    hookFact: "Vanaf je twintigste daalt de aanmaak van collageen in je lichaam geleidelijk elk jaar. Dat merk je het eerst aan je huid en haar — lang voordat je het verwacht.",
+    image: "content/social-assets/social-collageen.jpg",
+  },
 ];
 
 function nextTopicIndex(queue) {
