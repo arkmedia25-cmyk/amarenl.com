@@ -1,9 +1,24 @@
 # AmareNL — Robots.txt
-# Laatste update: 2026-07-13
+# Laatste update: 2026-08-04
 
 # Alle crawlers: volledige toegang
 User-agent: *
 Allow: /
+
+# WordPress & Shopify systeem-URL's blokkeren (oud platform — nooit echte content)
+Disallow: /wp-content/
+Disallow: /wp-admin/
+Disallow: /?page_id=
+Disallow: /feed=
+Disallow: /author/
+Disallow: /sample-page/
+Disallow: /collections/
+Disallow: /pages/contact
+Disallow: /policies/
+Disallow: /cdn
+Disallow: /wpm
+Disallow: /amarenl/
+Disallow: /instagram.com/
 
 # AI Crawlers — expliciet toestaan voor GEO/AIO zichtbaarheid
 User-agent: GPTBot
