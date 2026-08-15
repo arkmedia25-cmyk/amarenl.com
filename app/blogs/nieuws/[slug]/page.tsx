@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { getBlogPostBySlug, getAllBlogPosts, getProductLinksForArticle, linkifyProductMentions } from "@/lib/blog";
 import { ArrowLeft, Calendar, Tag, Share2, ExternalLink, ShoppingCart, Gift, ShieldCheck } from "lucide-react";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
@@ -199,6 +200,19 @@ export default async function BlogPostPage({ params }: Props) {
           <p className="text-xl text-[var(--color-text-muted)] leading-relaxed italic border-l-4 border-[var(--color-primary)] pl-6">
             {post.excerpt}
           </p>
+
+          {post.image && (
+            <div className="mt-10 rounded-2xl overflow-hidden shadow-lg bg-white">
+              <Image
+                src={post.image}
+                alt={post.title}
+                width={1200}
+                height={630}
+                className="w-full h-auto object-cover"
+                priority
+              />
+            </div>
+          )}
         </div>
       </header>
 
