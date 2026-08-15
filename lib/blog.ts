@@ -1529,13 +1529,13 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Met weinig zonlicht is een vitamine D tekort in Nederland bijna onvermijdelijk. Leer hoe je je weerstand ondersteunt.",
     content: `
       <h2>Vitamine D: De Zonnevitamine</h2>
-      <p>In Nederland is het zonlicht tussen oktober ve april niet sterk genoeg om voldoende vitamine D aan te maken. Dit mineraal is essentieel voor je botten ve immuunsysteem.</p>
+      <p>In Nederland is het zonlicht tussen oktober en april niet sterk genoeg om voldoende vitamine D aan te maken. Dit mineraal is essentieel voor je botten en immuunsysteem.</p>
       
-      <h3>Symptomen van bir tekort</h3>
-      <p>Lage energie, gewrichtspijn ve een verzwakte weerstand zijn veelvoorkomende signalen. Het is raadzaam om je waarden te laten controleren, vooral tijdens de wintermaanden.</p>
+      <h3>Symptomen van een tekort</h3>
+      <p>Lage energie, gewrichtspijn en een verzwakte weerstand zijn veelvoorkomende signalen. Het is raadzaam om je waarden te laten controleren, vooral tijdens de wintermaanden.</p>
       
       <h3>Synergie met Vitamine K2</h3>
-      <p>Voor bir optimale opname van calcium in de botten is de combinatie van D3 ve K2 essentiyil. <strong>Amare Sunset</strong> biedt deze combinatie samen met hoogwaardige Omega-3.</p>
+      <p>Voor een optimale opname van calcium in de botten is de combinatie van D3 en K2 essentieel. <strong>Amare Sunset</strong> biedt deze combinatie samen met hoogwaardige Omega-3.</p>
     `,
     image: "/images/blog/vitamine-d.jpg"
   },
@@ -1616,16 +1616,16 @@ export const blogPosts: BlogPost[] = [
     title: "Triangle of Wellness & Nitro Xtreme: Zink & Testosteron voor Hormonale Balans",
     date: "2026-04-30",
     category: "Metabolisme",
-    excerpt: "Zink speelt een cruciale rol bij de hormoonproductie. Ontdek hoe dit mineraal je vitaliteit ve testosteronspiegel ondersteunt.",
+    excerpt: "Zink speelt een cruciale rol bij de hormoonproductie. Ontdek hoe dit mineraal je vitaliteit en testosteronspiegel ondersteunt.",
     content: `
       <h2>Zink: Het Mannen Mineraal?</h2>
-      <p>Hoewel zink essentiyil is voor iedereen, speelt het bir specifieke rol bij de productie van testosteron ve de vruchtbaarheid bij mannen.</p>
+      <p>Hoewel zink essentieel is voor iedereen, speelt het een specifieke rol bij de productie van testosteron en de vruchtbaarheid bij mannen.</p>
       
       <h3>Hormonale Balans</h3>
-      <p>Zink is betrokken bij honderden enzymatische processen, waaronder de regulatie van hormonen. bir tekort kan leiden tot vermoeidheid ve een verminderd libido.</p>
+      <p>Zink is betrokken bij honderden enzymatische processen, waaronder de regulatie van hormonen. Een tekort kan leiden tot vermoeidheid en een verminderd libido.</p>
       
       <h3>Triangle of Wellness</h3>
-      <p>De <strong>Triangle of Wellness</strong> met Nitro Xtreme zorgt voor bir optimale opname van mineralen zoals zink, waardoor je hormoonhuishouding beter in balans blijft.</p>
+      <p>De <strong>Triangle of Wellness</strong> met Nitro Xtreme zorgt voor een optimale opname van mineralen zoals zink, waardoor je hormoonhuishouding beter in balans blijft.</p>
     `,
     image: "/images/blog/zinc.jpg"
   },
@@ -1634,16 +1634,16 @@ export const blogPosts: BlogPost[] = [
     title: "Sunrise 2-Pack: Natuurlijke Vitamine C voor Immuunsysteem & Energie (2026)",
     date: "2026-04-29",
     category: "Immuniteit",
-    excerpt: "Iedereen kent vitamine C, maar wist je dat het ook de opname van ijzer verhoogt ve je cellen beschermt tegen oxidatieve stress?",
+    excerpt: "Iedereen kent vitamine C, maar wist je dat het ook de opname van ijzer verhoogt en je cellen beschermt tegen oxidatieve stress?",
     content: `
-      <h2>Meer dan bir Weerstand Booster</h2>
-      <p>Vitamine C is een krachtige antioxidant die bijdraagt aan de bescherming van cellen tegen oxidatieve schade ve essentiyil is voor de vorming van collageen.</p>
+      <h2>Meer dan een Weerstand Booster</h2>
+      <p>Vitamine C is een krachtige antioxidant die bijdraagt aan de bescherming van cellen tegen oxidatieve schade en essentieel is voor de vorming van collageen.</p>
       
       <h3>Synergie met IJzer</h3>
-      <p>Zoals we eerder bespraken, verhoogt vitamine C de opname van ijzer aanzienlijk. Dit maakt het bir onmisbaar onderdeel van je dagelijkse routine als je kampt met vermoeidheid.</p>
+      <p>Zoals we eerder bespraken, verhoogt vitamine C de opname van ijzer aanzienlijk. Dit maakt het een onmisbaar onderdeel van je dagelijkse routine als je kampt met vermoeidheid.</p>
       
       <h3>Sunrise Kracht</h3>
-      <p><strong>Amare Sunrise</strong> is rijk aan natuurlijke vitamine C uit superfoods zoals de wilde bosbes ve amla, voor bir maximale biologische beschikbaarheid.</p>
+      <p><strong>Amare Sunrise</strong> is rijk aan natuurlijke vitamine C uit superfoods zoals de wilde bosbes en amla, voor een maximale biologische beschikbaarheid.</p>
     `,
     image: "/images/blog/vitamine-c.jpg"
   },
@@ -1652,16 +1652,16 @@ export const blogPosts: BlogPost[] = [
     title: "Sunset: Vitamine E (Tocotriënolen) voor Huid, Haar & Diepe Nachtrust (2026)",
     date: "2026-04-28",
     category: "Beauty",
-    excerpt: "Ontdek de geheimen van vitamine E voor een elastische huid ve glanzend haar. Leer waarom tocotriënolen de beste vorm zijn.",
+    excerpt: "Ontdek de geheimen van vitamine E voor een elastische huid en glanzend haar. Leer waarom tocotriënolen de beste vorm zijn.",
     content: `
       <h2>Vitamine E: Celbeschermer</h2>
-      <p>Vitamine E draagt bij aan de bescherming van cellen tegen oxidatieve stress door vrije radicalen te neutraliseren. Dit is essentiyil voor het behoud van bir gezonde huidstructuur.</p>
+      <p>Vitamine E draagt bij aan de bescherming van cellen tegen oxidatieve stress door vrije radicalen te neutraliseren. Dit is essentieel voor het behoud van een gezonde huidstructuur.</p>
       
       <h3>Tocotriënolen vs Tocoferolen</h3>
       <p>Niet alle vitamine E is gelijk. Tocotriënolen zijn tot wel 50 keer krachtiger dan de standaard tocoferolen die je in de meeste supplementen vindt.</p>
       
       <h3>Amare Sunset Focus</h3>
-      <p><strong>Amare Sunset</strong> bevat de meest krachtige vorm van vitamine E (tocotriënolen) voor bir diepgaand herstel van je huid ve weefsels tijdens de nacht.</p>
+      <p><strong>Amare Sunset</strong> bevat de meest krachtige vorm van vitamine E (tocotriënolen) voor een diepgaand herstel van je huid en weefsels tijdens de nacht.</p>
     `,
     image: "/images/blog/vitamine-e.jpg"
   },
@@ -1688,16 +1688,16 @@ export const blogPosts: BlogPost[] = [
     title: "Amare ON: B-Vitamines voor Energie & Focus — De Motor van je Metabolisme (2026)",
     date: "2026-04-25",
     category: "Energie",
-    excerpt: "Voel je je futloos? B-vitamines zijn essentieel voor het omzetten van voeding in bruikbare energie voor je hersenen ve spieren.",
+    excerpt: "Voel je je futloos? B-vitamines zijn essentieel voor het omzetten van voeding in bruikbare energie voor je hersenen en spieren.",
     content: `
       <h2>Het B-Complex</h2>
-      <p>B-vitamines (zoals B1, B2, B6 ve B12) fungeren als co-enzymen bij het vrijmaken van energie uit koolhydraten, vetten ve eiwitten.</p>
+      <p>B-vitamines (zoals B1, B2, B6 en B12) fungeren als co-enzymen bij het vrijmaken van energie uit koolhydraten, vetten en eiwitten.</p>
       
-      <h3>Focus ve Geheugen</h3>
-      <p>Naast energie zijn B-vitamines cruciaal voor de aanmaak van myeline, de beschermlaag rond je zenuwen, wat essentiyil is voor bir scherp geheugen ve focus.</p>
+      <h3>Focus en Geheugen</h3>
+      <p>Naast energie zijn B-vitamines cruciaal voor de aanmaak van myeline, de beschermlaag rond je zenuwen, wat essentieel is voor een scherp geheugen en focus.</p>
       
       <h3>Amare ON Boost</h3>
-      <p>Voor bir directe mentale boost bevat <strong>Amare ON</strong> bir uitgebalanceerd B-complex dat je helpt om alert ve gefocust te blijven tijdens drukke dagen.</p>
+      <p>Voor een directe mentale boost bevat <strong>Amare ON</strong> een uitgebalanceerd B-complex dat je helpt om alert en gefocust te blijven tijdens drukke dagen.</p>
     `,
     image: "/images/blog/b-vitamines.jpg"
   },
