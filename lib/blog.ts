@@ -2947,7 +2947,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — probiotica voor stemming & mentale veerkracht" },
     { name: "Restore", url: "/restore", isInternal: true, price: "€29.70/maand", tagline: "5 probiotica stammen + 5 spijsverteringsenzymen" },
   ],
-  "collageen-mannen-30-huid-spieren-gewrichten": [
+  "collageen-mannen-30-huid-gewrichten-spierherstel": [
     { name: "HL5", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "5g gehydrolyseerd collageen Type 1&3 — 2-pack beste waarde" },
   ],
 };

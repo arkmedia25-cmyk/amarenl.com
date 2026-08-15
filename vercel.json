@@ -678,6 +678,46 @@
       "permanent": true
     },
     {
+      "source": "/blogs/nieuws/collageen-essentieel-voor-huid-haar-nagels",
+      "destination": "/blogs/nieuws/vloeibaar-collageen-hl5-huid-haar-nagels",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/natuurlijke-energie-supplementen-energy-plus-cafeine-alternatief",
+      "destination": "/blogs/nieuws/energy-plus-natuurlijke-energie-zonder-crash",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/darm-huid-connectie-probiotica-stralende-huid",
+      "destination": "/blogs/nieuws/darm-huid-connectie-gezondheid-stralende-huid-probiotica",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/vitamine-d-tekort-symptomen-test",
+      "destination": "/blogs/nieuws/vitamine-d-tekort-symptomen",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/stress-verminderen-supplementen-die-echt-werken",
+      "destination": "/blogs/nieuws/stress-verminderen-supplementen-cortisol-ontspanning",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/overgang-supplementen-menopauze-natuurlijk-ondersteuning",
+      "destination": "/blogs/nieuws/menopauze-supplement-natuurlijke-ondersteuning-overgang",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/beste-supplementen-overgang-menopauze-2026",
+      "destination": "/blogs/nieuws/menopauze-supplement-natuurlijke-ondersteuning-overgang",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/collageen-mannen-30-huid-spieren-gewrichten",
+      "destination": "/blogs/nieuws/collageen-mannen-30-huid-gewrichten-spierherstel",
+      "permanent": true
+    },
+    {
       "source": "/category/:path*",
       "destination": "/blogs/nieuws",
       "permanent": true
