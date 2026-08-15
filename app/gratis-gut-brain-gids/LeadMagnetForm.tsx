@@ -10,14 +10,16 @@ export default function LeadMagnetForm() {
   const [submitted, setSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [gdpr, setGdpr] = useState(false);
+  const [gdprError, setGdprError] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email.includes("@")) return;
     if (!gdpr) {
-      alert("Je moet akkoord gaan met het privacybeleid om verder te gaan.");
+      setGdprError(true);
       return;
     }
+    setGdprError(false);
     setIsLoading(true);
     try {
       const res = await fetch("/api/subscribe", {
@@ -64,7 +66,10 @@ export default function LeadMagnetForm() {
             <input
               type="checkbox"
               checked={gdpr}
-              onChange={(e) => setGdpr(e.target.checked)}
+              onChange={(e) => {
+                setGdpr(e.target.checked);
+                if (e.target.checked) setGdprError(false);
+              }}
               className="mt-0.5 w-4 h-4 rounded border-gray-300 text-[var(--color-primary)] focus:ring-[var(--color-primary)] shrink-0"
             />
             <span className="text-xs text-gray-500 leading-relaxed">
@@ -75,6 +80,11 @@ export default function LeadMagnetForm() {
               en ontvang de gratis Gut-Brain Gids + optionele wellness tips per e-mail. Ik kan me op elk moment uitschrijven.
             </span>
           </label>
+          {gdprError && (
+            <p className="text-xs text-red-500 -mt-2">
+              Je moet akkoord gaan met het privacybeleid om verder te gaan.
+            </p>
+          )}
 
           <button
             type="submit"

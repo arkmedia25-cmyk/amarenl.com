@@ -8,13 +8,15 @@ export default function NewsletterForm() {
   const [email, setEmail] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) {
-      alert("Vul een geldig e-mailadres in");
+      setError("Vul een geldig e-mailadres in");
       return;
     }
+    setError("");
     setIsLoading(true);
     try {
       const res = await fetch("/api/subscribe", {
@@ -27,10 +29,10 @@ export default function NewsletterForm() {
         setIsSubmitted(true);
         trackLeadConversion("newsletter", "newsletter-section", { email });
       } else {
-        alert("Er ging iets mis. Probeer het opnieuw.");
+        setError("Er ging iets mis. Probeer het opnieuw.");
       }
     } catch {
-      alert("Er ging iets mis. Probeer het opnieuw.");
+      setError("Er ging iets mis. Probeer het opnieuw.");
     }
     setIsLoading(false);
   };
@@ -87,6 +89,9 @@ export default function NewsletterForm() {
                       />
                     </div>
                   </div>
+                  {error && (
+                    <p className="text-xs text-red-500 -mt-2">{error}</p>
+                  )}
                   <button
                     type="submit"
                     className="w-full flex items-center justify-center gap-3 py-4 bg-[var(--color-primary)] text-white rounded-xl font-bold hover:opacity-90 transition-opacity text-lg"
