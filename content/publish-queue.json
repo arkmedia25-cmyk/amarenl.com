@@ -42,42 +42,58 @@
   {
     "pr": 11,
     "title": "Waarom je méér resultaat haalt uit een pakket dan losse supplementen — de synergie-wetenschap",
-    "status": "pending"
+    "status": "published",
+    "published_at": "2026-08-15T08:19:11Z",
+    "note": "Self-healing: kuyrukta pending görünüyordu ama GitHub durumu MERGED idi — muhtemelen kuyruğu atlayarak manuel onaylanmıştı. Otomatik düzeltildi."
   },
   {
     "pr": 12,
     "title": "Hoe lees je een supplementenlabel zonder opgelicht te worden?",
-    "status": "pending"
+    "status": "published",
+    "published_at": "2026-08-15T08:19:12Z",
+    "note": "Self-healing: kuyrukta pending görünüyordu ama GitHub durumu MERGED idi — muhtemelen kuyruğu atlayarak manuel onaylanmıştı. Otomatik düzeltildi."
   },
   {
     "pr": 13,
     "title": "30 dagen Happy Juice — dagboek van een gebruiker",
-    "status": "pending"
+    "status": "published",
+    "published_at": "2026-08-15T08:19:12Z",
+    "note": "Self-healing: kuyrukta pending görünüyordu ama GitHub durumu MERGED idi — muhtemelen kuyruğu atlayarak manuel onaylanmıştı. Otomatik düzeltildi."
   },
   {
     "pr": 14,
     "title": "Van 3 koffie per dag naar 0 — hoe Nitro mijn middagritueel veranderde",
-    "status": "pending"
+    "status": "published",
+    "published_at": "2026-08-15T08:19:12Z",
+    "note": "Self-healing: kuyrukta pending görünüyordu ama GitHub durumu MERGED idi — muhtemelen kuyruğu atlayarak manuel onaylanmıştı. Otomatik düzeltildi."
   },
   {
     "pr": 15,
     "title": "Supplementen bewaren in de zomer — dit moet je weten",
-    "status": "pending"
+    "status": "published",
+    "published_at": "2026-08-15T08:19:13Z",
+    "note": "Self-healing: kuyrukta pending görünüyordu ama GitHub durumu MERGED idi — muhtemelen kuyruğu atlayarak manuel onaylanmıştı. Otomatik düzeltildi."
   },
   {
     "pr": 16,
     "title": "De waarheid over 'natuurlijke' supplementen — waar let je op?",
-    "status": "pending"
+    "status": "published",
+    "published_at": "2026-08-15T08:19:13Z",
+    "note": "Self-healing: kuyrukta pending görünüyordu ama GitHub durumu MERGED idi — muhtemelen kuyruğu atlayarak manuel onaylanmıştı. Otomatik düzeltildi."
   },
   {
     "pr": 17,
     "title": "Waarom je in de herfst anders moet supplementeren dan in de zomer",
-    "status": "pending"
+    "status": "published",
+    "published_at": "2026-08-15T08:19:13Z",
+    "note": "Self-healing: kuyrukta pending görünüyordu ama GitHub durumu MERGED idi — muhtemelen kuyruğu atlayarak manuel onaylanmıştı. Otomatik düzeltildi."
   },
   {
     "pr": 18,
     "title": "Terug naar kantoor? Dit hebben je darmen nodig na maanden thuiswerken",
-    "status": "pending"
+    "status": "published",
+    "published_at": "2026-08-15T08:19:14Z",
+    "note": "Self-healing: kuyrukta pending görünüyordu ama GitHub durumu MERGED idi — muhtemelen kuyruğu atlayarak manuel onaylanmıştı. Otomatik düzeltildi."
   },
   {
     "pr": 21,
@@ -89,14 +105,16 @@
   {
     "pr": 23,
     "title": "Collageen voor Mannen 30+: Waarom Het Ertoe Doet",
-    "status": "pending",
-    "note": "Kuyruk dosyasına hiç eklenmemişti (07-08'de açılmış, muhtemelen article-generation script'i bu dosyayı güncellemedi) — 10-08'de elle eklendi."
+    "status": "published",
+    "note": "Self-healing: kuyrukta pending görünüyordu ama GitHub durumu CLOSED idi — muhtemelen kuyruğu atlayarak manuel onaylanmıştı. Otomatik düzeltildi.",
+    "published_at": "2026-08-15T08:19:14Z"
   },
   {
     "pr": 24,
     "title": "Collageen voor Mannen 30+: Huid, Spieren, Gewrichten",
-    "status": "pending",
-    "note": "Kuyruk dosyasına hiç eklenmemişti (10-08'de açılmış) — 11-08'de elle eklendi."
+    "status": "published",
+    "note": "Self-healing: kuyrukta pending görünüyordu ama GitHub durumu MERGED idi — muhtemelen kuyruğu atlayarak manuel onaylanmıştı. Otomatik düzeltildi.",
+    "published_at": "2026-08-15T08:19:14Z"
   },
   {
     "pr": 25,
