@@ -22,7 +22,7 @@ concurrency:
 jobs:
   publish-next:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -175,16 +175,38 @@ jobs:
         if: steps.next.outputs.empty == 'false'
         run: npm run build
 
-      - name: Deploy to Vercel
+      - name: Wait for Vercel auto-deploy (GitHub-integratie, geen dubbele upload)
         if: steps.next.outputs.empty == 'false'
+        # Vercel's GitHub App deployt al automatisch bij elke push naar main —
+        # een tweede, expliciete `vercel deploy` hier verdubbelt alleen de
+        # upload-hoeveelheid en was de oorzaak van herhaalde "Too many
+        # requests (api-upload-free)"-fouten (11-08, 13-08, 15-08-2026). Deze
+        # stap wacht i.p.v. dat op de al lopende auto-deploy en faalt luid als
+        # die zelf mislukt, zonder ooit een tweede deploy te triggeren.
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
         run: |
-          npx vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
-          npx vercel build --prod --token="$VERCEL_TOKEN"
-          npx vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN"
+          SHA=$(git rev-parse HEAD)
+          echo "Wachten op Vercel's automatische deploy voor commit $SHA..."
+          for i in $(seq 1 40); do
+            curl -sS "https://api.vercel.com/v6/deployments?projectId=$VERCEL_PROJECT_ID&teamId=$VERCEL_ORG_ID&limit=10" \
+              -H "Authorization: Bearer $VERCEL_TOKEN" -o /tmp/vercel_deployments.json
+            STATE=$(jq -r --arg sha "$SHA" '[.deployments[] | select(.meta.githubCommitSha == $sha)] | .[0].readyState // empty' /tmp/vercel_deployments.json)
+            echo "poging $i: readyState=${STATE:-nog niet gevonden}"
+            if [ "$STATE" = "READY" ]; then
+              echo "Deploy geslaagd."
+              exit 0
+            fi
+            if [ "$STATE" = "ERROR" ] || [ "$STATE" = "CANCELED" ]; then
+              echo "::error::Vercel-deploy voor $SHA is mislukt (readyState=$STATE)"
+              exit 1
+            fi
+            sleep 15
+          done
+          echo "::error::Vercel-deploy voor $SHA werd niet binnen 10 minuten READY"
+          exit 1
 
       - name: Mark PR as published in queue
         if: steps.next.outputs.empty == 'false'
