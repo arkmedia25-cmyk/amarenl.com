@@ -153,7 +153,7 @@
       "permanent": true
     },
     {
-      "source": "/collections/:path*",
+      "source": "/collections/:path((?!amare-wellness-essentials-2/?$).*)",
       "destination": "/",
       "permanent": true
     },
