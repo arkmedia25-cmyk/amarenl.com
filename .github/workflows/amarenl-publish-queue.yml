@@ -4,11 +4,18 @@ name: AmareNL — Yayın Kuyruğu (staggered, 2 günde bir)
 # tanesini — merge+build+deploy eder. content/publish-queue.json içindeki ilk
 # "pending" kaydı işler, "published" olarak işaretler, bir sonrakini bir
 # sonraki çalışmaya bırakır.
+#
+# 17-08-2026: schedule kapatıldı — kuyruk tamamen eridi (18/18 işlendi, 0
+# pending). Yeni makaleler artık amarenl-promote-draft.yml üzerinden tek tek
+# (Telegram onayı → anında merge+deploy) yayınlanıyor, bu ayrı staggered
+# kuyruğa gerek kalmadı. workflow_dispatch açık bırakıldı — ileride yine
+# büyük bir backlog birikirse (`gh workflow run amarenl-publish-queue.yml`)
+# manuel tetiklenebilir, mantık/script'ler dokunulmadan duruyor.
 on:
-  schedule:
-    # 08:00 UTC ≈ 10:00 Amsterdam (zomertijd). Ayın tek günlerinde çalışır
-    # (1,3,5,...31) — pratikte ~2 günde bir. Kuyruk 15 madde × 2 gün ≈ 30 gün.
-    - cron: "0 8 */2 * *"
+  # schedule:
+  #   # 08:00 UTC ≈ 10:00 Amsterdam (zomertijd). Ayın tek günlerinde çalışır
+  #   # (1,3,5,...31) — pratikte ~2 günde bir. Kuyruk 15 madde × 2 gün ≈ 30 gün.
+  #   - cron: "0 8 */2 * *"
   workflow_dispatch: {}
 
 permissions:
