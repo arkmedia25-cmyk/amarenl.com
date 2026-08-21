@@ -155,7 +155,7 @@ export const blogPosts: BlogPost[] = [
       <li><strong>Darmklachten</strong> (stress vertraagt de spijsvertering en verstoort je darmflora)</li>
       <li><strong>Emotionele uitputting</strong> (prikkelbaarheid, somberheid, mentale vermoeidheid)</li>
       </ul>
-      <p>In Nederland geeft 1 op de 4 werkenden aan burn-outklachten te ervaren. Stress is geen luxeprobleem — het is een fysiologische toestand met meetbare gevolgen voor je hele lichaam.</p>
+      <p>In Nederland geeft 1 op de 4 werkenden aan burn-outklachten te ervaren. Stress is geen luxeprobleem — het is een fysiologische toestand met meetbare gevolgen voor je hele lichaam. Merk je dat de uitputting aanhoudt ondanks rust, of gaat het verder dan "gewone" drukte? Lees dan ons specifieke artikel over <a href="/blogs/nieuws/supplementen-stress-burn-out-wat-helpt-echt">supplementen bij burn-out</a>.</p>
       <h2>Supplementen die je stressrespons ondersteunen</h2>
       <h3>Adaptogenen — de basis van natuurlijke stressondersteuning</h3>
       <p>Adaptogenen zijn plantaardige stoffen die je lichaam helpen zich aan te passen aan stress — fysiek, chemisch of biologisch. Ze werken niet door één specifiek mechanisme, maar door je hele stresssysteem (de HPA-as: hypothalamus-hypofyse-bijnier) te moduleren.</p>
@@ -2257,107 +2257,20 @@ Begin met een basisvorm zoals bisglycinaat (200-400 mg elementair), neem het 's 
 > Deze informatie is uitsluitend voor educatieve doeleinden en vervangt geen medisch advies.
 
 <strong><a href="https://amarereview.nl/reviews/sunrise-complete-ochtendformule-review">Lees onze Sunrise review →</a></strong>`},
-{slug:"supplementen-stress-burn-out-wat-helpt-echt",title:"Supplementen bij Stress & Burn-out: Wat Helpt Echt?",date:"2026-06-23",category:"mentaal",excerpt:"Chronische stress put je lichaam uit. Ontdek welke supplementen wetenschappelijk onderbouwd helpen bij stress en burn-out klachten.",content:`<h2>Stress is fysiek, niet alleen mentaal</h2>
-
-We praten over stress alsof het 'tussen je oren' zit. Maar stress is primair een fysiologisch proces: je bijnieren maken cortisol aan, je hartslag stijgt, je bloedsuiker piekt, je immuunsysteem schakelt terug. Dat systeem is ontworpen voor korte, acute stress — een leeuw die je moet ontvluchten.
-
-Chronische stress is fundamenteel anders. Je cortisolniveau blijft verhoogd, dag in dag uit, maand na maand. Het resultaat: uitgeputte bijnieren, verstoorde bloedsuikerregulatie, een onderdrukt immuunsysteem en uitgeputte mitochondriën. Dit is geen 'aanstellerij' — het is meetbare fysiologische uitputting.
-
-Supplementen kunnen het herstel ondersteunen. Niet als vervanging van rust, therapie of leefstijlaanpassingen, maar als ondersteuning van de fysiologische systemen die onder chronische stress bezwijken.
-
-<h2>De 5 beste supplementen bij stress en burn-out</h2>
-
-<h3>1. Ashwagandha — de cortisolregulator</h3>
-
-Ashwagandha (Withania somnifera) is het best onderzochte adaptogeen voor stress. Een dubbelblinde, placebogecontroleerde studie onder 64 mensen met chronische stress vond dat 300 mg KSM-66 ashwagandha-extract tweemaal daags het serumcortisol met 27,9% verlaagde na 60 dagen. Andere studies rapporteren verbeteringen in slaapkwaliteit, energieniveau en mentale helderheid.
-
-Dosering: 300-600 mg gestandaardiseerd extract (KSM-66 of Sensoril), 's avonds ingenomen. Verwacht resultaat na 4 tot 8 weken.
-
-<h3>2. Rhodiola Rosea — de vermoeidheidsbestrijder</h3>
-
-Rhodiola richt zich specifiek op stressgerelateerde vermoeidheid en mentale uitputting. Het actieve bestanddeel (rosavin) ondersteunt de ATP-productie in de mitochondriën en helpt bij het reguleren van de cortisolrespons.
-
-Een Zweedse studie onder 60 mensen met burn-out vond dat rhodiola de vermoeidheidsscores met 35% verminderde en de cognitieve functie significant verbeterde ten opzichte van placebo.
-
-Dosering: 200-400 mg gestandaardiseerd extract (3% rosavin), 's ochtends. Verwacht resultaat na 4 weken.
-
-<h3>3. Magnesium — het anti-stress mineraal</h3>
-
-Magnesium en stress vormen een vicieuze cirkel: stress verhoogt de magnesiumuitscheiding via urine, en een magnesiumtekort maakt je gevoeliger voor stress. Magnesium ondersteunt de GABA-receptoren — het kalmerende systeem in je hersenen — en remt de afgifte van stresshormonen.
-
-Onderzoek toont aan dat magnesiumsuppletie bij mensen met een tekort de stressgevoeligheid significant kan verminderen. De beste vorm voor stress: magnesiumbisglycinaat (gekoppeld aan het kalmerende aminozuur glycine).
-
-<h3>4. L-Theanine — focus zonder nervositeit</h3>
-
-L-theanine is een aminozuur uit groene thee dat alfagolven in de hersenen verhoogt — de hersengolven die geassocieerd worden met een ontspannen maar alerte toestand. In tegenstelling tot ashwagandha werkt L-theanine acuut: je merkt het effect binnen 30-60 minuten.
-
-Het bijzondere: L-theanine vermindert de negatieve bijwerkingen van cafeïne (nervositeit, verhoogde bloeddruk) terwijl het de positieve effecten (alertheid, focus) behoudt. Voor mensen met stress die toch moeten presteren is dit een uitkomst.
-
-<h3>5. B-Vitamines (B5, B6, B12) — de bijnierondersteuning</h3>
-
-Je bijnieren bevatten de hoogste concentratie vitamine C en B-vitamines van elk orgaan in je lichaam — geen toeval, want deze vitamines zijn essentieel voor de cortisolproductie. Bij chronische stress raakt deze voorraad uitgeput.
-
-Vitamine B5 (pantotheenzuur) is specifiek belangrijk voor de bijnierfunctie. Een B-complex 's ochtends ondersteunt zowel de energieproductie als de stressrespons.
-
-<h2>Supplementen die NIET direct helpen bij burn-out</h2>
-
-<p>• <strong>Cafeïne-pillen of sterke pre-workouts</strong>: Ze geven een tijdelijke energieboost maar verhogen cortisol en putten je bijnieren verder uit.</p>
-<p>• <strong>Sint-Janskruid</strong>: Wordt soms aangeraden maar interageert met veel medicatie (inclusief antidepressiva) en is niet specifiek voor burn-out.</p>
-<p>• <strong>5-HTP</strong>: Kan de stemming ondersteunen maar pakt de onderliggende bijnieruitputting niet aan.</p>
-<p>• <strong>'Stress gummies' met onbekende doseringen</strong>: Meestal te laag gedoseerd om effectief te zijn.</p>
-
-<h2>De Amare aanpak</h2>
-
-<table>
-<tr><td>Product</td><td>Wat het doet</td><td>Voor welke stressfase</td></tr>
-<tr><td><strong>EDGE+</strong></td><td>Rhodiola + L-theanine + Zynamite</td><td>Acute stress, focus onder druk</td></tr>
-<tr><td><strong>MentaBiotics</strong></td><td>Probiotica voor gut-brain as</td><td>Chronische stress, stemmingsondersteuning</td></tr>
-<tr><td><strong>Happy Juice Pack</strong></td><td>Energy+ + EDGE+ + MentaBiotics</td><td>Complete mentale ondersteuning</td></tr>
-</table>
-
-De Happy Juice Pack combineert drie formules die samenwerken: Energy+ voor zachte energie, EDGE+ voor adaptogene stressbescherming, en MentaBiotics voor de darm-hersen connectie die bij chronische stress verstoord raakt.
-
-<p><a href="https://www.amare.com/2075008/nl-nl/happy-juice-pack" target="_blank" rel="nofollow noopener noreferrer">Complete ondersteuning: Bekijk Happy Juice Pack →</a></p>
-
-<h2>Supplementen zijn ondersteuning, geen oplossing</h2>
-
-Dit moet duidelijk zijn: supplementen ondersteunen het fysieke herstel, maar ze lossen de oorzaak van burn-out niet op. Chronische stress vraagt om:
-
-<p><strong>Rust</strong> — letterlijk stoppen met overwerken, grenzen stellen</p>
-<p><strong>Slaap</strong> — 7-9 uur kwalitatieve slaap per nacht</p>
-<p><strong>Beweging</strong> — matig, niet uitputtend (wandelen, yoga, zwemmen)</p>
-<p><strong>Sociale verbinding</strong> — praten met vrienden, familie, therapeut</p>
-<p><strong>Zingeving</strong> — wat geeft je energie versus wat kost energie?</p>
-
-Supplementen maken deze vijf pilaren haalbaarder — ze geven je de fysieke basis om de leefstijlaanpassingen vol te houden.
-
-<h2>Veelgestelde vragen</h2>
-
-<strong>Hoe snel werken stress-supplementen?</strong>
-
-L-theanine werkt acuut (binnen een uur). Magnesium: 1-2 weken voor slaap, langer voor algehele stressvermindering. Ashwagandha en rhodiola: 4 tot 8 weken consistent gebruik. Bij burn-out is geduld essentieel — herstel wordt gemeten in maanden, niet dagen.
-
-<strong>Kan ik adaptogenen combineren met medicatie?</strong>
-
-Raadpleeg altijd je arts. Ashwagandha kan interacteren met schildkliermedicatie, bloeddrukverlagers en immunosuppressiva. Rhodiola kan de bloeddruk licht verhogen. Sint-Janskruid is berucht om interacties. Wees eerlijk tegen je arts over supplementgebruik.
-
-<strong>Is ashwagandha verslavend?</strong>
-
-Nee, ashwagandha is niet verslavend. Het is geen stimulant en geen sedativum — het ondersteunt je lichaam bij het reguleren van de stressrespons. Je kunt zonder problemen stoppen.
-
-<h2>Conclusie</h2>
-
-Chronische stress en burn-out zijn fysiologische processen, geen karakterzwaktes. Je bijnieren, mitochondriën en neurotransmitters raken letterlijk uitgeput. De best onderbouwde supplementen — ashwagandha, rhodiola, magnesium, L-theanine en B-vitamines — ondersteunen het lichamelijk herstel en maken leefstijlaanpassingen haalbaarder.
-
-Begin met één adaptogeen (ashwagandha 's avonds óf rhodiola 's ochtends), voeg magnesium toe, en bouw van daaruit verder. De Happy Juice Pack van Amare biedt een complete instap met drie synergetische formules in één bundel.
-
-Supplementen zijn de steunzolen voor je herstelpad — ze dragen je niet, maar ze maken de weg begaanbaar.
-
-* Deze uitspraken zijn niet beoordeeld door de NVWA. Supplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij burn-outklachten altijd een arts.
-
-> Deze informatie is uitsluitend voor educatieve doeleinden en vervangt geen medisch advies.
-
-<strong><a href="https://amarereview.nl/reviews/happy-juice-pack-review-ervaringen">Lees onze Happy Juice Pack review →</a></strong>`},
+{
+    slug: "supplementen-stress-burn-out-wat-helpt-echt",
+    title: "Supplementen bij Stress en Burn-out: Wat Helpt Echt?",
+    date: "2026-06-23",
+    category: "mentaal",
+    excerpt: "Burn-out is geen tekort aan doorzettingsvermogen maar een fysiologische uitputting die langer duurt dan gewone stress. Deze supplementen ondersteunen je herstel — wetenschappelijk onderbouwd.",
+    author: "Mark",
+    citations: [
+      { author: "Chandrasekhar K, Kapoor J, Anishetty S", name: "Safety and efficacy of a high-concentration full-spectrum extract of ashwagandha root in reducing stress and anxiety in adults (Indian J Psychol Med, 2012)", url: "https://doi.org/10.4103/0253-7176.106022" },
+      { author: "Olsson EM, von Schéele B, Panossian AG", name: "Standardised extract SHR-5 of Rhodiola rosea in the treatment of subjects with stress-related fatigue (Planta Medica, 2008)", url: "https://doi.org/10.1055/s-0028-1088346" },
+      { author: "Geluk E, Lenstra R, Cambré B, Van den Broeck A", name: "Designing a Multi-Stakeholder Intervention for Return to Work After Burnout (Journal of Occupational Rehabilitation, 2025)", url: "https://doi.org/10.1007/s10926-025-10300-8" },
+    ],
+    content: `<h2>Stress is fysiek, niet alleen mentaal</h2><p>We praten over stress alsof het 'tussen je oren' zit. Maar stress is primair een fysiologisch proces: je bijnieren maken cortisol aan, je hartslag stijgt, je bloedsuiker piekt, je immuunsysteem schakelt terug. Dat systeem is ontworpen voor korte, acute stress — een leeuw die je moet ontvluchten.</p><p>Chronische stress is fundamenteel anders. Je cortisolniveau blijft verhoogd, dag in dag uit, maand na maand. Het resultaat: uitgeputte bijnieren, verstoorde bloedsuikerregulatie, een onderdrukt immuunsysteem en uitgeputte mitochondriën. Dit is geen 'aanstellerij' — het is meetbare fysiologische uitputting.</p><p>Supplementen kunnen het herstel ondersteunen. Niet als vervanging van rust, therapie of leefstijlaanpassingen, maar als ondersteuning van de fysiologische systemen die onder chronische stress bezwijken.</p><h2>Burn-out versus alledaagse stress: waarom dit anders is</h2><p>Niet elke stressvolle periode is een burn-out, en dat onderscheid is belangrijk — ook voor welke aanpak je kiest. Heb je vooral last van drukte, een hectische week of tijdelijke spanning, lees dan ons artikel over <a href="/blogs/nieuws/stress-verminderen-supplementen-cortisol-ontspanning">supplementen bij stress in het algemeen</a>. Dit artikel gaat specifiek over burn-out: een dieper, langduriger uitputtingsstadium waarbij rust alleen vaak niet meer voldoende is.</p><p>Het verschil zit vooral in duur en herstelweg. Onderzoek naar terugkeer naar werk na een burn-out laat zien dat het herstel doorgaans niet lineair verloopt en dat terugval na werkhervatting relatief vaak voorkomt — juist omdat interventies zich vaak alleen op het individu richten, terwijl ook de werkomgeving een rol speelt. Dat betekent concreet: een burn-out vraagt om een breder herstelplan dan 'een weekje rust nemen', en supplementen zijn daarbinnen een fysiologisch hulpmiddel, geen kortere weg terug naar volle belasting.</p><h2>De 5 beste supplementen bij stress en burn-out</h2><h3>1. Ashwagandha — de cortisolregulator</h3><p>Ashwagandha (Withania somnifera) is het best onderzochte <a href="/adaptogenen">adaptogeen</a> voor stress. Een dubbelblinde, placebogecontroleerde studie onder 64 mensen met chronische stress liet zien dat 300 mg ashwagandha-wortelextract, tweemaal daags ingenomen gedurende 60 dagen, zowel de score op stress-vragenlijsten als het serumcortisol significant deed dalen ten opzichte van placebo. Andere studies rapporteren verbeteringen in slaapkwaliteit, energieniveau en mentale helderheid.</p><p>Dosering: 300-600 mg gestandaardiseerd extract (KSM-66 of Sensoril), 's avonds ingenomen. Verwacht resultaat na 4 tot 8 weken.</p><h3>2. Rhodiola Rosea — de vermoeidheidsbestrijder</h3><p>Rhodiola richt zich specifiek op stressgerelateerde vermoeidheid en mentale uitputting. Het actieve bestanddeel (rosavin) ondersteunt de ATP-productie in de mitochondriën en helpt bij het reguleren van de cortisolrespons.</p><p>Een Zweedse studie onder 60 mensen met burn-outgerelateerde vermoeidheid vond na 28 dagen een significante verbetering op de burn-outschaal en in aandachtstaken bij de rhodiola-groep ten opzichte van placebo, samen met een veranderde cortisolrespons op ochtendstress.</p><p>Dosering: 200-400 mg gestandaardiseerd extract (3% rosavin), 's ochtends. Verwacht resultaat na 4 weken.</p><h3>3. Magnesium — het anti-stress mineraal</h3><p>Magnesium en stress vormen een vicieuze cirkel: stress verhoogt de magnesiumuitscheiding via urine, en een magnesiumtekort maakt je gevoeliger voor stress. Magnesium ondersteunt de GABA-receptoren — het kalmerende systeem in je hersenen — en remt de afgifte van stresshormonen.</p><p>Onderzoek toont aan dat magnesiumsuppletie bij mensen met een tekort de stressgevoeligheid kan verminderen. De beste vorm voor stress: magnesiumbisglycinaat (gekoppeld aan het kalmerende aminozuur glycine).</p><h3>4. L-Theanine — focus zonder nervositeit</h3><p>L-theanine is een aminozuur uit groene thee dat alfagolven in de hersenen verhoogt — de hersengolven die geassocieerd worden met een ontspannen maar alerte toestand. In tegenstelling tot ashwagandha werkt L-theanine acuut: je merkt het effect binnen 30-60 minuten.</p><p>Het bijzondere: L-theanine vermindert de negatieve bijwerkingen van cafeïne (nervositeit, verhoogde bloeddruk) terwijl het de positieve effecten (alertheid, focus) behoudt. Voor mensen met stress die toch moeten presteren is dit een uitkomst.</p><h3>5. B-Vitamines (B5, B6, B12) — de bijnierondersteuning</h3><p>Je bijnieren bevatten van nature een hoge concentratie vitamine C en B-vitamines — deze vitamines zijn betrokken bij de cortisolproductie. Bij chronische stress raakt deze voorraad sneller uitgeput.</p><p>Vitamine B5 (pantotheenzuur) is specifiek belangrijk voor de bijnierfunctie. Een B-complex 's ochtends ondersteunt zowel de energieproductie als de stressrespons.</p><h2>Supplementen die NIET direct helpen bij burn-out</h2><p>• <strong>Cafeïne-pillen of sterke pre-workouts</strong>: Ze geven een tijdelijke energieboost maar verhogen cortisol en putten je bijnieren verder uit.</p><p>• <strong>Sint-Janskruid</strong>: Wordt soms aangeraden maar interageert met veel medicatie (inclusief antidepressiva) en is niet specifiek voor burn-out.</p><p>• <strong>5-HTP</strong>: Kan de stemming ondersteunen maar pakt de onderliggende bijnieruitputting niet aan.</p><p>• <strong>'Stress gummies' met onbekende doseringen</strong>: Meestal te laag gedoseerd om effectief te zijn.</p><h2>De Amare aanpak</h2><table><tr><td>Product</td><td>Wat het doet</td><td>Voor welke stressfase</td></tr><tr><td><strong>EDGE+</strong></td><td>Rhodiola + L-theanine + Zynamite</td><td>Acute stress, focus onder druk</td></tr><tr><td><strong>MentaBiotics</strong></td><td>Probiotica voor gut-brain as</td><td>Chronische stress, stemmingsondersteuning</td></tr><tr><td><strong>Happy Juice Pack</strong></td><td>Energy+ + EDGE+ + MentaBiotics</td><td>Complete mentale ondersteuning</td></tr></table><p>De Happy Juice Pack combineert drie formules die samenwerken: Energy+ voor zachte energie, EDGE+ voor adaptogene stressbescherming, en MentaBiotics voor de darm-hersen connectie die bij chronische stress verstoord raakt.</p><p><a href="https://www.amare.com/2075008/nl-nl/happy-juice-pack" target="_blank" rel="nofollow noopener noreferrer">Complete ondersteuning: Bekijk Happy Juice Pack →</a></p><h2>Terugval voorkomen: wat helpt na werkhervatting?</h2><p>Een groot deel van de mensen die na een burn-out weer aan het werk gaan, valt binnen afzienbare tijd terug. Onderzoek naar effectieve terugkeer-naar-werk-programma's wijst uit dat de beste aanpak niet alleen op het individu leunt (rust, supplementen, therapie), maar ook de werkomgeving betrekt — denk aan een geleidelijke opbouw van taken, realistische afspraken met je leidinggevende, en een vast aanspreekpunt tijdens de eerste maanden terug. Supplementen kunnen de fysiologische basis mee op peil houden tijdens die opbouw, maar vervangen dat bredere plan niet.</p><h2>Supplementen zijn ondersteuning, geen oplossing</h2><p>Dit moet duidelijk zijn: supplementen ondersteunen het fysieke herstel, maar ze lossen de oorzaak van burn-out niet op. Chronische stress vraagt om:</p><p><strong>Rust</strong> — letterlijk stoppen met overwerken, grenzen stellen</p><p><strong>Slaap</strong> — 7-9 uur kwalitatieve slaap per nacht</p><p><strong>Beweging</strong> — matig, niet uitputtend (wandelen, yoga, zwemmen)</p><p><strong>Sociale verbinding</strong> — praten met vrienden, familie, therapeut</p><p><strong>Zingeving</strong> — wat geeft je energie versus wat kost energie?</p><p>Supplementen maken deze vijf pilaren haalbaarder — ze geven je de fysieke basis om de leefstijlaanpassingen vol te houden.</p><h2>Veelgestelde vragen</h2><p><strong>Hoe snel werken stress-supplementen?</strong><br/>L-theanine werkt acuut (binnen een uur). Magnesium: 1-2 weken voor slaap, langer voor algehele stressvermindering. Ashwagandha en rhodiola: 4 tot 8 weken consistent gebruik. Bij burn-out is geduld essentieel — herstel wordt gemeten in maanden, niet dagen.</p><p><strong>Kan ik adaptogenen combineren met medicatie?</strong><br/>Raadpleeg altijd je arts. Ashwagandha kan interacteren met schildkliermedicatie, bloeddrukverlagers en immunosuppressiva. Rhodiola kan de bloeddruk licht verhogen. Sint-Janskruid is berucht om interacties. Wees eerlijk tegen je arts over supplementgebruik.</p><p><strong>Is ashwagandha verslavend?</strong><br/>Nee, ashwagandha is niet verslavend. Het is geen stimulant en geen sedativum — het ondersteunt je lichaam bij het reguleren van de stressrespons. Je kunt zonder problemen stoppen.</p><p><strong>Wanneer is het echt een burn-out, en geen gewone stressvolle periode?</strong><br/>Bij gewone stress herstel je meestal binnen dagen tot weken na rust. Bij een burn-out blijft de uitputting aanhouden ondanks rust, en spelen vaak ook somberheid, concentratieverlies en een gevoel van vervreemding van je werk mee. Twijfel je? Bespreek het met je huisarts of bedrijfsarts.</p><h2>Conclusie</h2><p>Chronische stress en burn-out zijn fysiologische processen, geen karakterzwaktes. Je bijnieren, mitochondriën en neurotransmitters raken letterlijk uitgeput. De best onderbouwde supplementen — ashwagandha, rhodiola, magnesium, L-theanine en B-vitamines — ondersteunen het lichamelijk herstel en maken leefstijlaanpassingen haalbaarder, mits gecombineerd met een breder herstelplan dat ook je werkomgeving meeneemt.</p><p>Begin met één adaptogeen (ashwagandha 's avonds óf rhodiola 's ochtends), voeg magnesium toe, en bouw van daaruit verder. De Happy Juice Pack van Amare biedt een complete instap met drie synergetische formules in één bundel.</p><p>Supplementen zijn de steunzolen voor je herstelpad — ze dragen je niet, maar ze maken de weg begaanbaar.</p><p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Supplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij burn-outklachten altijd een arts.</em></p><p><em>Deze informatie is uitsluitend voor educatieve doeleinden en vervangt geen medisch advies.</em></p>`
+  },
 {slug:"ochtendroutine-meer-energie-supplementen-tips",title:"Ochtendroutine voor Meer Energie: Supplementen Tips",date:"2026-06-20",category:"essentials",excerpt:"Begin je dag met de juiste supplementen. Een praktische ochtendroutine voor meer energie, focus en vitaliteit.",content:`<h2>Waarom je ochtendroutine alles bepaalt</h2><p>Hoe je je dag begint, bepaalt hoe de rest verloopt. Een doordachte ochtendroutine met de juiste supplementen kan het verschil maken tussen energiek en uitgeput.</p><h2>De ideale ochtendroutine</h2><p><strong>07:00 - Water met citroen:</strong> Hydrateer je lichaam na 8 uur zonder vocht. Citroen voegt vitamine C toe.</p><p><strong>07:15 - Sunrise:</strong> Amare's ochtendformule met 22 superfoods en 9 vitaminen. IJzer, B-vitamines en D3 voor de hele dag.</p><p><strong>07:30 - Ontbijt met eiwit:</strong> Combineer Sunrise met een eiwitrijk ontbijt voor langdurige verzadiging.</p><h2>Wat je moet vermijden</h2><p><strong>Koffie op lege maag:</strong> Verhoogt cortisol onnodig. Wacht tot na je ontbijt.</p><p><strong>Teveel supplementen tegelijk:</strong> Houd het simpel. Een complete formule zoals Sunrise dekt de basis.</p><h2>Conclusie</h2><p>Een consistente ochtendroutine met de juiste supplementen geeft je een voorsprong. Begin simpel, wees consistent.</p><p><em>* Voedingssupplement. Geen geneesmiddel.</em></p>`},
 {slug:"elektrolyten-aanvullen-sport-hydratatie-gids",title:"Elektrolyten: Wat Zijn Het en Wanneer Heb Je Ze Nodig?",date:"2026-07-22",category:"essentials",excerpt:"Zweten, sporten, warm weer — je verliest meer dan alleen water. Alles over elektrolyten en hoe je ze slim aanvult.",content:`<h2>Meer dan alleen sportdrank</h2><p>De term elektrolyten roept waarschijnlijk beelden op van felgekleurde sportdrankjes. Maar elektrolyten zijn geen marketingterm — het zijn letterlijk de mineralen die je lichaam gebruikt om signalen door te geven, spieren te laten samentrekken, en vocht op de juiste plek te houden.</p><p>Zonder elektrolyten werkt je zenuwstelsel niet. Je hart klopt niet. Je spieren bewegen niet.</p><h2>Wat zijn elektrolyten eigenlijk?</h2><p>De belangrijkste elektrolyten in je lichaam zijn natrium, kalium, magnesium, calcium, chloride en fosfaat. Stuk voor stuk mineralen die een elektrische lading dragen. Je zenuwcellen gebruiken elektrische signalen om te communiceren, en die signalen worden opgewekt door de beweging van elektrolyten door celmembranen.</p><h2>Wanneer heb je extra nodig?</h2><p>Niet na een halfuurtje rustig joggen. Maar er zijn momenten waarop de balans verstoord raakt: intensief sporten (60+ minuten), warm weer, alcohol, keto of vasten, ziekte met koorts.</p><p>De klassieke signalen van een tekort: spierkramp, hoofdpijn, vermoeidheid, duizeligheid, hartkloppingen.</p><h2>De simpelste elektrolytendrank</h2><p>500 ml water, snufje zout (natrium), scheutje citroensap (kalium). Optioneel: mespuntje magnesiumpoeder. Klaar.</p><p>Voor dagelijkse ondersteuning leveren Amare's Nitro Xtreme en Origin de mineralen die je nodig hebt.</p><p><em>* Voedingssupplement. Geen geneesmiddel.</em></p>`},
   {slug:"supplementen-combineren-wel-niet-gids",title:"Supplementen Combineren: Wat Kan Wel en Niet?",date:"2026-07-14",category:"essentials",excerpt:"Niet alle supplementen gaan goed samen. Ontdek welke combinaties elkaar versterken en welke je beter scheidt.",content:`<h2>De supplementenpuzzel</h2><p>Je hebt magnesium voor het slapen, vitamine D bij het ontbijt, ijzer op een lege maag. Voor je het weet sta je een halfuur per dag pillen te sorteren. Maar welke combinaties zijn eigenlijk nuttig?</p><p>Het eerlijke antwoord: de meeste supplementen kunnen prima samen, maar er zijn een paar combinaties die je echt moet weten.</p><h2>De gouden combinaties</h2><p><strong>IJzer + Vitamine C:</strong> Vitamine C verhoogt de opname van ijzer met tot 6 keer.</p><p><strong>Vitamine D3 + K2:</strong> D3 zorgt dat calcium wordt opgenomen, K2 zorgt dat het op de juiste plek terechtkomt.</p><p><strong>Probiotica + Prebiotica:</strong> Probiotica zijn de zaadjes, prebiotica de mest. Samen sterker.</p><h2>De combinaties die je beter vermijdt</h2><p><strong>IJzer + Calcium:</strong> Calcium remt ijzeropname. Minimaal 4 uur ertussen.</p><p><strong>IJzer + Koffie/Thee:</strong> Tannines binden aan ijzer. Wacht minimaal 1 uur.</p><h2>De Amare aanpak</h2><p>Sunrise combineert ijzerrijke superfoods met natuurlijke vitamine C. De Triangle of Wellness regelt de timing voor je.</p><p><em>* Voedingssupplement. Geen geneesmiddel.</em></p>`},
