@@ -247,6 +247,59 @@ deze repo, mag niet buiten de hier beschreven pipeline om iets anders doen) en
 Musa:** de dagelijkse cron (`353c91b3a2f3`, elke ochtend 09:00) is nu puur ruis t.o.v. de officiële
 pipeline — uitzetten of laten staan is een keuze, niet iets dat automatisch is opgelost.
 
+### 🆕 Sessie 21-08-2026 — Magnesium duplicate-bug, GSC quick-win batch, EFSA-audit (PR #38–#45, allemaal gemerged)
+
+**Kern-architectuurbug gevonden en gefixt (PR #38):** `magnesium-onmisbaar-mineraal-rust-energie-spierherstel`
+was in PR #31 verdiept van 411 → 981 woorden, maar had **nul live effect** — een pre-existing
+duplicate slug in `lib/blog.ts`'s `blogPosts`-array (van een eerdere, ongerelateerde commit) won
+altijd via `getAllBlogPosts().find()`'s first-match-gedrag. Zelfde bug trof `darmflora-balans-voor-welzijn`
+(4 kopieën gevonden, samengevoegd tot 1). Daarnaast bleek `getProductLinksForArticle()`'s fallback
+voor niet-gemapte artikelen een kapotte sparse array `[, {...verkeerd object...}]` — rendered een
+lege/kapotte "Aanbevolen Producten"-kaart op **107 pagina's**. Beide gefixt.
+
+**Nieuwe architectuur-valkuil ontdekt:** `content/blog/*.mdx`-bestanden worden door **geen enkel**
+live codepad gelezen — `scripts/sync-mdx-to-blog.js` converteert ze ooit eenmalig naar een
+gecomprimeerd object literal in `lib/blog.ts` (herkenbaar aan `{slug:"...",title:"...",` zonder
+spaties, i.t.t. de rest van het bestand). Daarna is de `.mdx` een dode, wees-bestand — bewerken heeft
+geen live effect. Bevestigd voor meerdere artikelen tijdens deze sessie; **altijd eerst
+`grep lib/blog.ts` voor de slug checken** voordat je een `.mdx`-bestand bewerkt.
+
+**Echte auteur + geverifieerde bronnen (PR #38):** `BlogPost` kreeg `author`/`citations`-velden,
+zichtbare "Door Mark"-byline + "Bronnen"-sectie op elke artikelpagina. Toegepast op 28 artikelen —
+alleen met daadwerkelijk via PubMed/RIVM/Voedingscentrum/Thuisarts.nl geverifieerde bronnen, nooit
+geforceerd. Daarbij 2 inhoudelijke fouten gevonden en gecorrigeerd: een verzonnen ogende bron
+("Advances in Therapy, 2017") vervangen door de echte, kritischere Gröber et al. 2017 Nutrients-review
+over transdermaal magnesium, en een overdreven "RIVM"-claim over wijdverbreid tekort rechtgezet met de
+werkelijke, genuanceerdere Voedselconsumptiepeiling-data.
+
+**GSC quick-win rapport + uitvoering (PR #39–#42, #44):** redirect-aware herberekening van 90 dagen
+GSC-data (163 ruwe pagina's → 125 live URL's) leverde een geprioriteerde kansenlijst op. Aangepakt:
+kannibalisatie-risico tussen 2 vitamine-D-artikelen (interne link i.p.v. URL-wijziging), 2
+CTR-zwakke pagina's (meta description herschreven), `vloeibaar-collageen-hl5` (374→968 woorden,
+ontbrak zelfs een NVWA-dipnoot ondanks vlaggenschipproduct), `supplementen-stress-burn-out`
+(kannibalisatie met een sterkere zusterpagina + verzonnen ogende statistieken gecorrigeerd),
+`supplementen-winterdip` (213→790 woorden — miste lichttherapie, het best onderbouwde middel),
+`prebiotica-probiotica-verschil` (kapotte zin + spookverwijzing "(zie referenties)" gefixt), plus
+9 resterende lange-staart-pagina's (auteur/NVWA/kleine verdieping).
+
+**Site-brede bugs gevonden tijdens dit werk:**
+- **20 pagina's** linkten naar `amarereview.nl` — een derde-partij Amare-affiliatesite die **niet**
+  eigendom is van de gebruiker. Trok dus verkeer/link-equity weg naar een concurrent. Alle 20
+  verwijderd (PR #43).
+- **11 pagina's** hadden kapotte lijst-rendering (markdown `- item` / `1. item` bleef als platte
+  tekst binnen `<p>`-tags staan, i.p.v. `<ul>/<ol>`) — automatisch script gebruikt om te fixen.
+- Kapotte, niet-klikbare CTA naar het niet-bestaande product "GBX Fit" (geen affiliate-URL bestaat,
+  alle varianten geven 404 op amare.com) — op gebruikersinstructie vervangen door een link naar
+  `/restore`.
+
+**EFSA-audit uitgevoerd (PR #45):** `scripts/efsa-audit.js` rapporteerde 18 violations, maar het
+script mist context — het herkent geen ontkenningen ("verlaagt cortisol **niet** direct") en geen
+regel-lijst-tekst die de verboden termen zelf citeert om uit te leggen wat je niet mag schrijven.
+Na handmatige verificatie tegen live content bleken slechts **5 van de 18** echte, live violations
+(2 pagina-componenten, 1 tabelcel in `lib/blog.ts`, 2 regels in het social-media-contentplan) — die
+zijn gefixt. Zie `CLAUDE.md`/agent-memory voor het volledige false-positive-patroon, zodat een
+volgende audit niet opnieuw alle 18 hoeft te her-analyseren.
+
 ---
 
 ## Nog te doen
