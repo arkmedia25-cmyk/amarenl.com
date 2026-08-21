@@ -1079,3 +1079,104 @@ gekozen als de twee sterkste/meest onderscheidende invalshoeken.
       documentatie die een niet-actief systeem beschrijft alsof het draait
 - [ ] De 3 "High Risk" Higgsfield skills (`marketplace-cards`, `product-photoshoot`, `websites`)
       nog niet geïnspecteerd — lees de SKILL.md's voordat ze gebruikt worden
+
+---
+
+## 21. SORO-ONDERZOEK → TELEGRAM-CHECKLIST — 21 augustus 2026 (Cowork-sessie, extern, via device-bridge)
+
+**Context:** gebruiker vroeg waarom trysoro.com (AI-SEO-concurrent) zulke hoge CTR haalt en of ze een
+"geheime techniek" hebben. Onderzocht via 4 onafhankelijke bronnen (Soro's eigen blog + 3 externe
+reviews, waaronder een 60-dagen test). **Conclusie: geen geheime techniek.** Het enige dat consistent
+het verschil maakt tussen goed en slecht presterende Soro-gebruikers is **menselijke editorial review
+vóór publicatie**, met name bij YMYL (gezondheid/supplementen)-content. Volledig onderzoeksrapport met
+bronvermeldingen: zie sessie-artifact `soro-gizli-teknik-arastirmasi.md` (aan gebruiker geleverd,
+niet in dit repo).
+
+**Waarom dit relevant is voor dit project:** dit bevestigt exact wat sectie 20 (Faz 1, Telegram-
+onaygate) en de EFSA-sectie hierboven al aantoonden — de zwakte zit niet in de contentmotor
+(lengte/meta/interne links/afbeelding zijn al technisch in orde), maar in **hoeveel een mens er echt
+naar kijkt vóór publicatie.** Concreet gevonden in dit repo: EFSA-audit lag wekenlang onbehandeld,
+Telegram-approval-bericht bevatte tot nu toe geen enkel kwaliteitssignaal (alleen titel + samenvatting
++ PR-link) — "goedkeuren" was dus feitelijk blind vertrouwen.
+
+**Zes concrete regels (uit het onderzoek, prioriteitsvolgorde):**
+1. Publicatietempo moet de menselijke reviewcapaciteit volgen, niet de generatiesnelheid van de
+   automatisering.
+2. Telegram-goedkeuring moet een echte checklist tonen, niet alleen ja/nee — **hieronder geïmplementeerd.**
+3. Auteursidentiteit moet echt zijn (geen generieke "AmareNL Redactie") — **nog niet geïmplementeerd,
+   openstaand actiepunt.**
+4. Elk nieuw artikel moet een verplichte externe bron hebben (RIVM/PubMed/klinische studie) —
+   **detectie nu geïmplementeerd (zie hieronder), maar niet als harde blokkade — alleen zichtbaar
+   signaal in Telegram.**
+5. Kanibalisatie-clusters (stress/slaap, zie `amarenl-trafik-artirma-plani.md`) eerst samenvoegen
+   vóór nieuwe content in diezelfde categorie — **detectie nu geïmplementeerd als zichtbaar signaal,
+   samenvoegen zelf nog niet gedaan.**
+6. YMYL-content zou idealiter geen volledige auto-publish moeten hebben zonder verhoogde
+   kwaliteitsdrempel — dit project heeft al de Telegram-gate (Faz 1), dus dit punt is grotendeels al
+   gedekt; de checklist hieronder is de verfijning daarvan.
+
+**Wat vandaag is geïmplementeerd (deze sessie, commit `20dd880` op branch
+`draft/fix-magnesium-duplicate` — LET OP: niet op `seo-aeo-overhaul`, zie waarschuwing onderaan):**
+
+`scripts/generate-article-claude.mjs` — nieuwe functie `buildApprovalChecklist(article, extraJsonBefore)`
+vlak vóór `pickTopic()`. Berekent, ná generatie en vóór de artikel wordt toegevoegd aan
+`data/extra-articles.json`:
+- `wordCount` + `wordCountOk` (>= 1000 — **let op: dit is puur een weergavesignaal, de bestaande harde
+  `validate()`-poort met minimum 800 woorden is NIET aangepast, om geen onverwacht retry-gedrag te
+  riskeren in de live cron zonder dat live te kunnen testen**)
+- `hasCitation` — regex-check op `rivm\.nl|pubmed|ncbi\.nlm\.nih\.gov|bron:|referentie:|https?:\/\/`
+  in de artikeltekst
+- `sameCategoryCount` — hoeveel bestaande artikelen al dezelfde categorie hebben (kanibalisatie-signaal)
+- `efsaOk: true` — placeholder, EFSA/NVWA-check gebeurt al hard in `validate()` hierboven; als de
+  generator zover komt is die poort al gehaald
+
+Deze 4 waarden worden als extra `GITHUB_OUTPUT`-keys geschreven (`word_count`, `word_count_ok`,
+`has_citation`, `same_category_count`), naast de al bestaande `slug`/`title`/`excerpt`.
+
+`.github/workflows/amarenl-article-claude.yml` — de "Notify Telegram"-stap leest deze 4 nieuwe
+outputs en bouwt een 4-regelige checklist die vóór de PR-link in het Telegram-bericht komt:
+```
+✅ EFSA/NVWA kontrolü: geçti (otomatik doğrulandı)
+✅/⚠️ Kelime sayısı: <N> (hedefin üstünde / 1000 hedefinin altında — kontrol et)
+✅/⚠️ Kaynak/atıf: var / YOK — kontrol et
+✅/⚠️ Kategori çakışması: çakışma yok / bu kategoride zaten N makale var — konu çakışması olabilir
+```
+(In het Turks, omdat de gebruiker die de Telegram-knoppen bedient Turks leest — bewuste keuze, niet
+een fout; de rest van dit bestand blijft Nederlands.)
+
+**Verificatie gedaan:** `node --check scripts/generate-article-claude.mjs` → syntax OK.
+`python3 -c "import yaml; yaml.safe_load(...)"` op de workflow → YAML geldig. `git diff` van beide
+bestanden nagelopen, minimaal en gericht.
+
+**⚠️ NIET live getest.** Dit is code die nog nooit door een echte scheduled/manual run van
+`amarenl-article-claude.yml` is gelopen. **Actie voor de eerstvolgende sessie die een run van dit
+workflow ziet (handmatig getriggerd of via de ma/wo/vr cron):** controleer het eerste echte
+Telegram-bericht zorgvuldig — klopt de checklist-opmaak, komen de waarden overeen met het
+werkelijke artikel, breekt er niets in de `GITHUB_OUTPUT`-multiline-syntax (`excerpt` gebruikt al
+`<<DELIM`-stijl, de 4 nieuwe regels zijn simpele eenregelige outputs, dus geen multiline-risico
+verwacht, maar niet 100% zeker zonder een echte run).
+
+**⚠️ BRANCH-WAARSCHUWING — belangrijk, lees dit:** deze commit (`20dd880`) staat op
+`draft/fix-magnesium-duplicate`, de branch die toevallig actief uitgecheckt stond op het moment dat
+deze Cowork-sessie begon te werken (waarschijnlijk door de lopende automatisering). Dat is **niet**
+dezelfde branch als `seo-aeo-overhaul`, waar sectie 21/22 van de EFSA-fix-saga staat (ja, dubbele
+sectienummering tussen branches — dit bestand is op dit moment op minstens 2 branches uit elkaar
+gelopen). Deze sessie heeft geprobeerd de commit via `git worktree add` + `cherry-pick` naar
+`seo-aeo-overhaul` te verplaatsen, maar dat mislukte herhaaldelijk door dezelfde FUSE-mount
+lock-beperking (`.git/worktrees/seo-aeo-wt/index.lock` kon niet betrouwbaar unlinked worden, zelfs
+niet met de `mv`-workaround die bij een gewone commit wel werkt — cherry-pick doet intern een tweede
+geneste git-aanroep die de net vrijgemaakte lock blijkbaar meteen weer tegenkomt). De worktree-
+registratie bij `.git/worktrees/seo-aeo-wt` kon ook niet opgeruimd worden (zelfde unlink-probleem) en
+staat dus nog **geregistreerd maar leeg** — voer lokaal (waar dit geen probleem is) uit:
+`git worktree remove -f -f /tmp/seo-aeo-wt` (map bestaat niet meer, alleen de .git-registratie) of
+gewoon `git worktree prune`.
+
+**Samengevat voor de volgende sessie met echte git-toegang:**
+1. Twee losse, nog-niet-samengevoegde takken van werk bestaan nu: (a) `seo-aeo-overhaul` met de
+   EFSA-content-fix (`be60dcc`/`ca0c3e8`/`162d069`, zie sectie 21/22 op díe branch), nog niet
+   gepusht; (b) `draft/fix-magnesium-duplicate` met deze Telegram-checklist (`20dd880`), waarschijnlijk
+   al wel gepusht/PR'd door de reguliere automatisering (check `git log origin/draft/fix-magnesium-
+   duplicate` zodra je netwerktoegang hebt).
+2. `git worktree prune` uitvoeren om de stray-registratie op te ruimen.
+3. Overweeg op termijn `seo-aeo-overhaul` gewoon te pushen en los te mergen — de EFSA-fix staat daar
+   al maanden klaar en is inhoudelijk voltooid, alleen de push ontbreekt.
