@@ -11,6 +11,10 @@ export interface BlogPost {
   category: string;
   content: string;
   image?: string;
+  /** Echte auteur/editor van dit artikel (E-E-A-T signaal). Valt terug op "AmareNL Redactie" indien leeg. */
+  author?: string;
+  /** Externe, geverifieerde bronnen (RIVM, PubMed, klinische studies) die dit artikel onderbouwen */
+  citations?: { author: string; name: string; url: string }[];
 }
 
 import extraArticles from '@/data/extra-articles.json'
@@ -1154,6 +1158,10 @@ export const blogPosts: BlogPost[] = [
     date: "2026-05-21",
     category: "Darmen & Spijsvertering",
     excerpt: "Het schap ligt vol probiotica, maar welke is nou echt de beste? Ontdek waar je op moet letten — van bacteriestammen en CFU tot prebiotica en keurmerken — en maak een doordachte keuze voor jouw darmgezondheid.",
+    author: "Mark",
+    citations: [
+      { author: "Zhang N, Chen Y, Shen Z", name: "Live Combined Bacillus Subtilis and Enterococcus Faecium for Antibiotic-Associated Diarrhea: RCT-Based Meta-Analysis (Tohoku J Exp Med, 2025)", url: "https://doi.org/10.1620/tjem.2025.J125" },
+    ],
     content: `
       <h2>Waarom probiotica in 2026 populairder zijn dan ooit</h2>
       <p>Twintig jaar geleden had bijna niemand van probiotica gehoord. Vandaag is het een miljardenindustrie — en niet zonder reden. De wetenschap heeft enorme stappen gezet in het begrijpen van het microbioom: de triljoenen bacteriën die in en op ons lichaam leven, met het zwaartepunt in onze darmen. We weten nu dat de samenstelling van je darmflora invloed heeft op vrijwel elk aspect van je gezondheid: van spijsvertering en weerstand tot stemming, energieniveau en huid.</p>
