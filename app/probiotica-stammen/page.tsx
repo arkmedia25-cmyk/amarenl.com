@@ -335,7 +335,7 @@ export default function ProbioticaStammenPage() {
               Klaar om de juiste probiotica te kiezen?
             </h2>
             <p className="text-white/80 mb-8 max-w-xl mx-auto">
-              Bekijk Amare MentaBiotics® — met de klinisch bewezen Cerebiome® blend, prebiotica én magnesium voor
+              Bekijk Amare MentaBiotics® — met de klinisch onderzochte Cerebiome® blend, prebiotica én magnesium voor
               complete gut-brain ondersteuning.
             </p>
             <AffiliateCTA label="Bekijk MentaBiotics® bij Amare →" product="mentabiotics" variant="primary" />

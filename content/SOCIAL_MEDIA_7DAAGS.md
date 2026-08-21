@@ -67,7 +67,7 @@ Swipe voor de 3 beste natuurlijke focus-boosters 👉
 
 **Carrousel slides:**
 1. "3 Natuurlijke Focus Boosters (zonder cafeïne-crash)"
-2. Ashwagandha — verlaagt cortisol
+2. Ashwagandha — ondersteunt een normale stressrespons
 3. L-Theanine — kalme focus
 4. Rhodiola — mentale energie
 5. "Alles in één: Amare EDGE+ — link in bio"
@@ -112,7 +112,7 @@ Slaapmedicatie:
 Natuurlijke alternatieven:
 ✅ Magnesium — ontspant spieren en zenuwstelsel
 ✅ L-Theanine — kalmeert piekergedachten
-✅ Ashwagandha — verlaagt stresshormoon cortisol
+✅ Ashwagandha — ondersteunt een gezonde stressrespons
 
 Sleep+ van Amare combineert alle drie. Geen melatonine, geen gewenning, geen sufheid.
 

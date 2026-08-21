@@ -22,7 +22,7 @@ const faqs = [
   {
     question: "Wat is de beste adaptogeen voor stress?",
     answer:
-      "Ashwagandha (Withania somnifera) is het meest onderzochte adaptogeen voor stressvermindering — met meer dan 40 klinische studies. Het verlaagt cortisol met gemiddeld 27-30%, verbetert slaapkwaliteit en vermindert angstsymptomen. Rhodiola rosea is het beste adaptogeen voor mentale en fysieke vermoeidheid — het verbetert uithoudingsvermogen en cognitieve prestaties onder stress. Voor optimale resultaten combineren veel formules meerdere adaptogenen.",
+      "Ashwagandha (Withania somnifera) is het meest onderzochte adaptogeen voor stressvermindering. Een dubbelblinde, placebogecontroleerde studie onder 64 mensen met chronische stress liet na 60 dagen een significante daling zien in zowel stressscores als serumcortisol, en andere studies rapporteren verbeteringen in slaapkwaliteit en angstsymptomen. Rhodiola rosea wordt vaker aanbevolen bij mentale en fysieke vermoeidheid — onderzoek wijst op ondersteuning van uithoudingsvermogen en cognitieve prestaties onder stress. Voor optimale resultaten combineren veel formules meerdere adaptogenen.",
   },
   {
     question: "Hoe snel werken adaptogenen?",

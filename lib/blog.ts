@@ -173,7 +173,7 @@ export const blogPosts: BlogPost[] = [
       <h2>De beste supplementen tegen stress — vergeleken</h2>
       <table>
       <tr><th>Supplement</th><th>Belangrijkste ingrediënten</th><th>Wat het doet</th><th>Effect merkbaar na</th><th>Prijs/maand</th></tr>
-      <tr><td>MentaBiotics (Amare)</td><td>Psychobiotica (L. helveticus, B. longum), prebiotica</td><td>Verlaagt stressrespons via gut-brain axis, ondersteunt stemming</td><td>3-4 weken</td><td>€71,83</td></tr>
+      <tr><td>MentaBiotics (Amare)</td><td>Psychobiotica (L. helveticus, B. longum), prebiotica</td><td>Ondersteunt stressrespons via gut-brain axis, draagt bij aan stemming</td><td>3-4 weken</td><td>€71,83</td></tr>
       <tr><td>MentaFocus (Amare)</td><td>Adaptogenen (ashwagandha, rhodiola, L-theanine), Alpha-GPC</td><td>Stressbestendigheid + focus + cognitie</td><td>2-4 weken</td><td>~€55</td></tr>
       <tr><td>Losse ashwagandha</td><td>KSM-66 300-600 mg</td><td>Cortisol verlaging, slaapverbetering</td><td>4-6 weken</td><td>~€20</td></tr>
       <tr><td>Los magnesium</td><td>Bisglycinaat 200-400 mg</td><td>Zenuwstelsel kalmering, spierontspanning</td><td>Direct (bij tekort)</td><td>~€10</td></tr>
