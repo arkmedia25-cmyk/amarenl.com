@@ -1189,6 +1189,17 @@ export const blogPosts: BlogPost[] = [
       <p>Een van de spannendste ontwikkelingen is de toepassing van probiotica voor mentaal welzijn. De term 'psychobiotica' beschrijft probiotica die een positief effect hebben op de geestelijke gezondheid. De nervus vagus — de langste hersenzenuw in je lichaam — vormt een directe communicatielijn tussen darmen en hersenen. Via deze 'snelweg' sturen darmbacteriën signalen die invloed hebben op stemming, stressrespons en gedrag.</p>
       <p><strong>Amare MentaBiotics</strong> is specifiek voor deze darm-hersen connectie ontwikkeld. Het combineert de klinisch onderzochte Cerebiome® bacteriële blend (L. helveticus R0052, L. rhamnosus R0011, B. longum R0175, L. plantarum R1012) met prebiotica, magnesium en L-glutamine — een gerichte formule voor wie niet alleen de spijsvertering, maar ook mentaal welzijn wil ondersteunen.</p>
 
+      <h2>Beste probiotica 2026: een overzicht per behoefte</h2>
+      <p>"De beste probiotica" bestaat niet in absolute zin — het hangt af van waar je op focust. Dit overzicht helpt je snel de juiste richting te bepalen:</p>
+      <table>
+        <tr><th>Focus</th><th>Waar op letten</th><th>Voorbeeld</th></tr>
+        <tr><td>Algemene darmgezondheid</td><td>Brede stammendiversiteit + prebiotica</td><td>Multi-strain formule met FOS/GOS</td></tr>
+        <tr><td>Mentaal welzijn / stemming</td><td>Klinisch onderzochte psychobiotica-stammen (L. helveticus, B. longum)</td><td>MentaBiotics</td></tr>
+        <tr><td>Na een antibioticakuur</td><td>Hoge KVE, stam bewezen bestand tegen maagzuur</td><td>Multi-strain, 10+ miljard KVE</td></tr>
+        <tr><td>Vrouwenspecifieke gezondheid</td><td>Stammen gericht op vaginale flora, zoals Lactobacillus-soorten</td><td>Vrouwspecifiek probioticum</td></tr>
+        <tr><td>Kinderen</td><td>Lagere dosering, kindvriendelijke stammen en vorm</td><td>Kindprobioticum in druppel- of kauwvorm</td></tr>
+      </table>
+      <p>Het overkoepelende advies blijft hetzelfde ongeacht je focus: kijk naar stamspecificatie, KVE-aantal, aanwezigheid van prebiotica, en of de stam is onderzocht bij mensen — niet alleen in laboratoriumomstandigheden.</p>
       <h2>Veelgestelde vragen</h2>
       <h3>Wat is het verschil tussen een probioticum uit de supermarkt en een premium probioticum?</h3>
       <p>Supermarktprobiotica bevatten vaak alleen gangbare stammen in lage doseringen, zonder prebiotica en zonder specificatie op stamniveau. Premium probiotica zoals MentaBiotics gebruiken klinisch gedocumenteerde stammen met een specifiek stamnummer, gecombineerd met prebiotica en ondersteunende ingrediënten. Het kwaliteitsverschil heeft direct invloed op overleving in het maagzuur en uiteindelijk effect.</p>
@@ -1196,6 +1207,8 @@ export const blogPosts: BlogPost[] = [
       <p>Het beste moment is bij een maaltijd. Voedsel buffert het maagzuur, waardoor meer bacteriën levend de darmen bereiken. Consistentie is belangrijker dan het precieze tijdstip — kies een vast moment zoals bij het ontbijt.</p>
       <h3>Kan ik probiotica combineren met andere supplementen?</h3>
       <p>Ja, probiotica combineren goed met de meeste andere supplementen zoals vitaminen, mineralen, omega-3 en collageen. Let bij antibiotica op minimaal 2 uur tussen inname. MentaBiotics combineert goed met Energy+ voor energie of Restore voor extra spijsverteringsondersteuning.</p>
+      <h3>Is de duurste probiotica altijd de beste keuze?</h3>
+      <p>Niet per se. Prijs zegt weinig over kwaliteit — belangrijker is of het product transparant is over de gebruikte stammen, het KVE-aantal op het moment van houdbaarheidsdatum garandeert (niet alleen bij productie), en of er onderzoek is gedaan naar de specifieke stam-combinatie, niet alleen naar de individuele bacteriesoorten.</p>
     `,
     image: "/images/blog/beste-probiotica-2026.jpg"
   },
