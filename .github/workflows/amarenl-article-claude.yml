@@ -91,9 +91,29 @@ jobs:
           EXCERPT: ${{ steps.generate.outputs.excerpt }}
           PR_URL: ${{ steps.pr.outputs.url }}
           PR_NUMBER: ${{ steps.pr.outputs.number }}
+          WORD_COUNT: ${{ steps.generate.outputs.word_count }}
+          WORD_COUNT_OK: ${{ steps.generate.outputs.word_count_ok }}
+          HAS_CITATION: ${{ steps.generate.outputs.has_citation }}
+          SAME_CATEGORY_COUNT: ${{ steps.generate.outputs.same_category_count }}
         run: |
-          TEXT=$(printf '📝 Yeni makale taslağı (Claude API)\n\n%s\n\n%s\n\nPR: %s' \
-            "$TITLE" "$EXCERPT" "$PR_URL")
+          # 4 kontrol satırı — Soro araştırmasından: onaylayan kişinin gerçekten
+          # değerlendirecek bir şeyi olsun, sadece "onay bekliyor" değil.
+          WORD_MARK="✅"; [ "$WORD_COUNT_OK" = "true" ] || WORD_MARK="⚠️"
+          CITATION_MARK="✅"; [ "$HAS_CITATION" = "true" ] || CITATION_MARK="⚠️ kaynak bulunamadı"
+          CITATION_LABEL="var"; [ "$HAS_CITATION" = "true" ] || CITATION_LABEL="YOK — kontrol et"
+          OVERLAP_MARK="✅"; OVERLAP_LABEL="çakışma yok"
+          if [ "${SAME_CATEGORY_COUNT:-0}" -ge 3 ] 2>/dev/null; then
+            OVERLAP_MARK="⚠️"
+            OVERLAP_LABEL="bu kategoride zaten ${SAME_CATEGORY_COUNT} makale var — konu çakışması olabilir"
+          fi
+
+          CHECKLIST=$(printf '✅ EFSA/NVWA kontrolü: geçti (otomatik doğrulandı)\n%s Kelime sayısı: %s (%s)\n%s Kaynak/atıf: %s\n%s Kategori çakışması: %s' \
+            "$WORD_MARK" "$WORD_COUNT" "$([ "$WORD_COUNT_OK" = "true" ] && echo "hedefin üstünde" || echo "1000 hedefinin altında — kontrol et")" \
+            "$CITATION_MARK" "$CITATION_LABEL" \
+            "$OVERLAP_MARK" "$OVERLAP_LABEL")
+
+          TEXT=$(printf '📝 Yeni makale taslağı (Claude API)\n\n%s\n\n%s\n\n%s\n\nPR: %s' \
+            "$TITLE" "$EXCERPT" "$CHECKLIST" "$PR_URL")
 
           PAYLOAD=$(jq -n \
             --arg chat_id "$TELEGRAM_CHAT_ID" \

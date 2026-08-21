@@ -117,6 +117,8 @@ export default async function BlogPostPage({ params }: Props) {
     slug: post.slug,
     category: post.category,
     image: post.image,
+    author: post.author,
+    citations: post.citations,
   });
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Home", url: "https://amarenl.com" },
@@ -145,6 +147,8 @@ export default async function BlogPostPage({ params }: Props) {
       slug: post.slug,
       about: post.category,
       audience: "Nederlandse volwassenen",
+      reviewedBy: post.author ? { name: post.author, affiliation: "AmareNL" } : undefined,
+      citations: post.citations,
     });
     schemas.unshift(medicalSchema);
   } else {
@@ -182,7 +186,7 @@ export default async function BlogPostPage({ params }: Props) {
             Terug naar blog
           </Link>
 
-          <div className="flex items-center gap-6 mb-8">
+          <div className="flex items-center gap-6 mb-8 flex-wrap">
             <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-[var(--color-primary)]">
               <Tag size={12} />
               {post.category}
@@ -190,6 +194,9 @@ export default async function BlogPostPage({ params }: Props) {
             <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-[var(--color-text-muted)]">
               <Calendar size={12} />
               {post.date}
+            </div>
+            <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-[var(--color-text-muted)]">
+              Door {post.author || "AmareNL Redactie"}
             </div>
           </div>
 
@@ -259,6 +266,25 @@ export default async function BlogPostPage({ params }: Props) {
               prose-li:text-[var(--color-text-muted)]"
             dangerouslySetInnerHTML={{ __html: linkedContent }}
           />
+
+          {post.citations && post.citations.length > 0 && (
+            <div className="mt-12 pt-8 border-t border-[var(--color-border)]">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-[var(--color-text-muted)]">Bronnen</span>
+              <ul className="mt-3 space-y-2">
+                {post.citations.map((c) => (
+                  <li key={c.name} className="text-sm text-[var(--color-text-muted)]">
+                    {c.url ? (
+                      <a href={c.url} target="_blank" rel="noopener noreferrer nofollow" className="text-[var(--color-primary)] hover:underline">
+                        {c.author} — {c.name}
+                      </a>
+                    ) : (
+                      <>{c.author} — {c.name}</>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           <div className="mt-20 pt-10 border-t border-[var(--color-border)] flex flex-col sm:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-4">

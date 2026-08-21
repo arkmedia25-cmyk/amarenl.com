@@ -426,6 +426,27 @@ function validate(article, existingArticles) {
   return errors;
 }
 
+// Vier controlepunten die zichtbaar worden in het Telegram-goedkeuringsbericht,
+// zodat de mens die op "Onayla"/"Reddet" klikt echt iets te beoordelen heeft in
+// plaats van blind te vertrouwen op "onay bekliyor". EFSA/NVWA-naleving is al
+// een harde poort in validate() hierboven — als we hier komen is die al gehaald.
+// (Toegevoegd n.a.v. Soro-onderzoek, zie CLAUDE.md.)
+function buildApprovalChecklist(article, extraJsonBefore) {
+  const wordCount = article.content.split(/\s+/).filter(Boolean).length;
+  const hasCitation = /rivm\.nl|pubmed|ncbi\.nlm\.nih\.gov|bron:|referentie:|https?:\/\//i.test(
+    article.content
+  );
+  const sameCategoryCount = extraJsonBefore.filter((a) => a.category === article.category).length;
+
+  return {
+    wordCount,
+    wordCountOk: wordCount >= 1000,
+    hasCitation,
+    sameCategoryCount,
+    efsaOk: true,
+  };
+}
+
 async function pickTopic(client, ctx, systemPrompt) {
   for (let attempt = 1; attempt <= 2; attempt++) {
     try {
@@ -572,6 +593,7 @@ async function main() {
 
   const extraArticlesPath = join(ROOT, "data/extra-articles.json");
   const current = JSON.parse(readFileSync(extraArticlesPath, "utf-8"));
+  const checklist = buildApprovalChecklist(article, current);
   current.push(article);
   writeFileSync(extraArticlesPath, JSON.stringify(current, null, 2) + "\n", "utf-8");
 
@@ -587,6 +609,10 @@ async function main() {
       `excerpt<<${delim}`,
       article.excerpt,
       delim,
+      `word_count=${checklist.wordCount}`,
+      `word_count_ok=${checklist.wordCountOk}`,
+      `has_citation=${checklist.hasCitation}`,
+      `same_category_count=${checklist.sameCategoryCount}`,
       "",
     ].join("\n");
     writeFileSync(process.env.GITHUB_OUTPUT, out, { flag: "a" });

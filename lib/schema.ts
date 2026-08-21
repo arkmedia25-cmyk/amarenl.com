@@ -384,6 +384,8 @@ export interface MedicalWebPageInput {
   about: string; // e.g. "Probiotica", "Darmgezondheid"
   audience?: string;
   reviewedBy?: { name: string; affiliation: string };
+  /** External authoritative sources cited in the article */
+  citations?: { author: string; name: string; url?: string }[];
 }
 
 export function generateMedicalWebPageSchema(input: MedicalWebPageInput) {
@@ -424,6 +426,14 @@ export function generateMedicalWebPageSchema(input: MedicalWebPageInput) {
         name: input.reviewedBy.affiliation,
       },
     };
+  }
+  if (input.citations?.length) {
+    schema.citation = input.citations.map(c => ({
+      "@type": "ScholarlyArticle" as const,
+      author: { "@type": "Person" as const, name: c.author },
+      name: c.name,
+      ...(c.url && { url: c.url }),
+    }));
   }
   return schema;
 }
