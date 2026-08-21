@@ -2256,7 +2256,7 @@ Begin met een basisvorm zoals bisglycinaat (200-400 mg elementair), neem het 's 
 
 > Deze informatie is uitsluitend voor educatieve doeleinden en vervangt geen medisch advies.
 
-<strong><a href="https://amarereview.nl/reviews/sunrise-complete-ochtendformule-review">Lees onze Sunrise review →</a></strong>`},
+`},
 {
     slug: "supplementen-stress-burn-out-wat-helpt-echt",
     title: "Supplementen bij Stress en Burn-out: Wat Helpt Echt?",
