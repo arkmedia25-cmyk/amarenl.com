@@ -53,7 +53,7 @@ export default function GutBrainAxisPage() {
       "Ontdek hoe je darmen en hersenen communiceren via de nervus vagus. 90% van serotonine wordt in je darm gemaakt. Wetenschap, probiotica en praktische tips.",
     image: "https://amarecdn.azureedge.net/webassets/web/prod/products/Amare-Mentabiotics-EU-800.jpg",
     datePublished: "2026-05-18",
-    author: "AmareNL Redactie",
+    author: "Mark",
     slug: "gut-brain-axis",
   });
 
@@ -104,7 +104,7 @@ export default function GutBrainAxisPage() {
             levensstijl.
           </p>
           <p className="text-sm text-[var(--color-text-muted)] mb-8">
-            Laatste update: 18 mei 2026 &middot; Auteur: AmareNL Redactie
+            Laatste update: 18 mei 2026 &middot; Auteur: Mark
           </p>
           <AffiliateCTA
             label="Bekijk MentaBiotics bij Amare →"
@@ -548,7 +548,7 @@ export default function GutBrainAxisPage() {
                 price: "€48,01/maand",
               },
               {
-                product: "GBX SuperFood",
+                product: "Sunrise",
                 tag: "Dagelijkse basis",
                 desc: "Superfoods voor dagelijkse darmgezondheid — prebiotische vezels en fytonutriënten die gunstige bacteriën voeden.",
                 slug: "sunrise",
