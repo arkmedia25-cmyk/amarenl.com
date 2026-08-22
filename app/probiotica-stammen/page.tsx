@@ -55,6 +55,7 @@ export default function ProbioticaStammenPage() {
     slug: "probiotica-stammen",
     category: "darmen",
     image: "/images/blog/probiotica-stammen.jpg",
+    author: "Mark",
     citations: [
       {
         author: "Hill C et al.",
@@ -256,8 +257,8 @@ export default function ProbioticaStammenPage() {
             De meest onderzochte psychobiotische formule is de <strong>Cerebiome® blend</strong> — een gepatenteerde
             combinatie van <em>Lactobacillus helveticus R0052</em> en <em>Bifidobacterium longum R0175</em>.
             In het baanbrekende onderzoek van Messaoudi et al. (2011, British Journal of Nutrition) toonden deelnemers
-            die deze blend 30 dagen gebruikten significant lagere scores op psychologische stress, angst en depressie
-            dan de placebogroep. Cortisol — het primaire stresshormoon — daalde gemiddeld met 23%.
+            die deze blend 30 dagen gebruikten significant lagere scores op psychologische spanning, somatisatie en
+            woede-vijandigheid dan de placebogroep, plus een gunstigere cortisolrespons op stress.
           </p>
           <p className="text-[var(--color-text)] leading-relaxed mb-6">
             Amare <strong>MentaBiotics®</strong> bevat deze Cerebiome® blend plus prebiotische vezels en magnesium

@@ -55,6 +55,7 @@ export default function AdaptogenenPage() {
     slug: "adaptogenen",
     category: "mentaal",
     image: "/images/blog/adaptogenen.jpg",
+    author: "Mark",
     citations: [
       {
         author: "Chandrasekhar K et al.",
@@ -63,6 +64,26 @@ export default function AdaptogenenPage() {
       {
         author: "Panossian A, Wikman G.",
         name: "Effects of Adaptogens on the Central Nervous System and the Molecular Mechanisms Associated with Their Stress—Protective Activity. Pharmaceuticals, 2010",
+      },
+      {
+        author: "Reay JL, Scholey AB, Kennedy DO",
+        name: "Panax ginseng (G115) improves aspects of working memory performance and subjective ratings of calmness in healthy young adults. Human Psychopharmacology, 2010",
+      },
+      {
+        author: "Farzan H, Koushkie Jahromi M",
+        name: "Acute Cordyceps militaris supplementation and elevated resting oxygen uptake with faster reaction times: A randomized crossover trial. PLoS One, 2026",
+      },
+      {
+        author: "Such S, Puchalski C, Kogut Ł, Zaguła G",
+        name: "System-Level, Molecular and Cellular Mechanisms of Selected Plant Adaptogens — A Review. Nutrients, 2026",
+      },
+      {
+        author: "Bhattacharyya D, Sur TK, Jana U, Debnath PK",
+        name: "Controlled programmed trial of Ocimum sanctum leaf on generalized anxiety disorders. Nepal Medical College Journal, 2008",
+      },
+      {
+        author: "Langade D, Thakare V, Kanchi S, Kelgane S",
+        name: "Clinical evaluation of the pharmacological impact of ashwagandha root extract on sleep. Journal of Ethnopharmacology, 2020",
       },
       {
         author: "Voedingscentrum",
@@ -124,7 +145,7 @@ export default function AdaptogenenPage() {
         {/* De belangrijkste adaptogenen */}
         <section className="container-page max-w-4xl py-12">
           <h2 className="text-3xl font-cormorant font-bold text-[var(--color-text)] mb-8">
-            De 8 Belangrijkste Adaptogenen — Wetenschappelijk Onderbouwd
+            De 7 Belangrijkste Adaptogenen — Wetenschappelijk Onderbouwd
           </h2>
 
           <div className="space-y-10">
@@ -136,12 +157,14 @@ export default function AdaptogenenPage() {
                 Ayurvedische Ginseng · Cortisolverlagend · Slaapondersteunend
               </p>
               <p className="text-[var(--color-text)] leading-relaxed mb-4">
-                Ashwagandha is het meest onderzochte adaptogeen ter wereld, met meer dan 40 klinische studies. Het
-                werkzame bestanddeel — withanoliden — bindt aan GABA-receptoren in de hersenen en moduleert de HPA-as.
-                In de landmark-studie van Chandrasekhar et al. (2012) ervoeren deelnemers een <strong>44% reductie
-                in stressscores</strong> en een gemiddelde cortisoldaling van 27,9% na 60 dagen gebruik van 300mg
-                KSM-66® Ashwagandha-extract. Andere studies tonen verbeteringen in slaapkwaliteit (28% sneller in
-                slaap vallen), testosteronspiegel (17% stijging bij mannen) en fysiek uithoudingsvermogen.
+                Ashwagandha is het meest onderzochte adaptogeen ter wereld. Het werkzame bestanddeel — withanoliden —
+                bindt aan GABA-receptoren in de hersenen en moduleert de HPA-as. In de landmark-studie van
+                Chandrasekhar et al. (2012, Indian Journal of Psychological Medicine) ervoeren deelnemers een{" "}
+                <strong>44% reductie in stressscores</strong> en een gemiddelde cortisoldaling van 27,9% na 60 dagen
+                gebruik van 300mg Ashwagandha-wortelextract, tweemaal daags — beide cijfers rechtstreeks uit de
+                gepubliceerde resultaten van die studie. Een aparte, dubbelblinde studie (Langade et al., 2020,
+                Journal of Ethnopharmacology) vond een significante verbetering van slaapkwaliteit en snellere
+                inslaaptijd bij zowel gezonde deelnemers als mensen met slapeloosheid.
               </p>
               <p className="text-xs text-[var(--color-text-muted)]">
                 <strong>Aanbevolen dosering:</strong> 300-600mg gestandaardiseerd extract (5% withanoliden) per dag.{" "}
@@ -188,6 +211,89 @@ export default function AdaptogenenPage() {
               <p className="text-xs text-[var(--color-text-muted)]">
                 <strong>Aanbevolen dosering:</strong> 500-1000mg extract (30% polysacchariden) per dag.{" "}
                 <strong>Beste tijd:</strong> &apos;Ochtends of vroeg in de middag.
+              </p>
+            </div>
+
+            <div className="bg-white border border-[var(--color-border)] rounded-lg p-8">
+              <h3 className="text-2xl font-cormorant font-bold text-[var(--color-primary)] mb-2">
+                4. Panax Ginseng (Aziatische Ginseng)
+              </h3>
+              <p className="text-xs text-[var(--color-text-muted)] uppercase tracking-widest mb-4">
+                Koreaanse Ginseng · Mentale Scherpte · Kalmte Onder Druk
+              </p>
+              <p className="text-[var(--color-text)] leading-relaxed mb-4">
+                Panax Ginseng behoort tot de best gedocumenteerde adaptogenen in de westerse wetenschap. Een
+                dubbelblinde, gerandomiseerde crossoverstudie (Reay et al., 2010, Human Psychopharmacology) liet
+                zien dat een dosis van 400 mg het rekenvermogen onder tijdsdruk verbeterde en de subjectieve
+                kalmte verhoogde, zowel na eenmalig als na acht dagen herhaald gebruik. Ginseng wordt vaak gebruikt
+                als de mentale-scherpte-variant onder de adaptogenen — geschikt voor wie tijdens drukke periodes
+                helder wil blijven denken.
+              </p>
+              <p className="text-xs text-[var(--color-text-muted)]">
+                <strong>Aanbevolen dosering:</strong> 200-400mg gestandaardiseerd extract per dag.{" "}
+                <strong>Beste tijd:</strong> &apos;Ochtends, bij voorkeur bij de maaltijd.
+              </p>
+            </div>
+
+            <div className="bg-white border border-[var(--color-border)] rounded-lg p-8">
+              <h3 className="text-2xl font-cormorant font-bold text-[var(--color-primary)] mb-2">
+                5. Cordyceps militaris
+              </h3>
+              <p className="text-xs text-[var(--color-text-muted)] uppercase tracking-widest mb-4">
+                Paddenstoel-Adaptogeen · Zuurstofopname · Fysieke Prestatie
+              </p>
+              <p className="text-[var(--color-text)] leading-relaxed mb-4">
+                Cordyceps is een medicinale paddenstoel die van oudsher wordt geassocieerd met uithoudingsvermogen.
+                Een gerandomiseerde, placebogecontroleerde crossoverstudie uit 2026 (PLoS One) vond dat een
+                eenmalige dosis Cordyceps militaris-extract de reactiesnelheid na intensieve inspanning verbeterde
+                en de zuurstofopname in rust verhoogde, zonder de piek-zuurstofopname tijdens inspanning zelf te
+                veranderen. Dat wijst op een subtiel, ondersteunend effect eerder dan een directe prestatieboost.
+              </p>
+              <p className="text-xs text-[var(--color-text-muted)]">
+                <strong>Aanbevolen dosering:</strong> 1000-3000mg extract per dag.{" "}
+                <strong>Beste tijd:</strong> 30-60 minuten vóór inspanning, of &apos;s ochtends voor algemene energie.
+              </p>
+            </div>
+
+            <div className="bg-white border border-[var(--color-border)] rounded-lg p-8">
+              <h3 className="text-2xl font-cormorant font-bold text-[var(--color-primary)] mb-2">
+                6. Schisandra chinensis
+              </h3>
+              <p className="text-xs text-[var(--color-text-muted)] uppercase tracking-widest mb-4">
+                Vijfsmakenvrucht · Lever-Ondersteuning · Mentaal Uithoudingsvermogen
+              </p>
+              <p className="text-[var(--color-text)] leading-relaxed mb-4">
+                Schisandra dankt zijn Nederlandse bijnaam &apos;vijfsmakenvrucht&apos; aan de combinatie van zoet, zuur,
+                bitter, scherp en zout in één bes — een symboliek die in de Traditionele Chinese Geneeskunde wordt
+                gezien als teken van balans. Het werkzame bestanddeel schizandrine B activeert HSP70 — hetzelfde
+                celbeschermende mechanisme dat bij meerdere adaptogenen een rol speelt bij stressweerstand. Een
+                recente wetenschappelijke review (Such et al., 2026, Nutrients) noemt Schisandra een van de zeven
+                best onderbouwde plantaardige adaptogenen, met gedocumenteerde cortisolverlagingen van 14 tot 30%
+                over de onderzochte adaptogenen heen.
+              </p>
+              <p className="text-xs text-[var(--color-text-muted)]">
+                <strong>Aanbevolen dosering:</strong> 500-2000mg extract per dag.{" "}
+                <strong>Beste tijd:</strong> &apos;Ochtends, vanwege het licht stimulerende effect.
+              </p>
+            </div>
+
+            <div className="bg-white border border-[var(--color-border)] rounded-lg p-8">
+              <h3 className="text-2xl font-cormorant font-bold text-[var(--color-primary)] mb-2">
+                7. Heilige Basilicum (Tulsi)
+              </h3>
+              <p className="text-xs text-[var(--color-text-muted)] uppercase tracking-widest mb-4">
+                Ayurvedisch Heilig Kruid · Angstverlichting · Emotionele Balans
+              </p>
+              <p className="text-[var(--color-text)] leading-relaxed mb-4">
+                Tulsi (Ocimum sanctum) wordt in de Ayurveda al eeuwenlang &apos;de koningin der kruiden&apos; genoemd. Een
+                gecontroleerde klinische studie onder 35 deelnemers met gegeneraliseerde angstklachten liet na 60
+                dagen gebruik een significante afname zien van angst-, stress- en somberheidsklachten, gemeten met
+                gestandaardiseerde psychiatrische vragenlijsten. Tulsi wordt vaak gekozen door mensen die specifiek
+                op zoek zijn naar emotionele balans, eerder dan pure energie of focus.
+              </p>
+              <p className="text-xs text-[var(--color-text-muted)]">
+                <strong>Aanbevolen dosering:</strong> 300-600mg extract per dag, of als thee.{" "}
+                <strong>Beste tijd:</strong> Verspreid over de dag, of &apos;s avonds voor het kalmerende effect.
               </p>
             </div>
           </div>
@@ -248,6 +354,11 @@ export default function AdaptogenenPage() {
             <li>Lopresti AL et al. (2019). &ldquo;An investigation into the stress-relieving and pharmacological actions of an Ashwagandha extract.&rdquo; Medicine, 98(37):e17186.</li>
             <li>Olsson EM et al. (2009). &ldquo;A randomised, double-blind, placebo-controlled, parallel-group study of Rhodiola rosea.&rdquo; Planta Medica, 75(2):105-112.</li>
             <li>Mori K et al. (2009). &ldquo;Improving effects of the mushroom Yamabushitake (Hericium erinaceus) on mild cognitive impairment.&rdquo; Phytotherapy Research, 23(3):367-372.</li>
+            <li>Reay JL, Scholey AB, Kennedy DO (2010). &ldquo;Panax ginseng (G115) improves aspects of working memory performance.&rdquo; Human Psychopharmacology, 25(6):462-471.</li>
+            <li>Farzan H, Koushkie Jahromi M (2026). &ldquo;Acute Cordyceps militaris supplementation and elevated resting oxygen uptake with faster reaction times.&rdquo; PLoS One, 21(7):e0351725.</li>
+            <li>Such S et al. (2026). &ldquo;System-Level, Molecular and Cellular Mechanisms of Selected Plant Adaptogens — A Review.&rdquo; Nutrients, 18(6).</li>
+            <li>Bhattacharyya D et al. (2008). &ldquo;Controlled programmed trial of Ocimum sanctum leaf on generalized anxiety disorders.&rdquo; Nepal Medical College Journal, 10(3):176-179.</li>
+            <li>Langade D et al. (2020). &ldquo;Clinical evaluation of the pharmacological impact of ashwagandha root extract on sleep.&rdquo; Journal of Ethnopharmacology, 264:113276.</li>
             <li>Voedingscentrum. &ldquo;Kruidenpreparaten.&rdquo; Geraadpleegd via voedingscentrum.nl</li>
           </ol>
           <p className="text-xs text-[var(--color-text-muted)] mt-4 italic">
