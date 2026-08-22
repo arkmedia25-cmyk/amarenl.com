@@ -1180,3 +1180,92 @@ gewoon `git worktree prune`.
 2. `git worktree prune` uitvoeren om de stray-registratie op te ruimen.
 3. Overweeg op termijn `seo-aeo-overhaul` gewoon te pushen en los te mergen — de EFSA-fix staat daar
    al maanden klaar en is inhoudelijk voltooid, alleen de push ontbreekt.
+
+---
+
+## 25. COLLAGEEN-CLUSTER — DEFINITIEF CONSOLIDATIE-PLAN MET ECHTE GSC-DATA (3 maanden) — 22 augustus 2026
+
+**Context:** sectie 22 vlagde dit als het grootste cannibalisatie-probleem (~25 artikelen), en sectie 24
+bevestigde dat het nog steeds openstaat na Hermes' grote PR-batch (#38-45). Vandaag verse, exacte GSC-data
+opgehaald (Search Console → Performans → Filtre ekle → Sayfa → "Şunu içeren URL'ler" → "collageen" → tab
+"Sayfa sayısı", periode 3 maanden) om dit van "waarschijnlijk probleem" om te zetten in een direct
+uitvoerbaar plan met echte URL's en cijfers — geen giswerk meer.
+
+**Cluster-totaal (3 maanden, alle collageen-URL's samen):** 325 vertoningen, **1 klik**, CTR 0,3%,
+gemiddelde positie **51,3**. Dat is pagina 5+ van Google — praktisch onzichtbaar, ondanks dat er 16 losse
+artikelen voor deze zoekintentie met elkaar concurreren.
+
+**Per-pagina werkelijkheid — dit zijn de ENIGE 11 URL's (van 16 in `data/extra-articles.json` + 3 extra in
+`lib/blog.ts`, dus 19 totaal) die überhaupt vertoningen krijgen:**
+1. `/blogs/nieuws/collageen-essentieel-voor-huid-haar-nagels` — 150 vertoningen — bestaat niet meer als
+   levende pagina, staat al permanent (301) geredirect naar `vloeibaar-collageen-hl5-huid-haar-nagels` in
+   `vercel.json`. Google toont de oude URL in GSC nog met vertoningen, maar dat verkeer landt al op de
+   redirect-bestemming.
+2. `collageen-mannen-30-huid-gewrichten-spierherstel` — 100 vertoningen (in JSON, auteur + 1 citatie aanwezig)
+3. `collageen-poeder-vs-pillen-vergelijking` — 27 vertoningen (in JSON, auteur + 1 citatie aanwezig)
+4. `vloeibaar-collageen-hl5-huid-haar-nagels` — 23 eigen vertoningen + 150 binnenkomend via de redirect
+   hierboven = **feitelijk de sterkste pagina van de hele cluster** (in JSON, auteur + 2 citaties, al
+   verdiept van 374 → 968 woorden op 20-08, commit `d195c1c`)
+5. `mijn-ervaring-collageen-6-maanden` — 12 vertoningen (alleen in `lib/blog.ts`, niet in de JSON)
+6. `collageen-gewrichten-pijnverlichting-supplement` — 4 vertoningen (in JSON, GEEN auteur/citatie)
+7. `collageen-poeder-vs-vloeibaar-wat-is-beter` — 3 vertoningen (in JSON, GEEN auteur/citatie)
+8. `fit20-whey-isolaat-collageen-spierherstel-review` — 2 vertoningen (in JSON, GEEN auteur/citatie, staat
+   bovendien in de verkeerde categorie "gewichtsbeheer" i.p.v. "schoonheid")
+9. `collageen-poeder-kopen-waar-op-letten` — 2 vertoningen maar wel **de enige klik in 3 maanden** van de
+   hele cluster (alleen in `lib/blog.ts`)
+10. `hl5-2-pack-collageen-huid-haar-nagels-beste-waarde` — 1 vertoning (alleen in `lib/blog.ts`)
+
+**De overige 10 artikelen uit `data/extra-articles.json` krijgen NUL vertoningen in 3 maanden — volledig
+onzichtbaar voor Google:** `collageen-de-complete-gids-2026`, `collageen-peptiden-werkt-echt-wetenschap-
+resultaten`, `collageen-type-1-2-3-verschil-huid-gewrichten-haar`, `collageen-vitamine-c-synergie-huid`,
+`collageen-resultaten-4-8-12-weken-huid-haar-nagels`, `collageen-bijwerkingen-veilig`, `welke-voeding-
+collageen-gids`, `rundercollageen-vs-marine-collageen-verschil`, `collageen-hyaluronzuur-combinatie`,
+`plantaardig-collageen-bestaat-dat-echt`.
+
+### Concreet voorstel (klaar om uit te voeren)
+
+**Pilaar/autoriteitspagina:** `vloeibaar-collageen-hl5-huid-haar-nagels` — al de sterkste pagina, al
+verdiept, ontvangt al redirect-verkeer van de oude URL.
+
+**Laten bestaan als aparte spoke** (duidelijk andere zoekintentie, eigen echte traffic — niet mergen):
+`collageen-mannen-30-huid-gewrichten-spierherstel` (mannen-invalshoek, 100 vertoningen) en
+`collageen-poeder-vs-pillen-vergelijking` (vergelijkings-intentie, 27 vertoningen). Wel prominent hub-spoke
+linken naar/vanaf de pilaarpagina — exact hetzelfde patroon als vandaag al toegepast op
+adaptogenen/gut-brain-axis/probiotica-stammen (commit `034d1d4`).
+
+**301-redirecten naar de pilaarpagina + unieke content erin overnemen (13 artikelen weg):** de 10
+nul-vertoning artikelen hierboven + `collageen-gewrichten-pijnverlichting-supplement` (4 vertoningen) +
+`collageen-poeder-vs-vloeibaar-wat-is-beter` (3, overlapt inhoudelijk met poeder-vs-pillen) +
+`fit20-whey-isolaat-collageen-spierherstel-review` (2, hoort qua categorie sowieso niet in de
+schoonheid-cluster thuis).
+
+**Apart beoordelen, niet zomaar mergen:**
+- `mijn-ervaring-collageen-6-maanden` (12 vertoningen, testimonial-format) — kan als eigen "ervaring"-spoke
+  blijven bestaan, of als sectie in de pilaarpagina verwerkt worden.
+- `collageen-poeder-kopen-waar-op-letten` — dit is de ENIGE pagina met een klik in 3 maanden. Niet zomaar
+  weg-redirecten; zorg dat de rankende content (en de zoekterm die 'm die klik oplevert) behouden blijft in
+  de bestemmingspagina.
+- `hl5-2-pack-collageen-huid-haar-nagels-beste-waarde` (1 vertoning) — mogelijk een productpagina-variant;
+  checken of dit dubbel is met `/hl5`.
+
+**Verwacht resultaat:** van 19 losse collageen-artikelen (16 JSON + 3 `lib/blog.ts`) naar 3-4 levende
+pagina's + gerichte 301's. Geconcentreerd linksignaal en contentdiepte zou de gemiddelde positie van 51,3
+significant moeten verbeteren voor de overgebleven pagina's.
+
+**Technische uitvoering:**
+1. Nieuwe `permanent: true` redirects toevoegen in `vercel.json` voor de 13 te verwijderen slugs →
+   `destination: /blogs/nieuws/vloeibaar-collageen-hl5-huid-haar-nagels`.
+2. Entries verwijderen uit `data/extra-articles.json` (en `lib/blog.ts` waar van toepassing) — vóór
+   verwijderen: grep elke slug in `app/`/`data/` om interne links te vinden die ernaar verwijzen en die
+   bijwerken naar de pilaarpagina.
+3. Waar een artikel unieke, niet-overlappende informatie bevat (bv. een specifieke studie, een andere
+   dosering-tip), die inhoud overnemen in de pilaarpagina vóór je de bron-pagina redirect — anders gaat die
+   informatie verloren.
+4. Na deploy: `npm run build` / `npx tsc --noEmit` clean, en handmatig GSC "Dizine eklenmesini iste"
+   aanvragen voor de pilaarpagina (quotum-bewust, zie sectie 24 — bewaar het quotum hiervoor).
+
+**Methode voor toekomstige cluster-checks (herbruikbaar voor stress/slaap-clusters):** Search Console →
+Performans → Filtre ekle → Sayfa → "Şunu içeren URL'ler" → typ het cluster-trefwoord → tab "Sayfa sayısı"
+geeft direct de per-URL vertoning/klik/CTR-tabel over de gekozen periode. Sneller en preciezer dan aannames
+over welke artikelen "waarschijnlijk" cannibaliseren — gebruik dit ook voor de nog openstaande stress-
+(4 artikelen) en slaap-cluster (2-3 artikelen) uit sectie 22/24 voor dezelfde exacte aanpak.
