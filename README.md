@@ -313,8 +313,8 @@ volgende audit niet opnieuw alle 18 hoeft te her-analyseren.
 - [x] Agency OS Faz 1+2 content-motor (zie hierboven) — vervangt de handmatige queue-aanpak
 - [x] #23 gesloten als duplicate van #24 (15-08-2026)
 - [x] PR #12 gemerged + live (15-08-2026, FAQ + affiliate-CTA toegevoegd)
-- [ ] **PR's #13, #14, #15, #16, #17, #18, #24** — FAQ/CTA-fix al gepusht, wachten op merge-trigger
-      (zie sessielog hierboven voor het exacte commando en volgorde)
+- [x] **PR's #13, #14, #15, #16, #17, #18, #24** — alle 8 gemerged + individueel live geverifieerd
+      (15-08-2026, zie sessielog hierboven)
 - [ ] 3 pillar pages (Gut-Brain Axis, Probiotica Stammen, Adaptogenen) — kısmen yazıldı
 
 ### Infrastructuur
