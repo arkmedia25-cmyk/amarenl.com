@@ -300,6 +300,30 @@ Na handmatige verificatie tegen live content bleken slechts **5 van de 18** echt
 zijn gefixt. Zie `CLAUDE.md`/agent-memory voor het volledige false-positive-patroon, zodat een
 volgende audit niet opnieuw alle 18 hoeft te her-analyseren.
 
+### 🆕 Sessie 22-08-2026 — 3 pillar pages voltooid (PR #48)
+
+Gebruiker koos deze taak uit de "Nog te doen"-lijst. Alle drie pagina's (`/adaptogenen`,
+`/gut-brain-axis`, `/probiotica-stammen`) bleken al live en van goede kwaliteit, maar één had een
+echte inhoudelijke lacune: `/adaptogenen`'s kop beloofde "8 Belangrijkste Adaptogenen" terwijl er
+maar 3 waren uitgeschreven (Ashwagandha, Rhodiola, Lion's Mane). **4 nieuwe adaptogenen toegevoegd**
+— Panax Ginseng, Cordyceps militaris, Schisandra chinensis, Heilige Basilicum (Tulsi) — elk met een
+echte, via PubMed geverifieerde bron. De kop is eerlijk aangepast naar "7 Belangrijkste" in plaats
+van een zwak onderbouwd 8e punt erbij te forceren.
+
+Tijdens deze verdieping ook de bestaande Ashwagandha-claims geaudit tegen de volledige tekst van
+Chandrasekhar et al. (2012) via PubMed: de 44%-stressreductie en 27,9%-cortisoldaling bleken **echt**
+en rechtstreeks uit die studie, maar een meegelifte 17%-testosteronclaim in dezelfde alinea kwam
+nergens in die studie voor (verwijderd) en een 28%-slaapclaim is vervangen door een correct
+toegeschreven bron (Langade et al., 2020). Zelfde soort fout gevonden en gefixt op `/probiotica-
+stammen` (een niet-bestaand "23% cortisol"-cijfer, ten onrechte aan Messaoudi et al. 2011
+toegeschreven) — een terugkerend patroon waarbij specifieke percentages losstaand van hun bron
+worden overgenomen en aan het verkeerde of een niet-bestaand resultaat gekoppeld raken.
+
+Daarnaast: alle 3 pagina's kregen `author: "Mark"`, een fout product-label op `/gut-brain-axis`
+("GBX SuperFood" wees naar de Sunrise-slug) is gecorrigeerd, en er zijn interne links toegevoegd
+vanuit 4 gerelateerde blogartikelen naar hun bijbehorende pillar page — voorheen kregen deze
+pagina's vrijwel geen interne links (`/gut-brain-axis`: 0, `/probiotica-stammen`: 0, `/adaptogenen`: 1).
+
 ---
 
 ## Nog te doen
@@ -315,7 +339,8 @@ volgende audit niet opnieuw alle 18 hoeft te her-analyseren.
 - [x] PR #12 gemerged + live (15-08-2026, FAQ + affiliate-CTA toegevoegd)
 - [x] **PR's #13, #14, #15, #16, #17, #18, #24** — alle 8 gemerged + individueel live geverifieerd
       (15-08-2026, zie sessielog hierboven)
-- [ ] 3 pillar pages (Gut-Brain Axis, Probiotica Stammen, Adaptogenen) — kısmen yazıldı
+- [x] 3 pillar pages (Gut-Brain Axis, Probiotica Stammen, Adaptogenen) — voltooid 22-08-2026,
+      zie sessielog hieronder
 
 ### Infrastructuur
 - [x] ~~E-mail API route (/api/subscribe) — Mailchimp integratie~~ — bestaat al (MailerLite, niet
