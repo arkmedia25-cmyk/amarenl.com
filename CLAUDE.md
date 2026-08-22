@@ -1269,3 +1269,299 @@ Performans → Filtre ekle → Sayfa → "Şunu içeren URL'ler" → typ het clu
 geeft direct de per-URL vertoning/klik/CTR-tabel over de gekozen periode. Sneller en preciezer dan aannames
 over welke artikelen "waarschijnlijk" cannibaliseren — gebruik dit ook voor de nog openstaande stress-
 (4 artikelen) en slaap-cluster (2-3 artikelen) uit sectie 22/24 voor dezelfde exacte aanpak.
+
+---
+
+## 26. HARDE ONDERWERP-CLUSTER GRENS — voorkomt een nieuwe collageen-situatie (22 augustus 2026)
+
+**Aanleiding:** Musa vroeg expliciet om een harde regel: vóór een nieuw artikel geschreven wordt, moet
+strikt gecontroleerd worden of hetzelfde of een vergelijkbaar onderwerp al bestaat. Reden: de
+collageen-cluster (sectie 25, 19 artikelen, gemiddelde Google-positie 51) is geen incident maar het
+resultaat van hoe `scripts/generate-article-claude.mjs` al die tijd heeft gewerkt — het model kreeg bij
+elke run al een lijst bestaande titels + afgewezen PR's + open PR's te zien met de instructie "kies geen
+overlappend onderwerp" (`buildTopicPrompt`), en dat is AANTOONBAAR onvoldoende gebleken. Zelfs het
+"Collageen voor Mannen 30+" driemaal-incident van 11-08 (PR #23/#24/#25, zie de code-comment bij
+`fetchOpenPendingTopics`) was al zo'n zachte patch — en de cluster liep daarna gewoon door tot 19
+artikelen. Zachte prompt-instructies aan een LLM zijn dus geen betrouwbare grens op dit schaalniveau.
+
+### Wat er is geïmplementeerd (in `scripts/generate-article-claude.mjs`, NOG NIET GECOMMIT)
+
+Een nieuwe, programmatische — dus niet-onderhandelbare — poort, los van het model se eigen "beoordeling":
+
+- `extractKeywords(text)`: haalt significante kernwoorden uit een titel (≥5 letters, min een
+  stopwoorden-/sjabloonwoorden-lijst zoals "gids", "review", "tekort", "symptomen", "oorzaken" — dit
+  laatste stel is toegevoegd nadat een eerste test liet zien dat "Tekort: Symptomen, Oorzaken..." als
+  titel-sjabloon voor compleet verschillende voedingsstoffen wordt hergebruikt en anders valse matches gaf).
+- `checkTopicClusterLimit(topicText, existingArticles)`: telt voor elk kernwoord van het NIEUWE onderwerp
+  in hoeveel bestaande titels dat kernwoord al voorkomt. Als het hoogste aantal ≥ `TOPIC_CLUSTER_LIMIT`
+  (ingesteld op **3**) is, wordt het onderwerp geblokkeerd.
+- In `main()`, direct na `pickTopic()` en vóór er ook maar één woord content geschreven wordt: als
+  geblokkeerd, één herkansing met het kernwoord expliciet uitgesloten uit de prompt
+  (`excludedKeywords` — nieuw veld in `buildTopicPrompt`). Lukt de herkansing niet, dan stopt de run
+  bewust (`skipped=true` naar GITHUB_OUTPUT, `process.exit(0)`) — geen artikel die dag is beter dan
+  cluster-lid #4 van hetzelfde kernwoord.
+- `buildApprovalChecklist` toont het cluster-aantal nu ook informatief in de Telegram-checklist (5e regel),
+  zodat de menselijke reviewer het ook ziet als de harde poort om wat voor reden dan ook niet triggert.
+
+**Getest (niet live, wel met echte data):** een los testscript (`test-cluster-check.mjs`, niet
+meegecommit) liep de exacte logica tegen de 96 echte titels uit `data/extra-articles.json` van vandaag.
+Zes gevallen gecontroleerd — "Collageen Poeder Kopen" en "Collageen en Slaap" worden correct geblokkeerd
+(kernwoord "collageen", 16x), "Magnesium Tekort" wordt correct geblokkeerd (kernwoord "magnesium", 6x),
+terwijl "Zink Tekort", "Ashwagandha Dosering" en een generieke titel zonder specifiek onderwerp correct
+NIET geblokkeerd worden. `node --check` bevestigt geldige syntax. **Wat niet getest kon worden:** een
+echte end-to-end run met de Anthropic API en `gh` (geen API-key/gh-auth beschikbaar vanaf deze
+device-bridge) — dus de eerste live run (scheduled of handmatig via `workflow_dispatch`) moet in de gaten
+gehouden worden.
+
+### Wat nog moet gebeuren — belangrijk, twee delen
+
+**1. `scripts/generate-article-claude.mjs` staat al aangepast in de working tree (niet gecommit).**
+Controleer met `git diff scripts/generate-article-claude.mjs`, en commit samen met punt 2 hieronder —
+niet los, want de twee horen bij elkaar (zie waarom hieronder).
+
+**2. `.github/workflows/amarenl-article-claude.yml` moest OOK aangepast worden (3 stappen krijgen een
+`if: steps.generate.outputs.skipped != 'true'` guard, en er komt een nieuwe rustige "skipped"
+Telegram-melding naast de bestaande 🚨 KRİTİK-faalmelding) — maar workflow-bestanden zijn terecht
+beschermd tegen schrijven via de remote-device-tools van deze sessie (kunnen willekeurige code met
+repo-secrets uitvoeren, dus terecht geblokkeerd voor een cloud-sessie zonder lokale terminal). **Dit kon
+ik dus niet zelf wegschrijven.** De volledige, kant-en-klare nieuwe inhoud staat hieronder — vervang de
+volledige inhoud van `.github/workflows/amarenl-article-claude.yml` hiermee 1-op-1:
+
+```yaml
+name: AmareNL — Makale (Claude API, Faz 2)
+
+on:
+  schedule:
+    # 06:57 UTC ≈ 08:57 Amsterdam (zomertijd), Pazartesi/Çarşamba/Cuma
+    - cron: "57 6 * * 1,3,5"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: amarenl-article-publish
+  cancel-in-progress: false
+
+jobs:
+  generate-and-propose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Ensure Telegram webhook is registered (self-healing)
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_WEBHOOK_SECRET: ${{ secrets.TELEGRAM_WEBHOOK_SECRET }}
+        run: bash scripts/ensure-telegram-webhook.sh
+
+      - name: Generate article (Claude API)
+        id: generate
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/generate-article-claude.mjs
+
+      - name: Type-check
+        run: npx tsc --noEmit -p tsconfig.json
+
+      - name: Build (production sanity check)
+        run: npm run build
+
+      - name: Create draft branch and commit
+        id: branch
+        if: steps.generate.outputs.skipped != 'true'
+        env:
+          SLUG: ${{ steps.generate.outputs.slug }}
+        run: |
+          BRANCH="draft/${SLUG}"
+          git config user.name "AmareNL Article Bot"
+          git config user.email "actions@github.com"
+          git checkout -b "$BRANCH"
+          git add data/extra-articles.json public/sitemap.xml
+          git commit -m "publish: ${SLUG} (auto — Claude, pending approval)"
+          git push origin "$BRANCH"
+          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
+
+      - name: Open PR
+        id: pr
+        if: steps.generate.outputs.skipped != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: ${{ steps.branch.outputs.branch }}
+          TITLE: ${{ steps.generate.outputs.title }}
+          SLUG: ${{ steps.generate.outputs.slug }}
+          EXCERPT: ${{ steps.generate.outputs.excerpt }}
+        run: |
+          BODY=$(printf 'Otomatik üretilen makale (Claude API, Faz 2 motoru) — onay bekliyor.\n\n**Slug:** `%s`\n**Özet:** %s\n\nBu PR, Telegram'"'"'dan ✅ onaylanınca otomatik merge + deploy edilecek. ❌ Reddedilirse kapatılır ve main hiç değişmez.' \
+            "$SLUG" "$EXCERPT")
+          URL=$(gh pr create --title "📝 ${TITLE}" --body "$BODY" --base main --head "$BRANCH")
+          NUMBER=$(gh pr view "$URL" --json number -q .number)
+          echo "url=$URL" >> "$GITHUB_OUTPUT"
+          echo "number=$NUMBER" >> "$GITHUB_OUTPUT"
+
+      - name: Notify Telegram
+        if: success() && steps.generate.outputs.skipped != 'true'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_THREAD_ID: ${{ secrets.TELEGRAM_THREAD_ID }}
+          TITLE: ${{ steps.generate.outputs.title }}
+          EXCERPT: ${{ steps.generate.outputs.excerpt }}
+          PR_URL: ${{ steps.pr.outputs.url }}
+          PR_NUMBER: ${{ steps.pr.outputs.number }}
+          WORD_COUNT: ${{ steps.generate.outputs.word_count }}
+          WORD_COUNT_OK: ${{ steps.generate.outputs.word_count_ok }}
+          HAS_CITATION: ${{ steps.generate.outputs.has_citation }}
+          SAME_CATEGORY_COUNT: ${{ steps.generate.outputs.same_category_count }}
+          TOPIC_CLUSTER_KEYWORD: ${{ steps.generate.outputs.topic_cluster_keyword }}
+          TOPIC_CLUSTER_COUNT: ${{ steps.generate.outputs.topic_cluster_count }}
+        run: |
+          # 5 kontrol satırı — Soro araştırmasından: onaylayan kişinin gerçekten
+          # değerlendirecek bir şeyi olsun, sadece "onay bekliyor" değil. Konu-cluster
+          # satırı bilgilendirme amaçlı — de harde blokkade zelf gebeurde al vóór dit
+          # punt (zie generate-article-claude.mjs, checkTopicClusterLimit).
+          WORD_MARK="✅"; [ "$WORD_COUNT_OK" = "true" ] || WORD_MARK="⚠️"
+          CITATION_MARK="✅"; [ "$HAS_CITATION" = "true" ] || CITATION_MARK="⚠️ kaynak bulunamadı"
+          CITATION_LABEL="var"; [ "$HAS_CITATION" = "true" ] || CITATION_LABEL="YOK — kontrol et"
+          OVERLAP_MARK="✅"; OVERLAP_LABEL="çakışma yok"
+          if [ "${SAME_CATEGORY_COUNT:-0}" -ge 3 ] 2>/dev/null; then
+            OVERLAP_MARK="⚠️"
+            OVERLAP_LABEL="bu kategoride zaten ${SAME_CATEGORY_COUNT} makale var — konu çakışması olabilir"
+          fi
+          CLUSTER_MARK="✅"; CLUSTER_LABEL="benzersiz konu"
+          if [ -n "${TOPIC_CLUSTER_KEYWORD:-}" ] && [ "${TOPIC_CLUSTER_COUNT:-0}" -ge 1 ] 2>/dev/null; then
+            CLUSTER_MARK="ℹ️"
+            CLUSTER_LABEL="\"${TOPIC_CLUSTER_KEYWORD}\" anahtar kelimesi zaten ${TOPIC_CLUSTER_COUNT} makalede var"
+          fi
+
+          CHECKLIST=$(printf '✅ EFSA/NVWA kontrolü: geçti (otomatik doğrulandı)\n%s Kelime sayısı: %s (%s)\n%s Kaynak/atıf: %s\n%s Kategori çakışması: %s\n%s Konu kümesi: %s' \
+            "$WORD_MARK" "$WORD_COUNT" "$([ "$WORD_COUNT_OK" = "true" ] && echo "hedefin üstünde" || echo "1000 hedefinin altında — kontrol et")" \
+            "$CITATION_MARK" "$CITATION_LABEL" \
+            "$OVERLAP_MARK" "$OVERLAP_LABEL" \
+            "$CLUSTER_MARK" "$CLUSTER_LABEL")
+
+          TEXT=$(printf '📝 Yeni makale taslağı (Claude API)\n\n%s\n\n%s\n\n%s\n\nPR: %s' \
+            "$TITLE" "$EXCERPT" "$CHECKLIST" "$PR_URL")
+
+          PAYLOAD=$(jq -n \
+            --arg chat_id "$TELEGRAM_CHAT_ID" \
+            --arg text "$TEXT" \
+            --arg thread_id "${TELEGRAM_THREAD_ID:-}" \
+            --arg approve "approve:${PR_NUMBER}" \
+            --arg reject "reject:${PR_NUMBER}" \
+            '{
+              chat_id: $chat_id,
+              text: $text,
+              reply_markup: {
+                inline_keyboard: [[
+                  {text: "✅ Onayla ve Yayınla", callback_data: $approve},
+                  {text: "❌ Reddet", callback_data: $reject}
+                ]]
+              }
+            } + (if $thread_id != "" then {message_thread_id: ($thread_id | tonumber)} else {} end)')
+
+          curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -H "Content-Type: application/json" \
+            -d "$PAYLOAD"
+
+      - name: Notify Telegram (topic skipped — cluster limit)
+        if: success() && steps.generate.outputs.skipped == 'true'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_THREAD_ID: ${{ secrets.TELEGRAM_THREAD_ID }}
+          SKIP_REASON: ${{ steps.generate.outputs.skip_reason }}
+        run: |
+          # Bewuste, programmatische keuze — GEEN storing. Aparte, rustige melding
+          # (niet gepind, geen 🚨) zodat dit niet als crisis leest naast de echte
+          # 🚨 KRİTİK-melding hieronder.
+          TEXT=$(printf 'ℹ️ Bugün makale yayınlanmadı — konu kümesi limiti\n\n%s\n\nBu bir hata değil: bir sonraki çalıştırmada farklı bir konu seçilecek.' "$SKIP_REASON")
+          PAYLOAD=$(jq -n --arg chat_id "$TELEGRAM_CHAT_ID" --arg text "$TEXT" \
+            --arg thread_id "${TELEGRAM_THREAD_ID:-}" \
+            '{chat_id: $chat_id, text: $text} + (if $thread_id != "" then {message_thread_id: ($thread_id | tonumber)} else {} end)')
+          curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -H "Content-Type: application/json" -d "$PAYLOAD"
+
+      - name: Notify Telegram (failure)
+        if: failure()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_THREAD_ID: ${{ secrets.TELEGRAM_THREAD_ID }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          TEXT=$(printf '🚨 KRİTİK: Makale üretim workflow'"'"'u başarısız oldu (Faz 2).\n\n%s' "$RUN_URL")
+          PAYLOAD=$(jq -n --arg chat_id "$TELEGRAM_CHAT_ID" --arg text "$TEXT" \
+            --arg thread_id "${TELEGRAM_THREAD_ID:-}" \
+            '{chat_id: $chat_id, text: $text} + (if $thread_id != "" then {message_thread_id: ($thread_id | tonumber)} else {} end)')
+          RESPONSE=$(curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -H "Content-Type: application/json" -d "$PAYLOAD")
+          echo "$RESPONSE"
+          MESSAGE_ID=$(echo "$RESPONSE" | jq -r '.result.message_id // empty')
+          if [ -n "$MESSAGE_ID" ]; then
+            curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/pinChatMessage" \
+              -H "Content-Type: application/json" \
+              -d "$(jq -n --arg chat_id "$TELEGRAM_CHAT_ID" --argjson message_id "$MESSAGE_ID" '{chat_id: $chat_id, message_id: $message_id}')" \
+              || echo "::warning::Mesaj pinlenemedi, ama bildirim gönderildi."
+          fi
+```
+
+**Waarom deze twee samen gecommit moeten worden (niet los):** als alleen de `.mjs` gecommit wordt zonder
+de workflow-aanpassing, dan zet het script bij een blokkade wel `skipped=true` maar de OUDE workflow
+controleert dat veld nergens — "Create draft branch and commit" draait dan alsnog met een lege `SLUG`,
+`git commit` faalt ("nothing to commit" — er is niets aan `data/extra-articles.json` gewijzigd), de hele
+job faalt, en dat triggert de bestaande 🚨 KRİTİK-faalmelding: een vals alarm bij elke correcte,
+opzettelijke skip. Precies het "huilen wolf"-effect dat sectie 25's aanbeveling probeerde te vermijden.
+
+**Na committen:** eerste live run (volgende scheduled run ma/wo/vr 08:57, of handmatig via
+`workflow_dispatch` in de Actions-tab) in de gaten houden — dit is de eerste keer dat deze logica
+daadwerkelijk tegen de echte Anthropic API + `gh` draait, wat vanaf een device-bridge zonder API-key niet
+te simuleren was.
+
+**Limiet aanpasbaar:** `TOPIC_CLUSTER_LIMIT = 3` in `generate-article-claude.mjs` — verhogen als dit later
+te streng blijkt (bv. een cluster waar 3 legitiem verschillende invalshoeken bestaan), verlagen als er
+nóg een sluipende cluster ontstaat ondanks deze grens.
+
+---
+
+## 27. TRIANGLE OF WELLNESS XTREME — ondervertegenwoordigd in cross-sell (22 augustus 2026)
+
+Musa wees erop dat `/triangle-of-wellness-xtreme` (dag-nacht bundel: Sunrise + Nitro Xtreme + Sunset,
+€123,55/maand) een van de belangrijkste producten van de site is maar te weinig naar voren komt.
+Gecontroleerd: het product staat wél al op de homepage (`FeaturedProducts`, 3e van 3 uitgelichte
+producten), heeft een eigen pagina en een compleet record in `data/products.json`. Het echte gat zat in
+`lib/blog.ts`'s `articleProductMap` — de per-artikel "Aanbevolen Producten"-widget onderaan elk
+blogartikel: van 55 artikel-entries noemde slechts 4 Triangle of Wellness, tegenover MentaBiotics (19),
+HL5 (14), Sunrise/Sunset (10 elk). Het ontbrak zelfs op `supplementen-voor-meer-energie-dit-werkt-echt` —
+het artikel dat zowel vanuit de homepage-"Symptoom Wijzer" ("😴 Altijd moe?") als vanuit "Meest Gelezen
+Artikelen" wordt gelinkt, dus een van de best bezochte pagina's van de site.
+
+**Fix (lib/blog.ts, gecommit):** Triangle of Wellness Xtreme toegevoegd als extra aanbevolen product aan
+3 relevante, al bestaande artikel-entries (alleen toegevoegd, niets verwijderd):
+`supplementen-voor-meer-energie-dit-werkt-echt`, `altijd-moe-ontdek-hoe-cel-energie-jouw-
+energieniveau-bepaalt`, `ijzer-tekort-vermoeidheid-supplement-nederland` — alle drie energie/vermoeidheid-
+thema, waar de "complete dag-nacht energie"-positionering van het pakket direct relevant is. Format
+identiek aan bestaande entries gekopieerd. Geverifieerd met `npx tsc --noEmit` (schoon, geen errors).
+
+**Bewust niet gedaan:** niet aan alle 55 artikelen toegevoegd — dat zou de widget spammy maken en het
+signaal voor écht relevante producten verzwakken. Alleen toegevoegd waar de dag-nacht/energie-positionering
+inhoudelijk klopt. Als Musa dit breder wil (bv. ook bij stress- of slaap-artikelen), is dat een kleine
+vervolgstap in hetzelfde bestand.
+
+**Aparte observatie, niet actie ondernomen:** `"b-vitamines-energie-supplement-nederland"` heeft een LEGE
+product-array (`[]`) — geen enkel aanbevolen product op dat artikel. Los probleem, niet gerelateerd aan
+Triangle of Wellness, maar wel een gemiste conversiekans — waard om ook te vullen.

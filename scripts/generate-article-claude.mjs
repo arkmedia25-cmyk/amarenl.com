@@ -246,7 +246,7 @@ function buildSystemPrompt(articleQualitySkill, claudeMdExcerpt) {
   ].join("\n");
 }
 
-function buildTopicPrompt({ queueDoc, existingArticles, rejectedTopics, openPendingTopics }) {
+function buildTopicPrompt({ queueDoc, existingArticles, rejectedTopics, openPendingTopics, excludedKeywords }) {
   const existingTitles = [...existingArticles.values()].join("\n- ");
   const rejectedList = rejectedTopics?.length
     ? rejectedTopics.map((t) => `- ${t}`).join("\n")
@@ -254,6 +254,16 @@ function buildTopicPrompt({ queueDoc, existingArticles, rejectedTopics, openPend
   const openPendingList = openPendingTopics?.length
     ? openPendingTopics.map((t) => `- ${t}`).join("\n")
     : "(geen)";
+  const excludedBlock = excludedKeywords?.length
+    ? [
+        "",
+        "=== HARDE UITSLUITING (programmatisch afgedwongen, geen suggestie) ===",
+        `Het kernwoord/de kernwoorden "${excludedKeywords.join('", "')}" heeft/hebben het cluster-limiet al`,
+        "bereikt in de bestaande content (zie hieronder). Kies GEEN onderwerp waarvan de titel dit",
+        "kernwoord bevat, ook niet met een compleet andere invalshoek — dit wordt na jouw keuze",
+        "opnieuw automatisch gecontroleerd en afgewezen als je dit toch doet.",
+      ].join("\n")
+    : "";
   return [
     "Hieronder staat de volledige content/article-queue.md van amarenl.com — een redactieplan met",
     "meerdere tabellen (30-dagen planning, keyword-clusters, TIER-lijsten). Sommige onderwerpen zijn",
@@ -266,6 +276,7 @@ function buildTopicPrompt({ queueDoc, existingArticles, rejectedTopics, openPend
     "een andere invalshoek (bv. 'X in voeding' vs 'X tekort', 'X bijwerkingen' vs 'X vetzuren' worden",
     "door de menselijke reviewer als hetzelfde onderwerp gezien en afgewezen). Beoordeel op ONDERWERP,",
     "niet op exacte woordovereenkomst.",
+    excludedBlock,
     "",
     "=== BESTAANDE ARTIKEL-TITELS (al gepubliceerd — kies geen overlappend onderwerp) ===",
     `- ${existingTitles}`,
@@ -426,25 +437,103 @@ function validate(article, existingArticles) {
   return errors;
 }
 
-// Vier controlepunten die zichtbaar worden in het Telegram-goedkeuringsbericht,
+// Vijf controlepunten die zichtbaar worden in het Telegram-goedkeuringsbericht,
 // zodat de mens die op "Onayla"/"Reddet" klikt echt iets te beoordelen heeft in
 // plaats van blind te vertrouwen op "onay bekliyor". EFSA/NVWA-naleving is al
 // een harde poort in validate() hierboven — als we hier komen is die al gehaald.
+// topicClusterCount is puur informatief hier — de harde blokkade zelf gebeurt
+// al vóór generateArticle() in main() (checkTopicClusterLimit, sectie 26).
 // (Toegevoegd n.a.v. Soro-onderzoek, zie CLAUDE.md.)
-function buildApprovalChecklist(article, extraJsonBefore) {
+function buildApprovalChecklist(article, extraJsonBefore, existingArticles) {
   const wordCount = article.content.split(/\s+/).filter(Boolean).length;
   const hasCitation = /rivm\.nl|pubmed|ncbi\.nlm\.nih\.gov|bron:|referentie:|https?:\/\//i.test(
     article.content
   );
   const sameCategoryCount = extraJsonBefore.filter((a) => a.category === article.category).length;
+  const topicCluster = existingArticles
+    ? checkTopicClusterLimit(article.title, existingArticles)
+    : { blocked: false };
 
   return {
     wordCount,
     wordCountOk: wordCount >= 1000,
     hasCitation,
     sameCategoryCount,
+    topicClusterKeyword: topicCluster.keyword || "",
+    topicClusterCount: topicCluster.count || 0,
     efsaOk: true,
   };
+}
+
+// ── Onderwerp-cluster harde grens ──────────────────────────────────────────
+// De prompt hierboven vraagt het model al netjes om geen overlappend
+// onderwerp te kiezen — dat heeft dit niet voorkomen. Het "Collageen voor
+// Mannen 30+" driemaal-incident (11-08-2026, PR #23/#24/#25, zie
+// fetchOpenPendingTopics hierboven) was al zo'n patch-op-patch, en toch liep
+// de collageen-cluster in de weken daarna door tot 19 artikelen die
+// gezamenlijk gemiddeld op Google-positie 51 stonden (CLAUDE.md sectie 25).
+// Zachte instructies aan het model zijn dus aantoonbaar onvoldoende bij dit
+// schaalniveau. Dit is daarom een PROGRAMMATISCHE, niet-onderhandelbare
+// grens: als een net gekozen onderwerp het kernwoord deelt met te veel
+// bestaande titels, wordt het geblokkeerd — ongeacht hoe "nieuw" de
+// invalshoek volgens het model aanvoelt.
+const STOPWORDS_NL = new Set([
+  "de", "het", "een", "van", "voor", "in", "op", "met", "en", "of", "is", "zijn", "je", "jouw",
+  "wat", "hoe", "waarom", "welke", "deze", "dit", "dat", "naar", "bij", "aan", "als", "dan",
+  "meer", "beste", "goed", "echt", "echte", "complete", "compleet", "gids", "review",
+  "ervaring", "ervaringen", "vergelijking", "resultaten", "werkt", "kopen", "waar",
+  "amare", "supplement", "supplementen", "artikel", "artikelen", "test", "tips", "letten",
+  // Structurele/sjabloon-woorden die in vrijwel elke "X: ... " titel-sjabloon terugkeren,
+  // ongeacht welk specifiek onderwerp X is (bv. "Tekort: Symptomen, Oorzaken en Oplossingen"
+  // wordt hergebruikt voor magnesium, ijzer, vitamine B12, vitamine D...) — deze woorden
+  // zeggen niets over het ONDERWERP zelf en zouden anders valse cluster-matches geven.
+  "tekort", "symptomen", "oorzaken", "oplossingen", "voorkomen", "wanneer", "verband",
+]);
+
+/** Significante kernwoorden uit een titel/onderwerp-omschrijving — alles korter dan 5
+ *  letters of op de stopwoorden-/generieke-woordenlijst wordt genegeerd, zodat alleen
+ *  onderwerp-dragende zelfstandig naamwoorden overblijven (bv. "collageen", "cortisol",
+ *  "magnesium", "vitamine"). */
+function extractKeywords(text) {
+  return (text || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, " ")
+    .split(/[\s-]+/)
+    .filter((w) => w.length >= 5 && !STOPWORDS_NL.has(w));
+}
+
+const TOPIC_CLUSTER_LIMIT = 3;
+
+/**
+ * Telt, voor elk kernwoord in het zojuist gekozen onderwerp, in hoeveel bestaande
+ * artikel-titels datzelfde kernwoord al voorkomt. Als het hoogste aantal de limiet
+ * bereikt, wordt het onderwerp geblokkeerd — dit is de harde poort die vóór
+ * generateArticle() draait, dus vóór er ook maar één woord content geschreven is.
+ */
+function checkTopicClusterLimit(topicText, existingArticles) {
+  const newKeywords = new Set(extractKeywords(topicText));
+  if (newKeywords.size === 0) return { blocked: false };
+
+  const counts = new Map();
+  for (const title of existingArticles.values()) {
+    const existingKeywords = new Set(extractKeywords(title));
+    for (const kw of newKeywords) {
+      if (existingKeywords.has(kw)) counts.set(kw, (counts.get(kw) || 0) + 1);
+    }
+  }
+
+  let worstKeyword = null;
+  let worstCount = 0;
+  for (const [kw, count] of counts) {
+    if (count > worstCount) {
+      worstKeyword = kw;
+      worstCount = count;
+    }
+  }
+
+  return worstCount >= TOPIC_CLUSTER_LIMIT
+    ? { blocked: true, keyword: worstKeyword, count: worstCount }
+    : { blocked: false };
 }
 
 async function pickTopic(client, ctx, systemPrompt) {
@@ -567,7 +656,49 @@ async function main() {
   }
 
   console.log("Onderwerp kiezen + PubMed-zoektermen bepalen...");
-  const topicPick = await pickTopic(client, { queueDoc, existingArticles, rejectedTopics, openPendingTopics }, systemPrompt);
+  let topicPick = await pickTopic(client, { queueDoc, existingArticles, rejectedTopics, openPendingTopics }, systemPrompt);
+
+  // Harde cluster-grens (CLAUDE.md sectie 26): het model kan een onderwerp kiezen
+  // dat inhoudelijk keurig aan de prompt-instructies voldoet en toch het zoveelste
+  // artikel binnen een al oververtegenwoordigd kernwoord-cluster zijn (zoals bij
+  // collageen gebeurde). Eén herkansing met het kernwoord expliciet uitgesloten;
+  // lukt dat niet, dan wordt de run bewust overgeslagen — geen artikel is beter
+  // dan cluster-lid #(limiet + 1).
+  let clusterCheck = topicPick?.topic ? checkTopicClusterLimit(topicPick.topic, existingArticles) : { blocked: false };
+  if (clusterCheck.blocked) {
+    console.warn(
+      `  ⛔ Onderwerp geblokkeerd door cluster-limiet: kernwoord "${clusterCheck.keyword}" komt al voor ` +
+      `in ${clusterCheck.count} bestaande artikelen (limiet: ${TOPIC_CLUSTER_LIMIT}). ` +
+      `Origineel onderwerp: "${topicPick.topic}". Eén herkansing met dit kernwoord uitgesloten...`
+    );
+    const retryPick = await pickTopic(
+      client,
+      {
+        queueDoc,
+        existingArticles,
+        rejectedTopics: [...rejectedTopics, topicPick.topic],
+        openPendingTopics,
+        excludedKeywords: [clusterCheck.keyword],
+      },
+      systemPrompt
+    );
+    const retryCheck = retryPick?.topic ? checkTopicClusterLimit(retryPick.topic, existingArticles) : { blocked: false };
+    if (!retryPick?.topic || retryCheck.blocked) {
+      const reason = retryPick?.topic
+        ? `herkansing "${retryPick.topic}" botst opnieuw op kernwoord "${retryCheck.keyword}" (${retryCheck.count}x)`
+        : "herkansing leverde geen geldig onderwerp op";
+      console.log(
+        `SKIPPED: geen onderwerp buiten oververtegenwoordigde clusters gevonden (${reason}). ` +
+        `Geen artikel vandaag — dit is een bewuste, programmatische keuze, geen storing.`
+      );
+      if (process.env.GITHUB_OUTPUT) {
+        writeFileSync(process.env.GITHUB_OUTPUT, `skipped=true\nskip_reason=cluster-limiet kernwoord "${clusterCheck.keyword}" (${clusterCheck.count}x, limiet ${TOPIC_CLUSTER_LIMIT})\n`, { flag: "a" });
+      }
+      process.exit(0);
+    }
+    topicPick = retryPick;
+    clusterCheck = retryCheck;
+  }
 
   let pubmedContext = "";
   if (topicPick?.topic) {
@@ -593,7 +724,7 @@ async function main() {
 
   const extraArticlesPath = join(ROOT, "data/extra-articles.json");
   const current = JSON.parse(readFileSync(extraArticlesPath, "utf-8"));
-  const checklist = buildApprovalChecklist(article, current);
+  const checklist = buildApprovalChecklist(article, current, existingArticles);
   current.push(article);
   writeFileSync(extraArticlesPath, JSON.stringify(current, null, 2) + "\n", "utf-8");
 
@@ -613,6 +744,8 @@ async function main() {
       `word_count_ok=${checklist.wordCountOk}`,
       `has_citation=${checklist.hasCitation}`,
       `same_category_count=${checklist.sameCategoryCount}`,
+      `topic_cluster_keyword=${checklist.topicClusterKeyword}`,
+      `topic_cluster_count=${checklist.topicClusterCount}`,
       "",
     ].join("\n");
     writeFileSync(process.env.GITHUB_OUTPUT, out, { flag: "a" });

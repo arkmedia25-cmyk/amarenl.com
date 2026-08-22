@@ -2541,6 +2541,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
   "supplementen-voor-meer-energie-dit-werkt-echt": [
     { name: "Energy+", url: "/energy", isInternal: true, price: "€55.48/maand", tagline: "Natuurlijke energie zonder cafeïnecrash" },
     { name: "Happy Juice Pack", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — energie, stemming & focus in één pakket" },
+    { name: "Triangle of Wellness Xtreme", url: `${AFFILIATE_BASE}/triangle-of-wellness-xtreme`, isInternal: false, price: "€123.55/maand", tagline: "Sunrise + Nitro Xtreme + Sunset — complete dag-nacht energie" },
   ],
   "collageen-bouwsteen-voor-huid-haar-en-nagels-dit-moet-je-weten": [
     { name: "HL5", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "5g gehydrolyseerd collageen Type 1&3 — 2-pack" },
@@ -2553,6 +2554,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
   "ijzer-tekort-vermoeidheid-supplement-nederland": [
     { name: "Sunrise", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "22 superfoods + 9 vitamines — 2-pack" },
     { name: "Amare Sunrise", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "22 superfoods + 9 vitamines — 2-pack voordelig" },
+    { name: "Triangle of Wellness Xtreme", url: `${AFFILIATE_BASE}/triangle-of-wellness-xtreme`, isInternal: false, price: "€123.55/maand", tagline: "Sunrise + Nitro Xtreme + Sunset — complete dag-nacht energie" },
   ],
   "mct-olie-energie-gewicht-supplement": [
     { name: "Origin", url: "/origin", isInternal: true, price: "€40/maand", tagline: "23g plantaardig eiwit + MCT — vegan shake" },
@@ -2637,6 +2639,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
   "altijd-moe-ontdek-hoe-cel-energie-jouw-energieniveau-bepaalt": [
     { name: "Energy+", url: "/energy", isInternal: true, price: "€55.48/maand", tagline: "Natuurlijke cafeïne + B-vitamines — energie zonder crash" },
     { name: "Happy Juice Pack", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — energie, stemming & focus in één pakket" },
+    { name: "Triangle of Wellness Xtreme", url: `${AFFILIATE_BASE}/triangle-of-wellness-xtreme`, isInternal: false, price: "€123.55/maand", tagline: "Sunrise + Nitro Xtreme + Sunset — complete dag-nacht energie" },
   ],
   "apotheek-of-groenteboer": [
     { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — probiotica voor stemming & mentale veerkracht" },
