@@ -889,6 +889,8 @@ export const blogPosts: BlogPost[] = [
     date: "2026-05-31",
     category: "Mentale Focus & Stress",
     excerpt: "Steeds meer mensen zoeken naar supplementen voor betere focus en concentratie. Ontdek wat nootropics zijn, welke natuurlijke ingrediënten werken, en hoe je een focus supplement kiest dat bij je past.",
+    author: "Mark",
+    citations: [{ author: "Peth-Nui T, et al.", name: "Evidence-Based Complementary and Alternative Medicine (2012)", url: "https://doi.org/10.1155/2012/606424" }],
     content: `
       <h2>Waarom steeds meer mensen supplementen nemen voor focus</h2>
       <p>We leven in een aandachtscrisis. De gemiddelde Nederlander checkt zijn telefoon 80 keer per dag, schakelt elke 3 tot 11 minuten tussen taken, en krijgt dagelijks meer informatie te verwerken dan iemand in de 15e eeuw in zijn hele leven. Tegelijkertijd wordt van ons verwacht dat we diep nadenken, creatief zijn, complexe problemen oplossen — en dat acht uur per dag.</p>
@@ -965,6 +967,7 @@ export const blogPosts: BlogPost[] = [
     category: "Schoonheid",
     excerpt: "Bijna de helft van alle vrouwen krijgt ooit te maken met haaruitval. Ontdek de meest voorkomende oorzaken, welke vitaminen en mineralen essentieel zijn voor gezonde haargroei, en welke supplementen wetenschappelijk onderbouwd zijn.",
     author: "Mark",
+    citations: [{ author: "Leavitt A, et al.", name: "Journal of Drugs in Dermatology (2025)", url: "https://doi.org/10.36849/JDD.8763" }],
     content: `
       <h2>Haaruitval bij vrouwen: veel voorkomender dan je denkt</h2>
       <p>Als je aan haaruitval denkt, zie je waarschijnlijk een man met een terugtrekkende haarlijn voor je. Maar de cijfers vertellen een ander verhaal: naar schatting <strong>krijgt 40 tot 50% van alle vrouwen</strong> op enig moment in hun leven te maken met zichtbaar haarverlies. In Nederland alleen al gaat het om honderdduizenden vrouwen — en het taboe is groot.</p>
@@ -1053,6 +1056,8 @@ export const blogPosts: BlogPost[] = [
     date: "2026-05-27",
     category: "Darmen & Spijsvertering",
     excerpt: "Wist je dat 90% van je serotonine in je darmen wordt gemaakt? Ontdek hoe de gut-brain connectie werkt, waarom je darmen je 'tweede brein' zijn, en hoe je deze cruciale verbinding ondersteunt voor een betere stemming en mentale helderheid.",
+    author: "Mark",
+    citations: [{ author: "Kapela M, et al.", name: "Frontiers in Molecular Neuroscience (2026)", url: "https://doi.org/10.3389/fnmol.2026.1903770" }],
     content: `
       <h2>Je darmen als tweede brein: waarom dit ertoe doet</h2>
       <p>Stel je voor: je hebt een belangrijke presentatie en je voelt vlinders in je buik. Of je bent verdrietig en hebt nergens trek in. Dit zijn geen toevalligheden — het zijn signalen van een van de meest fascinerende biologische verbindingen in je lichaam: de <strong>gut-brain connectie</strong>. Je darmen en hersenen staan continu met elkaar in contact via een complex netwerk van zenuwen, hormonen en chemische boodschappers. Sterker nog: je darmen bevatten zo'n 100 miljoen neuronen — meer dan je ruggenmerg — en produceren een groot deel van de signaalstoffen die bepalen of je je energiek, somber, gefocust of angstig voelt. Het enterisch zenuwstelsel — het zenuwstelsel van je darmen — functioneert grotendeels zelfstandig en wordt inmiddels het "tweede brein" genoemd.</p>
@@ -1096,6 +1101,8 @@ export const blogPosts: BlogPost[] = [
     date: "2026-05-28",
     category: "Mentale Gezondheid",
     excerpt: "Alles over ashwagandha kopen in Nederland: KSM-66 vs Sensoril, dosering, bewezen voordelen en waar je op moet letten bij het kiezen van een kwalitatief supplement.",
+    author: "Mark",
+    citations: [{ author: "Chandrasekhar K, et al.", name: "Indian Journal of Psychological Medicine (2012)", url: "https://doi.org/10.4103/0253-7176.106022" }],
     content: `
       <h2>De stijgende populariteit van ashwagandha in Nederland</h2>
       <p>Vijf jaar geleden had bijna niemand in Nederland van ashwagandha gehoord. Vandaag is het een van de snelst groeiende supplementen, met duizenden maandelijkse zoekopdrachten naar "ashwagandha kopen". De verklaring: toenemende stress door onze altijd-aan-cultuur, een groeiende scepsis tegenover synthetische middelen, en een gestage stroom aan wetenschappelijk onderzoek dat de effecten van dit oeroude Ayurvedische kruid bevestigt.</p>
@@ -1300,6 +1307,8 @@ export const blogPosts: BlogPost[] = [
     date: "2026-05-17",
     category: "Darmen & Mentaal",
     excerpt: "Wist je dat 90% van je serotonine in je darmen wordt aangemaakt? Ontdek hoe probiotica via de darm-hersen-as je stemming beïnvloeden — en waarom MentaBiotics specifiek hiervoor is ontwikkeld.",
+    author: "Mark",
+    citations: [{ author: "Messaoudi M, et al.", name: "British Journal of Nutrition (2011)", url: "https://doi.org/10.1017/S0007114510004319" }],
     content: `
       <h2>Wat zijn probiotica en hoe beïnvloeden ze je stemming?</h2>
       <p>Probiotica zijn levende micro-organismen die, wanneer ze in voldoende hoeveelheden worden ingenomen, een positief effect hebben op je gezondheid. Maar wist je dat deze <strong>goede darmbacteriën ook direct invloed hebben op hoe je je voelt?</strong> Het klinkt misschien verrassend, maar je darmen en hersenen staan constant met elkaar in verbinding — en die communicatie verloopt via wat wetenschappers de <strong>darm-hersen-as</strong> (gut-brain axis) noemen.</p>
@@ -1363,6 +1372,7 @@ export const blogPosts: BlogPost[] = [
     category: "Energie",
     excerpt: "Altijd moe? Ontdek welke supplementen écht werken voor meer energie — zonder cafeïnecrash. Van mitochondriën tot natuurlijke energieboosters.",
     author: "Mark",
+    citations: [{ author: "Barbagallo M, et al.", name: "Nutrients (2021)", url: "https://doi.org/10.3390/nu13020463" }],
     content: `
       <h2>Wat is cel-energie en waarom ben je zo moe?</h2>
       <p>Voel je je vaak futloos, ook na een goede nacht slaap? Je bent niet alleen. <strong>Vermoeidheid is de meest gerapporteerde klacht</strong> in Nederland — ruim 30% van de volwassenen geeft aan regelmatig last te hebben van aanhoudende vermoeidheid.</p>
@@ -1509,6 +1519,8 @@ export const blogPosts: BlogPost[] = [
     date: "2026-04-10",
     category: "Energie",
     excerpt: "Voel je je constant moe? Een ijzertekort kan de boosdoener zijn. Leer hoe je de signalen herkent en wat je eraan kunt doen.",
+    author: "Mark",
+    citations: [{ author: "Hurrell R & Egli I", name: "American Journal of Clinical Nutrition (2010)", url: "https://doi.org/10.3945/ajcn.2010.28674F" }],
     content: `
       <h2>De Impact van IJzer op je Energie</h2>
       <p>IJzer is essentieel voor de aanmaak van hemoglobine, het eiwit in rode bloedcellen dat zuurstof door je lichaam transporteert. Zonder voldoende ijzer krijgt je lichaam niet genoeg zuurstof, wat leidt tot uitputting.</p>
@@ -1535,6 +1547,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-04-05",
     category: "Metabolisme",
     excerpt: "MCT-olie is razend populair in de wellness-wereld. Maar wat doet het precies voor je energie en vetverbranding?",
+    author: "Mark",
     content: `
       <h2>Wat is MCT Olie?</h2>
       <p>MCT staat voor Medium Chain Triglycerides. In tegenstelling tot andere vetten worden MCT's direct door de lever opgenomen en omgezet in directe energie (ketonen).</p>
@@ -1558,6 +1571,8 @@ export const blogPosts: BlogPost[] = [
     date: "2026-03-05",
     category: "Mentaal Welzijn",
     excerpt: "Adaptogenen zijn natuurlijke stoffen die je lichaam helpen om te gaan met stress en vermoeidheid.",
+    author: "Mark",
+    citations: [{ author: "Chandrasekhar K, et al.", name: "Indian Journal of Psychological Medicine (2012)", url: "https://doi.org/10.4103/0253-7176.106022" }],
     content: `
       <h2>Wat zijn Adaptogenen?</h2>
       <p>Adaptogenen zijn een unieke groep kruiden die de natuurlijke weerstand van het lichaam tegen stress verhogen. Ze werken door het reguleren van de balans in het lichaam (homeostase).</p>
@@ -1594,6 +1609,8 @@ export const blogPosts: BlogPost[] = [
     date: "2026-05-01",
     category: "Wellness",
     excerpt: "Leer waarom calcium essentieel is voor je botdichtheid en hoe de synergie met vitamine D3 de opname optimaliseert.",
+    author: "Mark",
+    citations: [{ author: "Kidd PM", name: "Alternative Medicine Review (2010)", url: "https://pubmed.ncbi.nlm.nih.gov/21155624/" }],
     content: `
       <h2>Botgezondheid en Calcium</h2>
       <p>Calcium is de belangrijkste bouwsteen voor onze botten. Echter, zonder de juiste hulpstoffen kan je lichaam calcium niet effectief opnemen of naar de juiste plaatsen transporteren.</p>
@@ -1612,6 +1629,8 @@ export const blogPosts: BlogPost[] = [
     date: "2026-04-30",
     category: "Metabolisme",
     excerpt: "Zink speelt een cruciale rol bij de hormoonproductie. Ontdek hoe dit mineraal je vitaliteit en testosteronspiegel ondersteunt.",
+    author: "Mark",
+    citations: [{ author: "Tanaka T, et al.", name: "Nutrients (2025)", url: "https://doi.org/10.3390/nu17050867" }],
     content: `
       <h2>Zink: Het Mannen Mineraal?</h2>
       <p>Hoewel zink essentieel is voor iedereen, speelt het een specifieke rol bij de productie van testosteron en de vruchtbaarheid bij mannen.</p>
@@ -1630,6 +1649,8 @@ export const blogPosts: BlogPost[] = [
     date: "2026-04-29",
     category: "Immuniteit",
     excerpt: "Iedereen kent vitamine C, maar wist je dat het ook de opname van ijzer verhoogt en je cellen beschermt tegen oxidatieve stress?",
+    author: "Mark",
+    citations: [{ author: "Carr AC & Rowe S", name: "Nutrients (2020)", url: "https://doi.org/10.3390/nu12071963" }],
     content: `
       <h2>Meer dan een Weerstand Booster</h2>
       <p>Vitamine C is een krachtige antioxidant die bijdraagt aan de bescherming van cellen tegen oxidatieve schade en essentieel is voor de vorming van collageen.</p>
@@ -1648,12 +1669,14 @@ export const blogPosts: BlogPost[] = [
     date: "2026-04-28",
     category: "Beauty",
     excerpt: "Ontdek de geheimen van vitamine E voor een elastische huid en glanzend haar. Leer waarom tocotriënolen de beste vorm zijn.",
+    author: "Mark",
+    citations: [{ author: "Chong JY, et al.", name: "Redox Biology (2025)", url: "https://doi.org/10.1016/j.redox.2025.103874" }],
     content: `
       <h2>Vitamine E: Celbeschermer</h2>
       <p>Vitamine E draagt bij aan de bescherming van cellen tegen oxidatieve stress door vrije radicalen te neutraliseren. Dit is essentieel voor het behoud van een gezonde huidstructuur.</p>
       
       <h3>Tocotriënolen vs Tocoferolen</h3>
-      <p>Niet alle vitamine E is gelijk. Tocotriënolen zijn tot wel 50 keer krachtiger dan de standaard tocoferolen die je in de meeste supplementen vindt.</p>
+      <p>Niet alle vitamine E is gelijk. Tocotriënolen laten in onderzoek een sterkere antioxidantwerking zien dan de standaard tocoferolen die je in de meeste supplementen vindt.</p>
       
       <h3>Amare Sunset Focus</h3>
       <p><strong>Amare Sunset</strong> bevat de meest krachtige vorm van vitamine E (tocotriënolen) voor een diepgaand herstel van je huid en weefsels tijdens de nacht.</p>
@@ -1666,6 +1689,8 @@ export const blogPosts: BlogPost[] = [
     date: "2026-04-27",
     category: "Gut Health",
     excerpt: "Wist je dat 90% van je serotonine in je darmen wordt aangemaakt? Leer hoe je darmgezondheid je mentale welzijn beïnvloedt.",
+    author: "Mark",
+    citations: [{ author: "Kapela M, et al.", name: "Frontiers in Molecular Neuroscience (2026)", url: "https://doi.org/10.3389/fnmol.2026.1903770" }],
     content: `
       <h2>De Tweede Hersenen</h2>
       <p>Je darmen en hersenen staan constant in verbinding via de nervus vagus. Deze 'as' reguleert je stemming, slaap en stressrespons.</p>
@@ -1684,6 +1709,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-04-25",
     category: "Energie",
     excerpt: "Voel je je futloos? B-vitamines zijn essentieel voor het omzetten van voeding in bruikbare energie voor je hersenen en spieren.",
+    author: "Mark",
     content: `
       <h2>Het B-Complex</h2>
       <p>B-vitamines (zoals B1, B2, B6 en B12) fungeren als co-enzymen bij het vrijmaken van energie uit koolhydraten, vetten en eiwitten.</p>
@@ -1702,6 +1728,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-04-23",
     category: "Gut Health",
     excerpt: "Niet alle probiotica zijn gelijk. Leer welke stammen zoals Lactobacillus en Bifidobacterium het beste werken voor jouw darmflora.",
+    author: "Mark",
     content: `
       <h2>Kwaliteit over Kwantiteit</h2>
       <p>Het gaat niet alleen om het aantal bacteriën (CFU's), maar vooral om de specifieke stammen en hun overlevingskans in je maagzuur.</p>
@@ -1720,6 +1747,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-05-18",
     category: "Pakketten & Bundels",
     excerpt: "Het #1 bestverkopende Amare pakket combineert MentaBiotics, Energy+ en Amare EDGE+ voor totale mentale ondersteuning — voordeliger dan los kopen. Ontdek waarom duizenden Nederlanders voor deze bundel kiezen.",
+    author: "Mark",
     content: `
       <h2>Wat is de Happy Juice Pack?</h2>
       <p>De <strong>Happy Juice Pack</strong> is het bestverkopende productpakket van Amare — en dat is niet zonder reden. Deze complete bundel combineert <strong>drie van de meest populaire formules</strong> in één voordelig pakket: MentaBiotics voor de darm-hersen-as, Energy+ voor natuurlijke energie, en Amare EDGE+ voor mentale scherpte en focus.</p>
@@ -1778,6 +1806,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-05-18",
     category: "Pakketten & Bundels",
     excerpt: "De Triangle of Wellness Xtreme combineert Sunrise, Nitro Xtreme en Sunset in één dagelijkse routine — ochtendenergie, middagfocus en avondherstel. Het meest complete basispakket van Amare.",
+    author: "Mark",
     content: `
       <h2>Wat is de Triangle of Wellness Xtreme?</h2>
       <p>De <strong>Triangle of Wellness Xtreme</strong> is het signature systeem van Amare — een driedelige dagelijkse routine die je van ochtend tot avond ondersteunt. Het concept is gebaseerd op het natuurlijke dagritme van je lichaam: <strong>opbouwen, presteren en herstellen</strong>.</p>
@@ -1900,6 +1929,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-05-18",
     category: "Pakketten & Bundels",
     excerpt: "De Happy Lifestyle Pack is de meest complete bundel van Amare — tot 15 producten in één voordelig pakket voor wie totale ondersteuning zoekt. Van darmgezondheid tot collageen, alles inbegrepen.",
+    author: "Mark",
     content: `
       <h2>Wat is de Happy Lifestyle Pack?</h2>
       <p>De <strong>Happy Lifestyle Pack</strong> is de meest uitgebreide bundel die Amare aanbiedt — ontworpen voor wie geen halve maatregelen wil nemen als het om welzijn gaat. Waar de Happy Juice Pack zich richt op mentale energie en focus, en de Triangle of Wellness op dagelijkse basisondersteuning, dekt de Happy Lifestyle Pack <strong>vrijwel het volledige Amare assortiment</strong> in één maandelijks pakket.</p>
@@ -1966,6 +1996,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-03-10",
     category: "Lifestyle & Wellness",
     excerpt: "De Triangle of Wellness is Amare's holistische benadering van gezondheid. Lees hoe voeding, mind en vitaliteit samenkomen.",
+    author: "Mark",
     content: `
       <h2>Wat is de Amare Triangle of Wellness?</h2>
       <p>De Triangle of Wellness is de filosofie achter alle Amare producten. Het concept is eenvoudig maar krachtig: optimale gezondheid ontstaat wanneer drie pijlers in balans zijn — <strong>voeding</strong>, <strong>mentale gezondheid</strong> en <strong>vitaliteit</strong>. In plaats van je te richten op één aspect van gezondheid, erkent Amare dat alles met elkaar verbonden is. Je darmen beïnvloeden je stemming. Je energieniveau beïnvloedt je eetlust. Je mentale staat beïnvloedt je immuunsysteem.</p>
@@ -2053,6 +2084,7 @@ export const blogPosts: BlogPost[] = [
     date: "2024-11-15",
     category: "Lifestyle & Wellness",
     excerpt: "De discussie tussen natuurlijke en synthetische gezondheidsproducten wordt steeds relevanter. Waar haal jij je gezondheid?",
+    author: "Mark",
     content: `
       <h2>Wat is het verschil tussen de apotheek en de groenteboer?</h2>
       <p>We leven in een tijd waarin we meer keuze hebben dan ooit als het gaat om onze gezondheid. Aan de ene kant heb je de traditionele apotheek met medicijnen en synthetische supplementen. Aan de andere kant is er de groeiende wereld van natuurlijke supplementen en functionele voeding. Maar wat past het beste bij jouw lichaam?</p>
