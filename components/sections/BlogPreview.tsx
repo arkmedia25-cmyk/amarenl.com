@@ -55,17 +55,9 @@ export default function BlogPreview() {
                 <h3 className="text-xl font-bold font-cormorant text-[var(--color-text)] mb-3 group-hover:text-[var(--color-primary)] transition-colors line-clamp-2">
                   {post.title}
                 </h3>
-                <p className="text-sm text-[var(--color-text-muted)] line-clamp-3 mb-6">
+                <p className="text-sm text-[var(--color-text-muted)] line-clamp-3">
                   {post.excerpt}
                 </p>
-                <div className="flex items-center text-xs text-[var(--color-text-muted)] font-medium">
-                  <Calendar size={14} className="mr-2" />
-                  {new Date(post.date).toLocaleDateString("nl-NL", {
-                    day: "numeric",
-                    month: "long",
-                    year: "numeric",
-                  })}
-                </div>
               </div>
             </Link>
           ))}
