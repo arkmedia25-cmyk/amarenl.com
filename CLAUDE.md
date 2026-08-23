@@ -1565,3 +1565,81 @@ vervolgstap in hetzelfde bestand.
 **Aparte observatie, niet actie ondernomen:** `"b-vitamines-energie-supplement-nederland"` heeft een LEGE
 product-array (`[]`) — geen enkel aanbevolen product op dat artikel. Los probleem, niet gerelateerd aan
 Triangle of Wellness, maar wel een gemiste conversiekans — waard om ook te vullen.
+
+---
+
+## 28. HOMEPAGE PRODUCT-CAROUSEL + COMMIT VASTGEZET OP VERKEERDE BRANCH (22 augustus 2026)
+
+**Aanleiding:** Musa vroeg om de homepage-banner ("slayd banner") aantrekkelijker te maken en de
+belangrijke producten erin te tonen, met de expliciete eis dat dit de site niet trager mag maken.
+
+**Wat is gebouwd (`components/sections/PromoCarousel.tsx`):** de bestaande, dependency-vrije carousel
+(die al vlak onder `FeaturedProducts` op de homepage staat) is uitgebreid van 3 tekst-only promoslides
+naar 5 productslides met echte productfoto's: **Triangle of Wellness Xtreme** (eerst, per sectie 27 —
+was ondervertegenwoordigd), Happy Juice Pack®, HL5™, MentaBiotics®, Sunset. Elke slide: productfoto
+(96px, `next/image` met `fill` + vaste `sizes="96px"` in een `w-20/w-24`-vaste container — geen CLS),
+badge, titel, subtitel, prijs, CTA-knop die naar de bestaande interne productpagina linkt (niet direct
+naar de affiliate-link — de productpagina heeft zelf al de juiste `AffiliateCTA`, schema, FAQ).
+
+**Performance-eis geborgd, geen nieuwe afhankelijkheid:**
+- Nog steeds 100% dependency-vrij (geen swiper/slick/embla toegevoegd — `package.json` ongewijzigd op
+  dat vlak) — pure React state, zelfde mechaniek als voorheen.
+- Nog steeds single-slide-in-DOM: alleen `slides[current]` rendert, dus maar 1 productfoto tegelijk
+  wordt opgehaald — niet alle 5 vooraf.
+- Geen `priority` op de afbeeldingen (de carousel staat niet in de LCP-kritische zone — `HeroSection`
+  heeft al `priority`, `FeaturedProducts` erboven ook niet) — standaard lazy-loading van `next/image`.
+- `amarecdn.azureedge.net` stond al in `next.config.mjs`'s `images.remotePatterns`, dus Next's eigen
+  image-optimizer (resize naar de daadwerkelijke 96px-weergavegrootte i.p.v. de volledige 800px bron)
+  werkt automatisch — minder bytes dan voorheen zelfs, niet meer.
+
+**Geverifieerd:** `npx tsc --noEmit --skipLibCheck -p tsconfig.json` → exit 0, leeg, 0 fouten (zie
+waarschuwing hieronder over hoe dit gedraaid moest worden — de eerdere "achtergrond + poll"-methode uit
+sectie 26 werkt niet meer op dit apparaat, zie technische noot onderaan).
+
+### ⚠️ BRANCH-WAARSCHUWING #2 — zelfde valkuil als sectie 21, lees dit vóór je verder werkt
+
+Deze sessie deed `git commit` (commit `657fe98`) voor **vier bestanden tegelijk**: de sectie 26
+cluster-grens-code (`scripts/generate-article-claude.mjs`), de sectie 27 Triangle-of-Wellness-fix
+(`lib/blog.ts`), deze sectie (`CLAUDE.md`), én de nieuwe carousel (`components/sections/
+PromoCarousel.tsx`) — bewust gecombineerd in één commit omdat de `.mjs`/`.yml`-koppeling uit sectie 26
+al vereiste dat ze samen gecommit worden.
+
+**Het probleem:** de repo stond op dit device **niet** op `main` uitgecheckt, maar op een oude,
+losstaande branch `draft/readme-pillar-done` (kennelijk het toevallige resultaat van eerdere
+automatisering/PR-flow — exact hetzelfde patroon als de branch-waarschuwing in sectie 21). Commit
+`657fe98` staat dus bovenop `cf6e56a` (de sectie 25-commit, die volgens sectie 25/26 als "gecommit"
+werd gemeld maar **óók nooit op `main` terecht is gekomen** — geverifieerd met `git merge-base
+--is-ancestor cf6e56a origin/main` → **NOT an ancestor**). Met andere woorden: al het werk van de
+vorige sessie (secties 25-27) én van deze sessie (sectie 28/carousel) zit vast op een lokale branch die
+2 commits vóór loopt op zijn eigen `origin/draft/readme-pillar-done`, en die branch zelf staat nergens
+in de buurt van `main` (lokale `main` is hier zelfs 56 commits achter `origin/main`).
+
+**`git push` kon niet vanaf deze sessie:** `git push origin draft/readme-pillar-done` faalde met
+`fatal: could not read Username for 'https://github.com'` — deze device-bridge sessie heeft geen
+git-credentials (verwacht, zelfde beperking als steeds bij `gh`/API-keys). **Alleen Hermes (met echte
+lokale terminal-toegang en credentials) kan dit pushen.**
+
+**Actie voor Hermes / de volgende sessie met echte git-toegang:**
+1. `git status` / `git branch --show-current` — check of je nog op `draft/readme-pillar-done` staat.
+2. `git log draft/readme-pillar-done -5 --oneline` — bevestig dat commit `657fe98` er staat (4 files,
+   524 insertions).
+3. **Beslis bewust waar dit naartoe moet** — waarschijnlijk: `git push origin
+   draft/readme-pillar-done` en dan een PR openen naar `main` (`gh pr create --base main --head
+   draft/readme-pillar-done`), zodat het door de gebruikelijke review-stap gaat i.p.v. direct op `main`
+   geforceerd te worden. Check eerst met `git diff main...draft/readme-pillar-done --stat` of er
+   niets onverwachts meezit (deze branch bestond al vóór deze sessie 'm gebruikte).
+4. Overweeg serieus: `git worktree` gebruiken voor toekomstige Cowork-device-bridge-sessies, of
+   expliciet altijd eerst `git checkout main && git pull` te draaien vóórdat er iets nieuws gecommit
+   wordt — dit is nu de **tweede keer** (zie sectie 21) dat werk vastloopt op een verkeerde, toevallige
+   branch. Een vaste regel ("elke Cowork-sessie begint met `git checkout main`") zou dit voorkomen.
+
+**Technische noot — achtergrond-tsc-methode uit sectie 26 werkt niet meer:** deze sessie probeerde
+`npx tsc --noEmit` op de achtergrond te starten (`nohup ... & disown`, zoals eerder gedocumenteerd) en
+er later naar terug te pollen — dat mislukte nu stil (geen logbestand, geen proces te vinden bij de
+volgende `device_bash`-aanroep). Reden: elke `device_bash`-aanroep draait kennelijk in een eigen
+geïsoleerde sandbox (`bwrap --unshare-pid --die-with-parent`) die bij het einde van de aanroep alle
+kindprocessen hard beëindigt — een `nohup`-achtergrondproces overleeft dat niet, ook niet met `disown`.
+**Werkende oplossing:** gewoon synchroon draaien binnen één `device_bash`-aanroep, met `timeout 43` als
+veiligheidsklep en `--skipLibCheck` voor snelheid — bleek in de praktijk maar ~1,2 seconden te duren
+(waarschijnlijk dankzij TypeScript's eigen incrementele cache van eerdere runs). Gebruik deze aanpak
+voortaan i.p.v. de achtergrond+poll-methode.
