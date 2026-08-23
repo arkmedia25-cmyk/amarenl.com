@@ -229,6 +229,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-06-05",
     category: "gewichtsbeheer",
     excerpt: "De markt voor afvalsupplementen is een mijnenveld van beloftes en teleurstellingen. Wij zochten uit welke ingrediënten je metabolisme echt ondersteunen, welke supplementen de moeite waard zijn en vooral: welke je kunt overslaan.",
+    citations: [{ author: "Kapoor MP, et al.", name: "Journal of Nutritional Biochemistry (2016)", url: "https://doi.org/10.1016/j.jnutbio.2016.10.013" }],
     content: `
       <h2>De realiteit van afvallen met supplementen</h2>
       <p>Laten we eerlijk beginnen: er bestaat geen pil die vet wegsmelt terwijl je op de bank zit. Elk supplement dat dat belooft, liegt. Afvallen draait fundamenteel om een calorietekort — je verbruikt meer energie dan je binnenkrijgt.</p>
@@ -236,7 +237,7 @@ export const blogPosts: BlogPost[] = [
       <p>1. <strong>Metabolisme-ondersteuning</strong>: Bepaalde stoffen kunnen je ruststofwisseling subtiel verhogen — denk aan 3-5% meer calorieverbruik in rust. Klein, maar over weken en maanden telt het op. 2. <strong>Verminderde eetlust</strong>: Vezels, eiwitten en bepaalde plantextracten kunnen het hongergevoel dempen, waardoor een calorietekort makkelijker vol te houden is. 3. <strong>Bloedsuikerregulatie</strong>: Stabielere bloedsuiker betekent minder cravings, minder energiedips en minder snaaimomenten. 4. <strong>Vetverbranding tijdens beweging</strong>: Sommige stoffen (cafeïne, groene thee-extract) mobiliseren vet uit vetcellen zodat het beschikbaar is als brandstof tijdens training.</p>
       <p>De beste supplementen doen minstens twee van deze vier dingen tegelijk — en vragen geen wonderen maar ondersteunen het proces dat jij met voeding en beweging in gang zet.</p>
       <h2>Ingrediënten die je metabolisme echt ondersteunen</h2>
-      <p><strong>Groene thee-extract (EGCG)</strong> is een van de best onderzochte natuurlijke metabolisme-ondersteuners. Een meta-analyse in Obesity Reviews concludeerde dat groene thee-extract het energieverbruik met gemiddeld 4-5% verhoogt over 24 uur. Het mechanisme: EGCG remt het enzym catechol-O-methyltransferase (COMT), waardoor noradrenaline langer actief blijft en de vetverbranding toeneemt. Dosering in studies: 300-500 mg EGCG per dag.</p>
+      <p><strong>Groene thee-extract (EGCG)</strong> is een van de best onderzochte natuurlijke metabolisme-ondersteuners. Een meta-analyse van 8 gerandomiseerde studies (Kapoor et al., 2016) concludeerde dat EGCG uit groene thee het energieverbruik in vergelijking met placebo mild maar meetbaar verhoogt. Het mechanisme: EGCG remt het enzym catechol-O-methyltransferase (COMT), waardoor noradrenaline langer actief blijft en de vetverbranding toeneemt. Dosering in studies: 300-500 mg EGCG per dag.</p>
       <p><strong>Cafeïne</strong> is de bekendste metabolisme-booster. Het verhoogt de stofwisseling met 3-11% gedurende enkele uren na inname, afhankelijk van dosering en tolerantie. Het effect neemt af bij regelmatig gebruik (tolerantie), maar blijft meetbaar. Combineert goed met groene thee-extract voor synergetisch effect.</p>
       <p><strong>Capsaïcine</strong> (uit chilipepers) verhoogt het energieverbruik via thermogenese — je lichaam produceert extra warmte na inname, wat calorieën kost. Het effect is klein (ongeveer 50 extra kcal per dag) maar cumulatief interessant. Niet iedereen verdraagt de pittigheid.</p>
       <p><strong>Oplosbare vezels</strong> (glucomannan, psyllium, inuline) zwellen in de maag en vertragen de maaglediging, wat leidt tot een voller gevoel en minder calorie-inname. Glucomannan (konjacwortel) heeft een goedgekeurde EU-gezondheidsclaim: "Draagt bij aan gewichtsverlies in combinatie met een energiebeperkt dieet." Let op: voldoende water drinken is essentieel — vezels zonder water kunnen verstoppend werken.</p>
@@ -805,6 +806,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-06-02",
     category: "Hormonen & Vrouwelijk Welzijn",
     excerpt: "Van energiedips tot stemmingswisselingen — je hormonen spelen een hoofdrol in hoe je je voelt. Ontdek hoe je hormonale disbalans herkent, wat er per levensfase verandert, en welke supplementen écht kunnen ondersteunen.",
+    author: "Mark",
     content: `
       <h2>Waarom hormonale balans zo bepalend is voor vrouwelijk welzijn</h2>
       <p>Er zijn dagen waarop je moeite hebt je te concentreren, terwijl je de avond ervoor vroeg naar bed ging. Dagen waarop je prikkelbaarder bent dan je zou willen, zonder duidelijke aanleiding. Of nachten waarin je wakker ligt terwijl je lichaam uitgeput voelt — alsof iemand de thermostaat van je interne systeem op de verkeerde stand heeft gezet.</p>
