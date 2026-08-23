@@ -1795,3 +1795,125 @@ met de al eerder genoemde punten: stress/slaap-cluster (sectie 22/24), auteur/ci
 23), dode `.mdx`-bestanden in `content/blog/`, de losstaande `seo-aeo-overhaul`-branch,
 `/probiotica-stammen`-herindexering, en het lege productaanbevelingen-array in
 `b-vitamines-energie-supplement-nederland` (sectie 27).
+
+### 29.7 Tweede verificatie deze sessie: Hermes had zelf óók al doorgepakt
+
+Later dezelfde dag vroeg Musa specifiek of Claude Code (Hermes) de duplicate-content-bevindingen ook
+echt had doorgevoerd. Gevonden: branch **`draft/dedupe-batch1`** (commit `850275a`, gepusht naar
+`origin` maar **niet gemerged naar `main`**), gemaakt rond 09:34 — vlak na/tijdens het collageen-werk
+hierboven. Deze branch verwerkt **9 van de 14** in de audit gevonden clusters: volledige
+content-merges voor Collageen Poeder Kopen, Immuunsysteem Versterken, Beste Probiotica 2026, Darmflora
+Verbeteren, Haaruitval bij Vrouwen en Energy+ Reviews; dunne stubs verwijderd + 301-redirect voor
+Vitamine D Tekort, Omega-3 en Prebiotica vs Probiotica.
+
+**Onafhankelijk geverifieerd (niet enkel de commit-message vertrouwd):** `npx tsc --noEmit` clean,
+geen enkele dode link naar de verwijderde slugs meer ergens in de codebase, alle redirect-bestemmingen
+bestaan echt en zijn live artikelen. Geen enkele overlap met de 13 collageen-slugs van deze sessie —
+veilig naast elkaar te mergen.
+
+**Eén aandachtspunt voor de merge:** `data/staging/007-ijzertekort-supplementen.json` is in
+`draft/dedupe-batch1` inhoudelijk bewerkt (een link erin hersteld), terwijl diezelfde bestandsnaam in
+`draft/collageen-cluster-consolidatie` (sectie 29.2) is *verplaatst* naar
+`data/staging/_archived-duplicate-risico-22-08/`. Bij het mergen van beide branches ontstaat hier een
+add/rename-conflict — oplossing: neem de bijgewerkte inhoud, op het gearchiveerde pad.
+
+**Magnesium is niet aangeraakt** door `dedupe-batch1` — blijft dus een openstaand punt (waarschijnlijk
+een van de resterende 5 clusters uit de 14 die de audit vond).
+
+---
+
+## 30. KRITIEKE BUG: TOEKOMSTIGE PUBLICATIEDATA OP HOMEPAGE (23 augustus 2026)
+
+**Melding van Musa:** de homepage toonde bij artikelen een publicatiedatum van "26 oktober 2026",
+terwijl de kalender nog maar 23 augustus 2026 aangaf — dus een datum die nog moest komen. Direct
+onderzocht en bevestigd als een echte, structurele bug — niet zomaar één fout artikel.
+
+### 30.1 Omvang
+
+Gescand: alle 155 artikelen (99 uit `data/extra-articles.json` + 56 uit `lib/blog.ts`). **23 artikelen
+in `data/extra-articles.json`** hadden een datum tot **2 maanden in de toekomst** (van 24 augustus tot
+en met 26 oktober 2026). `lib/blog.ts` was schoon — het probleem zat uitsluitend in de
+automatisch-gegenereerde cluster-batches.
+
+### 30.2 Grondoorzaak
+
+`getAllBlogPosts()` in `lib/blog.ts` sorteert alle artikelen op `date` **aflopend** en toont ze
+allemaal onmiddellijk — er bestaat **geen enkele gating-logica** die een artikel pas zichtbaar maakt
+op of na zijn eigen `date`-veld. De cluster-batch-commits (bijv. `e478516`, "probiotica-kümesi 5
+nieuwe... uit het geplande content-kalender") wezen bewust *toekomstige, gespreide* datums toe — een
+poging om een natuurlijk publicatietempo te simuleren voor een "content kalender". Maar omdat de site
+alles onmiddellijk toont, zodra zo'n batch commit richting `main` gaat, springen die
+toekomst-gedateerde artikelen met de nieuwste datum meteen bovenaan de homepage — precies wat Musa zag.
+
+**Dit raakte niet alleen de zichtbare weergave.** Dezelfde `date`-waarde wordt ook gebruikt voor:
+`openGraph.publishedTime`, JSON-LD `datePublished` (in zowel het artikel-schema als het
+blog-listing-schema), en `sitemap.xml`'s `lastmod` (via `next-sitemap.config.js`). Een toekomstige
+`datePublished` in structured data is voor Google potentieel **schadelijker** dan de zichtbare bug —
+het kan wijzen op spam/onbetrouwbare content-signalen bij een YMYL-site.
+
+### 30.3 Fix — uitgevoerd op branch `draft/fix-future-dates` (commit `64b21e1`)
+
+Gebaseerd op `origin/main` (`3be0ae9`), via `git worktree` (zelfde techniek als sectie 28/29).
+
+**1. Databron gerepareerd:** de 23 foute datums herverdeeld over de laatste 23 dagen t/m gisteren
+(22-08-2026), met behoud van hun onderlinge (foute) volgorde — het artikel met de verste toekomstdatum
+kreeg de meest recente nieuwe datum, enzovoort. Dit repareert de sortering én de OG/JSON-LD/sitemap-
+metadata in één keer. `data/extra-articles.json` blijft 99 entries — er is niets verwijderd, alleen
+`date`-velden gecorrigeerd.
+
+**2. Zichtbare datumweergave volledig verwijderd** (op expliciet verzoek van Musa, als permanente
+bescherming tegen een herhaling van deze bugklasse, ook als een toekomstige batch-generatie opnieuw
+een foute datum zou toewijzen):
+- `components/sections/BlogPreview.tsx` (homepage "Wellness Tips & Insights") — Calendar-icoon +
+  datumregel onder de excerpt verwijderd.
+- `components/blog/BlogAccordion.tsx` (blog-overzichtspagina, `/blogs/nieuws`) — datumregel onder de
+  titel verwijderd.
+- `app/blogs/nieuws/[slug]/page.tsx` (artikelpagina) — datumbadge in de header verwijderd.
+
+**Bewust NIET verwijderd:** `post.date` in `openGraph.publishedTime` en de JSON-LD `datePublished`-
+velden blijven bestaan — die zijn onzichtbaar voor bezoekers maar nuttig voor Google, zolang de
+onderliggende waarde klopt (wat nu het geval is na stap 1).
+
+**Geverifieerd:** `npx tsc --noEmit --skipLibCheck` clean (0 fouten). Nul artikelen met een
+toekomstige datum meer in `data/extra-articles.json` (was 23, nu 0). Grep-sweep over alle
+`app/`/`components/`-bestanden bevestigt geen andere plek meer waar `post.date` zichtbaar gerenderd
+wordt.
+
+### 30.4 Belangrijk aandachtspunt voor de merge
+
+Vijf van de 23 gecorrigeerde slugs (`collageen-bijwerkingen-veilig`, `welke-voeding-collageen-gids`,
+`rundercollageen-vs-marine-collageen-verschil`, `collageen-hyaluronzuur-combinatie`,
+`plantaardig-collageen-bestaat-dat-echt`) zijn **dezelfde** slugs die in
+`draft/collageen-cluster-consolidatie` (sectie 29.2) al naar de pillar-pagina zijn omgeleid en dus uit
+`data/extra-articles.json` zijn *verwijderd*. Bij het mergen van `draft/fix-future-dates` ná
+`draft/collageen-cluster-consolidatie` ontstaat hiervoor een modify/delete-conflict — oplossing:
+accepteer de verwijdering (de datum-fix voor die 5 is dan toch niet meer relevant, want het artikel
+bestaat straks niet meer als los stuk).
+
+### 30.5 Grondoorzaak nog niet structureel opgelost — actiepunt voor Hermes
+
+Deze fix repareert de bestaande 23 datums en verbergt de weergave overal, maar **lost niet op** dat een
+toekomstige cluster-batch-generatie opnieuw een datum in de toekomst zou kunnen toewijzen (de
+onzichtbare OG/JSON-LD-metadata zou dan opnieuw fout zijn, ook al valt het bezoekers niet meer op).
+Aanbeveling voor wie het volgende cluster-batch-script schrijft of aanpast: wijs nooit een `date` toe
+die verder in de toekomst ligt dan vandaag — gebruik `new Date().toISOString().slice(0,10)` (zoals
+`scripts/generate-article-claude.mjs` al correct doet, zie regel 617) in plaats van een vooruit-
+geplande "content kalender"-datum, tenzij er ook een echt gating-mechanisme in `getAllBlogPosts()`
+wordt gebouwd dat toekomstige artikelen pas toont op hun eigen datum.
+
+### 30.6 Status
+
+Alles lokaal gecommit op `draft/fix-future-dates` (`64b21e1`), **nog niet gepusht** — zelfde
+credential-beperking als steeds. Drie branches staan nu klaar voor Hermes om te pushen en mergen:
+`draft/readme-pillar-done`, `draft/collageen-cluster-consolidatie`, `draft/fix-future-dates` — plus
+Hermes' eigen `draft/dedupe-batch1` (sectie 29.7). Zie sectie 31 (hieronder, of de losse prompt die aan
+Musa is meegegeven) voor een samengevatte actielijst.
+
+### 30.7 Kleine opruiming gedaan: kapotte git-ref
+
+Tijdens deze sessie ontstond per ongeluk een kapot bestand `.git/refs/heads/draft/collageen-cluster-
+consolidatie.lock.old` (0 bytes, restant van een lock-recovery `mv` in sectie 28/29) dat `git branch
+-a`/`git fetch --all` deed falen met `fatal: bad object refs/heads/...`. Kon niet verwijderd worden
+vanuit deze sessie (FUSE-bridge "Operation not permitted", zelfs met `mv`). **Actie voor Hermes:** voer
+lokaal `rm .git/refs/heads/draft/collageen-cluster-consolidatie.lock.old` uit — dat bestand hoort daar
+niet en heeft geen enkele functie.
