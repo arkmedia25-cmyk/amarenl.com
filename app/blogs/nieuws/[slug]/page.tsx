@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { getBlogPostBySlug, getAllBlogPosts, getProductLinksForArticle, linkifyProductMentions } from "@/lib/blog";
-import { ArrowLeft, Calendar, Tag, Share2, ExternalLink, ShoppingCart, Gift, ShieldCheck } from "lucide-react";
+import { ArrowLeft, Tag, Share2, ExternalLink, ShoppingCart, Gift, ShieldCheck } from "lucide-react";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import {
   generateArticleSchema,
@@ -190,10 +190,6 @@ export default async function BlogPostPage({ params }: Props) {
             <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-[var(--color-primary)]">
               <Tag size={12} />
               {post.category}
-            </div>
-            <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-[var(--color-text-muted)]">
-              <Calendar size={12} />
-              {post.date}
             </div>
             <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-[var(--color-text-muted)]">
               Door {post.author || "AmareNL Redactie"}

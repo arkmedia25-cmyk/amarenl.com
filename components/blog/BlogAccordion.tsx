@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown, Calendar, ExternalLink } from "lucide-react";
+import { ChevronDown, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import type { BlogPost } from "@/lib/blog";
 import DOMPurify from "dompurify";
@@ -31,10 +31,6 @@ export default function BlogAccordion({ posts }: { posts: BlogPost[] }) {
                 <h3 className="text-sm md:text-base font-semibold text-[var(--color-text)] group-hover:text-[var(--color-primary)] transition-colors pr-4">
                   {post.title}
                 </h3>
-                <span className="text-[10px] text-[var(--color-text-muted)] flex items-center gap-1 mt-0.5">
-                  <Calendar size={10} />
-                  {post.date}
-                </span>
               </div>
               <ChevronDown
                 size={18}

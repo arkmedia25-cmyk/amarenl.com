@@ -19,9 +19,24 @@ export interface BlogPost {
 
 import extraArticles from '@/data/extra-articles.json'
 
+/**
+ * Publicatie-gate: een artikel met een `date` in de toekomst wordt nooit getoond.
+ * Voorkomt dat een verkeerd (te ver vooruit) gedateerd artikel — bv. uit een
+ * batch-import met een geplande "content kalender"-datum — meteen als
+ * "gepubliceerd" verschijnt (in listings, sortering én de onzichtbare
+ * OG/JSON-LD/sitemap-metadata) zodra het artikel op main terechtkomt. Zodra
+ * de systeemdatum de `date` inhaalt, verschijnt het artikel vanzelf.
+ */
+function isPublished(post: BlogPost): boolean {
+  const todayIso = new Date().toISOString().slice(0, 10);
+  return post.date <= todayIso;
+}
+
 export function getAllBlogPosts(): BlogPost[] {
   const all = [...blogPosts, ...(extraArticles as BlogPost[])];
-  return all.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  return all
+    .filter(isPublished)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 export const blogPosts: BlogPost[] = [

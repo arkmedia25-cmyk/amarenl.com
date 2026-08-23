@@ -97,6 +97,17 @@ image: "/images/blog/[slug]-cover.jpg"
 ```
 
 ### Adım 4: lib/blog.ts'e Ekle
+> ⚠️ **`date` ALTIN KURAL: her zaman bugünün gerçek tarihi (`new Date().toISOString().slice(0,10)`).**
+> Asla ileri tarih verme — ne bir "content kalender" simülasyonu için, ne de birden fazla
+> makaleyi birbirinden ayırmak için. Bu repoda main'e giren her makale ANINDA canlıya çıkar
+> (staging/scheduling sistemi yok — bkz. CLAUDE.md sectie 20, Faz 1 Telegram-onaygate PR
+> aşamasında çalışır, data dosyasına girdikten sonra değil). İleri tarih verilen bir makale
+> `getAllBlogPosts()`'un publicatie-gate'i sayesinde (`lib/blog.ts`) o tarihe kadar sitede
+> HİÇ görünmez — yani "ileri tarih = yayın ertelemesi" değil, "ileri tarih = makale kaybolur"
+> demektir. 23-08-2026'da tam olarak bu yüzden 23 makale aynı anda "26 Ekim 2026" tarihiyle
+> canlıya çıkmıştı (bkz. PR #51) — birden fazla makale aynı batch'te ekleniyorsa hepsine AYNI
+> bugünün tarihini ver, farklı günlere yayma.
+
 BlogPost dizisinin EN BAŞINA yeni makaleyi ekle:
 ```typescript
 {
@@ -111,6 +122,7 @@ BlogPost dizisinin EN BAŞINA yeni makaleyi ekle:
 ```
 
 ### Adım 5: Kalite Kontrol (ZORUNLU)
+- [ ] `date` bugünün gerçek tarihi mi (asla ileri tarih, asla "kalender" simülasyonu)?
 - [ ] Min. 1.200 kelime (hedef: 1.500)
 - [ ] Anahtar kelime ilk 100 kelimede geçiyor mu?
 - [ ] 3 FAQ sorusu var mı?
