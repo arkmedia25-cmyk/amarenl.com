@@ -796,6 +796,71 @@
       "source": "/products/:path*",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/collageen-de-complete-gids-2026",
+      "destination": "/blogs/nieuws/vloeibaar-collageen-hl5-huid-haar-nagels",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/collageen-peptiden-werkt-echt-wetenschap-resultaten",
+      "destination": "/blogs/nieuws/vloeibaar-collageen-hl5-huid-haar-nagels",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/collageen-type-1-2-3-verschil-huid-gewrichten-haar",
+      "destination": "/blogs/nieuws/vloeibaar-collageen-hl5-huid-haar-nagels",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/collageen-vitamine-c-synergie-huid",
+      "destination": "/blogs/nieuws/vloeibaar-collageen-hl5-huid-haar-nagels",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/collageen-resultaten-4-8-12-weken-huid-haar-nagels",
+      "destination": "/blogs/nieuws/vloeibaar-collageen-hl5-huid-haar-nagels",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/collageen-bijwerkingen-veilig",
+      "destination": "/blogs/nieuws/vloeibaar-collageen-hl5-huid-haar-nagels",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/welke-voeding-collageen-gids",
+      "destination": "/blogs/nieuws/vloeibaar-collageen-hl5-huid-haar-nagels",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/rundercollageen-vs-marine-collageen-verschil",
+      "destination": "/blogs/nieuws/vloeibaar-collageen-hl5-huid-haar-nagels",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/collageen-hyaluronzuur-combinatie",
+      "destination": "/blogs/nieuws/vloeibaar-collageen-hl5-huid-haar-nagels",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/plantaardig-collageen-bestaat-dat-echt",
+      "destination": "/blogs/nieuws/vloeibaar-collageen-hl5-huid-haar-nagels",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/collageen-gewrichten-pijnverlichting-supplement",
+      "destination": "/blogs/nieuws/vloeibaar-collageen-hl5-huid-haar-nagels",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/collageen-poeder-vs-vloeibaar-wat-is-beter",
+      "destination": "/blogs/nieuws/vloeibaar-collageen-hl5-huid-haar-nagels",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/fit20-whey-isolaat-collageen-spierherstel-review",
+      "destination": "/fit20",
+      "permanent": true
     }
   ]
 }
