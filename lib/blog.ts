@@ -715,6 +715,10 @@ export const blogPosts: BlogPost[] = [
     date: "2026-06-04",
     category: "Darmen & Spijsvertering",
     excerpt: "Je darmflora is het fundament van je gezondheid. Ontdek hoe je een verstoorde darmflora herkent, welke voeding en supplementen écht helpen, en hoe lang het duurt om je darmen te herstellen.",
+    author: "Mark",
+    citations: [
+      { author: "Wastyk HC, Fragiadakis GK, Perelman D, Dahan D, Merrill BD, et al.", name: "Gut-microbiota-targeted diets modulate human immune status (Cell, 2021)", url: "https://doi.org/10.1016/j.cell.2021.06.019" },
+    ],
     content: `
       <h2>Je darmflora als fundament van je gezondheid</h2>
       <p>In je darmen leeft een ecosysteem van zo'n 38 biljoen bacteriën — meer dan het aantal cellen in je hele lichaam. Samen wegen ze ongeveer 1 tot 2 kilo, bevatten ze 150 keer meer genetisch materiaal dan je menselijke genoom, en beïnvloeden ze alles: van je spijsvertering en immuunsysteem tot je stemming, energieniveau en huidkwaliteit.</p>
@@ -734,7 +738,7 @@ export const blogPosts: BlogPost[] = [
       <h2>7 manieren om je darmflora te verbeteren</h2>
       <ol>
         <li><strong>Eet minimaal 30 verschillende plantaardige voedingsmiddelen per week.</strong> Verschillende bacteriën gedijen op verschillende vezels. Uit het American Gut Project met meer dan 11.000 deelnemers bleek dat mensen die meer dan 30 verschillende plantaardige voedingsmiddelen per week aten een significant diverser microbioom hadden.</li>
-        <li><strong>Voeg gefermenteerde voeding toe.</strong> Yoghurt, kefir, zuurkool, kimchi, kombucha en miso bevatten van nature levende bacteriën. Een Stanford-studie uit 2021 vond dat dagelijkse consumptie van gefermenteerde voeding de microbiële diversiteit significant verhoogde en ontstekingswaarden verlaagde.</li>
+        <li><strong>Voeg gefermenteerde voeding toe.</strong> Yoghurt, kefir, zuurkool, kimchi, kombucha en miso bevatten van nature levende bacteriën. Een gerandomiseerde studie van onderzoekers aan Stanford University (Wastyk et al., 2021, gepubliceerd in Cell) liet zien dat een dieet met gefermenteerde voeding gedurende 17 weken de microbiële diversiteit gestaag verhoogde en ontstekingswaarden verlaagde — terwijl een vezelrijk dieet in dezelfde studie de diversiteit niet meetbaar veranderde.</li>
         <li><strong>Eet prebiotische vezels — het voedsel voor je bacteriën.</strong> Knoflook, ui, prei, asperges, banaan (iets groen), haver en artisjok stimuleren selectief de groei van gunstige darmbacteriën. Streef naar 25 tot 35 gram vezels per dag.</li>
         <li><strong>Beweeg dagelijks matig.</strong> Lichaamsbeweging verhoogt de productie van korteketenvetzuren. Een dagelijkse wandeling van 30 minuten heeft al een meetbaar positief effect.</li>
         <li><strong>Verminder suiker en sterk bewerkt voedsel.</strong> Een dieet rijk aan toegevoegde suikers voedt gisten en potentieel schadelijke bacteriën. Emulgatoren in bewerkt voedsel blijken de slijmlaag van de darmwand aan te tasten.</li>
@@ -760,7 +764,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
       <p><strong>Amare Restore</strong> combineert 5 probiotica stammen met 5 spijsverteringsenzymen in één dagelijkse portie. De enzymen (protease, amylase, lipase, lactase, cellulase) werken direct bij de vertering van elke maaltijd; de probiotica (Lactobacillus acidophilus, Bifidobacterium lactis en anderen) bouwen gestaag aan de diversiteit van de darmflora.</p>
 
-      <h2>Hoe lang duurt het om je darmflora te herstellen?</h2>
+      <h2>Een praktisch 7-dagen startplan</h2><p>De zeven manieren hierboven zijn het fundament, maar soms helpt het om te weten waar je vandaag mee begint. Dit is geen wondermiddel-detox — na één week ben je niet 'klaar' — maar wel een concrete opbouw om de eerste gewoontes te vestigen.</p><ul><li><strong>Dag 1-2:</strong> Focus op weglaten in plaats van toevoegen. Verminder toegevoegde suiker en alcohol, en drink voldoende water (1,5 tot 2 liter per dag). Dit geeft je darmflora meteen wat minder tegenwerking.</li><li><strong>Dag 3-4:</strong> Voeg dagelijks prebiotische vezels toe — knoflook, ui, prei, asperges, banaan of haver. Zonder deze vezels hebben goede bacteriën simpelweg niets om van te leven.</li><li><strong>Dag 5-6:</strong> Introduceer gefermenteerde voeding (yoghurt, kefir, zuurkool, kimchi) en overweeg een gericht probioticum als voeding alleen niet genoeg blijkt.</li><li><strong>Dag 7:</strong> Reflecteer: voel je je minder opgeblazen, regelmatiger, energieker? Dat zijn de eerste signalen dat je darmflora reageert. Bouw vanaf hier verder aan een routine in plaats van het als eenmalige actie te zien.</li></ul><p>Wees realistisch over het tempo: in zeven dagen los je geen jaren van eenzijdig eten op, maar de eerste, meetbare verschuivingen in je microbioom kunnen al binnen 3 tot 5 dagen optreden.</p><h2>Hoe lang duurt het om je darmflora te herstellen?</h2>
       <p><strong>Na een antibioticakuur:</strong> De meeste bacteriële populaties herstellen zich binnen 4 tot 12 weken, mits ondersteund met probiotica en prebiotica. Sommige gespecialiseerde stammen kunnen meer dan een jaar nodig hebben.</p>
       <p><strong>Na een voedingsverandering:</strong> De eerste verschuivingen zijn binnen 3 tot 5 dagen meetbaar. Voor blijvende, stabiele verbetering reken je op 4 tot 8 weken consistente aanpassing.</p>
       <p><strong>Bij chronische darmklachten:</strong> Reken op 3 tot 6 maanden gestructureerde aanpak (voeding, probiotica, stressreductie) voor significante verbetering. De sleutel is consistentie, niet perfectie — elke maaltijd is een stem voor het soort bacteriën dat je wilt laten groeien.</p>
@@ -945,6 +949,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-05-29",
     category: "Schoonheid",
     excerpt: "Bijna de helft van alle vrouwen krijgt ooit te maken met haaruitval. Ontdek de meest voorkomende oorzaken, welke vitaminen en mineralen essentieel zijn voor gezonde haargroei, en welke supplementen wetenschappelijk onderbouwd zijn.",
+    author: "Mark",
     content: `
       <h2>Haaruitval bij vrouwen: veel voorkomender dan je denkt</h2>
       <p>Als je aan haaruitval denkt, zie je waarschijnlijk een man met een terugtrekkende haarlijn voor je. Maar de cijfers vertellen een ander verhaal: naar schatting <strong>krijgt 40 tot 50% van alle vrouwen</strong> op enig moment in hun leven te maken met zichtbaar haarverlies. In Nederland alleen al gaat het om honderdduizenden vrouwen — en het taboe is groot.</p>
@@ -1120,6 +1125,12 @@ export const blogPosts: BlogPost[] = [
     date: "2026-05-23",
     category: "Schoonheid & Verzorging",
     excerpt: "Het aanbod collageen supplementen is overweldigend. Ontdek waar je op moet letten bij het kopen — van type 1 vs 3 tot gehydrolyseerd vs gewoon — en maak een doordachte keuze voor je huid, haar en nagels.",
+    author: "Mark",
+    citations: [
+      { author: "Proksch E, Segger D, Degwert J, Schunck M, Zague V, Oesser S", name: "Oral supplementation of specific collagen peptides has beneficial effects on human skin physiology (Skin Pharmacology and Physiology, 2013)", url: "https://doi.org/10.1159/000351376" },
+      { author: "Hexsel D, Zague V, Schunck M, Siega C, Camozzato FO, Oesser S", name: "Oral supplementation with specific bioactive collagen peptides improves nail growth and reduces symptoms of brittle nails (Journal of Cosmetic Dermatology, 2017)", url: "https://doi.org/10.1111/jocd.12393" },
+      { author: "Pu SY, Huang YL, Pu CM, Kang YN, Hoang KD, Chen KH, Chen C", name: "Effects of Oral Collagen for Skin Anti-Aging: A Systematic Review and Meta-Analysis (Nutrients, 2023)", url: "https://doi.org/10.3390/nu15092080" },
+    ],
     content: `
       <h2>Wat is collageen en waarom neemt het af met de leeftijd?</h2>
       <p>Collageen is het meest voorkomende eiwit in het menselijk lichaam — het vormt 30% van al je lichaamseiwitten. Het is de structurele ruggengraat van je huid, haar, nagels, gewrichten, botten en pezen. Vanaf je 25e begint je natuurlijke collageenproductie jaarlijks met ongeveer 1 tot 1,5% af te nemen. Tegen de tijd dat je 40 bent, heb je mogelijk 15 tot 25% minder collageen — en dat zie en voel je. De zichtbare gevolgen: fijne lijntjes, minder stevige huid, doffer haar en brozere nagels. Minder zichtbaar maar minstens zo belangrijk: stijvere gewrichten en tragere spierherstel.</p>
@@ -1132,7 +1143,7 @@ export const blogPosts: BlogPost[] = [
       <p>Dit is het belangrijkste onderscheid bij het kopen van collageen. Je komt drie vormen tegen: gelatine (gekookt collageen, slecht oplosbaar, lage opname), <strong>collageen peptiden</strong> (enzymatisch in kleine ketens geknipt, 90-95% absorptie, oplosbaar in koude én warme dranken), en niet-gehydrolyseerd collageen (laagste opname). Kies altijd voor gehydrolyseerd collageen — de enige vorm met aangetoonde hoge biobeschikbaarheid. HL5 gebruikt gehydrolyseerde peptiden met laag moleculair gewicht, volledig oplosbaar en smaakneutraal.</p>
 
       <h2>Collageen voor huid, haar en nagels: wat zegt het onderzoek?</h2>
-      <p>Een dubbelblind, placebo-gecontroleerd onderzoek onder 114 vrouwen (35-55 jaar) toonde aan dat 2,5 gram collageen peptiden gedurende 8 weken leidde tot significante vermindering van kraaienpootjes en meetbare toename van huidelasticiteit. Een meta-analyse uit 2024 bundelde 12 klinische studies en concludeerde dat collageen supplementen consistent worden geassocieerd met verbeterde huidvochtbalans, elasticiteit en collageendichtheid. Voor nagels rapporteerde een studie 12% toename in groei en 42% minder gebroken nagels na 24 weken. De optimale dosering ligt tussen 2,5 en 10 gram per dag — HL5 levert 5 gram per portie, precies in de sweet spot.</p>
+      <p>Een dubbelblind, placebo-gecontroleerd onderzoek onder 69 vrouwen (35-55 jaar) liet zien dat zowel 2,5 als 5 gram collageenpeptiden per dag, na 8 weken, tot een statistisch significante verbetering van de huidelasticiteit leidde ten opzichte van placebo — een effect dat bij oudere deelneemsters zelfs 4 weken na het stoppen nog meetbaar was. Een systematische review en meta-analyse uit 2023, die de resultaten van 26 gerandomiseerde studies met in totaal 1.721 deelnemers bundelde, concludeerde dat orale collageensuppletie de huidhydratatie en -elasticiteit significant verbetert ten opzichte van placebo — al signaleerden de onderzoekers ook dat een deel van de onderliggende studies methodologische beperkingen had, en riepen ze op tot grootschaliger vervolgonderzoek. Voor nagels liet een studie van Hexsel en collega's bij 25 deelnemers met broze nagels zien dat 2,5 gram collageenpeptiden per dag, na 24 weken, de nagelgroei met 12% verhoogde en het aantal gebroken nagels met 42% deed afnemen — 64% van de deelnemers zag een merkbare verbetering. De optimale dosering ligt tussen 2,5 en 10 gram per dag — HL5 levert 5 gram per portie, precies in de sweet spot.</p>
 
       <h2>Waar op letten bij het kopen van een collageen supplement?</h2>
       <ul>
@@ -1144,13 +1155,24 @@ export const blogPosts: BlogPost[] = [
         <li><strong>Prijs per gram:</strong> HL5 2-Pack: €130.42/maand voor 5g/dag = €2.17 per dagportie — concurrerend voor premium kwaliteit.</li>
       </ul>
 
-      <h2>Veelgestelde vragen</h2>
+      <h2>Poeder, vloeibaar of capsules: welke vorm past bij jou?</h2><p>Naast de collageentype en -kwaliteit bepaalt ook de <strong>vorm</strong> van je supplement hoeveel je er daadwerkelijk aan hebt. De drie meest voorkomende vormen verschillen behoorlijk in opname, gebruiksgemak en prijs per gram:</p><ul><li><strong>Capsules of tabletten:</strong> handig voor onderweg, maar bevatten doorgaans maar 300-500 mg collageen per stuk. Om aan een effectieve dosis van 2,5 tot 10 gram te komen, neem je al snel 10 tot 20 capsules per dag — in de praktijk zelden vol te houden.</li><li><strong>Poeder:</strong> los je zelf op in koffie, een smoothie of water. Je bepaalt je eigen dosering per schep, en gehydrolyseerd poeder lost doorgaans goed op zonder klontjes. Poeder wordt geschat op zo'n 30% opname, omdat het nog door je spijsverteringskanaal moet.</li><li><strong>Vloeibaar (geconcentreerd):</strong> de peptiden zijn tijdens productie al verder verkleind, wat een snellere opname mogelijk maakt — tot 90% binnen 6 uur volgens productgegevens van vloeibare formules zoals Amare HL5. Handig als je niets wilt mengen: je drinkt een kant-en-klaar sachet.</li></ul><p>Er is geen absoluut 'beste' vorm — het hangt af van wat je vol kunt houden. Een goedkoop poeder dat je elke dag daadwerkelijk gebruikt, levert op de lange termijn meer op dan een duur vloeibaar product dat na twee weken in de kast verdwijnt. Wil je de vormen uitgebreider naast elkaar zien, inclusief opnamepercentages? Lees dan onze <a href="/blogs/nieuws/collageen-poeder-vs-vloeibaar-wat-is-beter">vergelijking tussen collageenpoeder en vloeibaar collageen</a>.</p><h2>Wat kost een goed collageen supplement?</h2><p>De prijs per gram collageen zegt meer dan de prijs per potje. Een goedkoop product met een lage dosering (bijvoorbeeld 1 gram per portie) kan uiteindelijk duurder uitpakken dan een duurder product met 5 gram per portie, omdat je van het eerste veel meer nodig hebt om dezelfde effectieve dosis te bereiken. Reken bij vergelijken altijd terug naar prijs per gram collageen per dag, niet naar de prijs van de verpakking.</p><h2>Collageen combineren met andere voedingsstoffen</h2><p>Collageen werkt niet geïsoleerd. Je lichaam heeft <strong>vitamine C</strong> nodig als co-factor om de opgenomen aminozuren daadwerkelijk om te zetten in nieuw collageen — zonder voldoende vitamine C is suppletie met collageen alleen minder effectief. Andere voedingsstoffen die vaak samen met collageen worden aanbevolen zijn zink en koper (beide betrokken bij collageensynthese) en omega-3 vetzuren (ondersteunen de huidbarrière). Kijk bij het kiezen van een supplement dus niet alleen naar de hoeveelheid collageen, maar ook naar wat er verder in de formule zit.</p><h2>Veelgestelde vragen</h2>
       <h3>Hoe snel zie je resultaat van collageen supplementen?</h3>
       <p>Collageen is een marathon, geen sprint. Eerste subtiele veranderingen in huidvochtbalans na 4-6 weken. Zichtbare verbetering in elasticiteit, fijnere lijntjes en sterkere nagels na 8-12 weken. Dagelijkse inname is essentieel voor cumulatieve resultaten.</p>
       <h3>Kan ik collageen combineren met andere supplementen?</h3>
       <p>Ja, collageen combineert uitstekend met vitamine C (co-factor voor collageenaanmaak), omega-3 (huidelasticiteit) en biotine (haar en nagels). Neem bij voorkeur op een lege maag of tussen maaltijden voor optimale opname.</p>
-      <h3>Is collageen veilig voor langdurig gebruik?</h3>
+      <h3>Werkt goedkoop collageen net zo goed als een premium merk?</h3><p>Dat hangt vooral af van de vorm (gehydrolyseerd of niet) en de dosering, niet van het merk op zich. Een goedkoop product met gehydrolyseerde peptiden in een dosering van 5 gram per dag kan prima werken. Let vooral op transparantie: vermeldt het etiket het type collageen, de dosering per portie en de herkomst? Ontbreekt die informatie, wees dan voorzichtig.</p><h3>Is er verschil tussen rundercollageen en visgen collageen?</h3><p>Rundercollageen (bovine) is van nature rijk aan type 1 en 3, en daardoor geschikt voor huid, haar, nagels én gewrichten. Marien (vis-)collageen bestaat vrijwel uitsluitend uit type 1 en wordt vaak als iets sneller opneembaar beschreven vanwege een kleinere molecuulstructuur, al is het verschil in de praktijk klein. Voor wie geen rundvlees eet om religieuze of dieet-redenen is marien collageen het logische alternatief.</p><h3>Is collageen veilig voor langdurig gebruik?</h3>
       <p>Collageen peptiden worden door de EFSA als veilig beschouwd voor langdurig dagelijks gebruik bij aanbevolen doseringen. Blijf binnen de aanbevolen hoeveelheid en raadpleeg bij twijfel een arts.</p>
+
+      <h2>Herkomst en keurmerken: waar let je nog meer op?</h2>
+      <p>Naast type, vorm en dosering is de herkomst van het collageen een onderscheidende factor tussen budget- en premiumproducten. Rundercollageen van grasgevoerde dieren wordt over het algemeen als kwalitatief hoogwaardiger beschouwd dan collageen uit intensieve veehouderij, al ontbreekt hier vooralsnog uitgebreid vergelijkend humaan onderzoek — de aanname stoelt vooral op de bredere voedingswaarde van grasgevoerd vlees. Let daarnaast op:</p>
+      <ul>
+        <li><strong>Traceerbaarheid:</strong> een betrouwbaar merk vermeldt het land van herkomst en het type dier of vis waar het collageen uit is gewonnen.</li>
+        <li><strong>Geen onnodige vulstoffen:</strong> een korte, transparante ingrediëntenlijst is een goed teken. Wantrouw producten met veel kunstmatige smaak- of kleurstoffen.</li>
+        <li><strong>Derde-partij testing:</strong> sommige merken laten hun product onafhankelijk testen op zuiverheid en zware metalen — vermeld op het etiket of de website als dit het geval is.</li>
+      </ul>
+      <p>Een hogere prijs is geen garantie voor kwaliteit, maar een compleet ontbrekende herkomstvermelding is wel een rode vlag.</p>
+
+      <p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij aanhoudende gezondheidsklachten altijd een arts.</em></p>
     `,
     image: "/images/blog/collageen-supplement-kopen.jpg"
   },
@@ -1325,6 +1347,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-05-09",
     category: "Energie",
     excerpt: "Altijd moe? Ontdek welke supplementen écht werken voor meer energie — zonder cafeïnecrash. Van mitochondriën tot natuurlijke energieboosters.",
+    author: "Mark",
     content: `
       <h2>Wat is cel-energie en waarom ben je zo moe?</h2>
       <p>Voel je je vaak futloos, ook na een goede nacht slaap? Je bent niet alleen. <strong>Vermoeidheid is de meest gerapporteerde klacht</strong> in Nederland — ruim 30% van de volwassenen geeft aan regelmatig last te hebben van aanhoudende vermoeidheid.</p>
@@ -1359,6 +1382,15 @@ export const blogPosts: BlogPost[] = [
       <h3>5. IJzer — de zuurstoftransporteur</h3>
       <p>IJzer is essentieel voor de aanmaak van hemoglobine, het eiwit in rode bloedcellen dat zuurstof door je lichaam transporteert. Zonder voldoende ijzer krijgen je cellen niet genoeg zuurstof — en zonder zuurstof geen ATP-productie. Vooral vrouwen in de vruchtbare leeftijd hebben een verhoogd risico op ijzertekort.</p>
 
+      <h2>Energy+ in detail: wat zit erin, en waarom werkt het anders?</h2>
+      <p>Laten we concreet worden over wat er daadwerkelijk in Energy+ zit, want "natuurlijke energieboosters" is een vage term. Per portie bevat de formule 27,64 mg natuurlijke cafeïne — vergelijkbaar met een kop groene thee, niet met een dubbele espresso. Het verschil met een gewone energydrink zit in wat er om die cafeïne heen zit:</p>
+      <ul>
+        <li><strong>L-glycine (1000 mg):</strong> dit aminozuur werkt als voorloper van een neurotransmitter en heeft een kalmerend effect op je zenuwstelsel, zonder dat het je suf maakt. Het houdt de cafeïne-ervaring rustiger dan bij koffie of energydrinks.</li>
+        <li><strong>Vitamine C (60 mg, 75% van de referentie-inname):</strong> een co-factor die direct betrokken is bij je energiemetabolisme — je lichaam heeft het nodig om vetten en koolhydraten om te zetten in bruikbare energie.</li>
+        <li><strong>Een polyfenolenmix</strong> uit frambozenextract, druivenpitextract, maritieme pijnboomschorsextract, appelextract en granaatappelextract: deze antioxidanten beschermen je mitochondriën tegen oxidatieve stress.</li>
+      </ul>
+      <p>Het resultaat is geen scherpe piek gevolgd door een crash, maar een geleidelijke helderheid die na 20 tot 30 minuten intreedt en 3 tot 4 uur aanhoudt, zonder het jachtige gevoel dat een dubbele espresso kan geven.</p>
+
       <h2>De beste supplementen voor dagelijkse energie</h2>
       <p>Bij Amare zijn verschillende producten specifiek ontwikkeld om je natuurlijke energie te ondersteunen — zonder crash, zonder synthetische stimulanten:</p>
       <ul>
@@ -1367,7 +1399,7 @@ export const blogPosts: BlogPost[] = [
         <li><strong>Happy Juice Pack®:</strong> de alles-in-één formule voor mentale energie, focus en veerkracht. Combineert gut-brain ondersteuning met natuurlijke energieboosters voor een compleet effect op je dagelijkse vitaliteit.</li>
       </ul>
 
-      <h2>Veelgestelde vragen</h2>
+      <h2>Wat het verschil is met koffie: de middagdip als voorbeeld</h2><p>Herkenbaar: het is drie uur 's middags, je staart naar je scherm en je grijpt naar een derde koffie. Een uur later voel je je nog vermoeider dan daarvoor. Die cyclus van cafeïnepieken en -dalen ontstaat doordat hoge cafeïnedoseringen je bijnieren aanzetten, je cortisol laten pieken, en je extra hard laten crashen zodra het is uitgewerkt.</p><p>Het verschil met een lager gedoseerd, plantaardig cafeïnesupplement zoals Energy+ is dat je geen scherpe piek en dal ervaart, maar een geleidelijke overgang: geen kick, geen crash, maar een langzaam optrekkende helderheid. Voor veel mensen vervangt één portie 's middags twee koppen koffie, zonder de bijbehorende gejaagdheid.</p><h2>Veelgestelde vragen</h2>
 
       <h3>Waarom ben ik altijd moe, zelfs na 8 uur slaap?</h3>
       <p>Chronische vermoeidheid ondanks voldoende slaap wijst vaak op een onderliggend probleem: een tekort aan essentiële voedingsstoffen (ijzer, B12, magnesium), een verstoorde darmflora, mitochondriale dysfunctie of chronische laaggradige stress. De kwaliteit van je slaap is net zo belangrijk als de kwantiteit — diepe, herstellende slaap is essentieel voor mitochondriale regeneratie. Laat je bloedwaarden controleren en kijk kritisch naar je voeding en stressmanagement.</p>
@@ -1455,39 +1487,7 @@ export const blogPosts: BlogPost[] = [
     `,
     image: "/images/blog/collageen-huid-haar-nagels-cover.jpg"
   },
-  {
-    slug: "prebiotica-probiotica-verschil-nederland",
-    title: "Restore & Happy Juice Pack: Prebiotica vs Probiotica voor Darmgezondheid (2026)",
-    date: "2026-04-15",
-    category: "Gut Health",
-    excerpt: "Ontdek het cruciale verschil tussen prebiotica en probiotica en waarom ze samenwerken voor een gezonde darmflora en een sterk immuunsysteem.",
-    content: `
-      <h2>Wat is het verschil?</h2>
-      <p>Hoewel ze hetzelfde klinken, spelen prebiotica en probiotica verschillende rollen in je darmgezondheid. Probiotica zijn levende gunstige bacteriën, terwijl prebiotica de 'voeding' zijn voor deze bacteriën.</p>
-      
-      <h3>De Rol van Prebiotica (Inuline)</h3>
-      <p>Prebiotica zijn onverteerbare vezels die door je darmen reizen en als brandstof dienen voor de goede bacteriën. Een van de meest bekende vormen is inuline. Een dagelijkse inname van 3-10 gram wordt aanbevolen voor een optimale darmwerking.</p>
-      
-      <h3>De Kracht van Probiotica</h3>
-      <p>Probiotica helpen bij het herstellen van de balans in je darmmicrobioom. Dit is essentieel voor je immuunsysteem, je stemming en zelfs je huidgezondheid.</p>
-      
-      <h3>Onze ervaring: waarom alleen probiotica vaak niet genoeg is</h3>
-      <p>Ik heb zelf jarenlang losse probiotica geslikt zonder er veel van te merken — eerlijk is eerlijk. Pas toen een vriendin me tipte over prebiotica (inuline), viel het kwartje. Binnen tien dagen: minder opgeblazen gevoel, regelmatiger ontlasting, en het gekste — ik sliep opeens dieper. Achteraf logisch: je kunt wel nieuwe bacteriën binnenbrengen, maar zonder de juiste voeding overleven ze de reis door je darmen simpelweg niet.</p>
-      <p><strong>Ruim één op de vijf Nederlanders</strong> kampt volgens de Maag Lever Darm Stichting met aanhoudende darmklachten — van PDS tot onregelmatige stoelgang. In 2026 is "probiotica" een van de meest gezochte supplementtermen in Nederland, en toch gebruikt slechts een fractie de bewezen combinatie van pre- én probiotica. Zonde, want het onderzoek is glashelder: synergie wint van losse onderdelen.</p>
-      <p>Wij hebben Restore (probiotica + enzymen + inuline als prebioticum) getest bij acht mensen met wisselende darmklachten. Na vier weken rapporteerden zes van de acht een duidelijk verschil: minder buikpijn, meer energie in de ochtend. Twee merkten weinig — bij één bleek later een glutenintolerantie die eerst aangepakt moest worden. Natuurlijk is dit geen klinische studie, maar het komt griezelig dicht bij wat het onderzoek voorspelt.</p>
-      <p><strong>Heb jij weleens alleen probiotica geprobeerd en niks gemerkt?</strong> Het ligt waarschijnlijk niet aan jou, maar aan het ontbreken van prebiotica. Deel je ervaring hieronder — we zijn oprecht benieuwd naar jouw verhaal.</p>
-      
-      <h3>Product Aanbeveling</h3>
-      <p>Voor een perfecte synergie tussen deze twee raden we <strong>Amare Happy Juice</strong> of <strong>Restore</strong> aan, die specifiek zijn geformuleerd om deze balans te ondersteunen.</p>
-      
-      <h3>Veelgestelde Vragen</h3>
-      <ul>
-        <li><strong>Wanneer zie ik resultaat?</strong> Meestal binnen 1 tot 2 weken bij consistent gebruik.</li>
-        <li><strong>Zijn er bijwerkingen?</strong> Sommige mensen ervaren een lichte opgeblazenheid in de eerste dagen, wat een teken is dat de bacteriën aan het werk gaan.</li>
-      </ul>
-    `,
-    image: "/images/blog/pre-pro-biotics.jpg"
-  },
+  
   {
     slug: "ijzer-tekort-vermoeidheid-supplement-nederland",
     title: "Sunrise 2-Pack: IJzertekort & Vermoeidheid — 22 Superfoods + 9 Vitaminen",
@@ -1535,42 +1535,8 @@ export const blogPosts: BlogPost[] = [
     `,
     image: "/images/blog/mct-oil.jpg"
   },
-  {
-    slug: "vitamine-d-tekort-nederland-supplement",
-    title: "Sunset & Sunrise: Vitamine D Tekort in Nederland — Symptomen & Beste Supplement",
-    date: "2026-03-20",
-    category: "Immuniteit",
-    excerpt: "Met weinig zonlicht is een vitamine D tekort in Nederland bijna onvermijdelijk. Leer hoe je je weerstand ondersteunt.",
-    content: `
-      <h2>Vitamine D: De Zonnevitamine</h2>
-      <p>In Nederland is het zonlicht tussen oktober en april niet sterk genoeg om voldoende vitamine D aan te maken. Dit mineraal is essentieel voor je botten en immuunsysteem.</p>
-      
-      <h3>Symptomen van een tekort</h3>
-      <p>Lage energie, gewrichtspijn en een verzwakte weerstand zijn veelvoorkomende signalen. Het is raadzaam om je waarden te laten controleren, vooral tijdens de wintermaanden.</p>
-      
-      <h3>Synergie met Vitamine K2</h3>
-      <p>Voor een optimale opname van calcium in de botten is de combinatie van D3 en K2 essentieel. <strong>Amare Sunset</strong> biedt deze combinatie samen met hoogwaardige Omega-3.</p>
-    `,
-    image: "/images/blog/vitamine-d.jpg"
-  },
-  {
-    slug: "omega-3-hersenen-supplement-nederland",
-    title: "Sunset Omega-3: Essentiële Vetzuren voor Hersengezondheid & Focus (2026)",
-    date: "2026-03-15",
-    category: "Focus",
-    excerpt: "Je hersenen bestaan voor een groot deel uit vetten. Ontdek waarom Omega-3 essentieel is voor je focus en stemming.",
-    content: `
-      <h2>De Kracht van Omega-3 (EPA/DHA)</h2>
-      <p>Omega-3 vetzuren zijn de bouwstenen van je hersencellen. Ze zijn essentieel voor de structuur van celmembranen en ondersteunen de communicatie tussen zenuwcellen.</p>
-      
-      <h3>Voordelen voor de focus</h3>
-      <p>Wetenschappelijk onderzoek toont aan dat een adequate inname van DHA bijdraagt aan het behoud van een normale hersenfunctie en een positieve stemming ondersteunt.</p>
-      
-      <h3>Duurzame Bronnen</h3>
-      <p>Bij Amare kiezen we voor Omega-3 uit in het wild gevangen vis, zoals in <strong>Amare Sunset</strong>, om de hoogste zuiverheid en biologische beschikbaarheid te garanderen.</p>
-    `,
-    image: "/images/blog/omega-3.jpg"
-  },
+  
+  
   {
     slug: "adaptogenen-stress-supplement-nederland",
     title: "MentaFocus & Happy Juice Pack: Adaptogenen tegen Stress — Ashwagandha & Rhodiola (2026)",
@@ -2336,49 +2302,11 @@ Begin met een basisvorm zoals bisglycinaat (200-400 mg elementair), neem het 's 
 <p><strong>Sunset</strong> (€70,23/maand) combineert een EPA-dominante omega-3 (520 mg EPA, 223 mg DHA) uit wilde Alaskan pollock met D3, K2, astaxanthine en tocotriënolen. Het is niet de goedkoopste omega-3 op de markt, maar wel een van de meest complete avondformules — en goedkoper dan deze voedingsstoffen los aanschaffen. Voor wie puur omega-3 zoekt, volstaat een eenvoudig visoliesupplement — zoek naar minimaal 500 mg EPA+DHA per capsule met een gespecificeerde verhouding.</p>
 <p><em>* Voedingssupplement. Geen geneesmiddel. Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij depressieve klachten, cognitieve problemen of gebruik van antistollingsmedicatie altijd een arts voordat je met hoge doseringen omega-3 begint.</em></p>
 <p><em>Bronnen: Gezondheidsraad (2015); EFSA (2012); Liao et al. (2019) Translational Psychiatry; Morris et al. (2003) Archives of Neurology; Grosso et al. (2014) PLoS ONE.</em></p>`},
-  {
-    slug: "collageen-poeder-kopen-waar-op-letten",
-    title: "Collageen Poeder Kopen: Alles Wat Je Moet Weten (2026)",
-    date: "2026-06-23",
-    category: "schoonheid",
-    excerpt: "Collageen poeder is booming. Welk type heb je nodig? Hydrolysaat vs gelatine, Type 1 vs Type 2, dosering en kwaliteit.",
-    content: `<h2>Waarom collageen?</h2><p>Collageen is je meest voorkomende eiwit. Vanaf je 25e verlies je 1% per jaar. Poeder wint van pillen: effectieve dosis is 5-10g, pillen bevatten maar 500mg per stuk. Gehydrolyseerd = voorverteerd = betere opname.</p><p><strong>Amare HL5</strong> combineert 5 typen collageen (I, II, III, V, X) in 5g per dagelijkse portie — huid, haar, nagels én gewrichten in één formule. Met toegevoegde vitamine C als co-factor voor collageensynthese.</p><p>Let bij kopen op: hydrolysaat (niet gelatine), grasgevoerd, minimaal Type I+III, en altijd met vitamine C voor opname.</p><p><em>* Voedingssupplement. Geen geneesmiddel.</em></p>`
-  },
-  {
-    slug: "beste-probiotica-2026-vergelijking",
-    title: "Beste Probiotica 2026: Dit Is Waar Je Op Moet Letten",
-    date: "2026-06-23",
-    category: "darmen",
-    excerpt: "Niet elke probiotica is hetzelfde. CFU's, stammen, maagsapresistentie — wij leggen uit waar je op moet letten en vergelijken de beste probiotica.",
-    content: `<h2>Probiotica is niet een ding</h2><p>Meer CFU is niet altijd beter. Een supplement met 1 miljard CFU van de juiste stammen werkt beter dan 50 miljard van de verkeerde. Het draait om stamspecificiteit en overleving in je darmen.</p><p>Voor stemming en stress: <strong>Lactobacillus rhamnosus</strong> en <strong>Bifidobacterium longum</strong>. Voor darmbarriere: <strong>Lactobacillus plantarum</strong>.</p><p><strong>MentaBiotics</strong> gebruikt de gepatenteerde Cerebiome blend — klinisch onderzocht op stemming en stress. <strong>Restore</strong> combineert 5 stammen met 5 spijsverteringsenzymen.</p><p>Probiotica zijn de zaadjes, prebiotica de mest — je hebt beide nodig.</p><p><em>* Voedingssupplement. Geen geneesmiddel.</em></p><p><strong>🔗 Lees onze complete Probiotica gids →</strong></p>`
-  },
-  {
-    slug: "omega-3-supplement-kopen-complete-gids",
-    title: "Omega 3 Supplement Kopen: Complete Gids voor EPA, DHA en ALA (2026)",
-    date: "2026-06-23",
-    category: "essentials",
-    excerpt: "Omega 3 is een van de best onderzochte supplementen ter wereld. Visolie, algenolie, EPA, DHA — wat heb je nodig?",
-    content: `<h2>De belangrijkste vetzuren</h2><p>ALA (plantaardig, uit lijnzaad) moet je lichaam omzetten naar EPA en DHA — slechts 5-15% efficient. EPA is ontstekingsremmend en ondersteunt hartgezondheid. DHA is cruciaal voor hersenfunctie — 20% van je brein bestaat uit DHA.</p><p>Visolie is de klassieker maar heeft nadelen: zware metalen, microplastics. Algenolie is de duurzame, veganistische variant.</p><p><strong>Sunset</strong> gebruikt algenolie als bron van DHA en EPA — 1000mg per portie in een uitgebalanceerde verhouding. Plus vitamine D3 en K2.</p><p>Dosering: ADH is 200mg/dag. Therapeutisch: 1000mg voor hart, 1000-2000mg EPA voor stemming.</p><p><em>* Voedingssupplement. Geen geneesmiddel.</em></p><p><strong>🔗 Lees onze complete Vitamine D gids →</strong></p>`
-  },
-  {
-    slug: "vitamine-d-tekort-herkennen-aanvullen",
-    title: "Vitamine D Tekort: Signalen Die Je Niet Mag Negeren",
-    date: "2026-06-23",
-    category: "essentials",
-    excerpt: "40-60% van de Nederlanders heeft een vitamine D tekort in de winter. Herken de symptomen en ontdek hoe je het aanvult.",
-    content: `<h2>Het zonneschijnvitamine</h2><p>Vitamine D is uniek: je lichaam maakt het zelf aan onder invloed van zonlicht. Maar in Nederland schijnt de zon van oktober tot maart onvoldoende om voldoende vitamine D aan te maken. Het resultaat: 40 tot 60% van de Nederlanders heeft een suboptimale vitamine D-status in de wintermaanden.</p><h2>Symptomen van een tekort</h2><p>Vermoeidheid die niet weggaat. Spierzwakte. Botpijn. Een somber humeur. Vaak terugkerende infecties. Dit zijn de klassieke signalen van een vitamine D tekort — en ze worden vaak gemist omdat ze vaag zijn.</p><h2>Hoeveel heb je nodig?</h2><p>De Gezondheidsraad adviseert 10 mcg per dag voor volwassenen tot 70 jaar, en 20 mcg voor 70-plussers. Maar veel onderzoekers vinden dit te laag en pleiten voor 25-50 mcg per dag, vooral in de winter.</p><h2>Vitamine D in Amare</h2><p><strong>Sunrise</strong> bevat vitamine D3 in combinatie met 22 superfoods en 9 vitaminen — een complete ochtendformule. <strong>Sunset</strong> combineert D3 met K2 en omega 3 voor optimale opname.</p><p><em>* Voedingssupplement. Geen geneesmiddel. Laat bij twijfel je bloedwaarden controleren.</em></p>
-<p><strong>🔗 Lees onze complete Vitamine D gids →</strong></p>
-<p><strong>🔗 Lees onze complete Omega 3 gids →</strong></p>`
-  },
-  {
-    slug: "collageen-poeder-kopen-waar-op-letten",
-    title: "Collageen Poeder Kopen: Alles Wat Je Moet Weten (2026)",
-    date: "2026-06-23",
-    category: "schoonheid",
-    excerpt: "Collageen poeder is booming. Welk type heb je nodig? Hydrolysaat vs gelatine, Type 1 vs Type 2, dosering en kwaliteit.",
-    content: `<h2>Waarom collageen?</h2><p>Collageen is je meest voorkomende eiwit. Vanaf je 25e verlies je 1% per jaar. Poeder wint van pillen: effectieve dosis is 5-10g, pillen bevatten maar 500mg per stuk. Gehydrolyseerd = voorverteerd = betere opname.</p><p><strong>Amare HL5</strong> combineert 5 typen collageen (I, II, III, V, X) in 5g per dagelijkse portie — huid, haar, nagels én gewrichten in één formule. Met toegevoegde vitamine C als co-factor voor collageensynthese.</p><p>Let bij kopen op: hydrolysaat (niet gelatine), grasgevoerd, minimaal Type I+III, en altijd met vitamine C voor opname.</p><p><em>* Voedingssupplement. Geen geneesmiddel.</em></p>
-<p><strong>🔗 Lees onze complete Collageen Poeder gids →</strong></p>`
-  },
+  
+  
+  
+  
+  
   {
     slug: "mijn-ervaring-collageen-6-maanden",
     title: "6 Maanden Collageen Slikken — Mijn Eerlijke Ervaring",
@@ -2546,7 +2474,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "HL5", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "5g gehydrolyseerd collageen Type 1&3 — 2-pack" },
     { name: "Amare HL5", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "5g gehydrolyseerd collageen Type 1&3 — 2-pack" },
   ],
-  "prebiotica-probiotica-verschil-nederland": [
+  "prebiotica-probiotica-verschil-darmen-uitleg": [
     { name: "Happy Juice", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — complete gut-brain support in één pakket" },
     { name: "Restore", url: "/restore", isInternal: true, price: "€29.70/maand", tagline: "Spijsverteringsenzymen + 5 probiotica stammen" },
   ],
@@ -2561,12 +2489,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
   "magnesium-supplement-slapen-spieren-stress": [
     { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Magnesium 56,25mg + Cerebiome® blend voor ontspanning & slaap" },
   ],
-  "vitamine-d-tekort-nederland-supplement": [
-    { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "D3 + K2 + Omega-3 — melatoninevrije slaapformule" },
-    { name: "Amare Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "D3 + K2 + Omega-3 — melatoninevrije slaapformule" },
-    { name: "Sunrise", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "22 superfoods + 9 vitamines inclusief D3" },
-  ],
-  "omega-3-hersenen-supplement-nederland": [
+  "omega-3-hersenen-cognitie-supplement-wetenschap": [
     { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Omega-3 (EPA/DHA) voor hart, brein & gewrichten" },
     { name: "Amare Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Omega-3 (EPA/DHA) voor hart, brein & gewrichten" },
   ],

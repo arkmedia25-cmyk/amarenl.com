@@ -269,12 +269,37 @@
     },
     {
       "source": "/vitamine-d-tekort-nederland-supplement/",
-      "destination": "/blogs/nieuws/vitamine-d-tekort-nederland-oorzaken-oplossingen",
+      "destination": "/blogs/nieuws/vitamine-d-tekort-symptomen",
       "permanent": true
     },
     {
       "source": "/vitamine-d-tekort-nederland-supplement",
-      "destination": "/blogs/nieuws/vitamine-d-tekort-nederland-oorzaken-oplossingen",
+      "destination": "/blogs/nieuws/vitamine-d-tekort-symptomen",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/vitamine-d-tekort-nederland-supplement",
+      "destination": "/blogs/nieuws/vitamine-d-tekort-symptomen",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/vitamine-d-tekort-herkennen-aanvullen",
+      "destination": "/blogs/nieuws/vitamine-d-tekort-symptomen",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/omega-3-supplement-kopen-complete-gids",
+      "destination": "/blogs/nieuws/omega-3-hersenen-cognitie-supplement-wetenschap",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/omega-3-hersenen-supplement-nederland",
+      "destination": "/blogs/nieuws/omega-3-hersenen-cognitie-supplement-wetenschap",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/prebiotica-probiotica-verschil-nederland",
+      "destination": "/blogs/nieuws/prebiotica-probiotica-verschil-darmen-uitleg",
       "permanent": true
     },
     {
@@ -683,8 +708,43 @@
       "permanent": true
     },
     {
+      "source": "/blogs/nieuws/collageen-poeder-kopen-waar-op-letten",
+      "destination": "/blogs/nieuws/collageen-supplement-kopen-waar-op-letten",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/immuunsysteem-versterken-supplementen-die-je-weerstand-echt-ondersteunen",
+      "destination": "/blogs/nieuws/immuunsysteem-versterken-supplementen-werkt-echt",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/immuunsysteem-versterken-wat-echt-werkt",
+      "destination": "/blogs/nieuws/immuunsysteem-versterken-supplementen-werkt-echt",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/beste-probiotica-2026-vergelijking",
+      "destination": "/blogs/nieuws/beste-probiotica-2026-kopen-vergelijken",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/darmflora-verbeteren-7-dagen-plan",
+      "destination": "/blogs/nieuws/darmflora-verbeteren-herstel-spijsvertering-natuurlijk",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/haaruitval-vrouwen-oorzaken-natuurlijke-oplossingen",
+      "destination": "/blogs/nieuws/haaruitval-supplement-vrouwen-oorzaken-oplossingen",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/energy-plus-natuurlijke-energie-zonder-crash",
+      "destination": "/blogs/nieuws/supplementen-voor-meer-energie-dit-werkt-echt",
+      "permanent": true
+    },
+    {
       "source": "/blogs/nieuws/natuurlijke-energie-supplementen-energy-plus-cafeine-alternatief",
-      "destination": "/blogs/nieuws/energy-plus-natuurlijke-energie-zonder-crash",
+      "destination": "/blogs/nieuws/supplementen-voor-meer-energie-dit-werkt-echt",
       "permanent": true
     },
     {
