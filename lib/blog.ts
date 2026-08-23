@@ -108,13 +108,15 @@ export const blogPosts: BlogPost[] = [
     date: "2026-06-15",
     category: "mentaal",
     excerpt: "Adaptogenen worden steeds populairder als natuurlijke oplossing tegen stress. Maar wat zijn het precies, welke soorten zijn er, en hoe kies je het juiste adaptogeen supplement? Een complete gids.",
+    author: "Mark",
+    citations: [{ author: "Chandrasekhar K, et al.", name: "Indian Journal of Psychological Medicine (2012)", url: "https://doi.org/10.4103/0253-7176.106022" }],
     content: `
       <h2>Wat zijn adaptogenen?</h2>
       <p>Adaptogenen zijn natuurlijke stoffen — meestal plantaardig — die je lichaam helpen zich aan te passen aan stress. Het woord zegt het al: ze helpen je 'adapteren'. In de jaren 1940 definieerde de Russische wetenschapper Dr. Nikolai Lazarev adaptogenen als stoffen die aan drie criteria moeten voldoen: (1) niet-specifiek — ze verhogen weerstand tegen een breed scala aan stressfactoren, (2) normaliserend — ze brengen het lichaam terug naar balans, en (3) onschadelijk — ze verstoren normale lichaamsfuncties niet bij normaal gebruik.</p>
       <p>Denk aan adaptogenen als een thermostaat voor je stresssysteem. Een thermostaat koelt niet alleen — hij verwarmt ook als het te koud is. Zo werken adaptogenen ook: ze dempen niet alleen stress, maar reguleren het hele systeem.</p>
       <h2>De zes belangrijkste adaptogenen op een rij</h2>
       <h3>Ashwagandha — de stressverlager</h3>
-      <p>Ashwagandha (Withania somnifera) is de best gedocumenteerde adaptogeen. Een systematische review van 5 gerandomiseerde studies rapporteerde een gemiddelde cortisoldaling van 23 tot 28% na 6 tot 8 weken bij 300-600 mg KSM-66 extract per dag. Ideaal bij chronische stress, piekeren, slecht inslapen door malende gedachten, en stressgerelateerde vermoeidheid.</p>
+      <p>Ashwagandha (Withania somnifera) is de best gedocumenteerde adaptogeen. Een gerandomiseerde, placebogecontroleerde studie onder 64 mensen met chronische stress (Chandrasekhar et al., 2012) vond een gemiddelde cortisoldaling van circa 23 tot 28% na 60 dagen bij 300 mg KSM-66 extract, tweemaal daags. Ideaal bij chronische stress, piekeren, slecht inslapen door malende gedachten, en stressgerelateerde vermoeidheid.</p>
       <h3>Rhodiola rosea — de energiegever</h3>
       <p>Rhodiola rosea (rozenwortel) groeit in koude berggebieden. Waar ashwagandha meer kalmeert, geeft rhodiola meer mentale energie. Het is het adaptogeen bij uitstek voor burn-outachtige vermoeidheid. Rhodiola werkt deels via het serotonine- en dopamine-systeem — het verhoogt niet alleen stressbestendigheid maar ook motivatie.</p>
       <h3>Holy Basil (Tulsi) — de ontstekingsremmer</h3>
@@ -161,6 +163,7 @@ export const blogPosts: BlogPost[] = [
     category: "mentaal",
     excerpt: "Chronische stress put je lichaam uit en verhoogt je cortisol. Gelukkig zijn er natuurlijke supplementen die je stressrespons ondersteunen — van ashwagandha tot psychobiotica. Dit is wat de wetenschap zegt over supplementen tegen stress.",
     author: "Mark",
+    citations: [{ author: "Chandrasekhar K, et al.", name: "Indian Journal of Psychological Medicine (2012)", url: "https://doi.org/10.4103/0253-7176.106022" }],
     content: `
       <h2>Wat gebeurt er in je lichaam bij chronische stress?</h2>
       <p>Stress is in essentie een nuttige respons — je lichaam maakt cortisol en adrenaline aan om je scherp te houden bij dreiging. Het probleem ontstaat wanneer die respons chronisch wordt. Je cortisol blijft verhoogd, dag na dag, en dat heeft cascading effecten:</p>
@@ -177,7 +180,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Supplementen die je stressrespons ondersteunen</h2>
       <h3>Adaptogenen — de basis van natuurlijke stressondersteuning</h3>
       <p>Adaptogenen zijn plantaardige stoffen die je lichaam helpen zich aan te passen aan stress — fysiek, chemisch of biologisch. Ze werken niet door één specifiek mechanisme, maar door je hele stresssysteem (de HPA-as: hypothalamus-hypofyse-bijnier) te moduleren.</p>
-      <p><strong>Ashwagandha</strong> (Withania somnifera) is de best onderzochte adaptogeen voor stress. Een systematische review uit 2019 (Medicine, 5 RCT's) vond dat ashwagandha het serumcortisol significant verlaagde ten opzichte van placebo. De gemiddelde daling was 23-28% na 8 weken bij doseringen van 300-600 mg KSM-66 extract per dag. Gebruikers rapporteren betere slaap, minder piekeren en meer stressbestendigheid.</p>
+      <p><strong>Ashwagandha</strong> (Withania somnifera) is de best onderzochte adaptogeen voor stress. Een gerandomiseerde, placebogecontroleerde studie onder 64 mensen met chronische stress (Chandrasekhar et al., 2012) vond dat ashwagandha het serumcortisol significant verlaagde ten opzichte van placebo. De gemiddelde daling was circa 23-28% na 60 dagen bij 300 mg KSM-66 extract, tweemaal daags. Gebruikers rapporteren betere slaap, minder piekeren en meer stressbestendigheid.</p>
       <p><strong>Rhodiola rosea</strong> richt zich meer op mentale vermoeidheid en burn-out. Studies bij gestresste professionals en studenten tonen verbetering in cognitieve functie, vermoeidheidsscores en stressbestendigheid. Rhodiola werkt deels via het serotonine- en dopamine-systeem — het ondersteunt niet alleen stressbestendigheid maar ook motivatie en stemming.</p>
       <p><strong>L-theanine</strong> (uit groene thee) verhoogt alfa-hersengolven — de hersengolven die geassocieerd zijn met ontspannen alertheid. Het verlaagt cortisol niet direct, maar kalmeert het zenuwstelsel zonder slaperigheid. Ideaal voor overdag: je blijft scherp maar voelt je kalmer. Combineert goed met cafeïne (verzacht de cafeïnejitters).</p>
       <h3>Psychobiotica — de darm-hersen route naar kalmte</h3>
@@ -231,6 +234,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-06-05",
     category: "gewichtsbeheer",
     excerpt: "De markt voor afvalsupplementen is een mijnenveld van beloftes en teleurstellingen. Wij zochten uit welke ingrediënten je metabolisme echt ondersteunen, welke supplementen de moeite waard zijn en vooral: welke je kunt overslaan.",
+    citations: [{ author: "Kapoor MP, et al.", name: "Journal of Nutritional Biochemistry (2016)", url: "https://doi.org/10.1016/j.jnutbio.2016.10.013" }],
     content: `
       <h2>De realiteit van afvallen met supplementen</h2>
       <p>Laten we eerlijk beginnen: er bestaat geen pil die vet wegsmelt terwijl je op de bank zit. Elk supplement dat dat belooft, liegt. Afvallen draait fundamenteel om een calorietekort — je verbruikt meer energie dan je binnenkrijgt.</p>
@@ -238,7 +242,7 @@ export const blogPosts: BlogPost[] = [
       <p>1. <strong>Metabolisme-ondersteuning</strong>: Bepaalde stoffen kunnen je ruststofwisseling subtiel verhogen — denk aan 3-5% meer calorieverbruik in rust. Klein, maar over weken en maanden telt het op. 2. <strong>Verminderde eetlust</strong>: Vezels, eiwitten en bepaalde plantextracten kunnen het hongergevoel dempen, waardoor een calorietekort makkelijker vol te houden is. 3. <strong>Bloedsuikerregulatie</strong>: Stabielere bloedsuiker betekent minder cravings, minder energiedips en minder snaaimomenten. 4. <strong>Vetverbranding tijdens beweging</strong>: Sommige stoffen (cafeïne, groene thee-extract) mobiliseren vet uit vetcellen zodat het beschikbaar is als brandstof tijdens training.</p>
       <p>De beste supplementen doen minstens twee van deze vier dingen tegelijk — en vragen geen wonderen maar ondersteunen het proces dat jij met voeding en beweging in gang zet.</p>
       <h2>Ingrediënten die je metabolisme echt ondersteunen</h2>
-      <p><strong>Groene thee-extract (EGCG)</strong> is een van de best onderzochte natuurlijke metabolisme-ondersteuners. Een meta-analyse in Obesity Reviews concludeerde dat groene thee-extract het energieverbruik met gemiddeld 4-5% verhoogt over 24 uur. Het mechanisme: EGCG remt het enzym catechol-O-methyltransferase (COMT), waardoor noradrenaline langer actief blijft en de vetverbranding toeneemt. Dosering in studies: 300-500 mg EGCG per dag.</p>
+      <p><strong>Groene thee-extract (EGCG)</strong> is een van de best onderzochte natuurlijke metabolisme-ondersteuners. Een meta-analyse van 8 gerandomiseerde studies (Kapoor et al., 2016) concludeerde dat EGCG uit groene thee het energieverbruik in vergelijking met placebo mild maar meetbaar verhoogt. Het mechanisme: EGCG remt het enzym catechol-O-methyltransferase (COMT), waardoor noradrenaline langer actief blijft en de vetverbranding toeneemt. Dosering in studies: 300-500 mg EGCG per dag.</p>
       <p><strong>Cafeïne</strong> is de bekendste metabolisme-booster. Het verhoogt de stofwisseling met 3-11% gedurende enkele uren na inname, afhankelijk van dosering en tolerantie. Het effect neemt af bij regelmatig gebruik (tolerantie), maar blijft meetbaar. Combineert goed met groene thee-extract voor synergetisch effect.</p>
       <p><strong>Capsaïcine</strong> (uit chilipepers) verhoogt het energieverbruik via thermogenese — je lichaam produceert extra warmte na inname, wat calorieën kost. Het effect is klein (ongeveer 50 extra kcal per dag) maar cumulatief interessant. Niet iedereen verdraagt de pittigheid.</p>
       <p><strong>Oplosbare vezels</strong> (glucomannan, psyllium, inuline) zwellen in de maag en vertragen de maaglediging, wat leidt tot een voller gevoel en minder calorie-inname. Glucomannan (konjacwortel) heeft een goedgekeurde EU-gezondheidsclaim: "Draagt bij aan gewichtsverlies in combinatie met een energiebeperkt dieet." Let op: voldoende water drinken is essentieel — vezels zonder water kunnen verstoppend werken.</p>
@@ -434,6 +438,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-06-14",
     category: "mentaal",
     excerpt: "Drie supplementen in één bundel klinkt handig. Maar is het ook goedkoper? We vergelijken de Happy Juice Pack met losse aankoop — prijs, synergie, en praktisch gemak — zodat je weet wat voor jou de beste keuze is.",
+    author: "Mark",
     content: `
       <h2>Waarom zou je een bundel overwegen?</h2>
       <p>Je kent het: je begint met één supplement. Dan lees je over een ander. En nog een. Voor je het weet heb je drie potjes op je aanrecht — elk op een ander tijdstip gestart, met een ander betaalmoment, in een andere verpakking. Het werkt, maar het voelt als administreren in plaats van je gezondheid ondersteunen.</p>
@@ -492,6 +497,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-06-16",
     category: "darmen",
     excerpt: "Probiotica en prebiotica klinken hetzelfde, werken fundamenteel anders, en zijn allebei essentieel voor je darmflora. Ontdek het verschil, waarom psychobiotica zoals MentaBiotics een aparte categorie vormen, en hoe je de juiste kiest.",
+    author: "Mark",
     content: `
       <h2>Waarom iedereen het over darmbacteriën heeft</h2>
       <p>Tien jaar geleden was "probiotica" een nicheterm die je alleen in reformwinkels hoorde. Vandaag is het een miljardenindustrie — en met reden. Je darmmicrobioom beïnvloedt je stemming, immuunsysteem, spijsvertering, energieniveau en zelfs je huid. De wetenschap ontdekt elk jaar nieuwe verbanden tussen darmbacteriën en gezondheid.</p>
@@ -809,6 +815,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-06-02",
     category: "Hormonen & Vrouwelijk Welzijn",
     excerpt: "Van energiedips tot stemmingswisselingen — je hormonen spelen een hoofdrol in hoe je je voelt. Ontdek hoe je hormonale disbalans herkent, wat er per levensfase verandert, en welke supplementen écht kunnen ondersteunen.",
+    author: "Mark",
     content: `
       <h2>Waarom hormonale balans zo bepalend is voor vrouwelijk welzijn</h2>
       <p>Er zijn dagen waarop je moeite hebt je te concentreren, terwijl je de avond ervoor vroeg naar bed ging. Dagen waarop je prikkelbaarder bent dan je zou willen, zonder duidelijke aanleiding. Of nachten waarin je wakker ligt terwijl je lichaam uitgeput voelt — alsof iemand de thermostaat van je interne systeem op de verkeerde stand heeft gezet.</p>
@@ -893,6 +900,8 @@ export const blogPosts: BlogPost[] = [
     date: "2026-05-31",
     category: "Mentale Focus & Stress",
     excerpt: "Steeds meer mensen zoeken naar supplementen voor betere focus en concentratie. Ontdek wat nootropics zijn, welke natuurlijke ingrediënten werken, en hoe je een focus supplement kiest dat bij je past.",
+    author: "Mark",
+    citations: [{ author: "Peth-Nui T, et al.", name: "Evidence-Based Complementary and Alternative Medicine (2012)", url: "https://doi.org/10.1155/2012/606424" }],
     content: `
       <h2>Waarom steeds meer mensen supplementen nemen voor focus</h2>
       <p>We leven in een aandachtscrisis. De gemiddelde Nederlander checkt zijn telefoon 80 keer per dag, schakelt elke 3 tot 11 minuten tussen taken, en krijgt dagelijks meer informatie te verwerken dan iemand in de 15e eeuw in zijn hele leven. Tegelijkertijd wordt van ons verwacht dat we diep nadenken, creatief zijn, complexe problemen oplossen — en dat acht uur per dag.</p>
@@ -969,6 +978,7 @@ export const blogPosts: BlogPost[] = [
     category: "Schoonheid",
     excerpt: "Bijna de helft van alle vrouwen krijgt ooit te maken met haaruitval. Ontdek de meest voorkomende oorzaken, welke vitaminen en mineralen essentieel zijn voor gezonde haargroei, en welke supplementen wetenschappelijk onderbouwd zijn.",
     author: "Mark",
+    citations: [{ author: "Leavitt A, et al.", name: "Journal of Drugs in Dermatology (2025)", url: "https://doi.org/10.36849/JDD.8763" }],
     content: `
       <h2>Haaruitval bij vrouwen: veel voorkomender dan je denkt</h2>
       <p>Als je aan haaruitval denkt, zie je waarschijnlijk een man met een terugtrekkende haarlijn voor je. Maar de cijfers vertellen een ander verhaal: naar schatting <strong>krijgt 40 tot 50% van alle vrouwen</strong> op enig moment in hun leven te maken met zichtbaar haarverlies. In Nederland alleen al gaat het om honderdduizenden vrouwen — en het taboe is groot.</p>
@@ -1057,6 +1067,8 @@ export const blogPosts: BlogPost[] = [
     date: "2026-05-27",
     category: "Darmen & Spijsvertering",
     excerpt: "Wist je dat 90% van je serotonine in je darmen wordt gemaakt? Ontdek hoe de gut-brain connectie werkt, waarom je darmen je 'tweede brein' zijn, en hoe je deze cruciale verbinding ondersteunt voor een betere stemming en mentale helderheid.",
+    author: "Mark",
+    citations: [{ author: "Kapela M, et al.", name: "Frontiers in Molecular Neuroscience (2026)", url: "https://doi.org/10.3389/fnmol.2026.1903770" }],
     content: `
       <h2>Je darmen als tweede brein: waarom dit ertoe doet</h2>
       <p>Stel je voor: je hebt een belangrijke presentatie en je voelt vlinders in je buik. Of je bent verdrietig en hebt nergens trek in. Dit zijn geen toevalligheden — het zijn signalen van een van de meest fascinerende biologische verbindingen in je lichaam: de <strong>gut-brain connectie</strong>. Je darmen en hersenen staan continu met elkaar in contact via een complex netwerk van zenuwen, hormonen en chemische boodschappers. Sterker nog: je darmen bevatten zo'n 100 miljoen neuronen — meer dan je ruggenmerg — en produceren een groot deel van de signaalstoffen die bepalen of je je energiek, somber, gefocust of angstig voelt. Het enterisch zenuwstelsel — het zenuwstelsel van je darmen — functioneert grotendeels zelfstandig en wordt inmiddels het "tweede brein" genoemd.</p>
@@ -1100,6 +1112,8 @@ export const blogPosts: BlogPost[] = [
     date: "2026-05-28",
     category: "Mentale Gezondheid",
     excerpt: "Alles over ashwagandha kopen in Nederland: KSM-66 vs Sensoril, dosering, bewezen voordelen en waar je op moet letten bij het kiezen van een kwalitatief supplement.",
+    author: "Mark",
+    citations: [{ author: "Chandrasekhar K, et al.", name: "Indian Journal of Psychological Medicine (2012)", url: "https://doi.org/10.4103/0253-7176.106022" }],
     content: `
       <h2>De stijgende populariteit van ashwagandha in Nederland</h2>
       <p>Vijf jaar geleden had bijna niemand in Nederland van ashwagandha gehoord. Vandaag is het een van de snelst groeiende supplementen, met duizenden maandelijkse zoekopdrachten naar "ashwagandha kopen". De verklaring: toenemende stress door onze altijd-aan-cultuur, een groeiende scepsis tegenover synthetische middelen, en een gestage stroom aan wetenschappelijk onderzoek dat de effecten van dit oeroude Ayurvedische kruid bevestigt.</p>
@@ -1304,6 +1318,8 @@ export const blogPosts: BlogPost[] = [
     date: "2026-05-17",
     category: "Darmen & Mentaal",
     excerpt: "Wist je dat 90% van je serotonine in je darmen wordt aangemaakt? Ontdek hoe probiotica via de darm-hersen-as je stemming beïnvloeden — en waarom MentaBiotics specifiek hiervoor is ontwikkeld.",
+    author: "Mark",
+    citations: [{ author: "Messaoudi M, et al.", name: "British Journal of Nutrition (2011)", url: "https://doi.org/10.1017/S0007114510004319" }],
     content: `
       <h2>Wat zijn probiotica en hoe beïnvloeden ze je stemming?</h2>
       <p>Probiotica zijn levende micro-organismen die, wanneer ze in voldoende hoeveelheden worden ingenomen, een positief effect hebben op je gezondheid. Maar wist je dat deze <strong>goede darmbacteriën ook direct invloed hebben op hoe je je voelt?</strong> Het klinkt misschien verrassend, maar je darmen en hersenen staan constant met elkaar in verbinding — en die communicatie verloopt via wat wetenschappers de <strong>darm-hersen-as</strong> (gut-brain axis) noemen.</p>
@@ -1367,6 +1383,7 @@ export const blogPosts: BlogPost[] = [
     category: "Energie",
     excerpt: "Altijd moe? Ontdek welke supplementen écht werken voor meer energie — zonder cafeïnecrash. Van mitochondriën tot natuurlijke energieboosters.",
     author: "Mark",
+    citations: [{ author: "Barbagallo M, et al.", name: "Nutrients (2021)", url: "https://doi.org/10.3390/nu13020463" }],
     content: `
       <h2>Wat is cel-energie en waarom ben je zo moe?</h2>
       <p>Voel je je vaak futloos, ook na een goede nacht slaap? Je bent niet alleen. <strong>Vermoeidheid is de meest gerapporteerde klacht</strong> in Nederland — ruim 30% van de volwassenen geeft aan regelmatig last te hebben van aanhoudende vermoeidheid.</p>
@@ -1513,6 +1530,8 @@ export const blogPosts: BlogPost[] = [
     date: "2026-04-10",
     category: "Energie",
     excerpt: "Voel je je constant moe? Een ijzertekort kan de boosdoener zijn. Leer hoe je de signalen herkent en wat je eraan kunt doen.",
+    author: "Mark",
+    citations: [{ author: "Hurrell R & Egli I", name: "American Journal of Clinical Nutrition (2010)", url: "https://doi.org/10.3945/ajcn.2010.28674F" }],
     content: `
       <h2>De Impact van IJzer op je Energie</h2>
       <p>IJzer is essentieel voor de aanmaak van hemoglobine, het eiwit in rode bloedcellen dat zuurstof door je lichaam transporteert. Zonder voldoende ijzer krijgt je lichaam niet genoeg zuurstof, wat leidt tot uitputting.</p>
@@ -1539,6 +1558,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-04-05",
     category: "Metabolisme",
     excerpt: "MCT-olie is razend populair in de wellness-wereld. Maar wat doet het precies voor je energie en vetverbranding?",
+    author: "Mark",
     content: `
       <h2>Wat is MCT Olie?</h2>
       <p>MCT staat voor Medium Chain Triglycerides. In tegenstelling tot andere vetten worden MCT's direct door de lever opgenomen en omgezet in directe energie (ketonen).</p>
@@ -1562,6 +1582,8 @@ export const blogPosts: BlogPost[] = [
     date: "2026-03-05",
     category: "Mentaal Welzijn",
     excerpt: "Adaptogenen zijn natuurlijke stoffen die je lichaam helpen om te gaan met stress en vermoeidheid.",
+    author: "Mark",
+    citations: [{ author: "Chandrasekhar K, et al.", name: "Indian Journal of Psychological Medicine (2012)", url: "https://doi.org/10.4103/0253-7176.106022" }],
     content: `
       <h2>Wat zijn Adaptogenen?</h2>
       <p>Adaptogenen zijn een unieke groep kruiden die de natuurlijke weerstand van het lichaam tegen stress verhogen. Ze werken door het reguleren van de balans in het lichaam (homeostase).</p>
@@ -1598,6 +1620,8 @@ export const blogPosts: BlogPost[] = [
     date: "2026-05-01",
     category: "Wellness",
     excerpt: "Leer waarom calcium essentieel is voor je botdichtheid en hoe de synergie met vitamine D3 de opname optimaliseert.",
+    author: "Mark",
+    citations: [{ author: "Kidd PM", name: "Alternative Medicine Review (2010)", url: "https://pubmed.ncbi.nlm.nih.gov/21155624/" }],
     content: `
       <h2>Botgezondheid en Calcium</h2>
       <p>Calcium is de belangrijkste bouwsteen voor onze botten. Echter, zonder de juiste hulpstoffen kan je lichaam calcium niet effectief opnemen of naar de juiste plaatsen transporteren.</p>
@@ -1616,6 +1640,8 @@ export const blogPosts: BlogPost[] = [
     date: "2026-04-30",
     category: "Metabolisme",
     excerpt: "Zink speelt een cruciale rol bij de hormoonproductie. Ontdek hoe dit mineraal je vitaliteit en testosteronspiegel ondersteunt.",
+    author: "Mark",
+    citations: [{ author: "Tanaka T, et al.", name: "Nutrients (2025)", url: "https://doi.org/10.3390/nu17050867" }],
     content: `
       <h2>Zink: Het Mannen Mineraal?</h2>
       <p>Hoewel zink essentieel is voor iedereen, speelt het een specifieke rol bij de productie van testosteron en de vruchtbaarheid bij mannen.</p>
@@ -1634,6 +1660,8 @@ export const blogPosts: BlogPost[] = [
     date: "2026-04-29",
     category: "Immuniteit",
     excerpt: "Iedereen kent vitamine C, maar wist je dat het ook de opname van ijzer verhoogt en je cellen beschermt tegen oxidatieve stress?",
+    author: "Mark",
+    citations: [{ author: "Carr AC & Rowe S", name: "Nutrients (2020)", url: "https://doi.org/10.3390/nu12071963" }],
     content: `
       <h2>Meer dan een Weerstand Booster</h2>
       <p>Vitamine C is een krachtige antioxidant die bijdraagt aan de bescherming van cellen tegen oxidatieve schade en essentieel is voor de vorming van collageen.</p>
@@ -1652,12 +1680,14 @@ export const blogPosts: BlogPost[] = [
     date: "2026-04-28",
     category: "Beauty",
     excerpt: "Ontdek de geheimen van vitamine E voor een elastische huid en glanzend haar. Leer waarom tocotriënolen de beste vorm zijn.",
+    author: "Mark",
+    citations: [{ author: "Chong JY, et al.", name: "Redox Biology (2025)", url: "https://doi.org/10.1016/j.redox.2025.103874" }],
     content: `
       <h2>Vitamine E: Celbeschermer</h2>
       <p>Vitamine E draagt bij aan de bescherming van cellen tegen oxidatieve stress door vrije radicalen te neutraliseren. Dit is essentieel voor het behoud van een gezonde huidstructuur.</p>
       
       <h3>Tocotriënolen vs Tocoferolen</h3>
-      <p>Niet alle vitamine E is gelijk. Tocotriënolen zijn tot wel 50 keer krachtiger dan de standaard tocoferolen die je in de meeste supplementen vindt.</p>
+      <p>Niet alle vitamine E is gelijk. Tocotriënolen laten in onderzoek een sterkere antioxidantwerking zien dan de standaard tocoferolen die je in de meeste supplementen vindt.</p>
       
       <h3>Amare Sunset Focus</h3>
       <p><strong>Amare Sunset</strong> bevat de meest krachtige vorm van vitamine E (tocotriënolen) voor een diepgaand herstel van je huid en weefsels tijdens de nacht.</p>
@@ -1670,6 +1700,8 @@ export const blogPosts: BlogPost[] = [
     date: "2026-04-27",
     category: "Gut Health",
     excerpt: "Wist je dat 90% van je serotonine in je darmen wordt aangemaakt? Leer hoe je darmgezondheid je mentale welzijn beïnvloedt.",
+    author: "Mark",
+    citations: [{ author: "Kapela M, et al.", name: "Frontiers in Molecular Neuroscience (2026)", url: "https://doi.org/10.3389/fnmol.2026.1903770" }],
     content: `
       <h2>De Tweede Hersenen</h2>
       <p>Je darmen en hersenen staan constant in verbinding via de nervus vagus. Deze 'as' reguleert je stemming, slaap en stressrespons.</p>
@@ -1688,6 +1720,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-04-25",
     category: "Energie",
     excerpt: "Voel je je futloos? B-vitamines zijn essentieel voor het omzetten van voeding in bruikbare energie voor je hersenen en spieren.",
+    author: "Mark",
     content: `
       <h2>Het B-Complex</h2>
       <p>B-vitamines (zoals B1, B2, B6 en B12) fungeren als co-enzymen bij het vrijmaken van energie uit koolhydraten, vetten en eiwitten.</p>
@@ -1706,6 +1739,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-04-23",
     category: "Gut Health",
     excerpt: "Niet alle probiotica zijn gelijk. Leer welke stammen zoals Lactobacillus en Bifidobacterium het beste werken voor jouw darmflora.",
+    author: "Mark",
     content: `
       <h2>Kwaliteit over Kwantiteit</h2>
       <p>Het gaat niet alleen om het aantal bacteriën (CFU's), maar vooral om de specifieke stammen en hun overlevingskans in je maagzuur.</p>
@@ -1724,6 +1758,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-05-18",
     category: "Pakketten & Bundels",
     excerpt: "Het #1 bestverkopende Amare pakket combineert MentaBiotics, Energy+ en Amare EDGE+ voor totale mentale ondersteuning — voordeliger dan los kopen. Ontdek waarom duizenden Nederlanders voor deze bundel kiezen.",
+    author: "Mark",
     content: `
       <h2>Wat is de Happy Juice Pack?</h2>
       <p>De <strong>Happy Juice Pack</strong> is het bestverkopende productpakket van Amare — en dat is niet zonder reden. Deze complete bundel combineert <strong>drie van de meest populaire formules</strong> in één voordelig pakket: MentaBiotics voor de darm-hersen-as, Energy+ voor natuurlijke energie, en Amare EDGE+ voor mentale scherpte en focus.</p>
@@ -1782,6 +1817,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-05-18",
     category: "Pakketten & Bundels",
     excerpt: "De Triangle of Wellness Xtreme combineert Sunrise, Nitro Xtreme en Sunset in één dagelijkse routine — ochtendenergie, middagfocus en avondherstel. Het meest complete basispakket van Amare.",
+    author: "Mark",
     content: `
       <h2>Wat is de Triangle of Wellness Xtreme?</h2>
       <p>De <strong>Triangle of Wellness Xtreme</strong> is het signature systeem van Amare — een driedelige dagelijkse routine die je van ochtend tot avond ondersteunt. Het concept is gebaseerd op het natuurlijke dagritme van je lichaam: <strong>opbouwen, presteren en herstellen</strong>.</p>
@@ -1904,6 +1940,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-05-18",
     category: "Pakketten & Bundels",
     excerpt: "De Happy Lifestyle Pack is de meest complete bundel van Amare — tot 15 producten in één voordelig pakket voor wie totale ondersteuning zoekt. Van darmgezondheid tot collageen, alles inbegrepen.",
+    author: "Mark",
     content: `
       <h2>Wat is de Happy Lifestyle Pack?</h2>
       <p>De <strong>Happy Lifestyle Pack</strong> is de meest uitgebreide bundel die Amare aanbiedt — ontworpen voor wie geen halve maatregelen wil nemen als het om welzijn gaat. Waar de Happy Juice Pack zich richt op mentale energie en focus, en de Triangle of Wellness op dagelijkse basisondersteuning, dekt de Happy Lifestyle Pack <strong>vrijwel het volledige Amare assortiment</strong> in één maandelijks pakket.</p>
@@ -1970,6 +2007,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-03-10",
     category: "Lifestyle & Wellness",
     excerpt: "De Triangle of Wellness is Amare's holistische benadering van gezondheid. Lees hoe voeding, mind en vitaliteit samenkomen.",
+    author: "Mark",
     content: `
       <h2>Wat is de Amare Triangle of Wellness?</h2>
       <p>De Triangle of Wellness is de filosofie achter alle Amare producten. Het concept is eenvoudig maar krachtig: optimale gezondheid ontstaat wanneer drie pijlers in balans zijn — <strong>voeding</strong>, <strong>mentale gezondheid</strong> en <strong>vitaliteit</strong>. In plaats van je te richten op één aspect van gezondheid, erkent Amare dat alles met elkaar verbonden is. Je darmen beïnvloeden je stemming. Je energieniveau beïnvloedt je eetlust. Je mentale staat beïnvloedt je immuunsysteem.</p>
@@ -2057,6 +2095,7 @@ export const blogPosts: BlogPost[] = [
     date: "2024-11-15",
     category: "Lifestyle & Wellness",
     excerpt: "De discussie tussen natuurlijke en synthetische gezondheidsproducten wordt steeds relevanter. Waar haal jij je gezondheid?",
+    author: "Mark",
     content: `
       <h2>Wat is het verschil tussen de apotheek en de groenteboer?</h2>
       <p>We leven in een tijd waarin we meer keuze hebben dan ooit als het gaat om onze gezondheid. Aan de ene kant heb je de traditionele apotheek met medicijnen en synthetische supplementen. Aan de andere kant is er de groeiende wereld van natuurlijke supplementen en functionele voeding. Maar wat past het beste bij jouw lichaam?</p>
@@ -2265,7 +2304,7 @@ Begin met een basisvorm zoals bisglycinaat (200-400 mg elementair), neem het 's 
     citations: [{ author: "Ganio MS, et al.", name: "British Journal of Nutrition (2011)", url: "https://doi.org/10.1017/S0007114511002005" }],
     content:`<h2>Meer dan alleen sportdrank</h2><p>De term elektrolyten roept waarschijnlijk beelden op van felgekleurde sportdrankjes. Maar elektrolyten zijn geen marketingterm — het zijn letterlijk de mineralen die je lichaam gebruikt om signalen door te geven, spieren te laten samentrekken, en vocht op de juiste plek te houden.</p><p>Zonder elektrolyten werkt je zenuwstelsel niet. Je hart klopt niet. Je spieren bewegen niet.</p><h2>Wat zijn elektrolyten eigenlijk?</h2><p>De belangrijkste elektrolyten in je lichaam zijn natrium, kalium, magnesium, calcium, chloride en fosfaat. Stuk voor stuk mineralen die een elektrische lading dragen. Je zenuwcellen gebruiken elektrische signalen om te communiceren, en die signalen worden opgewekt door de beweging van elektrolyten door celmembranen.</p><h2>Wanneer heb je extra nodig?</h2><p>Niet na een halfuurtje rustig joggen. Maar er zijn momenten waarop de balans verstoord raakt: intensief sporten (60+ minuten), warm weer, alcohol, keto of vasten, ziekte met koorts.</p><p>De klassieke signalen van een tekort: spierkramp, hoofdpijn, vermoeidheid, duizeligheid, hartkloppingen.</p><h2>De simpelste elektrolytendrank</h2><p>500 ml water, snufje zout (natrium), scheutje citroensap (kalium). Optioneel: mespuntje magnesiumpoeder. Klaar.</p><p>Voor dagelijkse ondersteuning leveren Amare's Nitro Xtreme en Origin de mineralen die je nodig hebt.</p><p><em>* Voedingssupplement. Geen geneesmiddel.</em></p>`},
   {slug:"supplementen-combineren-wel-niet-gids",title:"Supplementen Combineren: Wat Kan Wel en Niet?",date:"2026-07-14",category:"essentials",excerpt:"Niet alle supplementen gaan goed samen. Ontdek welke combinaties elkaar versterken en welke je beter scheidt.",content:`<h2>De supplementenpuzzel</h2><p>Je hebt magnesium voor het slapen, vitamine D bij het ontbijt, ijzer op een lege maag. Voor je het weet sta je een halfuur per dag pillen te sorteren. Maar welke combinaties zijn eigenlijk nuttig?</p><p>Het eerlijke antwoord: de meeste supplementen kunnen prima samen, maar er zijn een paar combinaties die je echt moet weten.</p><h2>De gouden combinaties</h2><p><strong>IJzer + Vitamine C:</strong> Vitamine C verhoogt de opname van ijzer met tot 6 keer.</p><p><strong>Vitamine D3 + K2:</strong> D3 zorgt dat calcium wordt opgenomen, K2 zorgt dat het op de juiste plek terechtkomt.</p><p><strong>Probiotica + Prebiotica:</strong> Probiotica zijn de zaadjes, prebiotica de mest. Samen sterker.</p><h2>De combinaties die je beter vermijdt</h2><p><strong>IJzer + Calcium:</strong> Calcium remt ijzeropname. Minimaal 4 uur ertussen.</p><p><strong>IJzer + Koffie/Thee:</strong> Tannines binden aan ijzer. Wacht minimaal 1 uur.</p><h2>De Amare aanpak</h2><p>Sunrise combineert ijzerrijke superfoods met natuurlijke vitamine C. De Triangle of Wellness regelt de timing voor je.</p><p><em>* Voedingssupplement. Geen geneesmiddel.</em></p>`},
-  {slug:"lions-mane-paddenstoel-focus-nootropic",title:"Lion's Mane: De Paddenstoel Die Je Focus Verandert",date:"2026-07-16",category:"mentaal",excerpt:"Iedereen heeft het erover: Lion's Mane. Deze harige paddenstoel zou je focus verbeteren. Wat is er wetenschappelijk van waar?",content:`<h2>Een paddenstoel die eruitziet als een witte pompon</h2><p>Stel je voor: je loopt door een bos in Azië en aan een oude boomstam hangt een witte, harige bol. Dat is Lion's Mane — Hericium erinaceus. Deze paddenstoel wordt al eeuwen gebruikt in de traditionele Chinese geneeskunde.</p><h2>Wat doet het?</h2><p>Lion's Mane stimuleert de aanmaak van NGF — Nerve Growth Factor. Een eiwit dat de groei en het onderhoud van zenuwcellen ondersteunt. Het is geen stimulant zoals cafeïne — het werkt sluipend, op de achtergrond.</p><h2>Lion's Mane vs cafeïne</h2><p>Cafeïne maskeert vermoeidheid. Lion's Mane ondersteunt de infrastructuur van je hersenen. Het is het verschil tussen een energiedrank en een voedzame maaltijd.</p><h2>Hoe verhoudt het zich tot EDGE+?</h2><p>EDGE+ gebruikt pantotheenzuur, goji en adaptogenen. Lion's Mane werkt via NGF-stimulatie. Het zijn geen concurrenten maar aanvullingen.</p><p><em>* Voedingssupplement. Geen geneesmiddel.</em></p>`},
+  {slug:"lions-mane-paddenstoel-focus-nootropic",title:"Lion's Mane: De Paddenstoel Die Je Focus Verandert",date:"2026-07-16",category:"mentaal",excerpt:"Iedereen heeft het erover: Lion's Mane. Deze harige paddenstoel zou je focus verbeteren. Wat is er wetenschappelijk van waar?",author:"Mark",citations:[{author:"Mori K, et al.",name:"Phytotherapy Research (2009)",url:"https://doi.org/10.1002/ptr.2634"}],content:`<h2>Een paddenstoel die eruitziet als een witte pompon</h2><p>Stel je voor: je loopt door een bos in Azië en aan een oude boomstam hangt een witte, harige bol. Dat is Lion's Mane — Hericium erinaceus. Deze paddenstoel wordt al eeuwen gebruikt in de traditionele Chinese geneeskunde.</p><h2>Wat doet het?</h2><p>Lion's Mane stimuleert de aanmaak van NGF — Nerve Growth Factor. Een eiwit dat de groei en het onderhoud van zenuwcellen ondersteunt. Het is geen stimulant zoals cafeïne — het werkt sluipend, op de achtergrond.</p><h2>Lion's Mane vs cafeïne</h2><p>Cafeïne maskeert vermoeidheid. Lion's Mane ondersteunt de infrastructuur van je hersenen. Het is het verschil tussen een energiedrank en een voedzame maaltijd.</p><h2>Hoe verhoudt het zich tot EDGE+?</h2><p>EDGE+ gebruikt pantotheenzuur, goji en adaptogenen. Lion's Mane werkt via NGF-stimulatie. Het zijn geen concurrenten maar aanvullingen.</p><p><em>* Voedingssupplement. Geen geneesmiddel.</em></p>`},
   {slug:"berberine-bloedsuiker-metabolisme-supplement",title:"Berberine: Het Supplement Waar Iedereen Het Over Heeft",date:"2026-07-18",category:"essentials",excerpt:"Social media staat er vol mee: berberine. Maar wat doet deze felgele plantenstof nu echt?",author: "Mark",
     citations: [{ author: "Nazari A, et al.", name: "Clinical Therapeutics (2023)", url: "https://doi.org/10.1016/j.clinthera.2023.10.019" }],
     content:`<h2>Het gele poeder dat TikTok gek maakte</h2><p>Een poeder uit een plant, felgeel van kleur, dat al eeuwen in de Chinese en Ayurvedische geneeskunde wordt gebruikt. Plotseling is het overal.</p><h2>Wat is berberine?</h2><p>Berberine is een alkaloïde die van nature voorkomt in planten zoals berberis en goldenseal. Het activeert AMPK — de 'metabole schakelaar' in je cellen die reguleert hoe je lichaam suiker en vet verwerkt.</p><h2>Is het echt 'nature's Ozempic'?</h2><p>Nee. Ozempic imiteert GLP-1, berberine werkt via AMPK. Totaal ander mechanisme. Wat wel waar is: berberine ondersteunt bloedsuikerspiegel en metabolisme — en dat is relevant voor gewichtsbeheer.</p><h2>Amare's invalshoek</h2><p>FIT20 ondersteunt spierherstel en metabolisme. Origin geeft verzadiging met 23g eiwit en MCT-olie. Samen pakken ze gewichtsbeheer aan zonder hype.</p><p><em>* Voedingssupplement. Geen geneesmiddel. Raadpleeg een arts bij medicijngebruik.</em></p>`},
@@ -2281,7 +2320,12 @@ Begin met een basisvorm zoals bisglycinaat (200-400 mg elementair), neem het 's 
     ],
     content: `<h2>Het volume van je gedachten zachter zetten</h2><p>Stel je je hersenen voor als een radio. Overdag staat het volume op standje werk. 's Avonds moet die knop terug. Maar voor veel mensen blijft hij hangen op 8.</p><p>Dat is waar GABA in beeld komt — de belangrijkste kalmerende neurotransmitter in je hersenen.</p><h2>Hoe werkt GABA?</h2><p>Je hersenen hebben twee hoofdmodi: actie (glutamaat) en rust (GABA). Bij chronische stress raakt die balans verstoord. Teveel glutamaat, te weinig GABA. GABA remt de activiteit van zenuwcellen, wat zich vertaalt in minder piekeren, een rustiger gevoel en makkelijker ontspannen.</p><h2>De bloed-brein barrière: het echte discussiepunt</h2><p>Hier moeten we eerlijk zijn: of GABA uit een supplement daadwerkelijk je hersenen bereikt, is al jaren onderwerp van wetenschappelijke discussie. GABA is een relatief grote, wateroplosbare molecuul, en de bloed-breinbarrière laat dat soort stoffen normaal gesproken maar beperkt door. Toch liet een kleine Japanse studie zien dat orale inname van GABA binnen een uur meetbare effecten had: meer alfagolven (geassocieerd met ontspanning) en minder bètagolven op het EEG, en bij mensen met hoogtevrees een minder sterke daling van een immuunmarker (IgA) tijdens het oversteken van een hangbrug — een aanwijzing voor minder stressreactie. De onderzoekers concludeerden dat GABA een meetbaar ontspannend effect kan hebben, ook al blijft precies hoe dat gebeurt (direct via de hersenen, of indirect via bijvoorbeeld het darmzenuwstelsel) een open vraag.</p><p>Praktisch betekent dit: verwacht geen gegarandeerd, direct effect zoals bij een kalmerend medicijn, maar wijs het effect ook niet zomaar af — de eerste aanwijzingen zijn voorzichtig positief.</p><h2>Wat wél goed onderbouwd is: de omweg via GABA-aanmaak</h2><p>Naast direct GABA innemen, is er een tweede route: je lichaam helpen om zelf meer GABA aan te maken of beter te benutten. Stoffen die daarbij kunnen helpen zijn L-theanine (een aminozuur uit groene thee) en magnesiumbisglycinaat, dat een rol speelt bij de GABA-receptoren in je hersenen.</p><h2>De Amare connectie: de darm-hersen route</h2><p>Interessant genoeg produceren bepaalde darmbacteriën zelf GABA. MentaBiotics van Amare ondersteunt deze bacteriestammen via de darm-hersen-as — een langzamere, maar mogelijk duurzamere route dan een direct GABA-supplement, omdat het de eigen productie in je lichaam ondersteunt in plaats van GABA van buitenaf toe te voegen.</p><h2>Hoe gebruik je een GABA-supplement?</h2><p>GABA-supplementen worden meestal 's avonds ingenomen, 30 tot 60 minuten voor je wilt ontspannen of gaan slapen, in doseringen van 100 tot 750 mg. Begin aan de lage kant en kijk hoe je lichaam reageert — bij sommige mensen geeft een hogere dosering juist een tintelend of licht opgejaagd gevoel in plaats van rust.</p><h2>Veelgestelde vragen</h2><p><strong>Werkt een GABA-supplement net zo goed als L-theanine of magnesium?</strong><br/>Ze werken via net iets andere routes en kunnen elkaar aanvullen. GABA grijpt mogelijk direct aan op ontspanning, terwijl L-theanine en magnesium je lichaam ondersteunen om zelf een gezonde GABA-balans te behouden.</p><p><strong>Is een GABA-supplement veilig om dagelijks te gebruiken?</strong><br/>Voor de meeste mensen wel, maar bouw rustig op en raadpleeg je arts als je medicatie gebruikt die inwerkt op je zenuwstelsel, zoals kalmerende middelen of slaapmedicatie.</p><p><strong>Waarom voel ik niet meteen effect?</strong><br/>Reacties verschillen sterk per persoon, mede door de onduidelijkheid over hoe goed GABA de hersenen bereikt. Sommige mensen merken al binnen een uur verschil, anderen pas na consistent gebruik van enkele weken via de indirecte, darm-hersen-route.</p><h2>Conclusie</h2><p>GABA is de belangrijkste kalmerende neurotransmitter van je brein, en de wetenschap achter GABA-supplementen is voorzichtig positief maar nog niet sluitend — vooral door de onduidelijke rol van de bloed-breinbarrière. Wie liever een goed onderbouwde omweg neemt, kan kijken naar L-theanine, magnesium, of een darm-hersen-gerichte aanpak zoals MentaBiotics.</p><p>Meer weten over hoe je darmen en hersenen precies communiceren? Lees onze <a href="/gut-brain-axis">complete gids over de darm-hersen-as</a>.</p><p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij aanhoudende gezondheidsklachten altijd een arts.</em></p>`
   },
-  {slug:"omega-3-hersenen-cognitie-supplement-wetenschap",title:"Omega-3 Vetzuren: Waarom Je Hersenen Ze Elke Dag Nodig Hebben",date:"2026-06-23",category:"mentaal",excerpt:"Je hersenen bestaan voor bijna 60% uit vet — en een groot deel daarvan is omega-3 DHA. Toch krijgt het gros van de Nederlanders te weinig binnen. Dit is wat de wetenschap zegt over omega-3, cognitie en stemming.",content:`<h2>Je hersenen op vet: waarom omega-3 geen hype is</h2>
+  {slug:"omega-3-hersenen-cognitie-supplement-wetenschap",title:"Omega-3 Vetzuren: Waarom Je Hersenen Ze Elke Dag Nodig Hebben",date:"2026-06-23",category:"mentaal",excerpt:"Je hersenen bestaan voor bijna 60% uit vet — en een groot deel daarvan is omega-3 DHA. Toch krijgt het gros van de Nederlanders te weinig binnen. Dit is wat de wetenschap zegt over omega-3, cognitie en stemming.",author: "Mark",
+    citations: [
+      { author: "Liao Y, et al.", name: "Translational Psychiatry (2019)", url: "https://doi.org/10.1038/s41398-019-0515-5" },
+      { author: "Morris MC, et al.", name: "Archives of Neurology (2003)", url: "https://doi.org/10.1001/archneur.60.7.940" }
+    ],
+    content:`<h2>Je hersenen op vet: waarom omega-3 geen hype is</h2>
 <p>Stel je je hersenen voor als een commandocentrum met 86 miljard zenuwcellen, elk verbonden met duizenden andere. De muren van dat commandocentrum — de celmembranen — bestaan voor een verrassend groot deel uit vet. En niet zomaar vet: <strong>DHA</strong> (docosahexaeenzuur), een omega-3 vetzuur, is het meest voorkomende structurele vet in je hersenen en netvlies. Zonder DHA functioneren je celmembranen simpelweg minder goed — ze worden stugger, trager, minder communicatief.</p>
 <p>Dit is geen randverschijnsel. DHA maakt ongeveer <strong>15 tot 20% van de totale vetten in je hersenschors</strong> uit. Het zit geconcentreerd in de synapsen — de plekken waar zenuwcellen met elkaar communiceren. Hoe meer DHA in je hersencelmembranen, hoe vloeiender die communicatie verloopt. Het omgekeerde is ook waar: een DHA-tekort remt letterlijk de snelheid waarmee signalen door je brein reizen.</p>
 <p>Toch is de Nederlandse omega-3-inname zorgwekkend laag. De Gezondheidsraad adviseert 450 mg EPA+DHA per dag uit vette vis. De gemiddelde Nederlander eet één keer per week vis — goed voor ongeveer 150 mg per dag. Dat is een derde van de aanbevolen hoeveelheid. En als je geen vis eet — vegetariër, veganist, of gewoon geen visliefhebber — kom je op vrijwel nul uit.</p>
@@ -2294,7 +2338,7 @@ Begin met een basisvorm zoals bisglycinaat (200-400 mg elementair), neem het 's 
 <p>Omega-3 is een van de best onderzochte supplementen ter wereld — en het bewijs voor de hersenen stapelt zich al decennia op. Hier zijn de belangrijkste bevindingen op een rij.</p>
 <p><strong>Stemming en depressie:</strong> Een meta-analyse uit 2019 (Translational Psychiatry, 26 studies) vond dat omega-3 supplementen met minimaal 60% EPA — dus EPA-dominante formules — significant effectiever waren dan placebo bij het verminderen van depressieve symptomen. Formules met minder dan 60% EPA lieten geen significant effect zien. De effectieve dosering lag tussen 1 en 2 gram EPA per dag. Dit verklaart waarom "omega-3 voor je stemming" bij sommige mensen wel werkt en bij anderen niet — de verhouding EPA:DHA op het etiket bepaalt het resultaat.</p>
 <p><strong>Cognitie en geheugen:</strong> DHA-suppletie bij gezonde volwassenen laat gemengde resultaten zien — het verbetert cognitie niet dramatisch bij mensen die al voldoende binnenkrijgen. Maar bij mensen met een lage omega-3-status (wat de meerderheid van de Nederlanders is) is het effect wél meetbaar: verbeterde reactiesnelheid, beter werkgeheugen en snellere informatieverwerking. De effecten zijn subtiel maar consistent.</p>
-<p><strong>Veroudering van het brein:</strong> Dit is waar omega-3 echt schittert. Observationele studies tonen consistent dat mensen met een hogere DHA-inname of -bloedspiegel een lager risico hebben op cognitieve achteruitgang, Alzheimer en dementie. Een studie die 1.188 ouderen 9 jaar volgde (Morris et al., 2003, Archives of Neurology) vond dat degenen die minstens één keer per week vis aten 60% minder kans hadden op Alzheimer dan degenen die zelden of nooit vis aten. Let op: dit is een observationele studie — causale conclusies zijn voorzichtig. Maar het patroon is consistent over tientallen studies.</p>
+<p><strong>Veroudering van het brein:</strong> Dit is waar omega-3 echt schittert. Observationele studies tonen consistent dat mensen met een hogere DHA-inname of -bloedspiegel een lager risico hebben op cognitieve achteruitgang, Alzheimer en dementie. Een studie onder 815 ouderen, gevolgd gedurende gemiddeld 3,9 jaar (Morris et al., 2003, Archives of Neurology), vond dat degenen die minstens één keer per week vis aten 60% minder kans hadden op Alzheimer dan degenen die zelden of nooit vis aten. Let op: dit is een observationele studie — causale conclusies zijn voorzichtig. Maar het patroon is consistent over tientallen studies.</p>
 <p><strong>ADHD en hersenontwikkeling:</strong> Kinderen en tieners met ADHD hebben gemiddeld lagere omega-3 bloedspiegels. Suppletie met EPA+DHA (in verhouding 2:1, dosering 500-1000 mg per dag) verbetert bij sommige kinderen met ADHD de aandacht en vermindert hyperactiviteit — niet als vervanging van medicatie, maar als voedingsondersteuning van de neurologische basis.</p>
 <h2>Omega-3 uit voeding: wat moet je eten?</h2>
 <p>De beste natuurlijke bronnen van EPA en DHA zijn vette vissoorten. Een portie van 100 gram levert:</p>
@@ -2356,6 +2400,8 @@ Begin met een basisvorm zoals bisglycinaat (200-400 mg elementair), neem het 's 
     date: "2026-07-18",
     category: "darmen",
     excerpt: "Ontdek hoe een gezonde darmflora bijdraagt aan meer dan alleen spijsvertering, met impact op je energie, stemming en immuunsysteem.",
+    author: "Mark",
+    citations: [{ author: "Kapela M, et al.", name: "Frontiers in Molecular Neuroscience (2026)", url: "https://doi.org/10.3389/fnmol.2026.1903770" }],
     content: `<h2>Waarom is je darmflora zo belangrijk?</h2><p>Je darmen zijn een bruisend ecosysteem, boordevol miljarden bacteriën, schimmels en andere micro-organismen – samen bekend als je darmflora of microbioom. Dit complexe netwerk speelt een veel grotere rol dan je misschien denkt, en beïnvloedt niet alleen je spijsvertering, maar ook je energieniveau, stemming, immuunsysteem en zelfs je gewicht. Een disbalans kan leiden tot uiteenlopende klachten, van een opgeblazen gevoel tot vermoeidheid en stemmingswisselingen.</p><h2>De connectie tussen darmen en hersenen: De 'Gut-Brain Axis'</h2><p>Steeds meer onderzoek toont aan dat er een directe communicatielijn is tussen je darmen en je hersenen, bekend als de 'gut-brain axis'. Dit betekent dat de gezondheid van je darmen een directe impact heeft op je mentale welzijn. Een gezonde darmflora kan bijdragen aan de productie van neurotransmitters zoals serotonine, die essentieel zijn voor een positieve stemming. Daarom kan het ondersteunen van je darmgezondheid ook een positief effect hebben op stress en angstgevoelens.</p><p>Wil je meer weten over hoe je darmen en hersenen samenwerken? Bekijk dan de <a href="https://www.amare.com/2075008/nl-nl/happy-juice-pack" target="_blank" rel="nofollow noopener noreferrer">Happy Juice Pack</a> van Amare, speciaal ontwikkeld om de gut-brain connectie te ondersteunen. * Voedingssupplement. Geen geneesmiddel.</p><h2>Voeding als fundament voor een gezonde darmflora</h2><p>Wat je eet, heeft een enorme invloed op de samenstelling van je darmflora. Een dieet rijk aan vezels, gefermenteerde voedingsmiddelen en een verscheidenheid aan plantaardige producten voedt de goede bacteriën in je darmen. Denk aan:</p><ul><li><strong>Vezelrijke voeding:</strong> Groenten, fruit, peulvruchten en volle granen.</li><li><strong>Gefermenteerde producten:</strong> Kefir, yoghurt (met levende culturen), zuurkool en kimchi.</li><li><strong>Polyfenolen:</strong> Aanwezig in bessen, groene thee en pure chocolade. Deze plantenstoffen worden door je darmbacteriën omgezet in gunstige metabolieten die ontstekingsremmend werken.</li></ul><h2>De rol van supplementen: Probiotica en prebiotica</h2><p>Hoewel voeding de basis is, kunnen gerichte supplementen een extra steun in de rug bieden, met name als je darmflora uit balans is. <strong>Probiotica</strong> leveren levende, gunstige bacteriën die zich in je darmen kunnen vestigen. <strong>Prebiotica</strong> (zoals inuline of FOS) zijn onverteerbare vezels die dienen als voeding voor deze bacteriën, waardoor ze beter kunnen overleven en gedijen. Een combinatie van beide — een 'synbioticum' — is vaak het meest effectief.</p><p><strong>Amare MentaBiotics</strong> is een voorbeeld van een psychobioticum: een probioticum dat specifiek is onderzocht op zijn effecten op de darm-hersen-as. Het bevat stammen zoals Lactobacillus helveticus en Bifidobacterium longum die de aanmaak van neurotransmitters zoals serotonine en GABA kunnen ondersteunen, wat bijdraagt aan een betere stemming en stressbestendigheid. * Voedingssupplement. Geen geneesmiddel.</p><h2>Darmflora in balans: een langetermijnproject</h2><p>Je darmflora veranderen is geen quick fix. Het is een langetermijnproject dat consistentie vraagt. De eerste veranderingen in spijsvertering en energieniveau kunnen na 2 tot 4 weken merkbaar zijn. Voor een stabielere stemming en mentale veerkracht reken je op 6 tot 8 weken. Blijf gevarieerd eten, manage stress, beweeg voldoende en overweeg gerichte suppletie — je darmen zullen je dankbaar zijn.</p><h2>Veelgestelde vragen</h2><p><strong>Vraag 1: Hoe weet ik of mijn darmflora uit balans is?</strong></p><p>Signalen zijn onder andere een opgeblazen gevoel, wisselende ontlasting, vermoeidheid, huidproblemen, stemmingswisselingen en een lage weerstand. Een microbioomanalyse via ontlasting geeft gedetailleerd inzicht, maar je kunt ook al veel doen met leefstijl- en voedingsaanpassingen.</p><p><strong>Vraag 2: Zijn alle probiotica hetzelfde?</strong></p><p>Absoluut niet. Het gaat niet om het aantal CFU's (colony-forming units) maar om de specifieke bacteriestammen en hun klinische documentatie. Lactobacillus helveticus en Bifidobacterium longum zijn bijvoorbeeld specifiek onderzocht op hun effecten op de darm-hersen-as.</p><p><strong>Vraag 3: Hoe lang duurt het om mijn darmflora te herstellen?</strong></p><p>De eerste verschuivingen zijn al binnen enkele dagen tot weken merkbaar. Voor een significante, stabiele verbetering van de microbiële diversiteit en functie reken je op 6 tot 12 weken consistente aanpassingen. Het is een continu proces: je darmflora reageert op alles wat je doet en eet.</p><h2>Conclusie</h2><p>Een gezonde darmflora is de sleutel tot optimaal welzijn — van je spijsvertering tot je mentale veerkracht. Door te investeren in divers, vezelrijk voedsel, gefermenteerde producten en gerichte psychobiotica zoals Amare MentaBiotics, bouw je aan een robuust microbioom dat je hele lichaam ondersteunt.</p><p>Onthoud: je darmen zijn je tweede brein. Geef ze de liefde en aandacht die ze verdienen.</p>* Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij aanhoudende gezondheidsklachten altijd een arts. Dit product is niet geschikt voor zwangere vrouwen, borstvoeding gevende vrouwen en kinderen jonger dan 18 jaar.`,
     }
   ,
@@ -2365,6 +2411,7 @@ Begin met een basisvorm zoals bisglycinaat (200-400 mg elementair), neem het 's 
     date: "2026-07-29",
     category: "mentaal",
     excerpt: "Ontdek effectieve, natuurlijke strategieën om stress te verminderen, je mentale veerkracht te vergroten en een evenwichtiger leven te leiden.",
+    author: "Mark",
     content: `<h2>Natuurlijke manieren om stress te verminderen en je mentale veerkracht te versterken</h2><p>In de snelle wereld van vandaag is stress een onvermijdelijk onderdeel van ons leven geworden. Of het nu gaat om werkdruk, persoonlijke uitdagingen of de constante stroom van informatie, stress kan een aanzienlijke impact hebben op onze fysieke en mentale gezondheid. Maar wat als er natuurlijke manieren zijn om de greep van stress te verminderen en je innerlijke rust te herstellen? Dit artikel duikt in effectieve strategieën om stress aan te pakken, met een focus op holistische benaderingen die je mentale veerkracht kunnen versterken. <em>* Voedingssupplement. Geen geneesmiddel.</em></p><h3>De impact van stress op lichaam en geest</h3><p>Stress is meer dan alleen een gevoel; het is een complexe reactie van ons lichaam op waargenomen bedreigingen of uitdagingen. Wanneer we gestrest zijn, produceert ons lichaam hormonen zoals cortisol en adrenaline. Deze hormonen zijn nuttig in acute situaties (de \"vecht-of-vlucht\"-reactie), maar chronische blootstelling kan leiden tot een reeks gezondheidsproblemen. Denk aan slaapproblemen, spijsverteringsklachten, verminderde immuniteit en zelfs een negatieve invloed op onze stemming en cognitieve functies. Langdurige stress kan ons uitputten en het is daarom cruciaal om effectieve copingmechanismen te ontwikkelen. Als je vaak last hebt van vermoeidheid, lees dan ook ons artikel over <a href="/blogs/nieuws/altijd-moe-ontdek-hoe-cel-energie-jouw-energieniveau-bepaalt">celenergie en vermoeidheid</a>.</p><h3>Voeding als fundament voor stressmanagement</h3><p>Wat we eten, heeft een directe invloed op onze hersenfunctie en stemming. Een dieet rijk aan bewerkte voedingsmiddelen, suiker en cafeïne kan stressreacties verergeren. Kies in plaats daarvan voor een gebalanceerd dieet met veel:</p><ul>    <li><strong>Hele granen:</strong> leveren complexe koolhydraten die de serotonineproductie stimuleren.</li>    <li><strong>Magere eiwitten:</strong> essentiële aminozuren voor neurotransmitterproductie.</li>    <li><strong>Omega-3 vetzuren:</b> in vette vis en lijnzaad; ondersteunen de hersenfunctie.</li>    <li><strong>Vitamines en mineralen:</strong> met name B-vitamines en magnesium, cruciaal voor stressregulatie.</li></ul><h3>De rol van beweging en mindfulness</h3><p>Lichaamsbeweging is een krachtig middel tegen stress. Zelfs een dagelijkse wandeling van 30 minuten kan cortisol verlagen en endorfines vrijmaken. Yoga en Tai Chi combineren beweging met mindfulness, wat de verbinding tussen lichaam en geest versterkt. Mindfulness en meditatie leren je om stressvolle gedachten te observeren zonder erin meegezogen te worden, wat je mentale veerkracht vergroot.</p><h3>Gerichte supplementen voor stressvermindering</h3><p>Wanneer voeding en leefstijl niet voldoende zijn, kunnen gerichte supplementen ondersteuning bieden:</p><ul>    <li><strong>Magnesium:</strong> betrokken bij meer dan 300 biochemische reacties, waaronder spierontspanning en zenuwfunctie. Magnesiumbisglycinaat is een goed opneembare vorm.</li>    <li><strong>Ashwagandha:</strong> een adaptogeen kruid dat de stressrespons van het lichaam reguleert en cortisol kan verlagen.</li>    <li><strong>Rhodiola rosea:</strong> een ander adaptogeen, vooral effectief bij stressgerelateerde vermoeidheid en burn-out.</li>    <li><strong>L-theanine:</strong> een aminozuur uit groene thee dat een kalmerend effect heeft zonder slaperigheid te veroorzaken.</li>    <li><strong>MentaBiotics:</strong> probiotica die specifiek de darm-hersen-as beïnvloeden en kunnen bijdragen aan een stabielere stemming.</li></ul><h3>De Amare Happy Juice Pack: een complete aanpak</h3><p>De <a href="https://www.amare.com/2075008/nl-nl/happy-juice-pack" target="_blank" rel="nofollow noopener noreferrer">Happy Juice Pack</a> van Amare combineert drie krachtige formules (MentaBiotics, Energy+, EDGE+) die synergetisch samenwerken om je mentale welzijn en energieniveau te optimaliseren. Deze bundel richt zich op de darm-hersen-as, natuurlijke energieproductie en adaptogene stressbestendigheid. <em>* Voedingssupplement. Geen geneesmiddel.</em></p><h3>De kracht van slaap</h3><p>Slaap is geen luxe, het is een noodzaak voor stressherstel. Tijdens de slaap herstelt je lichaam, worden hormonen gereguleerd en verwerkt je brein indrukken. Prioriteer 7-9 uur kwalitatieve slaap per nacht. Een consistente slaaproutine, een donkere en koele slaapkamer, en het vermijden van schermen voor het slapengaan kunnen wonderen doen.</p><h3>Veelgestelde vragen</h3><p><strong>Vraag: Hoe snel merk ik effect van natuurlijke stressvermindering?</strong></p><p>De eerste subtiele veranderingen in energieniveau en stemming kunnen na 2-4 weken merkbaar zijn. Voor een stabiel en langdurig effect op je stressrespons en veerkracht is consistentie belangrijk — reken op 6-12 weken.</p><p><strong>Vraag: Kan ik supplementen combineren met mijn medicatie?</strong></p><p>Raadpleeg altijd een arts voordat je supplementen combineert met medicatie. Sommige kruiden en mineralen kunnen interacties hebben. Een arts kan je adviseren op basis van je persoonlijke situatie.</p><p><strong>Vraag: Zijn er bijwerkingen bij natuurlijke supplementen?</strong></p><p>Over het algemeen hebben natuurlijke supplementen minder bijwerkingen dan synthetische medicatie. Milde maag-darmklachten zijn soms mogelijk bij de start. Begin met een lage dosering en bouw langzaam op.</p><h3>Conclusie</h3><p>Stress hoeft je leven niet te beheersen. Door een holistische aanpak te hanteren — gebalanceerde voeding, regelmatige beweging, mindfulness, voldoende slaap en gerichte supplementen — kun je je natuurlijke veerkracht vergroten en innerlijke rust herstellen. De Amare Happy Juice Pack biedt een complete ondersteuning om deze reis te beginnen. <em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl.</em></p>`,
     image: "/images/blog/natuurlijke-stressvermindering.jpg"
   }
