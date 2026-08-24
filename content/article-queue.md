@@ -1,5 +1,5 @@
 # AmareNL Article Queue — SEO-GEO-AEO İçerik Planı
-> Laatste update: 2026-07-16
+> Laatste update: 2026-08-24 (öncelik kuyruğu eklendi — bkz. bölüm aşağıda)
 > Status: 20/20 TIER ✅ | 3 vergelijkingsartikelen ✅ | NIEUWE BATCH: 15/15 ✅ | **BATCH 3: 0/6 ⏳** | Totaal 74+ artikelen live
 > Deploy: Vercel production ✅
 > Metodoloji: NL search volume × commercial intent × product match × GEO query fan-out
@@ -7,6 +7,76 @@
 > Bron: amarenl-agent-keywords.md + keywords-onderzoek.md + GEO/AIO audit (juli 2026)
 
 ---
+
+## ⚠️ OKUMA SIRASI — Bu bölüm en yeni ve en güvenilir olandır
+
+Aşağıdaki **"24 AĞUSTOS 2026 — Anahtar Kelime Fırsat Araştırması"** bölümü, en güncel ve en
+kapsamlı veriye dayanıyor (GSC 6 ay + son 28 gün, Google Ads Keyword Planner, canlı SERP
+kontrolü, + bu repodaki 81 mevcut makaleyle çapraz kontrol). **Bu bölümü, aşağıdaki eski
+bölümlerin (Mayıs–Temmuz 2026) önüne koy.**
+
+Eski bölümler (30 GÜNLÜK PLAN, NIEUWE BATCH, Priority Matrix, 12 Artikelen Takvimi) artık
+kısmen güncelliğini yitirmiş olabilir — 21-24 Ağustos'ta büyük bir konsolidasyon yapıldı
+(kolajen kümesi 13→birleştirildi, 9 duplicate-content kümesi temizlendi, ~180 makaleden 81'e
+düşüldü). Bir ⏳ satırı seçmeden önce **mutlaka `data/extra-articles.json`'da o slug'ın hâlâ
+yok olduğunu doğrula** — çoğu slug değişti veya makale artık başka bir sayfaya birleşti.
+Emin değilsen, o satırı atla ve bu yeni bölümdeki maddeleri tercih et.
+
+---
+
+## 🆕 24 AĞUSTOS 2026 — Anahtar Kelime Fırsat Araştırması (Öncelikli Kuyruk)
+
+> Kaynak: GSC (6 ay + son 28 gün) + Google Ads Keyword Planner (NL) + canlı SERP kontrolü +
+> `data/extra-articles.json` çapraz kontrolü (81 makale, 24 Ağustos itibariyle).
+> Rapor: "AmareNL — SEO Fırsat Araştırması" (634 aday tarandı, 592 gerçekçi fırsat, 26 YMYL
+> nedeniyle hariç tutuldu). Tam liste: `amarenl-keyword-planner-analizi.xlsx` (Top Fırsatlar +
+> Tüm Liste sekmeleri).
+>
+> **ÖNEMLİ — yayın hızı kararı (Musa, 24 Ağustos):** Cron GÜNLÜK olarak kontrol eder ama
+> GÜNLÜK YAYIN yapmaz — mevcut ~2 günde bir / haftada 3 yayın temposu korunuyor (Soro-analizi
+> ve Ağustos 2026 core update "scaled content abuse" riski nedeniyle bilinçli olarak yavaş
+> tutuluyor, bkz. `soro-vs-amarenl-analiz.md`). Cron her gün çalışır, önce kota/kalite
+> şartlarını kontrol eder, uygunsa kuyruktan TEK bir görev seçer (yeni yazı / mevcut sayfa
+> güçlendirme / küme birleştirme) — uygun değilse o gün hiçbir şey yapmadan çıkar. Detaylar
+> için `.github/workflows/amarenl-article-claude.yml` ve bu görevin Claude Code prompt'una bak.
+
+### A. Öncelik 1 — Yeni yazı (gerçek, doğrulanmış boşluk — kanibalizasyon riski yok)
+
+| # | Konu / Başlık Önerisi | Hedef Anahtar Kelimeler (birleştirilmiş varyantlar) | Hacim (top.) | Kategori/Ürün | Not |
+|---|---|---|---|---|---|
+| Q1 | Beste Probiotica Kopen 2026: Complete Vergelijkingsgids | probiotica beste, best probiotica, probiotica welke beste, beste probiotica | ~20.000 | darmen — MentaBiotics | Yüksek ticari niyet (CPC €1,01-2,45). 10 probiotica makalesi var ama "beste/vergelijking" açısı yok — kontrol et, gerçekten yoksa yaz. |
+| Q2 | Magnesium in Voeding: Welke Voedingsmiddelen Bevatten Magnesium? | voeding met magnesium, magnesium voeding, magnesium in voedingsmiddelen, magnesium en voeding, magnesium in/welke voeding | ~30.000 (toplam varyant) | essentials — Sunrise | 6 farklı arama varyantı TEK makalede birleştir — ayrı ayrı yazma (kanibalizasyon riski). |
+| Q3 | Magnesium Hoeveel Per Dag? Dosering & Veiligheid | magnesium hoeveel per dag | 5.000 | essentials — Sunrise | Dozaj/güvenlik odaklı, `teveel-magnesium-symptomen-risico` makalesine iç link. |
+| Q4 | Magnesium Vormen Vergelijken: Tauraat, Orotaat, Citraat, Glycinaat | magnesium tauraat, magnesiumorotaat | 10.000 (toplam) | essentials — Sunrise, Sleep+ | Form-karşılaştırma, ürün seçimine yardımcı — ticari niyet yüksek. |
+| Q5 | Collageen Tabletten/Poeder vs Vloeibaar Collageen: Wat Werkt Beter? | collageentabletten, collageenpillen | 10.000 (toplam) | schoonheid — HL5 | Mevcut USP mesajıyla birebir örtüşüyor (sıvı = 3x emilim) — yüksek öncelik. |
+
+### B. Öncelik 2 — Doğrulama gerekli (muhtemelen kısmen kapsanıyor, önce kontrol et)
+
+| # | Konu | Neden şüpheli | Aksiyon |
+|---|---|---|---|
+| Q6 | Magnesium voor Spieren | Mevcut `magnesium-onmisbaar-mineraal-rust-energie-spierherstel` pillar'ı zaten "spierherstel" kapsıyor olabilir | Önce pillar'ı oku — konu zaten iyi kapsanıyorsa yeni yazı yerine pillar'ı derinleştir |
+| Q7 | Probiotica voor Darmen / Probiotica Vrouw | 10 probiotica makalesi zaten var, olası örtüşme yüksek | Her ikisi için de: gerçekten farklı bir açı yoksa YAZMA, en yakın mevcut makaleyi güçlendir |
+| Q8 | Magnesiumspray / Magnesium Voetenbad | `magnesiumolie-spray-transdermaal-werkt-het` muhtemelen bunu zaten kapsıyor | Makaleyi oku, spray+voetenbad zaten varsa yeni yazı YAZMA |
+| Q9 | Vermoeide/Zware Benen varyantları | `zware-benen-oorzaken-wat-helpt` zaten var, kalan varyantlar aynı sorgunun eş anlamlıları | Yeni yazı YAZMA — zaten kapsanıyor |
+
+### C. Mevcut sayfayı güçlendir (yeni yazı DEĞİL — bkz. `amarenl-trafik-artirma-plani.md` bölüm 1)
+
+| Sayfa | Sorun | Aksiyon |
+|---|---|---|
+| `prebiotica-probiotica-verschil-darmen-uitleg` | 687 kelime, hâlâ ince (hedef 1000+) | 1000+ kelimeye genişlet, "pre en probiotica" anahtar kelimesini kapsa |
+| `amare wellness` sorgusuna karşılık gelen sayfa | Pozisyon 8 ama 0 tıklama (CTR sorunu) | Meta title/description'ı gözden geçir — içerik değil, sadece metin |
+
+### D. YMYL / düşük öncelik — otomatik pipeline'a SOKMA
+
+| Konu | Neden |
+|---|---|
+| me chronische vermoeidheid | Tıbbi durum (ME/CVS) — YMYL, otomatik yazım riskli, editöryel/insan incelemesi gerekir |
+| behandeling bloedarmoede | "behandeling" kelimesi zaten sitenin kendi yasaklı terimler listesinde — anemi tedavisi iddiası riski |
+| probiotica kinderen / probiotica babys | Çocuk sağlığı — YMYL, dikkatli ele alınmalı, otomatik pipeline'da düşük öncelik |
+| jicht en vermoeidheid | Düşük hacim + anormal CPC (muhtemelen gürültü), gerçekçi öncelik değil |
+
+---
+
 
 ## 🆕 30 GÜNLÜK PLAN — 15 Makale, 2 Günde Bir (17 Tem — 15 Ağu 2026)
 
