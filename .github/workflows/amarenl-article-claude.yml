@@ -46,13 +46,16 @@ jobs:
         run: node scripts/generate-article-claude.mjs
 
       - name: Type-check
+        if: steps.generate.outputs.skipped != 'true'
         run: npx tsc --noEmit -p tsconfig.json
 
       - name: Build (production sanity check)
+        if: steps.generate.outputs.skipped != 'true'
         run: npm run build
 
       - name: Create draft branch and commit
         id: branch
+        if: steps.generate.outputs.skipped != 'true'
         env:
           SLUG: ${{ steps.generate.outputs.slug }}
         run: |
@@ -67,6 +70,7 @@ jobs:
 
       - name: Open PR
         id: pr
+        if: steps.generate.outputs.skipped != 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: ${{ steps.branch.outputs.branch }}
@@ -82,7 +86,7 @@ jobs:
           echo "number=$NUMBER" >> "$GITHUB_OUTPUT"
 
       - name: Notify Telegram
-        if: success()
+        if: success() && steps.generate.outputs.skipped != 'true'
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -95,9 +99,13 @@ jobs:
           WORD_COUNT_OK: ${{ steps.generate.outputs.word_count_ok }}
           HAS_CITATION: ${{ steps.generate.outputs.has_citation }}
           SAME_CATEGORY_COUNT: ${{ steps.generate.outputs.same_category_count }}
+          TOPIC_CLUSTER_KEYWORD: ${{ steps.generate.outputs.topic_cluster_keyword }}
+          TOPIC_CLUSTER_COUNT: ${{ steps.generate.outputs.topic_cluster_count }}
         run: |
-          # 4 kontrol satırı — Soro araştırmasından: onaylayan kişinin gerçekten
-          # değerlendirecek bir şeyi olsun, sadece "onay bekliyor" değil.
+          # 5 kontrol satırı — Soro araştırmasından: onaylayan kişinin gerçekten
+          # değerlendirecek bir şeyi olsun, sadece "onay bekliyor" değil. Konu-cluster
+          # satırı bilgilendirme amaçlı — de harde blokkade zelf gebeurde al vóór dit
+          # punt (zie generate-article-claude.mjs, checkTopicClusterLimit).
           WORD_MARK="✅"; [ "$WORD_COUNT_OK" = "true" ] || WORD_MARK="⚠️"
           CITATION_MARK="✅"; [ "$HAS_CITATION" = "true" ] || CITATION_MARK="⚠️ kaynak bulunamadı"
           CITATION_LABEL="var"; [ "$HAS_CITATION" = "true" ] || CITATION_LABEL="YOK — kontrol et"
@@ -106,11 +114,17 @@ jobs:
             OVERLAP_MARK="⚠️"
             OVERLAP_LABEL="bu kategoride zaten ${SAME_CATEGORY_COUNT} makale var — konu çakışması olabilir"
           fi
+          CLUSTER_MARK="✅"; CLUSTER_LABEL="benzersiz konu"
+          if [ -n "${TOPIC_CLUSTER_KEYWORD:-}" ] && [ "${TOPIC_CLUSTER_COUNT:-0}" -ge 1 ] 2>/dev/null; then
+            CLUSTER_MARK="ℹ️"
+            CLUSTER_LABEL="\"${TOPIC_CLUSTER_KEYWORD}\" anahtar kelimesi zaten ${TOPIC_CLUSTER_COUNT} makalede var"
+          fi
 
-          CHECKLIST=$(printf '✅ EFSA/NVWA kontrolü: geçti (otomatik doğrulandı)\n%s Kelime sayısı: %s (%s)\n%s Kaynak/atıf: %s\n%s Kategori çakışması: %s' \
+          CHECKLIST=$(printf '✅ EFSA/NVWA kontrolü: geçti (otomatik doğrulandı)\n%s Kelime sayısı: %s (%s)\n%s Kaynak/atıf: %s\n%s Kategori çakışması: %s\n%s Konu kümesi: %s' \
             "$WORD_MARK" "$WORD_COUNT" "$([ "$WORD_COUNT_OK" = "true" ] && echo "hedefin üstünde" || echo "1000 hedefinin altında — kontrol et")" \
             "$CITATION_MARK" "$CITATION_LABEL" \
-            "$OVERLAP_MARK" "$OVERLAP_LABEL")
+            "$OVERLAP_MARK" "$OVERLAP_LABEL" \
+            "$CLUSTER_MARK" "$CLUSTER_LABEL")
 
           TEXT=$(printf '📝 Yeni makale taslağı (Claude API)\n\n%s\n\n%s\n\n%s\n\nPR: %s' \
             "$TITLE" "$EXCERPT" "$CHECKLIST" "$PR_URL")
@@ -135,6 +149,24 @@ jobs:
           curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
             -H "Content-Type: application/json" \
             -d "$PAYLOAD"
+
+      - name: Notify Telegram (topic skipped — cluster limit)
+        if: success() && steps.generate.outputs.skipped == 'true'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_THREAD_ID: ${{ secrets.TELEGRAM_THREAD_ID }}
+          SKIP_REASON: ${{ steps.generate.outputs.skip_reason }}
+        run: |
+          # Bewuste, programmatische keuze — GEEN storing. Aparte, rustige melding
+          # (niet gepind, geen 🚨) zodat dit niet als crisis leest naast de echte
+          # 🚨 KRİTİK-melding hieronder.
+          TEXT=$(printf 'ℹ️ Bugün makale yayınlanmadı — konu kümesi limiti\n\n%s\n\nBu bir hata değil: bir sonraki çalıştırmada farklı bir konu seçilecek.' "$SKIP_REASON")
+          PAYLOAD=$(jq -n --arg chat_id "$TELEGRAM_CHAT_ID" --arg text "$TEXT" \
+            --arg thread_id "${TELEGRAM_THREAD_ID:-}" \
+            '{chat_id: $chat_id, text: $text} + (if $thread_id != "" then {message_thread_id: ($thread_id | tonumber)} else {} end)')
+          curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -H "Content-Type: application/json" -d "$PAYLOAD"
 
       - name: Notify Telegram (failure)
         if: failure()
