@@ -42,13 +42,22 @@ Emin değilsen, o satırı atla ve bu yeni bölümdeki maddeleri tercih et.
 
 ### A. Öncelik 1 — Yeni yazı (gerçek, doğrulanmış boşluk — kanibalizasyon riski yok)
 
-| # | Konu / Başlık Önerisi | Hedef Anahtar Kelimeler (birleştirilmiş varyantlar) | Hacim (top.) | Kategori/Ürün | Not |
-|---|---|---|---|---|---|
-| Q1 | Beste Probiotica Kopen 2026: Complete Vergelijkingsgids | probiotica beste, best probiotica, probiotica welke beste, beste probiotica | ~20.000 | darmen — MentaBiotics | Yüksek ticari niyet (CPC €1,01-2,45). 10 probiotica makalesi var ama "beste/vergelijking" açısı yok — kontrol et, gerçekten yoksa yaz. |
-| Q2 | Magnesium in Voeding: Welke Voedingsmiddelen Bevatten Magnesium? | voeding met magnesium, magnesium voeding, magnesium in voedingsmiddelen, magnesium en voeding, magnesium in/welke voeding | ~30.000 (toplam varyant) | essentials — Sunrise | 6 farklı arama varyantı TEK makalede birleştir — ayrı ayrı yazma (kanibalizasyon riski). |
-| Q3 | Magnesium Hoeveel Per Dag? Dosering & Veiligheid | magnesium hoeveel per dag | 5.000 | essentials — Sunrise | Dozaj/güvenlik odaklı, `teveel-magnesium-symptomen-risico` makalesine iç link. |
-| Q4 | Magnesium Vormen Vergelijken: Tauraat, Orotaat, Citraat, Glycinaat | magnesium tauraat, magnesiumorotaat | 10.000 (toplam) | essentials — Sunrise, Sleep+ | Form-karşılaştırma, ürün seçimine yardımcı — ticari niyet yüksek. |
-| Q5 | Collageen Tabletten/Poeder vs Vloeibaar Collageen: Wat Werkt Beter? | collageentabletten, collageenpillen | 10.000 (toplam) | schoonheid — HL5 | Mevcut USP mesajıyla birebir örtüşüyor (sıvı = 3x emilim) — yüksek öncelik. |
+| # | Konu / Başlık Önerisi | Hedef Anahtar Kelimeler (birleştirilmiş varyantlar) | Hacim (top.) | Ads-Rekabet* | Kategori/Ürün | Not |
+|---|---|---|---|---|---|---|
+| Q1 | Beste Probiotica Kopen 2026: Complete Vergelijkingsgids | probiotica beste, best probiotica, probiotica welke beste, beste probiotica | ~20.000 | Yüksek | darmen — MentaBiotics | Yüksek ticari niyet (CPC €1,01-2,45). 10 probiotica makalesi var ama "beste/vergelijking" açısı yok — kontrol et, gerçekten yoksa yaz. |
+| Q2 | Magnesium in Voeding: Welke Voedingsmiddelen Bevatten Magnesium? | voeding met magnesium, magnesium voeding, magnesium in voedingsmiddelen, magnesium en voeding, magnesium in/welke voeding | ~30.000 (toplam varyant) | Orta | essentials — Sunrise | 6 farklı arama varyantı TEK makalede birleştir — ayrı ayrı yazma (kanibalizasyon riski). |
+| Q3 | Magnesium Hoeveel Per Dag? Dosering & Veiligheid | magnesium hoeveel per dag | 5.000 | Orta | essentials — Sunrise | Dozaj/güvenlik odaklı, `teveel-magnesium-symptomen-risico` makalesine iç link. |
+| Q4 | Magnesium Vormen Vergelijken: Tauraat, Orotaat, Citraat, Glycinaat | magnesium tauraat, magnesiumorotaat | 10.000 (toplam) | Yüksek | essentials — Sunrise, Sleep+ | Form-karşılaştırma, ürün seçimine yardımcı — ticari niyet yüksek. |
+| Q5 | Collageen Tabletten/Poeder vs Vloeibaar Collageen: Wat Werkt Beter? | collageentabletten, collageenpillen | 10.000 (toplam) | Yüksek | schoonheid — HL5 | Mevcut USP mesajıyla birebir örtüşüyor (sıvı = 3x emilim) — yüksek öncelik. |
+
+
+> *Ads-Rekabet = Google Ads reklam-verenler rekabeti (CPC/bidding), organik SERP zorluğu DEĞİL — bir kelime
+> Ads'te "Yüksek" olsa da organik ilk 10'da otorite eksikliği olabilir (ve tam tersi). Gerçek organik
+> rakip-gücü verisi için orijinal "SEO Fırsat Araştırması" raporundaki canlı SERP kontrolüne bak —
+> bu oturumda o raporun tam 592 satırlık tablosu teknik bir engel nedeniyle (artifact iframe erişimi)
+> otomatik olarak çekilemedi, sadece özet istatistikleri görüldü. Sıralama burada bilerek hacim +
+> doğrulanmış-boşluk öncelikli yapıldı, saf düşük-Ads-rekabet önceliği DEĞİL — çünkü gerçekten düşük
+> Ads-rekabetli kelimelerin neredeyse hepsi ya zaten kapsanıyor ya da YMYL riskli çıktı (bkz. D bölümü).
 
 ### B. Öncelik 2 — Doğrulama gerekli (muhtemelen kısmen kapsanıyor, önce kontrol et)
 
