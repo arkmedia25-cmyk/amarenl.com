@@ -326,6 +326,39 @@ pagina's vrijwel geen interne links (`/gut-brain-axis`: 0, `/probiotica-stammen`
 
 ---
 
+### 🆕 Sessie 24-08-2026 — SEO fırsat araştırması → `content/article-queue.md` öncelik kuyruğu
+
+Gebruiker deelde het rapport "AmareNL — SEO Fırsat Araştırması" (19-08-2026, GSC 6 maanden +
+Google Ads Keyword Planner + live SERP-check, 634 kandidaat-zoekwoorden gescand, 592 als
+realistisch gemarkeerd) en vroeg om hier een schrijfplan van te maken voor de bestaande
+ma/wo/vr content-motor (`scripts/generate-article-claude.mjs`, cron in
+`.github/workflows/amarenl-article-claude.yml`).
+
+**Belangrijke correctie tijdens dit werk:** de "Rekabet" (concurrentie) kolom in Google Ads
+Keyword Planner meet **advertentie-concurrentie** (hoeveel adverteerders op dat woord bieden),
+niet organische SERP-moeilijkheid. Een woord met "Yüksek" Ads-concurrentie kan alsnog een
+zwakke organische top-10 hebben, en andersom. Bij het sorteren op "zwakke concurrentie eerst"
+bleek: bijna alle woorden met écht lage Ads-concurrentie zijn ófwel al gedekt door bestaande
+artikelen (na de 21-24 augustus consolidatie, ~180→81 artikelen), ófwel YMYL-gevoelig
+(behandeling bloedarmoede, chronische vermoeidheid/ME). De realistische nieuwe kansen liggen
+dus vooral bij Orta/Yüksek Ads-concurrentie maar bevestigde **content-gap** (getoetst tegen
+`data/extra-articles.json`, 81 artikelen) — niet bij pure Ads-concurrentiescore.
+
+**Resultaat:** nieuwe sectie bovenaan `content/article-queue.md` (zie daar voor de volledige
+tabel) met 5 bevestigde nieuw-te-schrijven onderwerpen, 4 "eerst verifiëren"-items, 2
+bestaande-pagina-verdieptaken, en 4 YMYL/laag-prioriteit-uitsluitingen — plus een expliciete
+waarschuwing dat de oudere secties in dat bestand (mei-juli 2026) deels verouderd zijn na de
+augustus-consolidatie.
+
+**Publicatietempo bewust ongewijzigd gelaten:** Musa vroeg om een "dagelijkse cron", maar koos
+na toelichting expliciet voor **dagelijkse controle, geen dagelijkse publicatie** — het risico
+van versnelde automatische publicatie (scaled content abuse, zie hierboven de aanleiding voor
+deze hele Agency OS-inspanning) weegt zwaarder dan extra snelheid. Voorstel: cron dagelijks
+laten draaien, met een drempelcontrole in het script (dagen-sinds-laatste-publicatie) vóór
+`pickTopic()` — nog niet geïmplementeerd, zie taak hieronder.
+
+---
+
 ## Nog te doen
 
 ### Product Pages (TASK 2.1)
