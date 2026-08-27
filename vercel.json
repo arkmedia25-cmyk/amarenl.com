@@ -784,7 +784,7 @@
     },
     {
       "source": "/blogs/nieuws/magnesium-slaap-supplement-nederland",
-      "destination": "/blogs/nieuws/magnesium-supplement-slapen-spieren-stress",
+      "destination": "/blogs/nieuws/magnesium-onmisbaar-mineraal-rust-energie-spierherstel",
       "permanent": true
     },
     {
@@ -935,6 +935,26 @@
     {
       "source": "/blogs/nieuws/vitamine-d-tekort-symptomen",
       "destination": "/blogs/nieuws/vitamine-d-energie-vermoeidheid-winter",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/natuurlijke-stressvermindering",
+      "destination": "/blogs/nieuws/stress-verminderen-supplementen-cortisol-ontspanning",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/cortisol-verlagen-natuurlijk-stresshormoon-balans",
+      "destination": "/blogs/nieuws/stress-verminderen-supplementen-cortisol-ontspanning",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/adaptogenen-stress-supplement-nederland",
+      "destination": "/blogs/nieuws/adaptogenen-natuurlijke-stressverlichting-ashwagandha-rhodiola",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/magnesium-supplement-slapen-spieren-stress",
+      "destination": "/blogs/nieuws/magnesium-onmisbaar-mineraal-rust-energie-spierherstel",
       "permanent": true
     }
   ]
