@@ -894,6 +894,29 @@ abonnement, geen eenmalige credit-topup beschikbaar op dit moment).
 abonnementen of de kaart-vereiste trial. Vraag de gebruiker VOORAF welk account ze willen koppelen,
 vóórdat je de OAuth-flow start, om dit soort omwisselen te voorkomen.
 
+### 27-08-2026 — Faz 3 niet langer "on hold": account blijkt al betaald abonnement te hebben
+Op verzoek van Musa gecontroleerd via de browser (higgsfield.ai/me/settings/subscription) of het
+account-dilemma hierboven inmiddels is opgelost. Bevindingen, rechtstreeks van de site (niet uit
+geheugen aangenomen):
+- Workspace **"ARK Media"**, gekoppeld aan `arkmedia25@gmail.com` — dit is het juiste account (zelfde
+  e-mailadres als [[user memory]], zelfde entiteit als de Meta-ads juridische structuur, Ark Media).
+- **Starter Plan, actief, $15/maand** — niet meer het gratis proefaccount van 29-07. Verlengt
+  automatisch op **4 september 2026** (eerstvolgende factuur: $18,15, betaalmethode kaart eindigend
+  op 3419, vervaldatum 06/28).
+- Account is al volop gebruikt: 71 generaties totaal, 49 Nano Banana Pro-afbeeldingen, 7 video's via
+  Veo 3.1 Lite, 11 Higgsfield Soul 2.0, 5 Seedream 5.0 Pro — dus iemand (Musa zelf, buiten een
+  Cowork-sessie om) is hier al mee aan de slag gegaan sinds de "on hold" van 29-07.
+- **Kredieten bijna op:** nog maar 2 van de 200 maandelijkse credits over in de huidige cyclus (ververst
+  pas 4 september). Nieuwe Higgsfield-taken zullen tot dan vastlopen op ontoereikende credits, tenzij
+  extra credits gekocht worden via de "Buy credits"-knop op dezelfde pagina.
+- 2 modellen met "unlimited" toegang actief (FLUX.2 Pro, Seedream 5.0 Lite, 365 dagen, auto-renewing).
+
+**Conclusie: Faz 3 is dus niet meer geblokkeerd op een accountbeslissing — dat is intussen zelf al
+opgelost.** De praktische blocker is nu simpelweg **op-geraakte credits tot 4 september**, geen
+beleids- of accountkeuze meer. Als er vóór die datum een nieuwe video-poging gewenst is, moet Musa
+bewust extra credits kopen (kosten niet gecontroleerd tijdens dit bezoek — check de "Buy credits"-flow
+voor de huidige prijs voordat je dit voorstelt).
+
 ### 30-07-2026 — GSC-check + PR #4 deploy hersteld + Faz 4 (Pinterest) opgezet, blocked op Pinterest Standard access
 
 **GSC-snapshot (3 maanden):** gemiddelde positie 32,8 (was 56,8 op 24-07, dus herstel loopt maar
