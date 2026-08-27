@@ -921,6 +921,21 @@
       "source": "/blogs/nieuws/fit20-whey-isolaat-collageen-spierherstel-review",
       "destination": "/fit20",
       "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/vitamine-d-tekort-nederland-oorzaken-oplossingen",
+      "destination": "/blogs/nieuws/vitamine-d-energie-vermoeidheid-winter",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/vitamine-d-tekort-vermoeidheid-verband",
+      "destination": "/blogs/nieuws/vitamine-d-energie-vermoeidheid-winter",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/vitamine-d-tekort-symptomen",
+      "destination": "/blogs/nieuws/vitamine-d-energie-vermoeidheid-winter",
+      "permanent": true
     }
   ]
 }
