@@ -84,6 +84,33 @@ Emin değilsen, o satırı atla ve bu yeni bölümdeki maddeleri tercih et.
 | probiotica kinderen / probiotica babys | Çocuk sağlığı — YMYL, dikkatli ele alınmalı, otomatik pipeline'da düşük öncelik |
 | jicht en vermoeidheid | Düşük hacim + anormal CPC (muhtemelen gürültü), gerçekçi öncelik değil |
 
+### E. Marka/Ürün Sayfaları (Amare-branded — düşük hacim, yüksek satın-alma niyeti)
+
+> Kaynak: Musa'nın Google Ads Keyword Planner'dan çektiği "amare" markalı 10 kelimelik ek
+> export (27 Ağustos 2026). Hacimler çok düşük (~50/ay, bazılarında ölçülemeyecek kadar az) —
+> bu yüzden ayrı bir kampanya değil, mevcut pipeline'a düşük efortlu 3 ek görev olarak
+> ekleniyor. Değer hacimde değil: bu aramaları yapanlar markayı zaten biliyor ve satın almaya
+> yakın — GSC'de "amare" geçen hiçbir sorgudan son 90 günde 0 tıklama/0 gösterim vardı, yani şu
+> an bu segmentten hiç pay alınmıyor.
+>
+> **Dikkat — "happy juice" tuzağı:** çıplak "happy juice" kelimesi 500/ay hacimli görünüyor
+> ama bu muhtemelen Amare'yle ilgisiz — "happy juice douglas" / "happy juice eau de toilette"
+> gibi kardeş kelimeler, Douglas parfümeri zincirinde satılan bir tuvalet suyu ürününe işaret
+> ediyor. Bu yüzden bu kelimeyi çıplak hedefleme — kullanılacaksa mutlaka "Amare Happy Juice"
+> olarak, başlıkta net şekilde.
+>
+> **Uyum notu:** Bu sayfalar ürün-adı odaklı (marka-adı odaklı değil), bu yüzden düşük risk —
+> ama Amare Global Policy Manual'da ücretli reklam/keyword bidding'de marka kullanımı yazılı
+> izin olmadan yasak deniyor. Organik blog içeriği için net bir yasak görülmedi, ama Musa ilk
+> yayından önce sponsoruyla/compliance ile bir teyit etmek istiyor — yayına almadan önce bunu
+> kontrol et.
+
+| # | Konu / Başlık Önerisi | Hedef Anahtar Kelimeler | Hacim (Ads) | Rekabet | Not |
+|---|---|---|---|---|---|
+| M1 | Amare Sunrise vs Sunset: Verschil en Wanneer Welke te Gebruiken | amare sunrise, amare sunset | 50+50/ay | Düşük | İki gerçek Amare ürünü, düşük rekabet — muhtemelen henüz kimse yazmamış. |
+| M2 | Amare HL5 Uitgelegd: Wat Is Het en Hoe Werkt Het? | amare hl5 | 50/ay | Bilinmiyor | HL5 zaten collageen cluster'da "sıvı = 3x emilim" mesajıyla anılıyor — bu sayfa ürünü doğrudan açıklayan destek sayfası. |
+| M3 | Amare Producten Kopen in Nederland: Complete Gids | amare supplementen kopen, amare ervaringen | Ölçülemedi (çok düşük ama gerçek) | Bilinmiyor | Satın-alma niyetli, marka bilen kullanıcıya yönelik — hacim verisi yok ama düşük efortlu, atlanabilir değil. |
+
 ---
 
 
