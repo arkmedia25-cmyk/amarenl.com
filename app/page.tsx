@@ -26,7 +26,7 @@ const symptoms = [
   { q: "🫃 Opgeblazen buik?", a: "Probiotica & spijsvertering", href: "/darmgezondheid" },
   { q: "💇 Dunner wordend haar?", a: "Collageen van binnenuit", href: "/hl5" },
   { q: "🧠 Snel afgeleid?", a: "Natuurlijke focus supplementen", href: "/edge-plus" },
-  { q: "🌙 Slecht slapen?", a: "Melatoninevrije slaapformule", href: "/blogs/nieuws/beter-slapen-zonder-medicatie-supplementen-nachtrust" },
+  { q: "🌙 Slecht slapen?", a: "Melatoninevrije slaapformule", href: "/blogs/nieuws/natuurlijke-slaap-supplementen-beter-slapen-zonder-melatonine" },
 ];
 
 const popular = [
