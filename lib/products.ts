@@ -44,6 +44,8 @@ export interface Product {
   id: string; // alias for slug (backward compat)
   name: string;
   nameNL: string;
+  /** Korte productnaam zonder subtitel/variant — voor meta title/description (60/155-tekenlimiet). Valt terug op nameNL. */
+  shortNameNL: string;
 
   // Classification
   category: string;
@@ -163,6 +165,7 @@ interface RawProduct {
   slug: string;
   name: string;
   nameNL: string;
+  shortNameNL?: string;
   category: string;
   taglineNL: string;
   isNew?: boolean;
@@ -194,6 +197,7 @@ function normalizeProduct(p: RawProduct): Product {
     id: p.slug,
     name: p.name,
     nameNL: p.nameNL,
+    shortNameNL: p.shortNameNL || p.nameNL,
 
     category: p.category,
     taglineNL: p.taglineNL,
@@ -335,4 +339,48 @@ export function getProductPageUrl(productId: string): string | null {
 export function hasInternalPage(productId: string): boolean {
   // Alle producten in de database hebben nu een interne pagina
   return true;
+}
+
+// ── SEO meta title/description (60/155-tekenlimiet, CLAUDE.md §13) ─────────
+
+const META_TITLE_MAX = 60;
+const META_DESC_MAX = 155;
+const BRAND_SUFFIX = " | AmareNL";
+
+function truncateAtWord(text: string, maxLength: number): string {
+  if (text.length <= maxLength) return text;
+  const cut = text.slice(0, maxLength - 1);
+  const lastSpace = cut.lastIndexOf(" ");
+  return (lastSpace > 0 ? cut.slice(0, lastSpace) : cut) + "…";
+}
+
+/**
+ * Bouwt een product-metatitle die altijd binnen de 60-tekenlimiet blijft,
+ * ongeacht hoe lang shortNameNL/taglineNL zijn — geen hardcoded productnamen
+ * nodig, werkt voor alle huidige én toekomstige producten.
+ */
+export function buildProductMetaTitle(shortName: string, tagline: string): string {
+  const budget = META_TITLE_MAX - BRAND_SUFFIX.length;
+  const candidates = [
+    `${shortName} Kopen — ${tagline}`,
+    `${shortName} — ${tagline}`,
+    `${shortName} Kopen`,
+    shortName,
+  ];
+  const fit = candidates.find((c) => c.length <= budget);
+  return (fit ?? truncateAtWord(shortName, budget)) + BRAND_SUFFIX;
+}
+
+/**
+ * Bouwt een product-metadescription die altijd binnen de 155-tekenlimiet
+ * blijft. Val terug op steeds kortere vertrouwenssignalen totdat het past.
+ */
+export function buildProductMetaDescription(shortName: string, tagline: string): string {
+  const base = `${shortName}: ${tagline}.`;
+  const longSuffix = " 30 dagen garantie, gratis verzending vanaf €175.";
+  const shortSuffix = " 30 dagen garantie.";
+
+  if ((base + longSuffix).length <= META_DESC_MAX) return base + longSuffix;
+  if ((base + shortSuffix).length <= META_DESC_MAX) return base + shortSuffix;
+  return truncateAtWord(base, META_DESC_MAX - shortSuffix.length) + shortSuffix;
 }

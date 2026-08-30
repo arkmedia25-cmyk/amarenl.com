@@ -9,7 +9,7 @@ const CANONICAL_REDIRECTS: Record<string, string> = {
 import Image from "next/image";
 import AffiliateCTA from "@/components/ui/AffiliateCTA";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { getProduct, getAllProducts } from "@/lib/products";
+import { getProduct, getAllProducts, buildProductMetaTitle, buildProductMetaDescription } from "@/lib/products";
 import {
   generateProductSchema,
   generateFAQSchema,
@@ -33,8 +33,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const p = getProduct(slug);
   if (!p) return { title: "Product niet gevonden | AmareNL" };
   return {
-    title: `${p.nameNL} Kopen — ${p.taglineNL} | AmareNL`,
-    description: `${p.nameNL}: ${p.taglineNL}. ✓ 30 dagen geld-terug ✓ €8 welkomstkorting ✓ Gratis verzending vanaf €175. Direct van Amare — premium kwaliteit.`,
+    title: buildProductMetaTitle(p.shortNameNL, p.taglineNL),
+    description: buildProductMetaDescription(p.shortNameNL, p.taglineNL),
     alternates: { canonical: `/producten/${slug}` },
     openGraph: {
       title: `${p.nameNL} Kopen — Beste Prijs Nederland | AmareNL`,
