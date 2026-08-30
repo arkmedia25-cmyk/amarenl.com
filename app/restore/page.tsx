@@ -12,9 +12,9 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Restore Kopen — Probiotica & Spijsverteringsenzymen | AmareNL",
+  title: "Restore Kopen — Probiotica & Enzymen | AmareNL",
   description:
-    "Amare Restore: 5 probiotische stammen (2 miljard KVE) + 5 enzymen incl. lactase + 9 botanische extracten. Voor darmflora & spijsvertering. Direct van Amare — premium kwaliteit.",
+    "Amare Restore: 5 probiotische stammen + 5 enzymen incl. lactase, voor darmflora & spijsvertering. Direct van Amare — premium kwaliteit.",
   alternates: { canonical: "/restore" },
   openGraph: {
     title: "Restore Kopen — Probiotica & Spijsverteringsenzymen | AmareNL",
