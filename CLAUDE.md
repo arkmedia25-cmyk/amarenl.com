@@ -760,456 +760,84 @@ Fase 9 — Data & Infrastructuur — 2026-05-17
 
 ---
 
-## 19. SESSIE STATUS — 20 juni 2026
+## 19-21. GEÇMİŞ OTURUM ÖZETİ (Content Orchestrator → Agency OS → Soro/checklist)
 
-### Voltooid (deze en vorige sessies)
-- [x] Fase 1-9 t/m FIT20/Sunset (zie boven)
-- [x] 9 deep product pages (1000+ woorden, Product+FAQ+Breadcrumb schema)
-- [x] 43 producten database (individuele JSON + geaggregeerde index)
-- [x] 6 categoriepagina's + 2 speciale routes (/go, /go/[product])
-- [x] Build: 0 errors, 0 ESLint warnings, TypeScript strict clean
+**Content Orchestrator (13 juni 2026) — VEROUDERD:** `server/` package (Node cron + Telegram bot) is
+niet het actieve systeem. De echte automatisering draait via GitHub Actions (zie hieronder). Een aparte
+Hermes-gateway LaunchAgent bestond ook nog kort, gestopt 28-07-2026.
 
-### 🆕 Content Orchestrator (13 juni 2026)
-- [x] `content-orchestrator` skill — ana orkestratör, tüm pipeline'ı yönetir
-- [x] `keyword-analyzer` skill — anahtar kelime analizi, GEO skoru
-- [x] `traffic-monitor` skill — GA4 trafik ve dönüşüm izleme
-- [x] `server/` paketi — Node.js cron + Telegram bot
-  - `server/index.ts` — cron scheduler (Pzt/Crş/Cum + günlük build check)
-  - `server/orchestrator.ts` — pipeline adımları (research, publish, report)
-  - `server/telegram-bot.ts` — Telegram kontrol botu (9 komut)
-  - `server/health.ts` — sistem sağlık kontrolü
-- [x] 20 makale kuyrukta (content/article-queue.md)
+**Huidige actieve pijplijn (Faz 1+2, GitHub Actions):**
+- **Faz 1 — Telegram-onaygate:** artikel-workflows committen niet direct naar `main`. Ze openen een
+  `draft/<slug>` PR, sturen een Telegram-bericht met ✅/❌ knoppen
+  (`app/api/telegram/webhook/route.ts`), pas na goedkeuring merget/deployt
+  `.github/workflows/amarenl-promote-draft.yml` automatisch.
+- **Faz 2 — Claude API content-motor:** `scripts/generate-article-claude.mjs`, cron ma/wo/vr
+  (`amarenl-article-claude.yml`). Kiest onderwerp uit `content/article-queue.md`, haalt PubMed-abstracts
+  op als primaire bron voor claims, plus optionele context uit `tools/competitor-scraper/` (wekelijkse
+  cron, vitaminstore.nl) en `tools/youtube-research/` (wekelijkse cron, YouTube Data API v3) — beide
+  puur thema-inspiratie, nooit letterlijk overgenomen.
+- **Telegram-approvalbericht bevat een checklist** (n.a.v. Soro-onderzoek 21-08: het enige dat
+  consistent goede van slechte AI-SEO-content onderscheidt bleek menselijke review vóór publicatie, geen
+  geheime techniek): woordaantal, bron/citatie-check, categorie-overlap, en een harde onderwerp-cluster-
+  limiet (`TOPIC_CLUSTER_LIMIT = 3`) die een run bewust overslaat i.p.v. het zoveelste artikel binnen
+  een oververtegenwoordigd kernwoord te publiceren — later verder gehard, zie sectie 26.
 
-### 🆕 Cron Auto-Publish — 20 juni 2026
-- [x] Expand #14 collageen-peptiden: 973 → 1676 woorden (NVWA, FAQ, vergelijkingstabel, AffiliateCTA, 4 wetenschappelijke bronnen)
-- [x] 20/20 TIER artikelen voltooid — queue volledig afgevinkt ✅
-- [x] Alle 6 ⏳ artikelen geverifieerd op 1200+ woorden en NVWA-compliance
-- [x] Queue metadata geüpdatet (40+ artikelen live, 0 openstaand)
+**Opgeloste incidenten — bewaard voor als het weer gebeurt:**
+- *Telegram-PR bleef open ondanks ❌-klik (28-07):* webhook bleek prima te werken — een directe
+  curl-call met het juiste `TELEGRAM_WEBHOOK_SECRET` sloot de PR meteen. Vermoedelijk menselijke
+  misklik, geen codefout. **Bij herhaling:** test eerst de webhook direct met curl vóórdat je dieper
+  zoekt.
+- *Vercel free-plan upload-limiet geraakt (28-07, herhaald 30-07):* te veel test-deploys op één dag →
+  `DeploymentError: api-upload-free`, 24u block (merges lukken wel, deploy niet). **Bij herhaling:**
+  `vercel ls` voor laatste succesvolle deploy-tijd, na 24u `gh run rerun <run-id> --failed`, overweeg
+  Vercel Pro als dit vaker voorkomt.
+- *Higgsfield-accountverwarring (29-07 → opgelost 27-08):* OAuth koppelde eerst een proefaccount i.p.v.
+  het bedoelde account; geen in-sessie manier om te wisselen (vereist MCP-server loskoppelen/opnieuw
+  verbinden). **Bij een nieuwe integratie:** vraag ALTIJD vooraf welk account/e-mailadres gekoppeld moet
+  worden, vóór de OAuth-flow start.
+- *Lead-capture 500-error op alle 6 formulieren (07-08, gefixt):* `fs.writeFileSync` naar
+  `data/subscribers.json` crashte op Vercel's read-only serverless filesystem, en de MailerLite-call
+  gebruikte een group-**slug** (`nl-audience`) i.p.v. de numerieke group-id die de API verwacht — beide
+  gefixt in `app/api/subscribe/route.ts` (group-id nu `185294849333790257`), live geverifieerd met een
+  test-submit.
+- *GSC trailing-slash duplicate URL's (30-07, **nog NIET opgelost** — geverifieerd 02-09-2026):*
+  `/happy-juice-pack` vs `/happy-juice-pack/` (en vergelijkbare paren) splitsen het ranking-signaal.
+  Geen `trailingSlash`-config in `next.config.mjs`, geen redirect ervoor in `vercel.json`. Fix: kies één
+  vorm, zet die expliciet in `next.config.mjs`, en redirect de andere.
 
-### Kurulum gerekenler (sunucu için)
-- [ ] `server/.env` oluştur (ANTHROPIC_API_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_ADMIN_CHAT_IDS)
-- [ ] `cd server && npm install`
-- [ ] Sunucuda `npm start` ile başlat
-- [ ] @BotFather'dan Telegram bot token'ı al
-- [ ] Chat ID'ni `.env`'e ekle
+**Huidige status per fase:**
+- **Faz 3 (Higgsfield):** betaald Starter Plan actief ($15/mo, workspace "ARK Media"), niet meer
+  accountgeblokkeerd. Credits op tot cyclus ververst **4 september 2026**. Gekozen flow:
+  ugc-product-flow (product-only, voiceover, geen nep-testimonial — bewuste ACM/NVWA-keuze).
+- **Faz 4 (Pinterest):** infrastructuur volledig gebouwd (`content/pinterest-queue.json`,
+  `scripts/pinterest-queue-notify.mjs`, Telegram ✅/❌-integratie), **wacht op Pinterest Standard
+  access-goedkeuring** (app 1582959 — Trial-toegang staat de OAuth `pins:write`-flow nog niet toe).
+  Activatiestappen zodra goedgekeurd:
+  1. Check status op `developers.pinterest.com/apps/1582959/`.
+  2. OAuth-flow met scope `pins:read,pins:write,boards:read`.
+  3. Zet `PINTEREST_ACCESS_TOKEN`/`PINTEREST_REFRESH_TOKEN` als Vercel production env var.
+  4. Maak de 5 boards aan (namen in `content/PINTEREST_PLAN.md`).
+  5. Trigger `amarenl-pinterest-queue.yml` handmatig of wacht op de cron (ma/wo/vr/za 09:00).
+- **Faz 5 (Meta Ads):** plan vastgelegd, **nog niet gestart**. Budget €10-15/dag, Leads-objective op
+  `/gratis-gut-brain-gids`, bestaande Pixel/CAPI-tracking geverifieerd werkend (test-POST naar
+  `/api/capi-event` gaf `{"ok":true}`). 2 creatives gekozen: **A** (symptoom+mechanisme,
+  gut-brain-illustratie) en **B** (nieuwsgierigheid/vraag, gids-mockup) in
+  `content/meta-ads-drafts/` — variant C afgevallen. Volgende stap: ad-account onder bestaande
+  Business Manager koppelen (handmatig, geen Marketing API-koppeling deze sessie).
 
-### Hala eksik
-**İçerik:**
-- [ ] 3 pillar pages — `/gut-brain-axis`, `/probiotica-stammen`, `/adaptogenen` (dosyalar var, kontrol edilmeli)
-- [x] 20 makale allemaal voltooid (16 live + 4 gecovered)
-- [ ] 1 deep product page daha (Skin to Mind of VitaGBX)
-
-**Infrastructuur:**
-- [ ] E-mail API route (/api/subscribe)
-- [ ] GA4 conversion tracking
-- [ ] verdikkend-serum-voor-fijn-haar → 500 (Amare server-side)
-
-### Huidige staat — Cijfers
-- **43** producten in database (data/products/*.json + products.json)
-- **40+** blog artikelen live
-- **9** deep product pages (1000+ woorden) + 3 pillar pages (dosyalar var)
-- **6** categoriepagina's + 27 app routes
-- **6** skills (.claude/skills/: orchestrator, scheduler, writer, research, keyword, traffic)
-- **1** server paketi (server/: orchestrator + Telegram bot)
-- **0** openstaande artikelopdrachten 🎉
-
-> ⚠️ **VEROUDERD (zie sectie 20):** de `server/` package + Telegram bot hierboven is **niet** het huidige
-> systeem. Er bleek ook een aparte, écht-actieve automatische bot te draaien buiten deze repo (Hermes
-> gateway LaunchAgent, `AmareNL_Orchestrator_Bot`) — die is stopgezet op 28-07-2026. Het huidige,
-> geverifieerde systeem is de Faz 1/2 GitHub Actions pipeline in sectie 20.
-
----
-
-## 20. AGENCY OS STATUS — 28 juli 2026
-
-### Faz 1 — Telegram-onaygate (KLAAR)
-Artikel-workflows committen niet meer direct naar `main`. Ze openen een `draft/<slug>` PR,
-sturen een Telegram-bericht met ✅/❌ knoppen (`app/api/telegram/webhook/route.ts`), en pas na
-onaply merget/deployt `.github/workflows/amarenl-promote-draft.yml` automatisch.
-
-**Bekende bug (gevonden + opgelost 28-07-2026):** een PR (#5) bleef OPEN staan ondanks dat de
-gebruiker "reject" had geklikt in Telegram — na diagnose bleek de webhook zelf prima te werken (een
-handmatige test-call met het juiste `TELEGRAM_WEBHOOK_SECRET` sloot de PR direct). Vermoedelijke
-oorzaak: menselijke misklik tussen de vele PR-berichten, niet een codefout. **Als dit weer gebeurt:**
-test de webhook direct met een curl-call (zie sessie-log) vóór je verder zoekt — dat isoleert snel of
-het serverside of Telegram-side is.
-
-### Faz 2 — Claude API content-motor (KLAAR, uitgebreid met research-context)
-`scripts/generate-article-claude.mjs` draait op een echte cron (ma/wo/vr, `amarenl-article-claude.yml`)
-en kiest zelf het volgende onderwerp uit `content/article-queue.md`. Sinds 28-07-2026 twee-staps:
-1. Lichte "kies onderwerp + PubMed-zoektermen" call
-2. Echte PubMed-abstracts opgehaald via de publieke E-utilities API (geen scraping, geen key nodig) →
-   primaire bron voor wetenschappelijke claims (niet het parametrisch geheugen van het model)
-3. Plus optionele context uit `tools/competitor-scraper/snapshot/` en `tools/youtube-research/snapshot/`
-   — **altijd puur thema-inspiratie, nooit letterlijk overgenomen**
-
-Beide research-tools draaien wekelijks (zondag) via eigen GitHub Actions crons en committen hun
-snapshot rechtstreeks naar `main` (brondata, geen PR nodig).
-
-### Concurrentie-scraper (`tools/competitor-scraper/`)
-Eigen geïsoleerde `package.json` (alleen cheerio), geen impact op de Next.js dependencies. Nu
-uitgelijnd op vitaminstore.nl (prijs/voorraad/reviews, categorie vitamine D). Uitbreiden naar meer
-concurrenten/categorieën = nieuwe URLs in `urls.txt` + eventueel nieuwe `SELECTORS` per site
-(zie `tools/competitor-scraper/CLAUDE.md` voor de aanpassings-flow).
-
-### YouTube research (`tools/youtube-research/`)
-Officiële YouTube Data API v3, 12 Nederlandse zoektermen (2 per productcategorie) met Engelstalige
-fallback als een NL-zoekterm te weinig resultaten oplevert (kleine NL-markt op YouTube). Haalt
-video-titels + topcomments op als thema-signaal.
-
-### 28-07-2026 — Vercel free-plan upload-limiet geraakt
-Te veel test-deploys op één dag → `DeploymentError: Too many requests - try again in 24 hours
-(code: "api-upload-free")`. PR-merges lukken nog wel (merge gebeurt vóór deploy), maar de site
-update niet totdat de limiet reset. Gebruiker koos bewust voor **wachten** i.p.v. Vercel Pro.
-**Als dit weer gebeurt:** check `vercel ls` voor de laatste succesvolle deploy-tijd, en overweeg
-Vercel Pro als dit vaker voorkomt bij actief testen.
-
-### 29-07-2026 — Faz 3 gestart, on hold (account/betaling)
-Higgsfield MCP (`https://mcp.higgsfield.ai/mcp`) gekoppeld + companion skills geïnstalleerd
-(`npx skills add higgsfield-ai/skills` → `.agents/skills/higgsfield-*`, 3 ervan door de installer
-zelf als "High Risk" gemarkeerd: `marketplace-cards`, `product-photoshoot`, `websites` — nog niet
-geïnspecteerd, niet gebruiken zonder eerst de SKILL.md's te lezen).
-
-Gekozen flow: **ugc-product-flow** (product-only, voiceover, geen nep-persoon die het product
-"aanbeveelt" — bewust gekozen boven een pratende "creator"-testimonial, dat zou een nep-review zijn
-en botst met Nederlandse reclameregels/ACM + de eigen NVWA/anti-fabricatie-regels van dit project).
-
-**Kredieten:** het gekoppelde account is een gratis/proefaccount (10 credits). De workflow's
-gepinde modellen (`gpt_image_2` board + `seedance_2_0` video) kosten samen ~97 credits voor
-één 10s clip — ver buiten budget. Goedkoper alternatief gevonden en getest: `nano_banana_2` voor
-het board (2 credits) + `veo3_1_lite` voor de video (6 credits @ 6s, geen audio) = 8 credits totaal.
-Resultaat: 1 stille, 6s productshot van Happy Juice Pack — **gebruiker vond het niet overtuigend**
-("1 product, te kort, stil, zegt niks"). Terechte kritiek: een echte boodschap heeft seslendirme +
-meerdere shots/beats nodig, wat weer een veelvoud aan credits kost.
-
-**Account-verwarring:** de OAuth-koppeling ging naar een "proefaccount", niet het account waar de
-gebruiker echt op wil betalen. Er is geen MCP-tool om binnen een sessie van account te wisselen —
-vereist het loskoppelen/herverbinden van de Higgsfield MCP-server (`/mcp` in Claude Code) om een
-nieuw Google-login-scherm te forceren. Gebruiker wilde dit niet meteen doen, **Faz 3 staat on hold**
-tot ze beslist welk account/betaalplan ze gebruikt (opties gecheckt: 3-daagse gratis trial met 100
-credits — kaart vereist, auto-renew naar $49/mo Plus tenzij geannuleerd — of direct Plus/Ultra
-abonnement, geen eenmalige credit-topup beschikbaar op dit moment).
-
-**Belangrijke les:** geen enkel eenmalig-credit-topup-pad bestond op het moment van testen — alleen
-abonnementen of de kaart-vereiste trial. Vraag de gebruiker VOORAF welk account ze willen koppelen,
-vóórdat je de OAuth-flow start, om dit soort omwisselen te voorkomen.
-
-### 27-08-2026 — Faz 3 niet langer "on hold": account blijkt al betaald abonnement te hebben
-Op verzoek van Musa gecontroleerd via de browser (higgsfield.ai/me/settings/subscription) of het
-account-dilemma hierboven inmiddels is opgelost. Bevindingen, rechtstreeks van de site (niet uit
-geheugen aangenomen):
-- Workspace **"ARK Media"**, gekoppeld aan `arkmedia25@gmail.com` — dit is het juiste account (zelfde
-  e-mailadres als [[user memory]], zelfde entiteit als de Meta-ads juridische structuur, Ark Media).
-- **Starter Plan, actief, $15/maand** — niet meer het gratis proefaccount van 29-07. Verlengt
-  automatisch op **4 september 2026** (eerstvolgende factuur: $18,15, betaalmethode kaart eindigend
-  op 3419, vervaldatum 06/28).
-- Account is al volop gebruikt: 71 generaties totaal, 49 Nano Banana Pro-afbeeldingen, 7 video's via
-  Veo 3.1 Lite, 11 Higgsfield Soul 2.0, 5 Seedream 5.0 Pro — dus iemand (Musa zelf, buiten een
-  Cowork-sessie om) is hier al mee aan de slag gegaan sinds de "on hold" van 29-07.
-- **Kredieten bijna op:** nog maar 2 van de 200 maandelijkse credits over in de huidige cyclus (ververst
-  pas 4 september). Nieuwe Higgsfield-taken zullen tot dan vastlopen op ontoereikende credits, tenzij
-  extra credits gekocht worden via de "Buy credits"-knop op dezelfde pagina.
-- 2 modellen met "unlimited" toegang actief (FLUX.2 Pro, Seedream 5.0 Lite, 365 dagen, auto-renewing).
-
-**Conclusie: Faz 3 is dus niet meer geblokkeerd op een accountbeslissing — dat is intussen zelf al
-opgelost.** De praktische blocker is nu simpelweg **op-geraakte credits tot 4 september**, geen
-beleids- of accountkeuze meer. Als er vóór die datum een nieuwe video-poging gewenst is, moet Musa
-bewust extra credits kopen (kosten niet gecontroleerd tijdens dit bezoek — check de "Buy credits"-flow
-voor de huidige prijs voordat je dit voorstelt).
-
-### 30-07-2026 — GSC-check + PR #4 deploy hersteld + Faz 4 (Pinterest) opgezet, blocked op Pinterest Standard access
-
-**GSC-snapshot (3 maanden):** gemiddelde positie 32,8 (was 56,8 op 24-07, dus herstel loopt maar
-nog ver van de oude ~9). Merk-zoektermen ("amare global" etc.) scoren goed (positie 4-10); nieuwe
-informatieve blogartikelen scoren nog slecht (positie 40-90 — normaal voor nieuwe content zonder
-autoriteit). Twee technische issues gevonden: (1) duplicate URL's door trailing-slash-verschil
-(`/happy-juice-pack` vs `/happy-juice-pack/`, `/darmgezondheid` vs `/darmgezondheid/` — splitst
-ranking-signaal), (2) 100 pagina's "Ontdekt — nog niet geïndexeerd" in Coverage-report. De 117
-404's in Coverage dateren van vóór de redirect-fix van 28-07 (nog niet herscand door Google, geen
-nieuw probleem).
-
-**PR #4 deploy hersteld:** was 28-07 gemerged maar deploy faalde op de Vercel-uploadlimiet
-("Upload aborted"). 24u-window was voorbij → `gh run rerun 30357588885 --failed` opnieuw gedraaid,
-nu volledig geslaagd (build + deploy + Telegram-notificatie). Magnesium-artikel staat nu live.
-
-**Faz 4 (Pinterest) — infrastructuur gebouwd, wacht op Pinterest-goedkeuring:**
-- Ontdekt: een oude, nooit afgemaakte Pinterest-poging uit 20-06-2026 lag al in de repo
-  (`content/PINTEREST_PLAN.md` met 10 kant-en-klare pins, `public/images/pins/` met 15 afbeeldingen,
-  `scripts/pinterest-auth.ts`, `scripts/pinterest-pin.ts`, `app/api/pinterest/callback/route.ts`) —
-  maar `PINTEREST_ACCESS_TOKEN` in `.env.local` stond leeg, OAuth was nooit voltooid.
-- Vercel's `PINTEREST_CLIENT_ID`/`PINTEREST_CLIENT_SECRET` (9 dagen oud) bleken verouderd/onjuist →
-  vervangen door de actuele waarden uit het Pinterest developer-dashboard (App-ID 1582959,
-  "Amarenl.com" app) + opnieuw gedeployed.
-- **Kernprobleem gevonden:** de volledige OAuth `authorization_code`-flow (`/v5/oauth/token`) faalt
-  consistent met `{"code":2,"message":"Authentication failed."}` — ook mét correcte credentials, ook
-  met alléén read-scopes. De app-eigen "Token genereren"-snelknop in het dashboard werkt wél (bewijst
-  dat App-ID/secret kloppen). Conclusie: **Pinterest Trial-toegang staat de normale OAuth-flow niet
-  toe** — alleen de ingebouwde dashboard-snelknop (levert een 24u-durend, read-only token: pins:read,
-  boards:read, user_accounts:read, ads:read, catalogs:read — geen pins:write). Dit app heeft
-  "Upgrade naar Standard-toegang" **in afwachting** staan; pas na goedkeuring werkt de echte OAuth-flow
-  met `pins:write`.
-- **Gebruiker koos bewust: wachten op Pinterest-goedkeuring**, niet de 10 pins nu handmatig posten
-  (was aangeboden als snel alternatief, afgewezen — zie [[feedback-amarenl-workflow]] voor waarom
-  automatisering/controle hier zwaarder weegt dan snelheid).
-- **Gebouwd, klaar om te activeren zodra Standard access is goedgekeurd:**
-  - `content/pinterest-queue.json` — de 10 pins uit PINTEREST_PLAN.md, elk met stabiele `id`,
-    gekoppelde afbeelding, en een `boardCategory`-label (board wordt bij het posten dynamisch
-    opgezocht via naam, geen hardgecodeerde board-ID's nodig — boards bestaan mogelijk nog niet).
-  - `scripts/pinterest-queue-notify.mjs` — pakt de eerstvolgende `"queued"` pin, stuurt 'm naar
-    Telegram (`sendPhoto` + ✅/❌ inline-knoppen), zet status op `"pending"`.
-  - `.github/workflows/amarenl-pinterest-queue.yml` — cron ma/wo/vr/za 09:00 Amsterdam, draait de
-    notify-script en commit't de queue-statuswijziging.
-  - `app/api/telegram/webhook/route.ts` uitgebreid: `pin_approve:<id>` / `pin_reject:<id>`
-    callback_data. Bij afwijzen: status → `rejected` via GitHub Contents API. Bij goedkeuren: haalt
-    `PINTEREST_ACCESS_TOKEN` uit env, zoekt board-ID op via naam, post de pin via Pinterest API v5,
-    zet status → `posted`. **Als `PINTEREST_ACCESS_TOKEN` nog niet gezet is, geeft de bot een
-    duidelijke Telegram-melding** ("Pinterest henüz bağlı değil") in plaats van te crashen.
-- **Activatiestappen voor de volgende sessie (zodra Pinterest Standard access goedkeurt):**
-  1. Check goedkeuringsstatus op `https://developers.pinterest.com/apps/1582959/` (tab "Configureren").
-  2. Voltooi de OAuth-flow met scope `pins:read,pins:write,boards:read` via
-     `https://www.pinterest.com/oauth/?client_id=1582959&redirect_uri=https%3A%2F%2Famarenl.com%2Fapi%2Fpinterest%2Fcallback&response_type=code&scope=pins%3Aread%2Cpins%3Awrite%2Cboards%3Aread`
-     (callback-pagina toont access_token + refresh_token).
-  3. Zet `PINTEREST_ACCESS_TOKEN` (en `PINTEREST_REFRESH_TOKEN` voor later) als Vercel
-     production env var, `vercel deploy --prod`.
-  4. Maak de 5 boards aan op het Pinterest-account als ze nog niet bestaan (namen in
-     `content/PINTEREST_PLAN.md` sectie 2 — moeten exact overeenkomen met `boardCategory` in de queue).
-  5. Trigger de workflow handmatig (`gh workflow run amarenl-pinterest-queue.yml`) of wacht op de cron.
-
-### Faz 5 — Meta Ads Lead Generation (05-08-2026 gestart)
-
-**Doel:** betaald NL-verkeer naar `/gratis-gut-brain-gids` sturen, e-maillijst laten groeien via
-bestaande Pixel/CAPI-tracking — geen nieuwe infrastructuur nodig, alles staat al.
-
-**Bestaande infrastructuur (hergebruikt, niet opnieuw gebouwd):**
-- `lib/meta-pixel.ts` — Pixel + CAPI, events: PageView/ViewContent/Lead/Subscribe/Contact/
-  InitiateCheckout, PII SHA-256 gehasht vóór verzending
-- `NEXT_PUBLIC_META_PIXEL_ID` + `META_CAPI_TOKEN` — al 8 dagen live in Vercel production
-- Landingspagina `/gratis-gut-brain-gids` (`LeadMagnetForm.tsx`) → `/api/subscribe` → MailerLite
-  (`nl-audience` groep, non-blocking sync), `trackLeadConversion` vuurt Pixel+CAPI direct na
-  succesvolle submit
-
-**Business Manager:** gebruiker heeft al een Meta Business Manager — geen nieuwe aanmaken. Ad-account
-onder dat bestaande BM opzetten.
-
-**Budget:** €10-15/dag (~€300-450/maand), 1 campagne, 1 ad set — te klein budget om over meerdere
-ad sets te spreiden.
-
-**Campagnestructuur:**
-- Objective: Leads (website conversion, geoptimaliseerd op `Lead` pixel event)
-- Ad set: NL, 25-45 jaar, interesses wellness/energie/stress/slaap (matcht bestaande ICP)
-- 2-3 creative-varianten binnen dezelfde ad set (mini-A/B)
-
-**Creative:** statisch beeld bij launch — Faz 3 (Higgsfield video) staat on hold, dus geen video.
-Copy: value-first, geen agressieve verkooptaal, binnen EFSA/ACM-grenzen (zelfde discipline als de
-rest van de site — geen sahte testimonials/overclaims).
-
-**Belangrijke beperking:** geen Meta Marketing API-koppeling deze sessie — campagne moet handmatig in
-Ads Manager UI opgezet worden. Claude bereidt targeting/copy/creative-richting voor en begeleidt
-stap voor stap, voert de campagne niet zelf uit.
-
-### 07-08-2026 — kritieke lead-capture bug gevonden + gefixt, concurrentie-analyse ververst, eerste creative-scenario opgesteld
-
-**Kritieke bug (bleek NIET "niet blokkerend" te zijn, zoals hierboven eerder aangenomen — gecorrigeerd):**
-Elke form-submit op `/gratis-gut-brain-gids` (en de 5 andere lead-formulieren) gaf een 500-error.
-Root cause was twee-traps: (1) `writeSubscribers()` deed `fs.writeFileSync` naar `data/subscribers.json`
-vóór de MailerLite-sync, en dat crasht op Vercel's read-only serverless filesystem — de MailerLite-call
-werd dus nooit bereikt; (2) zelfs na het verwijderen van de lokale file-write bleek de MailerLite-call
-zelf ook stuk: `groups: ['nl-audience']` — MailerLite's API verwacht een numerieke group-id, geen slug,
-en gaf 422 terug. Omdat deze call vóór de fix `.catch(() => {})` had (fire-and-forget), werd die 422
-altijd stil geslikt en toonde het formulier altijd "succesvol" terwijl er nooit een lead aankwam.
-**Praktisch effect: vermoedelijk zijn alle leads via deze formulieren de afgelopen periode verloren
-gegaan, niet alleen sinds recent.** Beide bugs gefixt (`app/api/subscribe/route.ts`, group-id nu
-`185294849333790257` = "Amare NL Leads"), gededuped naar main, live geverifieerd met een test-submit
-(HTTP 200 + echte MailerLite-inschrijving). **Dit was een harde blocker voor Faz 5 — zonder deze fix
-zou betaald verkeer naar een kapotte formulier zijn gestuurd.**
-
-**Concurrentie-analyse ververst (`analytics/` ClickHouse-stack):** Docker Desktop stond uit (start niet
-automatisch op login), dus de dagelijkse cron faalde stil sinds ~05-08. Handmatig herstart + verse
-`track-competitor-ads.mjs`-run (token zit in `/Users/ark/projects/amarenl.com/analytics/.env`, niet in
-deze checkout). Belangrijkste bevindingen (volledig rapport: zie artifact-link in sessie, of herhaal de
-queries in `analytics/competitor-analysis-queries.sql` filtered op eigen brand-page):
-- **"Vitals" als concurrent is onbruikbaar** — alle 2766+ "Vitals"-advertenties zijn romance-novel-apps,
-  niet Vitals Vitamins. Bekend risico uit `competitors.json`, nu bevestigd. Voortaan negeren of pas
-  herinstellen zodra de echte `page_id` bekend is.
-- Vitakruid/Orthica ruwe totalen zijn opgeblazen door reseller/drogist-pagina's (24pharma, Vitaminstore,
-  Etos, etc.) — alleen cijfers gefilterd op de eigen merkpagina zijn betrouwbaar: Vitakruid 49 actieve
-  ads (~18 dagen gem. looptijd, snelle rotatie), Nutriphyt 30 actieve ads (~58 dagen gem., stickiest
-  creative), Orthica maar 4 (nauwelijks eigen paid spend, leunt op resellers).
-- **Sterkste signaal:** Nutriphyt's Methialyn-advertentie (B-complex/energie, emoji + symptoomvraag +
-  genoemd mechanisme) draait ononderbroken al **409 dagen** — duidelijkste "winnende formule" in de
-  markt. Vitakruid's patroon is juist quiz/keuzehulp-gedreven or educatief, geen harde productclaims.
-  Geen van de 3 legitieme concurrenten startte nieuwe creative in de laatste 7 dagen (rustig venster).
-
-### 08-08-2026 — creative-scenario compleet, DEFINITIEVE keuze: varianten A + B
-
-Alle 3 copy-varianten kregen een afbeelding die merkkleuren (`#6B4C8C`/`#9B7FBE`/`#C8A951` uit
-`app/globals.css`) correct toepast, getoetst aan `scripts/efsa-audit.js`'s verboden-patronenlijst (geen
-"geneest/behandelt/klinisch bewezen/100% veilig", taal blijft "ondersteunt"-vorm). Volledige side-by-
-side ad-mockup-review (Instagram/Facebook feed-vorm) werd gepubliceerd als sessie-artifact.
-
-**Gebruiker koos A + B voor de campagne, C valt af:**
-- **A — symptoom+mechanisme** (Nutriphyt-patroon): "😴 Moe, gespannen of slaap je slecht? ... gut-brain
-  axis ..." → `content/meta-ads-drafts/creative-1-gutbrain-illustration.png` — abstracte gut-brain-
-  illustratie (silhouet + gloeiende verbindingslijn hoofd↔buik). **Definitief, klaar voor gebruik.**
-- **B — nieuwsgierigheid/vraag**: "Wist je dat je darmen vaak de 'tweede hersenen' worden genoemd?..."
-  → `content/meta-ads-drafts/creative-3-gids-mockup.png` — premium hardcover gids-mockup, paars kaft,
-  goudfolie gut-brain-embleem (zelfde visuele symbool als A, geen leesbare tekst op de kaft = geen risico
-  op AI-tekstvervorming). Toont de gids als tastbaar waardevol object i.p.v. "gratis PDF"-gevoel.
-  **Definitief, klaar voor gebruik.**
-- **C — vertrouwen/anti-hype — AFGEVALLEN**, niet meegenomen naar de campagne. Bestanden
-  (`creative-2-lifestyle-moment-v2.png` en de afgekeurde v1) blijven staan als referentie/toekomstige
-  optie, niet actief gebruikt.
-
-Reden 2-varianten i.p.v. 3: bij €10-15/dag budget is elke extra variant een verdunning van het budget
-over meer creatives, wat Meta's leerfase (richtlijn: ~50 conversies/ad-set/week) vertraagt. A + B werden
-gekozen als de twee sterkste/meest onderscheidende invalshoeken.
-
-**Pixel/CAPI live-check (08-08-2026) — BEVESTIGD, end-to-end werkend:**
-- Client-side: `fbq` laadt correct op `/gratis-gut-brain-gids` (`window.fbq.loaded === true`), geen
-  directe `facebook.com/tr` network-request gezien in de test-browser — vermoedelijk een ad-blocker in
-  die browserprofiel, niet per se een sitefout (CAPI dekt dit scenario juist af, zie hieronder).
-- Server-side CAPI: rechtstreekse test-POST naar productie `/api/capi-event` (event `Lead`,
-  `event_source_url: /gratis-gut-brain-gids`) gaf `{"ok":true}` terug — bewijst dat `sendCAPIEvent()`
-  het event daadwerkelijk naar Meta's Graph API stuurde én Meta het accepteerde (dus `META_PIXEL_ID` +
-  `META_CAPI_TOKEN` zijn beide correct in Vercel production). Volledige tracking-keten is klaar voor
-  launch.
-
-**Volgende stappen:**
-1. Ad-account onder bestaande BM koppelen, betaalmethode + €10-15/dag budget instellen (gebruiker)
-2. Campagne live zetten met varianten A + B, 1-2 weken laten lopen vóór evaluatie (leerfase niet te
-   vroeg afbreken)
-3. Wekelijkse CPL/lead-rapportage — kan als RemoteTrigger routine geautomatiseerd worden (zelfde
-   patroon als Postiz/AmareNL reply-watch)
-4. Overweeg: Docker Desktop auto-start bij login instellen, zodat de concurrentie-cron niet meer stil
-   faalt zoals eerder deze week (~2 dagen data-gat doordat Docker niet draaide)
-
-### Openstaand voor volgende sessie
-- [ ] **15 PR's** staan nog open in de Telegram-approval-queue (#3, #6-18, #20 — #5 en #19 zijn al
-      gesloten) — moeten nog door de gebruiker beoordeeld worden
-- [x] ~~Vercel-deploy geblokkeerd~~ — opgelost 30-07: `gh run rerun 30357588885 --failed` geslaagd,
-      PR #4 (magnesium-artikel) staat nu live.
-- [ ] **Faz 3** — Higgsfield gekoppeld maar ON HOLD: gebruiker moet beslissen welk Higgsfield-account
-      + betaalplan (zie hierboven), dan pas verder met een echte, meerdere-shots + voiceover video
-- [ ] **Faz 4 (Pinterest)** — infrastructuur volledig gebouwd 30-07, **wacht op Pinterest Standard
-      access-goedkeuring** (app 1582959, Trial-toegang staat de OAuth-flow nog niet toe). Zie sectie
-      hierboven voor exacte activatiestappen zodra goedgekeurd. Instagram/TikTok/YouTube copy-drafts
-      nog niet gebouwd (kan hetzelfde queue+Telegram-patroon hergebruiken, geen API nodig — copy-paste).
-- [ ] **Faz 5 (Meta Ads)** — plan vastgelegd 07-08-2026, nog niet gestart. Volgende stap: Pixel
-      live-check + ad-account onder bestaande Business Manager koppelen (zie sectie hierboven).
-- [ ] Overweeg: algemene web-search API (naast PubMed) voor bredere onderwerp-research, besproken
-      maar niet geïmplementeerd
-- [ ] `server/` package (sectie 19) opruimen of expliciet archiveren — momenteel misleidende
-      documentatie die een niet-actief systeem beschrijft alsof het draait
-- [ ] De 3 "High Risk" Higgsfield skills (`marketplace-cards`, `product-photoshoot`, `websites`)
-      nog niet geïnspecteerd — lees de SKILL.md's voordat ze gebruikt worden
-
----
-
-## 21. SORO-ONDERZOEK → TELEGRAM-CHECKLIST — 21 augustus 2026 (Cowork-sessie, extern, via device-bridge)
-
-**Context:** gebruiker vroeg waarom trysoro.com (AI-SEO-concurrent) zulke hoge CTR haalt en of ze een
-"geheime techniek" hebben. Onderzocht via 4 onafhankelijke bronnen (Soro's eigen blog + 3 externe
-reviews, waaronder een 60-dagen test). **Conclusie: geen geheime techniek.** Het enige dat consistent
-het verschil maakt tussen goed en slecht presterende Soro-gebruikers is **menselijke editorial review
-vóór publicatie**, met name bij YMYL (gezondheid/supplementen)-content. Volledig onderzoeksrapport met
-bronvermeldingen: zie sessie-artifact `soro-gizli-teknik-arastirmasi.md` (aan gebruiker geleverd,
-niet in dit repo).
-
-**Waarom dit relevant is voor dit project:** dit bevestigt exact wat sectie 20 (Faz 1, Telegram-
-onaygate) en de EFSA-sectie hierboven al aantoonden — de zwakte zit niet in de contentmotor
-(lengte/meta/interne links/afbeelding zijn al technisch in orde), maar in **hoeveel een mens er echt
-naar kijkt vóór publicatie.** Concreet gevonden in dit repo: EFSA-audit lag wekenlang onbehandeld,
-Telegram-approval-bericht bevatte tot nu toe geen enkel kwaliteitssignaal (alleen titel + samenvatting
-+ PR-link) — "goedkeuren" was dus feitelijk blind vertrouwen.
-
-**Zes concrete regels (uit het onderzoek, prioriteitsvolgorde):**
-1. Publicatietempo moet de menselijke reviewcapaciteit volgen, niet de generatiesnelheid van de
-   automatisering.
-2. Telegram-goedkeuring moet een echte checklist tonen, niet alleen ja/nee — **hieronder geïmplementeerd.**
-3. Auteursidentiteit moet echt zijn (geen generieke "AmareNL Redactie") — **nog niet geïmplementeerd,
-   openstaand actiepunt.**
-4. Elk nieuw artikel moet een verplichte externe bron hebben (RIVM/PubMed/klinische studie) —
-   **detectie nu geïmplementeerd (zie hieronder), maar niet als harde blokkade — alleen zichtbaar
-   signaal in Telegram.**
-5. Kanibalisatie-clusters (stress/slaap, zie `amarenl-trafik-artirma-plani.md`) eerst samenvoegen
-   vóór nieuwe content in diezelfde categorie — **detectie nu geïmplementeerd als zichtbaar signaal,
-   samenvoegen zelf nog niet gedaan.**
-6. YMYL-content zou idealiter geen volledige auto-publish moeten hebben zonder verhoogde
-   kwaliteitsdrempel — dit project heeft al de Telegram-gate (Faz 1), dus dit punt is grotendeels al
-   gedekt; de checklist hieronder is de verfijning daarvan.
-
-**Wat vandaag is geïmplementeerd (deze sessie, commit `20dd880` op branch
-`draft/fix-magnesium-duplicate` — LET OP: niet op `seo-aeo-overhaul`, zie waarschuwing onderaan):**
-
-`scripts/generate-article-claude.mjs` — nieuwe functie `buildApprovalChecklist(article, extraJsonBefore)`
-vlak vóór `pickTopic()`. Berekent, ná generatie en vóór de artikel wordt toegevoegd aan
-`data/extra-articles.json`:
-- `wordCount` + `wordCountOk` (>= 1000 — **let op: dit is puur een weergavesignaal, de bestaande harde
-  `validate()`-poort met minimum 800 woorden is NIET aangepast, om geen onverwacht retry-gedrag te
-  riskeren in de live cron zonder dat live te kunnen testen**)
-- `hasCitation` — regex-check op `rivm\.nl|pubmed|ncbi\.nlm\.nih\.gov|bron:|referentie:|https?:\/\/`
-  in de artikeltekst
-- `sameCategoryCount` — hoeveel bestaande artikelen al dezelfde categorie hebben (kanibalisatie-signaal)
-- `efsaOk: true` — placeholder, EFSA/NVWA-check gebeurt al hard in `validate()` hierboven; als de
-  generator zover komt is die poort al gehaald
-
-Deze 4 waarden worden als extra `GITHUB_OUTPUT`-keys geschreven (`word_count`, `word_count_ok`,
-`has_citation`, `same_category_count`), naast de al bestaande `slug`/`title`/`excerpt`.
-
-`.github/workflows/amarenl-article-claude.yml` — de "Notify Telegram"-stap leest deze 4 nieuwe
-outputs en bouwt een 4-regelige checklist die vóór de PR-link in het Telegram-bericht komt:
-```
-✅ EFSA/NVWA kontrolü: geçti (otomatik doğrulandı)
-✅/⚠️ Kelime sayısı: <N> (hedefin üstünde / 1000 hedefinin altında — kontrol et)
-✅/⚠️ Kaynak/atıf: var / YOK — kontrol et
-✅/⚠️ Kategori çakışması: çakışma yok / bu kategoride zaten N makale var — konu çakışması olabilir
-```
-(In het Turks, omdat de gebruiker die de Telegram-knoppen bedient Turks leest — bewuste keuze, niet
-een fout; de rest van dit bestand blijft Nederlands.)
-
-**Verificatie gedaan:** `node --check scripts/generate-article-claude.mjs` → syntax OK.
-`python3 -c "import yaml; yaml.safe_load(...)"` op de workflow → YAML geldig. `git diff` van beide
-bestanden nagelopen, minimaal en gericht.
-
-**⚠️ NIET live getest.** Dit is code die nog nooit door een echte scheduled/manual run van
-`amarenl-article-claude.yml` is gelopen. **Actie voor de eerstvolgende sessie die een run van dit
-workflow ziet (handmatig getriggerd of via de ma/wo/vr cron):** controleer het eerste echte
-Telegram-bericht zorgvuldig — klopt de checklist-opmaak, komen de waarden overeen met het
-werkelijke artikel, breekt er niets in de `GITHUB_OUTPUT`-multiline-syntax (`excerpt` gebruikt al
-`<<DELIM`-stijl, de 4 nieuwe regels zijn simpele eenregelige outputs, dus geen multiline-risico
-verwacht, maar niet 100% zeker zonder een echte run).
-
-**⚠️ BRANCH-WAARSCHUWING — belangrijk, lees dit:** deze commit (`20dd880`) staat op
-`draft/fix-magnesium-duplicate`, de branch die toevallig actief uitgecheckt stond op het moment dat
-deze Cowork-sessie begon te werken (waarschijnlijk door de lopende automatisering). Dat is **niet**
-dezelfde branch als `seo-aeo-overhaul`, waar sectie 21/22 van de EFSA-fix-saga staat (ja, dubbele
-sectienummering tussen branches — dit bestand is op dit moment op minstens 2 branches uit elkaar
-gelopen). Deze sessie heeft geprobeerd de commit via `git worktree add` + `cherry-pick` naar
-`seo-aeo-overhaul` te verplaatsen, maar dat mislukte herhaaldelijk door dezelfde FUSE-mount
-lock-beperking (`.git/worktrees/seo-aeo-wt/index.lock` kon niet betrouwbaar unlinked worden, zelfs
-niet met de `mv`-workaround die bij een gewone commit wel werkt — cherry-pick doet intern een tweede
-geneste git-aanroep die de net vrijgemaakte lock blijkbaar meteen weer tegenkomt). De worktree-
-registratie bij `.git/worktrees/seo-aeo-wt` kon ook niet opgeruimd worden (zelfde unlink-probleem) en
-staat dus nog **geregistreerd maar leeg** — voer lokaal (waar dit geen probleem is) uit:
-`git worktree remove -f -f /tmp/seo-aeo-wt` (map bestaat niet meer, alleen de .git-registratie) of
-gewoon `git worktree prune`.
-
-**Samengevat voor de volgende sessie met echte git-toegang:**
-1. Twee losse, nog-niet-samengevoegde takken van werk bestaan nu: (a) `seo-aeo-overhaul` met de
-   EFSA-content-fix (`be60dcc`/`ca0c3e8`/`162d069`, zie sectie 21/22 op díe branch), nog niet
-   gepusht; (b) `draft/fix-magnesium-duplicate` met deze Telegram-checklist (`20dd880`), waarschijnlijk
-   al wel gepusht/PR'd door de reguliere automatisering (check `git log origin/draft/fix-magnesium-
-   duplicate` zodra je netwerktoegang hebt).
-2. `git worktree prune` uitvoeren om de stray-registratie op te ruimen.
-3. Overweeg op termijn `seo-aeo-overhaul` gewoon te pushen en los te mergen — de EFSA-fix staat daar
-   al maanden klaar en is inhoudelijk voltooid, alleen de push ontbreekt.
+**Techniek-noot voor toekomstige Cowork-device-bridge-sessies:** `git cherry-pick` binnen een
+`git worktree` faalde herhaaldelijk op een FUSE-mount lock (`index.lock` kon niet unlinked worden, ook
+niet met de `mv`-workaround die bij een gewone commit wél werkt — cherry-pick doet intern een tweede
+geneste git-aanroep die de lock opnieuw pakt). **Workaround:** commit direct op de branch i.p.v.
+cherry-picken tussen worktrees, of gebruik `gh api` om de commit remote te maken.
 
 ---
 
 ## 25. COLLAGEEN-CLUSTER — DEFINITIEF CONSOLIDATIE-PLAN MET ECHTE GSC-DATA (3 maanden) — 22 augustus 2026
 
-**Context:** sectie 22 vlagde dit als het grootste cannibalisatie-probleem (~25 artikelen), en sectie 24
-bevestigde dat het nog steeds openstaat na Hermes' grote PR-batch (#38-45). Vandaag verse, exacte GSC-data
+**Context:** een eerdere sessie-analyse vlagde dit als het grootste cannibalisatie-probleem (~25 artikelen);
+dat bleef openstaan na Hermes' PR-batch #38-45 (o.a. magnesium-dedupe, stress/burn-out-fix,
+collageen-verdieping, 5 EFSA-fixes). Vandaag verse, exacte GSC-data
 opgehaald (Search Console → Performans → Filtre ekle → Sayfa → "Şunu içeren URL'ler" → "collageen" → tab
 "Sayfa sayısı", periode 3 maanden) om dit van "waarschijnlijk probleem" om te zetten in een direct
 uitvoerbaar plan met echte URL's en cijfers — geen giswerk meer.
@@ -1285,13 +913,14 @@ significant moeten verbeteren voor de overgebleven pagina's.
    dosering-tip), die inhoud overnemen in de pilaarpagina vóór je de bron-pagina redirect — anders gaat die
    informatie verloren.
 4. Na deploy: `npm run build` / `npx tsc --noEmit` clean, en handmatig GSC "Dizine eklenmesini iste"
-   aanvragen voor de pilaarpagina (quotum-bewust, zie sectie 24 — bewaar het quotum hiervoor).
+   aanvragen voor de pilaarpagina (GSC-indexeringsquotum is beperkt — bewaar het hiervoor).
 
 **Methode voor toekomstige cluster-checks (herbruikbaar voor stress/slaap-clusters):** Search Console →
 Performans → Filtre ekle → Sayfa → "Şunu içeren URL'ler" → typ het cluster-trefwoord → tab "Sayfa sayısı"
 geeft direct de per-URL vertoning/klik/CTR-tabel over de gekozen periode. Sneller en preciezer dan aannames
-over welke artikelen "waarschijnlijk" cannibaliseren — gebruik dit ook voor de nog openstaande stress-
-(4 artikelen) en slaap-cluster (2-3 artikelen) uit sectie 22/24 voor dezelfde exacte aanpak.
+over welke artikelen "waarschijnlijk" cannibaliseren. Stress-cluster en slaap-cluster zijn inmiddels
+beide geconsolideerd (PR #75: 7→3 pagina's; PR #71: 4 interne links) — dit was het te volgen voorbeeld
+voor toekomstige clusters.
 
 ---
 
@@ -1784,38 +1413,27 @@ na een commit tijdens lock-contentie nooit alleen op een exit-code 0 — control
 `git diff --stat` tegen de parent-commit of de bestanden die zouden moeten wijzigen, ook echt gewijzigd
 zijn.
 
-### 29.5 Status: alles lokaal gecommit, nog niet gepusht
+### 29.5 Status: ✅ gepusht en gemerged
 
-Zowel `draft/readme-pillar-done` (sectie 26-28, carousel + cluster-gate + Triangle-of-Wellness, t/m
-commit `a50ff9c`) als het nieuwe `draft/collageen-cluster-consolidatie` (`290b5fb` + `b1bcd06`) staan
-klaar maar **niet gepusht** — deze device-bridge-sessie heeft geen git-credentials (bevestigde,
-terugkerende beperking, zie sectie 28).
-
-**Actie voor Hermes:**
-1. `git fetch origin main` — check huidige stand van `origin/main`.
-2. Push beide branches: `git push origin draft/readme-pillar-done` en
-   `git push origin draft/collageen-cluster-consolidatie`.
-3. Open PR's naar `main` voor beide (niet direct mergen zonder review — `git diff main...<branch>
-   --stat` eerst bekijken).
-4. Overweeg de twee branches te combineren in één PR als dat overzichtelijker is — ze raken
-   overlappende bestanden (`data/extra-articles.json`, `vercel.json`) niet aan dezelfde regels, dus een
-   merge-conflict wordt niet verwacht, maar controleer dit na het pushen.
+`draft/readme-pillar-done` (sectie 26-28, carousel + cluster-gate + Triangle-of-Wellness) en
+`draft/collageen-cluster-consolidatie` zijn allebei gepusht en gemerged naar `main`
+(PR #66 resp. #64, beide 24-08-2026) — geverifieerd via `gh pr list`.
 
 ### 29.6 Openstaand — belangrijk actiepunt voor Musa/Hermes
 
-**Verifieer op de echte Mac (niet vanuit deze Cowork-sessie) of `server/auto-publish.ts` daadwerkelijk
-gepland draait** via `crontab -l`, `pm2 list`, of `launchctl list | grep -i amare`. Deze
-device-bridge-sessie draait in een gesandboxde shell (sessie-ID als gebruikersnaam, geen toegang tot
-`crontab -l` — "Permission denied") en kon dit niet betrouwbaar controleren. Als het script wél gepland
-draait, moet er bewust besloten worden: uitzetten, of alsnog voorzien van dezelfde EFSA-/duplicate-
-content-checks als de hoofdpijplijn voordat de staging-map weer gebruikt wordt.
+**Update 02-09-2026 — geverifieerd op de echte Mac:** `crontab -l`, `pm2 list`, `launchctl list` en de
+LaunchAgent-plists doorzocht op `auto-publish` — geen enkele treffer. Alleen twee Hermes-gateway-agents
+(Python venv) en de `com.amarenl.analytics.competitor-ads`-cron draaien; `server/auto-publish.ts` staat
+nergens gepland. Risico bevestigd inactief — geen actie nodig, tenzij iemand de gearchiveerde
+staging-map bewust weer in gebruik neemt (zie hierboven, dan eerst dezelfde EFSA-/duplicate-checks
+toevoegen als de hoofdpijplijn).
 
-**Nog niet aangepakt (bewust buiten scope van dit verzoek):** de near-duplicate-clusters rond
-magnesium, vitamine D, vitamine C en probiotica/darmflora die in de onafhankelijke audit naar voren
-kwamen, zijn nog **live** en nog niet geconsolideerd — alleen het risico dat de staging-queue ze zou
-*verergeren* is voorlopig gedeactiveerd. Dit blijft een openstaand punt voor een volgende sessie, samen
-met de al eerder genoemde punten: stress/slaap-cluster (sectie 22/24), auteur/citatie-batch (sectie
-23), dode `.mdx`-bestanden in `content/blog/`, de losstaande `seo-aeo-overhaul`-branch,
+**Nog niet aangepakt (destijds bewust buiten scope):** de near-duplicate-clusters rond magnesium,
+vitamine C en probiotica/darmflora die in de onafhankelijke audit naar voren kwamen — alleen het risico
+dat de staging-queue ze zou *verergeren* was voorlopig gedeactiveerd. **Update:** de vitamine D-cluster
+is inmiddels wél geconsolideerd (PR #74, 5→2 pagina's), net als stress/slaap-cluster (PR #75/#71) en de
+auteur/citatie-batch (11 PR's, alle categorieën). Nog steeds open: magnesium, vitamine C,
+probiotica/darmflora, dode `.mdx`-bestanden in `content/blog/`, de losstaande `seo-aeo-overhaul`-branch,
 `/probiotica-stammen`-herindexering, en het lege productaanbevelingen-array in
 `b-vitamines-energie-supplement-nederland` (sectie 27).
 
@@ -1924,19 +1542,18 @@ die verder in de toekomst ligt dan vandaag — gebruik `new Date().toISOString()
 geplande "content kalender"-datum, tenzij er ook een echt gating-mechanisme in `getAllBlogPosts()`
 wordt gebouwd dat toekomstige artikelen pas toont op hun eigen datum.
 
-### 30.6 Status
+### 30.6 Status: ✅ gepusht en gemerged
 
-Alles lokaal gecommit op `draft/fix-future-dates` (`64b21e1`), **nog niet gepusht** — zelfde
-credential-beperking als steeds. Drie branches staan nu klaar voor Hermes om te pushen en mergen:
-`draft/readme-pillar-done`, `draft/collageen-cluster-consolidatie`, `draft/fix-future-dates` — plus
-Hermes' eigen `draft/dedupe-batch1` (sectie 29.7). Zie sectie 31 (hieronder, of de losse prompt die aan
-Musa is meegegeven) voor een samengevatte actielijst.
+`draft/fix-future-dates` is gepusht en gemerged naar `main` (PR #51 + PR #52, 23-08-2026) — net als
+`draft/readme-pillar-done`, `draft/collageen-cluster-consolidatie` en Hermes' `draft/dedupe-batch1`
+(sectie 29.7). Alle vier geverifieerd via `gh pr list`.
 
-### 30.7 Kleine opruiming gedaan: kapotte git-ref
+### 30.7 Kleine opruiming: kapotte git-ref — ✅ inmiddels vanzelf opgelost
 
-Tijdens deze sessie ontstond per ongeluk een kapot bestand `.git/refs/heads/draft/collageen-cluster-
+Tijdens die sessie ontstond per ongeluk een kapot bestand `.git/refs/heads/draft/collageen-cluster-
 consolidatie.lock.old` (0 bytes, restant van een lock-recovery `mv` in sectie 28/29) dat `git branch
 -a`/`git fetch --all` deed falen met `fatal: bad object refs/heads/...`. Kon niet verwijderd worden
-vanuit deze sessie (FUSE-bridge "Operation not permitted", zelfs met `mv`). **Actie voor Hermes:** voer
-lokaal `rm .git/refs/heads/draft/collageen-cluster-consolidatie.lock.old` uit — dat bestand hoort daar
-niet en heeft geen enkele functie.
+vanuit deze sessie (FUSE-bridge "Operation not permitted", zelfs met `mv`). **Update 02-09-2026:**
+geverifieerd op de echte Mac — `.git/refs/heads/draft/` bestaat niet meer en er staan geen
+worktrees geregistreerd (`git worktree list` toont alleen de hoofd-checkout). Al opgelost, geen actie
+meer nodig.
