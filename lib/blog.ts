@@ -479,71 +479,6 @@ export const blogPosts: BlogPost[] = [
     image: "/images/blog/happy-juice-pack-vs-los.jpg"
   },
   {
-    slug: "probiotica-prebiotica-mentabiotics-vergelijken",
-    title: "Probiotica vs Prebiotica: Wat Is Beter?",
-    date: "2026-06-16",
-    category: "darmen",
-    excerpt: "Probiotica en prebiotica klinken hetzelfde, werken fundamenteel anders, en zijn allebei essentieel voor je darmflora. Ontdek het verschil, waarom psychobiotica zoals MentaBiotics een aparte categorie vormen, en hoe je de juiste kiest.",
-    author: "Mark",
-    content: `
-      <h2>Waarom iedereen het over darmbacteriën heeft</h2>
-      <p>Tien jaar geleden was "probiotica" een nicheterm die je alleen in reformwinkels hoorde. Vandaag is het een miljardenindustrie — en met reden. Je darmmicrobioom beïnvloedt je stemming, immuunsysteem, spijsvertering, energieniveau en zelfs je huid. De wetenschap ontdekt elk jaar nieuwe verbanden tussen darmbacteriën en gezondheid.</p>
-      <p>Maar met de populariteit komt ook verwarring. Probiotica, prebiotica, postbiotica, psychobiotica — de termen stapelen zich op. En dan heb je nog de vraag: is een probioticum uit de supermarkt (€12 per pot) vergelijkbaar met een klinisch onderzochte formule zoals MentaBiotics?</p>
-      <p>In dit artikel ontwar je de begrippen, ontdek je het verschil tussen een generiek probioticum en een psychobioticum, en weet je welke past bij jouw doel — of dat nu betere spijsvertering, mentale veerkracht of een complete darmreset is.</p>
-      <h2>Probiotica: de levende bacteriën zelf</h2>
-      <p>Probiotica zijn <strong>levende micro-organismen</strong> die, wanneer in voldoende hoeveelheden ingenomen, een gezondheidsvoordeel opleveren voor de gastheer — dat ben jij. Simpel gezegd: je slikt goede bacteriën in die zich in je darmen vestigen en daar nuttig werk doen.</p>
-      <p>Een probioticum wordt beoordeeld op drie criteria:</p>
-      <ul>
-      <li><strong>Stam:</strong> niet "Lactobacillus" in het algemeen, maar de specifieke stam — bijvoorbeeld Lactobacillus helveticus Rosell-52. Het is de stam die het effect bepaalt, niet de soort.</li>
-      <li><strong>CFU (colony-forming units):</strong> hoeveel levende bacteriën zitten erin? Standaard probiotica bevatten 1 tot 50 miljard CFU.</li>
-      <li><strong>Stabiliteit:</strong> overleven de bacteriën de maagzuur-barrière? Zonder zuurbestendige capsule of speciale coating kan een groot deel van de CFU's sterven voordat ze de darmen bereiken.</li>
-      </ul>
-      <p><strong>Generieke probiotica (supermarkt/drogist)</strong> bevatten vaak één of twee stammen, een matige CFU, en minimale informatie over stabiliteit en stamherkomst. Ze kunnen je spijsvertering licht ondersteunen — en dat is het.</p>
-      <p><strong>Klinische probiotica</strong> zoals MentaBiotics specificeren exact welke stam (Rosell-52 en Rosell-175), in welke dosering, met klinische studies naar de specifieke toepassing. Dit is het verschil tussen "er staat probiotica op het etiket" en "dit probioticum is onderzocht voor stemming en mentale veerkracht."</p>
-      <h2>Prebiotica: het voedsel voor je bacteriën</h2>
-      <p>Prebiotica zijn <strong>niet-verteerbare vezels</strong> die dienen als voedsel voor je darmbacteriën. Je kunt ze zien als de meststof voor je interne tuin — je strooit geen nieuwe planten (probiotica), maar je voedt wat er al groeit.</p>
-      <p>Prebiotica komen van nature voor in:</p>
-      <ul>
-      <li>Knoflook, ui, prei (inuline)</li>
-      <li>Asperges, artisjok (fructo-oligosachariden)</li>
-      <li>Haver, gerst (bèta-glucanen)</li>
-      <li>Onrijpe bananen (resistent zetmeel)</li>
-      </ul>
-      <p>Het probleem: de meeste Nederlanders eten te weinig van deze voedingsmiddelen. De aanbevolen dagelijkse hoeveelheid vezels is 30 tot 40 gram; het gemiddelde Nederlandse dieet haalt de 20 gram niet. Een prebioticum als supplement kan dit gat dichten.</p>
-      <p>Het Amare product Restore combineert beide werelden: 5 probiotische stammen (2 miljard CFU) plus 5 spijsverteringsenzymen — waaronder lactase voor wie lactose niet goed verdraagt. Het is ontworpen als dagelijkse spijsverteringsondersteuning, niet specifiek voor de darm-hersen-as (daarvoor is MentaBiotics de aangewezen formule).</p>
-      <h2>Psychobiotica: de derde categorie die niemand kent</h2>
-      <p>Psychobiotica zijn een subcategorie van probiotica met een specifieke eigenschap: ze beïnvloeden de <strong>darm-hersen-as</strong>. Dit is de directe communicatielijn tussen je darmzenuwstelsel en je hersenen, via de nervus vagus, het immuunsysteem, en metabolieten die bacteriën produceren.</p>
-      <p>MentaBiotics is een psychobioticum. Het bevat de Cerebiome® blend — een combinatie van Lactobacillus helveticus Rosell-52 en Bifidobacterium longum Rosell-175 — die specifiek is onderzocht bij mensen met stressgerelateerde klachten. Het werkingsmechanisme is anders dan bij een generiek probioticum: de stammen produceren signaalstoffen (neurotransmitter-precursors) die via de darmwand het enterisch zenuwstelsel beïnvloeden.</p>
-      <p>Dit is geen marketingonderscheid — het is een functioneel verschil. Een standaard probioticum ondersteunt je spijsvertering; een psychobioticum beïnvloedt je stressrespons, stemming en mentale helderheid via de darm-hersen-as.</p>
-      <h2>De drie naast elkaar</h2>
-      <table>
-      <tr><th>Probiotica (generiek)</th><th>Prebiotica</th><th>Psychobiotica (MentaBiotics)</th></tr>
-      <tr><td><strong>Wat is het?</strong></td><td>Levende bacteriën</td><td>Vezels als bacterievoedsel</td><td>Specifieke stammen voor darm-hersen-as</td></tr>
-      <tr><td><strong>Primair effect</strong></td><td>Spijsvertering, ontlasting</td><td>Voedt eigen darmflora</td><td>Stemming, stress, mentale veerkracht</td></tr>
-      <tr><td><strong>Voorbeeld</strong></td><td>Restore (multi-stam + enzymen)</td><td>SeedFiber, voeding (knoflook, ui)</td><td>MentaBiotics (Cerebiome® blend)</td></tr>
-      <tr><td><strong>Snelheid</strong></td><td>1-2 weken (spijsvertering)</td><td>2-4 weken</td><td>2-4 weken (subtiel), 4-8 weken (significant)</td></tr>
-      <tr><td><strong>Prijsindicatie</strong></td><td>€10-30/maand (generiek)</td><td>€15-25/maand</td><td>€71,83/maand</td></tr>
-      <tr><td><strong>Geschikt voor</strong></td><td>Dagelijkse spijsverteringsondersteuning</td><td>Iedereen met te weinig vezelinname</td><td>Mensen met stress, somberheid, brain fog</td></tr>
-      </table>
-      <h2>Welke combinatie past bij jou?</h2>
-      <p><strong>Alleen probiotica</strong> — als je primair last hebt van je spijsvertering (opgeblazen gevoel, onregelmatige ontlasting). Kies dan Restore: de enzymen ondersteunen de vertering terwijl de probiotica je darmflora aanvullen.</p>
-      <p><strong>Probiotica + prebiotica</strong> — de gouden combinatie voor darmgezondheid. De prebiotica voeden zowel je eigen bacteriën als de probiotica die je inneemt. Dit is alsof je én nieuwe planten plant (probiotica) én mest geeft (prebiotica) — ze versterken elkaar.</p>
-      <p><strong>MentaBiotics (psychobioticum)</strong> — als je darmklachten samengaan met stemmingswisselingen, stressgevoelens of mentale mist. Dit is de "darm-brein" route: je pakt de darmflora aan, maar het effect merk je in je hoofd. Veel gebruikers combineren MentaBiotics met een algemeen probioticum voor dubbele ondersteuning — MentaBiotics voor de darm-hersen-as, Restore voor de spijsvertering.</p>
-      <h2>Veelgestelde vragen</h2>
-      <p><strong>Kan ik probiotica en prebiotica tegelijk innemen?</strong></p>
-      <p>Ja, dat is juist ideaal. Prebiotica voeden de probiotica — ze werken synergetisch. Veel hoogwaardige formules combineren beide. Neem ze bij voorkeur 's ochtends op een lege maag, 15 tot 30 minuten voor het ontbijt. In combinatie met probiotica kan prebiotica in het begin lichte gasvorming geven — dit is tijdelijk en een teken dat de vezels hun werk doen in je darmen.</p>
-      <p><strong>Zijn dure probiotica altijd beter dan goedkope?</strong></p>
-      <p>Niet altijd. De prijs zegt niets als de stam niet gespecificeerd is. Een probioticum van €12 met een duidelijk benoemde, klinisch onderzochte stam kan effectiever zijn dan eentje van €40 met "probiotic complex" op het etiket zonder stamspecificatie. De sleutel is traceerbaarheid: kun je de stamnaam opzoeken en klinische studies vinden? Bij MentaBiotics is de Cerebiome® blend (Rosell-52 + Rosell-175) volledig traceerbaar met meerdere humane studies.</p>
-      <p><strong>Hoe weet ik of mijn probiotica werken?</strong></p>
-      <p>De eerste signalen zijn subtiel: minder opgeblazen gevoel, regelmatigere ontlasting, en — bij psychobiotica — een stabielere stemming en betere stressbestendigheid. Houd een eenvoudig dagboek bij gedurende de eerste 4 weken: noteer dagelijks je energieniveau, stemming en spijsvertering op een schaal van 1 tot 5. Na 4 weken zie je patronen die je anders over het hoofd zou zien.</p>
-      <h2>Conclusie</h2>
-      <p>Probiotica, prebiotica en psychobiotica zijn geen concurrenten — ze vullen elkaar aan. Probiotica leveren de bacteriën, prebiotica voeden ze, en psychobiotica doen daar een schepje bovenop door specifiek de darm-hersen-as te targeten.</p>
-      <p>De juiste keuze hangt af van je doel. Wil je een betere spijsvertering? Start met Restore (probiotica + enzymen) en voeg vezelrijke voeding toe als natuurlijke prebiotica. Merk je dat stress, somberheid of brain fog samengaan met je darmklachten? Dan is MentaBiotics — het psychobioticum met klinisch onderzochte Cerebiome® blend — de logische volgende stap.</p>
-      <p>*Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij aanhoudende darmklachten of stemmingsklachten altijd een arts.*</p>
-    `,
-    image: "/images/blog/probiotica-prebiotica-mentabiotics.jpg"
-  },
-  {
     slug: "menopauze-supplement-natuurlijke-ondersteuning-overgang",
     title: "Menopauze: Welke Supplementen Helpen?",
     date: "2026-06-10",
@@ -1226,6 +1161,14 @@ export const blogPosts: BlogPost[] = [
         <li><strong>Prebiotica als brandstof.</strong> Zonder prebiotica overleven veel stammen de reis door het maagzuur niet. Een goed probioticum bevat prebiotische vezels zoals inuline, FOS of GOS die de groei van gunstige stammen ondersteunen.</li>
         <li><strong>Multi-component vs enkelvoudig.</strong> De beste probiotica leveren niet alleen bacteriën, maar een ecosysteem aan ondersteunende ingrediënten zoals magnesium en L-glutamine — want darmgezondheid staat niet op zichzelf.</li>
       </ul>
+      <p>Een goed probioticum vermeldt de volledige stamnaam op het etiket — niet alleen "Lactobacillus" maar bijvoorbeeld "Lactobacillus rhamnosus GG". Als het etiket vaag is over welke stammen er precies in zitten, is dat een slecht teken. Enkele van de meest onderzochte stammen op een rij:</p>
+      <table>
+        <tr><th>Stam</th><th>Waar bekend van</th></tr>
+        <tr><td>Lactobacillus rhamnosus GG</td><td>Meest onderzochte probioticum ter wereld, darmgezondheid</td></tr>
+        <tr><td>Bifidobacterium longum</td><td>Stemming, stressbestendigheid, immuunfunctie</td></tr>
+        <tr><td>Lactobacillus plantarum</td><td>Darmbarrière, opgeblazen gevoel</td></tr>
+        <tr><td>Bifidobacterium breve</td><td>Huidgezondheid, immuunsysteem</td></tr>
+      </table>
 
       <h2>Probiotica en je darmflora: wat zegt de wetenschap?</h2>
       <p>De wetenschappelijke interesse in het microbioom explodeert. Een studie in Nature Microbiology liet zien dat microbiële diversiteit een betere voorspeller is van algemene gezondheid dan eerder gedacht. Onderzoek naar de darm-hersen-as heeft aangetoond dat specifieke stammen de aanmaak van serotonine en GABA kunnen stimuleren — ongeveer 90% van alle serotonine wordt in de darmen geproduceerd. De European Food Safety Authority (EFSA) erkent officieel dat bepaalde probiotica bijdragen aan een normale spijsvertering.</p>
@@ -1255,6 +1198,8 @@ export const blogPosts: BlogPost[] = [
       <p>Ja, probiotica combineren goed met de meeste andere supplementen zoals vitaminen, mineralen, omega-3 en collageen. Let bij antibiotica op minimaal 2 uur tussen inname. MentaBiotics combineert goed met Energy+ voor energie of Restore voor extra spijsverteringsondersteuning.</p>
       <h3>Is de duurste probiotica altijd de beste keuze?</h3>
       <p>Niet per se. Prijs zegt weinig over kwaliteit — belangrijker is of het product transparant is over de gebruikte stammen, het KVE-aantal op het moment van houdbaarheidsdatum garandeert (niet alleen bij productie), en of er onderzoek is gedaan naar de specifieke stam-combinatie, niet alleen naar de individuele bacteriesoorten.</p>
+      <h3>Hoe bewaar ik probiotica?</h3>
+      <p>De meeste probiotica moeten koel en droog bewaard worden, bij voorkeur in de koelkast. Hitte en vocht doden de bacteriën. Sommige gevriesdroogde formules zijn stabiel bij kamertemperatuur — check het etiket.</p>
     `,
     image: "/images/blog/beste-probiotica-2026.jpg"
   },
@@ -2381,11 +2326,6 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "FIT20", url: "/gewichtsbeheer/", isInternal: true, price: "€48,01/maand", tagline: "Wei-isolaat + QUADbiotic + thermogene formule — eiwit & metabolisme" },
     { name: "Amare FIT20", url: "${AFFILIATE_BASE}/fit20", isInternal: false, price: "€48,01/maand", tagline: "20g wei-eiwit + groene thee + guarana + capsaïcine + L-carnitine" }
   ],
-  "probiotica-prebiotica-mentabiotics-vergelijken": [
-    { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — psychobioticum voor de darm-hersen-as" },
-    { name: "Restore", url: "/restore", isInternal: true, price: "€29.70/maand", tagline: "5 probiotica stammen + 5 spijsverteringsenzymen" },
-    { name: "Amare MentaBiotics", url: `${AFFILIATE_BASE}/mentabiotics`, isInternal: false, price: "€71.83/maand", tagline: "Klinisch onderzochte psychobiotica voor mentale veerkracht" },
-  ],
   "happy-juice-pack-vs-losse-supplementen-vergelijken": [
     { name: "Happy Juice Pack", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — MentaBiotics + Energy+ + EDGE+ in één bundel" },
     { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — los verkrijgbaar, onderdeel van de bundel" },
@@ -2467,8 +2407,9 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "Amare HL5", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "5g gehydrolyseerd collageen Type 1&3 — 2-pack" },
   ],
   "prebiotica-probiotica-verschil-darmen-uitleg": [
-    { name: "Happy Juice", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — complete gut-brain support in één pakket" },
+    { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — psychobioticum voor de darm-hersen-as" },
     { name: "Restore", url: "/restore", isInternal: true, price: "€29.70/maand", tagline: "Spijsverteringsenzymen + 5 probiotica stammen" },
+    { name: "Happy Juice", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — complete gut-brain support in één pakket" },
   ],
   "ijzer-tekort-vermoeidheid-supplement-nederland": [
     { name: "Sunrise", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "22 superfoods + 9 vitamines — 2-pack" },
