@@ -1,5 +1,7 @@
 # AmareNL Article Queue — SEO-GEO-AEO İçerik Planı
-> Laatste update: 2026-08-24 (öncelik kuyruğu eklendi — bkz. bölüm aşağıda)
+> Laatste update: 2026-09-02 (24 Ağustos kuyruğu, bu tarihteki cluster-konsolidasyonlarına göre
+> doğrulandı ve güncellendi — bkz. Q1-Q4, M4, bölüm C aşağıda)
+> Önceki update: 2026-08-24 (öncelik kuyruğu eklendi — bkz. bölüm aşağıda)
 > Status: 20/20 TIER ✅ | 3 vergelijkingsartikelen ✅ | NIEUWE BATCH: 15/15 ✅ | **BATCH 3: 0/6 ⏳** | Totaal 74+ artikelen live
 > Deploy: Vercel production ✅
 > Metodoloji: NL search volume × commercial intent × product match × GEO query fan-out
@@ -44,11 +46,11 @@ Emin değilsen, o satırı atla ve bu yeni bölümdeki maddeleri tercih et.
 
 | # | Konu / Başlık Önerisi | Hedef Anahtar Kelimeler (birleştirilmiş varyantlar) | Hacim (top.) | Ads-Rekabet* | Kategori/Ürün | Not |
 |---|---|---|---|---|---|---|
-| Q1 | Beste Probiotica Kopen 2026: Complete Vergelijkingsgids | probiotica beste, best probiotica, probiotica welke beste, beste probiotica | ~20.000 | Yüksek | darmen — MentaBiotics | Yüksek ticari niyet (CPC €1,01-2,45). 10 probiotica makalesi var ama "beste/vergelijking" açısı yok — kontrol et, gerçekten yoksa yaz. |
-| Q2 | Magnesium in Voeding: Welke Voedingsmiddelen Bevatten Magnesium? | voeding met magnesium, magnesium voeding, magnesium in voedingsmiddelen, magnesium en voeding, magnesium in/welke voeding | ~30.000 (toplam varyant) | Orta | essentials — Sunrise | 6 farklı arama varyantı TEK makalede birleştir — ayrı ayrı yazma (kanibalizasyon riski). |
-| Q3 | Magnesium Hoeveel Per Dag? Dosering & Veiligheid | magnesium hoeveel per dag | 5.000 | Orta | essentials — Sunrise | Dozaj/güvenlik odaklı, `teveel-magnesium-symptomen-risico` makalesine iç link. |
-| Q4 | Magnesium Vormen Vergelijken: Tauraat, Orotaat, Citraat, Glycinaat | magnesium tauraat, magnesiumorotaat | 10.000 (toplam) | Yüksek | essentials — Sunrise, Sleep+ | Form-karşılaştırma, ürün seçimine yardımcı — ticari niyet yüksek. |
-| Q5 | Collageen Tabletten/Poeder vs Vloeibaar Collageen: Wat Werkt Beter? | collageentabletten, collageenpillen | 10.000 (toplam) | Yüksek | schoonheid — HL5 | Mevcut USP mesajıyla birebir örtüşüyor (sıvı = 3x emilim) — yüksek öncelik. |
+| ~~Q1~~ | ~~Beste Probiotica Kopen 2026: Complete Vergelijkingsgids~~ | probiotica beste, best probiotica, probiotica welke beste, beste probiotica | ~20.000 | Yüksek | darmen — MentaBiotics | ✅ **02-09 doğrulandı: ZATEN VAR — YAZMA.** `beste-probiotica-2026-kopen-vergelijken` bu açıyı tam kapsıyor (aynı gün ayrıca zenginleştirildi: stam-tablosu + saklama FAQ'ı eklendi). |
+| ~~Q2~~ | ~~Magnesium in Voeding: Welke Voedingsmiddelen Bevatten Magnesium?~~ | voeding met magnesium, magnesium voeding, magnesium in voedingsmiddelen, magnesium en voeding, magnesium in/welke voeding | ~30.000 (toplam varyant) | Orta | essentials — Sunrise | ✅ **02-09 doğrulandı: ZATEN VAR — YAZMA.** `waar-zit-magnesium-in-voedingsbronnen-supplementen-gids` (02-09'da pillar'a genişletildi — besin kaynakları + günlük öğün planı + doz tablosu) bunu tam kapsıyor. |
+| ~~Q3~~ | ~~Magnesium Hoeveel Per Dag? Dosering & Veiligheid~~ | magnesium hoeveel per dag | 5.000 | Orta | essentials — Sunrise | ✅ **02-09 doğrulandı: ZATEN VAR — YAZMA.** Aynı pillar'a (`waar-zit-magnesium-in...`) 02-09'da birleştirildi — nüfus-grubu bazlı doz tablosu + RIVM istatistiği dahil. |
+| Q4 | Magnesium Vormen Vergelijken: Tauraat, Orotaat, Citraat, Glycinaat | magnesium tauraat, magnesiumorotaat | 10.000 (toplam) | Yüksek | essentials — Sunrise, Sleep+ | 🟡 **02-09 doğrulandı: KISMEN VAR.** `magnesium-supplement-kopen-welke-vorm-nodig` zaten tauraat/citraat/glycinaat/bisglycinaat kapsıyor — sadece **orotaat** eksik. Sıfırdan makale YAZMA, mevcut makaleye küçük bir orotaat bölümü ekle. |
+| Q5 | Collageen Tabletten/Poeder vs Vloeibaar Collageen: Wat Werkt Beter? | collageentabletten, collageenpillen | 10.000 (toplam) | Yüksek | schoonheid — HL5 | Mevcut USP mesajıyla birebir örtüşüyor (sıvı = 3x emilim) — yüksek öncelik. `collageen-poeder-vs-pillen-vergelijking` bu açıyı kısmen kapsıyor olabilir, yazmadan önce oku (02-09'da doğrulanmadı, kontrol edilmeli). |
 
 
 > *Ads-Rekabet = Google Ads reklam-verenler rekabeti (CPC/bidding), organik SERP zorluğu DEĞİL — bir kelime
@@ -63,17 +65,17 @@ Emin değilsen, o satırı atla ve bu yeni bölümdeki maddeleri tercih et.
 
 | # | Konu | Neden şüpheli | Aksiyon |
 |---|---|---|---|
-| Q6 | Magnesium voor Spieren | Mevcut `magnesium-onmisbaar-mineraal-rust-energie-spierherstel` pillar'ı zaten "spierherstel" kapsıyor olabilir | Önce pillar'ı oku — konu zaten iyi kapsanıyorsa yeni yazı yerine pillar'ı derinleştir |
+| ~~Q6~~ | ~~Magnesium voor Spieren~~ | Mevcut `magnesium-onmisbaar-mineraal-rust-energie-spierherstel` pillar'ı zaten "spierherstel" kapsıyor olabilir | ✅ **02-09 doğrulandı: ZATEN VAR — YAZMA.** Pillar'da 9 ayrı "spier"-geçişi var, konu iyi kapsanıyor. |
 | Q7 | Probiotica voor Darmen / Probiotica Vrouw | 10 probiotica makalesi zaten var, olası örtüşme yüksek | Her ikisi için de: gerçekten farklı bir açı yoksa YAZMA, en yakın mevcut makaleyi güçlendir |
-| Q8 | Magnesiumspray / Magnesium Voetenbad | `magnesiumolie-spray-transdermaal-werkt-het` muhtemelen bunu zaten kapsıyor | Makaleyi oku, spray+voetenbad zaten varsa yeni yazı YAZMA |
+| Q8 | Magnesiumspray / Magnesium Voetenbad | `magnesiumolie-spray-transdermaal-werkt-het` muhtemelen bunu zaten kapsıyor | 🔴 **02-09 doğrulandı: KISMEN.** Spray zaten kapsanıyor, ama "voetenbad" (ayak banyosu) hiç geçmiyor — gerçek küçük boşluk. Sıfırdan makale değil, mevcut makaleye kısa bir voetenbad bölümü eklenebilir. |
 | Q9 | Vermoeide/Zware Benen varyantları | `zware-benen-oorzaken-wat-helpt` zaten var, kalan varyantlar aynı sorgunun eş anlamlıları | Yeni yazı YAZMA — zaten kapsanıyor |
 
 ### C. Mevcut sayfayı güçlendir (yeni yazı DEĞİL — bkz. `amarenl-trafik-artirma-plani.md` bölüm 1)
 
 | Sayfa | Sorun | Aksiyon |
 |---|---|---|
-| `prebiotica-probiotica-verschil-darmen-uitleg` | 687 kelime, hâlâ ince (hedef 1000+) | 1000+ kelimeye genişlet, "pre en probiotica" anahtar kelimesini kapsa |
-| `amare wellness` sorgusuna karşılık gelen sayfa | Pozisyon 8 ama 0 tıklama (CTR sorunu) | Meta title/description'ı gözden geçir — içerik değil, sadece metin |
+| ~~`prebiotica-probiotica-verschil-darmen-uitleg`~~ | ~~687 kelime, hâlâ ince (hedef 1000+)~~ | ✅ **02-09 ÇÖZÜLDÜ.** 1255 kelimeye genişletildi (ISAPP resmi tanımları zaten vardı, `probiotica-prebiotica-mentabiotics-vergelijken`'in özgün içeriği — fiyat/kategori tablosu, "hangi kombinasyon sana uygun" bölümü, öz-izleme FAQ'ı — buraya birleştirildi, o makale 301 ile buraya yönlendirildi). |
+| `amare wellness` sorgusuna karşılık gelen sayfa | Pozisyon 6.8 (02-09 GSC verisi — dosyadaki "pozisyon 8" biraz eski), 24 gösterim, 0 tıklama (CTR sorunu) | Hangi sayfanın bu sorguya karşılık geldiği 02-09'da netleştirilmedi (muhtemelen ana sayfa veya `/supplementen` — marka+kategori sorgusu). Bir sonraki oturumda GSC'de sayfa bazlı kontrol edip title/description gözden geçir. |
 
 ### D. YMYL / düşük öncelik — otomatik pipeline'a SOKMA
 
@@ -107,8 +109,8 @@ Emin değilsen, o satırı atla ve bu yeni bölümdeki maddeleri tercih et.
 |---|---|---|---|
 | ~~M2~~ | ~~Amare HL5 Uitgelegd~~ | ❌ ZATEN VAR — YAZMA | `vloeibaar-collageen-hl5-huid-haar-nagels` (11 mention) bunu tam kapsıyor. |
 | ~~M3~~ | ~~Amare Producten Kopen / Ervaringen~~ | ❌ ZATEN VAR — YAZMA | `ervaringen-gebruikers-amare-supplementen` bunu tam kapsıyor. |
-| M1 (revize) | Amare Sunset: Volledige Review (Vitamine E, D3, K2, Omega-3) | ✅ Gerçek boşluk | Sunrise'ın kendi review'ı var (`sunrise-superfood-blend-ochtend-energie`, 29 mention) ama Sunset'in yok (başlıkta 0, yan mentions sadece 15) — parite eksikliği. `PRODUCT_REFERENCE.md`'deki resmi ingrediyen bilgisini kullan. |
-| M4 (yeni) | Amare ON: Wat Is Het en Hoe Ondersteunt Het Mentale Focus? | ✅ Gerçek boşluk | Kategori "hersenen", tagline "Mentale focus & veerkracht" (`data/products/on.json`). 78 makalede sıfır doğrudan kapsama — tek gerçek sıfırdan-boşluk marka ürünü. Mevcut `focus-verbeteren-concentratie-kwijt-supplementen-die-helpen` makalesine iç link ekle. |
+| M1 (revize) | Amare Sunset: Volledige Review (Vitamine E, D3, K2, Omega-3) | 🟡 **02-09 doğrulandı: KISMEN.** | Tam "boşluk" değil: 2 makale Sunset'in bazı bileşenlerini kapsıyor (`calcium-botten-supplement-nederland` — Sunset & Origin, calcium/D3/K2; `vitamine-e-huid-haar-supplement` — Sunset vitamine E). Sunrise'ınki gibi TEK kapsamlı review yok, iki dar-açılı makaleye bölünmüş. Sıfırdan mı yazılsın yoksa ikisi mi birleştirilsin — henüz karar verilmedi. |
+| ~~M4~~ (yeni) | ~~Amare ON: Wat Is Het en Hoe Ondersteunt Het Mentale Focus?~~ | ❌ ZATEN VAR — YAZMA | ✅ **02-09 doğrulandı: dedike makale zaten var** (`b-vitamines-energie-supplement-nederland`, başlığı 02-09'da "Amare ON: B-Vitamines Voor Energie?" olarak kısaltıldı). Dosyanın "78 makalede sıfır kapsama" iddiası yanlıştı. |
 
 > **Stratejik açık soru (Musa'nın kararı gerekiyor, otomatik pipeline'a eklenmedi):** Rootist
 > (saç bakımı alt markası — şampuan, conditioner, serum, 13 SKU) neredeyse hiç kapsanmıyor: 78
