@@ -28,6 +28,16 @@
   ],
   "redirects": [
     {
+      "source": "/blogs/nieuws/probiotica-stemming-darm-hersen-connectie-mentabiotics",
+      "destination": "/blogs/nieuws/gut-brain-connectie-darmen-stemming-mentaal",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/darm-hersen-verbinding-stemming-supplement",
+      "destination": "/blogs/nieuws/gut-brain-connectie-darmen-stemming-mentaal",
+      "permanent": true
+    },
+    {
       "source": "/blogs/nieuws/probiotica-kopen-waar-op-letten-gids",
       "destination": "/blogs/nieuws/beste-probiotica-2026-kopen-vergelijken",
       "permanent": true
