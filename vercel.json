@@ -28,6 +28,11 @@
   ],
   "redirects": [
     {
+      "source": "/start-je-business",
+      "destination": "/triangle-marketing-pack",
+      "permanent": true
+    },
+    {
       "source": "/blogs/nieuws/darmflora-balans-voor-welzijn",
       "destination": "/blogs/nieuws/darmflora-verbeteren-herstel-spijsvertering-natuurlijk",
       "permanent": true
