@@ -74,21 +74,21 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`sticky top-0 z-[60] transition-all duration-300 ${isScrolled ? "bg-white/90 backdrop-blur-lg shadow-md py-2" : "bg-white py-5"}`}>
+    <header className={`relative sticky top-0 z-[60] transition-all duration-300 ${isScrolled ? "bg-white/90 backdrop-blur-lg shadow-md py-2" : "bg-white py-5"}`}>
       <div className="container-page flex items-center justify-between gap-6">
         <Link href="/" className="text-2xl font-bold font-cormorant text-[var(--color-primary)] shrink-0">AmareNL</Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-10">
+        <nav className="hidden lg:flex items-center gap-8">
           {categoryLinks.map(([label, href]) => (
-            <Link key={label} href={href} className="text-[11px] font-bold text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors whitespace-nowrap">
+            <Link key={label} href={href} className="text-[13px] font-bold tracking-wide text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors whitespace-nowrap">
               {label}
             </Link>
           ))}
 
           {/* Product Dropdown */}
           <div ref={dropdownRef} className="relative">
-            <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="flex items-center gap-1.5 text-[11px] font-bold text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors whitespace-nowrap">
+            <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="flex items-center gap-1.5 text-[13px] font-bold tracking-wide text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors whitespace-nowrap">
               Alle Producten <ChevronDown size={14} className={`transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
             </button>
             {isDropdownOpen && (
@@ -110,20 +110,37 @@ export default function Header() {
           {/* Separator */}
           <span className="w-px h-5 bg-[var(--color-border)]" />
 
-          <Link href="/partner-worden" className="text-[11px] font-bold text-emerald-700 hover:text-emerald-800 transition-colors whitespace-nowrap">🤝 Partner Worden</Link>
-          <Link href="/blogs/nieuws" className="text-[11px] font-bold text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors whitespace-nowrap">📝 Blog</Link>
-          <Link href="/gratis-gut-brain-gids" className="text-[11px] font-bold text-[var(--color-accent)] hover:text-[var(--color-primary)] transition-colors whitespace-nowrap">🎁 Gratis Gids</Link>
+          <Link href="/partner-worden" className="text-[13px] font-bold tracking-wide text-emerald-700 hover:text-emerald-800 transition-colors whitespace-nowrap">🤝 Partner Worden</Link>
+          <Link href="/blogs/nieuws" className="text-[13px] font-bold tracking-wide text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors whitespace-nowrap">📝 Blog</Link>
+          <Link href="/gratis-gut-brain-gids" className="text-[13px] font-bold tracking-wide text-[var(--color-accent)] hover:text-[var(--color-primary)] transition-colors whitespace-nowrap">🎁 Gratis Gids</Link>
         </nav>
 
         <div className="flex items-center gap-4">
-          <a href="https://www.amare.com/2075008/nl-nl" target="_blank" rel="nofollow noopener noreferrer" className="hidden sm:inline-flex items-center gap-2 px-6 py-3 bg-[var(--color-accent)] text-white rounded-full text-[13px] font-bold hover:opacity-90 transition-all shadow-md shrink-0">
-            Bestel bij Amare <ArrowRight size={16} />
+          <a
+            href="https://www.amare.com/2075008/nl-nl"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            className="group hidden sm:inline-flex items-center gap-2 px-7 py-3.5 text-white rounded-full text-sm font-bold transition-all shrink-0"
+            style={{
+              background: "linear-gradient(135deg, var(--color-accent), #dfc06e)",
+              boxShadow: "0 4px 20px rgba(200, 169, 81, 0.45)",
+            }}
+          >
+            Bestel bij Amare <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
           </a>
           <button className="lg:hidden p-2 text-[var(--color-text)]" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle Menu">
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
+
+      {/* Signature gradient hairline — echoot de dag-nacht-overgang van Triangle of Wellness
+          (paars naar goud), keert terug in CampaignBanner en de nieuwe hero-carousel. */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-[3px]"
+        style={{ background: "linear-gradient(90deg, var(--color-primary), var(--color-primary-light), var(--color-accent))" }}
+        aria-hidden="true"
+      />
 
       {/* Mobile */}
       {isMenuOpen && (
@@ -153,7 +170,17 @@ export default function Header() {
             ].map(([label, href]) => (
               <Link key={label} href={href} onClick={() => setIsMenuOpen(false)} className="text-xl font-bold text-[var(--color-text)] border-b border-[var(--color-border)] pb-4">{label}</Link>
             ))}
-            <a href="https://www.amare.com/2075008/nl-nl" target="_blank" rel="nofollow noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="flex items-center justify-center gap-2 w-full py-4 bg-[var(--color-accent)] text-white rounded-xl font-bold text-lg shadow-lg">
+            <a
+              href="https://www.amare.com/2075008/nl-nl"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              onClick={() => setIsMenuOpen(false)}
+              className="flex items-center justify-center gap-2 w-full py-4 text-white rounded-xl font-bold text-lg"
+              style={{
+                background: "linear-gradient(135deg, var(--color-accent), #dfc06e)",
+                boxShadow: "0 4px 20px rgba(200, 169, 81, 0.45)",
+              }}
+            >
               Bestel bij Amare → <ArrowRight size={20} />
             </a>
             <a href="/gratis-gut-brain-gids" onClick={() => setIsMenuOpen(false)} className="flex items-center justify-center gap-2 w-full py-3 bg-[var(--color-primary)] text-white rounded-xl font-bold">
