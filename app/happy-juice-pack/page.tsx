@@ -14,7 +14,7 @@ import {
 export const metadata: Metadata = {
   title: "Happy Juice Pack: Energie & Focus | AmareNL",
   description:
-    "Het Happy Juice Pack van Amare is de #1 bundel voor mentale energie, focus en een stabiele stemming. MentaBiotics + Energy+ + EDGE+. Direct van Amare — premium kwaliteit.",
+    "Het Happy Juice Pack van Amare is de #1 bundel voor mentale energie, focus en een stabiele stemming. MentaBiotics + Energy+ + EDGE+. Bekijk het pakket →",
   alternates: { canonical: "/happy-juice-pack" },
   openGraph: {
     title: "Happy Juice Pack: Energie & Focus | AmareNL",
