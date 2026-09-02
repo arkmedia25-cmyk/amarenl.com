@@ -42,7 +42,7 @@ export function getAllBlogPosts(): BlogPost[] {
 export const blogPosts: BlogPost[] = [
 {
     slug: "beste-eiwitpoeder-2026-plantaardig-wei-vergelijking",
-    title: "Eiwitpoeder: Plantaardig vs Wei — Wat Past?",
+    title: "Eiwitpoeder: Plantaardig vs Wei?",
     date: "2026-06-19",
     category: "essentials",
     excerpt: "De keuze tussen wei en plantaardig eiwitpoeder is groter dan de meeste mensen denken. Aminozuurprofielen, verteerbaarheid, duurzaamheid en prijs — we vergelijken alles zodat jij de beste keuze maakt voor jouw doelen.",
@@ -104,7 +104,7 @@ export const blogPosts: BlogPost[] = [
   },
 {
     slug: "adaptogenen-natuurlijke-stressverlichting-ashwagandha-rhodiola",
-    title: "Adaptogenen: Wat Zijn Ze en Hoe Werken Ze?",
+    title: "Adaptogenen: Wat Zijn Ze?",
     date: "2026-06-15",
     category: "mentaal",
     excerpt: "Adaptogenen worden steeds populairder als natuurlijke oplossing tegen stress. Maar wat zijn het precies, welke soorten zijn er, en hoe kies je het juiste adaptogeen supplement? Een complete gids.",
@@ -158,7 +158,7 @@ export const blogPosts: BlogPost[] = [
   },
 {
     slug: "stress-verminderen-supplementen-cortisol-ontspanning",
-    title: "Stress Verminderen: Welke Supplementen Helpen?",
+    title: "Stress Verminderen: Wat Helpt Écht?",
     date: "2026-06-07",
     category: "mentaal",
     excerpt: "Chronische stress put je lichaam uit en verhoogt je cortisol. Gelukkig zijn er natuurlijke supplementen die je stressrespons ondersteunen — van ashwagandha tot psychobiotica. Dit is wat de wetenschap zegt over supplementen tegen stress.",
@@ -230,7 +230,7 @@ export const blogPosts: BlogPost[] = [
   },
 {
     slug: "natuurlijk-afvallen-supplementen-metabolisme",
-    title: "Natuurlijk Afvallen: Wat Werkt Voor Metabolisme?",
+    title: "Natuurlijk Afvallen: Wat Werkt Écht?",
     date: "2026-06-05",
     category: "gewichtsbeheer",
     excerpt: "De markt voor afvalsupplementen is een mijnenveld van beloftes en teleurstellingen. Wij zochten uit welke ingrediënten je metabolisme echt ondersteunen, welke supplementen de moeite waard zijn en vooral: welke je kunt overslaan.",
@@ -294,7 +294,7 @@ export const blogPosts: BlogPost[] = [
   },
 {
     slug: "beste-collageen-supplement-2026-werkt-echt",
-    title: "Collageen Supplement: Welke Werkt Écht? (2026)",
+    title: "Collageen Supplement: Welke Werkt Écht?",
     date: "2026-06-03",
     category: "schoonheid",
     excerpt: "De collageenmarkt is explosief gegroeid — van supermarkt tot premium merken. Maar welk collageen supplement werkt echt? We vergelijken HL5, NeuCollagen en budget opties op dosering, type, biologische beschikbaarheid en prijs.",
@@ -359,7 +359,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "collageen-hl5-vs-supermarkt-vergelijken",
-    title: "Collageen HL5 vs Supermarkt: Wat Is Het Verschil?",
+    title: "Collageen HL5 vs Supermarkt: Verschil?",
     date: "2026-06-12",
     category: "schoonheid",
     excerpt: "Supermarktcollageen kost een fractie van HL5. Maar je krijgt ook een fractie van de werkzaamheid. Ontdek waarom opneembaarheid, type collageen en dosering het verschil maken tussen resultaat en geldverspilling.",
@@ -421,7 +421,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "happy-juice-pack-vs-losse-supplementen-vergelijken",
-    title: "Happy Juice Pack vs Losse Supplementen: Verschil?",
+    title: "Happy Juice Pack vs Losse Items: Verschil?",
     date: "2026-06-14",
     category: "mentaal",
     excerpt: "Drie supplementen in één bundel klinkt handig. Maar is het ook goedkoper? We vergelijken de Happy Juice Pack met losse aankoop — prijs, synergie, en praktisch gemak — zodat je weet wat voor jou de beste keuze is.",
@@ -480,7 +480,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "probiotica-prebiotica-mentabiotics-vergelijken",
-    title: "Probiotica vs Prebiotica vs MentaBiotics: Verschil",
+    title: "Probiotica vs Prebiotica: Wat Is Beter?",
     date: "2026-06-16",
     category: "darmen",
     excerpt: "Probiotica en prebiotica klinken hetzelfde, werken fundamenteel anders, en zijn allebei essentieel voor je darmflora. Ontdek het verschil, waarom psychobiotica zoals MentaBiotics een aparte categorie vormen, en hoe je de juiste kiest.",
@@ -545,7 +545,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "menopauze-supplement-natuurlijke-ondersteuning-overgang",
-    title: "Menopauze: Welke Supplementen Ondersteunen Écht?",
+    title: "Menopauze: Welke Supplementen Helpen?",
     date: "2026-06-10",
     category: "hormonen",
     excerpt: "De overgang is geen ziekte, maar de klachten zijn reëel. Ontdek welke natuurlijke supplementen — van magnesium tot adaptogenen — je lichaam ondersteunen tijdens de menopauze, zonder hormonen.",
@@ -595,7 +595,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "plantaardige-proteine-shake-kopen-vergelijken",
-    title: "Plantaardige Proteïne Shake Kopen: Waar Op Letten?",
+    title: "Proteïne Shake Kopen: Waar Op Letten?",
     date: "2026-06-08",
     category: "Dagelijkse Essentials",
     excerpt: "Plantaardige eiwitshakes winnen razendsnel terrein. Ontdek de verschillen met whey, de beste plantaardige eiwitbronnen, en hoe je een kwalitatieve maaltijdshake kiest die bij jouw doelen past.",
@@ -662,7 +662,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "supplement-routine-ochtend-timing-schema",
-    title: "Supplement Routine Ochtend: Wanneer Neem Je Wat?",
+    title: "Ochtendroutine: Wanneer Neem Je Wat?",
     date: "2026-06-06",
     category: "Dagelijkse Essentials",
     excerpt: "Timing is alles bij supplementen. Sommige neem je beter 's ochtends, andere 's avonds. Ontdek hoe je een complete dag-nacht supplement routine opbouwt die past bij jouw doelen.",
@@ -726,7 +726,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "darmflora-verbeteren-herstel-spijsvertering-natuurlijk",
-    title: "Darmflora Verbeteren: 7 Manieren Die Écht Werken",
+    title: "Darmflora Verbeteren: 7 Manieren",
     date: "2026-06-04",
     category: "Darmen & Spijsvertering",
     excerpt: "Je darmflora is het fundament van je gezondheid. Ontdek hoe je een verstoorde darmflora herkent, welke voeding en supplementen écht helpen, en hoe lang het duurt om je darmen te herstellen.",
@@ -801,7 +801,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "hormoonbalans-supplement-vrouwen-levensfase-ondersteuning",
-    title: "Hormoonbalans: Welke Supplementen Helpen Vrouwen?",
+    title: "Hormoonbalans: Wat Helpt Écht?",
     date: "2026-06-02",
     category: "Hormonen & Vrouwelijk Welzijn",
     excerpt: "Van energiedips tot stemmingswisselingen — je hormonen spelen een hoofdrol in hoe je je voelt. Ontdek hoe je hormonale disbalans herkent, wat er per levensfase verandert, en welke supplementen écht kunnen ondersteunen.",
@@ -886,7 +886,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "focus-supplement-natuurlijke-nootropics-concentratie",
-    title: "Focus Supplement: Welke Nootropics Werken Écht?",
+    title: "Focus Supplement: Welke Nootropics Werken?",
     date: "2026-05-31",
     category: "Mentale Focus & Stress",
     excerpt: "Steeds meer mensen zoeken naar supplementen voor betere focus en concentratie. Ontdek wat nootropics zijn, welke natuurlijke ingrediënten werken, en hoe je een focus supplement kiest dat bij je past.",
@@ -963,7 +963,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "haaruitval-supplement-vrouwen-oorzaken-oplossingen",
-    title: "Haaruitval bij Vrouwen: Welke Supplementen Helpen?",
+    title: "Haaruitval bij Vrouwen: Wat Helpt Écht?",
     date: "2026-05-29",
     category: "Schoonheid",
     excerpt: "Bijna de helft van alle vrouwen krijgt ooit te maken met haaruitval. Ontdek de meest voorkomende oorzaken, welke vitaminen en mineralen essentieel zijn voor gezonde haargroei, en welke supplementen wetenschappelijk onderbouwd zijn.",
@@ -1053,7 +1053,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "gut-brain-connectie-darmen-stemming-mentaal",
-    title: "Gut-Brain Connectie: Hoe Bepaalt Dit Je Stemming?",
+    title: "Gut-Brain Connectie: Wat Doet Dit?",
     date: "2026-05-27",
     category: "Darmen & Spijsvertering",
     excerpt: "Wist je dat 90% van je serotonine in je darmen wordt gemaakt? Ontdek hoe de gut-brain connectie werkt, waarom je darmen je 'tweede brein' zijn, en hoe je deze cruciale verbinding ondersteunt voor een betere stemming en mentale helderheid.",
@@ -1098,7 +1098,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "ashwagandha-kopen-nederland-complete-gids",
-    title: "Ashwagandha Kopen in Nederland: Complete Gids 2026",
+    title: "Ashwagandha Kopen in Nederland",
     date: "2026-05-28",
     category: "Mentale Gezondheid",
     excerpt: "Alles over ashwagandha kopen in Nederland: KSM-66 vs Sensoril, dosering, bewezen voordelen en waar je op moet letten bij het kiezen van een kwalitatief supplement.",
@@ -1144,7 +1144,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "collageen-supplement-kopen-waar-op-letten",
-    title: "Collageen Supplement Kopen: Waar Op Letten?",
+    title: "Collageen Kopen: Waar Op Letten?",
     date: "2026-05-23",
     category: "Schoonheid & Verzorging",
     excerpt: "Het aanbod collageen supplementen is overweldigend. Ontdek waar je op moet letten bij het kopen — van type 1 vs 3 tot gehydrolyseerd vs gewoon — en maak een doordachte keuze voor je huid, haar en nagels.",
@@ -1201,7 +1201,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "beste-probiotica-2026-kopen-vergelijken",
-    title: "Probiotica Kiezen in 2026: Waar Op Letten?",
+    title: "Probiotica Kiezen: Waar Op Letten?",
     date: "2026-05-21",
     category: "Darmen & Spijsvertering",
     excerpt: "Het schap ligt vol probiotica, maar welke is nou echt de beste? Ontdek waar je op moet letten — van bacteriestammen en CFU tot prebiotica en keurmerken — en maak een doordachte keuze voor jouw darmgezondheid.",
@@ -1324,7 +1324,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "supplementen-voor-meer-energie-dit-werkt-echt",
-    title: "Energy+: Natuurlijke Energie Zonder Cafeïnecrash?",
+    title: "Energy+: Energie Zonder Cafeïnecrash?",
     date: "2026-05-09",
     category: "Energie",
     excerpt: "Altijd moe? Ontdek welke supplementen écht werken voor meer energie — zonder cafeïnecrash. Van mitochondriën tot natuurlijke energieboosters.",
@@ -1401,7 +1401,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "collageen-bouwsteen-voor-huid-haar-en-nagels-dit-moet-je-weten",
-    title: "HL5 Collageen: Wat Doet 5g Per Dag Voor Je Huid?",
+    title: "HL5 Collageen: Wat Doet 5g Per Dag?",
     date: "2026-05-09",
     category: "Beauty",
     excerpt: "Collageen is het belangrijkste eiwit voor je huid, haar en nagels. Vanaf je 25e neemt de productie af. Ontdek hoe je dit op natuurlijke wijze ondersteunt.",
@@ -1500,7 +1500,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "mct-olie-energie-gewicht-supplement",
-    title: "Origin Vegan Protein: Wat Doet MCT Olie en Eiwit?",
+    title: "Origin Vegan Protein: Wat Doet Het?",
     date: "2026-04-05",
     category: "Metabolisme",
     excerpt: "MCT-olie is razend populair in de wellness-wereld. Maar wat doet het precies voor je energie en vetverbranding?",
@@ -1524,7 +1524,7 @@ export const blogPosts: BlogPost[] = [
   
   {
     slug: "collageen-supplement-huid-haar-gewrichten",
-    title: "HL5 Collageen: Werkt Het Écht? (Review 2026)",
+    title: "HL5 Collageen: Werkt Het Écht?",
     date: "2026-02-28",
     category: "Beauty",
     excerpt: "Collageen is het meest voorkomende eiwit in je lichaam. Ontdek waarom suppletie essentieel is bij het ouder worden.",
@@ -1542,7 +1542,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "calcium-botten-supplement-nederland",
-    title: "Sunset & Origin: Calcium, D3 en K2 Voor Je Botten",
+    title: "Sunset & Origin: Sterke Botten?",
     date: "2026-05-01",
     category: "Wellness",
     excerpt: "Leer waarom calcium essentieel is voor je botdichtheid en hoe de synergie met vitamine D3 de opname optimaliseert.",
@@ -1562,7 +1562,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "zink-testosteron-supplement-nederland",
-    title: "Zink en Testosteron: Wat Doen Deze Producten?",
+    title: "Zink en Testosteron: Wat Doen Ze?",
     date: "2026-04-30",
     category: "Metabolisme",
     excerpt: "Zink speelt een cruciale rol bij de hormoonproductie. Ontdek hoe dit mineraal je vitaliteit en testosteronspiegel ondersteunt.",
@@ -1602,7 +1602,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "vitamine-e-huid-haar-supplement",
-    title: "Sunset: Wat Doet Vitamine E Voor Huid en Slaap?",
+    title: "Sunset: Wat Doet Vitamine E?",
     date: "2026-04-28",
     category: "Beauty",
     excerpt: "Ontdek de geheimen van vitamine E voor een elastische huid en glanzend haar. Leer waarom tocotriënolen de beste vorm zijn.",
@@ -1622,7 +1622,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "darm-hersen-verbinding-stemming-supplement",
-    title: "MentaBiotics: Hoe Bepalen Je Darmen Je Stemming?",
+    title: "MentaBiotics: Darmen en Je Stemming?",
     date: "2026-04-27",
     category: "Gut Health",
     excerpt: "Wist je dat 90% van je serotonine in je darmen wordt aangemaakt? Leer hoe je darmgezondheid je mentale welzijn beïnvloedt.",
@@ -1642,7 +1642,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "b-vitamines-energie-supplement-nederland",
-    title: "Amare ON: Wat Doen B-Vitamines Voor Energie?",
+    title: "Amare ON: B-Vitamines Voor Energie?",
     date: "2026-04-25",
     category: "Energie",
     excerpt: "Voel je je futloos? B-vitamines zijn essentieel voor het omzetten van voeding in bruikbare energie voor je hersenen en spieren.",
@@ -1661,7 +1661,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "probiotica-darmen-supplement-nederland",
-    title: "Restore & MentaBiotics: Welke Probiotica Kies Je?",
+    title: "Restore & MentaBiotics: Welke Kies Je?",
     date: "2026-04-23",
     category: "Gut Health",
     excerpt: "Niet alle probiotica zijn gelijk. Leer welke stammen zoals Lactobacillus en Bifidobacterium het beste werken voor jouw darmflora.",
@@ -1739,7 +1739,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "triangle-of-wellness-xtreme-dagelijkse-basisondersteuning-pakket",
-    title: "Triangle of Wellness Xtreme: Wat Doet Dit Pakket?",
+    title: "Triangle of Wellness Xtreme: Wat Doet Het?",
     date: "2026-05-18",
     category: "Pakketten & Bundels",
     excerpt: "De Triangle of Wellness Xtreme combineert Sunrise, Nitro Xtreme en Sunset in één dagelijkse routine — ochtendenergie, middagfocus en avondherstel. Het meest complete basispakket van Amare.",
@@ -1804,7 +1804,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "hl5-2-pack-collageen-huid-haar-nagels-beste-waarde",
-    title: "HL5 2-Pack: Collageen Voor Huid, Haar en Nagels",
+    title: "HL5 2-Pack: Voor Huid, Haar en Nagels",
     date: "2026-05-18",
     category: "Schoonheid",
     excerpt: "De HL5 2-Pack levert 5 g gehydrolyseerd collageen Type 1 & 3 per portie in een heerlijke Peach of Berry smaak — met tot 90% opname binnen 6 uur. Ontdek het prijsvoordeel van de 2-pack.",
@@ -1862,7 +1862,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "happy-lifestyle-pack-beste-waarde-bundel-totaal-welzijn",
-    title: "Happy Lifestyle Pack: Wat Zit Er In Deze Bundel?",
+    title: "Happy Lifestyle Pack: Wat Zit Erin?",
     date: "2026-05-18",
     category: "Pakketten & Bundels",
     excerpt: "De Happy Lifestyle Pack is de meest complete bundel van Amare — tot 15 producten in één voordelig pakket voor wie totale ondersteuning zoekt. Van darmgezondheid tot collageen, alles inbegrepen.",
@@ -1929,7 +1929,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "amare-triangle-of-wellness-ervaringen-waarom-balans-voeding-en-vitaliteit-samenkomen",
-    title: "Triangle of Wellness: Echte Gebruikerservaringen",
+    title: "Triangle of Wellness: Echte Ervaringen",
     date: "2025-03-10",
     category: "Lifestyle & Wellness",
     excerpt: "De Triangle of Wellness is Amare's holistische benadering van gezondheid. Lees hoe voeding, mind en vitaliteit samenkomen.",
@@ -2057,7 +2057,7 @@ export const blogPosts: BlogPost[] = [
   },
 {
     slug: "beste-supplementen-haar-nagels-werkt-echt",
-    title: "Supplementen voor Haar en Nagels: Wat Werkt Écht?",
+    title: "Haar en Nagels: Wat Werkt Écht?",
     date: "2026-06-22",
     category: "schoonheid",
     excerpt: "Niet elk 'haar vitamine' supplement doet wat het belooft. We scheiden de feiten van de marketing voor sterker haar en nagels.",
@@ -2118,7 +2118,7 @@ export const blogPosts: BlogPost[] = [
     `,
     image: "/images/blog/supplementen-haar-nagels-cover.jpg"
   },
-  {slug:"magnesium-supplement-kopen-welke-vorm-nodig",title:"Magnesium Supplement Kopen: Welke Vorm Nodig?",date:"2026-06-21",category:"essentials",excerpt:"Niet alle magnesium is gelijk. Ontdek welke vorm je nodig hebt voor slaap, stress, spieren of energie.",author: "Mark",
+  {slug:"magnesium-supplement-kopen-welke-vorm-nodig",title:"Magnesium Kopen: Welke Vorm Nodig?",date:"2026-06-21",category:"essentials",excerpt:"Niet alle magnesium is gelijk. Ontdek welke vorm je nodig hebt voor slaap, stress, spieren of energie.",author: "Mark",
     citations: [{ author: "Barbagallo M, et al.", name: "Nutrients (2021)", url: "https://doi.org/10.3390/nu13020463" }],
     content:`<h2>Waarom magnesium het meest onderschatte mineraal is</h2>
 
@@ -2217,7 +2217,7 @@ Begin met een basisvorm zoals bisglycinaat (200-400 mg elementair), neem het 's 
 `},
 {
     slug: "supplementen-stress-burn-out-wat-helpt-echt",
-    title: "Stress en Burn-out: Welke Supplementen Helpen?",
+    title: "Stress en Burn-out: Wat Helpt Écht?",
     date: "2026-06-23",
     category: "mentaal",
     excerpt: "Burn-out is geen tekort aan doorzettingsvermogen maar een fysiologische uitputting die langer duurt dan gewone stress. Deze supplementen ondersteunen je herstel — wetenschappelijk onderbouwd.",
@@ -2229,20 +2229,20 @@ Begin met een basisvorm zoals bisglycinaat (200-400 mg elementair), neem het 's 
     ],
     content: `<h2>Stress is fysiek, niet alleen mentaal</h2><p>We praten over stress alsof het 'tussen je oren' zit. Maar stress is primair een fysiologisch proces: je bijnieren maken cortisol aan, je hartslag stijgt, je bloedsuiker piekt, je immuunsysteem schakelt terug. Dat systeem is ontworpen voor korte, acute stress — een leeuw die je moet ontvluchten.</p><p>Chronische stress is fundamenteel anders. Je cortisolniveau blijft verhoogd, dag in dag uit, maand na maand. Het resultaat: uitgeputte bijnieren, verstoorde bloedsuikerregulatie, een onderdrukt immuunsysteem en uitgeputte mitochondriën. Dit is geen 'aanstellerij' — het is meetbare fysiologische uitputting.</p><p>Supplementen kunnen het herstel ondersteunen. Niet als vervanging van rust, therapie of leefstijlaanpassingen, maar als ondersteuning van de fysiologische systemen die onder chronische stress bezwijken.</p><h2>Burn-out versus alledaagse stress: waarom dit anders is</h2><p>Niet elke stressvolle periode is een burn-out, en dat onderscheid is belangrijk — ook voor welke aanpak je kiest. Heb je vooral last van drukte, een hectische week of tijdelijke spanning, lees dan ons artikel over <a href="/blogs/nieuws/stress-verminderen-supplementen-cortisol-ontspanning">supplementen bij stress in het algemeen</a>. Dit artikel gaat specifiek over burn-out: een dieper, langduriger uitputtingsstadium waarbij rust alleen vaak niet meer voldoende is.</p><p>Het verschil zit vooral in duur en herstelweg. Onderzoek naar terugkeer naar werk na een burn-out laat zien dat het herstel doorgaans niet lineair verloopt en dat terugval na werkhervatting relatief vaak voorkomt — juist omdat interventies zich vaak alleen op het individu richten, terwijl ook de werkomgeving een rol speelt. Dat betekent concreet: een burn-out vraagt om een breder herstelplan dan 'een weekje rust nemen', en supplementen zijn daarbinnen een fysiologisch hulpmiddel, geen kortere weg terug naar volle belasting.</p><h2>De 5 beste supplementen bij stress en burn-out</h2><h3>1. Ashwagandha — de cortisolregulator</h3><p>Ashwagandha (Withania somnifera) is het best onderzochte <a href="/adaptogenen">adaptogeen</a> voor stress. Een dubbelblinde, placebogecontroleerde studie onder 64 mensen met chronische stress liet zien dat 300 mg ashwagandha-wortelextract, tweemaal daags ingenomen gedurende 60 dagen, zowel de score op stress-vragenlijsten als het serumcortisol significant deed dalen ten opzichte van placebo. Andere studies rapporteren verbeteringen in slaapkwaliteit, energieniveau en mentale helderheid.</p><p>Dosering: 300-600 mg gestandaardiseerd extract (KSM-66 of Sensoril), 's avonds ingenomen. Verwacht resultaat na 4 tot 8 weken.</p><h3>2. Rhodiola Rosea — de vermoeidheidsbestrijder</h3><p>Rhodiola richt zich specifiek op stressgerelateerde vermoeidheid en mentale uitputting. Het actieve bestanddeel (rosavin) ondersteunt de ATP-productie in de mitochondriën en helpt bij het reguleren van de cortisolrespons.</p><p>Een Zweedse studie onder 60 mensen met burn-outgerelateerde vermoeidheid vond na 28 dagen een significante verbetering op de burn-outschaal en in aandachtstaken bij de rhodiola-groep ten opzichte van placebo, samen met een veranderde cortisolrespons op ochtendstress.</p><p>Dosering: 200-400 mg gestandaardiseerd extract (3% rosavin), 's ochtends. Verwacht resultaat na 4 weken.</p><h3>3. Magnesium — het anti-stress mineraal</h3><p>Magnesium en stress vormen een vicieuze cirkel: stress verhoogt de magnesiumuitscheiding via urine, en een magnesiumtekort maakt je gevoeliger voor stress. Magnesium ondersteunt de GABA-receptoren — het kalmerende systeem in je hersenen — en remt de afgifte van stresshormonen.</p><p>Onderzoek toont aan dat magnesiumsuppletie bij mensen met een tekort de stressgevoeligheid kan verminderen. De beste vorm voor stress: magnesiumbisglycinaat (gekoppeld aan het kalmerende aminozuur glycine).</p><h3>4. L-Theanine — focus zonder nervositeit</h3><p>L-theanine is een aminozuur uit groene thee dat alfagolven in de hersenen verhoogt — de hersengolven die geassocieerd worden met een ontspannen maar alerte toestand. In tegenstelling tot ashwagandha werkt L-theanine acuut: je merkt het effect binnen 30-60 minuten.</p><p>Het bijzondere: L-theanine vermindert de negatieve bijwerkingen van cafeïne (nervositeit, verhoogde bloeddruk) terwijl het de positieve effecten (alertheid, focus) behoudt. Voor mensen met stress die toch moeten presteren is dit een uitkomst.</p><h3>5. B-Vitamines (B5, B6, B12) — de bijnierondersteuning</h3><p>Je bijnieren bevatten van nature een hoge concentratie vitamine C en B-vitamines — deze vitamines zijn betrokken bij de cortisolproductie. Bij chronische stress raakt deze voorraad sneller uitgeput.</p><p>Vitamine B5 (pantotheenzuur) is specifiek belangrijk voor de bijnierfunctie. Een B-complex 's ochtends ondersteunt zowel de energieproductie als de stressrespons.</p><h2>Supplementen die NIET direct helpen bij burn-out</h2><p>• <strong>Cafeïne-pillen of sterke pre-workouts</strong>: Ze geven een tijdelijke energieboost maar verhogen cortisol en putten je bijnieren verder uit.</p><p>• <strong>Sint-Janskruid</strong>: Wordt soms aangeraden maar interageert met veel medicatie (inclusief antidepressiva) en is niet specifiek voor burn-out.</p><p>• <strong>5-HTP</strong>: Kan de stemming ondersteunen maar pakt de onderliggende bijnieruitputting niet aan.</p><p>• <strong>'Stress gummies' met onbekende doseringen</strong>: Meestal te laag gedoseerd om effectief te zijn.</p><h2>De Amare aanpak</h2><table><tr><td>Product</td><td>Wat het doet</td><td>Voor welke stressfase</td></tr><tr><td><strong>EDGE+</strong></td><td>Rhodiola + L-theanine + Zynamite</td><td>Acute stress, focus onder druk</td></tr><tr><td><strong>MentaBiotics</strong></td><td>Probiotica voor gut-brain as</td><td>Chronische stress, stemmingsondersteuning</td></tr><tr><td><strong>Happy Juice Pack</strong></td><td>Energy+ + EDGE+ + MentaBiotics</td><td>Complete mentale ondersteuning</td></tr></table><p>De Happy Juice Pack combineert drie formules die samenwerken: Energy+ voor zachte energie, EDGE+ voor adaptogene stressbescherming, en MentaBiotics voor de darm-hersen connectie die bij chronische stress verstoord raakt.</p><p><a href="https://www.amare.com/2075008/nl-nl/happy-juice-pack" target="_blank" rel="nofollow noopener noreferrer">Complete ondersteuning: Bekijk Happy Juice Pack →</a></p><h2>Terugval voorkomen: wat helpt na werkhervatting?</h2><p>Een groot deel van de mensen die na een burn-out weer aan het werk gaan, valt binnen afzienbare tijd terug. Onderzoek naar effectieve terugkeer-naar-werk-programma's wijst uit dat de beste aanpak niet alleen op het individu leunt (rust, supplementen, therapie), maar ook de werkomgeving betrekt — denk aan een geleidelijke opbouw van taken, realistische afspraken met je leidinggevende, en een vast aanspreekpunt tijdens de eerste maanden terug. Supplementen kunnen de fysiologische basis mee op peil houden tijdens die opbouw, maar vervangen dat bredere plan niet.</p><h2>Supplementen zijn ondersteuning, geen oplossing</h2><p>Dit moet duidelijk zijn: supplementen ondersteunen het fysieke herstel, maar ze lossen de oorzaak van burn-out niet op. Chronische stress vraagt om:</p><p><strong>Rust</strong> — letterlijk stoppen met overwerken, grenzen stellen</p><p><strong>Slaap</strong> — 7-9 uur kwalitatieve slaap per nacht</p><p><strong>Beweging</strong> — matig, niet uitputtend (wandelen, yoga, zwemmen)</p><p><strong>Sociale verbinding</strong> — praten met vrienden, familie, therapeut</p><p><strong>Zingeving</strong> — wat geeft je energie versus wat kost energie?</p><p>Supplementen maken deze vijf pilaren haalbaarder — ze geven je de fysieke basis om de leefstijlaanpassingen vol te houden.</p><h2>Veelgestelde vragen</h2><p><strong>Hoe snel werken stress-supplementen?</strong><br/>L-theanine werkt acuut (binnen een uur). Magnesium: 1-2 weken voor slaap, langer voor algehele stressvermindering. Ashwagandha en rhodiola: 4 tot 8 weken consistent gebruik. Bij burn-out is geduld essentieel — herstel wordt gemeten in maanden, niet dagen.</p><p><strong>Kan ik adaptogenen combineren met medicatie?</strong><br/>Raadpleeg altijd je arts. Ashwagandha kan interacteren met schildkliermedicatie, bloeddrukverlagers en immunosuppressiva. Rhodiola kan de bloeddruk licht verhogen. Sint-Janskruid is berucht om interacties. Wees eerlijk tegen je arts over supplementgebruik.</p><p><strong>Is ashwagandha verslavend?</strong><br/>Nee, ashwagandha is niet verslavend. Het is geen stimulant en geen sedativum — het ondersteunt je lichaam bij het reguleren van de stressrespons. Je kunt zonder problemen stoppen.</p><p><strong>Wanneer is het echt een burn-out, en geen gewone stressvolle periode?</strong><br/>Bij gewone stress herstel je meestal binnen dagen tot weken na rust. Bij een burn-out blijft de uitputting aanhouden ondanks rust, en spelen vaak ook somberheid, concentratieverlies en een gevoel van vervreemding van je werk mee. Twijfel je? Bespreek het met je huisarts of bedrijfsarts.</p><h2>Conclusie</h2><p>Chronische stress en burn-out zijn fysiologische processen, geen karakterzwaktes. Je bijnieren, mitochondriën en neurotransmitters raken letterlijk uitgeput. De best onderbouwde supplementen — ashwagandha, rhodiola, magnesium, L-theanine en B-vitamines — ondersteunen het lichamelijk herstel en maken leefstijlaanpassingen haalbaarder, mits gecombineerd met een breder herstelplan dat ook je werkomgeving meeneemt.</p><p>Begin met één adaptogeen (ashwagandha 's avonds óf rhodiola 's ochtends), voeg magnesium toe, en bouw van daaruit verder. De Happy Juice Pack van Amare biedt een complete instap met drie synergetische formules in één bundel.</p><p>Supplementen zijn de steunzolen voor je herstelpad — ze dragen je niet, maar ze maken de weg begaanbaar.</p><p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Supplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij burn-outklachten altijd een arts.</em></p><p><em>Deze informatie is uitsluitend voor educatieve doeleinden en vervangt geen medisch advies.</em></p>`
   },
-{slug:"ochtendroutine-meer-energie-supplementen-tips",title:"Ochtendroutine voor Meer Energie: Wat Helpt Écht?",date:"2026-06-20",category:"essentials",excerpt:"Begin je dag met de juiste supplementen. Een praktische ochtendroutine voor meer energie, focus en vitaliteit.",author:"Mark",content:`<h2>Waarom je ochtendroutine alles bepaalt</h2><p>Hoe je je dag begint, bepaalt hoe de rest verloopt. Een doordachte ochtendroutine met de juiste supplementen kan het verschil maken tussen energiek en uitgeput.</p><h2>De ideale ochtendroutine</h2><p><strong>07:00 - Water met citroen:</strong> Hydrateer je lichaam na 8 uur zonder vocht. Citroen voegt vitamine C toe.</p><p><strong>07:15 - Sunrise:</strong> Amare's ochtendformule met 22 superfoods en 9 vitaminen. IJzer, B-vitamines en D3 voor de hele dag.</p><p><strong>07:30 - Ontbijt met eiwit:</strong> Combineer Sunrise met een eiwitrijk ontbijt voor langdurige verzadiging.</p><h2>Wat je moet vermijden</h2><p><strong>Koffie op lege maag:</strong> Verhoogt cortisol onnodig. Wacht tot na je ontbijt.</p><p><strong>Teveel supplementen tegelijk:</strong> Houd het simpel. Een complete formule zoals Sunrise dekt de basis.</p><h2>Conclusie</h2><p>Een consistente ochtendroutine met de juiste supplementen geeft je een voorsprong. Begin simpel, wees consistent.</p><p><em>* Voedingssupplement. Geen geneesmiddel.</em></p>`},
-{slug:"elektrolyten-aanvullen-sport-hydratatie-gids",title:"Elektrolyten: Wat Zijn Ze en Wanneer Nodig?",date:"2026-07-22",category:"essentials",excerpt:"Zweten, sporten, warm weer — je verliest meer dan alleen water. Alles over elektrolyten en hoe je ze slim aanvult.",author: "Mark",
+{slug:"ochtendroutine-meer-energie-supplementen-tips",title:"Meer Energie: Wat Helpt in de Ochtend?",date:"2026-06-20",category:"essentials",excerpt:"Begin je dag met de juiste supplementen. Een praktische ochtendroutine voor meer energie, focus en vitaliteit.",author:"Mark",content:`<h2>Waarom je ochtendroutine alles bepaalt</h2><p>Hoe je je dag begint, bepaalt hoe de rest verloopt. Een doordachte ochtendroutine met de juiste supplementen kan het verschil maken tussen energiek en uitgeput.</p><h2>De ideale ochtendroutine</h2><p><strong>07:00 - Water met citroen:</strong> Hydrateer je lichaam na 8 uur zonder vocht. Citroen voegt vitamine C toe.</p><p><strong>07:15 - Sunrise:</strong> Amare's ochtendformule met 22 superfoods en 9 vitaminen. IJzer, B-vitamines en D3 voor de hele dag.</p><p><strong>07:30 - Ontbijt met eiwit:</strong> Combineer Sunrise met een eiwitrijk ontbijt voor langdurige verzadiging.</p><h2>Wat je moet vermijden</h2><p><strong>Koffie op lege maag:</strong> Verhoogt cortisol onnodig. Wacht tot na je ontbijt.</p><p><strong>Teveel supplementen tegelijk:</strong> Houd het simpel. Een complete formule zoals Sunrise dekt de basis.</p><h2>Conclusie</h2><p>Een consistente ochtendroutine met de juiste supplementen geeft je een voorsprong. Begin simpel, wees consistent.</p><p><em>* Voedingssupplement. Geen geneesmiddel.</em></p>`},
+{slug:"elektrolyten-aanvullen-sport-hydratatie-gids",title:"Elektrolyten: Wanneer Heb Je Ze Nodig?",date:"2026-07-22",category:"essentials",excerpt:"Zweten, sporten, warm weer — je verliest meer dan alleen water. Alles over elektrolyten en hoe je ze slim aanvult.",author: "Mark",
     citations: [{ author: "Ganio MS, et al.", name: "British Journal of Nutrition (2011)", url: "https://doi.org/10.1017/S0007114511002005" }],
     content:`<h2>Meer dan alleen sportdrank</h2><p>De term elektrolyten roept waarschijnlijk beelden op van felgekleurde sportdrankjes. Maar elektrolyten zijn geen marketingterm — het zijn letterlijk de mineralen die je lichaam gebruikt om signalen door te geven, spieren te laten samentrekken, en vocht op de juiste plek te houden.</p><p>Zonder elektrolyten werkt je zenuwstelsel niet. Je hart klopt niet. Je spieren bewegen niet.</p><h2>Wat zijn elektrolyten eigenlijk?</h2><p>De belangrijkste elektrolyten in je lichaam zijn natrium, kalium, magnesium, calcium, chloride en fosfaat. Stuk voor stuk mineralen die een elektrische lading dragen. Je zenuwcellen gebruiken elektrische signalen om te communiceren, en die signalen worden opgewekt door de beweging van elektrolyten door celmembranen.</p><h2>Wanneer heb je extra nodig?</h2><p>Niet na een halfuurtje rustig joggen. Maar er zijn momenten waarop de balans verstoord raakt: intensief sporten (60+ minuten), warm weer, alcohol, keto of vasten, ziekte met koorts.</p><p>De klassieke signalen van een tekort: spierkramp, hoofdpijn, vermoeidheid, duizeligheid, hartkloppingen.</p><h2>De simpelste elektrolytendrank</h2><p>500 ml water, snufje zout (natrium), scheutje citroensap (kalium). Optioneel: mespuntje magnesiumpoeder. Klaar.</p><p>Voor dagelijkse ondersteuning leveren Amare's Nitro Xtreme en Origin de mineralen die je nodig hebt.</p><p><em>* Voedingssupplement. Geen geneesmiddel.</em></p>`},
-  {slug:"supplementen-combineren-wel-niet-gids",title:"Supplementen Combineren: Wat Kan Wel en Niet?",date:"2026-07-14",category:"essentials",excerpt:"Niet alle supplementen gaan goed samen. Ontdek welke combinaties elkaar versterken en welke je beter scheidt.",author:"Mark",
+  {slug:"supplementen-combineren-wel-niet-gids",title:"Supplementen Combineren: Wat Kan Wel?",date:"2026-07-14",category:"essentials",excerpt:"Niet alle supplementen gaan goed samen. Ontdek welke combinaties elkaar versterken en welke je beter scheidt.",author:"Mark",
     citations: [{ author: "Walczyk T, et al.", name: "The Journal of Nutrition (2014)", url: "https://doi.org/10.3945/jn.114.193417" }],
     content:`<h2>De supplementenpuzzel</h2><p>Je hebt magnesium voor het slapen, vitamine D bij het ontbijt, ijzer op een lege maag. Voor je het weet sta je een halfuur per dag pillen te sorteren. Maar welke combinaties zijn eigenlijk nuttig?</p><p>Het eerlijke antwoord: de meeste supplementen kunnen prima samen, maar er zijn een paar combinaties die je echt moet weten.</p><h2>De gouden combinaties</h2><p><strong>IJzer + Vitamine C:</strong> Vitamine C kan de opname van ijzer met een factor 2 tot 4 verhogen.</p><p><strong>Vitamine D3 + K2:</strong> D3 zorgt dat calcium wordt opgenomen, K2 zorgt dat het op de juiste plek terechtkomt.</p><p><strong>Probiotica + Prebiotica:</strong> Probiotica zijn de zaadjes, prebiotica de mest. Samen sterker.</p><h2>De combinaties die je beter vermijdt</h2><p><strong>IJzer + Calcium:</strong> Calcium remt ijzeropname. Minimaal 4 uur ertussen.</p><p><strong>IJzer + Koffie/Thee:</strong> Tannines binden aan ijzer. Wacht minimaal 1 uur.</p><h2>De Amare aanpak</h2><p>Sunrise combineert ijzerrijke superfoods met natuurlijke vitamine C. De Triangle of Wellness regelt de timing voor je.</p><p><em>* Voedingssupplement. Geen geneesmiddel.</em></p>`},
-  {slug:"lions-mane-paddenstoel-focus-nootropic",title:"Lion's Mane: De Paddenstoel Die Je Focus Verandert",date:"2026-07-16",category:"mentaal",excerpt:"Iedereen heeft het erover: Lion's Mane. Deze harige paddenstoel zou je focus verbeteren. Wat is er wetenschappelijk van waar?",author:"Mark",citations:[{author:"Mori K, et al.",name:"Phytotherapy Research (2009)",url:"https://doi.org/10.1002/ptr.2634"}],content:`<h2>Een paddenstoel die eruitziet als een witte pompon</h2><p>Stel je voor: je loopt door een bos in Azië en aan een oude boomstam hangt een witte, harige bol. Dat is Lion's Mane — Hericium erinaceus. Deze paddenstoel wordt al eeuwen gebruikt in de traditionele Chinese geneeskunde.</p><h2>Wat doet het?</h2><p>Lion's Mane stimuleert de aanmaak van NGF — Nerve Growth Factor. Een eiwit dat de groei en het onderhoud van zenuwcellen ondersteunt. Het is geen stimulant zoals cafeïne — het werkt sluipend, op de achtergrond.</p><h2>Lion's Mane vs cafeïne</h2><p>Cafeïne maskeert vermoeidheid. Lion's Mane ondersteunt de infrastructuur van je hersenen. Het is het verschil tussen een energiedrank en een voedzame maaltijd.</p><h2>Hoe verhoudt het zich tot EDGE+?</h2><p>EDGE+ gebruikt pantotheenzuur, goji en adaptogenen. Lion's Mane werkt via NGF-stimulatie. Het zijn geen concurrenten maar aanvullingen.</p><p><em>* Voedingssupplement. Geen geneesmiddel.</em></p>`},
-  {slug:"berberine-bloedsuiker-metabolisme-supplement",title:"Berberine: Waarom Heeft Iedereen Het Hierover?",date:"2026-07-18",category:"essentials",excerpt:"Social media staat er vol mee: berberine. Maar wat doet deze felgele plantenstof nu echt?",author: "Mark",
+  {slug:"lions-mane-paddenstoel-focus-nootropic",title:"Lion's Mane: De Focus-Paddenstoel",date:"2026-07-16",category:"mentaal",excerpt:"Iedereen heeft het erover: Lion's Mane. Deze harige paddenstoel zou je focus verbeteren. Wat is er wetenschappelijk van waar?",author:"Mark",citations:[{author:"Mori K, et al.",name:"Phytotherapy Research (2009)",url:"https://doi.org/10.1002/ptr.2634"}],content:`<h2>Een paddenstoel die eruitziet als een witte pompon</h2><p>Stel je voor: je loopt door een bos in Azië en aan een oude boomstam hangt een witte, harige bol. Dat is Lion's Mane — Hericium erinaceus. Deze paddenstoel wordt al eeuwen gebruikt in de traditionele Chinese geneeskunde.</p><h2>Wat doet het?</h2><p>Lion's Mane stimuleert de aanmaak van NGF — Nerve Growth Factor. Een eiwit dat de groei en het onderhoud van zenuwcellen ondersteunt. Het is geen stimulant zoals cafeïne — het werkt sluipend, op de achtergrond.</p><h2>Lion's Mane vs cafeïne</h2><p>Cafeïne maskeert vermoeidheid. Lion's Mane ondersteunt de infrastructuur van je hersenen. Het is het verschil tussen een energiedrank en een voedzame maaltijd.</p><h2>Hoe verhoudt het zich tot EDGE+?</h2><p>EDGE+ gebruikt pantotheenzuur, goji en adaptogenen. Lion's Mane werkt via NGF-stimulatie. Het zijn geen concurrenten maar aanvullingen.</p><p><em>* Voedingssupplement. Geen geneesmiddel.</em></p>`},
+  {slug:"berberine-bloedsuiker-metabolisme-supplement",title:"Berberine: Waarom Praat Iedereen Erover?",date:"2026-07-18",category:"essentials",excerpt:"Social media staat er vol mee: berberine. Maar wat doet deze felgele plantenstof nu echt?",author: "Mark",
     citations: [{ author: "Nazari A, et al.", name: "Clinical Therapeutics (2023)", url: "https://doi.org/10.1016/j.clinthera.2023.10.019" }],
     content:`<h2>Het gele poeder dat TikTok gek maakte</h2><p>Een poeder uit een plant, felgeel van kleur, dat al eeuwen in de Chinese en Ayurvedische geneeskunde wordt gebruikt. Plotseling is het overal.</p><h2>Wat is berberine?</h2><p>Berberine is een alkaloïde die van nature voorkomt in planten zoals berberis en goldenseal. Het activeert AMPK — de 'metabole schakelaar' in je cellen die reguleert hoe je lichaam suiker en vet verwerkt.</p><h2>Is het echt 'nature's Ozempic'?</h2><p>Nee. Ozempic imiteert GLP-1, berberine werkt via AMPK. Totaal ander mechanisme. Wat wel waar is: berberine ondersteunt bloedsuikerspiegel en metabolisme — en dat is relevant voor gewichtsbeheer.</p><h2>Amare's invalshoek</h2><p>FIT20 ondersteunt spierherstel en metabolisme. Origin geeft verzadiging met 23g eiwit en MCT-olie. Samen pakken ze gewichtsbeheer aan zonder hype.</p><p><em>* Voedingssupplement. Geen geneesmiddel. Raadpleeg een arts bij medicijngebruik.</em></p>`},
   {
     slug: "gaba-supplement-natuurlijke-rustgever-brein",
-    title: "GABA Supplement: Wat Doet Het Voor Je Brein?",
+    title: "GABA Supplement: Wat Doet Het?",
     date: "2026-07-20",
     category: "mentaal",
     excerpt: "Altijd 'aan', nooit echt ontspannen? GABA is de kalmerende neurotransmitter van je brein — dit is wat de wetenschap zegt over supplementen ermee.",
@@ -2318,7 +2318,7 @@ Begin met een basisvorm zoals bisglycinaat (200-400 mg elementair), neem het 's 
   },
   {
     slug: "energie-metabolisme-supplementen-natuurlijke-boost",
-    title: "Altijd Moe? Dit Heeft Je Metabolisme Ermee Maken",
+    title: "Altijd Moe? Dit Doet Je Metabolisme Ermee",
     date: "2026-07-02",
     category: "energie",
     excerpt: "Ik was het zat. Altijd moe, nergens zin in. Toen dook ik in hoe je metabolisme écht werkt. Dit is wat ik leerde.",
@@ -2328,7 +2328,7 @@ Begin met een basisvorm zoals bisglycinaat (200-400 mg elementair), neem het 's 
   },
   {
     slug: "darmflora-balans-voor-welzijn",
-    title: "Darmflora in Balans: Waarom Is Dat Zo Belangrijk?",
+    title: "Darmflora in Balans: Waarom Belangrijk?",
     date: "2026-07-18",
     category: "darmen",
     excerpt: "Ontdek hoe een gezonde darmflora bijdraagt aan meer dan alleen spijsvertering, met impact op je energie, stemming en immuunsysteem.",
