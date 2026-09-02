@@ -28,6 +28,16 @@
   ],
   "redirects": [
     {
+      "source": "/blogs/nieuws/hoeveel-magnesium-per-dag-nodig",
+      "destination": "/blogs/nieuws/waar-zit-magnesium-in-voedingsbronnen-supplementen-gids",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/welke-voeding-magnesium-overzicht",
+      "destination": "/blogs/nieuws/waar-zit-magnesium-in-voedingsbronnen-supplementen-gids",
+      "permanent": true
+    },
+    {
       "source": "/blog",
       "destination": "/blogs/nieuws",
       "permanent": true
