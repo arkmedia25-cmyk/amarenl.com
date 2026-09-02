@@ -42,6 +42,12 @@ Emin değilsen, o satırı atla ve bu yeni bölümdeki maddeleri tercih et.
 > güçlendirme / küme birleştirme) — uygun değilse o gün hiçbir şey yapmadan çıkar. Detaylar
 > için `.github/workflows/amarenl-article-claude.yml` ve bu görevin Claude Code prompt'una bak.
 
+> **02-09-2026 SONUÇ:** Q1-Q9'un tamamı tek tek doğrulandı. Sonuç: **hiçbiri sıfırdan yeni makale
+> gerektirmiyor** — Q1, Q2, Q3, Q5, Q6, Q7, Q9 zaten tam kapsanıyor; Q4 ve Q8 sadece mevcut
+> makaleye küçük birer ek gerektiriyor (orotaat / voetenbad). Bu öncelik kuyruğu fiilen tükenmiş
+> durumda — bir sonraki oturum yeni bir keyword-fırsat taraması yapmadan otomatik pipeline'ı
+> "yeni yazı" moduna sokmamalı (bkz. section A'nın kendi kanibalizasyon-riski uyarısı).
+
 ### A. Öncelik 1 — Yeni yazı (gerçek, doğrulanmış boşluk — kanibalizasyon riski yok)
 
 | # | Konu / Başlık Önerisi | Hedef Anahtar Kelimeler (birleştirilmiş varyantlar) | Hacim (top.) | Ads-Rekabet* | Kategori/Ürün | Not |
@@ -50,7 +56,7 @@ Emin değilsen, o satırı atla ve bu yeni bölümdeki maddeleri tercih et.
 | ~~Q2~~ | ~~Magnesium in Voeding: Welke Voedingsmiddelen Bevatten Magnesium?~~ | voeding met magnesium, magnesium voeding, magnesium in voedingsmiddelen, magnesium en voeding, magnesium in/welke voeding | ~30.000 (toplam varyant) | Orta | essentials — Sunrise | ✅ **02-09 doğrulandı: ZATEN VAR — YAZMA.** `waar-zit-magnesium-in-voedingsbronnen-supplementen-gids` (02-09'da pillar'a genişletildi — besin kaynakları + günlük öğün planı + doz tablosu) bunu tam kapsıyor. |
 | ~~Q3~~ | ~~Magnesium Hoeveel Per Dag? Dosering & Veiligheid~~ | magnesium hoeveel per dag | 5.000 | Orta | essentials — Sunrise | ✅ **02-09 doğrulandı: ZATEN VAR — YAZMA.** Aynı pillar'a (`waar-zit-magnesium-in...`) 02-09'da birleştirildi — nüfus-grubu bazlı doz tablosu + RIVM istatistiği dahil. |
 | Q4 | Magnesium Vormen Vergelijken: Tauraat, Orotaat, Citraat, Glycinaat | magnesium tauraat, magnesiumorotaat | 10.000 (toplam) | Yüksek | essentials — Sunrise, Sleep+ | 🟡 **02-09 doğrulandı: KISMEN VAR.** `magnesium-supplement-kopen-welke-vorm-nodig` zaten tauraat/citraat/glycinaat/bisglycinaat kapsıyor — sadece **orotaat** eksik. Sıfırdan makale YAZMA, mevcut makaleye küçük bir orotaat bölümü ekle. |
-| Q5 | Collageen Tabletten/Poeder vs Vloeibaar Collageen: Wat Werkt Beter? | collageentabletten, collageenpillen | 10.000 (toplam) | Yüksek | schoonheid — HL5 | Mevcut USP mesajıyla birebir örtüşüyor (sıvı = 3x emilim) — yüksek öncelik. `collageen-poeder-vs-pillen-vergelijking` bu açıyı kısmen kapsıyor olabilir, yazmadan önce oku (02-09'da doğrulanmadı, kontrol edilmeli). |
+| ~~Q5~~ | ~~Collageen Tabletten/Poeder vs Vloeibaar Collageen: Wat Werkt Beter?~~ | collageentabletten, collageenpillen | 10.000 (toplam) | Yüksek | schoonheid — HL5 | ✅ **02-09 doğrulandı: ZATEN VAR — YAZMA.** `collageen-poeder-vs-pillen-vergelijking` (820 kelime) poeder/pillen/vloeibaar üçlü karşılaştırmasını, %90 vs %30 emilim istatistiğini ve HL5 konumlandırmasını tam kapsıyor; pillar'a (`vloeibaar-collageen-hl5-huid-haar-nagels`) doğru linkleniyor. |
 
 
 > *Ads-Rekabet = Google Ads reklam-verenler rekabeti (CPC/bidding), organik SERP zorluğu DEĞİL — bir kelime
@@ -66,9 +72,9 @@ Emin değilsen, o satırı atla ve bu yeni bölümdeki maddeleri tercih et.
 | # | Konu | Neden şüpheli | Aksiyon |
 |---|---|---|---|
 | ~~Q6~~ | ~~Magnesium voor Spieren~~ | Mevcut `magnesium-onmisbaar-mineraal-rust-energie-spierherstel` pillar'ı zaten "spierherstel" kapsıyor olabilir | ✅ **02-09 doğrulandı: ZATEN VAR — YAZMA.** Pillar'da 9 ayrı "spier"-geçişi var, konu iyi kapsanıyor. |
-| Q7 | Probiotica voor Darmen / Probiotica Vrouw | 10 probiotica makalesi zaten var, olası örtüşme yüksek | Her ikisi için de: gerçekten farklı bir açı yoksa YAZMA, en yakın mevcut makaleyi güçlendir |
+| ~~Q7~~ | ~~Probiotica voor Darmen / Probiotica Vrouw~~ | 10 probiotica makalesi zaten var, olası örtüşme yüksek | ✅ **02-09 doğrulandı: ZATEN VAR — YAZMA.** "Probiotica Vrouw" `vaginale-probiotica-werkt-het-echt` (864 kelime) tarafından kapsanıyor. "Probiotica voor Darmen" zaten 8+ makalede doymuş durumda. |
 | Q8 | Magnesiumspray / Magnesium Voetenbad | `magnesiumolie-spray-transdermaal-werkt-het` muhtemelen bunu zaten kapsıyor | 🔴 **02-09 doğrulandı: KISMEN.** Spray zaten kapsanıyor, ama "voetenbad" (ayak banyosu) hiç geçmiyor — gerçek küçük boşluk. Sıfırdan makale değil, mevcut makaleye kısa bir voetenbad bölümü eklenebilir. |
-| Q9 | Vermoeide/Zware Benen varyantları | `zware-benen-oorzaken-wat-helpt` zaten var, kalan varyantlar aynı sorgunun eş anlamlıları | Yeni yazı YAZMA — zaten kapsanıyor |
+| ~~Q9~~ | ~~Vermoeide/Zware Benen varyantları~~ | `zware-benen-oorzaken-wat-helpt` zaten var, kalan varyantlar aynı sorgunun eş anlamlıları | ✅ **02-09 doğrulandı: ZATEN VAR — YAZMA.** Makale 839 kelime, kapsamlı. |
 
 ### C. Mevcut sayfayı güçlendir (yeni yazı DEĞİL — bkz. `amarenl-trafik-artirma-plani.md` bölüm 1)
 
