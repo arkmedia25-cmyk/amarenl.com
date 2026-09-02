@@ -12,12 +12,12 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Sunrise 2-Pack Kopen — Ochtend Superfoods & 9 Vitaminen | AmareNL",
+  title: "Sunrise 2-Pack: Ochtend Superfoods | AmareNL",
   description:
     "Amare Sunrise: 22 superfoods, 9 essentiële vitaminen (C, B-complex, Biotine) in vloeibare ochtendformule. Voor energie, huid, haar en immuunsysteem. Direct van Amare — premium kwaliteit.",
   alternates: { canonical: "/sunrise" },
   openGraph: {
-    title: "Sunrise 2-Pack Kopen — Ochtend Superfoods & 9 Vitaminen | AmareNL",
+    title: "Sunrise 2-Pack: Ochtend Superfoods | AmareNL",
     description:
       "Amare Sunrise: 22 superfoods, 9 essentiële vitaminen in vloeibare ochtendformule. Direct van Amare — premium kwaliteit.",
     url: "/sunrise",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sunrise 2-Pack Kopen — Ochtend Superfoods & 9 Vitaminen | AmareNL",
+    title: "Sunrise 2-Pack: Ochtend Superfoods | AmareNL",
     description:
       "Amare Sunrise: 22 superfoods, 9 essentiële vitaminen in vloeibare ochtendformule.",
     images: ["/images/og-default.jpg"],

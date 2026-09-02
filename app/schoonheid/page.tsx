@@ -4,7 +4,7 @@ import { generateBreadcrumbSchema, generateFAQSchema, combineSchemas } from "@/l
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Schoonheid & Verzorging — Collageen, Huid & Haar Supplementen | AmareNL",
+  title: "Schoonheid: Collageen, Huid & Haar | AmareNL",
   description: "Stralende huid, sterker haar en nagels van binnenuit. HL5 collageen, Skin to Mind serums en Rootist haarverzorging. Wetenschappelijk onderbouwd, natuurlijke ingrediënten.",
   alternates: { canonical: "/schoonheid" },
   openGraph: { title: "Schoonheid & Verzorging Supplementen | AmareNL", description: "Collageen, huid & haar van binnenuit — HL5, Skin to Mind en Rootist.", url: "/schoonheid", type: "website", siteName: "AmareNL", locale: "nl_NL", images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }] },

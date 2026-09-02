@@ -4,10 +4,10 @@ import { generateBreadcrumbSchema, generateFAQSchema, combineSchemas } from "@/l
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Gewichtsbeheer Supplementen — Metabolisme & Vitaliteit | AmareNL",
+  title: "Gewichtsbeheer: Metabolisme & Vitaliteit | AmareNL",
   description: "Ondersteun je metabolisme en gewichtsbeheer met Amare: FIT20, Origin plantaardige eiwitshake en meer. Natuurlijke metabolisme-ondersteuning zonder crash-diëten.",
   alternates: { canonical: "/gewichtsbeheer" },
-  openGraph: { title: "Gewichtsbeheer Supplementen — Metabolisme & Vitaliteit | AmareNL", description: "Natuurlijke metabolisme-ondersteuning met Amare supplementen.", url: "/gewichtsbeheer", type: "website", siteName: "AmareNL", locale: "nl_NL", images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }] },
+  openGraph: { title: "Gewichtsbeheer: Metabolisme & Vitaliteit | AmareNL", description: "Natuurlijke metabolisme-ondersteuning met Amare supplementen.", url: "/gewichtsbeheer", type: "website", siteName: "AmareNL", locale: "nl_NL", images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }] },
 };
 
 const faqs = [

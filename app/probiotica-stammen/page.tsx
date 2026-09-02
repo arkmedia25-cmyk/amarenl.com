@@ -8,7 +8,7 @@ import {
 } from "@/lib/schema";
 
 export const metadata = {
-  title: "Probiotica Stammen: Complete Gids voor Darmgezondheid (2026) | AmareNL",
+  title: "Probiotica Stammen: Complete Gids (2026) | AmareNL",
   description:
     "Ontdek welke probiotica stammen écht werken. Lactobacillus, Bifidobacterium, Cerebiome® — complete gids met wetenschappelijke onderbouwing, dosering en vergelijking van de beste probiotica supplementen.",
 };

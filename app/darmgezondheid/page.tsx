@@ -4,7 +4,7 @@ import { generateBreadcrumbSchema, generateFAQSchema, combineSchemas } from "@/l
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Darmgezondheid Supplementen — Probiotica & Enzymen | AmareNL",
+  title: "Darmgezondheid: Probiotica & Enzymen | AmareNL",
   description: "Een gezonde darmflora is de basis van je welzijn. Ontdek Amare's probiotica, enzymen en superfoods voor betere spijsvertering en stemming.",
   alternates: { canonical: "/darmgezondheid" },
   openGraph: { title: "Darmgezondheid Supplementen | AmareNL", description: "Probiotica, enzymen & superfoods voor een gezonde darmflora en betere spijsvertering.", url: "/darmgezondheid", type: "website", siteName: "AmareNL", locale: "nl_NL", images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }] },

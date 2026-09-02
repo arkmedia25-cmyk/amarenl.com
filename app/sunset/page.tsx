@@ -10,7 +10,7 @@ import {
 } from "@/lib/schema";
 
 export const metadata = {
-  title: "Sunset Kopen — Omega-3 Visolie Avondformule met D3 | AmareNL",
+  title: "Sunset Kopen: Omega-3 Avondformule | AmareNL",
   description:
     "Amare Sunset: EPA 520 mg, DHA 223 mg per dagdosering met vitamine D3 (6 µg), A, E en astaxanthine 2 mg. Melatoninevrije avondformule voor hart, hersenen en herstel. Direct van Amare.",
 };

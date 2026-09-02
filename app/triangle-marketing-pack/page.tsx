@@ -4,7 +4,7 @@ import { generateProductSchema, generateFAQSchema, generateBreadcrumbSchema, com
 import { ShoppingCart, CheckCircle2, Share2, Gift, Users } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Triangle Marketing Pack — 3x Triangle of Wellness | Word Brand Partner | AmareNL",
+  title: "Triangle Marketing Pack: 3x Triangle | AmareNL",
   description: "Start als Amare Brand Partner met 3 complete Triangle of Wellness Xtreme sets. Ervaar zelf, deel met klanten, verdien commissie. Eenmalig €511,21.",
   alternates: { canonical: "/triangle-marketing-pack" },
   openGraph: { title: "Triangle Marketing Pack — 3x Set | AmareNL", description: "3x Triangle of Wellness Xtreme — jouw Brand Partner startkit. Ervaar, deel & verdien.", url: "/triangle-marketing-pack", siteName: "AmareNL", locale: "nl_NL" },

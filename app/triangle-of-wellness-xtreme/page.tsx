@@ -11,12 +11,12 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Triangle of Wellness Xtreme™ Kopen — Dag & Nacht Supplementen | AmareNL",
+  title: "Triangle of Wellness Xtreme: Dag & Nacht | AmareNL",
   description:
     "Amare's complete dag-nacht systeem: Sunrise (ochtend), Nitro Xtreme (middag) en Sunset (avond). Eén pakket voor energie, focus en herstel. Beste prijs Nederland.",
   alternates: { canonical: "/triangle-of-wellness-xtreme" },
   openGraph: {
-    title: "Triangle of Wellness Xtreme™ Kopen — Dag & Nacht Supplementen | AmareNL",
+    title: "Triangle of Wellness Xtreme: Dag & Nacht | AmareNL",
     description: "Complete dag-nacht systeem: Sunrise, Nitro Xtreme en Sunset in één pakket.",
     url: "/triangle-of-wellness-xtreme",
     type: "website",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Triangle of Wellness Xtreme™ Kopen — Dag & Nacht Supplementen | AmareNL",
+    title: "Triangle of Wellness Xtreme: Dag & Nacht | AmareNL",
     description: "Complete dag-nacht systeem: Sunrise, Nitro Xtreme en Sunset in één pakket.",
     images: ["/images/og-default.jpg"],
   },

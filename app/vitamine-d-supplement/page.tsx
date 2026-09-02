@@ -7,7 +7,7 @@ import { generateFAQSchema, generateBreadcrumbSchema, combineSchemas } from "@/l
 import { Check } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Vitamine D Supplement Kopen? Complete Gids 2026 | AmareNL",
+  title: "Vitamine D Supplement: Gids 2026 | AmareNL",
   description: "Vitamine D supplement kopen? Ontdek het verschil tussen D2 en D3, waarom K2 onmisbaar is.",
   alternates: { canonical: "/vitamine-d-supplement" },
 };

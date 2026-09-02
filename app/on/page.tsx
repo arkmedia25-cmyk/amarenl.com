@@ -6,7 +6,7 @@ import { getProduct } from "@/lib/products";
 import { generateProductSchema, generateFAQSchema, generateBreadcrumbSchema, combineSchemas } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Amare ON Kopen — Natuurlijke Energie Shot met B-Vitamines | AmareNL",
+  title: "Amare ON Kopen: Energie Shot | AmareNL",
   description: "Amare ON: compacte energie shot met guarana-cafeïne en gepatenteerd B-vitaminecomplex. Geen crash, geen nervositeit. Direct van Amare — beste prijs.",
   alternates: { canonical: "/on" },
   openGraph: { title: "Amare ON Kopen — Natuurlijke Energie Shot | AmareNL", description: "Compacte energie shot met B-vitamines — geen crash.", url: "/on", type: "website", siteName: "AmareNL", locale: "nl_NL", images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }] },

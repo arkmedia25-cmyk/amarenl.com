@@ -22,12 +22,12 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Word Amare Brand Partner — Start je Eigen Wellness Business | AmareNL",
+  title: "Word Amare Brand Partner | AmareNL",
   description:
     "Word Brand Partner bij Amare. Kies je startpakket, ervaar de producten zelf, en verdien commissie door premium supplementen te delen. Start vandaag.",
   alternates: { canonical: "https://amarenl.com/partner-worden" },
   openGraph: {
-    title: "Word Amare Brand Partner — Start je Eigen Wellness Business | AmareNL",
+    title: "Word Amare Brand Partner | AmareNL",
     description:
       "Word Brand Partner bij Amare. Kies je startpakket, ervaar de producten zelf, en verdien commissie door premium supplementen te delen.",
     type: "website",

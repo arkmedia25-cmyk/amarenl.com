@@ -8,7 +8,7 @@ import {
 } from "@/lib/schema";
 
 export const metadata = {
-  title: "Darm-Hersen-As: De Wetenschap Achter Je Tweede Brein | AmareNL",
+  title: "Darm-Hersen-As: Je Tweede Brein | AmareNL",
   description:
     "Ontdek hoe je darmen en hersenen communiceren via de nervus vagus. 90% van serotonine wordt in je darm gemaakt. Wetenschap, probiotica en praktische tips voor een gezonde gut-brain axis.",
 };

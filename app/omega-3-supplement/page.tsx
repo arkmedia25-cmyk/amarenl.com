@@ -7,7 +7,7 @@ import { generateFAQSchema, generateBreadcrumbSchema, combineSchemas } from "@/l
 import { Check } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Omega 3 Supplement Kopen? Complete Gids 2026 | AmareNL",
+  title: "Omega 3 Supplement: Gids 2026 | AmareNL",
   description: "Omega 3 supplement kopen? Ontdek verschil visolie vs algenolie, EPA/DHA-verhouding en dosering.",
   alternates: { canonical: "/omega-3-supplement" },
 };

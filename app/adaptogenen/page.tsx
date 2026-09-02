@@ -8,7 +8,7 @@ import {
 } from "@/lib/schema";
 
 export const metadata = {
-  title: "Adaptogenen: De Complete Gids voor Natuurlijke Stressverlichting (2026) | AmareNL",
+  title: "Adaptogenen: Complete Gids (2026) | AmareNL",
   description:
     "Alles over adaptogenen zoals Ashwagandha, Rhodiola en Heilige Basilicum. Complete gids: wat zijn adaptogenen, hoe werken ze, welke passen bij jou en het beste adaptogeen supplement kopen.",
 };

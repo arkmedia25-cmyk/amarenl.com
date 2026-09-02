@@ -10,7 +10,7 @@ import {
 } from "@/lib/schema";
 
 export const metadata = {
-  title: "FIT20 Kopen — Wei + Collageen Eiwitpoeder Spierherstel | AmareNL",
+  title: "FIT20 Kopen: Wei + Collageen Eiwitpoeder | AmareNL",
   description:
     "FIT20 combineert grasgevoerd wei-isolaat met collageenpeptiden voor 20 g eiwit en 21 aminozuren per portie. Met magnesiumcitraat, MCT-olie en enzymen. Vanille smaak. Direct van Amare.",
 };

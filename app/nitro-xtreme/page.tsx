@@ -6,7 +6,7 @@ import { getProduct } from "@/lib/products";
 import { generateProductSchema, generateFAQSchema, generateBreadcrumbSchema, combineSchemas } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Amare Nitro Xtreme Kopen — Noni + B-Vitamines Middagboost | AmareNL",
+  title: "Nitro Xtreme Kopen: Middagboost | AmareNL",
   description: "Nitro Xtreme: nonivruchtenconcentraat met B1, B3, zink, chroom en CoQ10. De middagboost binnen de Triangle of Wellness. Direct van Amare.",
   alternates: { canonical: "/nitro-xtreme" },
   openGraph: { title: "Amare Nitro Xtreme Kopen — Noni Middagboost | AmareNL", description: "Noni + B-vitamines + zink + chroom + CoQ10 voor je middagboost.", url: "/nitro-xtreme", type: "website", siteName: "AmareNL", locale: "nl_NL", images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }] },

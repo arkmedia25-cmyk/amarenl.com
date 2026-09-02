@@ -8,12 +8,12 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Start Je Eigen Wellness Business — Aanvullend Inkomen met Amare | AmareNL",
+  title: "Start Je Eigen Wellness Business | AmareNL",
   description:
     "Wil je extra inkomen naast je baan? Start je eigen wellness business met het Triangle Marketing Pack. Alles wat je nodig hebt in één pakket. Ontdek hoe het werkt.",
   alternates: { canonical: "/start-je-business" },
   openGraph: {
-    title: "Start Je Eigen Wellness Business — Aanvullend Inkomen met Amare | AmareNL",
+    title: "Start Je Eigen Wellness Business | AmareNL",
     description: "Extra inkomen met wellness producten? Begin vandaag nog.",
     url: "/start-je-business",
     type: "website",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Start Je Eigen Wellness Business — Aanvullend Inkomen met Amare | AmareNL",
+    title: "Start Je Eigen Wellness Business | AmareNL",
     description: "Extra inkomen met wellness producten? Begin vandaag nog.",
     images: ["/images/og-default.jpg"],
   },

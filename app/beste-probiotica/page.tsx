@@ -7,7 +7,7 @@ import { generateFAQSchema, generateBreadcrumbSchema, combineSchemas } from "@/l
 import { Check } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Beste Probiotica Supplement? Complete Gids 2026 | AmareNL",
+  title: "Probiotica Supplement: Gids 2026 | AmareNL",
   description: "Beste probiotica supplement kopen? Ontdek welke stammen echt werken voor stemming en spijsvertering.",
   alternates: { canonical: "/beste-probiotica" },
 };

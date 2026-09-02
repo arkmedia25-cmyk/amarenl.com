@@ -5,7 +5,7 @@ import PakketGrid from "./PakketGrid";
 import LeadForm from "./LeadForm";
 
 export const metadata: Metadata = {
-  title: "Word Amare Brand Partner — Start je Eigen Wellness Business | AmareNL",
+  title: "Amare Pakketten: Kies Jouw Startpakket | AmareNL",
   description: "Start als Amare Brand Partner. Verdien commissie met premium supplementen. Laat je gegevens achter voor gratis info & persoonlijk advies. Geen voorraad, geen verzending.",
   alternates: { canonical: "/pakketten" },
 };

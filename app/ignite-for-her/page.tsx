@@ -6,7 +6,7 @@ import { getProduct } from "@/lib/products";
 import { generateProductSchema, generateFAQSchema, generateBreadcrumbSchema, combineSchemas } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Amare Ignite for HER Kopen — Vrouwelijk Welzijn & Balans | AmareNL",
+  title: "Ignite for HER Kopen: Vrouwelijk Welzijn | AmareNL",
   description: "Ignite for HER met Neuravena® (wilde groene haver), shatavari, magnesium en bamboe-silica. Natuurlijke ondersteuning voor vrouwelijk welzijn. Veganistisch.",
   alternates: { canonical: "/ignite-for-her" },
   openGraph: { title: "Amare Ignite for HER Kopen — Vrouwelijk Welzijn | AmareNL", description: "Neuravena®, shatavari, magnesium en silica — voor vrouwelijke balans.", url: "/ignite-for-her", type: "website", siteName: "AmareNL", locale: "nl_NL", images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }] },

@@ -4,7 +4,7 @@ import { generateBreadcrumbSchema, generateFAQSchema, combineSchemas } from "@/l
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Mentale Wellness Supplementen — Focus, Energie & Stemming | AmareNL",
+  title: "Mentale Wellness: Focus & Energie | AmareNL",
   description: "Ontdek Amare's mentale wellness supplementen: Happy Juice Pack, MentaBiotics, EDGE+, Energy+ en meer. Voor focus, stemming en natuurlijke energie. Wetenschappelijk onderbouwd.",
   alternates: { canonical: "/supplementen" },
   openGraph: { title: "Mentale Wellness Supplementen — Focus & Stemming | AmareNL", description: "Happy Juice Pack, MentaBiotics, EDGE+ voor focus, stemming en energie.", url: "/supplementen", type: "website", siteName: "AmareNL", locale: "nl_NL", images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }] },

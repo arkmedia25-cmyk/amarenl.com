@@ -12,12 +12,12 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Amare Origin Kopen — 100% Plantaardige Eiwitshake | AmareNL",
+  title: "Origin Kopen: Plantaardige Eiwitshake | AmareNL",
   description:
     "Amare Origin: 23 g plantaardig eiwit uit erwten, pompoenpit en tuinbonen. Met calcium, magnesium, zink en MCT-olie. 100% vegan, allergeenvrij. Direct van Amare — premium kwaliteit.",
   alternates: { canonical: "/origin" },
   openGraph: {
-    title: "Amare Origin Kopen — 100% Plantaardige Eiwitshake | AmareNL",
+    title: "Origin Kopen: Plantaardige Eiwitshake | AmareNL",
     description: "Amare Origin: 23 g plantaardig eiwit uit erwten, pompoenpit en tuinbonen. 100% vegan, allergeenvrij.",
     url: "/origin",
     type: "website",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Amare Origin Kopen — 100% Plantaardige Eiwitshake | AmareNL",
+    title: "Origin Kopen: Plantaardige Eiwitshake | AmareNL",
     description: "Amare Origin: 23 g plantaardig eiwit uit erwten, pompoenpit en tuinbonen. 100% vegan, allergeenvrij.",
     images: ["/images/og-default.jpg"],
   },

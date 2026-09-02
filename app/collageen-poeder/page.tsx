@@ -7,7 +7,7 @@ import { generateFAQSchema, generateBreadcrumbSchema, combineSchemas } from "@/l
 import { Check } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Collageen Poeder Kopen? Complete Gids 2026 | AmareNL",
+  title: "Collageen Poeder Kopen: Gids 2026 | AmareNL",
   description: "Collageen poeder kopen? Ontdek welk type collageen je nodig hebt voor huid, haar en nagels.",
   alternates: { canonical: "/collageen-poeder" },
 };

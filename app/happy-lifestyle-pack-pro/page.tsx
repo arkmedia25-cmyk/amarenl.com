@@ -4,7 +4,7 @@ import { generateProductSchema, generateFAQSchema, generateBreadcrumbSchema, com
 import { ShoppingCart, CheckCircle2, Rocket, Users, BookOpen, Headphones } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Happy Lifestyle Pack Pro — Volledig Amare Brand Partner Pakket | AmareNL",
+  title: "Happy Lifestyle Pack Pro Kopen | AmareNL",
   description: "Start als Premium Amare Brand Partner met het Pro pakket. Volledig assortiment, hoogste commissie, exclusieve events. Eenmalig €649,64. Direct bestellen bij Amare.",
   alternates: { canonical: "/happy-lifestyle-pack-pro" },
   openGraph: { title: "Happy Lifestyle Pack Pro — Premium Brand Partner | AmareNL", description: "Het meest complete Amare startpakket. Volledig assortiment + hoogste commissie.", url: "/happy-lifestyle-pack-pro", siteName: "AmareNL", locale: "nl_NL" },

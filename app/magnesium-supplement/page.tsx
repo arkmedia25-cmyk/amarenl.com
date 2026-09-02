@@ -7,11 +7,11 @@ import { generateFAQSchema, generateBreadcrumbSchema, combineSchemas } from "@/l
 import { Check, X, Star, Award, Shield, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Magnesium Supplement Kopen? Complete Gids 2026 | AmareNL",
+  title: "Magnesium Supplement: Gids 2026 | AmareNL",
   description: "Magnesium supplement kopen? Ontdek welke vorm (bisglycinaat, citraat, malaat) je nodig hebt voor slaap, stress of spieren. Beste magnesium supplementen vergeleken.",
   alternates: { canonical: "/magnesium-supplement" },
   openGraph: {
-    title: "Magnesium Supplement Kopen? Complete Gids 2026 | AmareNL",
+    title: "Magnesium Supplement: Gids 2026 | AmareNL",
     description: "Ontdek welke magnesium vorm je nodig hebt. Vergelijk bisglycinaat, citraat en malaat. Beste prijs-kwaliteit.",
     url: "/magnesium-supplement",
     type: "website",

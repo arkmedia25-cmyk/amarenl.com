@@ -4,7 +4,7 @@ import { generateBreadcrumbSchema, generateFAQSchema, combineSchemas } from "@/l
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Dagelijkse Essentials — Vitamines, Proteïne & Omega 3 | AmareNL",
+  title: "Essentials: Vitamines, Proteïne & Omega 3 | AmareNL",
   description: "Je dagelijkse basis: Sunrise (22 superfoods + 9 vitaminen), Origin (plantaardig eiwit), Sunset (omega 3) en Nitro Xtreme (noni). Complete dagelijkse voedingsondersteuning.",
   alternates: { canonical: "/essentials" },
   openGraph: { title: "Dagelijkse Essentials Supplementen | AmareNL", description: "Vitamines, proteïne & omega 3 voor je dagelijkse routine.", url: "/essentials", type: "website", siteName: "AmareNL", locale: "nl_NL", images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }] },
