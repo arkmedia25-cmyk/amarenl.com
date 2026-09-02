@@ -801,10 +801,12 @@ Hermes-gateway LaunchAgent bestond ook nog kort, gestopt 28-07-2026.
   gebruikte een group-**slug** (`nl-audience`) i.p.v. de numerieke group-id die de API verwacht — beide
   gefixt in `app/api/subscribe/route.ts` (group-id nu `185294849333790257`), live geverifieerd met een
   test-submit.
-- *GSC trailing-slash duplicate URL's (30-07, **nog NIET opgelost** — geverifieerd 02-09-2026):*
-  `/happy-juice-pack` vs `/happy-juice-pack/` (en vergelijkbare paren) splitsen het ranking-signaal.
-  Geen `trailingSlash`-config in `next.config.mjs`, geen redirect ervoor in `vercel.json`. Fix: kies één
-  vorm, zet die expliciet in `next.config.mjs`, en redirect de andere.
+- *GSC trailing-slash duplicate URL's (30-07-melding, **✅ al opgelost bleek te zijn** — geverifieerd
+  02-09-2026):* live curl-test bevestigt dat elke trailing-slash-variant al een 308-redirect krijgt naar
+  de kanonieke vorm (`/happy-juice-pack/` → `/happy-juice-pack`, idem voor categoriepagina's en
+  `/blogs/nieuws/[slug]/`) — Next.js' default `trailingSlash: false` + Vercel's edge-routing doen dit
+  automatisch, geen config nodig. De GSC-melding van 30-07 was vermoedelijk verouderde crawldata; geen
+  codewijziging nodig, alleen Google laten herindexeren.
 
 **Huidige status per fase:**
 - **Faz 3 (Higgsfield):** betaald Starter Plan actief ($15/mo, workspace "ARK Media"), niet meer
