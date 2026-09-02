@@ -28,6 +28,11 @@
   ],
   "redirects": [
     {
+      "source": "/blogs/nieuws/darmflora-balans-voor-welzijn",
+      "destination": "/blogs/nieuws/darmflora-verbeteren-herstel-spijsvertering-natuurlijk",
+      "permanent": true
+    },
+    {
       "source": "/blogs/nieuws/probiotica-stemming-darm-hersen-connectie-mentabiotics",
       "destination": "/blogs/nieuws/gut-brain-connectie-darmen-stemming-mentaal",
       "permanent": true
