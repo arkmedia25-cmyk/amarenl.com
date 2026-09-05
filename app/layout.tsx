@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   // NOTE: canonical is set per-page via generateMetadata().
   // Do NOT set a blanket canonical here — it would point all pages to homepage.
   verification: {
-    google: "Ss_zLWuGuXmzgf5vuuOzoIE4PEAGskWPIlWwuYgloHE",
+    google: ["Ss_zLWuGuXmzgf5vuuOzoIE4PEAGskWPIlWwuYgloHE", "KceFctyCbz_FMfXcU3C1HDekkNHRVFokIYJ5-wMto1A"],
   },
   openGraph: {
     siteName: "AmareNL",
