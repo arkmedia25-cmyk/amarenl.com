@@ -113,7 +113,7 @@ export default function TriangleOfWellnessXtremePage() {
     priceSubscription: 123.55,
     ratingValue: 4.7,
     ratingCount: 350,
-    affiliateUrl: "https://www.amare.com/2075008/nl-nl/triangle-of-wellness-xtreme",
+    affiliateUrl: "https://www.amare.com/susp_2075008/en-us/shopping/trianglewellnessxtreme",
   });
 
   const combinedSchema = combineSchemas(
