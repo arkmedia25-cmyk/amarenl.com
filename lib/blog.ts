@@ -2203,8 +2203,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "MentaFocus", url: `${AFFILIATE_BASE}/mentafocus`, isInternal: false, price: "~€55/maand", tagline: "Adaptogenen + L-theanine + Alpha-GPC — focus & stressbestendigheid" }
   ],
 "natuurlijke-afvallen-supplementen-metabolisme": [
-    { name: "FIT20", url: "/gewichtsbeheer/", isInternal: true, price: "€48,01/maand", tagline: "QUADbiotic metabolisme formule — natuurlijke vetverbranding & bloedsuikerbalans" },
-    { name: "Amare FIT20", url: `${AFFILIATE_BASE}/fit20`, isInternal: false, price: "€48,01/maand", tagline: "Groene thee + guarana + capsaïcine + probiotica voor metabolisme" },
+    { name: "Amare Restore", url: "/restore", isInternal: true, price: "€29,70/maand", tagline: "9 plantaardige stoffen, 5 bacteriestammen en 5 spijsverteringsenzymen — ondersteunt spijsvertering en stofwisseling" },
     { name: "EDGE+", url: `${AFFILIATE_BASE}/amareedge-plus-mango`, isInternal: false, price: "€77,28/maand", tagline: "Nootropic voor focus & energie — ondersteunt consistente training" }
   ],
 "beste-collageen-supplement-2026-werkt-echt": [
@@ -2213,10 +2212,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "NeuCollagen", url: `${AFFILIATE_BASE}/neucollagen`, isInternal: false, price: "~€90/maand", tagline: "6-dimensionaal collageen — huid, gewrichten, spieren & cortisolbalans" }
   ],
   "beste-eiwitpoeder-2026-plantaardig-wei-vergelijking": [
-    { name: "Origin", url: "/origin", isInternal: true, price: "€63,80/maand", tagline: "23g plantaardig eiwit + MCT + 26 micronutriënten — vegan maaltijdshake" },
-    { name: "Amare Origin", url: `${AFFILIATE_BASE}/kyani-origin-chocolate`, isInternal: false, price: "€63,80/maand", tagline: "23g erwten-rijst eiwit + 7g vezels + 26 micronutriënten — gefermenteerd" },
-    { name: "FIT20", url: "/gewichtsbeheer/", isInternal: true, price: "€48,01/maand", tagline: "Wei-isolaat + QUADbiotic + thermogene formule — eiwit & metabolisme" },
-    { name: "Amare FIT20", url: `${AFFILIATE_BASE}/fit20`, isInternal: false, price: "€48,01/maand", tagline: "20g wei-eiwit + groene thee + guarana + capsaïcine + L-carnitine" }
+    { name: "Amare Restore", url: "/restore", isInternal: true, price: "€29,70/maand", tagline: "9 plantaardige stoffen, 5 bacteriestammen en 5 spijsverteringsenzymen — ondersteunt spijsvertering en stofwisseling" }
   ],
   "happy-juice-pack-vs-losse-supplementen-vergelijken": [
     { name: "Happy Juice Pack", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — MentaBiotics + Energy+ + EDGE+ in één bundel" },
@@ -2229,8 +2225,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "HL5 2-Pack", url: `${AFFILIATE_BASE}/hl5-peach-2pack`, isInternal: false, price: "€130.42/maand", tagline: "2 maanden collageen — €65,21 per maand, beste waarde" },
   ],
   "plantaardige-proteine-shake-kopen-vergelijken": [
-    { name: "Origin", url: "/origin", isInternal: true, price: "€40/maand", tagline: "23g plantaardig eiwit + MCT — vegan maaltijdshake" },
-    { name: "Amare Origin", url: `${AFFILIATE_BASE}/kyani-origin-chocolate`, isInternal: false, price: "€40/maand", tagline: "23g erwten-rijst eiwit + 7g vezels + 26 micronutriënten" },
+    { name: "Amare Restore", url: "/restore", isInternal: true, price: "€29,70/maand", tagline: "9 plantaardige stoffen, 5 bacteriestammen en 5 spijsverteringsenzymen — ondersteunt spijsvertering en stofwisseling" },
   ],
   "supplement-routine-ochtend-timing-schema": [
     { name: "Triangle of Wellness", url: `${AFFILIATE_BASE}/triangle-of-wellness-xtreme`, isInternal: false, price: "€123.55/maand", tagline: "Sunrise + Nitro Xtreme + Sunset — complete dag-nacht routine" },
@@ -2245,9 +2240,8 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — probiotica specifiek voor de darm-hersen-as" },
   ],
   "hormoonbalans-supplement-vrouwen-levensfase-ondersteuning": [
-    { name: "Ignite for HER", url: `${AFFILIATE_BASE}/ignite-for-her`, isInternal: false, price: "€77.28/maand", tagline: "Adaptogenen + maca + magnesium — vrouwelijk welzijn & balans" },
-    { name: "Amare Ignite for HER", url: `${AFFILIATE_BASE}/ignite-for-her`, isInternal: false, price: "€77.28/maand", tagline: "Ashwagandha + maca + B6 — specifiek voor hormonale balans" },
     { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Omega-3 + D3 + K2 — ondersteunt ontstekingsbalans & slaap" },
+    { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71,83/maand", tagline: "Cerebiome® blend — probiotica voor stemming en stressveerkracht" },
   ],
   "focus-supplement-natuurlijke-nootropics-concentratie": [
     { name: "Amare EDGE+", url: `${AFFILIATE_BASE}/amareedge-plus-mango`, isInternal: false, price: "€77.28/maand", tagline: "Plantaardig nootropicum — Alpha-GPC, L-theanine, bacopa & rhodiola" },
@@ -2304,8 +2298,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "Triangle of Wellness Xtreme", url: `${AFFILIATE_BASE}/triangle-of-wellness-xtreme`, isInternal: false, price: "€123.55/maand", tagline: "Sunrise + Nitro Xtreme + Sunset — complete dag-nacht energie" },
   ],
   "mct-olie-energie-gewicht-supplement": [
-    { name: "Origin", url: "/origin", isInternal: true, price: "€40/maand", tagline: "23g plantaardig eiwit + MCT — vegan shake" },
-    { name: "Amare Origin", url: "/origin", isInternal: true, price: "€40/maand", tagline: "23g plantaardig eiwit + MCT — vegan shake" },
+    { name: "Amare Restore", url: "/restore", isInternal: true, price: "€29,70/maand", tagline: "9 plantaardige stoffen, 5 bacteriestammen en 5 spijsverteringsenzymen — ondersteunt spijsvertering en stofwisseling" }
   ],
   "magnesium-onmisbaar-mineraal-rust-energie-spierherstel": [
     { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Magnesium 56,25mg + Cerebiome® blend voor ontspanning & slaap" },
@@ -2326,8 +2319,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
   "calcium-botten-supplement-nederland": [
     { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Calcium + D3 + K2 + Omega-3 — complete botformule" },
     { name: "Amare Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Calcium + D3 + K2 + Omega-3 — complete botformule" },
-    { name: "Origin", url: "/origin", isInternal: true, price: "€40/maand", tagline: "Plantaardig eiwit + calcium — vegan shake" },
-    { name: "Amare Origin", url: "/origin", isInternal: true, price: "€40/maand", tagline: "Plantaardig eiwit + calcium — vegan shake" },
+
   ],
   "zink-testosteron-supplement-nederland": [
     { name: "Nitro Xtreme", url: `${AFFILIATE_BASE}/nitro-xtreme`, isInternal: false, price: "€80/maand", tagline: "Nitraten + mineralen voor focus, energie & hormonale balans" },

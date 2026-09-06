@@ -28,6 +28,41 @@
   ],
   "redirects": [
     {
+      "source": "/fit20",
+      "destination": "/restore",
+      "permanent": true
+    },
+    {
+      "source": "/fit20/",
+      "destination": "/restore",
+      "permanent": true
+    },
+    {
+      "source": "/origin",
+      "destination": "/restore",
+      "permanent": true
+    },
+    {
+      "source": "/origin/",
+      "destination": "/restore",
+      "permanent": true
+    },
+    {
+      "source": "/ignite-for-her",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ignite-for-her/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/libido-na-je-35e-oorzaken-ignite-her",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/start-je-business",
       "destination": "/triangle-marketing-pack",
       "permanent": true
@@ -384,12 +419,12 @@
     },
     {
       "source": "/ignite-for-him/",
-      "destination": "/ignite-for-her",
+      "destination": "/producten/ignite-him",
       "permanent": true
     },
     {
       "source": "/ignite-for-him",
-      "destination": "/ignite-for-her",
+      "destination": "/producten/ignite-him",
       "permanent": true
     },
     {
@@ -464,12 +499,12 @@
     },
     {
       "source": "/origin-chocolate/",
-      "destination": "/origin",
+      "destination": "/restore",
       "permanent": true
     },
     {
       "source": "/origin-chocolate",
-      "destination": "/origin",
+      "destination": "/restore",
       "permanent": true
     },
     {
@@ -724,12 +759,12 @@
     },
     {
       "source": "/fit20-2pack/",
-      "destination": "/fit20",
+      "destination": "/restore",
       "permanent": true
     },
     {
       "source": "/fit20-2pack",
-      "destination": "/fit20",
+      "destination": "/restore",
       "permanent": true
     },
     {
@@ -879,12 +914,12 @@
     },
     {
       "source": "/products/amare-ignite-for-her",
-      "destination": "/ignite-for-her",
+      "destination": "/",
       "permanent": true
     },
     {
       "source": "/products/amare-ignite-for-her/",
-      "destination": "/ignite-for-her",
+      "destination": "/",
       "permanent": true
     },
     {
@@ -959,7 +994,7 @@
     },
     {
       "source": "/blogs/nieuws/fit20-whey-isolaat-collageen-spierherstel-review",
-      "destination": "/fit20",
+      "destination": "/restore",
       "permanent": true
     },
     {

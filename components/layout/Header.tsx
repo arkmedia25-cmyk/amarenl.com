@@ -14,9 +14,7 @@ const PRODUCT_PAGE_SLUGS: Record<string, string> = {
   "/hl5": "hl5-peach",
   "/mentabiotics": "mentabiotics",
   "/energy": "energy",
-  "/origin": "origin",
   "/restore": "restore",
-  "/fit20": "fit20",
   "/sunset": "sunset",
   "/triangle-of-wellness-xtreme": "triangle-of-wellness-xtreme",
 };
@@ -50,13 +48,10 @@ const productLinks = [
   ]},
   { label: "Schoonheid", items: [
     ["HL5 Collageen", "/hl5"],
-    ["Ignite for HER", "/ignite-for-her"],
   ]},
   { label: "Dagelijkse Essentials", items: [
     ["Sunrise", "/sunrise"],
     ["Sunset", "/sunset"],
-    ["Origin", "/origin"],
-    ["FIT20", "/fit20"],
   ]},
   { label: "Alle Producten", items: [
     ["→ Bekijk alle producten", "/essentials/"],
@@ -176,7 +171,7 @@ export default function Header() {
             <div className="border-b border-[var(--color-border)] pb-4">
               <span className="text-sm font-bold text-[var(--color-text-muted)] uppercase tracking-wider">Populaire Producten</span>
               <div className="mt-3 space-y-3">
-                {["Happy Juice Pack","MentaBiotics","EDGE+","Energy+","HL5 Collageen","Triangle of Wellness Xtreme","Ignite for HER","Amare ON","Restore","Sunrise"].map(name => (
+                {["Happy Juice Pack","MentaBiotics","EDGE+","Energy+","HL5 Collageen","Triangle of Wellness Xtreme","Amare ON","Restore","Sunrise"].map(name => (
                   <Link key={name} href={productLinks.flatMap(g => g.items).find(([l]) => l === name)?.[1] || "/"} onClick={() => setIsMenuOpen(false)} className="block text-md font-bold text-[var(--color-text)] hover:text-[var(--color-primary)]">
                     {name}
                   </Link>
