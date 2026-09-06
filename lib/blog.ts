@@ -479,34 +479,18 @@ export const blogPosts: BlogPost[] = [
       <p><strong>Vitamine D3 + K2 — voor je botten en immuunsysteem.</strong> Oestrogeen beschermt je botdichtheid; als het daalt, neemt het risico op osteoporose toe. Vitamine D3 verbetert de calciumopname, en K2 stuurt dat calcium naar je botten in plaats van je bloedvaten. Deze combinatie is essentieel voor vrouwen vanaf 40 — niet alleen voor botten, maar ook voor het immuunsysteem, dat eveneens door de menopauze wordt beïnvloed.</p>
       <p><strong>Adaptogenen — voor stressbestendigheid en hormonale balans.</strong> Adaptogenen zijn plantaardige stoffen die je lichaam helpen zich aan te passen aan stress — fysiek, chemisch of biologisch. Ashwagandha, rhodiola en schisandra zijn de bekendste. Tijdens de menopauze nemen je bijnieren een deel van de oestrogeenproductie over — maar als je bijnieren uitgeput zijn door chronische stress, kunnen ze die taak niet aan. Adaptogenen ondersteunen de bijnierfunctie en helpen je stressrespons te reguleren, wat indirect je hormonale balans ten goede komt.</p>
       <p><strong>Shatavari en fenegriek — Ayurvedische kruiden met een lange traditie.</strong> Shatavari (Asparagus racemosus) wordt in de Ayurveda al duizenden jaren gebruikt voor vrouwelijk welzijn — de naam betekent letterlijk "zij die honderd echtgenoten kan hebben", een verwijzing naar vitaliteit en levenskracht. Fenegriek staat bekend om zijn ondersteuning van de vrouwelijke balans. Beide zijn adaptogeen-achtig: ze helpen je lichaam zich aan te passen, zonder zelf hormonen te bevatten.</p>
-      <h2>Ignite for HER — specifiek samengesteld voor deze levensfase</h2>
-      <p><strong>Amare Ignite for HER</strong> combineert de belangrijkste van bovenstaande nutriënten in één formule. De kern is een synergetische blend van:</p>
-      <ul>
-      <li><strong>Neuravena® (wilde groene haver, 300 mg)</strong> — een gepatenteerd extract dat cognitieve functie en mentale helderheid ondersteunt, direct relevant voor de "brain fog" die veel vrouwen in de overgang ervaren.</li>
-      <li><strong>Shatavari 5:1 extract (40 mg = 200 mg kruidenequivalent)</strong> — voor traditionele vrouwelijke balans.</li>
-      <li><strong>Fenegriekzaad 6:1 extract (25 mg = 150 mg kruidenequivalent)</strong> — complementair aan shatavari voor algeheel vrouwelijk welzijn.</li>
-      <li><strong>Magnesium (60 mg, 16% RI)</strong> — ter ondersteuning van vermindering van vermoeidheid en normale spierfunctie.</li>
-      <li><strong>Bamboe-extract met silica (20 mg)</strong> — voor huid, haar en nagels — weefsels die tijdens de menopauze verandering ondergaan door de daling van collageen en oestrogeen.</li>
-      <li><strong>Citroenmelisse</strong> — voor natuurlijke ontspanning en kalmering van het zenuwstelsel.</li>
-      </ul>
-      <p>De dosering is 2 capsules per dag met water. De formule is vegan, bevat geen hormonen, en is geschikt vanaf 12 jaar — al is de primaire doelgroep vrouwen in de perimenopauze en menopauze. De eerste effecten zijn doorgaans merkbaar na 3 tot 4 weken consistent gebruik: subtiele verbetering in energieniveau, mentale helderheid en stressbestendigheid.</p>
-      <h2>Combineren met andere supplementen voor optimaal resultaat</h2>
-      <p>Eén supplement is zelden het hele antwoord — het lichaam is een systeem, en de menopauze raakt meerdere systemen tegelijk. Twee combinaties die elkaar goed aanvullen:</p>
-      <p><strong>Ignite for HER + Sunset — de dagelijkse aanpak voor overgang en slaap.</strong> Sunset combineert omega-3 (EPA/DHA) met vitamine D3, K2 en magnesium in een vetbasis — ideaal voor de avond. Waar Ignite for HER zich richt op vrouwelijk welzijn overdag (energie, mentale helderheid, adaptogenen), ondersteunt Sunset de slaapkwaliteit, botgezondheid en ontstekingsbalans 's nachts. Voor vrouwen in de overgang is dit een bijzonder doordachte combinatie: de omega-3 in Sunset helpt bij de laaggradige ontsteking die door oestrogeendaling toeneemt, en de magnesium + D3 + K2 combinatie ondersteunt precies de systemen die in de overgang onder druk staan.</p>
-      <p><strong>Ignite for HER + HL5 — de schoonheidsroute.</strong> HL5 levert 5 gram gehydrolyseerd collageen Type 1&3 per dag. Tijdens de menopauze daalt de lichaamseigen collageenaanmaak met ongeveer 30% in de eerste 5 jaar na de menopauze — dit verklaart de versnelde huidveroudering, dunnere haren en brozere nagels die veel vrouwen rapporteren. Ignite for HER ondersteunt het systeem, HL5 levert de bouwstenen — samen dekkend ze de twee kanten van menopauzegerelateerde schoonheidsveranderingen.</p>
+      <h2>Combineren met supplementen voor optimaal resultaat</h2>
+      <p>Eén supplement is zelden het hele antwoord — het lichaam is een systeem, en de menopauze raakt meerdere systemen tegelijk. Een combinatie die elkaar goed aanvult:</p>
+      <p><strong>Sunset + HL5 — de dagelijkse aanpak voor overgang en schoonheid.</strong> Sunset combineert omega-3 (EPA/DHA) met vitamine D3, A, E en astaxanthine in een vetbasis — ideaal voor de avond, ter ondersteuning van botgezondheid en ontstekingsbalans. HL5 levert 5 gram gehydrolyseerd collageen Type 1&3 per dag: tijdens de menopauze daalt de lichaamseigen collageenaanmaak met ongeveer 30% in de eerste 5 jaar na de menopauze — dit verklaart de versnelde huidveroudering, dunnere haren en brozere nagels die veel vrouwen rapporteren. Samen dekken deze twee producten de omega-3/botgezondheid-kant en de schoonheidskant van menopauzegerelateerde veranderingen.</p>
       <h2>Veelgestelde vragen</h2>
-      <p><strong>Bevat Ignite for HER hormonen?</strong></p>
-      <p>Nee. Ignite for HER bevat geen hormonen. De formule gebruikt plantaardige extracten zoals shatavari en fenegriek, adaptogenen, en magnesium om het vrouwelijk lichaam te ondersteunen tijdens hormonale transitie — zonder zelf hormonen toe te voegen. Dit maakt het geschikt voor vrouwen die geen hormoontherapie willen of kunnen gebruiken.</p>
       <p><strong>Vanaf welke leeftijd heeft een menopauze supplement zin?</strong></p>
       <p>De perimenopauze kan al vanaf 40 jaar beginnen. Supplementen die botgezondheid, stressbestendigheid en energie ondersteunen, hebben al zin in deze aanloopfase — niet pas na de laatste menstruatie. Vitamine D3, omega-3 en magnesium zijn voor vrijwel elke vrouw boven de 40 relevant, ongeacht of er al duidelijke overgangsklachten zijn.</p>
-      <p><strong>Kan ik Ignite for HER combineren met mijn bestaande supplementen?</strong></p>
-      <p>Ja, Ignite for HER combineert goed met de meeste supplementen. Let op de totale magnesiuminname als je al een apart magnesiumsupplement neemt (Ignite for HER bevat 60 mg per 2 capsules). De combinatie met Sunset of HL5 is veilig en synergetisch. Raadpleeg bij twijfel of bij gebruik van medicatie altijd een arts.</p>
       <p><strong>Hoe snel werken supplementen bij overgangsklachten?</strong></p>
       <p>Supplementen zijn geen quick fix. Adaptogenen en kruiden zoals shatavari hebben 3 tot 4 weken consistent gebruik nodig voordat je subtiele verbetering merkt in energieniveau en stressbestendigheid. Voor magnesium is het effect op spierontspanning en slaap vaak sneller merkbaar — binnen 1 tot 2 weken. Wees geduldig en houd een eenvoudig dagboek bij: noteer je energieniveau, opvliegers, stemming en slaapkwaliteit op een schaal van 1 tot 5, en bekijk na 4 tot 6 weken het patroon.</p>
       <h2>Conclusie</h2>
       <p>De menopauze is een natuurlijke transitie, geen aandoening die "behandeld" moet worden. Maar de klachten die ermee gepaard gaan — opvliegers, vermoeidheid, stemmingsdaling, brain fog, gewrichtspijn — zijn reëel en kunnen je kwaliteit van leven significant beïnvloeden.</p>
       <p>Supplementen bieden een natuurlijke ondersteuningsroute, naast voeding en leefstijl. Magnesium voor vermoeidheid en slaap, omega-3 voor ontstekingsbalans en stemming, vitamine D3 + K2 voor botgezondheid, en adaptogenen + Ayurvedische kruiden voor stressbestendigheid en hormonale balans — samen vormen ze een compleet pakket dat je lichaam ondersteunt tijdens deze transitie.</p>
-      <p><strong>Amare Ignite for HER</strong> bundelt de kern van deze nutriënten in één dagelijkse formule: Neuravena® wilde groene haver voor cognitie, shatavari en fenegriek voor vrouwelijk welzijn, magnesium en silica voor vermoeidheid en huid — vegan, zonder hormonen, specifiek samengesteld voor de vrouwelijke levensfasen. Voor een complete aanpak combineer je het met Sunset (omega-3 + D3 + K2 voor slaap en botten) en/of HL5 (collageen voor huid, haar en nagels).</p>
+      <p><strong>Amare Sunset</strong> en <strong>Amare HL5</strong> dekken samen een deel van deze basis: Sunset voor omega-3, vitamine D3, A en E ter ondersteuning van botgezondheid en ontstekingsbalans, en HL5 voor de collageenbouwstenen die tijdens de menopauze sneller afnemen.</p>
       <p>*Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij aanhoudende overgangsklachten altijd een arts — supplementen zijn een aanvulling op, geen vervanging van, medisch advies.*</p>
     `,
     image: "/images/blog/menopauze-supplement-overgang.jpg"
@@ -778,7 +762,6 @@ export const blogPosts: BlogPost[] = [
         <li><strong>Maca (Lepidium meyenii, 1,5-3 g/dag):</strong> Een knolgewas uit de Peruaanse Andes dat via de hypothalamus-hypofyse-as de eigen hormoonproductie ondersteunt. Studies tonen verbetering in libido, energie en algemeen welzijn bij perimenopauzale en postmenopauzale vrouwen, zonder directe invloed op oestrogeenspiegels — maca werkt regulerend, niet stimulerend.</li>
         <li><strong>Vitamine D3:</strong> Vitamine D-receptoren bevinden zich in bijna elk weefsel, inclusief de eierstokken en de hypofyse. Een optimale D3-status wordt geassocieerd met een gezondere ovariële functie en minder ernstige PMS-klachten.</li>
       </ul>
-      <p><strong>Amare Ignite for HER</strong> combineert ashwagandha, maca, magnesium, B6 en een spectrum aan adaptogenen en antioxidanten in één formule, specifiek samengesteld voor vrouwelijk welzijn en hormonale balans. In plaats van vijf losse potjes heb je één product dat inspeelt op de meerdere assen van vrouwelijke hormoonhuishouding: stress (HPA-as), energie (schildklierondersteuning via micronutriënten) en cyclus (via adaptogene kruiden).</p>
 
       <h2>Hormoonbalans in verschillende levensfases</h2>
       <p><strong>20-35 jaar — De reproductieve jaren:</strong> De hormooncyclus zou regelmatig moeten zijn (21-35 dagen) met een voorspelbaar patroon. De grootste verstoorders in deze fase zijn stress (cortisol kaapt de hormoonproductie), anticonceptie (de pil onderdrukt de eigen hormoonproductie), en extreem sporten in combinatie met onvoldoende calorie-inname.</p>
@@ -796,7 +779,7 @@ export const blogPosts: BlogPost[] = [
 
       <h2>Conclusie</h2>
       <p>Je hormonen zijn geen geïsoleerd systeem dat je "fixt" met één supplement. Het is een ecologie — een netwerk van klieren, signaalstoffen, receptoren en terugkoppelmechanismen dat reageert op alles wat je doet: wat je eet, hoe je slaapt, hoeveel stress je ervaart, of je beweegt of juist overbelast.</p>
-      <p>De aanpak die werkt, is dan ook meervoudig. Begin met voeding en leefstijl: voldoende gezonde vetten als bouwstenen, stabiele bloedsuikerspiegel, bescherm je slaap. Voeg daarna gerichte supplementen toe: magnesium en B6 voor de basis, ashwagandha en maca voor adaptogene ondersteuning, omega-3 voor ontstekingsbalans. Een formule zoals <strong>Amare Ignite for HER</strong> die meerdere van deze ingrediënten in één product bundelt, kan het verschil maken tussen een vol supplementenkastje en een routine die je daadwerkelijk volhoudt.</p>
+      <p>De aanpak die werkt, is dan ook meervoudig. Begin met voeding en leefstijl: voldoende gezonde vetten als bouwstenen, stabiele bloedsuikerspiegel, bescherm je slaap. Voeg daarna gerichte supplementen toe: magnesium en B6 voor de basis, ashwagandha en maca voor adaptogene ondersteuning, en omega-3 (Sunset) voor ontstekingsbalans.</p>
       <p>Tot slot: je hormonen zijn je vijand niet. Ze zijn je interne weersysteem — soms stormachtig, soms zonnig, altijd in beweging. Het doel is niet om het weer te elimineren, maar om te leren navigeren.</p>
       <p><em>Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij aanhoudende gezondheidsklachten altijd een arts. Dit product is niet geschikt voor zwangere vrouwen, borstvoeding gevende vrouwen en kinderen jonger dan 18 jaar.</em></p>
     `,
@@ -915,7 +898,7 @@ export const blogPosts: BlogPost[] = [
       <p>Biotine is het meest bekende haarsupplement — en tegelijk het meest verkeerd begrepen. Biotine is een in water oplosbare B-vitamine (B8) die als co-enzym betrokken is bij de aanmaak van keratine, het structurele eiwit waar haar en nagels uit bestaan.</p>
       <p>De wetenschappelijke realiteit: <strong>biotine werkt uitstekend bij een aangetoond biotinetekort</strong>, maar klinische studies laten geen significant voordeel zien voor mensen met een normale biotinestatus en gezond haar. De meeste mensen met een gevarieerd dieet krijgen voldoende biotine binnen — het zit in eieren, noten, zaden, avocado en zoete aardappel.</p>
       <p>Wanneer kan biotine wél zinvol zijn? Tijdens zwangerschap en borstvoeding (verhoogde behoefte), bij langdurig gebruik van bepaalde anti-epileptica, bij mensen met een antibioticakuur die de darmbacteriën verstoort (een deel van de biotine wordt door darmbacteriën geproduceerd), en bij broze nagels — het enige gebied waar biotinesuppletie consistent positieve resultaten laat zien in klinisch onderzoek.</p>
-      <p>De les: biotine is geen wondermiddel voor iedere vrouw met haaruitval, maar een essentieel puzzelstukje in specifieke situaties. Een kwalitatief multinutriënt zoals <strong>Amare VitaGBX</strong> bevat biotine in combinatie met 50+ andere voedingsstoffen in fysiologisch zinvolle doseringen — een betere benadering dan hooggedoseerde losse biotine.</p>
+      <p>De les: biotine is geen wondermiddel voor iedere vrouw met haaruitval, maar een essentieel puzzelstukje in specifieke situaties. <strong>Amare Sunrise</strong> bevat 150 µg biotine (300% RI) in combinatie met 22 superfoods en 8 andere B-vitamines in fysiologisch zinvolle doseringen — een bredere benadering dan hooggedoseerde losse biotine.</p>
 
       <h2>Collageen en haaruitval: wat is de link?</h2>
       <p>Collageen staat bekend als huid- en gewrichtssupplement, maar de connectie met haar is minstens zo belangrijk — en onderbelicht.</p>
@@ -940,7 +923,7 @@ export const blogPosts: BlogPost[] = [
         <li><strong>Saw palmetto:</strong> Wordt ingezet vanwege anti-DHT-werking, maar klinische studies zijn klein en van matige kwaliteit.</li>
         <li><strong>Losse keratinesupplementen:</strong> Keratine is een eiwit dat in de maag wordt afgebroken zoals elk ander eiwit — je lichaam bouwt er niet direct haar van. Inname van de aminozuurbouwstenen (via collageen of voedingseiwit) is effectiever.</li>
       </ul>
-      <p>Een supplement dat meerdere van deze bewezen nutriënten combineert is vaak praktischer en kosteneffectiever dan vijf losse potjes. <strong>Amare HL5</strong> levert 5g gehydrolyseerd rundercollageen per portie ter ondersteuning van bindweefsel rond hoofdhuid en haarzakjes; voor de micronutriëntenkant (ijzer, zink, biotine, D3) dekt <strong>Amare VitaGBX</strong> met 50+ voedingsstoffen de basis. Beide producten kun je combineren in één ochtendroutine.</p>
+      <p>Een supplement dat meerdere van deze bewezen nutriënten combineert is vaak praktischer en kosteneffectiever dan vijf losse potjes. <strong>Amare HL5</strong> levert 5g gehydrolyseerd rundercollageen per portie ter ondersteuning van bindweefsel rond hoofdhuid en haarzakjes; voor biotine en de overige B-vitamines dekt <strong>Amare Sunrise</strong> met 22 superfoods de basis. IJzer, zink en vitamine D check je het best los via bloedonderzoek, aangezien overdosering bij deze mineralen schadelijk kan zijn. Beide producten kun je combineren in één ochtendroutine.</p>
 
       <h2>Leefstijltips naast supplementen</h2>
       <p>Supplementen zijn ondersteunend — de basis ligt bij je dagelijkse gewoontes:</p>
@@ -957,13 +940,13 @@ export const blogPosts: BlogPost[] = [
       <h3>Hoe weet ik of mijn haaruitval tijdelijk is of blijvend?</h3>
       <p>Tijdelijk haarverlies (telogeen effluvium) is meestal diffuus — je verliest over het hele hoofd gelijkmatig haar, vaak twee tot drie maanden na een trigger zoals stress of een operatie. Blijvend haarverlies (androgenetische alopecia) begint vaak met een verwijding van de middenscheiding en dunner wordend haar op de kruin. Het beste antwoord krijg je via een tricholoog of dermatoloog, die met een trichogram (haarwortelonderzoek) en bloedonderzoek de oorzaak kan vaststellen. Bij twijfel altijd eerst bloed laten prikken voordat je supplementen gaat nemen.</p>
       <h3>Kan ik meerdere haarsupplementen tegelijk nemen?</h3>
-      <p>Ja, en dat is vaak logischer dan één enkel nutriënt. Collageen, ijzer, zink en vitamine D werken via verschillende mechanismen en kunnen elkaar aanvullen. Collageen (HL5) voor de bouwstenen van keratine en hoofdhuidstructuur; een multinutriënt (VitaGBX) voor de micronutriëntenbasis; en een omega-3 supplement voor hoofdhuidgezondheid en ontstekingsremming. Begin niet met alles tegelijk — voeg één voor één toe om te zien hoe je lichaam reageert. En bespreek ijzersuppletie altijd met je arts: een teveel aan ijzer kan schadelijk zijn.</p>
+      <p>Ja, en dat is vaak logischer dan één enkel nutriënt. Collageen, ijzer, zink en vitamine D werken via verschillende mechanismen en kunnen elkaar aanvullen. Collageen (HL5) voor de bouwstenen van keratine en hoofdhuidstructuur; Sunrise voor biotine en de overige B-vitamines; en een omega-3 supplement (Sunset) voor hoofdhuidgezondheid en ontstekingsremming. Begin niet met alles tegelijk — voeg één voor één toe om te zien hoe je lichaam reageert. En bespreek ijzersuppletie altijd met je arts: een teveel aan ijzer kan schadelijk zijn.</p>
       <h3>Hoelang duurt het voordat supplementen effect hebben op mijn haar?</h3>
       <p>Haar groeit gemiddeld 1 tot 1,5 centimeter per maand. Een supplement kan alleen invloed hebben op haar dat nu in de groeifase zit en over zes tot acht weken uit de hoofdhuid komt. De eerste zichtbare resultaten — minder haarverlies in de borstel, nieuwe babyhaartjes bij de haarlijn — kunnen na 8 tot 12 weken merkbaar zijn. Voor significante verbetering in haardikte en volume reken je op minimaal 3 tot 6 maanden consistente suppletie. Haargroei heeft geduld nodig — maar het is een van de weinige gezondheidsdoelen waar consistentie betrouwbaar wordt beloond.</p>
 
       <h2>Conclusie</h2>
       <p>Haaruitval bij vrouwen is geen kwestie van pech of aanleg alleen — in veel gevallen is het een signaal van je lichaam dat de voedingstoestand, hormoonbalans of stresshuishouding aandacht vraagt. De aanpak die het beste werkt, is tweeledig: de onderliggende oorzaak identificeren én je haar van binnenuit ondersteunen met de juiste voedingsstoffen.</p>
-      <p>De meest onderbouwde suppletiestrategie omvat collageenpeptiden voor keratinebouwstenen en hoofdhuidstructuur, een kwalitatief multinutriënt voor de basis aan vitaminen en mineralen (inclusief ijzer, zink en D3), en omega-3 voor een gezonde hoofdhuid. <strong>Amare HL5</strong> is een vloeibaar collageensupplement met 5 gram gehydrolyseerd collageen type 1 en 3 per portie; in combinatie met <strong>Amare VitaGBX</strong> voor de micronutriëntenbasis heb je de kern in twee producten.</p>
+      <p>De meest onderbouwde suppletiestrategie omvat collageenpeptiden voor keratinebouwstenen en hoofdhuidstructuur, voldoende B-vitamines waaronder biotine, en omega-3 voor een gezonde hoofdhuid — ijzer, zink en vitamine D suppleer je het best pas na bloedonderzoek. <strong>Amare HL5</strong> is een vloeibaar collageensupplement met 5 gram gehydrolyseerd collageen type 1 en 3 per portie; in combinatie met <strong>Amare Sunrise</strong> (biotine + 8 andere B-vitamines) heb je de kern in twee producten.</p>
       <p>Dat gezegd hebbende: bij aanhoudend, plotseling of pleksgewijs haarverlies is een bezoek aan de huisarts of dermatoloog de eerste stap. Supplementen ondersteunen — een serieuze medische oorzaak pak je er niet mee aan.</p>
       <p><em>Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij aanhoudende gezondheidsklachten of haaruitval altijd een arts. Dit product is niet geschikt voor zwangere vrouwen, borstvoeding gevende vrouwen en kinderen jonger dan 18 jaar.</em></p>
     `,
@@ -1734,9 +1717,6 @@ export const blogPosts: BlogPost[] = [
         <li>Alles uit de Basic bundel</li>
         <li><strong>Triangle of Wellness (Sunrise + Nitro Xtreme + Sunset):</strong> De complete dagcyclus voor energie, focus en slaap</li>
         <li><strong>NeuCollagen:</strong> 6-dimensioneel collageen voor huid, haar, nagels, gewrichten, spieren én cortisolbalans</li>
-        <li><strong>VitaGBX:</strong> Complete multivitamine met 50+ voedingsstoffen</li>
-        <li><strong>OmMega:</strong> Omega-3 uit algenolie voor hart, brein en gewrichten</li>
-        <li><strong>GBX SuperFood + SeedFiber:</strong> Superfoods en vezels voor darmgezondheid</li>
       </ul>
       <p>De Pro bundel kost ongeveer <strong>€649,64 per maand</strong> op abonnementsbasis — een flinke investering, maar per product aanzienlijk voordeliger dan los kopen. Voor de echte wellness-liefhebber die alles uit zijn dagelijkse routine wil halen.</p>
 
@@ -1752,7 +1732,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Basic vs Pro: welke kies je?</h2>
       <p>De keuze tussen Basic en Pro hangt af van drie factoren: je budget, je doelen en je ervaring met supplementen.</p>
       <p><strong>Kies Basic als:</strong> je net begint met Amare en de kernproducten wilt ervaren. De Basic bundel dekt 80% van wat de meeste mensen nodig hebben — energie, focus, stemming en basisvoeding — voor een toegankelijk maandbedrag.</p>
-      <p><strong>Kies Pro als:</strong> je al bekend bent met Amare en het maximale uit je routine wilt halen. De toegevoegde producten in de Pro (met name NeuCollagen, de volledige Triangle of Wellness en OmMega) bieden extra dimensies die op lange termijn het verschil maken in huidkwaliteit, gewrichtsgezondheid en cardiovasculaire ondersteuning.</p>
+      <p><strong>Kies Pro als:</strong> je al bekend bent met Amare en het maximale uit je routine wilt halen. De toegevoegde producten in de Pro (met name NeuCollagen en de volledige Triangle of Wellness) bieden extra dimensies die op lange termijn het verschil maken in huidkwaliteit en dagelijkse energie.</p>
 
       <h2>Veelgestelde vragen</h2>
 
@@ -1786,7 +1766,7 @@ export const blogPosts: BlogPost[] = [
 
       <h2>De drie pijlers uitgelegd</h2>
       <h3>1. Voeding — brandstof voor je lichaam</h3>
-      <p>Wat je eet is de basis van je gezondheid. Amare's voedingsgerichte producten zoals VitaGBX en OmMega leveren essentiële voedingsstoffen die in het moderne dieet vaak ontbreken. Denk aan omega-3, vitamines, mineralen en antioxidanten.</p>
+      <p>Wat je eet is de basis van je gezondheid. Amare's voedingsgerichte producten zoals Sunrise en Sunset leveren essentiële voedingsstoffen die in het moderne dieet vaak ontbreken. Denk aan omega-3, vitamines, mineralen en antioxidanten.</p>
       <h3>2. Mentale gezondheid — de gut-brain connectie</h3>
       <p>Je darmen produceren meer dan 90% van je serotonine — het 'gelukshormoon'. Amare's <strong>MentaBiotics</strong> en <strong>Happy Juice Pack</strong> zijn speciaal ontwikkeld om de gut-brain axis te ondersteunen. Gebruikers rapporteren verbeterde stemming, minder stress en betere focus.</p>
       <h3>3. Vitaliteit — energie voor het leven</h3>
@@ -1846,7 +1826,7 @@ export const blogPosts: BlogPost[] = [
       </ol>
 
       <h2>De rol van gerichte supplementen</h2>
-      <p>Sommige voedingsstoffen zijn lastig in optimale hoeveelheden uit voeding te halen. Hier komen hoogwaardige supplementen in beeld. Producten zoals <strong>Amare Energy+</strong> en VitaGBX bevatten specifieke ingrediënten die je cellulaire energiehuishouding ondersteunen — zonder de crash die je van cafeïne krijgt.</p>
+      <p>Sommige voedingsstoffen zijn lastig in optimale hoeveelheden uit voeding te halen. Hier komen hoogwaardige supplementen in beeld. Producten zoals <strong>Amare Energy+</strong> en Sunrise bevatten B-vitamines die bijdragen aan een normaal energieleverend metabolisme — zonder de crash die je van cafeïne krijgt.</p>
 
       <h2>Veelgestelde vragen</h2>
       <h3>Waarom ben ik moe terwijl ik genoeg slaap?</h3>

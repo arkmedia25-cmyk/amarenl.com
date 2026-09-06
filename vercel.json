@@ -28,6 +28,11 @@
   ],
   "redirects": [
     {
+      "source": "/blogs/nieuws/intimiteit-hormonen-stress-ignite-her-him",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/fit20",
       "destination": "/restore",
       "permanent": true
