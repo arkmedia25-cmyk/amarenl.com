@@ -359,6 +359,72 @@ laten draaien, met een drempelcontrole in het script (dagen-sinds-laatste-public
 
 ---
 
+### 🆕 Sessie 06-09-2026 — HL5-ingrediëntenfout gevonden en gefixt (9 bestanden), interne links collageen-mannen-30
+
+Gebruiker vroeg om `collageen-mannen-30-huid-gewrichten-spierherstel` te versterken (GSC toonde
+positie 24,8 met 123 gestions — dicht bij pagina 1) met interne links vanuit gerelateerde
+artikelen. Tijdens dat werk deelde de gebruiker Amare's officiële productpagina
+(`eu.amarehub.com`) en het officiële NL-factsheet-PDF
+(`amarecdn.azureedge.net/.../HL5-ProductFactsheet-NL_25.pdf`) ter controle.
+
+**Bevinding:** de site beweerde overal dat HL5 Vitamine C, Hyaluronzuur en Biotine bevat. Beide
+officiële Amare-bronnen bevestigen dat dit niet klopt. De echte formule (bevestigd in het
+NL-factsheet): 5 g gehydrolyseerd **rundercollageen** (Type 1 & 3, vloeibaar), **fructo-
+oligosachariden/FOS** (322,8 mg — prebiotische vezel) en **appelciderazijnpoeder** (242 mg), plus
+erytritol/citroenzuur/xanthaangom/kaliumsorbaat/steviolglycosiden. Geen vitamine C, hyaluronzuur
+of biotine. Amare's eigen goedgekeurde EU-claim voor eiwit (groei/behoud spiermassa, behoud
+normale botten) is toegevoegd als correcte vervanging.
+
+De foute claim stond verspreid over **9 bestanden**, waaronder een paar losse extra fouten die
+tijdens het opschonen aan het licht kwamen: één artikel classificeerde HL5 zelfs als "Poeder" met
+"Type 1&3 (runder + marine)" (allebei fout — vloeibaar, zuiver runder), en één claimde zelfs
+**Zink** als extra ingrediënt. Eén dood `.mdx`-bestand (niet live, zie eerdere sessie-bevinding
+dat `content/blog/*.mdx` niet door `getAllBlogPosts()` gelezen wordt) bevatte een nog grotere
+fabricatie: "HL5 levert vijf typen collageen (I, II, III, V en X)" — in werkelijkheid alleen
+Type 1 & 3. Ook dat gefixt, voor de consistentie.
+
+**⚠️ Belangrijke technische les herbevestigd:** `npx tsx scripts/generate-product-index.ts`
+draaien om `data/products.json` te regenereren vanuit `data/products/*.json` bleek 1107 regels
+te veranderen voor wat een 1-veld-fix had moeten zijn — het overschreef stilzwijgend verrijkte
+content in tientallen andere producten (exact het gevaar dat al in het geheugen stond
+gedocumenteerd). Direct teruggedraaid (`git checkout`) en in plaats daarvan hetzelfde gerichte
+veld-voor-veld patch toegepast als op het individuele bronbestand. **Draai dit script nooit
+blind — controleer altijd eerst de diff-omvang voordat je committeert.**
+
+**Welke URL's zijn geraakt:**
+
+| URL | Wat veranderde |
+|---|---|
+| `/hl5` | JSON-LD productSchema-beschrijving (structured data die Google rechtstreeks leest) |
+| `/producten/hl5-peach` | Zelfde onderliggende productdata (`data/products.json`) — title/description/ingrediënten |
+| `/blogs/nieuws/vloeibaar-collageen-hl5-huid-haar-nagels` (pillar) | "Wat zit er in HL5"-sectie + conclusie herschreven |
+| `/blogs/nieuws/collageen-mannen-30-huid-gewrichten-spierherstel` | Ingrediëntfout gefixt + ontvangt nu 3 nieuwe interne links |
+| `/blogs/nieuws/waar-zit-vitamine-c-in-voeding-supplementen` | Logica hersteld (HL5 "lost" het vitamine C-tekort niet meer op — nu correct: combineer met Sunrise) |
+| `/blogs/nieuws/beste-collageen-supplement-2026-werkt-echt` | Vergelijkingstabel + 2 alinea's + FAQ + product-aanbevelingswidget |
+| `/blogs/nieuws/haaruitval-supplement-vrouwen-oorzaken-oplossingen` | 2 alinea's over HL5's rol bij hoofdhuid/haarzakjes |
+| `/blogs/nieuws/mijn-ervaring-collageen-6-maanden` | Dagboek-testimonial, vitamine C-verwijzing bij HL5 verwijderd |
+| `/blogs/nieuws/beste-supplementen-haar-nagels-werkt-echt` | Alleen de product-aanbevelingswidget (tagline), niet de hoofdtekst |
+| `/blogs/nieuws/gewrichtspijn-supplementen-wat-helpt-echt` | Nieuwe interne link naar collageen-mannen-30 toegevoegd |
+| `/blogs/nieuws/testosteron-dalen-oorzaken-leefstijl-ignite-him` | Nieuwe interne link naar collageen-mannen-30 toegevoegd |
+| `/blogs/nieuws/beste-eiwitpoeder-2026-plantaardig-wei-vergelijking` | Nieuwe interne link naar collageen-mannen-30 toegevoegd |
+
+**Bewust niet aangeraakt:** `app/sunrise/page.tsx` bevat ook "Vitamine C" + "Biotine", maar dat is
+Sunrise's eigen, echte 9-vitamineformule — geen HL5-gerelateerde fout. De twee `data/staging/`-
+kopieën van een al-geredirecte, gearchiveerde collageen-vergelijkingsartikel zijn met opzet
+ongewijzigd gelaten (dood, puur historisch record).
+
+**Geverifieerd:** `npx tsc --noEmit` schoon, alle JSON-bestanden valide, `npm run build` slaagt,
+gerenderde `/hl5`-pagina-HTML bevat geen Vitamine C/Hyaluronzuur/Biotine meer. Gepusht als commit
+`11602d2`, Vercel-deploy bevestigd (`dpl_C7c5VemPmde81RqTJBrEoH3PgGS1`).
+
+**Verwachte impact:** vooral vertrouwens-/compliance-risico weggenomen (Google kan structured
+data met feitelijk onjuiste productinformatie afstraffen) — geen directe trafficknal te
+verwachten. De 3 nieuwe interne links naar collageen-mannen-30 zijn de meest kansrijke hefboom
+voor een positieverbetering (huidige positie 24,8, net buiten pagina 1) — resultaat pas over
+1-2 weken meetbaar in GSC, na herindexering.
+
+---
+
 ## Nog te doen
 
 ### Product Pages (TASK 2.1)
