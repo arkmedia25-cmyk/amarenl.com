@@ -9,7 +9,7 @@ import fs from 'fs';
 import path from 'path';
 
 const DATA_DIR = path.resolve(__dirname, '..', 'data', 'products');
-const AFFILIATE_BASE = 'https://www.amare.com/2075008/nl-nl/';
+const AFFILIATE_BASE = 'https://www.amare.com/susp_2075008/nl-nl/';
 
 function slugify(id: string): string {
   // Convert product ID to URL-friendly slug

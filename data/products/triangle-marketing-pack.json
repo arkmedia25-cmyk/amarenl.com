@@ -22,9 +22,18 @@
     "alt": "Triangle Marketing Pack — 3x Triangle of Wellness Xtreme"
   },
   "ingredients": [
-    { "name": "3x Sunrise (ochtendformule)", "amount": "90 porties totaal" },
-    { "name": "3x Nitro Xtreme (middagfocus)", "amount": "90 porties totaal" },
-    { "name": "3x Sunset (avondherstel)", "amount": "90 porties totaal" }
+    {
+      "name": "3x Sunrise (ochtendformule)",
+      "amount": "90 porties totaal"
+    },
+    {
+      "name": "3x Nitro Xtreme (middagfocus)",
+      "amount": "90 porties totaal"
+    },
+    {
+      "name": "3x Sunset (avondherstel)",
+      "amount": "90 porties totaal"
+    }
   ],
   "benefits": [
     "3 complete Triangle of Wellness Xtreme sets",
@@ -34,20 +43,36 @@
     "Inclusief marketingmateriaal en training"
   ],
   "affiliate": {
-    "url": "https://www.amare.com/2075008/nl-nl/triangle-marketing-pack",
+    "url": "https://www.amare.com/susp_2075008/nl-nl/triangle-marketing-pack",
     "sourceTag": "amarenl-pakketten"
   },
-  "ratings": { "value": 4.8, "count": 189 },
-  "relatedProducts": ["happy-lifestyle-pack-basic", "happy-lifestyle-pack-pro"],
-  "tags": ["triangle pack", "brand partner", "3x set", "deel en verdien"],
+  "ratings": {
+    "value": 4.8,
+    "count": 189
+  },
+  "relatedProducts": [
+    "happy-lifestyle-pack-basic",
+    "happy-lifestyle-pack-pro"
+  ],
+  "tags": [
+    "triangle pack",
+    "brand partner",
+    "3x set",
+    "deel en verdien"
+  ],
   "seo": {
     "title": "Triangle Marketing Pack — 3x Set | Word Amare Brand Partner",
     "description": "Start als Brand Partner met 3 complete Triangle of Wellness Xtreme sets. Ervaar zelf, deel met anderen, verdien commissie.",
-    "keywords": ["triangle marketing pack", "3x triangle", "brand partner startkit"]
+    "keywords": [
+      "triangle marketing pack",
+      "3x triangle",
+      "brand partner startkit"
+    ]
   },
   "isNew": false,
   "isBestseller": false,
-  "isPack": true, "isHidden": true,
+  "isPack": true,
+  "isHidden": true,
   "priority": 2,
   "publishedAt": "2024-01-15",
   "updatedAt": "2026-07-16"

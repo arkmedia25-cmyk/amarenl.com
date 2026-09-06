@@ -21,7 +21,7 @@ const PACKS = [
   },
   {
     slug: "share",
-    href: "https://www.amare.com/2075008/nl-nl/share",
+    href: "https://www.amare.com/susp_2075008/nl-nl/share",
     name: "Zelf Samenstellen",
     tagline: "Kies je eigen producten + €35 licentiekosten",
     price: "—",

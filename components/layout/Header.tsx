@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Menu, X, ArrowRight, ChevronDown } from "lucide-react";
-import { getAffiliateUrl } from "@/lib/products";
+import { getAffiliateUrl, AFFILIATE_BASE_URL } from "@/lib/products";
 
 // Paginapad → productslug, alleen voor pagina's met één ondubbelzinnig product
 // (geen bundels/gidsen zoals happy-juice-pack of magnesium-supplement). Op deze
@@ -21,7 +21,6 @@ const PRODUCT_PAGE_SLUGS: Record<string, string> = {
   "/triangle-of-wellness-xtreme": "triangle-of-wellness-xtreme",
 };
 
-const GENERIC_AFFILIATE_URL = "https://www.amare.com/2075008/nl-nl";
 
 const categoryLinks = [
   ["🧠 Mentale Wellness", "/supplementen/"],
@@ -65,7 +64,7 @@ const productLinks = [
   { label: "🚀 Startpakketten", items: [
     ["Happy Lifestyle Pack Pro ⭐", "/happy-lifestyle-pack-pro"],
     ["Triangle Marketing Pack", "/triangle-marketing-pack"],
-    ["Zelf Samenstellen (Share)", "https://www.amare.com/2075008/nl-nl/share"],
+    ["Zelf Samenstellen (Share)", "https://www.amare.com/susp_2075008/nl-nl/share"],
     ["→ Meer info & advies", "/pakketten/"],
   ]},
 ];
@@ -78,7 +77,7 @@ export default function Header() {
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const productSlug = pathname ? PRODUCT_PAGE_SLUGS[pathname] : undefined;
-  const ctaUrl = productSlug ? getAffiliateUrl(productSlug) : GENERIC_AFFILIATE_URL;
+  const ctaUrl = productSlug ? getAffiliateUrl(productSlug) : AFFILIATE_BASE_URL;
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);

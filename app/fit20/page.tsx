@@ -92,7 +92,7 @@ export default function Fit20Page() {
     priceSubscription: 48.01,
     ratingValue: 4.4,
     ratingCount: 200,
-    affiliateUrl: "https://www.amare.com/2075008/nl-nl/fit20",
+    affiliateUrl: "https://www.amare.com/susp_2075008/nl-nl/fit20",
   });
 
   const combinedSchema = combineSchemas(

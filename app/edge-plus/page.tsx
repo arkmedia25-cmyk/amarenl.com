@@ -27,7 +27,7 @@ export default function EdgePlusPage() {
   const img = product?.images?.primary || "https://amarecdn.azureedge.net/webassets/web/prod/products/EU_Mango_800_25.jpg";
 
   const schema = combineSchemas(
-    generateProductSchema({ name: "Amare EDGE+™ Mango", nameNL: "Amare EDGE+™ Mango", description: "EDGE+ is Amare's cafeïnevrije, plantaardige nootropicum met pantotheenzuur (Vit B5, 3 mg), goji, mango-extract, Terminalia chebula en Boswellia serrata. Ondersteunt focus, energiemetabolisme en dagelijkse vitaliteit.", image: img, slug: "edge-plus", priceRetail: 86.00, priceSubscription: 77.28, ratingValue: 4.5, ratingCount: 500, affiliateUrl: "https://www.amare.com/2075008/nl-nl/amareedge-plus-mango" }),
+    generateProductSchema({ name: "Amare EDGE+™ Mango", nameNL: "Amare EDGE+™ Mango", description: "EDGE+ is Amare's cafeïnevrije, plantaardige nootropicum met pantotheenzuur (Vit B5, 3 mg), goji, mango-extract, Terminalia chebula en Boswellia serrata. Ondersteunt focus, energiemetabolisme en dagelijkse vitaliteit.", image: img, slug: "edge-plus", priceRetail: 86.00, priceSubscription: 77.28, ratingValue: 4.5, ratingCount: 500, affiliateUrl: "https://www.amare.com/susp_2075008/nl-nl/amareedge-plus-mango" }),
     generateFAQSchema(faqs),
     generateBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "EDGE+", url: "/edge-plus" }])
   );

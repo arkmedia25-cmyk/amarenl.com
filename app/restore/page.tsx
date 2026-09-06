@@ -110,7 +110,7 @@ export default function RestorePage() {
     priceSubscription: 29.70,
     ratingValue: 4.5,
     ratingCount: 380,
-    affiliateUrl: "https://www.amare.com/2075008/nl-nl/restore",
+    affiliateUrl: "https://www.amare.com/susp_2075008/nl-nl/restore",
   });
 
   const combinedSchema = combineSchemas(

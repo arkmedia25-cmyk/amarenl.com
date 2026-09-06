@@ -22,7 +22,7 @@ export default function HappyLifestyleProPage() {
   return (
     <div className="bg-white min-h-screen font-nunito">
       <SchemaMarkup schema={combineSchemas(
-        generateProductSchema({ name: "Happy Lifestyle Pack Pro", nameNL: "Happy Lifestyle Pack — Pro", description: "Het meest complete Amare Brand Partner startpakket. Volledig assortiment + hoogste commissie.", image: "https://amarecdn.azureedge.net/webassets/web/prod/products/Happy-Lifestyle-Pack-Pro-EU-new-800.jpg", slug: "happy-lifestyle-pack-pro", priceRetail: 649.64, priceSubscription: 649.64, oneTimeOnly: true, ratingValue: 4.9, ratingCount: 234, affiliateUrl: "https://www.amare.com/2075008/nl-nl/happy-lifestyle-pack-pro" }),
+        generateProductSchema({ name: "Happy Lifestyle Pack Pro", nameNL: "Happy Lifestyle Pack — Pro", description: "Het meest complete Amare Brand Partner startpakket. Volledig assortiment + hoogste commissie.", image: "https://amarecdn.azureedge.net/webassets/web/prod/products/Happy-Lifestyle-Pack-Pro-EU-new-800.jpg", slug: "happy-lifestyle-pack-pro", priceRetail: 649.64, priceSubscription: 649.64, oneTimeOnly: true, ratingValue: 4.9, ratingCount: 234, affiliateUrl: "https://www.amare.com/susp_2075008/nl-nl/happy-lifestyle-pack-pro" }),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Startpakketten", url: "/startpakketten" }, { name: "Happy Lifestyle Pack Pro", url: "/happy-lifestyle-pack-pro" }])
       )} id="pro-schema" />
@@ -95,7 +95,7 @@ export default function HappyLifestyleProPage() {
         <div className="container-page max-w-2xl">
           <h2 className="text-2xl font-cormorant font-bold mb-4">Klaar om Premium Brand Partner te worden?</h2>
           <p className="text-white/80 mb-6">Klik hieronder om het Pro Pack te bestellen bij Amare en direct te starten.</p>
-          <a href="https://www.amare.com/2075008/nl-nl/happy-lifestyle-pack-pro" target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--color-accent)] text-white rounded-full text-lg font-bold hover:opacity-90 shadow-lg">
+          <a href="https://www.amare.com/susp_2075008/nl-nl/happy-lifestyle-pack-pro" target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--color-accent)] text-white rounded-full text-lg font-bold hover:opacity-90 shadow-lg">
             <ShoppingCart size={20} /> Bestel Pro Pack bij Amare →
           </a>
           <p className="text-white/50 text-xs mt-4">* Je wordt doorgestuurd naar de officiële Amare pagina.</p>

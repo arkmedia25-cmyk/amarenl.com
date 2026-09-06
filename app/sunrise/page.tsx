@@ -106,7 +106,7 @@ export default function SunrisePage() {
     priceSubscription: 85.78,
     ratingValue: 4.5,
     ratingCount: 420,
-    affiliateUrl: "https://www.amare.com/2075008/nl-nl/sunrise-2pack",
+    affiliateUrl: "https://www.amare.com/susp_2075008/nl-nl/sunrise-2Pack",
   });
 
   const combinedSchema = combineSchemas(

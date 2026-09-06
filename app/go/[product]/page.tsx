@@ -2,14 +2,19 @@
 
 import { useEffect } from "react";
 import { useParams } from "next/navigation";
-import { getAmareUrl, storeAffiliateVisit } from "@/lib/affiliate";
+import { storeAffiliateVisit } from "@/lib/affiliate";
+import { getAffiliateUrl } from "@/lib/products";
 
 /**
  * Ürüne özel akıllı yönlendirme (Katman 2 — genişletilmiş)
  *
  * Kullanım:
- *   amarenl.com/go/mentabiotics  → amare.com/2075008/nl-nl/mentabiotics
- *   amarenl.com/go/sunset        → amare.com/2075008/nl-nl/sunset
+ *   amarenl.com/go/mentabiotics  → data/products.json'daki échte affiliate-URL
+ *   amarenl.com/go/sunset        → data/products.json'daki échte affiliate-URL
+ *
+ * getAffiliateUrl() gebruikt (i.p.v. een kale base+slug-concat) zodat producten
+ * met een afwijkend Amare-URL-patroon (bv. mentabiotics → pdp/mentabiotics-sticks)
+ * ook via /go correct doorverwijzen.
  *
  * Sosyal medya, e-posta, WhatsApp için ideal.
  */
@@ -19,7 +24,7 @@ export default function ProductRedirectPage() {
 
   useEffect(() => {
     storeAffiliateVisit();
-    const url = getAmareUrl(product);
+    const url = getAffiliateUrl(product);
     const timer = setTimeout(() => {
       window.location.href = url;
     }, 100);

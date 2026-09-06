@@ -10,7 +10,7 @@ import { getAmareUrl, storeAffiliateVisit } from "@/lib/affiliate";
  * 1. localStorage'a affiliate visit kaydı atılır
  * 2. Otomatik amare.com'a affiliate linkle yönlendirilir
  *
- * Kullanım: amarenl.com/go → otomatik amare.com/2075008/nl-nl/
+ * Kullanım: amarenl.com/go → otomatik amare.com/susp_2075008/nl-nl/
  * Bookmark için ideal: "Amare'ye gitmek için bu sayfayı favorilere ekleyin"
  */
 export default function GoPage() {

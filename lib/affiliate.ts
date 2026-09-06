@@ -10,7 +10,7 @@
  */
 
 const STORAGE_KEY = "amarenl_aff";
-const AFFILIATE_ID = "2075008";
+const AFFILIATE_ID = "susp_2075008";
 const AMARE_BASE = `https://www.amare.com/${AFFILIATE_ID}/nl-nl`;
 
 export { AFFILIATE_ID, AMARE_BASE };

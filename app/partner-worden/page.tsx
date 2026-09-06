@@ -220,7 +220,7 @@ export default function PartnerWordenPage() {
                   ))}
                 </ul>
                 <a
-                  href="https://www.amare.com/2075008/nl-nl/happy-lifestyle-pack-pro"
+                  href="https://www.amare.com/susp_2075008/nl-nl/happy-lifestyle-pack-pro"
                   target="_blank"
                   rel="nofollow noopener noreferrer"
                   className="block w-full text-center py-4 bg-emerald-700 text-white rounded-full font-bold hover:bg-emerald-800 transition-all shadow-md"
@@ -259,7 +259,7 @@ export default function PartnerWordenPage() {
                   ))}
                 </ul>
                 <a
-                  href="https://www.amare.com/2075008/nl-nl/triangle-marketing-pack"
+                  href="https://www.amare.com/susp_2075008/nl-nl/triangle-marketing-pack"
                   target="_blank"
                   rel="nofollow noopener noreferrer"
                   className="block w-full text-center py-4 border-2 border-emerald-700 text-emerald-700 rounded-full font-bold hover:bg-emerald-50 transition-all"
@@ -295,7 +295,7 @@ export default function PartnerWordenPage() {
                   ))}
                 </ul>
                 <a
-                  href="https://www.amare.com/2075008/nl-nl/share"
+                  href="https://www.amare.com/susp_2075008/nl-nl/share"
                   target="_blank"
                   rel="nofollow noopener noreferrer"
                   className="block w-full text-center py-4 border-2 border-[var(--color-border)] text-[var(--color-text)] rounded-full font-bold hover:border-emerald-700 hover:text-emerald-700 transition-all"

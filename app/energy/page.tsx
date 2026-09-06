@@ -110,7 +110,7 @@ export default function EnergyPlusPage() {
     priceSubscription: 55.48,
     ratingValue: 4.5,
     ratingCount: 500,
-    affiliateUrl: "https://www.amare.com/2075008/nl-nl/EnergyPlus",
+    affiliateUrl: "https://www.amare.com/susp_2075008/nl-nl/pdp/energy-dragonfruit",
   });
 
   const combinedSchema = combineSchemas(

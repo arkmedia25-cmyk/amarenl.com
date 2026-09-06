@@ -53,7 +53,7 @@ export default function Footer() {
               <p className="text-[10px] text-[var(--color-text-muted)] mt-1">Vanuit Nederlands magazijn. 1-2 werkdagen bezorgd door Amare Global.</p>
             </div>
             <p className="text-[10px] text-[var(--color-text-muted)] leading-relaxed">
-              Referentie: <a href="https://www.amare.com/2075008/nl-NL" className="underline hover:text-[var(--color-primary)]" target="_blank">Amare Global officiële website</a> — Partner ID 2075008
+              Referentie: <a href="https://www.amare.com/susp_2075008/nl-NL" className="underline hover:text-[var(--color-primary)]" target="_blank">Amare Global officiële website</a> — Partner ID 2075008
             </p>
             <p className="text-[10px] text-[var(--color-text-muted)] leading-relaxed">
               * Voedingssupplementen. Geen geneesmiddel. Deze producten zijn niet bedoeld om ziekten te diagnosticeren, behandelen, genezen of voorkomen. Lees voor gebruik de verpakking en raadpleeg bij twijfel een arts.

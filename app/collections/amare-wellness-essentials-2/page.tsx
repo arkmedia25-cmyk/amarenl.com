@@ -41,7 +41,7 @@ export default function WellnessEssentials() {
       priceSubscription: 269.1,
       ratingValue: 4.6,
       ratingCount: 320,
-      affiliateUrl: "https://www.amare.com/2075008/nl-nl/wellness-essentials",
+      affiliateUrl: "https://www.amare.com/susp_2075008/nl-nl/wellness-essentials",
     }),
     generateBreadcrumbSchema([
       { name: "Home", url: "/" },

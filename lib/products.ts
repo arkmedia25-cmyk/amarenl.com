@@ -15,7 +15,7 @@
 
 import rawProducts from '../data/products.json';
 
-export const AFFILIATE_ID = '2075008';
+export const AFFILIATE_ID = 'susp_2075008';
 export const AFFILIATE_BASE_URL = `https://www.amare.com/${AFFILIATE_ID}/nl-nl/`;
 
 // ── Types ──────────────────────────────────────────────────────────────────

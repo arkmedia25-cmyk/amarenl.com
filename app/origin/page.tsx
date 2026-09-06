@@ -110,7 +110,7 @@ export default function OriginPage() {
     priceSubscription: 40.00,
     ratingValue: 4.5,
     ratingCount: 320,
-    affiliateUrl: "https://www.amare.com/2075008/nl-nl/kyani-origin-chocolate",
+    affiliateUrl: "https://www.amare.com/susp_2075008/nl-nl/kyani-origin-chocolate",
   });
 
   const combinedSchema = combineSchemas(

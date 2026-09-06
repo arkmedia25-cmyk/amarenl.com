@@ -22,10 +22,22 @@
     "alt": "Happy Lifestyle Pack Pro — Volledig Amare assortiment"
   },
   "ingredients": [
-    { "name": "Happy Juice Pack", "amount": "Energy+ + EDGE+ + MentaBiotics" },
-    { "name": "Triangle of Wellness Xtreme", "amount": "Sunrise + Nitro + Sunset" },
-    { "name": "HL5 Collageen", "amount": "Vloeibare formule" },
-    { "name": "Extra producten", "amount": "Volledig assortiment" }
+    {
+      "name": "Happy Juice Pack",
+      "amount": "Energy+ + EDGE+ + MentaBiotics"
+    },
+    {
+      "name": "Triangle of Wellness Xtreme",
+      "amount": "Sunrise + Nitro + Sunset"
+    },
+    {
+      "name": "HL5 Collageen",
+      "amount": "Vloeibare formule"
+    },
+    {
+      "name": "Extra producten",
+      "amount": "Volledig assortiment"
+    }
   ],
   "benefits": [
     "Volledige Amare productlijn in één pakket",
@@ -35,20 +47,36 @@
     "Deel het complete Amare verhaal"
   ],
   "affiliate": {
-    "url": "https://www.amare.com/2075008/nl-nl/happy-lifestyle-pack-pro",
+    "url": "https://www.amare.com/susp_2075008/nl-nl/happy-lifestyle-pack-pro",
     "sourceTag": "amarenl-pakketten"
   },
-  "ratings": { "value": 4.9, "count": 234 },
-  "relatedProducts": ["happy-lifestyle-pack-basic", "triangle-marketing-pack"],
-  "tags": ["brand partner pro", "volledig pakket", "premium", "max commissie"],
+  "ratings": {
+    "value": 4.9,
+    "count": 234
+  },
+  "relatedProducts": [
+    "happy-lifestyle-pack-basic",
+    "triangle-marketing-pack"
+  ],
+  "tags": [
+    "brand partner pro",
+    "volledig pakket",
+    "premium",
+    "max commissie"
+  ],
   "seo": {
     "title": "Amare Happy Lifestyle Pack Pro — Volledig Brand Partner Pakket",
     "description": "Het complete Brand Partner startpakket. Volledig Amare assortiment, hoogste commissie, exclusieve events. Start als pro.",
-    "keywords": ["happy lifestyle pack pro", "volledig amare pakket", "brand partner premium"]
+    "keywords": [
+      "happy lifestyle pack pro",
+      "volledig amare pakket",
+      "brand partner premium"
+    ]
   },
   "isNew": false,
   "isBestseller": true,
-  "isPack": true, "isHidden": true,
+  "isPack": true,
+  "isHidden": true,
   "priority": 1,
   "publishedAt": "2024-01-15",
   "updatedAt": "2026-07-16"

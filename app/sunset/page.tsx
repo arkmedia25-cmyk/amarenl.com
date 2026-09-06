@@ -86,7 +86,7 @@ export default function SunsetPage() {
     priceSubscription: 67.50,
     ratingValue: 4.6,
     ratingCount: 400,
-    affiliateUrl: "https://www.amare.com/2075008/nl-nl/sunset",
+    affiliateUrl: "https://www.amare.com/susp_2075008/nl-nl/sunset",
   });
 
   const combinedSchema = combineSchemas(

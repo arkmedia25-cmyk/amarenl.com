@@ -36,7 +36,7 @@ export default function IgniteHerPage() {
   const img = product?.images?.primary || "https://amarecdn.azureedge.net/webassets/web/prod/products/Ignite-Her-EU-800.jpg";
 
   const schema = combineSchemas(
-    generateProductSchema({ name: "Amare Ignite for HER", nameNL: "Amare Ignite for HER", description: "Ignite for HER is een veganistisch supplement voor vrouwen met Neuravena® (300 mg), shatavari, magnesium, bamboe-silica, fenegriek en citroenmelisse voor natuurlijke ondersteuning van vrouwelijk welzijn.", image: img, slug: "ignite-for-her", priceRetail: 55.00, priceSubscription: 49.50, ratingValue: 4.5, ratingCount: 300, affiliateUrl: "https://www.amare.com/2075008/nl-nl/ignite-for-her" }),
+    generateProductSchema({ name: "Amare Ignite for HER", nameNL: "Amare Ignite for HER", description: "Ignite for HER is een veganistisch supplement voor vrouwen met Neuravena® (300 mg), shatavari, magnesium, bamboe-silica, fenegriek en citroenmelisse voor natuurlijke ondersteuning van vrouwelijk welzijn.", image: img, slug: "ignite-for-her", priceRetail: 55.00, priceSubscription: 49.50, ratingValue: 4.5, ratingCount: 300, affiliateUrl: "https://www.amare.com/susp_2075008/nl-nl/ignite-for-her" }),
     generateFAQSchema(faqs),
     generateBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Ignite for HER", url: "/ignite-for-her" }])
   );

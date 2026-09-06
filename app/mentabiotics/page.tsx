@@ -111,7 +111,7 @@ export default function MentaBioticsPage() {
     ratingValue: 4.5,
     ratingCount: 500,
     affiliateUrl:
-      "https://www.amare.com/2075008/nl-nl/mentabiotics",
+      "https://www.amare.com/susp_2075008/nl-nl/pdp/mentabiotics-sticks",
   });
 
   const combinedSchema = combineSchemas(

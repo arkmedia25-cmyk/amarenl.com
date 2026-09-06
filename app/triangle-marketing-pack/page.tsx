@@ -21,7 +21,7 @@ export default function TriangleMarketingPage() {
   return (
     <div className="bg-white min-h-screen font-nunito">
       <SchemaMarkup schema={combineSchemas(
-        generateProductSchema({ name: "Triangle Marketing Pack", nameNL: "Triangle Marketing Pack — 3x Set", description: "3 complete Triangle of Wellness Xtreme sets. Brand Partner startkit om te delen en verdienen.", image: "https://amarecdn.azureedge.net/webassets/web/prod/products/Triangle-of-Wellness-Xtreme2-EU-800.jpg", slug: "triangle-marketing-pack", priceRetail: 511.21, priceSubscription: 511.21, oneTimeOnly: true, ratingValue: 4.8, ratingCount: 189, affiliateUrl: "https://www.amare.com/2075008/nl-nl/triangle-marketing-pack" }),
+        generateProductSchema({ name: "Triangle Marketing Pack", nameNL: "Triangle Marketing Pack — 3x Set", description: "3 complete Triangle of Wellness Xtreme sets. Brand Partner startkit om te delen en verdienen.", image: "https://amarecdn.azureedge.net/webassets/web/prod/products/Triangle-of-Wellness-Xtreme2-EU-800.jpg", slug: "triangle-marketing-pack", priceRetail: 511.21, priceSubscription: 511.21, oneTimeOnly: true, ratingValue: 4.8, ratingCount: 189, affiliateUrl: "https://www.amare.com/susp_2075008/nl-nl/triangle-marketing-pack" }),
         generateFAQSchema(faqs),
         generateBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Startpakketten", url: "/startpakketten" }, { name: "Triangle Marketing Pack", url: "/triangle-marketing-pack" }])
       )} id="triangle-schema" />
@@ -95,7 +95,7 @@ export default function TriangleMarketingPage() {
         <div className="container-page max-w-2xl">
           <h2 className="text-2xl font-cormorant font-bold mb-4">Klaar om te starten met delen & verdienen?</h2>
           <p className="text-white/80 mb-6">Bestel het Triangle Marketing Pack en start vandaag nog als Amare Brand Partner.</p>
-          <a href="https://www.amare.com/2075008/nl-nl/triangle-marketing-pack" target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-amber-700 rounded-full text-lg font-bold hover:opacity-90 shadow-lg">
+          <a href="https://www.amare.com/susp_2075008/nl-nl/triangle-marketing-pack" target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-amber-700 rounded-full text-lg font-bold hover:opacity-90 shadow-lg">
             <ShoppingCart size={20} /> Bestel Triangle Pack bij Amare →
           </a>
           <p className="text-white/40 text-xs mt-4">* Je wordt doorgestuurd naar de officiële Amare productpagina.</p>
