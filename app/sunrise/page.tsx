@@ -3,6 +3,7 @@ import Image from "next/image";
 import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
 import AffiliateCTA from "@/components/ui/AffiliateCTA";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
+import ExpertVideoSection from "@/components/ui/ExpertVideoSection";
 import { getProduct } from "@/lib/products";
 import {
   generateProductSchema,
@@ -306,8 +307,14 @@ export default function SunrisePage() {
         </div>
       </section>
 
+      <ExpertVideoSection
+        videoSrc="/videos/dr-derosimo-sunrise.mp4"
+        posterSrc="/images/videos/dr-derosimo-sunrise-poster.jpg"
+        title="De wetenschap achter Sunrise"
+      />
+
       {/* ── FAQ ── */}
-      <section className="py-16 bg-[var(--color-bg-soft)]">
+      <section className="py-16 bg-white">
         <div className="container-page max-w-3xl">
           <h2 className="text-2xl md:text-3xl font-cormorant font-bold text-[var(--color-text)] mb-8">Veelgestelde vragen</h2>
           <div className="space-y-3">

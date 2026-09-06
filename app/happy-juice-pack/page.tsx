@@ -3,6 +3,7 @@ import Image from "next/image";
 import AffiliateCTA from "@/components/ui/AffiliateCTA";
 import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
+import ExpertVideoSection from "@/components/ui/ExpertVideoSection";
 import { getAffiliateUrl, getProduct } from "@/lib/products";
 import {
   generateProductSchema,
@@ -347,8 +348,14 @@ export default function HappyJuicePackPage() {
         </div>
       </section>
 
+      <ExpertVideoSection
+        videoSrc="/videos/dr-derosimo-happy-juice.mp4"
+        posterSrc="/images/videos/dr-derosimo-happy-juice-poster.jpg"
+        title="De wetenschap achter Happy Juice Pack"
+      />
+
       {/* ── Veelgestelde vragen ── */}
-      <section className="py-16 bg-[var(--color-bg-soft)]">
+      <section className="py-16 bg-white">
         <div className="container-page max-w-3xl">
           <h2 className="text-2xl md:text-3xl font-cormorant font-bold text-[var(--color-text)] mb-8">
             Veelgestelde vragen

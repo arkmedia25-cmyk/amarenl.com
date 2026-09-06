@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import AffiliateCTA from "@/components/ui/AffiliateCTA";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
+import ExpertVideoSection from "@/components/ui/ExpertVideoSection";
 import { getProduct } from "@/lib/products";
 import { generateProductSchema, generateFAQSchema, generateBreadcrumbSchema, combineSchemas } from "@/lib/schema";
 
@@ -91,7 +92,13 @@ export default function NitroXtremePage() {
       <p className="mt-4 text-[10px] text-white/60">🛡️ 30 dagen geld-terug &middot; 📦 Direct van Amare</p>
     </div></section>
 
-    <section className="py-16 bg-[var(--color-bg-soft)]"><div className="container-page max-w-3xl">
+    <ExpertVideoSection
+      videoSrc="/videos/dr-derosimo-nitro-xtreme.mp4"
+      posterSrc="/images/videos/dr-derosimo-nitro-xtreme-poster.jpg"
+      title="De wetenschap achter Nitro Xtreme"
+    />
+
+    <section className="py-16 bg-white"><div className="container-page max-w-3xl">
       <h2 className="text-2xl md:text-3xl font-cormorant font-bold text-[var(--color-text)] mb-8">Veelgestelde vragen</h2>
       <div className="space-y-4">{faqs.map((faq, i) => (<details key={i} className="bg-white rounded-xl border border-[var(--color-border)] group"><summary className="p-5 cursor-pointer font-bold text-sm text-[var(--color-text)] list-none flex justify-between items-center">{faq.question}<span className="text-[var(--color-primary)] text-lg ml-2 group-open:rotate-45 transition-transform">+</span></summary><div className="px-5 pb-5 text-xs text-[var(--color-text-muted)] leading-relaxed">{faq.answer}</div></details>))}</div>
     </div></section>
