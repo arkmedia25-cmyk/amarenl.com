@@ -394,6 +394,44 @@ export default function HL5Page() {
         </div>
       </section>
 
+      {/* ── HL5 in beeld (lifestyle) ── */}
+      <section className="py-16 bg-white">
+        <div className="container-page max-w-5xl">
+          <h2 className="text-2xl md:text-3xl font-cormorant font-bold text-[var(--color-text)] mb-6 text-center">
+            HL5 in je dagelijkse routine
+          </h2>
+          <div className="grid sm:grid-cols-3 gap-4">
+            <div className="relative aspect-square rounded-2xl overflow-hidden bg-[var(--color-bg-soft)] border border-[var(--color-border)]">
+              <Image
+                src="/images/products/hl5-lifestyle-peaches.jpg"
+                alt="Amare HL5 vloeibaar collageen sachets met perzik smaak naast verse perziken — collageen supplement voor huid, haar en nagels"
+                fill
+                sizes="(min-width: 640px) 33vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="relative aspect-square rounded-2xl overflow-hidden bg-[var(--color-bg-soft)] border border-[var(--color-border)]">
+              <Image
+                src="/images/products/hl5-lifestyle-kitchen.jpg"
+                alt="Amare HL5 vloeibaar collageen verpakking en sachet op keukenblad — dagelijkse collageen routine voor een stralende huid"
+                fill
+                sizes="(min-width: 640px) 33vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="relative aspect-square rounded-2xl overflow-hidden bg-[var(--color-bg-soft)] border border-[var(--color-border)]">
+              <Image
+                src="/images/products/hl5-model.jpg"
+                alt="Gebruiker met Amare HL5 vloeibaar collageen sachet — collageen supplement voor huid, haar en nagels"
+                fill
+                sizes="(min-width: 640px) 33vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── Wat kun je verwachten? ── */}
       <section className="py-16 bg-white">
         <div className="container-page max-w-3xl">
