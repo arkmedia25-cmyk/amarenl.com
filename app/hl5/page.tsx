@@ -101,7 +101,7 @@ export default function HL5Page() {
     name: "Amare HL5 Vloeibare Collageen",
     nameNL: "Amare HL5 Vloeibare Collageen (Perzik)",
     description:
-      "Amare HL5 levert 5 gram gehydrolyseerd collageen (Type 1 & 3) per portie in vloeibare vorm voor maximale opname — tot 3x betere absorptie dan collageenpoeder. Met Vitamine C, Hyaluronzuur en Biotine. Perzik smaak, lactosevrij.",
+      "Amare HL5 levert 5 gram gehydrolyseerd rundercollageen (Type 1 & 3) per portie in vloeibare vorm voor maximale opname — tot 3x betere absorptie dan collageenpoeder. Aangevuld met fructo-oligosachariden en appelciderazijnpoeder. Perzik smaak, lactosevrij.",
     image: productImage,
     slug: "hl5",
     priceRetail: 85.87,

@@ -336,7 +336,7 @@
     "taglineNL": "Vloeibaar collageen — 3x betere opname dan poeder",
     "description": {
       "short": "Vloeibare collageen voor huid, haar en nagels",
-      "long": "HL5 levert 5 gram gehydrolyseerd collageen (Type 1 & 3) in vloeibare vorm voor maximale opname. Vloeibaar collageen wordt tot 90% binnen 6 uur opgenomen — tot 3x beter dan collageenpoeder. Met Vitamine C, Hyaluronzuur en Biotine voor complete huidondersteuning. Perzik smaak, lactosevrij, makkelijk in je ochtendroutine."
+      "long": "HL5 levert 5 gram gehydrolyseerd rundercollageen (Type 1 & 3) in vloeibare vorm voor maximale opname. Vloeibaar collageen wordt tot 90% binnen 6 uur opgenomen — tot 3x beter dan collageenpoeder. Aangevuld met fructo-oligosachariden (prebiotische vezels) en appelciderazijnpoeder. Perzik smaak, lactosevrij, makkelijk in je ochtendroutine."
     },
     "pricing": {
       "subscription": 77.28,
@@ -351,31 +351,31 @@
     },
     "ingredients": [
       {
-        "name": "Gehydrolyseerd collageen (Type 1 & 3)",
+        "name": "Gehydrolyseerd rundercollageen (Type 1 & 3)",
         "amount": "5 g",
         "form": "vloeibare peptiden"
       },
       {
-        "name": "Vitamine C",
-        "amount": "—",
-        "form": "ondersteunt collageensynthese"
+        "name": "Fructo-oligosachariden (FOS)",
+        "amount": "322,8 mg",
+        "form": "prebiotische vezel"
       },
       {
-        "name": "Hyaluronzuur",
-        "amount": "—",
-        "form": "huidhydratatie"
+        "name": "Appelciderazijnpoeder",
+        "amount": "242 mg",
+        "form": "poeder"
       },
       {
-        "name": "Biotine",
+        "name": "Erytritol, citroenzuur, xanthaangom, kaliumsorbaat, steviolglycosiden",
         "amount": "—",
-        "form": "haar en nagels"
+        "form": "zoetstof / smaak / conservering"
       }
     ],
     "benefits": [
       "Vloeibaar = tot 90% opname (poeder slechts ~30%)",
-      "5 g gehydrolyseerd collageen Type 1&3 per portie",
-      "Vitamine C + Hyaluronzuur + Biotine in één formule",
-      "Zichtbaar resultaat: vollere huid na 4-8 weken",
+      "5 g gehydrolyseerd rundercollageen Type 1&3 per portie",
+      "Draagt bij aan groei en behoud van spiermassa, en behoud van normale botten (goedgekeurde EU-claim voor eiwit)",
+      "Met FOS (prebiotische vezel) en appelciderazijnpoeder",
       "Perzik smaak — makkelijk dagelijks in te nemen"
     ],
     "usage": {
@@ -417,7 +417,7 @@
     ],
     "seo": {
       "title": "Amare HL5 Vloeibare Collageen Kopen | Beste Opname — Perzik",
-      "description": "HL5 vloeibaar collageen: 3x betere opname dan poeder. 5g Type 1&3 + Vitamine C + Hyaluronzuur. 30 dagen garantie.",
+      "description": "HL5 vloeibaar collageen: 3x betere opname dan poeder. 5g Type 1&3 + FOS + appelciderazijn. 30 dagen garantie.",
       "keywords": [
         "collageen",
         "vloeibaar collageen",
