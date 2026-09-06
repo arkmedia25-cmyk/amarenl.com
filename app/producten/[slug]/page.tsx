@@ -153,7 +153,7 @@ export default async function ProductPage({ params }: Props) {
             <div className="relative aspect-square rounded-2xl overflow-hidden bg-white border border-[var(--color-border)] shadow-sm">
               <Image
                 src={product.image || "/images/og-default.jpg"}
-                alt={product.nameNL}
+                alt={product.images?.alt || product.nameNL}
                 fill
                 className="object-contain p-6"
                 priority

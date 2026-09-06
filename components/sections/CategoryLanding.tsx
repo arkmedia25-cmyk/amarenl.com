@@ -75,7 +75,7 @@ export default function CategoryLanding({ category, categorySlug }: Props) {
                   <div className="relative aspect-square rounded-2xl overflow-hidden mb-4 bg-[var(--color-bg-soft)]">
                     <Image
                       src={product.image}
-                      alt={product.name}
+                      alt={product.images?.alt || product.name}
                       fill
                       className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                     />

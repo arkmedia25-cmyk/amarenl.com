@@ -70,7 +70,7 @@ export default function ProductGrid() {
                 <div className="relative aspect-square rounded-2xl overflow-hidden mb-4 bg-[var(--color-bg-soft)]">
                   <Image
                     src={product.image}
-                    alt={product.nameNL}
+                    alt={product.images?.alt || product.nameNL}
                     fill
                     className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                   />

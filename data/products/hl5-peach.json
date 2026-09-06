@@ -18,13 +18,29 @@
   },
   "images": {
     "primary": "/images/products/hl5.jpg",
-    "alt": "Amare HL5 Vloeibare Collageen — Perzik smaak"
+    "alt": "Amare HL5 Vloeibare Collageen (Perzik) — Vloeibare collageen voor huid, haar en nagels"
   },
   "ingredients": [
-    { "name": "Gehydrolyseerd rundercollageen (Type 1 & 3)", "amount": "5 g", "form": "vloeibare peptiden" },
-    { "name": "Fructo-oligosachariden (FOS)", "amount": "322,8 mg", "form": "prebiotische vezel" },
-    { "name": "Appelciderazijnpoeder", "amount": "242 mg", "form": "poeder" },
-    { "name": "Erytritol, citroenzuur, xanthaangom, kaliumsorbaat, steviolglycosiden", "amount": "—", "form": "zoetstof / smaak / conservering" }
+    {
+      "name": "Gehydrolyseerd rundercollageen (Type 1 & 3)",
+      "amount": "5 g",
+      "form": "vloeibare peptiden"
+    },
+    {
+      "name": "Fructo-oligosachariden (FOS)",
+      "amount": "322,8 mg",
+      "form": "prebiotische vezel"
+    },
+    {
+      "name": "Appelciderazijnpoeder",
+      "amount": "242 mg",
+      "form": "poeder"
+    },
+    {
+      "name": "Erytritol, citroenzuur, xanthaangom, kaliumsorbaat, steviolglycosiden",
+      "amount": "—",
+      "form": "zoetstof / smaak / conservering"
+    }
   ],
   "benefits": [
     "Vloeibaar = tot 90% opname (poeder slechts ~30%)",
@@ -58,12 +74,28 @@
     "value": 4.8,
     "count": 89
   },
-  "relatedProducts": ["neu-collageen", "skin-to-mind"],
-  "tags": ["collageen", "vloeibaar collageen", "hl5", "huid", "haar", "nagels"],
+  "relatedProducts": [
+    "neu-collageen",
+    "skin-to-mind"
+  ],
+  "tags": [
+    "collageen",
+    "vloeibaar collageen",
+    "hl5",
+    "huid",
+    "haar",
+    "nagels"
+  ],
   "seo": {
     "title": "Amare HL5 Vloeibare Collageen Kopen | Beste Opname — Perzik",
     "description": "HL5 vloeibaar collageen: 3x betere opname dan poeder. 5g Type 1&3 + FOS + appelciderazijn. 30 dagen garantie.",
-    "keywords": ["collageen", "vloeibaar collageen", "hl5", "collageen supplement", "beste collageen"]
+    "keywords": [
+      "collageen",
+      "vloeibaar collageen",
+      "hl5",
+      "collageen supplement",
+      "beste collageen"
+    ]
   },
   "isNew": false,
   "isBestseller": true,
