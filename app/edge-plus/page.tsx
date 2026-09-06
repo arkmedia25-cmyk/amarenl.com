@@ -15,19 +15,19 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
-  { question: "Bevat EDGE+ cafeïne?", answer: "Nee, EDGE+ is volledig cafeïnevrij. Het ondersteunt focus en energie via pantotheenzuur (Vit B5) en adaptogene plantenextracten — zonder stimulanten en zonder crash. Perfect voor mensen die gevoelig zijn voor cafeïne of 's middags nog willen kunnen slapen." },
-  { question: "Wat is het verschil tussen EDGE+ en Energy+?", answer: "Energy+ bevat natuurlijke cafeïne (27,64 mg) en L-glycine voor actieve energie. EDGE+ is cafeïnevrij en richt zich op langdurige mentale focus via Vitamine B5, goji, mango-extract en Boswellia. Ze vullen elkaar goed aan — Energy+ voor energie, EDGE+ voor focus." },
+  { question: "Bevat EDGE+ Watermelon cafeïne?", answer: "Nee, EDGE+ Watermelon is volledig cafeïnevrij. Het ondersteunt focus en energie via pantotheenzuur (Vit B5) en adaptogene plantenextracten — zonder stimulanten en zonder crash. Perfect voor mensen die gevoelig zijn voor cafeïne of 's middags nog willen kunnen slapen. (Let op: de Mango-variant van EDGE+ bevat wél 75 mg natuurlijke cafeïne per stickpack.)" },
+  { question: "Wat is het verschil tussen EDGE+ Watermelon en Energy+?", answer: "Energy+ bevat natuurlijke cafeïne (27,64 mg) en L-glycine voor actieve energie. EDGE+ Watermelon is cafeïnevrij en richt zich op langdurige mentale focus via Vitamine B5, goji, mango-extract en Boswellia. Ze vullen elkaar goed aan — Energy+ voor energie, EDGE+ Watermelon voor focus." },
   { question: "Hoe snel werkt EDGE+?", answer: "EDGE+ is geen stimulant — je voelt niet binnen 10 minuten een 'kick'. Het ondersteunt je natuurlijke focus en energiemetabolisme. De meeste gebruikers merken na 1-2 weken consistent gebruik verschil in mentale helderheid en concentratie." },
   { question: "Kan ik EDGE+ combineren met koffie?", answer: "Ja, EDGE+ is cafeïnevrij dus het combineert prima met je ochtendkoffie. Het voegt focus en adaptogene ondersteuning toe zonder extra cafeïne." },
   { question: "Welke smaken zijn er?", answer: "EDGE+ is verkrijgbaar in Mango (mix met water) en Watermelon (mix met water). Beide zijn fris, natuurlijk van smaak — geen chemische nasmaak." },
 ];
 
 export default function EdgePlusPage() {
-  const product = getProduct("edge-mango");
-  const img = product?.images?.primary || "https://amarecdn.azureedge.net/webassets/web/prod/products/EU_Mango_800_25.jpg";
+  const product = getProduct("edge-watermelon");
+  const img = product?.images?.primary || "https://amarecdn.azureedge.net/webassets/web/prod/products/EU_Watermelon_800_25.jpg";
 
   const schema = combineSchemas(
-    generateProductSchema({ name: "Amare EDGE+™ Mango", nameNL: "Amare EDGE+™ Mango", description: "EDGE+ is Amare's cafeïnevrije, plantaardige nootropicum met pantotheenzuur (Vit B5, 3 mg), goji, mango-extract, Terminalia chebula en Boswellia serrata. Ondersteunt focus, energiemetabolisme en dagelijkse vitaliteit.", image: img, slug: "edge-plus", priceRetail: 86.00, priceSubscription: 77.28, ratingValue: 4.5, ratingCount: 500, affiliateUrl: "https://www.amare.com/susp_2075008/nl-nl/amareedge-plus-mango" }),
+    generateProductSchema({ name: "Amare EDGE+™ Watermelon", nameNL: "Amare EDGE+™ Watermelon", description: "EDGE+ Watermelon is Amare's cafeïnevrije, plantaardige nootropicum met pantotheenzuur (Vit B5, 3 mg), goji, mango-extract, Terminalia chebula en Boswellia serrata. Ondersteunt focus, energiemetabolisme en dagelijkse vitaliteit. (De Mango-variant van EDGE+ bevat wél 75 mg natuurlijke cafeïne.)", image: img, slug: "edge-plus", priceRetail: 86.00, priceSubscription: 77.28, ratingValue: 4.5, ratingCount: 500, affiliateUrl: "https://www.amare.com/susp_2075008/nl-nl/amareedge-plus-watermelon" }),
     generateFAQSchema(faqs),
     generateBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "EDGE+", url: "/edge-plus" }])
   );
@@ -41,10 +41,10 @@ export default function EdgePlusPage() {
     <section className="bg-[var(--color-bg-soft)] border-y border-[var(--color-border)]">
       <div className="container-page py-12 md:py-20">
         <div className="grid md:grid-cols-2 gap-10 items-center max-w-5xl mx-auto">
-          <div className="relative aspect-square rounded-2xl overflow-hidden bg-white border border-[var(--color-border)]"><Image src={img} alt="Amare EDGE+ Mango — cafeïnevrij nootropicum" fill className="object-contain p-6" priority /></div>
+          <div className="relative aspect-square rounded-2xl overflow-hidden bg-white border border-[var(--color-border)]"><Image src={img} alt="Amare EDGE+ Watermelon — cafeïnevrij nootropicum" fill className="object-contain p-6" priority /></div>
           <div>
             <div className="inline-flex items-center gap-2 mb-4"><span className="bg-[var(--color-primary)] text-white text-[9px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Cafeïnevrij</span><span className="text-[9px] text-[var(--color-text-muted)]">⭐ 4.5/5 (500+ reviews)</span></div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-cormorant font-bold text-[var(--color-text)] mb-4 leading-tight">Amare <span className="text-[var(--color-primary)]">EDGE+™</span> Mango</h1>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-cormorant font-bold text-[var(--color-text)] mb-4 leading-tight">Amare <span className="text-[var(--color-primary)]">EDGE+™</span> Watermelon</h1>
             <p className="text-lg text-[var(--color-text-muted)] mb-2 leading-relaxed">Het cafeïnevrije nootropicum voor focus, drive en dagelijkse mentale helderheid.</p>
             <p className="text-sm text-[var(--color-text-muted)] mb-4">Plantaardig, adaptogeen, geen crash. <strong>Direct van Amare.</strong></p>
             <div className="flex flex-wrap gap-2 mb-4">
@@ -54,10 +54,10 @@ export default function EdgePlusPage() {
             </div>
             <p className="text-[10px] text-[var(--color-text-muted)] mb-5 italic">Voedingssupplement. Geen geneesmiddel. De NVWA heeft de gezondheidsclaims van de gebruikte ingrediënten beoordeeld.</p>
             <div className="flex flex-col sm:flex-row gap-3 mb-4">
-              <AffiliateCTA label="Probeer nu → €77,28/maand" product="edge-mango" variant="primary" />
-              <AffiliateCTA label="Of eenmalig €86,00" product="edge-mango" variant="secondary" />
+              <AffiliateCTA label="Probeer nu → €77,28/maand" product="edge-watermelon" variant="primary" />
+              <AffiliateCTA label="Of eenmalig €86,00" product="edge-watermelon" variant="secondary" />
             </div>
-            <p className="text-[9px] text-[var(--color-text-muted)]">* Ook verkrijgbaar in Watermelon. Abonnement op elk moment opzegbaar.</p>
+            <p className="text-[9px] text-[var(--color-text-muted)]">* Ook verkrijgbaar in Mango (bevat 75 mg natuurlijke cafeïne). Abonnement op elk moment opzegbaar.</p>
           </div>
         </div>
       </div>
@@ -90,7 +90,7 @@ export default function EdgePlusPage() {
         <h2 className="text-2xl md:text-3xl font-cormorant font-bold text-[var(--color-text)] mb-6">Hoe gebruik je EDGE+?</h2>
         <div className="bg-white rounded-xl p-6 border border-[var(--color-border)]">
           <ol className="space-y-4">
-            <li className="flex gap-4"><span className="flex-shrink-0 w-7 h-7 rounded-full bg-[var(--color-primary)] text-white text-xs font-bold flex items-center justify-center">1</span><div><strong className="text-sm text-[var(--color-text)]">Meng 1 stickpack met 250 ml koud water</strong><p className="text-xs text-[var(--color-text-muted)] mt-1">Gebruik koud of lauw water — niet met kokend water mengen. Roer goed door tot het poeder volledig is opgelost. De Mango-smaak maakt het een aangenaam ochtendritueel.</p></div></li>
+            <li className="flex gap-4"><span className="flex-shrink-0 w-7 h-7 rounded-full bg-[var(--color-primary)] text-white text-xs font-bold flex items-center justify-center">1</span><div><strong className="text-sm text-[var(--color-text)]">Meng 1 stickpack met 250 ml koud water</strong><p className="text-xs text-[var(--color-text-muted)] mt-1">Gebruik koud of lauw water — niet met kokend water mengen. Roer goed door tot het poeder volledig is opgelost. De Watermelon-smaak maakt het een aangenaam ochtendritueel.</p></div></li>
             <li className="flex gap-4"><span className="flex-shrink-0 w-7 h-7 rounded-full bg-[var(--color-primary)] text-white text-xs font-bold flex items-center justify-center">2</span><div><strong className="text-sm text-[var(--color-text)]">Neem bij voorkeur in de ochtend of vroege middag</strong><p className="text-xs text-[var(--color-text-muted)] mt-1">EDGE+ is cafeïnevrij — dus ook geschikt voor de middag zonder dat het je nachtrust verstoort. Neem het bij het ontbijt of bij de lunch voor kalme, aanhoudende focus gedurende de dag.</p></div></li>
             <li className="flex gap-4"><span className="flex-shrink-0 w-7 h-7 rounded-full bg-[var(--color-primary)] text-white text-xs font-bold flex items-center justify-center">3</span><div><strong className="text-sm text-[var(--color-text)]">Dagelijks gebruiken voor het beste resultaat</strong><p className="text-xs text-[var(--color-text-muted)] mt-1">EDGE+ is ontworpen voor dagelijkse inname. De adaptogenen en pantotheenzuur werken cumulatief — hoe consistenter je gebruik, hoe beter de resultaten. Maak het onderdeel van je ochtend- of middagritueel.</p></div></li>
           </ol>
@@ -130,7 +130,7 @@ export default function EdgePlusPage() {
       <div className="container-page max-w-3xl text-center">
         <h2 className="text-2xl md:text-3xl font-cormorant font-bold text-white mb-3">Focus zonder cafeïne — het kan</h2>
         <p className="text-sm text-white/80 mb-6 max-w-lg mx-auto">Probeer EDGE+ 30 dagen risicovrij. Niet tevreden? Geld terug.</p>
-        <AffiliateCTA label="Bestel EDGE+ → €77,28/maand" product="edge-mango" variant="urgency" />
+        <AffiliateCTA label="Bestel EDGE+ → €77,28/maand" product="edge-watermelon" variant="urgency" />
         <p className="mt-4 text-[10px] text-white/60">🛡️ 30 dagen geld-terug-garantie &middot; 🚚 Gratis verzending vanaf €175 &middot; 📦 Direct van Amare</p>
       </div>
     </section>
@@ -145,14 +145,14 @@ export default function EdgePlusPage() {
             <div className="text-3xl font-bold text-[var(--color-text)] mb-1">€77,28<span className="text-sm font-normal text-[var(--color-text-muted)]">/maand</span></div>
             <p className="text-xs text-[var(--color-text-muted)] mb-4">Elke maand automatisch geleverd. Op elk moment opzegbaar.</p>
             <ul className="space-y-1 mb-4 text-xs text-[var(--color-text-muted)]"><li>✓ €8,72 goedkoper per maand</li><li>✓ Nooit zonder voorraad</li><li>✓ Gratis verzending</li></ul>
-            <AffiliateCTA label="Start abonnement →" product="edge-mango" variant="primary" />
+            <AffiliateCTA label="Start abonnement →" product="edge-watermelon" variant="primary" />
           </div>
           <div className="rounded-xl p-6 border border-[var(--color-border)]">
             <div className="text-[10px] font-bold text-[var(--color-text-muted)] uppercase tracking-wider mb-2">Eenmalige aankoop</div>
             <div className="text-3xl font-bold text-[var(--color-text)] mb-1">€86,00</div>
             <p className="text-xs text-[var(--color-text-muted)] mb-4">Eenmalig bestellen, geen verplichtingen.</p>
             <ul className="space-y-1 mb-4 text-xs text-[var(--color-text-muted)]"><li>✓ Vrijblijvend</li><li>✓ 30 stickpacks per verpakking</li><li>✓ Verzending €4,95</li></ul>
-            <AffiliateCTA label="Eenmalig bestellen →" product="edge-mango" variant="secondary" />
+            <AffiliateCTA label="Eenmalig bestellen →" product="edge-watermelon" variant="secondary" />
           </div>
         </div>
       </div>
@@ -171,7 +171,7 @@ export default function EdgePlusPage() {
           <h2 className="text-2xl font-cormorant font-bold text-[var(--color-text)] mb-3">Ervaar het verschil van echte focus</h2>
           <p className="text-sm text-[var(--color-text-muted)] mb-6 max-w-md mx-auto">EDGE+ — cafeïnevrij nootropicum met pantotheenzuur en adaptogenen. 30 dagen risicovrij proberen.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-3 mb-4">
-            <AffiliateCTA label="Bestel Amare EDGE+ →" product="edge-mango" variant="primary" />
+            <AffiliateCTA label="Bestel Amare EDGE+ →" product="edge-watermelon" variant="primary" />
             <AffiliateCTA label="Of bekijk alle producten" product="" variant="secondary" />
           </div>
           <div className="flex flex-wrap justify-center gap-4 text-[10px] font-bold text-[var(--color-text-muted)] uppercase tracking-wider">
@@ -188,7 +188,7 @@ export default function EdgePlusPage() {
         </div>
       </div>
     
-      <StickyMobileCTA product="amareedge-plus-mango" subscriptionPrice="€77,28" />
+      <StickyMobileCTA product="edge-watermelon" subscriptionPrice="€77,28" />
 </section>
   </>);
 }

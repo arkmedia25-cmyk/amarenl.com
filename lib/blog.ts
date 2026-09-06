@@ -2172,7 +2172,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
 "stress-verminderen-supplementen-cortisol-ontspanning": [
     { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71,83/maand", tagline: "Psychobiotica voor stressmodulatie via de gut-brain axis" },
     { name: "Amare MentaBiotics", url: `${AFFILIATE_BASE}/mentabiotics`, isInternal: false, price: "€71,83/maand", tagline: "Klinisch onderzochte psychobiotica voor mentale veerkracht" },
-    { name: "EDGE+", url: `${AFFILIATE_BASE}/amareedge-plus-mango`, isInternal: false, price: "€77,28/maand", tagline: "Cafeïnevrij nootropicum — gojibes, Boswellia serrata, vitamine B5" }
+    { name: "EDGE+ Watermelon", url: `${AFFILIATE_BASE}/amareedge-plus-watermelon`, isInternal: false, price: "€77,28/maand", tagline: "Cafeïnevrij nootropicum — gojibes, Boswellia serrata, vitamine B5" }
   ],
 "natuurlijke-afvallen-supplementen-metabolisme": [
     { name: "Amare Restore", url: "/restore", isInternal: true, price: "€29,70/maand", tagline: "9 plantaardige stoffen, 5 bacteriestammen en 5 spijsverteringsenzymen — ondersteunt spijsvertering en stofwisseling" },
@@ -2280,7 +2280,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "Amare Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Omega-3 (EPA/DHA) voor hart, brein & gewrichten" },
   ],
   "adaptogenen-natuurlijke-stressverlichting-ashwagandha-rhodiola": [
-    { name: "EDGE+", url: `${AFFILIATE_BASE}/amareedge-plus-mango`, isInternal: false, price: "€77,28/maand", tagline: "Cafeïnevrij nootropicum — gojibes, Boswellia serrata, vitamine B5" },
+    { name: "EDGE+ Watermelon", url: `${AFFILIATE_BASE}/amareedge-plus-watermelon`, isInternal: false, price: "€77,28/maand", tagline: "Cafeïnevrij nootropicum — gojibes, Boswellia serrata, vitamine B5" },
     { name: "Happy Juice Pack", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — energie, stemming & focus in één pakket" },
   ],
   "collageen-supplement-huid-haar-gewrichten": [

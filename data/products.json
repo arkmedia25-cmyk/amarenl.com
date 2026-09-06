@@ -1109,10 +1109,10 @@
     "nameNL": "Amare EDGE+™ Mango",
     "shortNameNL": "Amare EDGE+™ Mango",
     "category": "hersenen",
-    "taglineNL": "Plantaardig nootropicum voor drive & focus",
+    "taglineNL": "Plantaardig nootropicum met natuurlijke cafeïne voor focus & alertheid",
     "description": {
-      "short": "Plantaardig nootropicum voor drive & focus",
-      "long": "Amare EDGE+™ is een cafeïnevrij, plantaardig nootropicum met pantotheenzuur (vitamine B5, 3 mg, 50% RI) dat bijdraagt aan een normaal energieleverend metabolisme, de normale synthese van steroïde hormonen en neurotransmitters, en de vermindering van vermoeidheid. Bevat mango-extract, goji (Lycium barbarum), Terminalia chebula, Boswellia serrata (wierook) en bètacaroteen."
+      "short": "Nootropicum met natuurlijke cafeïne voor focus & alertheid",
+      "long": "Amare EDGE+™ Mango is zorgvuldig samengesteld met mango-extract, Lycium barbarum (gojibes), Terminalia chebula, Boswellia serrata (wierook) en natuurlijke cafeïne (75 mg per stickpack, uit Coffea arabica), speciaal geselecteerd ter ondersteuning van cognitieve prestaties en alertheid. Bevat cafeïne — niet aanbevolen voor kinderen, zwangere of zogende vrouwen, of mensen die gevoelig zijn voor cafeïne."
     },
     "pricing": {
       "subscription": 77.28,
@@ -1123,7 +1123,134 @@
     },
     "images": {
       "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/EU_Mango_800_25.jpg",
-      "alt": "Amare EDGE+™ Mango — Plantaardig nootropicum voor drive & focus"
+      "alt": "Amare EDGE+™ Mango — Nootropicum met natuurlijke cafeïne voor focus & alertheid"
+    },
+    "ingredients": [
+      {
+        "name": "Isomalto-oligosacharide",
+        "amount": "—",
+        "form": "prebiotische vezel"
+      },
+      {
+        "name": "Cafeïne (uit Coffea arabica bonenextract)",
+        "amount": "75 mg per stickpack (3,1 g)",
+        "form": "natuurlijke cafeïne"
+      },
+      {
+        "name": "Terminalia chebula vruchtenextract",
+        "amount": "—",
+        "form": "zwarte chebulische vrucht"
+      },
+      {
+        "name": "Mango vruchtenextract (Mangifera indica)",
+        "amount": "—"
+      },
+      {
+        "name": "Boswellia serrata hars-extract (wierook)",
+        "amount": "—"
+      },
+      {
+        "name": "Goji vruchtenextract (Lycium barbarum)",
+        "amount": "—"
+      }
+    ],
+    "benefits": [
+      "Natuurlijke cafeïne (75 mg) uit Coffea arabica voor concentratie en alertheid",
+      "Terminalia chebula extract — Ayurvedisch adaptogeen",
+      "Boswellia serrata (wierook) extract",
+      "Mango- en goji-extracten voor natuurlijke antioxidanten",
+      "Plantaardige formule zonder synthetische stimulanten"
+    ],
+    "usage": {
+      "dosage": "Meng 1 stickpack (3,1 g) in 250 ml water en drinken. Bevat cafeïne (75 mg/3,1 g). Niet aanbevolen voor kinderen, zwangere of zogende vrouwen of personen die gevoelig zijn voor cafeïne, en niet voor kinderen jonger dan 18 jaar. Overschrijd geen 400 mg cafeïne per dag uit alle bronnen samen (200 mg voor zwangere/zogende vrouwen). Raadpleeg uw arts bij gebruik van anticoagulantia of andere medicatie.",
+      "timing": "Bij voorkeur in de ochtend — bevat cafeïne, dus niet aanbevolen laat op de dag",
+      "duration": "Effect merkbaar vanaf de eerste inname (cafeïne); adaptogene ondersteuning na 3-4 weken consistent gebruik"
+    },
+    "mechanismNL": "Natuurlijke cafeïne uit Coffea arabica helpt de concentratie te verbeteren en de alertheid te verhogen. De adaptogene plantenextracten (Terminalia chebula, Boswellia, goji) bevatten daarnaast bioactieve stoffen die het lichaam helpen omgaan met dagelijkse stress.",
+    "targetAudienceNL": "Volwassenen die een natuurlijke cafeïnebron zoeken voor mentale focus en alertheid, gecombineerd met adaptogene plantenextracten. Niet geschikt voor cafeïnegevoelige mensen, zwangere/zogende vrouwen of kinderen — voor hen is EDGE+ Watermelon (cafeïnevrij) een alternatief.",
+    "faqs": [
+      {
+        "q": "Bevat Amare EDGE+ Mango cafeïne?",
+        "a": "Ja, EDGE+ Mango bevat 75 mg natuurlijke cafeïne (uit Coffea arabica) per stickpack van 3,1 g. Niet aanbevolen voor kinderen, zwangere of zogende vrouwen, of mensen die gevoelig zijn voor cafeïne. Zoek je een cafeïnevrij alternatief? Kies dan EDGE+ Watermelon."
+      },
+      {
+        "q": "Wat is het verschil tussen EDGE+ Mango en Energy+?",
+        "a": "Beide bevatten natuurlijke cafeïne. Energy+ combineert cafeïne met Vitamine C en L-glycine voor een directe energieboost. EDGE+ Mango combineert een hogere cafeïnedosis (75 mg) met adaptogene plantenextracten (Terminalia chebula, Boswellia, goji) voor focus en alertheid."
+      },
+      {
+        "q": "Kan ik EDGE+ Mango dagelijks gebruiken?",
+        "a": "De aanbevolen dosering is 1 stickpack per dag. Let op je totale dagelijkse cafeïne-inname uit alle bronnen (koffie, thee, andere supplementen) — de EU-richtlijn adviseert niet meer dan 400 mg cafeïne per dag."
+      }
+    ],
+    "affiliate": {
+      "url": "https://www.amare.com/susp_2075008/nl-nl/amareedge-plus-mango",
+      "sourceTag": "amarenl-product-page"
+    },
+    "ratings": {
+      "value": 4.5,
+      "count": 500
+    },
+    "relatedProducts": [
+      "energy",
+      "mentabiotics"
+    ],
+    "tags": [
+      "natuurlijk nootropicum",
+      "cafeïne supplement natuurlijk",
+      "focus supplement cafeïne",
+      "adaptogeen supplement",
+      "alertheid supplement"
+    ],
+    "seo": {
+      "title": "Amare EDGE+™ Mango Kopen | Beste Prijs Nederland 2026",
+      "description": "Nootropicum met natuurlijke cafeïne voor focus & alertheid",
+      "keywords": [
+        "natuurlijk nootropicum",
+        "cafeïne supplement natuurlijk",
+        "focus supplement cafeïne",
+        "adaptogeen supplement",
+        "alertheid supplement"
+      ]
+    },
+    "synergies": [
+      "energy",
+      "mentabiotics"
+    ],
+    "seoKeywordsNL": [
+      "natuurlijk nootropicum",
+      "cafeïne supplement natuurlijk",
+      "focus supplement cafeïne",
+      "adaptogeen supplement",
+      "alertheid supplement"
+    ],
+    "isNew": false,
+    "isBestseller": true,
+    "isPack": false,
+    "priority": 8,
+    "publishedAt": "2024-01-15",
+    "updatedAt": "2026-09-06"
+  },
+  {
+    "slug": "edge-watermelon",
+    "name": "Amare EDGE+™ Watermelon",
+    "nameNL": "Amare EDGE+™ Watermelon",
+    "shortNameNL": "Amare EDGE+™ Watermelon",
+    "category": "hersenen",
+    "taglineNL": "Cafeïnevrij nootropicum voor drive & focus",
+    "description": {
+      "short": "Cafeïnevrij nootropicum voor drive & focus",
+      "long": "Amare EDGE+™ Watermelon is een cafeïnevrij, plantaardig nootropicum met pantotheenzuur (vitamine B5, 3 mg, 50% RI) dat bijdraagt aan een normaal energieleverend metabolisme, de normale synthese van steroïde hormonen en neurotransmitters, en de vermindering van vermoeidheid. Bevat mango-extract, goji (Lycium barbarum), Terminalia chebula, Boswellia serrata (wierook) en bètacaroteen."
+    },
+    "pricing": {
+      "subscription": 77.28,
+      "oneTime": 86,
+      "currency": "EUR",
+      "savings": 8.72,
+      "savingsPercent": 10.1
+    },
+    "images": {
+      "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/EU_Watermelon_800_25.jpg",
+      "alt": "Amare EDGE+™ Watermelon — Cafeïnevrij nootropicum voor drive & focus"
     },
     "ingredients": [
       {
@@ -1152,6 +1279,11 @@
       {
         "name": "Goji vruchtenextract (Lycium barbarum)",
         "amount": "50 mg"
+      },
+      {
+        "name": "Bètacaroteen",
+        "amount": "—",
+        "form": "kleurstof, tevens provitamine A"
       }
     ],
     "benefits": [
@@ -1162,28 +1294,28 @@
       "Cafeïnevrij — geen crash of slaapproblemen"
     ],
     "usage": {
-      "dosage": "Meng 1 stickpack (3,9 g) in 250 ml water en drinken. Eenmaal per dag. Niet geschikt voor kinderen onder 10 jaar. Bevat isomalto-oligosacharide (bron van glucose).",
-      "timing": "Raadpleeg de verpakking",
+      "dosage": "Meng 1 stickpack in 250 ml water en drinken. Eenmaal per dag. Niet geschikt voor kinderen onder 12 jaar. Bevat isomalto-oligosacharide (bron van glucose).",
+      "timing": "'s Ochtends of in de vroege middag — cafeïnevrij, dus ook geschikt zonder je nachtrust te verstoren",
       "duration": "Eerste effecten na 3-4 weken consistent gebruik"
     },
     "mechanismNL": "Pantotheenzuur (Vit B5) is essentieel voor de synthese van co-enzym A, dat een sleutelrol speelt in het energiemetabolisme, de aanmaak van steroïde hormonen, vitamine D en neurotransmitters. De adaptogene plantenextracten (Terminalia chebula, Boswellia, goji) bevatten bioactieve stoffen die het lichaam helpen omgaan met dagelijkse stress.",
-    "targetAudienceNL": "Volwassenen die een cafeïnevrij alternatief zoeken voor mentale focus, energie en dagelijkse vitaliteit. Ideaal voor drukke professionals, studenten en actieve levensstijlen.",
+    "targetAudienceNL": "Volwassenen die een cafeïnevrij alternatief zoeken voor mentale focus, energie en dagelijkse vitaliteit — met name cafeïnegevoelige mensen en wie ook 's middags nog wil kunnen slapen. Ideaal voor drukke professionals, studenten en actieve levensstijlen.",
     "faqs": [
       {
-        "q": "Bevat Amare EDGE+ cafeïne?",
-        "a": "Nee, EDGE+ is volledig cafeïnevrij. Het ondersteunt energie en focus via pantotheenzuur (Vit B5) en adaptogene plantenextracten — zonder stimulanten en zonder crash."
+        "q": "Bevat Amare EDGE+ Watermelon cafeïne?",
+        "a": "Nee, EDGE+ Watermelon is volledig cafeïnevrij. Het ondersteunt energie en focus via pantotheenzuur (Vit B5) en adaptogene plantenextracten — zonder stimulanten en zonder crash. (De Mango-variant van EDGE+ bevat wél natuurlijke cafeïne — 75 mg per stickpack.)"
       },
       {
-        "q": "Wat is het verschil tussen EDGE+ en Energy+?",
-        "a": "Energy+ bevat Vitamine C, L-glycine en natuurlijke cafeïne (27,64 mg) voor een actieve energieboost. EDGE+ is cafeïnevrij en richt zich op langdurige mentale focus via Vitamine B5 en adaptogene extracten. Beide vullen elkaar goed aan."
+        "q": "Wat is het verschil tussen EDGE+ Watermelon en Energy+?",
+        "a": "Energy+ bevat Vitamine C, L-glycine en natuurlijke cafeïne (27,64 mg) voor een actieve energieboost. EDGE+ Watermelon is cafeïnevrij en richt zich op langdurige mentale focus via Vitamine B5 en adaptogene extracten. Beide vullen elkaar goed aan."
       },
       {
-        "q": "Kan ik EDGE+ dagelijks gebruiken?",
-        "a": "Ja, EDGE+ is ontworpen voor dagelijks gebruik. De aanbevolen dosering is 1 stickpack per dag."
+        "q": "Kan ik EDGE+ Watermelon dagelijks gebruiken?",
+        "a": "Ja, EDGE+ Watermelon is ontworpen voor dagelijks gebruik. De aanbevolen dosering is 1 stickpack per dag."
       }
     ],
     "affiliate": {
-      "url": "https://www.amare.com/susp_2075008/nl-nl/amareedge-plus-mango",
+      "url": "https://www.amare.com/susp_2075008/nl-nl/amareedge-plus-watermelon",
       "sourceTag": "amarenl-product-page"
     },
     "ratings": {
@@ -1192,7 +1324,7 @@
     },
     "relatedProducts": [
       "energy",
-      "amare-mentabiotics"
+      "mentabiotics"
     ],
     "tags": [
       "natuurlijk nootropicum",
@@ -1202,8 +1334,8 @@
       "vitamine B5 energie"
     ],
     "seo": {
-      "title": "Amare EDGE+™ Mango Kopen | Beste Prijs Nederland 2026",
-      "description": "Plantaardig nootropicum voor drive & focus",
+      "title": "Amare EDGE+™ Watermelon Kopen | Beste Prijs Nederland 2026",
+      "description": "Cafeïnevrij nootropicum voor drive & focus",
       "keywords": [
         "natuurlijk nootropicum",
         "focus supplement cafeïnevrij",
@@ -1214,7 +1346,7 @@
     },
     "synergies": [
       "energy",
-      "amare-mentabiotics"
+      "mentabiotics"
     ],
     "seoKeywordsNL": [
       "natuurlijk nootropicum",
@@ -1223,100 +1355,12 @@
       "adaptogeen supplement",
       "vitamine B5 energie"
     ],
-    "isNew": false,
-    "isBestseller": true,
-    "isPack": false,
-    "priority": 8,
-    "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17"
-  },
-  {
-    "slug": "edge-watermelon",
-    "name": "Amare EDGE+™ Watermelon",
-    "nameNL": "Amare EDGE+™ Watermelon",
-    "shortNameNL": "Amare EDGE+™ Watermelon",
-    "category": "hersenen",
-    "taglineNL": "Mentale focus & veerkracht",
-    "description": {
-      "short": "Cafeïnevrij nootropicum voor focus, met watermeloensmaak",
-      "long": "Amare EDGE+™ Watermelon is een cafeïnevrij, plantaardig nootropicum dat mentale helderheid en focus ondersteunt via pantotheenzuur (vitamine B5) en zorgvuldig gekozen adaptogene plantenextracten — mango-extract, gojivrucht (Lycium barbarum) en wierook (Boswellia serrata). Zonder cafeïne, synthetische stimulanten of proprietary blends: elke stof is bewust gekozen voor kalme, aanhoudende focus."
-    },
-    "pricing": {
-      "subscription": 77.28,
-      "oneTime": 86,
-      "currency": "EUR",
-      "savings": 8.72,
-      "savingsPercent": 10.1
-    },
-    "images": {
-      "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/EU_Watermelon_800_25.jpg",
-      "alt": "Amare EDGE+™ Watermelon — Cafeïnevrij nootropicum voor focus, met watermeloensmaak"
-    },
-    "benefits": [
-      "Cafeïnevrij — geschikt voor cafeïnegevoeligen",
-      "Ondersteunt kalme, aanhoudende focus zonder crash",
-      "Plantaardige adaptogenen: mango, goji, wierook, zwarte mirabolaan",
-      "Ook geschikt voor de middag zonder invloed op nachtrust"
-    ],
-    "usage": {
-      "dosage": "1 stick mengen met 250 ml water.",
-      "timing": "Dagelijks, geschikt voor ochtend of middag — cafeïnevrij, verstoort de nachtrust niet.",
-      "duration": "Eerste effecten na 3-4 weken consistent gebruik."
-    },
-    "affiliate": {
-      "url": "https://www.amare.com/susp_2075008/nl-nl/amareedge-plus-watermelon",
-      "sourceTag": "amarenl-product-page"
-    },
-    "relatedProducts": [],
-    "tags": [],
-    "seo": {
-      "title": "Amare EDGE+™ Watermelon Kopen | Beste Prijs Nederland 2026",
-      "description": "Mentale focus & veerkracht",
-      "keywords": []
-    },
-    "isNew": false,
+    "isNew": true,
     "isBestseller": false,
     "isPack": false,
     "priority": 9,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17",
-    "mechanismNL": "Meng 1 stick met 250 ml water en drink dagelijks. Pantotheenzuur draagt bij aan een normaal energieleverend metabolisme, normale mentale prestaties en vermindering van vermoeidheid en moeheid.",
-    "ingredients": [
-      {
-        "name": "Isomalto-oligosacharide",
-        "amount": "Prebiotische vezel"
-      },
-      {
-        "name": "Pantotheenzuur (vitamine B5)",
-        "amount": "D-calciumpantothenaat"
-      },
-      {
-        "name": "Extract van zwarte mirabolaan (Terminalia chebula)†",
-        "amount": ""
-      },
-      {
-        "name": "Mango (Mangifera indica) vruchtextract",
-        "amount": ""
-      },
-      {
-        "name": "Wierook (Boswellia serrata) gom-hars extract†",
-        "amount": ""
-      },
-      {
-        "name": "Goji (Lycium barbarum) vruchtextract",
-        "amount": ""
-      }
-    ],
-    "faqs": [
-      {
-        "q": "Bevat EDGE+ Watermelon cafeïne?",
-        "a": "Nee, EDGE+ is volledig cafeïnevrij. De focus-ondersteuning komt van pantotheenzuur (vitamine B5) en plantaardige adaptogenen."
-      },
-      {
-        "q": "Wat is het verschil met EDGE+ Mango?",
-        "a": "Dezelfde cafeïnevrije formule met dezelfde werkzame ingrediënten — het enige verschil is de smaak."
-      }
-    ]
+    "updatedAt": "2026-09-06"
   },
   {
     "slug": "restore",
