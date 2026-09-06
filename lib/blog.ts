@@ -139,7 +139,6 @@ export const blogPosts: BlogPost[] = [
       <tr><td>50+, algemene vitaliteit</td><td>Panax ginseng</td></tr>
       </table>
       <h2>Adaptogenen in supplementvorm</h2>
-      <p><strong>MentaFocus</strong> combineert ashwagandha (KSM-66 extract) en rhodiola met L-theanine en Alpha-GPC. Ontworpen voor professionals die onder hoge mentale druk moeten blijven presteren. Het dekt alle drie routes: cortisol (ashwagandha), mentale energie (rhodiola), en kalme focus (L-theanine).</p>
       <p><strong>Amare EDGE+</strong> is een cafeïnevrij, plantaardig nootropicum met ingrediënten als gojibes (een adaptogeen in de TCM) en Boswellia serrata. Het bevat pantotheenzuur (vitamine B5) dat bijdraagt aan normaal energieleverend metabolisme. Geschikt als dagelijks mentaal fundament.</p>
       <h2>Veelgestelde vragen</h2>
       <p><strong>Vraag: Wat is het verschil tussen adaptogenen en nootropics?</strong></p>
@@ -151,10 +150,9 @@ export const blogPosts: BlogPost[] = [
       <p><strong>Vraag: Welk adaptogeen past bij mij als ik niet weet waar ik moet beginnen?</strong></p>
       <p>Begin met ashwagandha — het best onderzocht met uitstekend veiligheidsprofiel. Start met 300 mg KSM-66 extract per dag, bij voorkeur 's avonds. Als je na 4 weken nog uitgeput bent, voeg dan rhodiola toe in de ochtend.</p>
       <h2>Conclusie</h2>
-      <p>Adaptogenen behoren tot de meest veelbelovende natuurlijke stoffen voor stressbeheersing. Ze vervangen geen stressmanagement, maar ondersteunen je stresssysteem. De beste om mee te beginnen: ashwagandha (chronische stress), rhodiola (burn-out), en L-theanine (kalme focus). Voor een alles-in-één formule is MentaFocus ontworpen. Voor een dagelijks mentaal fundament is Amare EDGE+ een moderne adaptogeen-nootropic hybride.</p>
+      <p>Adaptogenen behoren tot de meest veelbelovende natuurlijke stoffen voor stressbeheersing. Ze vervangen geen stressmanagement, maar ondersteunen je stresssysteem. De beste om mee te beginnen: ashwagandha (chronische stress), rhodiola (burn-out), en L-theanine (kalme focus). Voor een dagelijks mentaal fundament is Amare EDGE+ een moderne adaptogeen-nootropic hybride.</p>
       <p><em>Disclaimer: deze uitspraken zijn niet beoordeeld door de NVWA. Supplementen zijn geen vervanging voor een gevarieerd dieet en gezonde levensstijl.</em></p>
-      <a href="https://www.amare.com/susp_2075008/nl-nl/mentafocus" target="_blank" rel="nofollow noopener noreferrer" style="display:inline-block;background:#C8A951;color:#fff;padding:12px 24px;border-radius:9999px;font-weight:700;text-decoration:none;margin-bottom:12px">Bekijk MentaFocus bij Amare →</a>
-      <a href="https://www.amare.com/susp_2075008/nl-nl/edge" target="_blank" rel="nofollow noopener noreferrer" style="display:inline-block;background:transparent;color:#6B4C8C;border:2px solid #6B4C8C;padding:12px 24px;border-radius:9999px;font-weight:700;text-decoration:none">Ontdek Amare EDGE+ →</a>
+      <a href="https://www.amare.com/susp_2075008/nl-nl/amareedge-plus-mango" target="_blank" rel="nofollow noopener noreferrer" style="display:inline-block;background:#C8A951;color:#fff;padding:12px 24px;border-radius:9999px;font-weight:700;text-decoration:none">Ontdek Amare EDGE+ →</a>
     `,
   },
 {
@@ -195,14 +193,13 @@ export const blogPosts: BlogPost[] = [
       <table>
       <tr><th>Supplement</th><th>Belangrijkste ingrediënten</th><th>Wat het doet</th><th>Effect merkbaar na</th><th>Prijs/maand</th></tr>
       <tr><td>MentaBiotics (Amare)</td><td>Psychobiotica (L. helveticus, B. longum), prebiotica</td><td>Ondersteunt stressrespons via gut-brain axis, draagt bij aan stemming</td><td>3-4 weken</td><td>€71,83</td></tr>
-      <tr><td>MentaFocus (Amare)</td><td>Adaptogenen (ashwagandha, rhodiola, L-theanine), Alpha-GPC</td><td>Stressbestendigheid + focus + cognitie</td><td>2-4 weken</td><td>~€55</td></tr>
+      <tr><td>EDGE+ (Amare)</td><td>Gojibes, Boswellia serrata, pantotheenzuur (B5)</td><td>Cafeïnevrije focus + energiemetabolisme</td><td>2-4 weken</td><td>€77,28</td></tr>
       <tr><td>Losse ashwagandha</td><td>KSM-66 300-600 mg</td><td>Cortisol verlaging, slaapverbetering</td><td>4-6 weken</td><td>~€20</td></tr>
       <tr><td>Los magnesium</td><td>Bisglycinaat 200-400 mg</td><td>Zenuwstelsel kalmering, spierontspanning</td><td>Direct (bij tekort)</td><td>~€10</td></tr>
       <tr><td>Losse L-theanine</td><td>200 mg per dosis</td><td>Kalme focus, minder cafeïnejitters</td><td>Direct (binnen 30-60 min)</td><td>~€15</td></tr>
       </table>
       <p><strong>MentaBiotics</strong> pakt stress aan via een fundamenteel andere route dan kruiden-supplementen: het verandert de signalen die je darmen naar je brein sturen. De psychobiotica-stammen zijn klinisch onderzocht op stressvermindering en worden geassocieerd met lagere cortisolniveaus en betere emotionele veerkracht. Dit is geen quick fix — maar een structurele verandering in hoe je lichaam op stress reageert. Voor mensen met stressgerelateerde darmklachten (stressbuik, opgeblazen gevoel bij spanning) is dit de meest logische keuze.</p>
-      <p><strong>MentaFocus</strong> combineert de twee best gedocumenteerde adaptogenen (ashwagandha en rhodiola) met L-theanine voor kalme focus. De toevoeging van Alpha-GPC (een vorm van choline die de bloed-hersenbarrière passeert) ondersteunt cognitieve functie — interessant voor professionals die onder hoge druk moeten blijven presteren.</p>
-      <h2>Cortisol en hormoonbalans bij vrouwen</h2><p>Cortisol en geslachtshormonen (oestrogeen, progesteron) concurreren om dezelfde bouwstoffen in de bijnieren. Bij chronische stress geeft je lichaam voorrang aan cortisolproductie — ten koste van geslachtshormonen. Dit mechanisme verklaart waarom vrouwen in de overgang extra gevoelig zijn voor stress: hun hormoonhuishouding is al in transitie en cortisol verergert klachten zoals opvliegers, stemmingswisselingen en slaapproblemen.</p><p>Amare <strong>Ignite for HER</strong> is specifiek ontwikkeld voor de vrouwelijke hormoonbalans. Het combineert ashwagandha en maca (adaptogenen) met ingrediënten die de hormonale overgang ondersteunen — niet alleen voor vrouwen in de menopauze, maar voor elke fase waarin hormonen uit balans raken door stress.</p><h2>Stress en slaap — de vicieuze cirkel doorbreken</h2>
+      <h2>Cortisol en hormoonbalans bij vrouwen</h2><p>Cortisol en geslachtshormonen (oestrogeen, progesteron) concurreren om dezelfde bouwstoffen in de bijnieren. Bij chronische stress geeft je lichaam voorrang aan cortisolproductie — ten koste van geslachtshormonen. Dit mechanisme verklaart waarom vrouwen in de overgang extra gevoelig zijn voor stress: hun hormoonhuishouding is al in transitie en cortisol verergert klachten zoals opvliegers, stemmingswisselingen en slaapproblemen.</p><h2>Stress en slaap — de vicieuze cirkel doorbreken</h2>
       <p>Stress en slecht slapen versterken elkaar. Overdag verhoogd cortisol maakt het 's avonds moeilijker om in slaap te vallen. Slechte slaap verhoogt vervolgens je cortisol de volgende dag. Het doorbreken van deze cirkel is essentieel.</p>
       <p>Magnesium 's avonds (200-400 mg) is de meest directe interventie — het kalmeert het zenuwstelsel en ondersteunt diepere slaapfasen. Ashwagandha voor het slapengaan kan eveneens helpen — maar let op: sommige mensen worden juist alerter van ashwagandha; test het eerst op een rustige dag.</p>
       <p>Voor de slaap-stress balans zijn drie supplementen bijzonder effectief in combinatie:</p>
@@ -222,7 +219,7 @@ export const blogPosts: BlogPost[] = [
       <p>Ja, en dat is vaak effectiever dan één enkel supplement. Een combinatie van psychobiotica (MentaBiotics, 's ochtends) met L-theanine (naar behoefte overdag) en magnesium ('s avonds) dekt alle drie stress-routes: de darm-hersen route, de neurotransmitter route en de zenuwstelsel route. Houd bij het starten wel één verandering tegelijk aan: begin met één supplement, observeer het effect gedurende 2 weken, voeg dan pas een tweede toe. Zo weet je wat werkt en wat niet.</p>
       <h2>Conclusie</h2>
       <p>Supplementen kunnen chronische stress niet "genezen" — de bron van stress (werkdruk, relatieproblemen, financiële zorgen) verdwijnt niet door een pil. Maar ze kunnen je stresssysteem wél zodanig ondersteunen dat je beter met die stress omgaat, dieper slaapt en sneller herstelt.</p>
-      <p>De meest evidence-based aanpak combineert drie routes: 1. <strong>Psychobiotica</strong> (MentaBiotics, €71,83/maand) voor lange-termijn stressmodulatie via de gut-brain axis — dit pakt de onderliggende fysiologie van chronische stress aan 2. <strong>Adaptogenen</strong> (via MentaFocus, ~€55/maand, of losse ashwagandha €20/maand) voor dagelijkse stressbestendigheid en cortisolregulatie 3. <strong>Magnesium</strong> (~€10/maand) voor zenuwstelsel-kalmering en slaapkwaliteit</p>
+      <p>De meest evidence-based aanpak combineert drie routes: 1. <strong>Psychobiotica</strong> (MentaBiotics, €71,83/maand) voor lange-termijn stressmodulatie via de gut-brain axis — dit pakt de onderliggende fysiologie van chronische stress aan 2. <strong>Adaptogenen</strong> (via EDGE+, €77,28/maand, of losse ashwagandha €20/maand) voor dagelijkse stressbestendigheid en cortisolregulatie 3. <strong>Magnesium</strong> (~€10/maand) voor zenuwstelsel-kalmering en slaapkwaliteit</p>
       <p>Voor acute stress of paniekmomenten is L-theanine (200 mg) de beste directe interventie — kalmeert binnen een uur zonder sufheid.</p>
       <p>Chronische stress is te serieus om alleen met supplementen aan te pakken — professionele hulp, beweging, sociale steun en grenzen stellen blijven de basis. Supplementen zijn de ondersteuning die het makkelijker maakt om die basis op orde te krijgen en te houden.</p>
       <p>*Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij aanhoudende stressklachten of burn-outverschijnselen altijd een (huis)arts of psycholoog.*</p>
@@ -2034,12 +2031,7 @@ Amare heeft geen standalone magnesiumsupplement, maar meerdere producten bevatte
 <tr><td>Product</td><td>Magnesiumbron</td><td>Extra's</td></tr>
 <tr><td><strong>Sunrise</strong></td><td>Magnesium uit 22 superfoods</td><td>IJzer, Vitamine C, D3, B-vitamines</td></tr>
 <tr><td><strong>Energy+</strong></td><td>L-glycine + cafeïne uit groene koffieboon</td><td>Natuurlijke energie zonder crash</td></tr>
-<tr><td><strong>Sleep+</strong></td><td>Magnesium + L-theanine</td><td>Melatonine-vrije slaapformule</td></tr>
 </table>
-
-Sleep+ combineert magnesium met L-theanine voor een dubbele ontspanningswerking — specifiek ontwikkeld voor diepe, herstellende slaap.
-
-<p><a href="https://www.amare.com/susp_2075008/nl-nl/sleepplus" target="_blank" rel="nofollow noopener noreferrer">Bekijk Amare Sleep+ bij Amare →</a></p>
 
 <h2>Veelgestelde vragen</h2>
 
@@ -2200,7 +2192,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
 "stress-verminderen-supplementen-cortisol-ontspanning": [
     { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71,83/maand", tagline: "Psychobiotica voor stressmodulatie via de gut-brain axis" },
     { name: "Amare MentaBiotics", url: `${AFFILIATE_BASE}/mentabiotics`, isInternal: false, price: "€71,83/maand", tagline: "Klinisch onderzochte psychobiotica voor mentale veerkracht" },
-    { name: "MentaFocus", url: `${AFFILIATE_BASE}/mentafocus`, isInternal: false, price: "~€55/maand", tagline: "Adaptogenen + L-theanine + Alpha-GPC — focus & stressbestendigheid" }
+    { name: "EDGE+", url: `${AFFILIATE_BASE}/amareedge-plus-mango`, isInternal: false, price: "€77,28/maand", tagline: "Cafeïnevrij nootropicum — gojibes, Boswellia serrata, vitamine B5" }
   ],
 "natuurlijke-afvallen-supplementen-metabolisme": [
     { name: "Amare Restore", url: "/restore", isInternal: true, price: "€29,70/maand", tagline: "9 plantaardige stoffen, 5 bacteriestammen en 5 spijsverteringsenzymen — ondersteunt spijsvertering en stofwisseling" },
@@ -2308,8 +2300,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "Amare Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Omega-3 (EPA/DHA) voor hart, brein & gewrichten" },
   ],
   "adaptogenen-natuurlijke-stressverlichting-ashwagandha-rhodiola": [
-    { name: "MentaFocus", url: `${AFFILIATE_BASE}/mentafocus`, isInternal: false, price: "€70.23/maand", tagline: "Adaptogenen (Ashwagandha + Rhodiola) voor focus & stress" },
-    { name: "Amare MentaFocus", url: `${AFFILIATE_BASE}/mentafocus`, isInternal: false, price: "€70.23/maand", tagline: "Adaptogenen (Ashwagandha + Rhodiola) voor focus & stress" },
+    { name: "EDGE+", url: `${AFFILIATE_BASE}/amareedge-plus-mango`, isInternal: false, price: "€77,28/maand", tagline: "Cafeïnevrij nootropicum — gojibes, Boswellia serrata, vitamine B5" },
     { name: "Happy Juice Pack", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — energie, stemming & focus in één pakket" },
   ],
   "collageen-supplement-huid-haar-gewrichten": [
@@ -2388,7 +2379,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Avondherstel van de Triangle of Wellness" },
   ],
   "natuurlijke-slaap-supplementen-beter-slapen-zonder-melatonine": [
-    { name: "Sleep+", url: `${AFFILIATE_BASE}/sleep-plus`, isInternal: false, tagline: "Magnesium + L-theanine + GABA + ashwagandha — melatoninevrije slaapformule" },
+    { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71,83/maand", tagline: "Magnesium + Cerebiome® blend — ondersteunt ontspanning via de gut-brain axis" },
   ],
   "supplementenlabel-lezen-waar-let-je-op": [
     { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — psychobioticum voor de darm-hersen-as" },
