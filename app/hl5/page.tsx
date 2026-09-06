@@ -95,7 +95,7 @@ const ingredientGroups = [
 
 export default function HL5Page() {
   const product = getProduct("hl5-peach");
-  const productImage = product?.image || "/images/products/hl5-2pack.jpg";
+  const productImage = product?.image || "/images/products/hl5.jpg";
 
   const productSchema = generateProductSchema({
     name: "Amare HL5 Vloeibare Collageen",
@@ -104,11 +104,11 @@ export default function HL5Page() {
       "Amare HL5 levert 5 gram gehydrolyseerd rundercollageen (Type 1 & 3) per portie in vloeibare vorm voor maximale opname — tot 3x betere absorptie dan collageenpoeder. Aangevuld met fructo-oligosachariden en appelciderazijnpoeder. Perzik smaak, lactosevrij.",
     image: productImage,
     slug: "hl5",
-    priceRetail: 85.87,
-    priceSubscription: 77.28,
+    priceRetail: 76.23,
+    priceSubscription: 68.62,
     ratingValue: 4.8,
     ratingCount: 89,
-    affiliateUrl: "https://www.amare.com/2075008/nl-nl/hl5-peach",
+    affiliateUrl: "https://www.amare.com/susp_2075008/nl-nl/hl5-peach",
   });
 
   const combinedSchema = combineSchemas(
@@ -171,12 +171,12 @@ export default function HL5Page() {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 mb-4">
                 <AffiliateCTA
-                  label="Bestel bij Amare → €77,28/maand"
+                  label="Bestel bij Amare → €68,62/maand"
                   product="hl5-peach"
                   variant="primary"
                 />
                 <AffiliateCTA
-                  label="Of eenmalig €85,87"
+                  label="Of eenmalig €76,23"
                   product="hl5-peach"
                   variant="secondary"
                 />
@@ -478,7 +478,7 @@ export default function HL5Page() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3">
             <AffiliateCTA
-              label="Bestel nu — Abonnement €77,28/maand"
+              label="Bestel nu — Abonnement €68,62/maand"
               product="hl5-peach"
               variant="urgency"
             />
@@ -502,7 +502,7 @@ export default function HL5Page() {
                 Abonnement — Bespaar 10%
               </div>
               <div className="text-3xl font-bold text-[var(--color-text)] mb-1">
-                €77,28
+                €68,62
                 <span className="text-sm font-normal text-[var(--color-text-muted)]">
                   /maand
                 </span>
@@ -511,7 +511,7 @@ export default function HL5Page() {
                 Elke maand automatisch geleverd. Op elk moment opzegbaar.
               </p>
               <ul className="space-y-1 mb-4 text-xs text-[var(--color-text-muted)]">
-                <li>✓ €14,48 goedkoper per maand</li>
+                <li>✓ €7,61 goedkoper per maand</li>
                 <li>✓ Nooit zonder voorraad</li>
                 <li>✓ Gratis verzending</li>
               </ul>
@@ -526,7 +526,7 @@ export default function HL5Page() {
                 Eenmalige aankoop
               </div>
               <div className="text-3xl font-bold text-[var(--color-text)] mb-1">
-                €85,87
+                €76,23
               </div>
               <p className="text-xs text-[var(--color-text-muted)] mb-4">
                 Eenmalig bestellen, geen verplichtingen.
@@ -615,7 +615,7 @@ export default function HL5Page() {
           </div>
         </div>
       
-      <StickyMobileCTA product="hl5-peach" subscriptionPrice="€77,28" />
+      <StickyMobileCTA product="hl5-peach" subscriptionPrice="€68,62" />
 </section>
     </>
   );

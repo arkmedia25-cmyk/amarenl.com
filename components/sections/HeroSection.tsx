@@ -64,11 +64,11 @@ const slides: HeroSlide[] = [
     ),
     description:
       "Vloeibaar collageen met tot 90% opname binnen 6 uur — 3x beter dan poeder. Voor huid, haar, nagels én gewrichten, van binnenuit.",
-    price: "vanaf €77,28/maand",
+    price: "vanaf €68,62/maand",
     cta: "Ontdek HL5",
     href: "/hl5",
-    image: "/images/products/hl5-2pack.jpg",
-    imageAlt: "Amare HL5 vloeibare collageen 2-pack",
+    image: "/images/products/hl5.jpg",
+    imageAlt: "Amare HL5 vloeibare collageen",
   },
 ];
 
