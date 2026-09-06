@@ -32,7 +32,7 @@ const ingredients = [
 
 export default function NitroXtremePage() {
   const product = getProduct("nitro-xtreme-56ml");
-  const img = product?.images?.primary || "https://amarecdn.azureedge.net/webassets/web/prod/products/Nitro-Xtreme-56ml-EU-800.jpg";
+  const img = product?.images?.primary || "/images/products/nitro-xtreme.jpg";
 
   const schema = combineSchemas(
     generateProductSchema({ name: "Amare Nitro Xtreme 56ml", nameNL: "Amare Nitro Xtreme 56ml", description: "Nitro Xtreme is Amare's vloeibare noni-concentraat verrijkt met B-vitamines (B1, B3), zink, chroom en CoQ10. De middagboost binnen de Triangle of Wellness: Sunrise → Nitro → Sunset.", image: img, slug: "nitro-xtreme", priceRetail: 59.71, priceSubscription: 53.74, ratingValue: 4.5, ratingCount: 250, affiliateUrl: "https://www.amare.com/susp_2075008/nl-nl/nitro-xtreme" }),

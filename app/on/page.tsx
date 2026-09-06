@@ -23,7 +23,7 @@ const faqs = [
 
 export default function OnPage() {
   const product = getProduct("on");
-  const img = product?.images?.primary || "https://amarecdn.azureedge.net/webassets/web/prod/products/ON-Raspberry-Grapefruit-EU-800.jpg";
+  const img = product?.images?.primary || "/images/products/on-shots.jpg";
 
   const schema = combineSchemas(
     generateProductSchema({ name: "Amare ON", nameNL: "Amare ON", description: "Amare ON combineert guarana-cafeïne met een gepatenteerde mix van B-vitamines (B1, B2, B3, B6, B12) voor snelle, natuurlijke energie zonder crash. Vloeibare framboos-grapefruit shot.", image: img, slug: "on", priceRetail: 30.45, priceSubscription: 27.41, ratingValue: 4.5, ratingCount: 500, affiliateUrl: "https://www.amare.com/susp_2075008/nl-nl/onshots" }),

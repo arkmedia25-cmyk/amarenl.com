@@ -96,9 +96,7 @@ const ingredientGroups = [
 
 export default function RestorePage() {
   const product = getProduct("restore");
-  const productImage =
-    product?.image ||
-    "https://amarecdn.azureedge.net/webassets/web/prod/products/Restore-EU-800.jpg";
+  const productImage = product?.image || "/images/products/restore.jpg";
 
   const productSchema = generateProductSchema({
     name: "Amare Restore",

@@ -662,7 +662,7 @@
       "savingsPercent": 10
     },
     "images": {
-      "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/ON-Raspberry-Grapefruit-EU-800.jpg",
+      "primary": "/images/products/on-shots.jpg",
       "alt": "Amare ON — Focus-drankje met natuurlijke guarana-cafeïne en nootropics"
     },
     "benefits": [
@@ -754,7 +754,7 @@
       "savingsPercent": 10
     },
     "images": {
-      "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/ON-Raspberry-Grapefruit-4pk-EU-800.jpg",
+      "primary": "/images/products/on-shots-4pack.jpg",
       "alt": "Amare ON 4-Pack — 4-pack van Amare ON — focus-drankje met natuurlijke guarana-cafeïne"
     },
     "benefits": [
@@ -1337,7 +1337,7 @@
       "savingsPercent": 10
     },
     "images": {
-      "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Restore-EU-800.jpg",
+      "primary": "/images/products/restore.jpg",
       "alt": "Restore — Darmflora & spijsvertering in balans"
     },
     "ingredients": [
@@ -1634,7 +1634,7 @@
       "savingsPercent": 10
     },
     "images": {
-      "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Nitro-Xtreme-56ml-EU-800.jpg",
+      "primary": "/images/products/nitro-xtreme.jpg",
       "alt": "Amare Nitro Xtreme 56ml — Triangle of Wellness — middagboost"
     },
     "ingredients": [
