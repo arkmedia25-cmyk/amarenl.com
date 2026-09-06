@@ -1,8 +1,27 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Menu, X, ArrowRight, ChevronDown } from "lucide-react";
+import { getAffiliateUrl } from "@/lib/products";
+
+// Paginapad → productslug, alleen voor pagina's met één ondubbelzinnig product
+// (geen bundels/gidsen zoals happy-juice-pack of magnesium-supplement). Op deze
+// pagina's linkt de header-CTA naar het specifieke product i.p.v. de algemene
+// amare.com-homepage.
+const PRODUCT_PAGE_SLUGS: Record<string, string> = {
+  "/hl5": "hl5-peach",
+  "/mentabiotics": "mentabiotics",
+  "/energy": "energy",
+  "/origin": "origin",
+  "/restore": "restore",
+  "/fit20": "fit20",
+  "/sunset": "sunset",
+  "/triangle-of-wellness-xtreme": "triangle-of-wellness-xtreme",
+};
+
+const GENERIC_AFFILIATE_URL = "https://www.amare.com/2075008/nl-nl";
 
 const categoryLinks = [
   ["🧠 Mentale Wellness", "/supplementen/"],
@@ -52,10 +71,14 @@ const productLinks = [
 ];
 
 export default function Header() {
+  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const productSlug = pathname ? PRODUCT_PAGE_SLUGS[pathname] : undefined;
+  const ctaUrl = productSlug ? getAffiliateUrl(productSlug) : GENERIC_AFFILIATE_URL;
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -117,7 +140,7 @@ export default function Header() {
 
         <div className="flex items-center gap-4">
           <a
-            href="https://www.amare.com/2075008/nl-nl"
+            href={ctaUrl}
             target="_blank"
             rel="nofollow noopener noreferrer"
             className="group hidden sm:inline-flex items-center gap-2 px-7 py-3.5 text-white rounded-full text-sm font-bold transition-all shrink-0"
@@ -171,7 +194,7 @@ export default function Header() {
               <Link key={label} href={href} onClick={() => setIsMenuOpen(false)} className="text-xl font-bold text-[var(--color-text)] border-b border-[var(--color-border)] pb-4">{label}</Link>
             ))}
             <a
-              href="https://www.amare.com/2075008/nl-nl"
+              href={ctaUrl}
               target="_blank"
               rel="nofollow noopener noreferrer"
               onClick={() => setIsMenuOpen(false)}
