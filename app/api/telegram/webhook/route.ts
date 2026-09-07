@@ -272,6 +272,12 @@ async function createInstagramPost(accessToken: string, igUserId: string, item: 
     throw new Error(`Instagram media oluşturma başarısız: ${JSON.stringify(createData)}`);
   }
 
+  // Görseller de videolar gibi Meta tarafında kısa bir işleme anı yaşayabiliyor
+  // ("Media ID is not available", code 9007) — canlıda gözlemlendi (07-09-2026,
+  // 3 art arda başarısız deneme, 4.'de kendiliğinden düzeldi). Videodan daha
+  // hızlı bittiği için kısa bir timeout/interval yeterli.
+  await waitForContainerReady(createData.id, accessToken, { timeoutMs: 30_000, intervalMs: 3_000 });
+
   const publishRes = await fetch(`https://graph.facebook.com/v21.0/${igUserId}/media_publish`, {
     method: "POST",
     headers: { "content-type": "application/json" },
