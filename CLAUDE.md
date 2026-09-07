@@ -809,9 +809,19 @@ Hermes-gateway LaunchAgent bestond ook nog kort, gestopt 28-07-2026.
   codewijziging nodig, alleen Google laten herindexeren.
 
 **Huidige status per fase:**
-- **Faz 3 (Higgsfield):** betaald Starter Plan actief ($15/mo, workspace "ARK Media"), niet meer
-  accountgeblokkeerd. Credits op tot cyclus ververst **4 september 2026**. Gekozen flow:
+- **Faz 3 (Higgsfield):** betaald Starter Plan actief ($15/mo, workspace "ARK Media",
+  arkmedia25@gmail.com), niet meer accountgeblokkeerd. **Update 07-09-2026:** live geverifieerd
+  (ingelogde browser-sessie, `/me/settings`) — cyclus is op 04-09 zoals verwacht ververst, **200/200
+  credits beschikbaar**, usage history sinds de refresh leeg (nog niets verbruikt). Gekozen flow:
   ugc-product-flow (product-only, voiceover, geen nep-testimonial — bewuste ACM/NVWA-keuze).
+  **Bewuste keuze (Musa, 07-09):** de geautomatiseerde Faz 6-pijplijn (`amarenl-social-daily.yml` →
+  `scripts/generate-social-caption.mjs`) blijft ONGEWIJZIGD op zijn huidige statische-afbeelding-
+  fallback staan (zie de `NEDEN Higgsfield DEĞİL`-comment bovenin dat bestand, geschreven toen de
+  gedeelde creditpool leeg was op 10-08) — dit NIET automatiseren was een expliciete keuze, geen
+  vergeten taak. Nieuwe video's blijven ontstaan via een aparte, handmatige Claude Code + browser-
+  sessie rechtstreeks tegen Higgsfield (dezelfde werkwijze als de eerdere 71 generaties), niet via de
+  GitHub Actions-cron. Wil een toekomstige sessie dit alsnog aan de automatische pijplijn koppelen,
+  dan is dat een aparte, bewust te nemen beslissing — niet zomaar oppakken omdat credits weer vol zijn.
 - **Faz 4 (Pinterest):** infrastructuur volledig gebouwd (`content/pinterest-queue.json`,
   `scripts/pinterest-queue-notify.mjs`, Telegram ✅/❌-integratie), **wacht op Pinterest Standard
   access-goedkeuring** (app 1582959 — Trial-toegang staat de OAuth `pins:write`-flow nog niet toe).
