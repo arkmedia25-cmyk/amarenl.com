@@ -103,8 +103,24 @@ export default function EdgePlusPage() {
       </div>
     </section>
 
-    {/* ── Wat kun je verwachten? ── */}
+    {/* ── EDGE+ in beeld (lifestyle) ── */}
     <section className="py-16 bg-white">
+      <div className="container-page max-w-4xl">
+        <h2 className="text-2xl md:text-3xl font-cormorant font-bold text-[var(--color-text)] mb-6 text-center">EDGE+ in je dagelijkse routine</h2>
+        <div className="grid sm:grid-cols-2 gap-4">
+          <div className="relative aspect-square rounded-2xl overflow-hidden bg-[var(--color-bg-soft)] border border-[var(--color-border)]">
+            <Image src="/images/products/edge-watermelon-lifestyle.jpg" alt="Amare EDGE+ Watermelon cafeïnevrij nootropicum — met watermeloen" fill sizes="(min-width: 640px) 50vw, 100vw" className="object-cover" />
+          </div>
+          <div className="relative aspect-square rounded-2xl overflow-hidden bg-[var(--color-bg-soft)] border border-[var(--color-border)]">
+            <Image src="/images/products/edge-mango-lifestyle.jpg" alt="Amare EDGE+ Mango met natuurlijke cafeïne — met mango" fill sizes="(min-width: 640px) 50vw, 100vw" className="object-cover" />
+          </div>
+        </div>
+        <p className="text-center text-[10px] text-[var(--color-text-muted)] mt-4">Links: EDGE+ Watermelon (cafeïnevrij) — rechts: EDGE+ Mango (bevat 75 mg natuurlijke cafeïne)</p>
+      </div>
+    </section>
+
+    {/* ── Wat kun je verwachten? ── */}
+    <section className="py-16 bg-[var(--color-bg-soft)]">
       <div className="container-page max-w-3xl">
         <h2 className="text-2xl md:text-3xl font-cormorant font-bold text-[var(--color-text)] mb-6">Wat kun je verwachten?</h2>
         <p className="text-sm text-[var(--color-text-muted)] mb-8">Resultaten verschillen per persoon, maar dit is wat veel gebruikers rapporteren bij consistent dagelijks gebruik:</p>

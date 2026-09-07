@@ -152,7 +152,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Conclusie</h2>
       <p>Adaptogenen behoren tot de meest veelbelovende natuurlijke stoffen voor stressbeheersing. Ze vervangen geen stressmanagement, maar ondersteunen je stresssysteem. De beste om mee te beginnen: ashwagandha (chronische stress), rhodiola (burn-out), en L-theanine (kalme focus). Voor een dagelijks mentaal fundament is Amare EDGE+ een moderne adaptogeen-nootropic hybride.</p>
       <p><em>Disclaimer: deze uitspraken zijn niet beoordeeld door de NVWA. Supplementen zijn geen vervanging voor een gevarieerd dieet en gezonde levensstijl.</em></p>
-      <a href="https://www.amare.com/susp_2075008/nl-nl/amareedge-plus-mango" target="_blank" rel="nofollow noopener noreferrer" style="display:inline-block;background:#C8A951;color:#fff;padding:12px 24px;border-radius:9999px;font-weight:700;text-decoration:none">Ontdek Amare EDGE+ →</a>
+      <a href="https://www.amare.com/susp_2075008/nl-nl/amareedge-plus-watermelon" target="_blank" rel="nofollow noopener noreferrer" style="display:inline-block;background:#C8A951;color:#fff;padding:12px 24px;border-radius:9999px;font-weight:700;text-decoration:none">Ontdek Amare EDGE+ →</a>
     `,
   },
 {
@@ -2176,7 +2176,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
   ],
 "natuurlijke-afvallen-supplementen-metabolisme": [
     { name: "Amare Restore", url: "/restore", isInternal: true, price: "€29,70/maand", tagline: "9 plantaardige stoffen, 5 bacteriestammen en 5 spijsverteringsenzymen — ondersteunt spijsvertering en stofwisseling" },
-    { name: "EDGE+", url: `${AFFILIATE_BASE}/amareedge-plus-mango`, isInternal: false, price: "€77,28/maand", tagline: "Nootropic voor focus & energie — ondersteunt consistente training" }
+    { name: "EDGE+ Mango", url: `${AFFILIATE_BASE}/amareedge-plus-mango`, isInternal: false, price: "€77,28/maand", tagline: "Natuurlijke cafeïne (75mg) + Terminalia chebula & Boswellia serrata" }
   ],
 "beste-collageen-supplement-2026-werkt-echt": [
     { name: "HL5", url: "/hl5", isInternal: true, price: "€130,42/maand", tagline: "5g gehydrolyseerd collageen Type 1&3 + co-factoren — complete huidformule" },
@@ -2190,7 +2190,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "Happy Juice Pack", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — MentaBiotics + Energy+ + EDGE+ in één bundel" },
     { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — los verkrijgbaar, onderdeel van de bundel" },
     { name: "Energy+", url: "/energy", isInternal: true, price: "€55.48/maand", tagline: "Natuurlijke energie zonder crash — onderdeel van Happy Juice Pack" },
-    { name: "EDGE+", url: `${AFFILIATE_BASE}/amareedge-plus-mango`, isInternal: false, price: "€77.28/maand", tagline: "Plantaardig nootropicum — los of in de bundel" },
+    { name: "EDGE+ Mango", url: `${AFFILIATE_BASE}/amareedge-plus-mango`, isInternal: false, price: "€77.28/maand", tagline: "Natuurlijke cafeïne + adaptogenen — los of in de bundel" },
   ],
   "collageen-hl5-vs-supermarkt-vergelijken": [
     { name: "HL5", url: "/hl5", isInternal: true, price: "€65.21/maand", tagline: "5g gehydrolyseerd collageen Type 1&3 — vloeibaar, grasgevoerd" },
@@ -2216,8 +2216,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71,83/maand", tagline: "Cerebiome® blend — probiotica voor stemming en stressveerkracht" },
   ],
   "focus-supplement-natuurlijke-nootropics-concentratie": [
-    { name: "Amare EDGE+", url: `${AFFILIATE_BASE}/amareedge-plus-mango`, isInternal: false, price: "€77.28/maand", tagline: "Plantaardig nootropicum — Alpha-GPC, L-theanine, bacopa & rhodiola" },
-    { name: "EDGE+", url: `${AFFILIATE_BASE}/amareedge-plus-mango`, isInternal: false, price: "€77.28/maand", tagline: "Multi-adaptogeen + nootropicum voor focus & stressbestendigheid" },
+    { name: "EDGE+ Mango", url: `${AFFILIATE_BASE}/amareedge-plus-mango`, isInternal: false, price: "€77.28/maand", tagline: "Natuurlijke cafeïne + Terminalia chebula & Boswellia serrata voor focus & stressbestendigheid" },
     { name: "Happy Juice Pack", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — EDGE+ inbegrepen in deze bundel" },
   ],
   "haaruitval-supplement-vrouwen-oorzaken-oplossingen": [
@@ -2231,8 +2230,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "Energy+", url: "/energy", isInternal: true, price: "€55.48/maand", tagline: "Natuurlijke energie zonder cafeïnecrash — onderdeel van Happy Juice Pack" },
   ],
   "ashwagandha-kopen-nederland-adaptogeen-supplement": [
-    { name: "EDGE+ Mango", url: `${AFFILIATE_BASE}/amareedge-plus-mango`, isInternal: false, price: "€77.28/maand", tagline: "Plantaardig nootropicum met adaptogenen, L-theanine & Alpha-GPC" },
-    { name: "Amare EDGE+", url: `${AFFILIATE_BASE}/amareedge-plus-mango`, isInternal: false, price: "€77.28/maand", tagline: "Multi-adaptogeen + nootropic — focus, stressbestendigheid & mentale helderheid" },
+    { name: "EDGE+ Mango", url: `${AFFILIATE_BASE}/amareedge-plus-mango`, isInternal: false, price: "€77.28/maand", tagline: "Natuurlijke cafeïne + adaptogenen — focus, stressbestendigheid & mentale helderheid" },
     { name: "Happy Juice Pack", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — adaptogenen, probiotica & nootropics in één pakket" },
   ],
   "collageen-supplement-kopen-waar-op-letten": [
@@ -2368,7 +2366,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "Happy Juice Pack", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — MentaBiotics + Energy+ + EDGE+ in één bundel" },
     { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — los verkrijgbaar, onderdeel van de bundel" },
     { name: "Energy+", url: "/energy", isInternal: true, price: "€55.48/maand", tagline: "Natuurlijke energie zonder crash — onderdeel van Happy Juice Pack" },
-    { name: "EDGE+", url: `${AFFILIATE_BASE}/amareedge-plus-mango`, isInternal: false, price: "€77.28/maand", tagline: "Plantaardig nootropicum — los of in de bundel" },
+    { name: "EDGE+ Mango", url: `${AFFILIATE_BASE}/amareedge-plus-mango`, isInternal: false, price: "€77.28/maand", tagline: "Natuurlijke cafeïne + adaptogenen — los of in de bundel" },
   ],
   "van-koffie-naar-nitro-xtreme-middagritueel": [
     { name: "Nitro Xtreme", url: `${AFFILIATE_BASE}/nitro-xtreme`, isInternal: false, price: "€80/maand", tagline: "Nitraten + 56 mineralen voor focus & energie" },
@@ -2378,7 +2376,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
   ],
   "supplementen-bewaren-zomer-hitte-vocht-zonlicht": [
     { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — psychobioticum voor de darm-hersen-as" },
-    { name: "EDGE+", url: `${AFFILIATE_BASE}/amareedge-plus-mango`, isInternal: false, price: "€77.28/maand", tagline: "Nootropic voor focus & energie — ondersteunt consistente training" },
+    { name: "EDGE+ Mango", url: `${AFFILIATE_BASE}/amareedge-plus-mango`, isInternal: false, price: "€77.28/maand", tagline: "Natuurlijke cafeïne (75mg) + Terminalia chebula & Boswellia serrata" },
     { name: "Nitro Xtreme", url: `${AFFILIATE_BASE}/nitro-xtreme`, isInternal: false, price: "€80/maand", tagline: "Nitraten + 56 mineralen voor focus & energie" },
   ],
   "natuurlijke-supplementen-waarheid-marketing-mythe": [
