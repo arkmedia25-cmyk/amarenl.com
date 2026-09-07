@@ -1,0 +1,39 @@
+name: AmareNL — Video Örneği Telegram'a Gönder (manuel)
+
+on:
+  workflow_dispatch:
+    inputs:
+      video_url:
+        description: "Video URL (ör. Higgsfield CDN sonuç linki)"
+        required: true
+      caption:
+        description: "Telegram mesaj metni"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Send video to Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_THREAD_ID: ${{ secrets.TELEGRAM_THREAD_ID }}
+          VIDEO_URL: ${{ inputs.video_url }}
+          CAPTION: ${{ inputs.caption }}
+        run: node scripts/notify-video-sample.mjs

@@ -42,3 +42,4 @@ next-env.d.ts
 # lead generation (local only)
 leadgen-os/
 leadgen-os/node_modules
+content/social-assets/samples/
