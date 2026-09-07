@@ -3,16 +3,23 @@ name: AmareNL — Video Örneği Telegram'a Gönder (manuel)
 on:
   workflow_dispatch:
     inputs:
+      topic:
+        description: "Konu anahtarı (ör. stress, burnout)"
+        required: true
       video_url:
-        description: "Video URL (ör. Higgsfield CDN sonuç linki)"
+        description: "Video URL (ör. Higgsfield/ffmpeg sonuç linki)"
         required: true
       caption:
-        description: "Telegram mesaj metni"
+        description: "Telegram mesaj metni / Instagram caption"
+        required: false
+        default: ""
+      link:
+        description: "CTA linki (varsayılan: gratis-gut-brain-gids)"
         required: false
         default: ""
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   send:
@@ -29,11 +36,22 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Send video to Telegram
+      - name: Send video to Telegram (Onayla/Reddet butonlarıyla)
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TELEGRAM_THREAD_ID: ${{ secrets.TELEGRAM_THREAD_ID }}
+          TOPIC: ${{ inputs.topic }}
           VIDEO_URL: ${{ inputs.video_url }}
           CAPTION: ${{ inputs.caption }}
+          LINK: ${{ inputs.link }}
         run: node scripts/notify-video-sample.mjs
+
+      - name: Commit updated video queue
+        run: |
+          git config user.name "AmareNL Video Bot"
+          git config user.email "actions@github.com"
+          git add content/video-queue.json
+          git commit -m "video: örnek Telegram'a gönderildi (onay bekliyor)" || echo "Değişiklik yok"
+          git pull --rebase origin main
+          git push origin HEAD:main

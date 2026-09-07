@@ -1,5 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 
+// video_approve, Instagram'ın Reels container'ının işlenmesini (en fazla 120s,
+// bkz. waitForContainerReady) bekliyor — default fonksiyon süresinden daha
+// uzun sürebilir, bu yüzden açıkça artırıldı.
+export const maxDuration = 180;
+
 const REPO_OWNER = "arkmedia25-cmyk";
 const REPO_NAME = "amarenl.com";
 
@@ -108,8 +113,18 @@ interface SocialQueueItem {
   status: string;
 }
 
+interface VideoQueueItem {
+  id: string;
+  topic: string;
+  caption: string;
+  video: string;
+  link: string;
+  status: string;
+}
+
 const PIN_QUEUE_PATH = "content/pinterest-queue.json";
 const SOCIAL_QUEUE_PATH = "content/social-queue.json";
+const VIDEO_QUEUE_PATH = "content/video-queue.json";
 
 async function getPinQueueFile(): Promise<{ items: PinQueueItem[]; sha: string }> {
   const token = process.env.GH_DISPATCH_TOKEN;
@@ -197,6 +212,49 @@ async function updateSocialQueueFile(items: SocialQueueItem[], sha: string, mess
   if (!res.ok) throw new Error(`GitHub update social queue failed: ${res.status} ${await res.text()}`);
 }
 
+async function getVideoQueueFile(): Promise<{ items: VideoQueueItem[]; sha: string }> {
+  const token = process.env.GH_DISPATCH_TOKEN;
+  if (!token) throw new Error("GH_DISPATCH_TOKEN not configured");
+  const res = await fetch(
+    `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${VIDEO_QUEUE_PATH}`,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        Accept: "application/vnd.github+json",
+      },
+      cache: "no-store",
+    }
+  );
+  if (!res.ok) throw new Error(`GitHub fetch video queue failed: ${res.status} ${await res.text()}`);
+  const data = (await res.json()) as { content: string; sha: string };
+  const items = JSON.parse(Buffer.from(data.content, "base64").toString("utf-8")) as VideoQueueItem[];
+  return { items, sha: data.sha };
+}
+
+async function updateVideoQueueFile(items: VideoQueueItem[], sha: string, message: string) {
+  const token = process.env.GH_DISPATCH_TOKEN;
+  if (!token) throw new Error("GH_DISPATCH_TOKEN not configured");
+  const content = Buffer.from(JSON.stringify(items, null, 2) + "\n", "utf-8").toString("base64");
+  const res = await fetch(
+    `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${VIDEO_QUEUE_PATH}`,
+    {
+      method: "PUT",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        Accept: "application/vnd.github+json",
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        message,
+        content,
+        sha,
+        committer: { name: "AmareNL Video Bot", email: "actions@github.com" },
+      }),
+    }
+  );
+  if (!res.ok) throw new Error(`GitHub update video queue failed: ${res.status} ${await res.text()}`);
+}
+
 // Instagram Content Publishing API — iki adımlı: önce bir media container
 // oluşturulur (görsel URL'i + caption), sonra o container yayınlanır.
 async function createInstagramPost(accessToken: string, igUserId: string, item: SocialQueueItem): Promise<string> {
@@ -225,6 +283,66 @@ async function createInstagramPost(accessToken: string, igUserId: string, item: 
   const publishData = (await publishRes.json()) as { id?: string; error?: unknown };
   if (!publishRes.ok || !publishData.id) {
     throw new Error(`Instagram yayınlama başarısız: ${JSON.stringify(publishData)}`);
+  }
+  return publishData.id;
+}
+
+// Video/Reels — görselden farklı: container oluşturulduktan sonra Instagram
+// videoyu arka planda işler (status_code: IN_PROGRESS → FINISHED/ERROR).
+// Publish'i FINISHED olmadan çağırmak hata verir, bu yüzden burada bekleniyor.
+async function sleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function waitForContainerReady(
+  containerId: string,
+  accessToken: string,
+  { timeoutMs = 120_000, intervalMs = 5_000 } = {}
+): Promise<void> {
+  const deadline = Date.now() + timeoutMs;
+  while (Date.now() < deadline) {
+    const res = await fetch(
+      `https://graph.facebook.com/v21.0/${containerId}?fields=status_code&access_token=${accessToken}`
+    );
+    const data = (await res.json()) as { status_code?: string; error?: unknown };
+    if (data.status_code === "FINISHED") return;
+    if (data.status_code === "ERROR" || data.status_code === "EXPIRED") {
+      throw new Error(`Instagram video işleme başarısız: ${JSON.stringify(data)}`);
+    }
+    await sleep(intervalMs);
+  }
+  throw new Error("Instagram video işleme zaman aşımına uğradı (120s).");
+}
+
+async function createInstagramReel(accessToken: string, igUserId: string, item: VideoQueueItem): Promise<string> {
+  const createRes = await fetch(`https://graph.facebook.com/v21.0/${igUserId}/media`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      media_type: "REELS",
+      video_url: item.video,
+      caption: item.caption,
+      access_token: accessToken,
+    }),
+  });
+  const createData = (await createRes.json()) as { id?: string; error?: unknown };
+  if (!createRes.ok || !createData.id) {
+    throw new Error(`Instagram video container oluşturma başarısız: ${JSON.stringify(createData)}`);
+  }
+
+  await waitForContainerReady(createData.id, accessToken);
+
+  const publishRes = await fetch(`https://graph.facebook.com/v21.0/${igUserId}/media_publish`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      creation_id: createData.id,
+      access_token: accessToken,
+    }),
+  });
+  const publishData = (await publishRes.json()) as { id?: string; error?: unknown };
+  if (!publishRes.ok || !publishData.id) {
+    throw new Error(`Instagram Reels yayınlama başarısız: ${JSON.stringify(publishData)}`);
   }
   return publishData.id;
 }
@@ -428,6 +546,77 @@ export async function POST(req: NextRequest) {
         callback_query_id: cq.id,
         text: "⚠️ Bir hata oluştu, tekrar dene.",
         show_alert: true,
+      }).catch(() => {});
+      return NextResponse.json({ ok: false }, { status: 500 });
+    }
+  }
+
+  if (action === "video_approve" || action === "video_reject") {
+    try {
+      const { items, sha } = await getVideoQueueFile();
+      const video = items.find((v) => v.id === id);
+
+      if (!video) {
+        await telegramApi("answerCallbackQuery", {
+          callback_query_id: cq.id,
+          text: "⚠️ Video bulunamadı (kuyrukta yok).",
+          show_alert: true,
+        });
+        return NextResponse.json({ ok: false }, { status: 404 });
+      }
+
+      if (action === "video_reject") {
+        video.status = "rejected";
+        await updateVideoQueueFile(items, sha, `video: reddedildi — ${video.id}`);
+        await telegramApi("answerCallbackQuery", {
+          callback_query_id: cq.id,
+          text: `❌ ${video.id} reddedildi.`,
+        });
+        await telegramApi("editMessageReplyMarkup", {
+          chat_id: cq.message.chat.id,
+          message_id: cq.message.message_id,
+          reply_markup: { inline_keyboard: [[{ text: "❌ Reddedildi", callback_data: "noop" }]] },
+        });
+        return NextResponse.json({ ok: true });
+      }
+
+      // video_approve — hemen geri bildirim ver, Instagram işlemesi 2 dakikaya
+      // kadar sürebilir (waitForContainerReady), Telegram callback'i o kadar
+      // bekletmemek için "işleniyor" mesajı önce gönderiliyor.
+      await telegramApi("answerCallbackQuery", {
+        callback_query_id: cq.id,
+        text: `⏳ ${video.id} işleniyor, Instagram video hazırlıyor...`,
+      });
+
+      const accessToken = process.env.META_IG_ACCESS_TOKEN;
+      const igUserId = process.env.META_IG_USER_ID;
+      if (!accessToken || !igUserId) {
+        await telegramApi("editMessageReplyMarkup", {
+          chat_id: cq.message.chat.id,
+          message_id: cq.message.message_id,
+          reply_markup: { inline_keyboard: [[{ text: "⚠️ Instagram bağlı değil", callback_data: "noop" }]] },
+        });
+        return NextResponse.json({ ok: false, error: "META_IG_ACCESS_TOKEN or META_IG_USER_ID not configured" }, { status: 500 });
+      }
+
+      const publishedId = await createInstagramReel(accessToken, igUserId, video);
+
+      video.status = "posted";
+      await updateVideoQueueFile(items, sha, `video: yayınlandı — ${video.id}`);
+
+      await telegramApi("editMessageReplyMarkup", {
+        chat_id: cq.message.chat.id,
+        message_id: cq.message.message_id,
+        reply_markup: {
+          inline_keyboard: [[{ text: "✅ Yayınlandı", url: `https://www.instagram.com/reel/${publishedId}/` }]],
+        },
+      });
+      return NextResponse.json({ ok: true });
+    } catch (err) {
+      console.error("[telegram-webhook][video]", err);
+      await telegramApi("sendMessage", {
+        chat_id: cq.message.chat.id,
+        text: `⚠️ Video yayınlama başarısız: ${err instanceof Error ? err.message : String(err)}`,
       }).catch(() => {});
       return NextResponse.json({ ok: false }, { status: 500 });
     }
