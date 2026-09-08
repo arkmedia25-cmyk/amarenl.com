@@ -255,7 +255,7 @@ export default async function BlogPostPage({ params }: Props) {
       <section className="py-20">
         <div className="container-page max-w-3xl">
           <div
-            className="prose prose-lg prose-primary max-w-none
+            className="article-prose prose prose-lg prose-primary max-w-none
               prose-headings:font-cormorant prose-headings:font-bold prose-headings:text-[var(--color-text)]
               prose-p:text-[var(--color-text-muted)] prose-p:leading-relaxed
               prose-strong:text-[var(--color-text)]

@@ -2169,6 +2169,9 @@ interface ProductLink {
 const AFFILIATE_BASE = "https://www.amare.com/susp_2075008/nl-nl";
 
 const articleProductMap: Record<string, ProductLink[]> = {
+"venkelthee-opgeblazen-gevoel-bewezen-of-bakerpraatje": [
+    { name: "Amare Restore", url: "/restore", isInternal: true, price: "€29,70/maand", tagline: "5 spijsverteringsenzymen, 5 probioticastammen en venkelzaadpoeder in één formule" }
+  ],
 "stress-verminderen-supplementen-cortisol-ontspanning": [
     { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71,83/maand", tagline: "Psychobiotica voor stressmodulatie via de gut-brain axis" },
     { name: "Amare MentaBiotics", url: `${AFFILIATE_BASE}/mentabiotics`, isInternal: false, price: "€71,83/maand", tagline: "Klinisch onderzochte psychobiotica voor mentale veerkracht" },

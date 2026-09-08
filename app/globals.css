@@ -64,6 +64,70 @@ h1, h2, h3, h4 {
     background: var(--color-primary);
     color: #fff;
   }
+
+  /* Blog-artikel content — leesbare, niet-vlakke kopjes binnen dangerouslySetInnerHTML.
+     Puur CSS, geen contentwijziging nodig: raakt alle 74+ bestaande artikelen tegelijk. */
+  .article-prose h2 {
+    position: relative;
+    margin-top: 3.5rem;
+    margin-bottom: 1.5rem;
+    padding-top: 1.75rem;
+    font-size: 1.75rem;
+    line-height: 1.25;
+  }
+  .article-prose h2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3.5rem;
+    height: 4px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--color-accent), var(--color-primary-light));
+  }
+  .article-prose > h2:first-child {
+    margin-top: 0;
+  }
+  .article-prose h3 {
+    margin-top: 2.25rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    color: var(--color-primary);
+  }
+  /* FAQ-formaat "<p><strong>Vraag?</strong></p>" — visueel als vraag laten opvallen
+     zonder de brondata aan te passen (zie extractFAQItems in [slug]/page.tsx). */
+  .article-prose p:has(> strong:only-child):has(+ p) {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--color-accent);
+  }
+  .article-prose p:has(> strong:only-child):has(+ p) strong {
+    font-family: var(--font-cormorant), Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+  .article-prose table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.75rem 0;
+    font-size: 0.9rem;
+  }
+  .article-prose th {
+    background: var(--color-bg-soft);
+    color: var(--color-text);
+    font-family: var(--font-cormorant), Georgia, serif;
+    font-weight: 700;
+    text-align: left;
+    padding: 0.6rem 0.9rem;
+    border-bottom: 2px solid var(--color-primary-light);
+  }
+  .article-prose td {
+    padding: 0.6rem 0.9rem;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+  }
 }
 
 /* Custom Animations */
