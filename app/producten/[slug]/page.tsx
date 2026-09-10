@@ -33,8 +33,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const p = getProduct(slug);
   if (!p) return { title: "Product niet gevonden | AmareNL" };
   return {
-    title: buildProductMetaTitle(p.shortNameNL, p.taglineNL),
-    description: buildProductMetaDescription(p.shortNameNL, p.taglineNL),
+    title: p.seo?.title || buildProductMetaTitle(p.shortNameNL, p.taglineNL),
+    description: p.seo?.description || buildProductMetaDescription(p.shortNameNL, p.taglineNL),
     alternates: { canonical: `/producten/${slug}` },
     openGraph: {
       title: `${p.nameNL} Kopen — Beste Prijs Nederland | AmareNL`,

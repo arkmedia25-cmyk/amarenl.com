@@ -1,5 +1,8 @@
 # AmareNL Article Queue — SEO-GEO-AEO İçerik Planı
-> Laatste update: 2026-09-02 (24 Ağustos kuyruğu, bu tarihteki cluster-konsolidasyonlarına göre
+> Laatste update: 2026-09-10 (gerçek Google Ads Keyword Planner verisi, NL, 7 kategori — bkz.
+> en üstteki "10 EYLÜL 2026" bölümü; bu, henüz `data/extra-articles.json`'daki 81+ makaleye karşı
+> tek tek doğrulanmamış ham veridir — bir sonraki oturum önce çapraz kontrol etmeli)
+> Önceki update: 2026-09-02 (24 Ağustos kuyruğu, bu tarihteki cluster-konsolidasyonlarına göre
 > doğrulandı ve güncellendi — bkz. Q1-Q4, M4, bölüm C aşağıda)
 > Önceki update: 2026-08-24 (öncelik kuyruğu eklendi — bkz. bölüm aşağıda)
 > Status: 20/20 TIER ✅ | 3 vergelijkingsartikelen ✅ | NIEUWE BATCH: 15/15 ✅ | **BATCH 3: 0/6 ⏳** | Totaal 74+ artikelen live
@@ -11,6 +14,45 @@
 ---
 
 ## ⚠️ OKUMA SIRASI — Bu bölüm en yeni ve en güvenilir olandır
+
+Aşağıdaki **"10 EYLÜL 2026 — Gerçek Keyword Planner Verisi (NL, 7 kategori)"** bölümü en yeni
+ham veridir (bkz. hemen altında) — ama **24 AĞUSTOS 2026** bölümündeki gibi tek tek
+`data/extra-articles.json` karşı doğrulanmamıştır. Önce o doğrulamayı yap, sonra yaz.
+
+---
+
+## 🆕 10 EYLÜL 2026 — Gerçek Keyword Planner Verisi (NL, 7 kategori, ham — doğrulanmamış)
+
+> Kaynak: Google Ads Keyword Planner, gerçek hesap (971-159-3723), locatie=Hollanda, taal=Dutch,
+> son 12 ay. Claude in Chrome üzerinden, kullanıcının kendi giriş yapılı Chrome'u kullanılarak
+> canlı çekildi (sandboxed Browser pane'de passkey/şifre duvarına takıldı — bkz. oturum notu).
+> Google Ads API Basic Access hâlâ onay bekliyor (bkz. memory `google-ads-api-basic-access-application`)
+> — bu yüzden bu tur manuel/tarayıcı-destekli yapıldı, otomatik değil. Ham CSV'ler:
+> `~/Downloads/Keyword Stats 2026-09-10 at *.csv` (7 dosya, kategori başına).
+>
+> **ÖNEMLİ — bu veri henüz mevcut 81+ makaleyle çapraz kontrol edilmedi.** Aşağıdaki hacimler
+> gerçek ama "boşluk" iddiası değil — bir sonraki oturum her adayı `data/extra-articles.json` +
+> `lib/blog.ts`'te arayıp gerçekten kapsanmıyor mu diye doğrulamalı (24 Ağustos bölümündeki
+> yöntemle aynı).
+
+### En yüksek hacimli gerçek bulgular (aylık arama, NL)
+
+| Kelime | Hacim | Rekabet | Not |
+|---|---|---|---|
+| d3 e | 500.000 | Düşük | ⚠️ **-90% üç aylık VE yıldan yıla değişim** — muhtemelen geçici bir spike/anomali (viral video vb.), istikrarlı bir fırsat değil. Yazmadan önce Trends'te doğrula. |
+| ashwagandha | 50.000 | Yüksek | **Hiçbir Amare ürününde ashwagandha yok** (tüm `data/products/*.json` tarandı, sıfır eşleşme) — sadece bilgilendirici içerik olabilir, ürün CTA'sı zorlama. Zaten 4 makale var (bkz. `project_adaptogenen_cluster_gsc_findings` memory). |
+| probiotica | 50.000 | Yüksek | MentaBiotics + Restore'da zaten var, `/mentabiotics` ve `/restore` başlıklarında zaten kapsanıyor. |
+| collageen | 50.000 | Yüksek | HL5'te zaten var, `/hl5` başlığında kapsanıyor. `hl5-2-pack` ürün sayfası eksikti — **bu oturumda düzeltildi** (bkz. commit). |
+| vitamine d / vitamine c / omega 3 | her biri 50.000 | Yüksek | Sunrise/Sunset zaten kısmen kapsıyor (`/sunset` başlığı "Omega-3" içeriyor). |
+| cortisol verlagen | 50.000 | Yüksek | **Amare'de doğrudan eşleşen ürün yok** — mevcut stres/adaptogenen içeriğiyle (informational) kapsanabilir, ürün zorlaması yapma. |
+| overgangsklachten | 50.000 | Orta | Menopoz-spesifik Amare ürünü yok — mevcut `menopauze-supplement-*` makaleleriyle çapraz kontrol et. |
+| eiwitshake | 5.000 | Yüksek | GBX Protein'e eşleşebilir — ürün var mı kontrol et, `data/extra-articles.json`'da eiwitshake araması yap. |
+
+### Kategori bazlı tam top-25 listeleri
+`content/keyword-research-2026-09-10.json` — 7 kategori (adaptogenen_hersenen, darmen,
+schoonheid, essentials, hormonen, kids, gewichtsbeheer) × top 25 kelime, hacim+rekabet.
+
+---
 
 Aşağıdaki **"24 AĞUSTOS 2026 — Anahtar Kelime Fırsat Araştırması"** bölümü, en güncel ve en
 kapsamlı veriye dayanıyor (GSC 6 ay + son 28 gün, Google Ads Keyword Planner, canlı SERP
