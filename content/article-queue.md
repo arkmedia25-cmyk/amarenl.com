@@ -52,6 +52,103 @@ ham veridir (bkz. hemen altında) — ama **24 AĞUSTOS 2026** bölümündeki gi
 `content/keyword-research-2026-09-10.json` — 7 kategori (adaptogenen_hersenen, darmen,
 schoonheid, essentials, hormonen, kids, gewichtsbeheer) × top 25 kelime, hacim+rekabet.
 
+### Derinlemesine analiz (tüm 9.176 satır, sadece top-25 değil) — 10 Eylül 2026, ikinci geçiş
+
+İlk geçiş sadece hacme göre top-25/kategori bakmıştı (~175 satır, verinin %2'si). Kullanıcı
+sorunca tüm veri üzerinden gerçek bir analiz yapıldı — 4 eksen: soru formatlı (GEO/AEO), rakip
+marka karşılaştırma, orta-hacim+düşük-rekabet gizli fırsatlar, marka-dışı satın-alma niyeti.
+
+**En önemli bulgu — rakip marka karşılaştırma boşluğu:** "vitakruid" (Hollanda'nın en büyük
+supplement perakende markası) neredeyse HER kategoride yüksek hacimle çıkıyor (ashwagandha
+vitakruid, vitakruid collageen, vitakruid vitamine d, vitakruid visolie — hepsi 500-5.000/ay) —
+ama `data/extra-articles.json` + `lib/blog.ts`'te "vitakruid" kelimesi **sıfır kez** geçiyor.
+Amare'nin hiçbir rakip-karşılaştırma içeriği yok. Aynı şekilde kruidvat, lucovitaal, orthica da
+sık tekrarlanıyor. Bir "Amare vs Vitakruid: [kategori] karşılaştırması" formatı gerçek, boş bir
+niş — Amare eczane/drogisterij'de satılmadığı için bu doğrudan rakip değil, dürüst bir
+karşılaştırma meşru içerik olur.
+
+**Doğrulanmış gerçek boşluk (kontrol edildi, mevcut değil):**
+- "teveel vitamine d" — 5.000/ay, **Düşük** rekabet, GEO-dostu (güvenlik/doz sorusu). Hiçbir
+  makalede yok.
+
+**Doğrulandı, ZATEN VAR — yazma:**
+- "vitamine c hoeveel per dag" — `vitamine-c-tekort-symptomen-oorzaken-oplossingen` zaten
+  kapsıyor.
+
+**Diğer soru-formatlı fırsatlar (henüz tek tek doğrulanmadı, bir sonraki oturum kontrol etsin):**
+vitamine d hoeveel per dag (5.000, Düşük), vitamine d3 hoeveel per dag (5.000, Orta), magnesium
+welke is het beste (5.000), haaruitval welke vitamine (5.000, Yüksek), probiotica welke beste
+(5.000).
+
+**Gizli fırsatlar (orta hacim + düşük/orta rekabet, en kolay sıralanabilecekler):**
+synbiotica (500, Orta), yakult bij antibiotica / antibiotica en yakult (500, Düşük — çok
+spesifik ama gerçek arama davranışı, Restore/MentaBiotics'e bağlanabilir), gehydrolyseerd (500,
+Düşük — mevcut HL5 pillar'ına long-tail destek olabilir).
+
+Tam script: scratchpad'de `deep_analysis.py` (kalıcı değil, gerekirse tekrar yazılabilir —
+mantığı: `data[i]` satırlarını soru-kelimesi/rakip-marka-listesi/hacim-rekabet eşiklerine göre
+filtrele).
+
+### Üçüncü geçiş — 364 ham adayı ~24 konu kümesine indirip TEK TEK doğrulama (10 Eylül 2026)
+
+Kullanıcı "önce ürünlerimizde bunlar var mı bul, filtrele" dedi. 364 ham aday (hacim≥500) 24
+gerçek konu kümesine indirildi ve her biri `data/extra-articles.json` + `lib/blog.ts` içinde
+gerçekten arandı (sadece slug değil, içerik/excerpt de).
+
+**EN BÜYÜK DOĞRULANMIŞ BOŞLUK — essentials marka-karşılaştırma:** `essentials` kategorisi bu
+tüm veri setindeki en büyük kategori (6.334 kelime) ve neredeyse tamamı **Kruidvat / Lucovitaal
+/ Vitakruid / Davitamon** marka isimleriyle vitamin/mineral kombinasyonlarından oluşuyor (her
+biri 500/ay, ama onlarca varyant — toplamda binlerce arama). **Doğrulandı: vitamine D, vitamine
+C, omega-3/visolie, multivitamine, magnesium için BU MARKALARA karşı sıfır içerik var** (ne
+`extra-articles.json`'da ne `lib/blog.ts`'te). Bu, tüm veri setindeki tek en büyük yakalanmamış
+fırsat.
+
+**Önemli düzeltme — collageen marka karşılaştırması aslında ZATEN VAR:** İlk geçişte "vitakruid
+sıfır kez geçiyor, hiç karşılaştırma yok" dedim — bu YANLIŞ/eksikti. `lib/blog.ts` satır 316-338
+(muhtemelen `collageen-hl5-vs-supermarkt-vergelijken` makalesi) **Lucovitaal, Orthica, Kruidvat
+ve Holland & Barrett'e karşı HL5'i fiyat/gram tablosuyla zaten karşılaştırıyor.** Sadece
+**Vitakruid** (en yüksek hacimli marka, 5.000/ay "vitakruid collageen") o tabloda eksik — yeni
+makale değil, mevcut tabloya bir satır eklemek yeterli.
+
+**Doğrulanmış gerçek boşluklar (öncelik sırasıyla):**
+| Konu | Maks. hacim | Durum |
+|---|---|---|
+| Essentials marka karşılaştırma (Kruidvat/Lucovitaal/Vitakruid vs Amare — vitamine D, C, omega-3, multivitamine, magnesium) | binlerce (toplam) | 🟡 **Vitamine D yapıldı** (10-09, `vitamine-d-energie-vermoeidheid-winter`'a eklendi — bkz. not altta). C/omega-3/multivitamine/magnesium hâlâ boş. |
+| Collageen tablosuna Vitakruid satırı ekle | 5.000 | 🟡 Küçük düzeltme, yeni makale değil |
+| beste multivitamine (+ consumentenbond/vrouw/man/60+/70+ varyantları) | 500×~7 | 🔴 Boş |
+| beste eiwitshake (+ afvallen/consumentenbond varyantları) | 500×~5 | 🔴 Boş |
+| beste magnesium supplement / beste opneembare magnesium | 500×2 | 🔴 Boş |
+| tot welke leeftijd vitamine d (RIVM-tipi soru) | 500 | 🔴 Boş |
+| eiwitshake hoeveel per dag | 500 | 🔴 Boş |
+| omega 3 in welke voeding | 500 | 🔴 Boş |
+| collageen in welke voeding | 500 | 🔴 Boş |
+| collageen bijwerkingen | 500 | 🔴 Boş |
+
+**Doğrulandı, ZATEN VAR — yazma:** probiotica na antibiotica (3 makalede), vitamine D hoeveel
+per dag (`vitamine-d-voeding-welke-producten-helpen-echt`), haaruitval welke vitamine (3
+makalede), magnesium welke is beste (3 makalede), vitamine D in voeding, visolie/omega3 waarom
+(2 makalede), vitamine D3+K2 kombinasyonu, omega3 hoeveel per dag, vitamine C hoeveel per dag
+(`vitamine-c-tekort-symptomen-oorzaken-oplossingen`).
+
+### Vitamine D — uygulandı (10 Eylül 2026)
+
+`vitamine-d-energie-vermoeidheid-winter`'a şunlar eklendi, ayrı bir makale açmadan, mevcut
+başlıkların altına doğal şekilde entegre edilerek:
+- **Kruidvat, Lucovitaal of Vitakruid: hoe verhoudt zich dat tot Sunset?** — yeni H2, essentials
+  marka-karşılaştırma boşluğunu dolduruyor (dürüst çerçeve: markalar saf/ucuz D3 için mantıklı,
+  Sunset zaten avondroutine kuranlar için).
+- **"Tot welke leeftijd moet ik vitamine D aan mijn kind geven?"** — yeni FAQ, Voedingscentrum
+  kaynaklı (0-3 yaş her zaman 10mcg, 4+ sadece risk gruplarında).
+- "Vitamine D-tekort bij specifieke groepen" listesine her grup için mcg dozu eklendi (Voedingscentrum
+  kaynaklı: 50-69 kadın 10mcg, 70+ herkes 20mcg dahil — önceden eksikti).
+
+**Yan bulgu — kritik düzeltme:** makale yanlışlıkla Sunrise'ın D3 içerdiğini iddia ediyordu
+(gerçek: Sunrise'da D yok, kaynak Sunset'tir, 6µg). Bu düzeltme genişleyip **Sunset'in K2/kalsiyum/
+magnezyum/algenolie içerdiği yönünde sitede 13 farklı yerde tekrarlanan yanlış iddia** ortaya
+çıkardı (biri "Triangle of Wellness Xtreme vegan'a uygun" gibi tehlikeli bir FAQ yanıtıydı — Sunset
+gerçekte balık yağı içeriyor, vegan değil). Hepsi amare.com'un canlı ürün sayfasına karşı
+doğrulanıp düzeltildi. Detay: memory `project_sunset_false_claims_fixed_2026_09_10`.
+
 ---
 
 Aşağıdaki **"24 AĞUSTOS 2026 — Anahtar Kelime Fırsat Araştırması"** bölümü, en güncel ve en

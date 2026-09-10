@@ -594,7 +594,7 @@ export const blogPosts: BlogPost[] = [
       <p><strong>Ochtend (07:00-08:00) — De Energiefase:</strong> Direct na opstaan probiotica met water. Bij het ontbijt (met gezonde vetten): multivitamine, D3+K2, omega-3, adaptogenen. Pas 30 minuten na het ontbijt de eerste koffie.</p>
       <p><strong>Middag (12:00-14:00) — De Onderhoudsfase:</strong> Bij de lunch eventueel collageen of extra vitamine C. Vroeg in de middag (voor 14:00) is het laatste moment voor een tweede dosis nootropics.</p>
       <p><strong>Avond (20:00-22:00) — De Herstelfase:</strong> 30-60 minuten voor het slapengaan: magnesium, zink, vitamine E. Vermijd B-complex, hoge dosis D3 en cafeïnehoudende formules.</p>
-      <p>Deze driedeling is de biologische logica achter de <strong>Amare Triangle of Wellness</strong>: Sunrise (22 superfoods + 9 vitamines) voor de ochtend, Nitro Xtreme (nitraten + 56 mineralen) voor de middag, en Sunset (omega-3, D3+K2, tocotriënolen, zink, magnesium) voor de avond. Eén bundel, drie flesjes, een complete dagcyclus.</p>
+      <p>Deze driedeling is de biologische logica achter de <strong>Amare Triangle of Wellness</strong>: Sunrise (22 superfoods + 9 vitamines) voor de ochtend, Nitro Xtreme (nitraten + 56 mineralen) voor de middag, en Sunset (omega-3, vitamine D3, A en E, astaxanthine) voor de avond. Eén bundel, drie flesjes, een complete dagcyclus.</p>
 
       <h2>Supplementen met of zonder eten nemen?</h2>
       <ul>
@@ -1404,7 +1404,7 @@ export const blogPosts: BlogPost[] = [
       <p>Vitamine D3 helpt bij de opname van calcium uit de darmen, terwijl vitamine K2 ervoor zorgt dat het calcium daadwerkelijk in de botten terechtkomt en niet in de slagaders verkalkt.</p>
       
       <h3>Amare Ondersteuning</h3>
-      <p>Producten zoals <strong>Amare Sunset</strong> en <strong>Amare Origin</strong> bieden de ideale combinatie van mineralen en vitaminen om je botstructuur van binnenuit te versterken.</p>
+      <p><strong>Amare Sunset</strong> levert vitamine D3, dat bijdraagt aan de normale opname van calcium uit je voeding — een belangrijke eerste stap. Sunset bevat zelf geen calcium of vitamine K2; voor de volledige D3+K2-synergie hierboven combineer je het met voeding rijk aan K2 (zoals natto, harde kazen of eigeel) of een apart K2-supplement.</p>
     `,
     image: "/images/blog/calcium.jpg"
   },
@@ -1464,7 +1464,7 @@ export const blogPosts: BlogPost[] = [
       <p>Niet alle vitamine E is gelijk. Tocotriënolen laten in onderzoek een sterkere antioxidantwerking zien dan de standaard tocoferolen die je in de meeste supplementen vindt.</p>
       
       <h3>Amare Sunset Focus</h3>
-      <p><strong>Amare Sunset</strong> bevat de meest krachtige vorm van vitamine E (tocotriënolen) voor een diepgaand herstel van je huid en weefsels tijdens de nacht.</p>
+      <p><strong>Amare Sunset</strong> bevat vitamine E (D-alfa-tocoferol) samen met omega-3 en astaxanthine, ter ondersteuning van je huid en weefsels tijdens de nacht.</p>
     `,
     image: "/images/blog/vitamine-e.jpg"
   },
@@ -1579,7 +1579,7 @@ export const blogPosts: BlogPost[] = [
       <ul>
         <li><strong>Sunrise:</strong> Je ochtendboost — 22 superfoods, 9 vitamines en 6 mineralen om de dag energiek te starten</li>
         <li><strong>Nitro Xtreme:</strong> Je middagfocus — nitraten, L-citrulline, L-glutathion en 56 mineralen voor uithoudingsvermogen en mentale helderheid</li>
-        <li><strong>Sunset:</strong> Je avondherstel — Omega-3 (EPA/DHA), D3, K2, calcium, vitamine E tocotriënolen en magnesium voor diepe slaap en herstel</li>
+        <li><strong>Sunset:</strong> Je avondherstel — Omega-3 (EPA/DHA), vitamine D3, A en E, en astaxanthine voor diepe slaap en herstel</li>
       </ul>
       <p>Het resultaat is een <strong>naadloze dagelijkse routine</strong> die niet alleen je energie en focus ondersteunt, maar ook je slaapkwaliteit en herstel — de twee pijlers die de meeste mensen onderschatten.</p>
 
@@ -1595,11 +1595,11 @@ export const blogPosts: BlogPost[] = [
       <p>Daarnaast bevat Nitro Xtreme <strong>56 mineralen</strong> in sporenhoeveelheden, gewonnen uit natuurlijke bronnen. Deze mineralen ondersteunen honderden enzymatische reacties in het lichaam — van energieproductie tot hormoonregulatie.</p>
 
       <h3>Sunset — Het Avondherstel</h3>
-      <p>Sunset is de meest onderschatte pijler van de Triangle. Het bevat <strong>Omega-3 vetzuren (EPA en DHA)</strong> uit algenolie — een plantaardig alternatief voor visolie — plus vitamine D3 (25 mcg), vitamine K2 (45 mcg), calcium (120 mg), magnesium (100 mg) en tocotriënolen (de krachtigste vorm van vitamine E).</p>
-      <p>Wat Sunset bijzonder maakt is dat het <strong>melatoninevrij</strong> is. In plaats van je lichaam kunstmatig slaperig te maken met melatonine, ondersteunt Sunset de natuurlijke slaapcyclus met mineralen en vetzuren die je lichaam nodig heeft om zelf melatonine aan te maken en te reguleren.</p>
+      <p>Sunset is de meest onderschatte pijler van de Triangle. Het bevat <strong>Omega-3 vetzuren (EPA 520 mg, DHA 223 mg)</strong> uit visolie (zalm en andere vissoorten — niet geschikt voor veganisten/vegetariërs), plus vitamine D3 (6 µg), vitamine A (retinylpalmitaat), vitamine E (D-alfa-tocoferol) en astaxanthine uit de alg Haematococcus pluvialis.</p>
+      <p>Wat Sunset bijzonder maakt is dat het <strong>melatoninevrij</strong> is — in plaats van je lichaam kunstmatig slaperig te maken, ondersteunt de formule je avondroutine met vetoplosbare voedingsstoffen die je bij de avondmaaltijd inneemt.</p>
 
       <h2>Waarom de Xtreme versie kiezen?</h2>
-      <p>De Triangle of Wellness Xtreme onderscheidt zich van de standaard Triangle door <strong>hogere doseringen en extra ingrediënten</strong>. De Xtreme variant van Nitro bevat 56 mineralen (tegenover 0 in de standaardversie) en een krachtiger nitratencomplex. De Xtreme variant van Sunset bevat extra Omega-3 en vitamine E tocotriënolen.</p>
+      <p>De Triangle of Wellness Xtreme onderscheidt zich van de standaard Triangle door <strong>hogere doseringen en extra ingrediënten</strong> in Nitro Xtreme: 56 mineralen (tegenover 0 in de standaardversie) en een krachtiger nitratencomplex.</p>
       <p>Voor de meeste gebruikers is de Xtreme versie de aanbevolen keuze — het prijsverschil is relatief klein, maar de toegevoegde waarde in termen van nutriëntendichtheid is significant. De Triangle of Wellness is ook verkrijgbaar in voordelige <strong>2-pack, 3-pack en 6-pack varianten</strong> voor nog meer besparing per portie.</p>
 
       <h2>Voor wie is de Triangle of Wellness Xtreme?</h2>
@@ -1618,7 +1618,7 @@ export const blogPosts: BlogPost[] = [
       <p>Absoluut. Veel gebruikers voegen MentaBiotics toe voor extra ondersteuning van de darm-hersen-as, of HL5 voor collageen. De Triangle of Wellness vormt een uitstekende basis die je naar behoefte kunt uitbreiden. De producten zijn zo ontworpen dat ze elkaar aanvullen zonder overlap of overdosering.</p>
 
       <h3>Is de Triangle of Wellness Xtreme geschikt voor veganisten?</h3>
-      <p>Sunrise en Nitro Xtreme zijn volledig plantaardig. Sunset bevat Omega-3 uit algenolie (geen visolie) en is daarmee ook veganistisch. De volledige Triangle of Wellness Xtreme is dus geschikt voor veganisten. Controleer altijd het etiket voor de meest actuele ingrediëntenlijst.</p>
+      <p>Sunrise en Nitro Xtreme zijn volledig plantaardig. Sunset bevat echter omega-3 uit visolie (zalm en andere vissoorten) in visgelatine capsules, en is daarmee <strong>niet</strong> geschikt voor veganisten of vegetariërs. De volledige Triangle of Wellness Xtreme is dus niet vegan — wie een plantaardige avondroutine zoekt, kan Sunset vervangen door een apart algenolie-omega-3-supplement. Controleer altijd het etiket voor de meest actuele ingrediëntenlijst.</p>
 
       <h3>Wat is het prijsvoordeel van een multi-pack?</h3>
       <p>De Triangle of Wellness Xtreme 2-Pack bespaart ongeveer 10% ten opzichte van twee losse maandvoorraden. De 3-Pack en 6-Pack bieden nog grotere kortingen — ideaal als je zeker weet dat dit je dagelijkse routine is. Bij een 6-Pack abonnement kan de besparing oplopen tot meer dan €100 per jaar vergeleken met maandelijks bestellen.</p>
@@ -2106,7 +2106,7 @@ Begin met een basisvorm zoals bisglycinaat (200-400 mg elementair), neem het 's 
 <p>Voor vegetariërs en veganisten is er een alternatieve route: <strong>ALA</strong> (alfa-linoleenzuur), een plantaardig omega-3 vetzuur dat voorkomt in lijnzaad, chiazaad, walnoten en hennepzaad. Je lichaam kan ALA omzetten in EPA en DHA — maar de efficiëntie is laag. Gemiddeld wordt slechts 5 tot 10% van ALA omgezet in EPA, en minder dan 1% in DHA. Voor veganisten die geen visolie willen gebruiken, bestaan er algenolie-supplementen die DHA en EPA direct leveren (het is de alg die de vis eet waardoor vis omega-3 bevat).</p>
 <h2>Amare's omega-3 product: Sunset</h2>
 <p><strong>Sunset</strong> is Amare's avondformule die omega-3 combineert met aanvullende voedingsstoffen voor slaap en herstel. Per portie levert Sunset 520 mg EPA en 223 mg DHA — een verhouding van 2,3:1 (EPA-dominant). Dit is relevant omdat EPA-dominante formules, zoals eerder beschreven, het sterkste bewijs hebben voor stemmingsondersteuning.</p>
-<p>Wat Sunset bijzonder maakt, is de combinatie: naast de omega-3 bevat de formule <strong>vitamine D3</strong> (essentieel voor stemming en immuunsysteem, vooral in de Nederlandse winter), <strong>vitamine K2</strong> (stuurt calcium naar botten in plaats van slagaders), <strong>astaxanthine</strong> (een krachtige antioxidant uit algen), en <strong>vitamine A en E</strong> (tocotriënolen, de krachtigste vorm). Het is geen pure omega-3 — het is een avondformule die hersenondersteuning combineert met slaap- en herstelondersteuning.</p>
+<p>Wat Sunset bijzonder maakt, is de combinatie: naast de omega-3 bevat de formule <strong>vitamine D3</strong> (essentieel voor stemming en immuunsysteem, vooral in de Nederlandse winter), <strong>astaxanthine</strong> (een krachtige antioxidant uit de alg Haematococcus pluvialis), en <strong>vitamine A en E</strong>. Het is geen pure omega-3 — het is een avondformule die hersenondersteuning combineert met slaap- en herstelondersteuning.</p>
 <p>Voor wie puur omega-3 zoekt zonder extra's, kan Sunset overkill voelen. Maar voor wie zijn avondroutine wil optimaliseren met één formule die hersenen, slaap en immuunsysteem tegelijk ondersteunt, is Sunset een doordachte keuze — en kostenefficiënter dan al deze stoffen los kopen.</p>
 <h2>Veelgestelde vragen</h2>
 <h3>Hoeveel omega-3 heb ik dagelijks nodig?</h3>
@@ -2120,7 +2120,7 @@ Begin met een basisvorm zoals bisglycinaat (200-400 mg elementair), neem het 's 
 <h2>Conclusie</h2>
 <p>Omega-3 vetzuren behoren tot de best onderbouwde supplementen voor hersengezondheid. Het bewijs is het sterkst voor stemming (EPA-dominant, minimaal 1 gram EPA per dag), cognitieve achteruitgang (DHA voor structurele hersenintegriteit), en hersenontwikkeling bij kinderen.</p>
 <p>De meeste Nederlanders krijgen te weinig binnen. Twee porties vette vis per week is de eerste stap — maar voor wie dat niet haalt, is een kwalitatief supplement de evidence-based volgende stap. Let daarbij op de EPA:DHA-verhouding: voor stemming kies je EPA-dominant (minimaal 60% EPA), voor algemene hersengezondheid is 2:1 uitstekend, en voor cognitieve ondersteuning neigt de wetenschap naar gelijke delen of DHA-dominant.</p>
-<p><strong>Sunset</strong> (€70,23/maand) combineert een EPA-dominante omega-3 (520 mg EPA, 223 mg DHA) uit wilde Alaskan pollock met D3, K2, astaxanthine en tocotriënolen. Het is niet de goedkoopste omega-3 op de markt, maar wel een van de meest complete avondformules — en goedkoper dan deze voedingsstoffen los aanschaffen. Voor wie puur omega-3 zoekt, volstaat een eenvoudig visoliesupplement — zoek naar minimaal 500 mg EPA+DHA per capsule met een gespecificeerde verhouding.</p>
+<p><strong>Sunset</strong> (€70,23/maand) combineert een EPA-dominante omega-3 (520 mg EPA, 223 mg DHA) uit visolie (zalm en andere vissoorten) met vitamine D3, A, E en astaxanthine. Het is niet de goedkoopste omega-3 op de markt, maar wel een van de meest complete avondformules — en goedkoper dan deze voedingsstoffen los aanschaffen. Voor wie puur omega-3 zoekt, volstaat een eenvoudig visoliesupplement — zoek naar minimaal 500 mg EPA+DHA per capsule met een gespecificeerde verhouding.</p>
 <p><em>* Voedingssupplement. Geen geneesmiddel. Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij depressieve klachten, cognitieve problemen of gebruik van antistollingsmedicatie altijd een arts voordat je met hoge doseringen omega-3 begint.</em></p>
 <p><em>Bronnen: Gezondheidsraad (2015); EFSA (2012); Liao et al. (2019) Translational Psychiatry; Morris et al. (2003) Archives of Neurology; Grosso et al. (2014) PLoS ONE.</em></p>`},
   
@@ -2206,7 +2206,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "Triangle of Wellness", url: `${AFFILIATE_BASE}/triangle-of-wellness-xtreme`, isInternal: false, price: "€123.55/maand", tagline: "Sunrise + Nitro Xtreme + Sunset — complete dag-nacht routine" },
     { name: "Amare Triangle of Wellness", url: `${AFFILIATE_BASE}/triangle-of-wellness-xtreme-2pack`, isInternal: false, price: "€205.96/maand", tagline: "Triangle of Wellness Xtreme 2-Pack — beste prijs-kwaliteit" },
     { name: "Sunrise", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "22 superfoods + 9 vitamines — de ochtendbasis" },
-    { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Omega-3 + D3 + K2 + magnesium — de avondformule" },
+    { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Omega-3 + vitamine D3, A, E + astaxanthine — avondformule" },
     { name: "Nitro Xtreme", url: `${AFFILIATE_BASE}/nitro-xtreme`, isInternal: false, price: "€80/maand", tagline: "Nitraten + 56 mineralen voor focus & energie" },
   ],
   "darmflora-verbeteren-herstel-spijsvertering-natuurlijk": [
@@ -2215,7 +2215,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — probiotica specifiek voor de darm-hersen-as" },
   ],
   "hormoonbalans-supplement-vrouwen-levensfase-ondersteuning": [
-    { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Omega-3 + D3 + K2 — ondersteunt ontstekingsbalans & slaap" },
+    { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Omega-3 + vitamine D3 — ondersteunt ontstekingsbalans & slaap" },
     { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71,83/maand", tagline: "Cerebiome® blend — probiotica voor stemming en stressveerkracht" },
   ],
   "focus-supplement-natuurlijke-nootropics-concentratie": [
@@ -2247,9 +2247,8 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "Amare MentaBiotics", url: `${AFFILIATE_BASE}/mentabiotics`, isInternal: false, price: "€71.83/maand", tagline: "Klinisch onderzochte stammen voor de darm-hersen-as" },
   ],
   "vitamine-d-energie-vermoeidheid-winter": [
-    { name: "Sunrise 2-Pack", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "22 plantaardige concentraten + 9 essentiële vitaminen inclusief D3" },
-    { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Vitamine D3 + K2 + Omega-3 in vetbasis voor optimale opname" },
-    { name: "Amare Sunrise", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "Vloeibare multivitamine met D3, B-complex en 22 superfoods" },
+    { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Vitamine D3 + Omega-3 + Astaxanthine in vetbasis voor optimale opname" },
+    { name: "Sunrise 2-Pack", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "22 plantaardige concentraten + 9 essentiële vitaminen" },
   ],
   "supplementen-voor-meer-energie-dit-werkt-echt": [
     { name: "Energy+", url: "/energy", isInternal: true, price: "€55.48/maand", tagline: "Natuurlijke energie zonder cafeïnecrash" },
@@ -2289,9 +2288,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "Amare HL5", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "5g gehydrolyseerd collageen Type 1&3 — 2-pack" },
   ],
   "calcium-botten-supplement-nederland": [
-    { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Calcium + D3 + K2 + Omega-3 — complete botformule" },
-    { name: "Amare Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Calcium + D3 + K2 + Omega-3 — complete botformule" },
-
+    { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Omega-3 + vitamine D3, A, E + astaxanthine — avondformule" },
   ],
   "zink-testosteron-supplement-nederland": [
     { name: "Nitro Xtreme", url: `${AFFILIATE_BASE}/nitro-xtreme`, isInternal: false, price: "€80/maand", tagline: "Nitraten + mineralen voor focus, energie & hormonale balans" },
@@ -2301,8 +2298,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "Amare Sunrise", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "Natuurlijke vitamine C uit 22 superfoods — 2-pack" },
   ],
   "vitamine-e-huid-haar-supplement": [
-    { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Tocotriënolen (krachtigste vitamine E) voor huid & haar" },
-    { name: "Amare Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Tocotriënolen (krachtigste vitamine E) voor huid & haar" },
+    { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Vitamine E + omega-3 + astaxanthine voor huid & haar" },
   ],
   "b-vitamines-energie-supplement-nederland": [
   ],
@@ -2375,7 +2371,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "Nitro Xtreme", url: `${AFFILIATE_BASE}/nitro-xtreme`, isInternal: false, price: "€80/maand", tagline: "Nitraten + 56 mineralen voor focus & energie" },
     { name: "Triangle of Wellness", url: `${AFFILIATE_BASE}/triangle-of-wellness-xtreme`, isInternal: false, price: "€123.55/maand", tagline: "Sunrise + Nitro Xtreme + Sunset — complete dag-nacht routine" },
     { name: "Sunrise", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "22 superfoods + 9 vitamines — de ochtendbasis" },
-    { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Omega-3 + D3 + K2 + magnesium — de avondformule" },
+    { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Omega-3 + vitamine D3, A, E + astaxanthine — avondformule" },
   ],
   "supplementen-bewaren-zomer-hitte-vocht-zonlicht": [
     { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — psychobioticum voor de darm-hersen-as" },
@@ -2389,7 +2385,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "Nitro Xtreme", url: `${AFFILIATE_BASE}/nitro-xtreme`, isInternal: false, price: "€80/maand", tagline: "Nitraten + 56 mineralen voor focus & energie" },
     { name: "Triangle of Wellness", url: `${AFFILIATE_BASE}/triangle-of-wellness-xtreme`, isInternal: false, price: "€123.55/maand", tagline: "Sunrise + Nitro Xtreme + Sunset — complete dag-nacht routine" },
     { name: "Sunrise", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "22 superfoods + 9 vitamines — de ochtendbasis" },
-    { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Omega-3 + D3 + K2 + magnesium — de avondformule" },
+    { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Omega-3 + vitamine D3, A, E + astaxanthine — avondformule" },
   ],
   "terug-naar-kantoor-darmen-mentabiotics-restore": [
     { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — probiotica voor stemming & mentale veerkracht" },
