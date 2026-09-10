@@ -113,7 +113,7 @@ makale değil, mevcut tabloya bir satır eklemek yeterli.
 **Doğrulanmış gerçek boşluklar (öncelik sırasıyla):**
 | Konu | Maks. hacim | Durum |
 |---|---|---|
-| Essentials marka karşılaştırma (Kruidvat/Lucovitaal/Vitakruid vs Amare — vitamine D, C, omega-3, multivitamine, magnesium) | binlerce (toplam) | 🟡 **Vitamine D yapıldı** (10-09, `vitamine-d-energie-vermoeidheid-winter`'a eklendi — bkz. not altta). C/omega-3/multivitamine/magnesium hâlâ boş. |
+| Essentials marka karşılaştırma (Kruidvat/Lucovitaal/Vitakruid vs Amare — vitamine D, C, omega-3, multivitamine, magnesium) | binlerce (toplam) | 🟡 **Vitamine D ✅ + Vitamine C ✅ yapıldı** (10-09). Omega-3/multivitamine/magnesium hâlâ boş. |
 | Collageen tablosuna Vitakruid satırı ekle | 5.000 | 🟡 Küçük düzeltme, yeni makale değil |
 | beste multivitamine (+ consumentenbond/vrouw/man/60+/70+ varyantları) | 500×~7 | 🔴 Boş |
 | beste eiwitshake (+ afvallen/consumentenbond varyantları) | 500×~5 | 🔴 Boş |
@@ -141,6 +141,25 @@ başlıkların altına doğal şekilde entegre edilerek:
   kaynaklı (0-3 yaş her zaman 10mcg, 4+ sadece risk gruplarında).
 - "Vitamine D-tekort bij specifieke groepen" listesine her grup için mcg dozu eklendi (Voedingscentrum
   kaynaklı: 50-69 kadın 10mcg, 70+ herkes 20mcg dahil — önceden eksikti).
+
+**⚠️ Açık bulgu, henüz düzeltilmedi (kullanıcı erteledi 10-09):** Sunrise'a demir/magnezyum/çinko/D3
+atfeden yanlış iddialar sitede en az 13 yerde daha var (`ijzer-tekort-vermoeidheid-supplement-nederland`
+makalesinin tamamı dahil — başlığı bile yanlış öncüle dayanıyor). Detay: memory
+`project_sunrise_false_claims_flagged_2026_09_10`. Bir sonraki oturum bunu ele almalı.
+
+### Vitamine C — uygulandı (10 Eylül 2026)
+
+`natuurlijke-vitamine-c-vs-synthetisch-vergelijking`'e eklendi:
+- **Kruidvat, Lucovitaal of Vitakruid: hoe verhouden die zich tot Sunrise?** — yeni H2, gerçek
+  ürün verisiyle (Kruidvat/Lucovitaal vitamine C-1000 = aynı L-ascorbinezuur formu, sadece çok
+  daha yüksek doz ve ucuz).
+
+**Yan düzeltme:** aynı makalenin "Amare Sunrise: natuurlijke vitamine C in context" bölümü
+Sunrise'ın vitamine C'sinin amla/yaban mersininden "doğal" geldiğini iddia ediyordu — gerçekte
+ayrı bir L-ascorbinezuur (sentetik form) satırı, amla sadece 1mg'lık iz miktarda ayrı bileşen.
+Makalenin kendi "doğal vs sentetik" tanımına göre çelişkiliydi, düzeltildi. Ayrıca 2 yerde (kendi
+düzeltmemde yanlışlıkla eklediğim dahil) Sunrise'a demir atfedilmişti — bkz. yukarıdaki açık
+bulgu notu, bunlar da düzeltildi ama tüm site taraması yapılmadı.
 
 **Yan bulgu — kritik düzeltme:** makale yanlışlıkla Sunrise'ın D3 içerdiğini iddia ediyordu
 (gerçek: Sunrise'da D yok, kaynak Sunset'tir, 6µg). Bu düzeltme genişleyip **Sunset'in K2/kalsiyum/
