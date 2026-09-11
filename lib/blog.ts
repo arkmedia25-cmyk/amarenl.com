@@ -1400,25 +1400,6 @@ export const blogPosts: BlogPost[] = [
     image: "/images/blog/b-vitamines.jpg"
   },
   {
-    slug: "probiotica-darmen-supplement-nederland",
-    title: "Restore & MentaBiotics: Welke Kies Je?",
-    date: "2026-04-23",
-    category: "Gut Health",
-    excerpt: "Niet alle probiotica zijn gelijk. Leer welke stammen zoals Lactobacillus en Bifidobacterium het beste werken voor jouw darmflora.",
-    author: "Mark",
-    content: `
-      <h2>Kwaliteit over Kwantiteit</h2>
-      <p>Het gaat niet alleen om het aantal bacteriën (CFU's), maar vooral om de specifieke stammen en hun overlevingskans in je maagzuur.</p>
-      
-      <h3>Lactobacillus vs Bifidobacterium</h3>
-      <p>Verschillende stammen hebben verschillende functies: van het ondersteunen van de spijsvertering tot het reguleren van het immuunsysteem.</p>
-      
-      <h3>Restore & MentaBiotics</h3>
-      <p>Onze producten zoals <strong>Restore</strong> en <strong>MentaBiotics</strong> maken gebruik van gepatenteerde stammen die wetenschappelijk zijn bewezen om de darmbarrière te versterken.</p>
-    `,
-    image: "/images/blog/probiotics-guide.jpg"
-  },
-  {
     slug: "happy-juice-pack-complete-mentale-focus-energie-bundel",
     title: "Happy Juice Pack: Wat Doet Deze Bundel?",
     date: "2026-05-18",
@@ -2209,10 +2190,6 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "Amare Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Tocotriënolen (krachtigste vitamine E) voor huid & haar" },
   ],
   "b-vitamines-energie-supplement-nederland": [
-  ],
-  "probiotica-darmen-supplement-nederland": [
-    { name: "Restore", url: "/restore", isInternal: true, price: "€29.70/maand", tagline: "5 probiotica stammen + 5 spijsverteringsenzymen" },
-    { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Probiotica specifiek voor de darm-hersen-as" },
   ],
   "happy-juice-pack-complete-mentale-focus-energie-bundel": [
     { name: "Happy Juice Pack", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — MentaBiotics + Energy+ + EDGE+ in één bundel" },
