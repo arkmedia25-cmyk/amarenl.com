@@ -1018,6 +1018,16 @@
       "permanent": true
     },
     {
+      "source": "/blogs/nieuws/collageen-bouwsteen-voor-huid-haar-en-nagels-dit-moet-je-weten",
+      "destination": "/blogs/nieuws/vloeibaar-collageen-hl5-huid-haar-nagels",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/nieuws/collageen-supplement-huid-haar-gewrichten",
+      "destination": "/blogs/nieuws/vloeibaar-collageen-hl5-huid-haar-nagels",
+      "permanent": true
+    },
+    {
       "source": "/blogs/nieuws/fit20-whey-isolaat-collageen-spierherstel-review",
       "destination": "/restore",
       "permanent": true

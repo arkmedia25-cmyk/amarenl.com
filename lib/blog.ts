@@ -1247,76 +1247,6 @@ export const blogPosts: BlogPost[] = [
     `,
     image: "/images/blog/energie-supplementen-cover.jpg"
   },
-  {
-    slug: "collageen-bouwsteen-voor-huid-haar-en-nagels-dit-moet-je-weten",
-    title: "HL5 Collageen: Wat Doet 5g Per Dag?",
-    date: "2026-05-09",
-    category: "Beauty",
-    excerpt: "Collageen is het belangrijkste eiwit voor je huid, haar en nagels. Vanaf je 25e neemt de productie af. Ontdek hoe je dit op natuurlijke wijze ondersteunt.",
-    content: `
-      <h2>Wat is collageen en waarom is het zo belangrijk?</h2>
-      <p>Collageen is het meest voorkomende eiwit in je lichaam — het vormt de bouwsteen voor je huid, haar, nagels, gewrichten en botten. Ongeveer 30% van al het eiwit in je lichaam is collageen. Het geeft structuur, stevigheid en elasticiteit aan bijna elk weefsel.</p>
-      <p>Maar hier is het probleem: <strong>vanaf je 25e levensjaar neemt je natuurlijke collageenproductie af.</strong> Elk jaar produceer je ongeveer 1% minder collageen. Tegen de tijd dat je 40 bent, ben je dus al zo'n 15% kwijt. Rond je 50e kan dat oplopen tot 25-30%.</p>
-      <p>Gevolg? Fijne lijntjes, minder stevige huid, doffer haar en brozere nagels. De oplossing? Van binnenuit ondersteunen.</p>
-
-      <h3>Wat doet collageen precies?</h3>
-      <ul>
-        <li><strong>Huid:</strong> collageen geeft je huid structuur en elasticiteit. Voldoende collageen betekent een vollere, gladdere huid met minder rimpels.</li>
-        <li><strong>Haar:</strong> de haarwortels hebben collageen nodig voor stevige, glanzende haren. Een tekort kan leiden tot dunner wordend haar.</li>
-        <li><strong>Nagels:</strong> broze nagels die snel scheuren? Vaak een teken van collageentekort.</li>
-        <li><strong>Gewrichten:</strong> collageen houdt ook je kraakbeen soepel — essentieel voor pijnvrije beweging.</li>
-      </ul>
-
-      <h2>Waarom verlies je collageen?</h2>
-      <p>Niet alleen leeftijd speelt een rol. Deze factoren versnellen collageenafbraak:</p>
-      <ul>
-        <li><strong>Zonblootstelling (UV-straling):</strong> de grootste boosdoener. UV breekt collageen af tot 3x sneller.</li>
-        <li><strong>Roken:</strong> nicotine vernauwt bloedvaten in de huid, minder voedingsstoffen, minder collageen.</li>
-        <li><strong>Suiker:</strong> suiker bindt zich aan collageenvezels (glycatie), waardoor ze stug en broos worden.</li>
-        <li><strong>Stress:</strong> chronische stress verhoogt cortisol, wat collageenafbraak stimuleert.</li>
-        <li><strong>Slechte voeding:</strong> te weinig eiwitten, vitamine C en zink = te weinig bouwstoffen.</li>
-      </ul>
-
-      <h2>Hoe ondersteun je je collageen op natuurlijke wijze?</h2>
-
-      <h3>1. Voeding rijk aan collageenboosters</h3>
-      <p>Je lichaam maakt zelf collageen aan, maar heeft daar wel de juiste voedingsstoffen voor nodig:</p>
-      <ul>
-        <li><strong>Vitamine C</strong> — onmisbaar voor collageensynthese. Denk aan citrusvruchten, paprika, kiwi, broccoli.</li>
-        <li><strong>Zink</strong> — ondersteunt eiwitsynthese. Te vinden in noten, zaden, schaaldieren.</li>
-        <li><strong>Koper</strong> — helpt collageenvezels te vormen. In pure chocolade, linzen, avocado.</li>
-        <li><strong>Eiwitten</strong> — collageen is een eiwit, dus voldoende eiwitinname via voeding is essentieel.</li>
-      </ul>
-
-      <h3>2. Beschermen tegen collageenafbraak</h3>
-      <ul>
-        <li>Draag dagelijks <strong>zonbescherming</strong> (SPF), ook op bewolkte dagen.</li>
-        <li>Beperk <strong>suiker</strong> en bewerkte voeding.</li>
-        <li>Zorg voor <strong>voldoende slaap</strong> — tijdens je slaap herstelt je huid.</li>
-        <li>Hydrateer van binnenuit: <strong>minimaal 1,5 liter water</strong> per dag.</li>
-      </ul>
-
-      <h3>3. Vloeibaar collageen supplement</h3>
-      <p>Gehydrolyseerd collageen (collageenpeptiden) is de meest opneembare vorm. Het is opgesplitst in kleinere aminozuurketens die je lichaam direct kan gebruiken. Wetenschappelijk onderzoek toont aan dat dagelijkse suppletie met collageenpeptiden na 8-12 weken zichtbare verbetering geeft in huidelasticiteit, hydratatie en fijnheid van lijntjes.</p>
-      <p><strong>Amare HL5</strong> levert 5 gram hoogwaardig vloeibaar collageen per portie, specifiek geformuleerd voor maximale opname en resultaat. Verkrijgbaar in heerlijke perzik- en bessensmaak.</p>
-
-      <h2>Veelgestelde vragen</h2>
-
-      <h3>Vanaf welke leeftijd moet je collageen gaan gebruiken?</h3>
-      <p>De natuurlijke collageenproductie neemt af vanaf je 25e. Veel mensen starten rond hun 30e met preventieve suppletie. Hoe eerder je begint met ondersteunen, hoe langer je de zichtbare effecten van collageenverlies kunt uitstellen. Maar ook op latere leeftijd starten heeft nog steeds meetbare voordelen voor huid, haar en nagels.</p>
-
-      <h3>Hoe lang duurt het voordat je resultaat ziet bij collageen suppletie?</h3>
-      <p>De meeste gebruikers ervaren na 8 tot 12 weken dagelijks gebruik de eerste zichtbare verbeteringen: een gladdere huid, minder droogheid en sterker haar. Voor optimale resultaten adviseren deskundigen een kuur van minimaal 3 tot 6 maanden. Houd er rekening mee dat suppletie geen wondermiddel is — combineer het met gezonde voeding, voldoende slaap en goede zonbescherming.</p>
-
-      <h3>Wat is het verschil tussen collageenpoeder, capsules en vloeibaar collageen?</h3>
-      <p>Vloeibaar collageen (gehydrolyseerde peptiden) wordt over het algemeen het best opgenomen door het lichaam — tot 90% binnen 6 uur. Capsules zijn handig voor onderweg maar hebben een lagere opneembaarheid. Poeders zijn populair voor in smoothies, maar de opname hangt af van de kwaliteit van de hydrolyse. Kies altijd voor collageen dat expliciet "gehydrolyseerd" op het etiket heeft staan, ongeacht de vorm.</p>
-
-      <h2>Conclusie</h2>
-      <p>Collageen is geen hype — het is een essentieel eiwit dat je lichaam dagelijks nodig heeft. Omdat de natuurlijke productie vanaf je 25e langzaam afneemt, loont het om je collageen actief te ondersteunen: bescherm je huid tegen de zon, eet voldoende eiwitten en vitamine C, beperk suiker en overweeg een kwalitatief collageensupplement.</p>
-      <p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Supplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl.</em></p>
-    `,
-    image: "/images/blog/collageen-huid-haar-nagels-cover.jpg"
-  },
   
   {
     slug: "ijzer-tekort-vermoeidheid-supplement-nederland",
@@ -1370,24 +1300,6 @@ export const blogPosts: BlogPost[] = [
   },
   
   
-  {
-    slug: "collageen-supplement-huid-haar-gewrichten",
-    title: "HL5 Collageen: Werkt Het Écht?",
-    date: "2026-02-28",
-    category: "Beauty",
-    excerpt: "Collageen is het meest voorkomende eiwit in je lichaam. Ontdek waarom suppletie essentieel is bij het ouder worden.",
-    content: `
-      <h2>Waarom Collageen?</h2>
-      <p>Vanaf ons 25e levensjaar begint de natuurlijke productie van collageen af te nemen. Dit kan leiden tot rimpels, minder elastische huid en gevoelige gewrichten.</p>
-      
-      <h3>Type I en III</h3>
-      <p>Voor schoonheid en weefselherstel zijn Type I en III de belangrijkste vormen. Gehydrolyseerd collageen (peptiden) wordt het best door het lichaam opgenomen.</p>
-      
-      <h3>Amare HL5</h3>
-      <p><strong>Amare HL5</strong> levert 5 gram hoogwaardig vloeibaar collageen per portie, specifiek geformuleerd voor maximale opname en resultaat.</p>
-    `,
-    image: "/images/blog/collagen.jpg"
-  },
   {
     slug: "calcium-botten-supplement-nederland",
     title: "Sunset & Origin: Sterke Botten?",
@@ -2256,10 +2168,6 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "Happy Juice Pack", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — energie, stemming & focus in één pakket" },
     { name: "Triangle of Wellness Xtreme", url: `${AFFILIATE_BASE}/triangle-of-wellness-xtreme`, isInternal: false, price: "€123.55/maand", tagline: "Sunrise + Nitro Xtreme + Sunset — complete dag-nacht energie" },
   ],
-  "collageen-bouwsteen-voor-huid-haar-en-nagels-dit-moet-je-weten": [
-    { name: "HL5", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "5g gehydrolyseerd collageen Type 1&3 — 2-pack" },
-    { name: "Amare HL5", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "5g gehydrolyseerd collageen Type 1&3 — 2-pack" },
-  ],
   "prebiotica-probiotica-verschil-darmen-uitleg": [
     { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — psychobioticum voor de darm-hersen-as" },
     { name: "Restore", url: "/restore", isInternal: true, price: "€29.70/maand", tagline: "Spijsverteringsenzymen + 5 probiotica stammen" },
@@ -2283,10 +2191,6 @@ const articleProductMap: Record<string, ProductLink[]> = {
   "adaptogenen-natuurlijke-stressverlichting-ashwagandha-rhodiola": [
     { name: "EDGE+ Watermelon", url: `${AFFILIATE_BASE}/amareedge-plus-watermelon`, isInternal: false, price: "€77,28/maand", tagline: "Cafeïnevrij nootropicum — gojibes, Boswellia serrata, vitamine B5" },
     { name: "Happy Juice Pack", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — energie, stemming & focus in één pakket" },
-  ],
-  "collageen-supplement-huid-haar-gewrichten": [
-    { name: "HL5", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "5g gehydrolyseerd collageen Type 1&3 — 2-pack" },
-    { name: "Amare HL5", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "5g gehydrolyseerd collageen Type 1&3 — 2-pack" },
   ],
   "calcium-botten-supplement-nederland": [
     { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Calcium + D3 + K2 + Omega-3 — complete botformule" },
