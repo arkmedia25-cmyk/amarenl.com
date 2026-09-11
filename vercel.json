@@ -348,6 +348,26 @@
       "permanent": true
     },
     {
+      "source": "/triangle-of-wellness-xtreme-2/",
+      "destination": "/triangle-of-wellness-xtreme",
+      "permanent": true
+    },
+    {
+      "source": "/triangle-of-wellness-xtreme-2",
+      "destination": "/triangle-of-wellness-xtreme",
+      "permanent": true
+    },
+    {
+      "source": "/verdichten-geconcentreerde-conditioner",
+      "destination": "/producten/verdichten-geconcentreerde-conditioner",
+      "permanent": true
+    },
+    {
+      "source": "/instagram.com/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/vitamine-d-tekort-nederland-supplement/",
       "destination": "/blogs/nieuws/vitamine-d-tekort-symptomen",
       "permanent": true
