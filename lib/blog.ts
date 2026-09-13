@@ -594,7 +594,7 @@ export const blogPosts: BlogPost[] = [
       <p><strong>Ochtend (07:00-08:00) — De Energiefase:</strong> Direct na opstaan probiotica met water. Bij het ontbijt (met gezonde vetten): multivitamine, D3+K2, omega-3, adaptogenen. Pas 30 minuten na het ontbijt de eerste koffie.</p>
       <p><strong>Middag (12:00-14:00) — De Onderhoudsfase:</strong> Bij de lunch eventueel collageen of extra vitamine C. Vroeg in de middag (voor 14:00) is het laatste moment voor een tweede dosis nootropics.</p>
       <p><strong>Avond (20:00-22:00) — De Herstelfase:</strong> 30-60 minuten voor het slapengaan: magnesium, zink, vitamine E. Vermijd B-complex, hoge dosis D3 en cafeïnehoudende formules.</p>
-      <p>Deze driedeling is de biologische logica achter de <strong>Amare Triangle of Wellness</strong>: Sunrise (22 superfoods + 9 vitamines) voor de ochtend, Nitro Xtreme (nitraten + 56 mineralen) voor de middag, en Sunset (omega-3, vitamine D3, A en E, astaxanthine) voor de avond. Eén bundel, drie flesjes, een complete dagcyclus.</p>
+      <p>Deze driedeling is de biologische logica achter de <strong>Amare Triangle of Wellness</strong>: Sunrise (22 superfoods + 9 vitamines) voor de ochtend, Nitro Xtreme (noni-vruchtenconcentraat + zink, chroom en B-vitamines) voor de middag, en Sunset (omega-3, vitamine D3, A en E, astaxanthine) voor de avond. Eén bundel, drie flesjes, een complete dagcyclus.</p>
 
       <h2>Supplementen met of zonder eten nemen?</h2>
       <ul>
@@ -1578,7 +1578,7 @@ export const blogPosts: BlogPost[] = [
       <p>Waar veel supplementenmerken losse producten verkopen die je zelf moet combineren, heeft Amare met de Triangle of Wellness een <strong>wetenschappelijk op elkaar afgestemd systeem</strong> ontwikkeld. Drie formules, elk met een specifiek doel en tijdstip:</p>
       <ul>
         <li><strong>Sunrise:</strong> Je ochtendboost — 22 superfoods, 9 vitamines en 6 mineralen om de dag energiek te starten</li>
-        <li><strong>Nitro Xtreme:</strong> Je middagfocus — nitraten, L-citrulline, L-glutathion en 56 mineralen voor uithoudingsvermogen en mentale helderheid</li>
+        <li><strong>Nitro Xtreme:</strong> Je middagboost — noni-vruchtenconcentraat met zink, chroom, thiamine en niacine, plus CoQ10</li>
         <li><strong>Sunset:</strong> Je avondherstel — Omega-3 (EPA/DHA), vitamine D3, A en E, en astaxanthine voor diepe slaap en herstel</li>
       </ul>
       <p>Het resultaat is een <strong>naadloze dagelijkse routine</strong> die niet alleen je energie en focus ondersteunt, maar ook je slaapkwaliteit en herstel — de twee pijlers die de meeste mensen onderschatten.</p>
@@ -1590,16 +1590,16 @@ export const blogPosts: BlogPost[] = [
       <p>Sunrise is ontworpen om je dag te starten met een breed spectrum aan micronutriënten uit <strong>22 verschillende superfoods</strong>, waaronder bietenpoeder, tarwegras, spirulina, chlorella, kurkuma, gember, bosbessen, acai, goji-bessen en granaatappel. Daarnaast bevat het 9 vitamines (waaronder B-complex, C, D3, E) en 6 mineralen (waaronder magnesium en kalium).</p>
       <p>In plaats van een handvol losse vitaminesupplementen krijg je één sachet dat je mengt met 250 ml water. Het is ontworpen om zacht te zijn voor de maag — in tegenstelling tot veel multivitamines die op een lege maag voor misselijkheid kunnen zorgen.</p>
 
-      <h3>Nitro Xtreme — De Middagkracht</h3>
-      <p>Nitro Xtreme is het product dat de "Xtreme" in de Triangle of Wellness brengt. Het combineert <strong>nitraten uit rode biet</strong> met L-citrulline en L-glutathion voor een volledig andere benadering van energie dan cafeïne. Nitraten worden in het lichaam omgezet in stikstofmonoxide (NO), een molecuul dat bloedvaten verwijdt en de zuurstof- en nutriëntenstroom naar spieren en hersenen verbetert.</p>
-      <p>Daarnaast bevat Nitro Xtreme <strong>56 mineralen</strong> in sporenhoeveelheden, gewonnen uit natuurlijke bronnen. Deze mineralen ondersteunen honderden enzymatische reacties in het lichaam — van energieproductie tot hormoonregulatie.</p>
+      <h3>Nitro Xtreme — De Verbindende Factor</h3>
+      <p>Nitro Xtreme is de verbindende schakel van de Triangle of Wellness: het is een vloeibaar <strong>noni-vruchtenconcentraat</strong> (Morinda citrifolia, 240 mg per 3 ml) dat het lichaam helpt de voedingsstoffen in Sunrise en Sunset op te nemen. Amare raadt aan om Nitro vóór Sunrise en Sunset in te nemen voor een optimale opname.</p>
+      <p>Daarnaast levert Nitro Xtreme <strong>thiamine (B1) en niacine (B3)</strong> voor de normale energiestofwisseling, <strong>zink</strong> (zuur-base-balans, koolhydraat- en vetstofwisseling) en <strong>chroom</strong> (macronutriëntenstofwisseling, bloedsuikerspiegel), plus CoQ10.</p>
 
       <h3>Sunset — Het Avondherstel</h3>
       <p>Sunset is de meest onderschatte pijler van de Triangle. Het bevat <strong>Omega-3 vetzuren (EPA 520 mg, DHA 223 mg)</strong> uit visolie (zalm en andere vissoorten — niet geschikt voor veganisten/vegetariërs), plus vitamine D3 (6 µg), vitamine A (retinylpalmitaat), vitamine E (D-alfa-tocoferol) en astaxanthine uit de alg Haematococcus pluvialis.</p>
       <p>Wat Sunset bijzonder maakt is dat het <strong>melatoninevrij</strong> is — in plaats van je lichaam kunstmatig slaperig te maken, ondersteunt de formule je avondroutine met vetoplosbare voedingsstoffen die je bij de avondmaaltijd inneemt.</p>
 
       <h2>Waarom de Xtreme versie kiezen?</h2>
-      <p>De Triangle of Wellness Xtreme onderscheidt zich van de standaard Triangle door <strong>hogere doseringen en extra ingrediënten</strong> in Nitro Xtreme: 56 mineralen (tegenover 0 in de standaardversie) en een krachtiger nitratencomplex.</p>
+      <p>De Triangle of Wellness Xtreme onderscheidt zich van de standaard Triangle door <strong>hogere doseringen</strong> in Nitro Xtreme.</p>
       <p>Voor de meeste gebruikers is de Xtreme versie de aanbevolen keuze — het prijsverschil is relatief klein, maar de toegevoegde waarde in termen van nutriëntendichtheid is significant. De Triangle of Wellness is ook verkrijgbaar in voordelige <strong>2-pack, 3-pack en 6-pack varianten</strong> voor nog meer besparing per portie.</p>
 
       <h2>Voor wie is de Triangle of Wellness Xtreme?</h2>
@@ -2207,7 +2207,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "Amare Triangle of Wellness", url: `${AFFILIATE_BASE}/triangle-of-wellness-xtreme-2pack`, isInternal: false, price: "€205.96/maand", tagline: "Triangle of Wellness Xtreme 2-Pack — beste prijs-kwaliteit" },
     { name: "Sunrise", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "22 superfoods + 9 vitamines — de ochtendbasis" },
     { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Omega-3 + vitamine D3, A, E + astaxanthine — avondformule" },
-    { name: "Nitro Xtreme", url: `${AFFILIATE_BASE}/nitro-xtreme`, isInternal: false, price: "€80/maand", tagline: "Nitraten + 56 mineralen voor focus & energie" },
+    { name: "Nitro Xtreme", url: `${AFFILIATE_BASE}/nitro-xtreme`, isInternal: false, price: "€80/maand", tagline: "Noni-concentraat + zink, chroom & B-vitamines voor de middag" },
   ],
   "darmflora-verbeteren-herstel-spijsvertering-natuurlijk": [
     { name: "Restore", url: "/restore", isInternal: true, price: "€29.70/maand", tagline: "5 probiotica stammen + 5 spijsverteringsenzymen" },
@@ -2291,7 +2291,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Omega-3 + vitamine D3, A, E + astaxanthine — avondformule" },
   ],
   "zink-testosteron-supplement-nederland": [
-    { name: "Nitro Xtreme", url: `${AFFILIATE_BASE}/nitro-xtreme`, isInternal: false, price: "€80/maand", tagline: "Nitraten + mineralen voor focus, energie & hormonale balans" },
+    { name: "Nitro Xtreme", url: `${AFFILIATE_BASE}/nitro-xtreme`, isInternal: false, price: "€80/maand", tagline: "Noni-concentraat + zink, chroom & B-vitamines" },
   ],
   "vitamine-c-immuunsysteem-supplement": [
     { name: "Sunrise", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "Natuurlijke vitamine C uit 22 superfoods — 2-pack" },
@@ -2317,7 +2317,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "Amare Triangle of Wellness", url: `${AFFILIATE_BASE}/triangle-of-wellness-xtreme-2pack`, isInternal: false, price: "€205.96/maand", tagline: "Triangle of Wellness Xtreme 2-Pack — beste prijs-kwaliteit" },
     { name: "Energy+", url: "/energy", isInternal: true, price: "€55.48/maand", tagline: "Natuurlijke cafeïne + antioxidanten voor energie" },
     { name: "Restore", url: "/restore", isInternal: true, price: "€29.70/maand", tagline: "5 probiotica stammen + 5 spijsverteringsenzymen" },
-    { name: "Nitro Xtreme", url: `${AFFILIATE_BASE}/nitro-xtreme`, isInternal: false, price: "€80/maand", tagline: "Nitraten + 56 mineralen voor uithoudingsvermogen & herstel" },
+    { name: "Nitro Xtreme", url: `${AFFILIATE_BASE}/nitro-xtreme`, isInternal: false, price: "€80/maand", tagline: "Noni-concentraat + zink, chroom & CoQ10 voor de middag" },
     { name: "Sunrise", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "22 superfoods + 9 vitamines voor de ochtend" },
   ],
   "hl5-2-pack-collageen-huid-haar-nagels-beste-waarde": [
@@ -2350,8 +2350,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "Sunrise", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "IJzer + Zink + Vitamine C + B-complex — complete basis" },
   ],
   "middagdip-oplossen-zonder-koffie-nitro-xtreme": [
-    { name: "Nitro Xtreme", url: "/nitro-xtreme", isInternal: true, price: "€53.74/maand", tagline: "Sublinguaal concentraat — CoQ10, B-vitamines & chroom voor cellulaire energie" },
-    { name: "Amare Nitro Xtreme", url: `${AFFILIATE_BASE}/nitro-xtreme`, isInternal: false, price: "€53.74/maand", tagline: "Sublinguaal — directe opname, geen cafeïnecrash" },
+    { name: "Nitro Xtreme", url: "/nitro-xtreme", isInternal: true, price: "€53.74/maand", tagline: "Noni-concentraat — CoQ10, B-vitamines & chroom voor de middag" },
     { name: "Sunrise", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "Ochtendbasis van de Triangle of Wellness" },
     { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Avondherstel van de Triangle of Wellness" },
   ],
@@ -2368,7 +2367,7 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "EDGE+ Mango", url: `${AFFILIATE_BASE}/amareedge-plus-mango`, isInternal: false, price: "€77.28/maand", tagline: "Natuurlijke cafeïne + adaptogenen — los of in de bundel" },
   ],
   "van-koffie-naar-nitro-xtreme-middagritueel": [
-    { name: "Nitro Xtreme", url: `${AFFILIATE_BASE}/nitro-xtreme`, isInternal: false, price: "€80/maand", tagline: "Nitraten + 56 mineralen voor focus & energie" },
+    { name: "Nitro Xtreme", url: `${AFFILIATE_BASE}/nitro-xtreme`, isInternal: false, price: "€80/maand", tagline: "Noni-concentraat + zink, chroom & B-vitamines voor de middag" },
     { name: "Triangle of Wellness", url: `${AFFILIATE_BASE}/triangle-of-wellness-xtreme`, isInternal: false, price: "€123.55/maand", tagline: "Sunrise + Nitro Xtreme + Sunset — complete dag-nacht routine" },
     { name: "Sunrise", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "22 superfoods + 9 vitamines — de ochtendbasis" },
     { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Omega-3 + vitamine D3, A, E + astaxanthine — avondformule" },
@@ -2376,13 +2375,13 @@ const articleProductMap: Record<string, ProductLink[]> = {
   "supplementen-bewaren-zomer-hitte-vocht-zonlicht": [
     { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — psychobioticum voor de darm-hersen-as" },
     { name: "EDGE+ Mango", url: `${AFFILIATE_BASE}/amareedge-plus-mango`, isInternal: false, price: "€77.28/maand", tagline: "Natuurlijke cafeïne (75mg) + Terminalia chebula & Boswellia serrata" },
-    { name: "Nitro Xtreme", url: `${AFFILIATE_BASE}/nitro-xtreme`, isInternal: false, price: "€80/maand", tagline: "Nitraten + 56 mineralen voor focus & energie" },
+    { name: "Nitro Xtreme", url: `${AFFILIATE_BASE}/nitro-xtreme`, isInternal: false, price: "€80/maand", tagline: "Noni-concentraat + zink, chroom & B-vitamines voor de middag" },
   ],
   "natuurlijke-supplementen-waarheid-marketing-mythe": [
     { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — psychobioticum voor de darm-hersen-as" },
   ],
   "seizoensgebonden-supplementeren-herfst-winter-zomer": [
-    { name: "Nitro Xtreme", url: `${AFFILIATE_BASE}/nitro-xtreme`, isInternal: false, price: "€80/maand", tagline: "Nitraten + 56 mineralen voor focus & energie" },
+    { name: "Nitro Xtreme", url: `${AFFILIATE_BASE}/nitro-xtreme`, isInternal: false, price: "€80/maand", tagline: "Noni-concentraat + zink, chroom & B-vitamines voor de middag" },
     { name: "Triangle of Wellness", url: `${AFFILIATE_BASE}/triangle-of-wellness-xtreme`, isInternal: false, price: "€123.55/maand", tagline: "Sunrise + Nitro Xtreme + Sunset — complete dag-nacht routine" },
     { name: "Sunrise", url: "/sunrise", isInternal: true, price: "€85.78/maand", tagline: "22 superfoods + 9 vitamines — de ochtendbasis" },
     { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Omega-3 + vitamine D3, A, E + astaxanthine — avondformule" },
