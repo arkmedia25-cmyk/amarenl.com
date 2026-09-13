@@ -7,15 +7,15 @@ import { generateProductSchema, generateFAQSchema, generateBreadcrumbSchema, com
 
 export const metadata: Metadata = {
   title: "Amare ON Kopen: Energie Shot | AmareNL",
-  description: "Amare ON: compacte energie shot met guarana-cafeïne en gepatenteerd B-vitaminecomplex. Geen crash, geen nervositeit. Direct van Amare — beste prijs.",
+  description: "Amare ON: compacte energie shot met guarana-cafeïne en B-vitaminecomplex. Geen crash, geen nervositeit. Direct van Amare — beste prijs.",
   alternates: { canonical: "/on" },
   openGraph: { title: "Amare ON Kopen — Natuurlijke Energie Shot | AmareNL", description: "Compacte energie shot met B-vitamines — geen crash.", url: "/on", type: "website", siteName: "AmareNL", locale: "nl_NL", images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }] },
   twitter: { card: "summary_large_image", title: "Amare ON Kopen — Natuurlijke Energie Shot | AmareNL", description: "Compacte energie shot met B-vitamines — geen crash.", images: ["/images/og-default.jpg"] },
 };
 
 const faqs = [
-  { question: "Wat is het verschil tussen Amare ON en Energy+?", answer: "Amare ON is een vloeibare shot met guarana-cafeïne en een gepatenteerde B-vitaminemix — ontworpen voor snelle, drinkbare energie. Energy+ is een capsule met groene koffieboon en L-glycine — meer geschikt voor aanhoudende energie gedurende de dag. ON werkt sneller (vloeibaar), Energy+ werkt langer (capsule)." },
-  { question: "Bevat Amare ON veel cafeïne?", answer: "ON bevat natuurlijke cafeïne uit guarana — vergelijkbaar met een kop groene thee (25-30 mg). Dat is aanzienlijk minder dan een kop koffie (80-100 mg) of een standaard energiedrank (80 mg). Geen hartkloppingen, geen crash — gewoon milde, natuurlijke alertheid." },
+  { question: "Wat is het verschil tussen Amare ON en Energy+?", answer: "Amare ON is een vloeibare shot met guarana-cafeïne en een B-vitaminemix — ontworpen voor snelle, drinkbare energie. Energy+ is een capsule met groene koffieboon en L-glycine — meer geschikt voor aanhoudende energie gedurende de dag. ON werkt sneller (vloeibaar), Energy+ werkt langer (capsule)." },
+  { question: "Bevat Amare ON veel cafeïne?", answer: "ON bevat 80 mg natuurlijke cafeïne uit guarana per dagelijkse dosis — vergelijkbaar met een kop koffie (80-100 mg) en meer dan een kop groene thee (25-30 mg). Niet combineren met andere cafeïnebronnen op dezelfde dag." },
   { question: "Wanneer neem ik Amare ON het beste?", answer: "'s Ochtends of vroeg in de middag als je een dip voelt aankomen. Neem het niet te laat op de dag — de cafeïne kan je slaap verstoren. Ideaal voor vóór het sporten, een lange vergadering, of die beruchte 15:00-dip." },
   { question: "Is ON geschikt voor dagelijks gebruik?", answer: "Ja, ON is ontworpen voor dagelijks gebruik. De B-vitamines ondersteunen je natuurlijke energiemetabolisme — geen gewenning of afhankelijkheid zoals bij hoge doseringen synthetische cafeïne." },
   { question: "Welke smaak heeft ON?", answer: "Framboos-grapefruit — fris, fruitig, niet te zoet. De vloeibare formule maakt het makkelijk om snel in te nemen zonder water." },
@@ -26,7 +26,7 @@ export default function OnPage() {
   const img = product?.images?.primary || "/images/products/on-shots.jpg";
 
   const schema = combineSchemas(
-    generateProductSchema({ name: "Amare ON", nameNL: "Amare ON", description: "Amare ON combineert guarana-cafeïne met een gepatenteerde mix van B-vitamines (B1, B2, B3, B6, B12) voor snelle, natuurlijke energie zonder crash. Vloeibare framboos-grapefruit shot.", image: img, slug: "on", priceRetail: 30.45, priceSubscription: 27.41, ratingValue: 4.5, ratingCount: 500, affiliateUrl: "https://www.amare.com/susp_2075008/nl-nl/onshots" }),
+    generateProductSchema({ name: "Amare ON", nameNL: "Amare ON", description: "Amare ON combineert guarana-cafeïne met B-vitamines (B1, B2, B3, B6, B12) voor snelle, natuurlijke energie zonder crash. Vloeibare framboos-grapefruit shot.", image: img, slug: "on", priceRetail: 30.45, priceSubscription: 27.41, ratingValue: 4.5, ratingCount: 500, affiliateUrl: "https://www.amare.com/susp_2075008/nl-nl/onshots" }),
     generateFAQSchema(faqs),
     generateBreadcrumbSchema([{ name: "Home", url: "/" }, { name: "Amare ON", url: "/on" }])
   );
@@ -42,7 +42,7 @@ export default function OnPage() {
           <div>
             <div className="inline-flex items-center gap-2 mb-4"><span className="bg-[var(--color-primary)] text-white text-[9px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Bestseller</span><span className="text-[9px] text-[var(--color-text-muted)]">⭐ 4.5/5 (500+ reviews)</span></div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-cormorant font-bold text-[var(--color-text)] mb-4 leading-tight">Amare <span className="text-[var(--color-primary)]">ON</span></h1>
-            <p className="text-lg text-[var(--color-text-muted)] mb-2 leading-relaxed">De energie shot die wél werkt — guarana-cafeïne en gepatenteerde B-vitamines, geen crash.</p>
+            <p className="text-lg text-[var(--color-text-muted)] mb-2 leading-relaxed">De energie shot die wél werkt — guarana-cafeïne en B-vitamines, geen crash.</p>
             <p className="text-sm text-[var(--color-text-muted)] mb-6">Framboos-grapefruit smaak. <strong>Direct van Amare.</strong></p>
             <div className="flex flex-col sm:flex-row gap-3 mb-4">
               <AffiliateCTA label="Bestel bij Amare → €27,41/maand" product="on" variant="primary" />
@@ -57,7 +57,7 @@ export default function OnPage() {
     <section className="py-16 bg-white"><div className="container-page max-w-3xl">
       <h2 className="text-2xl md:text-3xl font-cormorant font-bold text-[var(--color-text)] mb-6">Wat is Amare ON?</h2>
       <div className="prose prose-sm max-w-none text-[var(--color-text)] space-y-4">
-        <p><strong>Amare ON</strong> is geen standaard energiedrank en geen cafeïnepil. Het is een doordachte combinatie van natuurlijke cafeïne uit guarana en een gepatenteerd B-vitaminecomplex (B1, B2, B3, B6, B12) in een handige vloeibare shot. Framboos-grapefruit smaak — geen chemische nasmaak.</p>
+        <p><strong>Amare ON</strong> is geen standaard energiedrank en geen cafeïnepil. Het is een doordachte combinatie van natuurlijke cafeïne uit guarana (80 mg) en een B-vitaminecomplex (B1, B2, B3, B6, B12) in een handige vloeibare shot. Framboos-grapefruit smaak — geen chemische nasmaak.</p>
         <p>Wat ON anders maakt: de cafeïne is gebufferd door B-vitamines die je lichaam helpen de energie daadwerkelijk vrij te maken. Het is niet alleen een 'wakker-worden' signaal — het geeft je cellen de co-enzymen die ze nodig hebben om voeding om te zetten in bruikbare energie.</p>
         <p>Perfect voor vóór het sporten, die beruchte middagdip, of gewoon als je 's ochtends moeite hebt met opstarten.</p>
       </div>
@@ -72,7 +72,7 @@ export default function OnPage() {
 
     <section className="py-16 bg-white"><div className="container-page max-w-3xl">
       <h2 className="text-2xl md:text-3xl font-cormorant font-bold text-[var(--color-text)] mb-6">Wat zit erin?</h2>
-      <div className="overflow-x-auto"><table className="w-full text-sm border-collapse"><thead><tr className="border-b-2 border-[var(--color-primary)] text-left"><th className="py-3 px-4 text-[10px] font-bold uppercase text-[var(--color-primary)]">Ingrediënt</th><th className="py-3 px-4 text-[10px] font-bold uppercase text-[var(--color-primary)]">Hoeveelheid</th><th className="py-3 px-4 text-[10px] font-bold uppercase text-[var(--color-primary)]">Functie</th></tr></thead><tbody>{[{ g: "Guarana-extract (natuurlijke cafeïne)", a: "~25-30 mg cafeïne", p: "Milde energieboost, vergelijkbaar met groene thee" }, { g: "Vitamine B1 (Thiamine)", a: "0,55 mg (50% RI)", p: "Energiestofwisseling, hartfunctie" }, { g: "Vitamine B2 (Riboflavine)", a: "0,7 mg (50% RI)", p: "Vrijmaken energie uit voeding" }, { g: "Vitamine B3 (Niacine)", a: "8 mg NE (50% RI)", p: "Huid, zenuwstelsel, vermoeidheid verminderen" }, { g: "Vitamine B6", a: "0,7 mg (50% RI)", p: "Eiwitstofwisseling, neurotransmitterproductie" }, { g: "Vitamine B12", a: "1,25 µg (50% RI)", p: "Rode bloedcellen, zenuwstelsel" }].map((r, i) => (<tr key={i} className="border-b border-[var(--color-border)]"><td className="py-3 px-4 font-bold text-[var(--color-text)] align-top text-xs">{r.g}</td><td className="py-3 px-4 text-[var(--color-text-muted)] text-xs align-top">{r.a}</td><td className="py-3 px-4 text-[var(--color-text-muted)] text-xs align-top">{r.p}</td></tr>))}</tbody></table></div>
+      <div className="overflow-x-auto"><table className="w-full text-sm border-collapse"><thead><tr className="border-b-2 border-[var(--color-primary)] text-left"><th className="py-3 px-4 text-[10px] font-bold uppercase text-[var(--color-primary)]">Ingrediënt</th><th className="py-3 px-4 text-[10px] font-bold uppercase text-[var(--color-primary)]">Hoeveelheid</th><th className="py-3 px-4 text-[10px] font-bold uppercase text-[var(--color-primary)]">Functie</th></tr></thead><tbody>{[{ g: "Guarana-extract (natuurlijke cafeïne)", a: "80 mg cafeïne", p: "Energieboost, vergelijkbaar met een kop koffie" }, { g: "Vitamine B1 (Thiamine)", a: "0,55 mg (50% RI)", p: "Energiestofwisseling, hartfunctie" }, { g: "Vitamine B2 (Riboflavine)", a: "0,7 mg (50% RI)", p: "Vrijmaken energie uit voeding" }, { g: "Vitamine B3 (Niacine)", a: "8 mg NE (50% RI)", p: "Huid, zenuwstelsel, vermoeidheid verminderen" }, { g: "Vitamine B6", a: "0,7 mg (50% RI)", p: "Eiwitstofwisseling, neurotransmitterproductie" }, { g: "Vitamine B12", a: "1,25 µg (50% RI)", p: "Rode bloedcellen, zenuwstelsel" }].map((r, i) => (<tr key={i} className="border-b border-[var(--color-border)]"><td className="py-3 px-4 font-bold text-[var(--color-text)] align-top text-xs">{r.g}</td><td className="py-3 px-4 text-[var(--color-text-muted)] text-xs align-top">{r.a}</td><td className="py-3 px-4 text-[var(--color-text-muted)] text-xs align-top">{r.p}</td></tr>))}</tbody></table></div>
     </div></section>
 
     {/* ── Hoe gebruik je het? ── */}
@@ -88,7 +88,7 @@ export default function OnPage() {
           <div className="mt-6 p-4 bg-[var(--color-bg-soft)] rounded-lg text-xs text-[var(--color-text-muted)]">
             <strong>⏰ Tijdsinvestering:</strong> 10 seconden — schudden, openen, drinken.<br />
             <strong>👤 Geschikt voor:</strong> Volwassenen en jongeren vanaf 12 jaar.<br />
-            <strong>⚠ Let op:</strong> Bevat cafeïne uit guarana (~25-30 mg). Niet combineren met andere cafeïnesupplementen op dezelfde dag.
+            <strong>⚠ Let op:</strong> Bevat cafeïne uit guarana (80 mg per dosis). Niet combineren met andere cafeïnesupplementen op dezelfde dag.
           </div>
         </div>
       </div>

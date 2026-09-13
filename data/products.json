@@ -651,8 +651,8 @@
     "category": "hersenen",
     "taglineNL": "Mentale focus & veerkracht",
     "description": {
-      "short": "Focus-drankje met natuurlijke guarana-cafeïne en nootropics",
-      "long": "Amare ON combineert de kracht van natuurlijke guarana-cafeïne voor duurzame energie met een mix van geoptimaliseerde nootropics — waaronder Bacopa monnieri, ashwagandha, groene thee-extract en citicoline — ontworpen om concentratie, aandacht en helderheid te ondersteunen. Met slechts 3 gram suiker en 30 calorieën levert ON een boost zonder de suikerpiek en -dip van gangbare energiedrankjes."
+      "short": "Focus-shot met guarana-cafeïne, groene thee en B-vitamines",
+      "long": "Amare ON Shots is een vloeibaar voedingssupplement met guarana-zaadextract (80 mg cafeïne per dagelijkse dosis), groene theebladextract, choline, inositol, taurine, L-citrulline, laoswortelextract (Alpinia galanga) en trossenbosbes-vruchtensappoeder, aangevuld met B-vitamines (B1, B2, B3, B6, B12) die bijdragen aan een normaal energieleverend metabolisme en de vermindering van vermoeidheid en moeheid. Smaak: framboos en grapefruit."
     },
     "pricing": {
       "subscription": 27.41,
@@ -663,19 +663,74 @@
     },
     "images": {
       "primary": "/images/products/on-shots.jpg",
-      "alt": "Amare ON — Focus-drankje met natuurlijke guarana-cafeïne en nootropics"
+      "alt": "Amare ON Shots — vloeibare focus-shot met guarana-cafeïne en B-vitamines"
     },
     "benefits": [
-      "Duurzame energie uit natuurlijke guarana-cafeïne",
-      "Ondersteunt aandacht, focus en helderheid via nootropics",
-      "Slechts 3 gram suiker en 30 calorieën",
-      "Vegan, lactosevrij en Cologne List-conform"
+      "80 mg natuurlijke cafeïne uit guarana per dagelijkse dosis",
+      "B-vitamines (B1, B2, B3, B6, B12) voor energiestofwisseling en vermindering van vermoeidheid",
+      "Vegan, glutenvrij, lactosevrij en sojavrij",
+      "Framboos-grapefruit smaak, geen kunstmatige kleurstoffen"
     ],
     "usage": {
-      "dosage": "1 volledig zakje (60 ml), maximaal 3 per dag op basis van cafeïnegehalte.",
-      "timing": "Niet op een lege maag; effect duurt doorgaans 4-6 uur.",
-      "duration": "Plan je slaapschema rond het gebruik gezien de werkingsduur."
+      "dosage": "Neem één zakje per dag. 7 zakjes per doos. Overschrijd de aanbevolen dagelijkse dosis niet.",
+      "timing": "Niet aanbevolen voor kinderen en zwangere vrouwen vanwege het cafeïnegehalte.",
+      "duration": "Raadpleeg de verpakking"
     },
+    "ingredients": [
+      {
+        "name": "Guarana-zaadextract (Paullinia cupana)",
+        "amount": "80 mg cafeïne per dagelijkse dosis"
+      },
+      {
+        "name": "Groene theebladextract (Camellia sinensis)",
+        "amount": "0,7 mg EGCG per portie"
+      },
+      {
+        "name": "Cholinebitartraat",
+        "amount": ""
+      },
+      {
+        "name": "Inositol",
+        "amount": ""
+      },
+      {
+        "name": "Taurine",
+        "amount": ""
+      },
+      {
+        "name": "L-citrulline",
+        "amount": ""
+      },
+      {
+        "name": "Laoswortelextract (Alpinia galanga)",
+        "amount": ""
+      },
+      {
+        "name": "Trossenbosbes-vruchtensappoeder (Vaccinium corymbosum)",
+        "amount": ""
+      },
+      {
+        "name": "Niacine (Vitamine B3)",
+        "amount": ""
+      },
+      {
+        "name": "Vitamine B6 (pyridoxinehydrochloride)",
+        "amount": ""
+      },
+      {
+        "name": "Vitamine B1 (thiaminehydrochloride)",
+        "amount": ""
+      },
+      {
+        "name": "Vitamine B2 (riboflavine)",
+        "amount": ""
+      },
+      {
+        "name": "Vitamine B12 (methylcobalamine)",
+        "amount": ""
+      }
+    ],
+    "mechanismNL": "ON bevat vitamines B1, B2, B3, B6 en B12, die bijdragen aan de normale werking van het zenuwstelsel, normale psychologische functie en vermindering van vermoeidheid en moeheid. De natuurlijke cafeïne uit guarana (80 mg per dosis) stimuleert het centrale zenuwstelsel; groene thee-extract levert EGCG (0,7 mg per portie).",
     "affiliate": {
       "url": "https://www.amare.com/susp_2075008/nl-nl/onshots",
       "sourceTag": "amarenl-product-page"
@@ -686,9 +741,19 @@
     },
     "relatedProducts": [],
     "tags": [],
+    "faqs": [
+      {
+        "q": "Hoeveel cafeïne zit er in Amare ON?",
+        "a": "80 mg natuurlijke cafeïne uit guarana-zaadextract per dagelijkse dosis (één zakje) — vergelijkbaar met een kop koffie."
+      },
+      {
+        "q": "Is ON geschikt voor kinderen of zwangere vrouwen?",
+        "a": "Nee, vanwege het cafeïnegehalte wordt ON afgeraden voor kinderen en zwangere vrouwen."
+      }
+    ],
     "seo": {
       "title": "Amare ON Kopen | Beste Prijs Nederland 2026",
-      "description": "Mentale focus & veerkracht",
+      "description": "Focus-shot met guarana-cafeïne, groene thee en B-vitamines",
       "keywords": []
     },
     "isNew": false,
@@ -696,44 +761,7 @@
     "isPack": false,
     "priority": 4,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17",
-    "mechanismNL": "ON bevat vitamines B1, B2, B3, B6 en B12, die bijdragen aan de normale werking van het zenuwstelsel, normale psychologische functie en vermindering van vermoeidheid en moeheid. De natuurlijke cafeïne uit guarana stimuleert het centrale zenuwstelsel en verhoogt in gematigde doses de alertheid.",
-    "ingredients": [
-      {
-        "name": "Guaranazaadextract (cafeïne)",
-        "amount": "Getitreerd op cafeïnegehalte"
-      },
-      {
-        "name": "Groene thee-extract (theanine)",
-        "amount": "Getitreerd op theanine"
-      },
-      {
-        "name": "Bacopa monnieri",
-        "amount": "Hele plant extract"
-      },
-      {
-        "name": "Ashwagandhawortelextract",
-        "amount": ""
-      },
-      {
-        "name": "Citicoline, L-citrulline, taurine",
-        "amount": ""
-      },
-      {
-        "name": "Vitamines B1, B2, B3, B6, B12",
-        "amount": ""
-      }
-    ],
-    "faqs": [
-      {
-        "q": "Hoeveel cafeïne zit er in Amare ON?",
-        "a": "De cafeïne is afkomstig van natuurlijk guaranazaadextract en getitreerd; maximaal 3 zakjes per dag wordt aangeraden op basis van het cafeïnegehalte."
-      },
-      {
-        "q": "Is ON geschikt voor kinderen of zwangere vrouwen?",
-        "a": "Nee, ON wordt afgeraden voor kinderen, zwangere of borstvoedende vrouwen en mensen die gevoelig zijn voor cafeïne."
-      }
-    ]
+    "updatedAt": "2026-09-13"
   },
   {
     "slug": "on-4-pack",

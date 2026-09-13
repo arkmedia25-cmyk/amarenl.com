@@ -6,8 +6,8 @@
   "category": "hersenen",
   "taglineNL": "Mentale focus & veerkracht",
   "description": {
-    "short": "Mentale focus & veerkracht",
-    "long": "Amare ON is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+    "short": "Focus-shot met guarana-cafeïne, groene thee en B-vitamines",
+    "long": "Amare ON Shots is een vloeibaar voedingssupplement met guarana-zaadextract (80 mg cafeïne per dagelijkse dosis), groene theebladextract, choline, inositol, taurine, L-citrulline, laoswortelextract (Alpinia galanga) en trossenbosbes-vruchtensappoeder, aangevuld met B-vitamines (B1, B2, B3, B6, B12) die bijdragen aan een normaal energieleverend metabolisme en de vermindering van vermoeidheid en moeheid. Smaak: framboos en grapefruit."
   },
   "pricing": {
     "subscription": 27.41,
@@ -18,18 +18,35 @@
   },
   "images": {
     "primary": "/images/products/on-shots.jpg",
-    "alt": "Amare ON — Focus-drankje met natuurlijke guarana-cafeïne en nootropics"
+    "alt": "Amare ON Shots — vloeibare focus-shot met guarana-cafeïne en B-vitamines"
   },
   "benefits": [
-    "Hoogwaardige ingrediënten",
-    "Wetenschappelijk onderbouwd",
-    "gemaakt met natuurlijke ingrediënten"
+    "80 mg natuurlijke cafeïne uit guarana per dagelijkse dosis",
+    "B-vitamines (B1, B2, B3, B6, B12) voor energiestofwisseling en vermindering van vermoeidheid",
+    "Vegan, glutenvrij, lactosevrij en sojavrij",
+    "Framboos-grapefruit smaak, geen kunstmatige kleurstoffen"
   ],
   "usage": {
-    "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-    "timing": "Raadpleeg de verpakking",
-    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+    "dosage": "Neem één zakje per dag. 7 zakjes per doos. Overschrijd de aanbevolen dagelijkse dosis niet.",
+    "timing": "Niet aanbevolen voor kinderen en zwangere vrouwen vanwege het cafeïnegehalte.",
+    "duration": "Raadpleeg de verpakking"
   },
+  "ingredients": [
+    { "name": "Guarana-zaadextract (Paullinia cupana)", "amount": "80 mg cafeïne per dagelijkse dosis" },
+    { "name": "Groene theebladextract (Camellia sinensis)", "amount": "0,7 mg EGCG per portie" },
+    { "name": "Cholinebitartraat", "amount": "" },
+    { "name": "Inositol", "amount": "" },
+    { "name": "Taurine", "amount": "" },
+    { "name": "L-citrulline", "amount": "" },
+    { "name": "Laoswortelextract (Alpinia galanga)", "amount": "" },
+    { "name": "Trossenbosbes-vruchtensappoeder (Vaccinium corymbosum)", "amount": "" },
+    { "name": "Niacine (Vitamine B3)", "amount": "" },
+    { "name": "Vitamine B6 (pyridoxinehydrochloride)", "amount": "" },
+    { "name": "Vitamine B1 (thiaminehydrochloride)", "amount": "" },
+    { "name": "Vitamine B2 (riboflavine)", "amount": "" },
+    { "name": "Vitamine B12 (methylcobalamine)", "amount": "" }
+  ],
+  "mechanismNL": "ON bevat vitamines B1, B2, B3, B6 en B12, die bijdragen aan de normale werking van het zenuwstelsel, normale psychologische functie en vermindering van vermoeidheid en moeheid. De natuurlijke cafeïne uit guarana (80 mg per dosis) stimuleert het centrale zenuwstelsel; groene thee-extract levert EGCG (0,7 mg per portie).",
   "affiliate": {
     "url": "https://www.amare.com/susp_2075008/nl-nl/onshots",
     "sourceTag": "amarenl-product-page"
@@ -40,9 +57,19 @@
   },
   "relatedProducts": [],
   "tags": [],
+  "faqs": [
+    {
+      "q": "Hoeveel cafeïne zit er in Amare ON?",
+      "a": "80 mg natuurlijke cafeïne uit guarana-zaadextract per dagelijkse dosis (één zakje) — vergelijkbaar met een kop koffie."
+    },
+    {
+      "q": "Is ON geschikt voor kinderen of zwangere vrouwen?",
+      "a": "Nee, vanwege het cafeïnegehalte wordt ON afgeraden voor kinderen en zwangere vrouwen."
+    }
+  ],
   "seo": {
     "title": "Amare ON Kopen | Beste Prijs Nederland 2026",
-    "description": "Mentale focus & veerkracht",
+    "description": "Focus-shot met guarana-cafeïne, groene thee en B-vitamines",
     "keywords": []
   },
   "isNew": false,
@@ -50,5 +77,5 @@
   "isPack": false,
   "priority": 4,
   "publishedAt": "2024-01-15",
-  "updatedAt": "2026-05-17"
+  "updatedAt": "2026-09-13"
 }
