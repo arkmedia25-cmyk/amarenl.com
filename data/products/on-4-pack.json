@@ -6,8 +6,8 @@
   "category": "hersenen",
   "taglineNL": "Mentale focus & veerkracht",
   "description": {
-    "short": "Mentale focus & veerkracht",
-    "long": "Amare ON 4-Pack is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+    "short": "4-pack van de focus-shot met guarana-cafeïne en B-vitamines",
+    "long": "Het Amare ON 4-Pack biedt een voordelige voorraad van hetzelfde focus-drankje: guarana-zaadextract (80 mg cafeïne per dagelijkse dosis), groene theebladextract, choline, inositol, taurine, L-citrulline, laoswortelextract en trossenbosbes-vruchtensappoeder, aangevuld met B-vitamines (B1, B2, B3, B6, B12). Framboos-grapefruit smaak."
   },
   "pricing": {
     "subscription": 98.37,
@@ -21,15 +21,23 @@
     "alt": "Amare ON 4-Pack — 4-pack van Amare ON — focus-drankje met natuurlijke guarana-cafeïne"
   },
   "benefits": [
-    "Hoogwaardige ingrediënten",
-    "Wetenschappelijk onderbouwd",
-    "gemaakt met natuurlijke ingrediënten"
+    "80 mg natuurlijke cafeïne uit guarana per dagelijkse dosis",
+    "B-vitamines (B1, B2, B3, B6, B12) voor energiestofwisseling",
+    "Vegan, glutenvrij, lactosevrij en sojavrij",
+    "Voordelige 4-pack voor een maand voorraad"
   ],
   "usage": {
-    "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-    "timing": "Raadpleeg de verpakking",
-    "duration": "Eerste effecten na 3-4 weken consistent gebruik"
+    "dosage": "Neem één zakje per dag. Overschrijd de aanbevolen dagelijkse dosis niet.",
+    "timing": "Niet aanbevolen voor kinderen en zwangere vrouwen vanwege het cafeïnegehalte.",
+    "duration": "Raadpleeg de verpakking"
   },
+  "ingredients": [
+    { "name": "Guarana-zaadextract (Paullinia cupana)", "amount": "80 mg cafeïne per dagelijkse dosis" },
+    { "name": "Groene theebladextract (Camellia sinensis)", "amount": "0,7 mg EGCG per portie" },
+    { "name": "Cholinebitartraat, inositol, taurine, L-citrulline", "amount": "" },
+    { "name": "Laoswortelextract (Alpinia galanga), trossenbosbes-vruchtensappoeder", "amount": "" },
+    { "name": "Vitamines B1, B2, B3, B6, B12", "amount": "" }
+  ],
   "affiliate": {
     "url": "https://www.amare.com/susp_2075008/nl-nl/onshots-4pack",
     "sourceTag": "amarenl-product-page"
@@ -42,7 +50,7 @@
   "tags": [],
   "seo": {
     "title": "Amare ON 4-Pack Kopen | Beste Prijs Nederland 2026",
-    "description": "Mentale focus & veerkracht",
+    "description": "4-pack van de focus-shot met guarana-cafeïne en B-vitamines",
     "keywords": []
   },
   "isNew": false,
@@ -50,5 +58,5 @@
   "isPack": false,
   "priority": 5,
   "publishedAt": "2024-01-15",
-  "updatedAt": "2026-05-17"
+  "updatedAt": "2026-09-13"
 }

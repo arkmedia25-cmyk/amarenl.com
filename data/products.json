@@ -771,8 +771,8 @@
     "category": "hersenen",
     "taglineNL": "Mentale focus & veerkracht",
     "description": {
-      "short": "4-pack van Amare ON — focus-drankje met natuurlijke guarana-cafeïne",
-      "long": "Het Amare ON 4-Pack biedt een voordelige voorraad van hetzelfde focus-drankje: natuurlijke guarana-cafeïne gecombineerd met nootropics als Bacopa monnieri, ashwagandha en citicoline, voor duurzame energie en mentale helderheid met slechts 3 gram suiker en 30 calorieën per zakje."
+      "short": "4-pack van de focus-shot met guarana-cafeïne en B-vitamines",
+      "long": "Het Amare ON 4-Pack biedt een voordelige voorraad van hetzelfde focus-drankje: guarana-zaadextract (80 mg cafeïne per dagelijkse dosis), groene theebladextract, choline, inositol, taurine, L-citrulline, laoswortelextract en trossenbosbes-vruchtensappoeder, aangevuld met B-vitamines (B1, B2, B3, B6, B12). Framboos-grapefruit smaak."
     },
     "pricing": {
       "subscription": 98.37,
@@ -786,16 +786,38 @@
       "alt": "Amare ON 4-Pack — 4-pack van Amare ON — focus-drankje met natuurlijke guarana-cafeïne"
     },
     "benefits": [
-      "Voordelige 4-pack van het populaire ON focus-drankje",
-      "Duurzame energie zonder suikerpiek (3g suiker, 30 kcal)",
-      "Ondersteunt aandacht, focus en helderheid",
-      "Vegan, lactosevrij en Cologne List-conform"
+      "80 mg natuurlijke cafeïne uit guarana per dagelijkse dosis",
+      "B-vitamines (B1, B2, B3, B6, B12) voor energiestofwisseling",
+      "Vegan, glutenvrij, lactosevrij en sojavrij",
+      "Voordelige 4-pack voor een maand voorraad"
     ],
     "usage": {
-      "dosage": "1 volledig zakje (60 ml) per keer, maximaal 3 per dag.",
-      "timing": "Niet op een lege maag; effect duurt doorgaans 4-6 uur.",
-      "duration": "4 zakjes per pack — voorraad voor meerdere gebruiksmomenten."
+      "dosage": "Neem één zakje per dag. Overschrijd de aanbevolen dagelijkse dosis niet.",
+      "timing": "Niet aanbevolen voor kinderen en zwangere vrouwen vanwege het cafeïnegehalte.",
+      "duration": "Raadpleeg de verpakking"
     },
+    "ingredients": [
+      {
+        "name": "Guarana-zaadextract (Paullinia cupana)",
+        "amount": "80 mg cafeïne per dagelijkse dosis"
+      },
+      {
+        "name": "Groene theebladextract (Camellia sinensis)",
+        "amount": "0,7 mg EGCG per portie"
+      },
+      {
+        "name": "Cholinebitartraat, inositol, taurine, L-citrulline",
+        "amount": ""
+      },
+      {
+        "name": "Laoswortelextract (Alpinia galanga), trossenbosbes-vruchtensappoeder",
+        "amount": ""
+      },
+      {
+        "name": "Vitamines B1, B2, B3, B6, B12",
+        "amount": ""
+      }
+    ],
     "affiliate": {
       "url": "https://www.amare.com/susp_2075008/nl-nl/onshots-4pack",
       "sourceTag": "amarenl-product-page"
@@ -808,7 +830,7 @@
     "tags": [],
     "seo": {
       "title": "Amare ON 4-Pack Kopen | Beste Prijs Nederland 2026",
-      "description": "Mentale focus & veerkracht",
+      "description": "4-pack van de focus-shot met guarana-cafeïne en B-vitamines",
       "keywords": []
     },
     "isNew": false,
@@ -816,23 +838,7 @@
     "isPack": false,
     "priority": 5,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17",
-    "mechanismNL": "Elk zakje bevat vitamines B1, B2, B3, B6 en B12 die bijdragen aan de normale werking van het zenuwstelsel en vermindering van vermoeidheid. Neem 1 volledig zakje (60 ml), goed geschud, tot maximaal 3 per dag.",
-    "ingredients": [
-      {
-        "name": "Guaranazaadextract (cafeïne)",
-        "amount": "Getitreerd op cafeïnegehalte"
-      },
-      {
-        "name": "Groene thee-extract, Bacopa monnieri, ashwagandha",
-        "amount": ""
-      },
-      {
-        "name": "Vitamines B1, B2, B3, B6, B12",
-        "amount": ""
-      }
-    ],
-    "faqs": []
+    "updatedAt": "2026-09-13"
   },
   {
     "slug": "energy",
