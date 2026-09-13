@@ -101,7 +101,7 @@ export const blogPosts: BlogPost[] = [
       <p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij twijfel over eiwitinname een diëtist of arts — met name bij nierproblemen is voorzichtigheid geboden met hoge eiwitdoseringen.</em></p>
       <p><em>Bronnen: Voedingscentrum Nederland; Morton et al. (2018) British Journal of Sports Medicine; Gorissen et al. (2018) Amino Acids; Jäger et al. (2017) Journal of the International Society of Sports Nutrition.</em></p>
     `,
-    image: "/images/blog/beste-eiwitpoeder-2026.jpg"
+    image: "/images/og-default.jpg"
   },
 {
     slug: "adaptogenen-natuurlijke-stressverlichting-ashwagandha-rhodiola",
@@ -224,7 +224,7 @@ export const blogPosts: BlogPost[] = [
       <p>Chronische stress is te serieus om alleen met supplementen aan te pakken — professionele hulp, beweging, sociale steun en grenzen stellen blijven de basis. Supplementen zijn de ondersteuning die het makkelijker maakt om die basis op orde te krijgen en te houden.</p>
       <p>*Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij aanhoudende stressklachten of burn-outverschijnselen altijd een (huis)arts of psycholoog.*</p>
     `,
-    image: "/images/blog/stress-verminderen-supplementen.jpg"
+    image: "/images/og-default.jpg"
   },
 {
     slug: "natuurlijk-afvallen-supplementen-metabolisme",
@@ -288,7 +288,7 @@ export const blogPosts: BlogPost[] = [
       <p>Voor een minimaal budget kun je losse groene thee-extract (€15/maand) en glucomannan vezels (€12/maand) proberen — de wetenschap erachter is solide, al mis je de synergie van een samengestelde formule.</p>
       <p>*Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij overgewicht, onderliggende aandoeningen of medicatiegebruik altijd een arts voordat je met afvalsupplementen begint.*</p>
     `,
-    image: "/images/blog/afvallen-supplementen-metabolisme.jpg"
+    image: "/images/og-default.jpg"
   },
 {
     slug: "beste-collageen-supplement-2026-werkt-echt",
@@ -338,7 +338,7 @@ export const blogPosts: BlogPost[] = [
       <p><strong>Voor een beperkt budget</strong> kies je een supermarkt collageen dat voldoet aan de basiseisen: minimaal 5g gehydrolyseerd collageen per dag, Type 1&3, mét vitamine C. Let goed op het etiket — het woord "gehydrolyseerd" is je belangrijkste kwaliteitscheck. Lucovitaal (€25/maand) en Orthica (€35/maand) zijn redelijke uitgangspunten.</p>
       <p>*Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij huid- of gewrichtsklachten een arts of dermatoloog.*</p>
     `,
-    image: "/images/blog/beste-collageen-supplement-2026.jpg"
+    image: "/images/og-default.jpg"
   },
   {
     slug: "collageen-hl5-vs-supermarkt-vergelijken",
@@ -401,7 +401,7 @@ export const blogPosts: BlogPost[] = [
       <p>Wil je ook zien hoe HL5 zich verhoudt tot NeuCollagen en andere premium merken, niet alleen tot de supermarkt? Bekijk ons <a href="/blogs/nieuws/beste-collageen-supplement-2026-werkt-echt">complete overzicht van de beste collageen supplementen van 2026</a>.</p>
       <p>*Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Prijzen zijn indicatief — controleer de actuele prijzen op de Amare website.*</p>
     `,
-    image: "/images/blog/collageen-hl5-vs-supermarkt.jpg"
+    image: "/images/og-default.jpg"
   },
   {
     slug: "happy-juice-pack-vs-losse-supplementen-vergelijken",
@@ -460,7 +460,7 @@ export const blogPosts: BlogPost[] = [
       <p>Blijf je twijfelen? Begin met MentaBiotics los. Ervaar het effect. En stap over op de Happy Juice Pack zodra je overtuigd bent — de bundelkorting wacht op je.</p>
       <p>*Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Genoemde prijzen zijn abonnementsprijzen per mei 2026. Controleer de actuele prijzen op de Amare website.*</p>
     `,
-    image: "/images/blog/happy-juice-pack-vs-los.jpg"
+    image: "/images/og-default.jpg"
   },
   {
     slug: "menopauze-supplement-natuurlijke-ondersteuning-overgang",
@@ -494,7 +494,7 @@ export const blogPosts: BlogPost[] = [
       <p><strong>Amare Sunset</strong> en <strong>Amare HL5</strong> dekken samen een deel van deze basis: Sunset voor omega-3, vitamine D3, A en E ter ondersteuning van botgezondheid en ontstekingsbalans, en HL5 voor de collageenbouwstenen die tijdens de menopauze sneller afnemen.</p>
       <p>*Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij aanhoudende overgangsklachten altijd een arts — supplementen zijn een aanvulling op, geen vervanging van, medisch advies.*</p>
     `,
-    image: "/images/blog/menopauze-supplement-overgang.jpg"
+    image: "/images/og-default.jpg"
   },
   {
     slug: "plantaardige-proteine-shake-kopen-vergelijken",
@@ -561,7 +561,7 @@ export const blogPosts: BlogPost[] = [
       <p><strong>Amare Origin</strong> positioneert zich in het hart van deze criteria: 23 gram plantaardig eiwit uit een erwten-rijst blend, MCT-olie voor energie, 7 gram vezels, 26 micronutriënten, en een schone ingrediëntenlijst. Het is primair een maaltijdshake — ontworpen om een maaltijd te vervangen, niet alleen om eiwit aan te vullen. Of je nu plantaardig eet, lactose vermijdt, of gewoon een shake zoekt die je tot de volgende maaltijd verzadigd houdt — Origin is het bekijken waard.</p>
       <p><em>Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij twijfel over eiwitinname of bij gezondheidsklachten altijd een arts of diëtist.</em></p>
     `,
-    image: "/images/blog/plantaardige-proteine-shake.jpg"
+    image: "/images/og-default.jpg"
   },
   {
     slug: "supplement-routine-ochtend-timing-schema",
@@ -625,7 +625,7 @@ export const blogPosts: BlogPost[] = [
       <p>Begin met de basis — één product dat de drie dagdelen dekt — en bouw van daaruit verder. Je toekomstige zelf, met meer energie, betere focus en diepere slaap, zal je dankbaar zijn.</p>
       <p><em>Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij aanhoudende gezondheidsklachten altijd een arts. Dit product is niet geschikt voor zwangere vrouwen, borstvoeding gevende vrouwen en kinderen jonger dan 18 jaar.</em></p>
     `,
-    image: "/images/blog/supplement-routine-ochtend.jpg"
+    image: "/images/og-default.jpg"
   },
   {
     slug: "darmflora-verbeteren-herstel-spijsvertering-natuurlijk",
@@ -700,7 +700,7 @@ export const blogPosts: BlogPost[] = [
       <p>Begin met het laaghangend fruit: voeg één extra portie groenten per dag toe, probeer één gefermenteerd voedingsmiddel dat je nog niet kent, en vervang één bewerkt tussendoortje door een hand noten. Voor gerichte ondersteuning combineert <strong>Amare Restore</strong> probiotica en spijsverteringsenzymen in één formule — de enzymen voor de korte termijn (minder opgeblazen gevoel, betere vertering), de probiotica voor de lange termijn (diversere darmflora, sterkere darmbarrière).</p>
       <p><em>Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij aanhoudende gezondheidsklachten altijd een arts. Dit product is niet geschikt voor zwangere vrouwen, borstvoeding gevende vrouwen en kinderen jonger dan 18 jaar.</em></p>
     `,
-    image: "/images/blog/darmflora-verbeteren.jpg"
+    image: "/images/og-default.jpg"
   },
   {
     slug: "hormoonbalans-supplement-vrouwen-levensfase-ondersteuning",
@@ -784,7 +784,7 @@ export const blogPosts: BlogPost[] = [
       <p>Tot slot: je hormonen zijn je vijand niet. Ze zijn je interne weersysteem — soms stormachtig, soms zonnig, altijd in beweging. Het doel is niet om het weer te elimineren, maar om te leren navigeren.</p>
       <p><em>Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij aanhoudende gezondheidsklachten altijd een arts. Dit product is niet geschikt voor zwangere vrouwen, borstvoeding gevende vrouwen en kinderen jonger dan 18 jaar.</em></p>
     `,
-    image: "/images/blog/hormoonbalans-supplement-vrouwen.jpg"
+    image: "/images/og-default.jpg"
   },
   {
     slug: "focus-supplement-natuurlijke-nootropics-concentratie",
@@ -861,7 +861,7 @@ export const blogPosts: BlogPost[] = [
       <p>Begin met één product, neem het consistent gedurende minimaal twee weken, en observeer hoe je focus, energie en stressbestendigheid veranderen. De beste maatstaf is geen score op een vragenlijst maar het antwoord op een simpele vraag: kan ik aan het einde van de dag zeggen dat ik écht gefocust was op wat ertoe deed?</p>
       <p><em>Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij aanhoudende gezondheidsklachten altijd een arts. Dit product is niet geschikt voor zwangere vrouwen, borstvoeding gevende vrouwen en kinderen jonger dan 18 jaar.</em></p>
     `,
-    image: "/images/blog/focus-supplement-nootropics.jpg"
+    image: "/images/og-default.jpg"
   },
   {
     slug: "haaruitval-supplement-vrouwen-oorzaken-oplossingen",
@@ -951,7 +951,7 @@ export const blogPosts: BlogPost[] = [
       <p>Dat gezegd hebbende: bij aanhoudend, plotseling of pleksgewijs haarverlies is een bezoek aan de huisarts of dermatoloog de eerste stap. Supplementen ondersteunen — een serieuze medische oorzaak pak je er niet mee aan.</p>
       <p><em>Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij aanhoudende gezondheidsklachten of haaruitval altijd een arts. Dit product is niet geschikt voor zwangere vrouwen, borstvoeding gevende vrouwen en kinderen jonger dan 18 jaar.</em></p>
     `,
-    image: "/images/blog/haaruitval-supplement-vrouwen.jpg"
+    image: "/images/og-default.jpg"
   },
   {
     slug: "gut-brain-connectie-darmen-stemming-mentaal",
@@ -1012,7 +1012,7 @@ export const blogPosts: BlogPost[] = [
       <p>Ja. Energy+ en Amare EDGE+ vormen een complete ondersteuning voor mentale energie en focus, Restore kan worden toegevoegd voor extra spijsverteringsondersteuning, en voor een complete dagelijkse routine past MentaBiotics ook binnen de Triangle of Wellness (Sunrise, Nitro, Sunset).</p>
       <p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij aanhoudende stemmingsklachten altijd een arts. Dit product is niet geschikt voor zwangere vrouwen, borstvoeding gevende vrouwen en kinderen jonger dan 18 jaar.</em></p>
     `,
-    image: "/images/blog/gut-brain-connectie.jpg"
+    image: "/images/og-default.jpg"
   },
   {
     slug: "ashwagandha-kopen-nederland-complete-gids",
@@ -1058,7 +1058,7 @@ export const blogPosts: BlogPost[] = [
       <h3>Kan ashwagandha samen met medicatie worden gebruikt?</h3>
       <p>Ashwagandha kan een wisselwerking hebben met schildkliermedicatie, bloedsuikerverlagende middelen en bloeddrukverlagers. Overleg daarom altijd met je arts voordat je het combineert met voorgeschreven medicatie.</p>
     `,
-    image: "/images/blog/ashwagandha-kopen-nederland.jpg"
+    image: "/images/og-default.jpg"
   },
   {
     slug: "collageen-supplement-kopen-waar-op-letten",
@@ -1100,7 +1100,7 @@ export const blogPosts: BlogPost[] = [
 
       <p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij aanhoudende gezondheidsklachten altijd een arts.</em></p>
     `,
-    image: "/images/blog/collageen-supplement-kopen.jpg"
+    image: "/images/og-default.jpg"
   },
   {
     slug: "beste-probiotica-2026-kopen-vergelijken",
@@ -1169,7 +1169,7 @@ export const blogPosts: BlogPost[] = [
       <h3>Hoe bewaar ik probiotica?</h3>
       <p>De meeste probiotica moeten koel en droog bewaard worden, bij voorkeur in de koelkast. Hitte en vocht doden de bacteriën. Sommige gevriesdroogde formules zijn stabiel bij kamertemperatuur — check het etiket.</p>
     `,
-    image: "/images/blog/beste-probiotica-2026.jpg"
+    image: "/images/og-default.jpg"
   },
   {
     slug: "supplementen-voor-meer-energie-dit-werkt-echt",
@@ -1246,7 +1246,7 @@ export const blogPosts: BlogPost[] = [
       <p>De Amare Energy+ en Amare ON formules zijn specifiek ontwikkeld om deze natuurlijke energiepad te ondersteunen — wetenschappelijk onderbouwd, gemaakt met natuurlijke ingrediënten en zonder de cafeïnecrash. Veel gebruikers ervaren al binnen enkele weken een merkbaar verschil in hun dagelijkse energieniveau.</p>
       <p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Supplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij aanhoudende vermoeidheid altijd eerst een arts.</em></p>
     `,
-    image: "/images/blog/energie-supplementen-cover.jpg"
+    image: "/images/og-default.jpg"
   },
   
   {
@@ -1275,7 +1275,7 @@ export const blogPosts: BlogPost[] = [
       <h3>Waar op letten</h3>
       <p>Bij een vermoede ijzertekort is een bloedtest bij je huisarts de eerste stap — alleen die geeft zekerheid. <strong>Amare Sunrise</strong> bevat zelf geen ijzer, maar wel 60 mg vitamine C per portie: neem het bij een ijzerrijk ontbijt om de opname te ondersteunen. Bij een vastgesteld tekort is een gericht ijzersupplement (in overleg met je arts) de juiste vervolgstap.</p>
     `,
-    image: "/images/blog/iron-deficiency.jpg"
+    image: "/images/og-default.jpg"
   },
   {
     slug: "mct-olie-energie-gewicht-supplement",
@@ -1297,7 +1297,7 @@ export const blogPosts: BlogPost[] = [
       <h3>Product Connectie</h3>
       <p>Je vindt hoogwaardige MCT's terug in onze <strong>Amare Origin Chocolate</strong> shake, ideaal als gezonde maaltijdvervanger of post-workout herstel.</p>
     `,
-    image: "/images/blog/mct-oil.jpg"
+    image: "/images/og-default.jpg"
   },
   
   
@@ -1319,7 +1319,7 @@ export const blogPosts: BlogPost[] = [
       <h3>Amare Ondersteuning</h3>
       <p><strong>Amare Sunset</strong> levert vitamine D3, dat bijdraagt aan de normale opname van calcium uit je voeding — een belangrijke eerste stap. Sunset bevat zelf geen calcium of vitamine K2; voor de volledige D3+K2-synergie hierboven combineer je het met voeding rijk aan K2 (zoals natto, harde kazen of eigeel) of een apart K2-supplement.</p>
     `,
-    image: "/images/blog/calcium.jpg"
+    image: "/images/og-default.jpg"
   },
   {
     slug: "zink-testosteron-supplement-nederland",
@@ -1339,7 +1339,7 @@ export const blogPosts: BlogPost[] = [
       <h3>Triangle of Wellness</h3>
       <p>De <strong>Triangle of Wellness</strong> met Nitro Xtreme zorgt voor een optimale opname van mineralen zoals zink, waardoor je hormoonhuishouding beter in balans blijft.</p>
     `,
-    image: "/images/blog/zinc.jpg"
+    image: "/images/og-default.jpg"
   },
   {
     slug: "vitamine-c-immuunsysteem-supplement",
@@ -1397,7 +1397,7 @@ export const blogPosts: BlogPost[] = [
       <p>Vitamine C is geen wondermiddel tegen verkoudheid, maar wél een onmisbare bouwstof voor een goed functionerend immuunsysteem — van je huid als eerste barrière tot de witte bloedcellen die indringers opruimen. Voor de meeste gezonde volwassenen voorkomt suppletie geen verkoudheid, maar kan het de klachten iets verkorten, en bij intensieve fysieke belasting is het preventieve effect overtuigend aangetoond. Zorg voor voldoende inname via een gevarieerd voedingspatroon, en overweeg gerichte aanvulling in de wintermaanden, bij stress, of als je intensief sport.</p>
       <p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij aanhoudende gezondheidsklachten altijd een arts.</em></p>
     `,
-    image: "/images/blog/vitamine-c.jpg"
+    image: "/images/og-default.jpg"
   },
   {
     slug: "vitamine-e-huid-haar-supplement",
@@ -1417,7 +1417,7 @@ export const blogPosts: BlogPost[] = [
       <h3>Amare Sunset Focus</h3>
       <p><strong>Amare Sunset</strong> bevat vitamine E (D-alfa-tocoferol) samen met omega-3 en astaxanthine, ter ondersteuning van je huid en weefsels tijdens de nacht.</p>
     `,
-    image: "/images/blog/vitamine-e.jpg"
+    image: "/images/og-default.jpg"
   },
   {
     slug: "b-vitamines-energie-supplement-nederland",
@@ -1436,7 +1436,7 @@ export const blogPosts: BlogPost[] = [
       <h3>Amare ON Boost</h3>
       <p>Voor een directe mentale boost bevat <strong>Amare ON</strong> een uitgebalanceerd B-complex dat je helpt om alert en gefocust te blijven tijdens drukke dagen.</p>
     `,
-    image: "/images/blog/b-vitamines.jpg"
+    image: "/images/og-default.jpg"
   },
   {
     slug: "happy-juice-pack-complete-mentale-focus-energie-bundel",
@@ -1495,7 +1495,7 @@ export const blogPosts: BlogPost[] = [
       <p>Met de <strong>30 dagen geld-terug-garantie</strong> loop je bovendien geen enkel risico: bevalt het niet, dan krijg je je geld terug. Geen vragen, geen gedoe. De €8 nieuwe-klant-korting maakt de eerste bestelling nóg toegankelijker.</p>
       <p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Resultaten kunnen per persoon verschillen. Dit product is niet geschikt voor zwangere vrouwen, vrouwen die borstvoeding geven en personen jonger dan 18 jaar.</em></p>
     `,
-    image: "/images/blog/happy-juice-pack-bundle.jpg"
+    image: "/images/og-default.jpg"
   },
   {
     slug: "triangle-of-wellness-xtreme-dagelijkse-basisondersteuning-pakket",
@@ -1560,7 +1560,7 @@ export const blogPosts: BlogPost[] = [
       <p>Met de <strong>30 dagen geld-terug-garantie</strong> en de <strong>€8 nieuwe-klant-korting</strong> is er bovendien weinig te verliezen. Begin met de 2-Pack voor de beste prijs-kwaliteitverhouding, of kies de 3-Pack als je direct voor de langere termijn wilt gaan.</p>
       <p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij medische aandoeningen of twijfel een arts. Dit product is niet geschikt voor personen jonger dan 18 jaar.</em></p>
     `,
-    image: "/images/blog/triangle-of-wellness-xtreme.jpg"
+    image: "/images/og-default.jpg"
   },
   {
     slug: "hl5-2-pack-collageen-huid-haar-nagels-beste-waarde",
@@ -1618,7 +1618,7 @@ export const blogPosts: BlogPost[] = [
       <p>Met de <strong>30 dagen geld-terug-garantie</strong> probeer je HL5 risicoloos — word je huid niet zichtbaar gehydrateerder of je nagels niet sterker binnen een maand, dan krijg je je geld terug. Gebruik de <strong>€8 nieuwe-klant-korting</strong> voor een extra voordelige eerste 2-Pack bestelling.</p>
       <p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Resultaten kunnen per persoon verschillen. Collageen is een eiwit en draagt bij aan de instandhouding van normale botten (gezondheidsclaim goedgekeurd door EFSA).</em></p>
     `,
-    image: "/images/blog/hl5-2-pack-collageen.jpg"
+    image: "/images/og-default.jpg"
   },
   {
     slug: "happy-lifestyle-pack-beste-waarde-bundel-totaal-welzijn",
@@ -1682,7 +1682,7 @@ export const blogPosts: BlogPost[] = [
       <p>Met de <strong>30 dagen geld-terug-garantie</strong> loop je geen enkel risico, ook niet bij een bundel van honderden euro's. Probeer het een maand — bevalt het niet, dan krijg je je geld terug. Gebruik de <strong>€8 nieuwe-klant-korting</strong> op je eerste bundel voor de beste start.</p>
       <p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. De genoemde prijzen zijn inclusief abonnementskorting en kunnen afwijken. Controleer de actuele prijzen op de Amare website. Productbeschikbaarheid kan variëren per bundelvariant.</em></p>
     `,
-    image: "/images/blog/happy-lifestyle-pack.jpg"
+    image: "/images/og-default.jpg"
   },
   {
     slug: "amare-triangle-of-wellness-ervaringen-waarom-balans-voeding-en-vitaliteit-samenkomen",
@@ -1726,7 +1726,7 @@ export const blogPosts: BlogPost[] = [
       <p>De Triangle of Wellness is geen marketingterm — het is een doordachte benadering van gezondheid die erkent dat alles in je lichaam met elkaar verbonden is. Door te investeren in voeding, mentale gezondheid en vitaliteit tegelijk, creëer je een fundament voor langdurig welzijn.</p>
       <p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl.</em></p>
     `,
-    image: "/images/blog/amare-triangle-of-wellness-cover.jpg"
+    image: "/images/og-default.jpg"
   },
   {
     slug: "altijd-moe-ontdek-hoe-cel-energie-jouw-energieniveau-bepaalt",
@@ -1772,7 +1772,7 @@ export const blogPosts: BlogPost[] = [
       <p>Chronische vermoeidheid is geen normaal onderdeel van het leven. Door je te richten op de gezondheid van je cellen — met name je mitochondriën — kun je je energieniveau op een natuurlijke en duurzame manier verbeteren. Een combinatie van goede voeding, beweging, stressmanagement en gerichte supplementen vormt de basis voor blijvende vitaliteit.</p>
       <p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl.</em></p>
     `,
-    image: "/images/blog/altijd-moe-cel-energie-cover.jpg"
+    image: "/images/og-default.jpg"
   },
   {
     slug: "apotheek-of-groenteboer",
@@ -1810,7 +1810,7 @@ export const blogPosts: BlogPost[] = [
       <p>Je gezondheid is te belangrijk om uitsluitend reactief te benaderen. Of je nu kiest voor de apotheek, de groenteboer of een combinatie van beide — het belangrijkste is dat je bewust investeert in je welzijn. Natuurlijke supplementen kunnen een waardevolle aanvulling zijn op een gezonde levensstijl.</p>
       <p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl.</em></p>
     `,
-    image: "/images/blog/apotheek-of-groenteboer-cover.jpg"
+    image: "/images/og-default.jpg"
   },
 {
     slug: "beste-supplementen-haar-nagels-werkt-echt",
@@ -1873,7 +1873,7 @@ export const blogPosts: BlogPost[] = [
       <p>Producten zoals Amare HL5 combineren 5 gram gehydrolyseerd collageen met een compleet aminozuurprofiel — een stevige basis voor zichtbaar sterker haar en nagels.</p>
       <p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Supplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl.</em></p>
     `,
-    image: "/images/blog/supplementen-haar-nagels-cover.jpg"
+    image: "/images/og-default.jpg"
   },
   {slug:"magnesium-supplement-kopen-welke-vorm-nodig",title:"Magnesium Kopen: Welke Vorm Nodig?",date:"2026-06-21",category:"essentials",excerpt:"Niet alle magnesium is gelijk. Ontdek welke vorm je nodig hebt voor slaap, stress, spieren of energie.",author: "Mark",
     citations: [{ author: "Barbagallo M, et al.", name: "Nutrients (2021)", url: "https://doi.org/10.3390/nu13020463" }],
