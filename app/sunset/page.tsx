@@ -321,6 +321,18 @@ export default function SunsetPage() {
               </tbody>
             </table>
           </div>
+          <p className="mt-4 text-xs text-[var(--color-text-muted)]">
+            Bron: officieel{" "}
+            <a
+              href="https://amarecdn.azureedge.net/webassets/resources/productinfo/NL/Sunset-ProductFactsheet-NL.pdf"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              className="underline hover:text-[var(--color-primary)]"
+            >
+              Amare-productinformatieblad (PDF)
+            </a>
+            .
+          </p>
         </div>
       </section>
 

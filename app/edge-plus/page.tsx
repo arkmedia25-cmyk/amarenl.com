@@ -82,6 +82,7 @@ export default function EdgePlusPage() {
     <section className="py-16 bg-white"><div className="container-page max-w-3xl">
       <h2 className="text-2xl md:text-3xl font-cormorant font-bold text-[var(--color-text)] mb-6">Ingrediënten per stickpack</h2>
       <div className="overflow-x-auto"><table className="w-full text-sm border-collapse"><thead><tr className="border-b-2 border-[var(--color-primary)] text-left"><th className="py-3 px-4 text-[10px] font-bold uppercase text-[var(--color-primary)]">Ingrediënt</th><th className="py-3 px-4 text-[10px] font-bold uppercase text-[var(--color-primary)]">Hoeveelheid</th><th className="py-3 px-4 text-[10px] font-bold uppercase text-[var(--color-primary)]">Functie</th></tr></thead><tbody>{ingredients.map((r, i) => (<tr key={i} className="border-b border-[var(--color-border)]"><td className="py-3 px-4 font-bold text-[var(--color-text)] align-top text-xs">{r.g}</td><td className="py-3 px-4 text-[var(--color-text-muted)] text-xs align-top">{r.a}</td><td className="py-3 px-4 text-[var(--color-text-muted)] text-xs align-top">{r.p}</td></tr>))}</tbody></table></div>
+      <p className="mt-4 text-xs text-[var(--color-text-muted)]">Bron: officieel <a href="https://amarecdn.azureedge.net/webassets/resources/productinfo/NL/EDGE-ProductFactsheet-NL.pdf" target="_blank" rel="nofollow noopener noreferrer" className="underline hover:text-[var(--color-primary)]">Amare-productinformatieblad (PDF)</a>.</p>
     </div></section>
 
     {/* ── Hoe gebruik je het? ── */}
