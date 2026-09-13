@@ -48,7 +48,7 @@ const faqs = [
   {
     question: "Is Happy Juice geschikt voor dagelijks gebruik?",
     answer:
-      "Ja, het Happy Juice Pack is ontworpen als dagelijkse ochtendroutine. De probiotica in MentaBiotics ondersteunen continu je darmflora, terwijl Energy+ en EDGE+ je overdag van natuurlijke energie en focus voorzien. Het pack bevat geen synthetische stimulanten die je bijnieren uitputten — je bouwt geen tolerantie op en ervaart geen crash.",
+      "Ja, het Happy Juice Pack is ontworpen als dagelijkse ochtendroutine. De probiotica in MentaBiotics ondersteunen continu je darmflora, terwijl Energy+ en EDGE+ je overdag van energie en focus voorzien. Let op: Energy+ en EDGE+ Mango bevatten beide natuurlijke cafeïne (samen ~103 mg) — kies de cafeïnevrije EDGE+ Watermelon-variant als je dat liever vermijdt.",
   },
   {
     question: "Wat is het verschil tussen de Mango en Watermelon variant?",
@@ -69,8 +69,8 @@ const faqs = [
 
 const ingredients = [
   { product: "MentaBiotics®", amount: "1 sachet", key: "Cerebiome® blend: L. helveticus R0052, L. rhamnosus R0011, B. longum R0175 (1 miljard CFU) + Magnesium (56,25 mg) + L-glutamine (230 mg) + botanische extracten", purpose: "Darm-hersen-as, stemming, stressrespons" },
-  { product: "Energy+", amount: "2 capsules", key: "Groene thee-extract, Rhodiola rosea, Vitamine B-complex, Panax ginseng", purpose: "Natuurlijke energie, vermindering vermoeidheid" },
-  { product: "Amare EDGE+™", amount: "1 zakje (30 ml)", key: "Plantaardig nootropicum: citicoline, L-theanine, ashwagandha, ginkgo biloba", purpose: "Mentale focus, concentratie, cognitieve helderheid" },
+  { product: "Energy+", amount: "1 sachet (5,7 g)", key: "Cafeïne (~27,6 mg), L-glycine, vitamine C, druivenpit-, framboos-, dennenschors- en granaatappelextract", purpose: "Milde energie, vermindering vermoeidheid" },
+  { product: "Amare EDGE+™", amount: "1 stickpack (mengen met 250 ml water)", key: "Mangoblad-extract, goji, Boswellia serrata, Terminalia chebula, pantotheenzuur (Vit B5). Mango-variant bevat 75 mg cafeïne, Watermelon-variant is cafeïnevrij.", purpose: "Mentale focus en alertheid" },
 ];
 
 export default function HappyJuicePackPage() {
@@ -161,8 +161,8 @@ export default function HappyJuicePackPage() {
             </p>
             <ul className="list-disc pl-5 space-y-2">
               <li><strong>MentaBiotics®</strong> — Een probioticum met de klinisch onderzochte Cerebiome® blend (L. helveticus R0052, L. rhamnosus R0011, B. longum R0175), magnesium en L-glutamine. Gericht op de darm-hersen-as voor mentale veerkracht en een stabiele stemming.</li>
-              <li><strong>Energy+</strong> — Natuurlijke energie uit groene thee-extract, Rhodiola rosea en B-vitamines. Zonder de crash die je van cafeïne krijgt — het ondersteunt je natuurlijke energieniveau op celniveau.</li>
-              <li><strong>Amare EDGE+™</strong> — Een vloeibaar plantaardig nootropicum met citicoline, L-theanine en ashwagandha. Ontwikkeld voor mentale focus, concentratie en cognitieve helderheid gedurende de dag.</li>
+              <li><strong>Energy+</strong> — Bevat cafeïne (~27,6 mg per portie) samen met L-glycine en vitamine C, plus plantenextracten (druivenpit, framboos, maritieme dennenschors, granaatappel). Mildere energie dan een kop koffie, zonder de scherpe piek-en-dal.</li>
+              <li><strong>Amare EDGE+™</strong> — Een vloeibaar plantaardig supplement met mangoblad-extract, goji, Boswellia serrata en Terminalia chebula. Verkrijgbaar in Mango (bevat 75 mg cafeïne per stickpack) en Watermelon (cafeïnevrij) — beide voor mentale focus en alertheid.</li>
             </ul>
             <p>
               Samen vormen deze drie producten een <strong>complete gut-brain routine</strong> die je 's ochtends doorloopt in minder dan 5 minuten. Het resultaat: meer energie, een helderdere focus en een stabielere stemming — de hele dag door.
@@ -179,7 +179,7 @@ export default function HappyJuicePackPage() {
           </h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {[
-              { icon: "🎯", title: "Drukke professionals", desc: "Die mentale focus en energie nodig hebben zonder de achtbaan van cafeïne." },
+              { icon: "🎯", title: "Drukke professionals", desc: "Die mentale focus en energie zoeken, met de keuze uit een cafeïnevrije EDGE+ variant." },
               { icon: "🧘", title: "Mensen met stressklachten", desc: "Die hun mentale veerkracht op een natuurlijke manier willen ondersteunen." },
               { icon: "📚", title: "Studenten", desc: "Die betere concentratie en helderheid zoeken tijdens studiemarathons." },
               { icon: "🌱", title: "Gezondheidsbewuste Nederlanders", desc: "Die de gut-brain connectie willen optimaliseren met wetenschappelijk onderbouwde supplementen." },
@@ -243,15 +243,15 @@ export default function HappyJuicePackPage() {
               <li className="flex gap-4">
                 <span className="flex-shrink-0 w-7 h-7 rounded-full bg-[var(--color-primary)] text-white text-xs font-bold flex items-center justify-center">2</span>
                 <div>
-                  <strong className="text-sm text-[var(--color-text)]">Energy+ capsules</strong>
-                  <p className="text-xs text-[var(--color-text-muted)] mt-1">Neem 2 capsules met water, bij voorkeur in de ochtend. De B-vitamines en adaptogenen ondersteunen je natuurlijke energie gedurende de dag.</p>
+                  <strong className="text-sm text-[var(--color-text)]">Energy+ sachet</strong>
+                  <p className="text-xs text-[var(--color-text-muted)] mt-1">Meng 1 sachet met water, bij voorkeur in de ochtend. Cafeïne (~27,6 mg), L-glycine en vitamine C ondersteunen milde, aanhoudende energie gedurende de dag.</p>
                 </div>
               </li>
               <li className="flex gap-4">
                 <span className="flex-shrink-0 w-7 h-7 rounded-full bg-[var(--color-primary)] text-white text-xs font-bold flex items-center justify-center">3</span>
                 <div>
                   <strong className="text-sm text-[var(--color-text)]">Amare EDGE+™ drank</strong>
-                  <p className="text-xs text-[var(--color-text-muted)] mt-1">Drink 1 zakje (30 ml) direct. De Mango-smaak maakt het een aangename toevoeging aan je ochtendroutine. De L-theanine en ashwagandha ondersteunen een kalme, gefocuste staat.</p>
+                  <p className="text-xs text-[var(--color-text-muted)] mt-1">Meng 1 stickpack met 250 ml water. De Mango-variant bevat 75 mg cafeïne per stickpack (de Watermelon-variant is cafeïnevrij) — mangoblad-extract, goji en Boswellia ondersteunen een gefocuste staat.</p>
                 </div>
               </li>
             </ol>

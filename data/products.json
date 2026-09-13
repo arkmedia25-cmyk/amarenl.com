@@ -7,8 +7,8 @@
     "category": "hersenen",
     "taglineNL": "Mentale focus & veerkracht",
     "description": {
-      "short": "Bundel van EDGE+ Mango, Energy+ en MentaBiotics voor complete mentale ondersteuning",
-      "long": "Het Amare Happy Juice Pack® combineert drie mentale-wellnessproducten in één bundel: Amare EDGE+™ Mango (cafeïnevrij nootropicum voor focus), Energy+ (natuurlijke energie zonder crash) en MentaBiotics® (probiotica voor mentale veerkracht). Samen bieden ze een holistische aanpak voor energie, focus, stemming en darmgezondheid — de drie pijlers van de gut-brain connectie."
+      "short": "Bundel van EDGE+ Mango, Energy+ en MentaBiotics",
+      "long": "Het Amare Happy Juice Pack® combineert drie mentale-wellnessproducten in één bundel: Amare EDGE+™ Mango (bevat cafeïne, 75 mg per stickpack), Energy+ (bevat cafeïne, ~27,6 mg per portie) en MentaBiotics® (probiotica voor mentale veerkracht). Let op: deze Mango-variant bevat dus cafeïne uit twee bronnen — niet aanbevolen voor kinderen, zwangere of zogende vrouwen of mensen die gevoelig zijn voor cafeïne. Wil je een cafeïnevrije variant, kies dan het Happy Juice Pack met EDGE+ Watermelon."
     },
     "pricing": {
       "subscription": 155.33,
@@ -22,16 +22,30 @@
       "alt": "Amare Happy Juice Pack® - EDGE+™ Mango — bundel voor mentale focus & veerkracht"
     },
     "benefits": [
-      "Complete gut-brain ondersteuning in één pakket",
-      "Combineert focus (EDGE+), energie (Energy+) en darmgezondheid (MentaBiotics)",
-      "Cafeïnevrije focus-ondersteuning",
-      "Drie producten, één samenhangende dagelijkse routine"
+      "Combinatie van drie mentale-wellnessproducten in één bundel",
+      "EDGE+ Mango: cafeïne (75 mg) + adaptogene plantenextracten voor focus",
+      "Energy+: cafeïne (~27,6 mg) + L-glycine voor energie zonder crash",
+      "MentaBiotics: probiotica voor de darm-hersen-as"
     ],
     "usage": {
-      "dosage": "1 stick/sachet van elk product, dagelijks.",
-      "timing": "Volgens de aanbevolen inname per product; niet op een lege maag.",
-      "duration": "Eerste effecten doorgaans na 3-4 weken consistent gebruik."
+      "dosage": "Raadpleeg de verpakking van elk product voor de aanbevolen dosering.",
+      "timing": "Bevat cafeïne uit twee bronnen (EDGE+ Mango + Energy+) — niet combineren met andere cafeïnebronnen op dezelfde dag.",
+      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
     },
+    "ingredients": [
+      {
+        "name": "Amare EDGE+™ Mango",
+        "amount": "Bevat cafeïne (75 mg per stickpack)"
+      },
+      {
+        "name": "Amare Energy+™",
+        "amount": "Bevat cafeïne (~27,6 mg per portie), L-glycine, vitamine C"
+      },
+      {
+        "name": "Amare MentaBiotics®",
+        "amount": "Probiotica voor de darm-hersen-as"
+      }
+    ],
     "affiliate": {
       "url": "https://www.amare.com/susp_2075008/nl-nl/happy-juice-edge-plus-mango",
       "sourceTag": "amarenl-product-page"
@@ -44,7 +58,7 @@
     "tags": [],
     "seo": {
       "title": "Amare Happy Juice Pack® - Amare EDGE+™ Mango Kopen | Beste Prijs Nederland 2026",
-      "description": "Mentale focus & veerkracht",
+      "description": "Bundel van EDGE+ Mango, Energy+ en MentaBiotics",
       "keywords": []
     },
     "isNew": false,
@@ -52,28 +66,7 @@
     "isPack": false,
     "priority": 1,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17",
-    "mechanismNL": "Neem dagelijks 1 stick EDGE+ (250 ml water), 1 sachet Energy+ (250 ml water) en 1 stick MentaBiotics (250 ml water), elk volgens de eigen aanbevolen inname. Vitamine C in Energy+ ondersteunt het energiemetabolisme; magnesium in MentaBiotics draagt bij aan normaal psychologisch functioneren.",
-    "ingredients": [
-      {
-        "name": "1x Amare EDGE+™ Mango",
-        "amount": "Cafeïnevrij nootropicum"
-      },
-      {
-        "name": "1x Energy+",
-        "amount": "Inuline, glycine, vitamine C, plantextracten"
-      },
-      {
-        "name": "1x MentaBiotics®",
-        "amount": "3 bacteriestammen, vezels, magnesium"
-      }
-    ],
-    "faqs": [
-      {
-        "q": "In welke volgorde gebruik ik de drie producten?",
-        "a": "Je kunt ze op elk gewenst moment van de dag nemen; veel gebruikers combineren EDGE+ 's ochtends met MentaBiotics en nemen Energy+ als middagboost."
-      }
-    ]
+    "updatedAt": "2026-09-13"
   },
   {
     "slug": "happy-lifestyle-pack-pro",
@@ -264,8 +257,8 @@
     "category": "hersenen",
     "taglineNL": "Mentale focus & veerkracht",
     "description": {
-      "short": "Bundel van EDGE+ Watermelon, Energy+ en MentaBiotics voor complete mentale ondersteuning",
-      "long": "Het Amare Happy Juice Pack® combineert drie mentale-wellnessproducten in één bundel: Amare EDGE+™ Watermelon (cafeïnevrij nootropicum voor focus), Energy+ (natuurlijke energie zonder crash) en MentaBiotics® (probiotica voor mentale veerkracht). Samen bieden ze een holistische aanpak voor energie, focus, stemming en darmgezondheid — de drie pijlers van de gut-brain connectie."
+      "short": "Bundel van EDGE+ Watermelon, Energy+ en MentaBiotics",
+      "long": "Het Amare Happy Juice Pack® combineert drie mentale-wellnessproducten in één bundel: Amare EDGE+™ Watermelon (cafeïnevrij nootropicum voor focus), Energy+ (bevat wel cafeïne, ~27,6 mg per portie, met L-glycine voor energie zonder crash) en MentaBiotics® (probiotica voor mentale veerkracht). Het pakket als geheel is dus niet cafeïnevrij vanwege Energy+."
     },
     "pricing": {
       "subscription": 155.33,
@@ -275,20 +268,34 @@
       "savingsPercent": 9.8
     },
     "images": {
-      "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/HJ_wm-EU-800_25.jpg",
+      "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/HJ_watermelon-EU-800_25.jpg",
       "alt": "Amare Happy Juice Pack® - EDGE+™ Watermelon — bundel voor mentale focus & veerkracht"
     },
     "benefits": [
-      "Complete gut-brain ondersteuning in één pakket",
-      "Combineert focus (EDGE+), energie (Energy+) en darmgezondheid (MentaBiotics)",
-      "Cafeïnevrije focus-ondersteuning",
-      "Drie producten, één samenhangende dagelijkse routine"
+      "Combinatie van drie mentale-wellnessproducten in één bundel",
+      "EDGE+ Watermelon: cafeïnevrij nootropicum voor focus",
+      "Energy+: bevat cafeïne (~27,6 mg) + L-glycine voor energie zonder crash",
+      "MentaBiotics: probiotica voor de darm-hersen-as"
     ],
     "usage": {
-      "dosage": "1 stick/sachet van elk product, dagelijks.",
-      "timing": "Volgens de aanbevolen inname per product; niet op een lege maag.",
-      "duration": "Eerste effecten doorgaans na 3-4 weken consistent gebruik."
+      "dosage": "Raadpleeg de verpakking van elk product voor de aanbevolen dosering.",
+      "timing": "EDGE+ Watermelon zelf is cafeïnevrij, maar Energy+ in dit pakket bevat wel cafeïne.",
+      "duration": "Eerste effecten na 3-4 weken consistent gebruik"
     },
+    "ingredients": [
+      {
+        "name": "Amare EDGE+™ Watermelon",
+        "amount": "Cafeïnevrij nootropicum"
+      },
+      {
+        "name": "Amare Energy+™",
+        "amount": "Bevat cafeïne (~27,6 mg per portie), L-glycine, vitamine C"
+      },
+      {
+        "name": "Amare MentaBiotics®",
+        "amount": "Probiotica voor de darm-hersen-as"
+      }
+    ],
     "affiliate": {
       "url": "https://www.amare.com/susp_2075008/nl-nl/happy-juice-edge-plus-watermelon",
       "sourceTag": "amarenl-product-page"
@@ -301,31 +308,15 @@
     "tags": [],
     "seo": {
       "title": "Amare Happy Juice Pack® - Amare EDGE+™ Watermelon Kopen | Beste Prijs Nederland 2026",
-      "description": "Mentale focus & veerkracht",
+      "description": "Bundel van EDGE+ Watermelon, Energy+ en MentaBiotics",
       "keywords": []
     },
     "isNew": false,
     "isBestseller": true,
     "isPack": false,
-    "priority": 2,
+    "priority": 1,
     "publishedAt": "2024-01-15",
-    "updatedAt": "2026-05-17",
-    "mechanismNL": "Neem dagelijks 1 stick EDGE+ (250 ml water), 1 sachet Energy+ (250 ml water) en 1 stick MentaBiotics (250 ml water), elk volgens de eigen aanbevolen inname. Vitamine C in Energy+ ondersteunt het energiemetabolisme; magnesium in MentaBiotics draagt bij aan normaal psychologisch functioneren.",
-    "ingredients": [
-      {
-        "name": "1x Amare EDGE+™ Watermelon",
-        "amount": "Cafeïnevrij nootropicum"
-      },
-      {
-        "name": "1x Energy+",
-        "amount": "Inuline, glycine, vitamine C, plantextracten"
-      },
-      {
-        "name": "1x MentaBiotics®",
-        "amount": "3 bacteriestammen, vezels, magnesium"
-      }
-    ],
-    "faqs": []
+    "updatedAt": "2026-09-13"
   },
   {
     "slug": "hl5-peach",

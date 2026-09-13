@@ -6,8 +6,8 @@
   "category": "hersenen",
   "taglineNL": "Mentale focus & veerkracht",
   "description": {
-    "short": "Mentale focus & veerkracht",
-    "long": "Amare Happy Juice Pack® - Amare EDGE+™ Mango is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+    "short": "Bundel van EDGE+ Mango, Energy+ en MentaBiotics",
+    "long": "Het Amare Happy Juice Pack® combineert drie mentale-wellnessproducten in één bundel: Amare EDGE+™ Mango (bevat cafeïne, 75 mg per stickpack), Energy+ (bevat cafeïne, ~27,6 mg per portie) en MentaBiotics® (probiotica voor mentale veerkracht). Let op: deze Mango-variant bevat dus cafeïne uit twee bronnen — niet aanbevolen voor kinderen, zwangere of zogende vrouwen of mensen die gevoelig zijn voor cafeïne. Wil je een cafeïnevrije variant, kies dan het Happy Juice Pack met EDGE+ Watermelon."
   },
   "pricing": {
     "subscription": 155.33,
@@ -21,15 +21,21 @@
     "alt": "Amare Happy Juice Pack® - EDGE+™ Mango — bundel voor mentale focus & veerkracht"
   },
   "benefits": [
-    "Hoogwaardige ingrediënten",
-    "Wetenschappelijk onderbouwd",
-    "gemaakt met natuurlijke ingrediënten"
+    "Combinatie van drie mentale-wellnessproducten in één bundel",
+    "EDGE+ Mango: cafeïne (75 mg) + adaptogene plantenextracten voor focus",
+    "Energy+: cafeïne (~27,6 mg) + L-glycine voor energie zonder crash",
+    "MentaBiotics: probiotica voor de darm-hersen-as"
   ],
   "usage": {
-    "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-    "timing": "Raadpleeg de verpakking",
+    "dosage": "Raadpleeg de verpakking van elk product voor de aanbevolen dosering.",
+    "timing": "Bevat cafeïne uit twee bronnen (EDGE+ Mango + Energy+) — niet combineren met andere cafeïnebronnen op dezelfde dag.",
     "duration": "Eerste effecten na 3-4 weken consistent gebruik"
   },
+  "ingredients": [
+    { "name": "Amare EDGE+™ Mango", "amount": "Bevat cafeïne (75 mg per stickpack)" },
+    { "name": "Amare Energy+™", "amount": "Bevat cafeïne (~27,6 mg per portie), L-glycine, vitamine C" },
+    { "name": "Amare MentaBiotics®", "amount": "Probiotica voor de darm-hersen-as" }
+  ],
   "affiliate": {
     "url": "https://www.amare.com/susp_2075008/nl-nl/happy-juice-edge-plus-mango",
     "sourceTag": "amarenl-product-page"
@@ -42,7 +48,7 @@
   "tags": [],
   "seo": {
     "title": "Amare Happy Juice Pack® - Amare EDGE+™ Mango Kopen | Beste Prijs Nederland 2026",
-    "description": "Mentale focus & veerkracht",
+    "description": "Bundel van EDGE+ Mango, Energy+ en MentaBiotics",
     "keywords": []
   },
   "isNew": false,
@@ -50,5 +56,5 @@
   "isPack": false,
   "priority": 1,
   "publishedAt": "2024-01-15",
-  "updatedAt": "2026-05-17"
+  "updatedAt": "2026-09-13"
 }

@@ -6,8 +6,8 @@
   "category": "hersenen",
   "taglineNL": "Mentale focus & veerkracht",
   "description": {
-    "short": "Mentale focus & veerkracht",
-    "long": "Amare Happy Juice Pack® - Amare EDGE+™ Watermelon is een premium supplement van Amare, wetenschappelijk onderbouwd en gemaakt met natuurlijke ingrediënten."
+    "short": "Bundel van EDGE+ Watermelon, Energy+ en MentaBiotics",
+    "long": "Het Amare Happy Juice Pack® combineert drie mentale-wellnessproducten in één bundel: Amare EDGE+™ Watermelon (cafeïnevrij nootropicum voor focus), Energy+ (bevat wel cafeïne, ~27,6 mg per portie, met L-glycine voor energie zonder crash) en MentaBiotics® (probiotica voor mentale veerkracht). Het pakket als geheel is dus niet cafeïnevrij vanwege Energy+."
   },
   "pricing": {
     "subscription": 155.33,
@@ -17,19 +17,25 @@
     "savingsPercent": 9.8
   },
   "images": {
-    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/HJ_wm-EU-800_25.jpg",
+    "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/HJ_watermelon-EU-800_25.jpg",
     "alt": "Amare Happy Juice Pack® - EDGE+™ Watermelon — bundel voor mentale focus & veerkracht"
   },
   "benefits": [
-    "Hoogwaardige ingrediënten",
-    "Wetenschappelijk onderbouwd",
-    "gemaakt met natuurlijke ingrediënten"
+    "Combinatie van drie mentale-wellnessproducten in één bundel",
+    "EDGE+ Watermelon: cafeïnevrij nootropicum voor focus",
+    "Energy+: bevat cafeïne (~27,6 mg) + L-glycine voor energie zonder crash",
+    "MentaBiotics: probiotica voor de darm-hersen-as"
   ],
   "usage": {
-    "dosage": "Raadpleeg de verpakking voor de aanbevolen dosering.",
-    "timing": "Raadpleeg de verpakking",
+    "dosage": "Raadpleeg de verpakking van elk product voor de aanbevolen dosering.",
+    "timing": "EDGE+ Watermelon zelf is cafeïnevrij, maar Energy+ in dit pakket bevat wel cafeïne.",
     "duration": "Eerste effecten na 3-4 weken consistent gebruik"
   },
+  "ingredients": [
+    { "name": "Amare EDGE+™ Watermelon", "amount": "Cafeïnevrij nootropicum" },
+    { "name": "Amare Energy+™", "amount": "Bevat cafeïne (~27,6 mg per portie), L-glycine, vitamine C" },
+    { "name": "Amare MentaBiotics®", "amount": "Probiotica voor de darm-hersen-as" }
+  ],
   "affiliate": {
     "url": "https://www.amare.com/susp_2075008/nl-nl/happy-juice-edge-plus-watermelon",
     "sourceTag": "amarenl-product-page"
@@ -42,13 +48,13 @@
   "tags": [],
   "seo": {
     "title": "Amare Happy Juice Pack® - Amare EDGE+™ Watermelon Kopen | Beste Prijs Nederland 2026",
-    "description": "Mentale focus & veerkracht",
+    "description": "Bundel van EDGE+ Watermelon, Energy+ en MentaBiotics",
     "keywords": []
   },
   "isNew": false,
   "isBestseller": true,
   "isPack": false,
-  "priority": 2,
+  "priority": 1,
   "publishedAt": "2024-01-15",
-  "updatedAt": "2026-05-17"
+  "updatedAt": "2026-09-13"
 }

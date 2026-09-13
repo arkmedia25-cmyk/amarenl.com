@@ -57,7 +57,7 @@ const faqs = [
   {
     question: "Wat is het verschil tussen Energy+ en Amare EDGE+?",
     answer:
-      "Energy+ richt zich op natuurlijke, aanhoudende energie via vitamine C, L-glycine en polyfenolen — met een lichte cafeïneboost. Amare EDGE+ is een vloeibaar nootropicum met citicoline, L-theanine en ashwagandha, gericht op mentale focus en cognitieve helderheid. Ze vullen elkaar perfect aan: Energy+ voor energie, EDGE+ voor focus. Samen met MentaBiotics vormen ze het populaire Happy Juice Pack.",
+      "Energy+ richt zich op natuurlijke, aanhoudende energie via vitamine C, L-glycine en polyfenolen — met cafeïne (~27,6 mg per portie). Amare EDGE+ is een vloeibaar supplement met mangoblad-extract, goji, Boswellia serrata en Terminalia chebula, gericht op mentale focus (de Mango-variant bevat 75 mg cafeïne, de Watermelon-variant is cafeïnevrij). Ze vullen elkaar perfect aan: Energy+ voor energie, EDGE+ voor focus. Samen met MentaBiotics vormen ze het populaire Happy Juice Pack.",
   },
   {
     question: "Kan ik dit product gebruiken in combinatie met medicatie?",
