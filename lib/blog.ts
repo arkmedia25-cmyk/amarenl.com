@@ -319,7 +319,7 @@ export const blogPosts: BlogPost[] = [
       </table>
       <p><strong>HL5</strong> is de premium keuze voor pure collageenondersteuning. De vloeibare vorm zorgt voor tot 90% opname (tegenover ~30% bij poeder), en 5g gehydrolyseerd rundercollageen Type 1&3 is aangevuld met fructo-oligosachariden (een prebiotische vezel) en appelciderazijnpoeder. De prijs is hoog — maar je betaalt voor de klinisch gevalideerde dosering én het gemak van een kant-en-klaar vloeibaar sachet.</p>
       <p><strong>NeuCollagen</strong> is het nieuwste collageenproduct van Amare (gelanceerd maart 2026) met een bredere insteek: naast huid en haar richt het zich op gewrichten, spieren en cortisolbalans via een 6-dimensionale collageenmatrix met adaptogenen. Het is goedkoper per gram dan HL5 en breder inzetbaar — de beste keuze als je één collageenproduct zoekt dat meerdere systemen dekt.</p>
-      <p><strong>Supermarkt collageen</strong> (Lucovitaal, Kruidvat, H&B) kan effectief zijn áls de dosering klopt. Let dan specifiek op: minimaal 5g per dag, gehydrolyseerd (staat niet altijd duidelijk op de verpakking), en bij voorkeur met toegevoegde vitamine C. Het prijsvoordeel is fors (€0,08/gram vs €0,43/gram voor HL5), maar de kans op ondermaatse hydrolyse of afwezigheid van co-factoren is groter.</p>
+      <p><strong>Supermarkt collageen</strong> (Lucovitaal, Kruidvat, H&B) kan effectief zijn áls de dosering klopt. Let dan specifiek op: minimaal 5g per dag, gehydrolyseerd (staat niet altijd duidelijk op de verpakking), en bij voorkeur met toegevoegde vitamine C. Het prijsvoordeel is fors (€0,08/gram vs €0,43/gram voor HL5), maar de kans op ondermaatse hydrolyse of afwezigheid van co-factoren is groter. Wil je precies weten welke vier factoren dat prijsverschil verklaren en hoe je de "werkzame prijs per gram" berekent? Lees onze uitgebreide <a href="/blogs/nieuws/collageen-hl5-vs-supermarkt-vergelijken">vergelijking van HL5 versus supermarktcollageen</a>.</p>
       <h2>Waar moet je op letten bij het kopen van collageen?</h2>
       <p>1. <strong>Type</strong>: Voor huid kies je Type 1&3. Voor gewrichten Type 2. Sommige formules combineren meerdere typen. 2. <strong>Hydrolyse</strong>: Zoek naar "gehydrolyseerd", "collageen peptiden" of "enzymatisch gehydrolyseerd" op het etiket. Dit is de belangrijkste kwaliteitsindicator. 3. <strong>Dosering</strong>: Minimaal 2,5g per dag om enig effect te mogen verwachten, 5g voor optimaal resultaat. 4. <strong>Co-factoren</strong>: Vitamine C is essentieel — je lichaam kan geen collageen aanmaken zonder vitamine C. Biotine en hyaluronzuur zijn waardevolle toevoegingen. 5. <strong>Bron</strong>: Rundercollageen (Type 1&3) is het meest onderzocht. Marine collageen (uit vis) heeft een kleiner molecuulgewicht en zou sneller opneembaar zijn, maar is duurder. Beide werken. 6. <strong>Smaak en vorm</strong>: Poeder is de meest economische vorm. Capsules zijn handiger maar bevatten vaak lagere doseringen (het past simpelweg niet in een capsule van redelijk formaat).</p>
       <h2>Veelgestelde vragen</h2>
@@ -398,6 +398,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Conclusie</h2>
       <p>Supermarktcollageen en Amare HL5 zijn fundamenteel verschillende producten — ook al heten ze allebei "collageen". Het verschil zit in type (gespecificeerd Type 1&3 versus vaag "rundercollageen"), vorm (gehydrolyseerd vloeibaar versus niet-gehydrolyseerd poeder), dosering (5 gram klinisch effectief versus 10-20 gram bulk), en zuiverheid (geen vulstoffen versus maltodextrine en antiklontermiddelen).</p>
       <p>De rekensom is niet €0,43 versus €0,03 per gram. De rekensom is: hoeveel gram bereikt je cellen, van het juiste type collageen, zonder ongewenste toevoegingen? Op die maatstaf wint HL5 het ruimschoots van de supermarktalternatieven — en is het prijsverschil kleiner dan het op het eerste gezicht lijkt.</p>
+      <p>Wil je ook zien hoe HL5 zich verhoudt tot NeuCollagen en andere premium merken, niet alleen tot de supermarkt? Bekijk ons <a href="/blogs/nieuws/beste-collageen-supplement-2026-werkt-echt">complete overzicht van de beste collageen supplementen van 2026</a>.</p>
       <p>*Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Prijzen zijn indicatief — controleer de actuele prijzen op de Amare website.*</p>
     `,
     image: "/images/blog/collageen-hl5-vs-supermarkt.jpg"
@@ -1247,76 +1248,6 @@ export const blogPosts: BlogPost[] = [
     `,
     image: "/images/blog/energie-supplementen-cover.jpg"
   },
-  {
-    slug: "collageen-bouwsteen-voor-huid-haar-en-nagels-dit-moet-je-weten",
-    title: "HL5 Collageen: Wat Doet 5g Per Dag?",
-    date: "2026-05-09",
-    category: "Beauty",
-    excerpt: "Collageen is het belangrijkste eiwit voor je huid, haar en nagels. Vanaf je 25e neemt de productie af. Ontdek hoe je dit op natuurlijke wijze ondersteunt.",
-    content: `
-      <h2>Wat is collageen en waarom is het zo belangrijk?</h2>
-      <p>Collageen is het meest voorkomende eiwit in je lichaam — het vormt de bouwsteen voor je huid, haar, nagels, gewrichten en botten. Ongeveer 30% van al het eiwit in je lichaam is collageen. Het geeft structuur, stevigheid en elasticiteit aan bijna elk weefsel.</p>
-      <p>Maar hier is het probleem: <strong>vanaf je 25e levensjaar neemt je natuurlijke collageenproductie af.</strong> Elk jaar produceer je ongeveer 1% minder collageen. Tegen de tijd dat je 40 bent, ben je dus al zo'n 15% kwijt. Rond je 50e kan dat oplopen tot 25-30%.</p>
-      <p>Gevolg? Fijne lijntjes, minder stevige huid, doffer haar en brozere nagels. De oplossing? Van binnenuit ondersteunen.</p>
-
-      <h3>Wat doet collageen precies?</h3>
-      <ul>
-        <li><strong>Huid:</strong> collageen geeft je huid structuur en elasticiteit. Voldoende collageen betekent een vollere, gladdere huid met minder rimpels.</li>
-        <li><strong>Haar:</strong> de haarwortels hebben collageen nodig voor stevige, glanzende haren. Een tekort kan leiden tot dunner wordend haar.</li>
-        <li><strong>Nagels:</strong> broze nagels die snel scheuren? Vaak een teken van collageentekort.</li>
-        <li><strong>Gewrichten:</strong> collageen houdt ook je kraakbeen soepel — essentieel voor pijnvrije beweging.</li>
-      </ul>
-
-      <h2>Waarom verlies je collageen?</h2>
-      <p>Niet alleen leeftijd speelt een rol. Deze factoren versnellen collageenafbraak:</p>
-      <ul>
-        <li><strong>Zonblootstelling (UV-straling):</strong> de grootste boosdoener. UV breekt collageen af tot 3x sneller.</li>
-        <li><strong>Roken:</strong> nicotine vernauwt bloedvaten in de huid, minder voedingsstoffen, minder collageen.</li>
-        <li><strong>Suiker:</strong> suiker bindt zich aan collageenvezels (glycatie), waardoor ze stug en broos worden.</li>
-        <li><strong>Stress:</strong> chronische stress verhoogt cortisol, wat collageenafbraak stimuleert.</li>
-        <li><strong>Slechte voeding:</strong> te weinig eiwitten, vitamine C en zink = te weinig bouwstoffen.</li>
-      </ul>
-
-      <h2>Hoe ondersteun je je collageen op natuurlijke wijze?</h2>
-
-      <h3>1. Voeding rijk aan collageenboosters</h3>
-      <p>Je lichaam maakt zelf collageen aan, maar heeft daar wel de juiste voedingsstoffen voor nodig:</p>
-      <ul>
-        <li><strong>Vitamine C</strong> — onmisbaar voor collageensynthese. Denk aan citrusvruchten, paprika, kiwi, broccoli.</li>
-        <li><strong>Zink</strong> — ondersteunt eiwitsynthese. Te vinden in noten, zaden, schaaldieren.</li>
-        <li><strong>Koper</strong> — helpt collageenvezels te vormen. In pure chocolade, linzen, avocado.</li>
-        <li><strong>Eiwitten</strong> — collageen is een eiwit, dus voldoende eiwitinname via voeding is essentieel.</li>
-      </ul>
-
-      <h3>2. Beschermen tegen collageenafbraak</h3>
-      <ul>
-        <li>Draag dagelijks <strong>zonbescherming</strong> (SPF), ook op bewolkte dagen.</li>
-        <li>Beperk <strong>suiker</strong> en bewerkte voeding.</li>
-        <li>Zorg voor <strong>voldoende slaap</strong> — tijdens je slaap herstelt je huid.</li>
-        <li>Hydrateer van binnenuit: <strong>minimaal 1,5 liter water</strong> per dag.</li>
-      </ul>
-
-      <h3>3. Vloeibaar collageen supplement</h3>
-      <p>Gehydrolyseerd collageen (collageenpeptiden) is de meest opneembare vorm. Het is opgesplitst in kleinere aminozuurketens die je lichaam direct kan gebruiken. Wetenschappelijk onderzoek toont aan dat dagelijkse suppletie met collageenpeptiden na 8-12 weken zichtbare verbetering geeft in huidelasticiteit, hydratatie en fijnheid van lijntjes.</p>
-      <p><strong>Amare HL5</strong> levert 5 gram hoogwaardig vloeibaar collageen per portie, specifiek geformuleerd voor maximale opname en resultaat. Verkrijgbaar in heerlijke perzik- en bessensmaak.</p>
-
-      <h2>Veelgestelde vragen</h2>
-
-      <h3>Vanaf welke leeftijd moet je collageen gaan gebruiken?</h3>
-      <p>De natuurlijke collageenproductie neemt af vanaf je 25e. Veel mensen starten rond hun 30e met preventieve suppletie. Hoe eerder je begint met ondersteunen, hoe langer je de zichtbare effecten van collageenverlies kunt uitstellen. Maar ook op latere leeftijd starten heeft nog steeds meetbare voordelen voor huid, haar en nagels.</p>
-
-      <h3>Hoe lang duurt het voordat je resultaat ziet bij collageen suppletie?</h3>
-      <p>De meeste gebruikers ervaren na 8 tot 12 weken dagelijks gebruik de eerste zichtbare verbeteringen: een gladdere huid, minder droogheid en sterker haar. Voor optimale resultaten adviseren deskundigen een kuur van minimaal 3 tot 6 maanden. Houd er rekening mee dat suppletie geen wondermiddel is — combineer het met gezonde voeding, voldoende slaap en goede zonbescherming.</p>
-
-      <h3>Wat is het verschil tussen collageenpoeder, capsules en vloeibaar collageen?</h3>
-      <p>Vloeibaar collageen (gehydrolyseerde peptiden) wordt over het algemeen het best opgenomen door het lichaam — tot 90% binnen 6 uur. Capsules zijn handig voor onderweg maar hebben een lagere opneembaarheid. Poeders zijn populair voor in smoothies, maar de opname hangt af van de kwaliteit van de hydrolyse. Kies altijd voor collageen dat expliciet "gehydrolyseerd" op het etiket heeft staan, ongeacht de vorm.</p>
-
-      <h2>Conclusie</h2>
-      <p>Collageen is geen hype — het is een essentieel eiwit dat je lichaam dagelijks nodig heeft. Omdat de natuurlijke productie vanaf je 25e langzaam afneemt, loont het om je collageen actief te ondersteunen: bescherm je huid tegen de zon, eet voldoende eiwitten en vitamine C, beperk suiker en overweeg een kwalitatief collageensupplement.</p>
-      <p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Supplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl.</em></p>
-    `,
-    image: "/images/blog/collageen-huid-haar-nagels-cover.jpg"
-  },
   
   {
     slug: "ijzer-tekort-vermoeidheid-supplement-nederland",
@@ -1371,24 +1302,6 @@ export const blogPosts: BlogPost[] = [
   
   
   {
-    slug: "collageen-supplement-huid-haar-gewrichten",
-    title: "HL5 Collageen: Werkt Het Écht?",
-    date: "2026-02-28",
-    category: "Beauty",
-    excerpt: "Collageen is het meest voorkomende eiwit in je lichaam. Ontdek waarom suppletie essentieel is bij het ouder worden.",
-    content: `
-      <h2>Waarom Collageen?</h2>
-      <p>Vanaf ons 25e levensjaar begint de natuurlijke productie van collageen af te nemen. Dit kan leiden tot rimpels, minder elastische huid en gevoelige gewrichten.</p>
-      
-      <h3>Type I en III</h3>
-      <p>Voor schoonheid en weefselherstel zijn Type I en III de belangrijkste vormen. Gehydrolyseerd collageen (peptiden) wordt het best door het lichaam opgenomen.</p>
-      
-      <h3>Amare HL5</h3>
-      <p><strong>Amare HL5</strong> levert 5 gram hoogwaardig vloeibaar collageen per portie, specifiek geformuleerd voor maximale opname en resultaat.</p>
-    `,
-    image: "/images/blog/collagen.jpg"
-  },
-  {
     slug: "calcium-botten-supplement-nederland",
     title: "Sunset & Origin: Sterke Botten?",
     date: "2026-05-01",
@@ -1430,21 +1343,59 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "vitamine-c-immuunsysteem-supplement",
-    title: "Sunrise 2-Pack: Vitamine C Voor Weerstand?",
+    title: "Vitamine C en Immuunsysteem: Wat Doet Het Echt?",
     date: "2026-04-29",
     category: "Immuniteit",
-    excerpt: "Iedereen kent vitamine C, maar wist je dat het ook de opname van ijzer verhoogt en je cellen beschermt tegen oxidatieve stress?",
+    excerpt: "Vitamine C wordt bij elke verkoudheid uit de kast getrokken, maar wat doet het nou echt voor je afweer? We zoeken uit wat bewezen is, wat een fabel is, en wanneer suppletie zin heeft.",
     author: "Mark",
-    citations: [{ author: "Carr AC & Rowe S", name: "Nutrients (2020)", url: "https://doi.org/10.3390/nu12071963" }],
+    citations: [
+      { author: "Carr AC & Rowe S", name: "Nutrients (2020)", url: "https://doi.org/10.3390/nu12071963" },
+      { author: "Hemilä H & Chalker E", name: "Cochrane Database of Systematic Reviews (2013)", url: "https://doi.org/10.1002/14651858.CD000980.pub4" },
+    ],
     content: `
-      <h2>Meer dan een Weerstand Booster</h2>
-      <p>Vitamine C is een krachtige antioxidant die bijdraagt aan de bescherming van cellen tegen oxidatieve schade en essentieel is voor de vorming van collageen.</p>
-      
-      <h3>Synergie met IJzer</h3>
-      <p>Zoals we eerder bespraken, verhoogt vitamine C de opname van ijzer aanzienlijk. Dit maakt het een onmisbaar onderdeel van je dagelijkse routine als je kampt met vermoeidheid.</p>
-      
-      <h3>Sunrise Kracht</h3>
-      <p><strong>Amare Sunrise</strong> levert 60 mg vitamine C (75% RI) als onderdeel van een bredere formule met 22 superfoods, 9 vitamines en adaptogenen.</p>
+      <h2>Wat doet vitamine C precies voor je immuunsysteem?</h2>
+      <p>Zodra de eerste verkoudheid van het seizoen rondgaat, grijpt bijna iedereen naar vitamine C. Terecht, want het speelt een aantoonbare rol in je afweer — maar niet op de manier die de meeste mensen denken. Vitamine C is geen "boostknop" die je immuunsysteem harder laat werken. Het is een bouwstof die verschillende afweerprocessen mogelijk maakt, van je huid als eerste barrière tot de witte bloedcellen die indringers opruimen. De Europese Voedselveiligheidsautoriteit (EFSA) erkent officieel dat vitamine C bijdraagt aan de normale werking van het immuunsysteem — een erkenning die is gebaseerd op tientallen gepubliceerde studies naar de rol van het vitamine in afweercellen.</p>
+      <h2>Hoe vitamine C je afweer ondersteunt — vier mechanismen</h2>
+      <p>Onderzoek naar vitamine C en immuniteit (Carr &amp; Rowe, 2020, <em>Nutrients</em>) beschrijft meerdere manieren waarop het vitamine je afweersysteem ondersteunt:</p>
+      <ul>
+      <li><strong>Barrièrefunctie van de huid.</strong> Vitamine C is onmisbaar voor de aanmaak van collageen — het eiwit dat je huid stevig en intact houdt. Een gezonde huid is je eerste, fysieke verdedigingslinie tegen ziekteverwekkers, nog vóór je immuunsysteem in actie hoeft te komen.</li>
+      <li><strong>Functie van witte bloedcellen.</strong> Neutrofielen en lymfocyten — de cellen die indringers opsporen en opruimen — accumuleren actief vitamine C. Het vitamine ondersteunt hun beweeglijkheid (chemotaxis) en hun vermogen om schadelijke micro-organismen te neutraliseren.</li>
+      <li><strong>Bescherming tegen oxidatieve schade.</strong> Wanneer je immuunsysteem actief een infectie bestrijdt, ontstaan er als bijproduct reactieve zuurstofdeeltjes. Vitamine C werkt als antioxidant en beperkt de schade die deze deeltjes aan je eigen weefsel kunnen toebrengen.</li>
+      <li><strong>Ondersteuning van het antilichaamproces.</strong> Er zijn aanwijzingen dat voldoende vitamine C bijdraagt aan een goed verlopende immuunrespons, inclusief de vorming van antilichamen na blootstelling aan een ziekteverwekker.</li>
+      </ul>
+      <p>Kortom: vitamine C werkt niet als een schakelaar die je afweer "aanzet", maar als een randvoorwaarde waaronder je immuunsysteem optimaal kan functioneren.</p>
+      <h2>Voorkomt vitamine C verkoudheid? Wat de wetenschap echt zegt</h2>
+      <p>Dit is de vraag waar de meeste verwarring over bestaat — mede dankzij Linus Pauling, die in de jaren '70 megadoses vitamine C promootte als verkoudheidsremedie. De realiteit is genuanceerder. Een uitgebreide Cochrane-review (Hemilä &amp; Chalker, 2013) die tientallen gerandomiseerde studies combineerde, concludeerde dat dagelijkse vitamine C-suppletie bij de gemiddelde, gezonde volwassene <strong>geen</strong> meetbaar effect heeft op hoe vaak je verkouden wordt. Wat de review wél vond: bij mensen die regelmatig vitamine C slikken, valt een verkoudheid die zich toch aandient gemiddeld iets korter en milder uit — bij volwassenen zo'n 8% korter, bij kinderen tot 14%. Opvallend genoeg was het preventieve effect wel duidelijk aanwezig bij één specifieke groep: mensen die zwaar fysiek belast worden, zoals marathonlopers, skiërs en soldaten in training. Bij hen halveerde het risico op een verkoudheid vrijwel. De verklaring: intensieve fysieke stress verhoogt zelf het vitamine C-verbruik in het lichaam aanzienlijk, waardoor suppletie in die groep een tekort compenseert in plaats van een overschot toe te voegen.</p>
+      <h2>Wanneer is je afweer extra kwetsbaar?</h2>
+      <p>Vitamine C-behoefte is niet voor iedereen gelijk. Een aantal situaties verhoogt je verbruik of verlaagt je opname, waardoor je afweer sneller onder druk komt te staan:</p>
+      <ul>
+      <li><strong>Winterseizoen.</strong> Minder vers fruit en groente op je bord, meer tijd binnen — een dubbele klap voor je vitamine C-inname én je algehele weerstand.</li>
+      <li><strong>Chronische stress.</strong> Langdurige stress verhoogt het cortisolniveau, wat op zijn beurt de effectiviteit van je immuunsysteem kan drukken. Ook je magnesiumvoorraad staat onder druk bij chronische stress — lees meer over <a href="/blogs/nieuws/stress-verminderen-supplementen-cortisol-ontspanning">supplementen die helpen bij stressvermindering</a>.</li>
+      <li><strong>Roken.</strong> Rokers hebben een aantoonbaar hogere vitamine C-behoefte, omdat sigarettenrook de oxidatieve belasting van het lichaam verhoogt.</li>
+      <li><strong>Intensief sporten.</strong> Zoals hierboven beschreven, verbruikt zware fysieke inspanning meetbaar meer vitamine C dan een gemiddeld actief leven.</li>
+      <li><strong>Hogere leeftijd.</strong> De opname en het gebruik van meerdere micronutriënten, waaronder vitamine C, wordt minder efficiënt naarmate je ouder wordt.</li>
+      </ul>
+      <p>Herken je een aanhoudend gevoel van verminderde weerstand? Dan is het de moeite waard om ook te checken of er sprake is van een structureel tekort — lees de signalen in ons artikel over <a href="/blogs/nieuws/vitamine-c-tekort-symptomen-oorzaken-oplossingen">vitamine C tekort</a>.</p>
+      <h2>Vitamine C combineren voor optimale weerstand</h2>
+      <p>Vitamine C werkt niet geïsoleerd. Zink is de belangrijkste partner: het mineraal is betrokken bij de ontwikkeling en werking van vrijwel alle immuuncellen, en het tekort eraan komt in Nederland vaker voor dan gedacht. Vitamine D speelt een vergelijkbare rol — vooral relevant in de wintermaanden, wanneer de aanmaak via zonlicht nagenoeg stilvalt. <strong>Amare Sunrise</strong> combineert vitamine C uit natuurlijke bronnen zoals amla en wilde bosbes met 22 superfoods en 9 vitamines en mineralen in één vloeibare ochtendformule — geen geïsoleerd vitamine C-tabletje, maar een bredere basis voor je dagelijkse weerstand. <a href="/sunrise">Bekijk Amare Sunrise →</a> <em>* Voedingssupplement. Geen geneesmiddel.</em></p>
+      <p>Twijfel je waar je je vitamine C het beste vandaan haalt — voeding, synthetisch of een natuurlijke bron? Lees onze vergelijking van <a href="/blogs/nieuws/natuurlijke-vitamine-c-vs-synthetisch-vergelijking">natuurlijke versus synthetische vitamine C</a>, of bekijk welke <a href="/blogs/nieuws/waar-zit-vitamine-c-in-voeding-supplementen">voedingsmiddelen het meeste vitamine C bevatten</a>.</p>
+      <h2>Praktische tips voor een sterke afweer</h2>
+      <ul>
+      <li>Streef naar de aanbevolen 75-90 mg per dag via voeding — meer is voor de gemiddelde, gezonde volwassene niet aantoonbaar beter voor je afweer.</li>
+      <li>Rokers, intensieve sporters en mensen onder chronische stress hebben mogelijk baat bij een net iets hogere inname.</li>
+      <li>Combineer vitamine C met voldoende zink en vitamine D voor een completere afweerbasis, zeker in de wintermaanden.</li>
+      <li>Zie een supplement als aanvulling op — niet vervanging van — voldoende slaap, beweging en een gevarieerd voedingspatroon, de drie factoren die de grootste invloed hebben op je weerstand.</li>
+      </ul>
+      <h2>Veelgestelde vragen</h2>
+      <h3>Kan vitamine C een verkoudheid voorkomen?</h3>
+      <p>Bij de gemiddelde, gezonde volwassene is daarvoor geen overtuigend bewijs — dagelijkse suppletie verlaagt niet aantoonbaar hoe vaak je verkouden wordt. Wel kan het de duur en ernst van een verkoudheid die zich toch aandient iets verkorten. Bij mensen die zwaar fysiek worden belast (marathon, wintersport, militaire training) is het preventieve effect wel duidelijk aangetoond.</p>
+      <h3>Helpt een hogere dosis vitamine C sneller tegen een verkoudheid die al begonnen is?</h3>
+      <p>Er is geen bewijs dat het starten van vitamine C ná het begin van de klachten nog effect heeft op de duur ervan. Het gemeten effect op duur en ernst gold in onderzoek steeds voor mensen die al vóór de verkoudheid regelmatig vitamine C gebruikten.</p>
+      <h3>Is de combinatie van vitamine C en zink beter dan vitamine C alleen?</h3>
+      <p>Beide micronutriënten ondersteunen je immuunsysteem via verschillende, elkaar aanvullende mechanismen — zink bij de ontwikkeling van immuuncellen, vitamine C bij hun functie en bescherming tegen oxidatieve schade. Een formule die meerdere immuunondersteunende voedingsstoffen combineert, sluit beter aan bij hoe je afweersysteem in de praktijk werkt dan een geïsoleerd vitamine C-supplement.</p>
+      <h2>Conclusie</h2>
+      <p>Vitamine C is geen wondermiddel tegen verkoudheid, maar wél een onmisbare bouwstof voor een goed functionerend immuunsysteem — van je huid als eerste barrière tot de witte bloedcellen die indringers opruimen. Voor de meeste gezonde volwassenen voorkomt suppletie geen verkoudheid, maar kan het de klachten iets verkorten, en bij intensieve fysieke belasting is het preventieve effect overtuigend aangetoond. Zorg voor voldoende inname via een gevarieerd voedingspatroon, en overweeg gerichte aanvulling in de wintermaanden, bij stress, of als je intensief sport.</p>
+      <p><em>* Deze uitspraken zijn niet beoordeeld door de NVWA. Voedingssupplementen zijn geen vervanging voor een gevarieerd voedingspatroon en een gezonde levensstijl. Raadpleeg bij aanhoudende gezondheidsklachten altijd een arts.</em></p>
     `,
     image: "/images/blog/vitamine-c.jpg"
   },
@@ -1486,25 +1437,6 @@ export const blogPosts: BlogPost[] = [
       <p>Voor een directe mentale boost bevat <strong>Amare ON</strong> een uitgebalanceerd B-complex dat je helpt om alert en gefocust te blijven tijdens drukke dagen.</p>
     `,
     image: "/images/blog/b-vitamines.jpg"
-  },
-  {
-    slug: "probiotica-darmen-supplement-nederland",
-    title: "Restore & MentaBiotics: Welke Kies Je?",
-    date: "2026-04-23",
-    category: "Gut Health",
-    excerpt: "Niet alle probiotica zijn gelijk. Leer welke stammen zoals Lactobacillus en Bifidobacterium het beste werken voor jouw darmflora.",
-    author: "Mark",
-    content: `
-      <h2>Kwaliteit over Kwantiteit</h2>
-      <p>Het gaat niet alleen om het aantal bacteriën (CFU's), maar vooral om de specifieke stammen en hun overlevingskans in je maagzuur.</p>
-      
-      <h3>Lactobacillus vs Bifidobacterium</h3>
-      <p>Verschillende stammen hebben verschillende functies: van het ondersteunen van de spijsvertering tot het reguleren van het immuunsysteem.</p>
-      
-      <h3>Restore & MentaBiotics</h3>
-      <p>Onze producten zoals <strong>Restore</strong> en <strong>MentaBiotics</strong> maken gebruik van gepatenteerde stammen die wetenschappelijk zijn bewezen om de darmbarrière te versterken.</p>
-    `,
-    image: "/images/blog/probiotics-guide.jpg"
   },
   {
     slug: "happy-juice-pack-complete-mentale-focus-energie-bundel",
@@ -2249,10 +2181,6 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "Happy Juice Pack", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — energie, stemming & focus in één pakket" },
     { name: "Triangle of Wellness Xtreme", url: `${AFFILIATE_BASE}/triangle-of-wellness-xtreme`, isInternal: false, price: "€123.55/maand", tagline: "Sunrise + Nitro Xtreme + Sunset — complete dag-nacht energie" },
   ],
-  "collageen-bouwsteen-voor-huid-haar-en-nagels-dit-moet-je-weten": [
-    { name: "HL5", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "5g gehydrolyseerd collageen Type 1&3 — 2-pack" },
-    { name: "Amare HL5", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "5g gehydrolyseerd collageen Type 1&3 — 2-pack" },
-  ],
   "prebiotica-probiotica-verschil-darmen-uitleg": [
     { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Cerebiome® blend — psychobioticum voor de darm-hersen-as" },
     { name: "Restore", url: "/restore", isInternal: true, price: "€29.70/maand", tagline: "Spijsverteringsenzymen + 5 probiotica stammen" },
@@ -2277,10 +2205,6 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "EDGE+ Watermelon", url: `${AFFILIATE_BASE}/amareedge-plus-watermelon`, isInternal: false, price: "€77,28/maand", tagline: "Cafeïnevrij nootropicum — gojibes, Boswellia serrata, vitamine B5" },
     { name: "Happy Juice Pack", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — energie, stemming & focus in één pakket" },
   ],
-  "collageen-supplement-huid-haar-gewrichten": [
-    { name: "HL5", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "5g gehydrolyseerd collageen Type 1&3 — 2-pack" },
-    { name: "Amare HL5", url: "/hl5", isInternal: true, price: "€130.42/maand", tagline: "5g gehydrolyseerd collageen Type 1&3 — 2-pack" },
-  ],
   "calcium-botten-supplement-nederland": [
     { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Omega-3 + vitamine D3, A, E + astaxanthine — avondformule" },
   ],
@@ -2295,10 +2219,6 @@ const articleProductMap: Record<string, ProductLink[]> = {
     { name: "Sunset", url: `${AFFILIATE_BASE}/sunset`, isInternal: false, price: "€70.23/maand", tagline: "Vitamine E + omega-3 + astaxanthine voor huid & haar" },
   ],
   "b-vitamines-energie-supplement-nederland": [
-  ],
-  "probiotica-darmen-supplement-nederland": [
-    { name: "Restore", url: "/restore", isInternal: true, price: "€29.70/maand", tagline: "5 probiotica stammen + 5 spijsverteringsenzymen" },
-    { name: "MentaBiotics", url: "/mentabiotics", isInternal: true, price: "€71.83/maand", tagline: "Probiotica specifiek voor de darm-hersen-as" },
   ],
   "happy-juice-pack-complete-mentale-focus-energie-bundel": [
     { name: "Happy Juice Pack", url: "/happy-juice-pack", isInternal: true, price: "€143.08/maand", tagline: "#1 bestseller — MentaBiotics + Energy+ + EDGE+ in één bundel" },
