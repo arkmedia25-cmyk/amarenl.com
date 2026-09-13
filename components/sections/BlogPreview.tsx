@@ -36,10 +36,10 @@ export default function BlogPreview() {
             >
               <div className="relative h-48 w-full bg-gray-100">
                 {post.image ? (
-                   <Image 
-                    src={post.image} 
-                    alt={post.title} 
-                    fill 
+                   <Image
+                    src={post.image}
+                    alt="AmareNL"
+                    fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500" 
                   />
                 ) : (

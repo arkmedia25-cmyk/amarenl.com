@@ -208,7 +208,7 @@ export default async function BlogPostPage({ params }: Props) {
             <div className="mt-10 rounded-2xl overflow-hidden shadow-lg bg-white">
               <Image
                 src={post.image}
-                alt={post.title}
+                alt="AmareNL"
                 width={1200}
                 height={630}
                 className="w-full h-auto object-cover"
