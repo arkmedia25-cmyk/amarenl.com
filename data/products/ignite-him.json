@@ -10,11 +10,11 @@
     "long": "Ignite for HIM combineert rode bietenpoeder (330 mg), Rhodiola Rosea-extract (150 mg, met 4,5 mg rosarin), Cordyceps Sinensis-extract (20 mg, gelijk aan 200 mg) en bamboe-extract (25 mg, met 17,5 mg silica) met zink (10 mg, 100% RI). Zink draagt bij aan het behoud van normale testosteronniveaus in het bloed, normale vruchtbaarheid en voortplanting, en een normale cognitieve functie."
   },
   "pricing": {
-    "subscription": 49.5,
-    "oneTime": 55,
+    "subscription": 67.47,
+    "oneTime": 75.10,
     "currency": "EUR",
-    "savings": 5.5,
-    "savingsPercent": 10
+    "savings": 7.63,
+    "savingsPercent": 10.2
   },
   "images": {
     "primary": "https://amarecdn.azureedge.net/webassets/web/prod/products/Ignite-Him-EU-800.jpg",
@@ -110,5 +110,5 @@
   "isPack": false,
   "priority": 26,
   "publishedAt": "2024-01-15",
-  "updatedAt": "2026-05-17"
+  "updatedAt": "2026-09-13"
 }
