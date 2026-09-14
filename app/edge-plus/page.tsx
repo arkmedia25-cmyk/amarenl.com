@@ -69,6 +69,7 @@ export default function EdgePlusPage() {
         <p><strong>EDGE+</strong> is Amare's antwoord op de vraag: "Hoe krijg ik meer focus zonder cafeïne?" Het is een volledig cafeïnevrij, plantaardig nootropicum dat je mentale helderheid en focus ondersteunt via pantotheenzuur (Vitamine B5) en zorgvuldig geselecteerde adaptogene plantenextracten.</p>
         <p>Wat EDGE+ onderscheidt van andere 'focus supplementen': het bevat geen cafeïne, geen synthetische stimulanten, en geen 'proprietary blends' waar je niet weet wat erin zit. Elke stof is bewust gekozen — pantotheenzuur voor je energiemetabolisme, Terminalia chebula en Boswellia als adaptogenen, goji en mango voor antioxidanten.</p>
         <p>Het resultaat is geen opgefokte energiepiek maar <strong>kalme, aanhoudende focus</strong>. Het soort focus waarbij je om 16:00 uur realiseert dat je sinds vanochtend productief bent geweest zonder dat je erover na hoefde te denken.</p>
+        <p>Nieuwsgierig hoe adaptogenen zoals die in EDGE+ zich verhouden tot bekendere namen als ashwagandha en rhodiola? Lees onze <a href="/blogs/nieuws/ashwagandha-vs-rhodiola-adaptogeen-vergelijking">vergelijking tussen ashwagandha en rhodiola</a>, of bekijk de <a href="/adaptogenen">complete gids over adaptogenen</a>.</p>
       </div>
     </div></section>
 

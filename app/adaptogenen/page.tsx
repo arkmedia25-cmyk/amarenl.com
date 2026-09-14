@@ -343,6 +343,27 @@ export default function AdaptogenenPage() {
           </div>
         </section>
 
+        {/* Gerelateerde Artikelen */}
+        <section className="container-page max-w-4xl py-12">
+          <h2 className="text-2xl font-cormorant font-bold text-[var(--color-text)] mb-6">
+            Gerelateerde Artikelen
+          </h2>
+          <div className="grid sm:grid-cols-3 gap-4">
+            <a href="/blogs/nieuws/ashwagandha-vs-rhodiola-adaptogeen-vergelijking" className="block border border-[var(--color-border)] rounded-lg p-5 hover:border-[var(--color-primary)] transition-colors">
+              <p className="font-bold text-[var(--color-text)] mb-1">Ashwagandha vs. Rhodiola</p>
+              <p className="text-sm text-[var(--color-text-muted)]">Welk adaptogeen past bij jouw situatie? Een directe vergelijking.</p>
+            </a>
+            <a href="/blogs/nieuws/adaptogenen-beginnersgids-wat-zijn-het" className="block border border-[var(--color-border)] rounded-lg p-5 hover:border-[var(--color-primary)] transition-colors">
+              <p className="font-bold text-[var(--color-text)] mb-1">Wat Zijn Adaptogenen?</p>
+              <p className="text-sm text-[var(--color-text-muted)]">De beginnersgids — als je net voor het eerst over adaptogenen leest.</p>
+            </a>
+            <a href="/blogs/nieuws/ashwagandha-kopen-nederland-complete-gids" className="block border border-[var(--color-border)] rounded-lg p-5 hover:border-[var(--color-primary)] transition-colors">
+              <p className="font-bold text-[var(--color-text)] mb-1">Ashwagandha Kopen in Nederland</p>
+              <p className="text-sm text-[var(--color-text-muted)]">Complete koopgids: waar op letten, kwaliteit en dosering.</p>
+            </a>
+          </div>
+        </section>
+
         {/* Bronnen */}
         <section className="container-page max-w-4xl py-12">
           <h2 className="text-2xl font-cormorant font-bold text-[var(--color-text)] mb-6">

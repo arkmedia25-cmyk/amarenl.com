@@ -104,58 +104,6 @@ export const blogPosts: BlogPost[] = [
     image: "/images/products/restore.jpg"
   },
 {
-    slug: "adaptogenen-natuurlijke-stressverlichting-ashwagandha-rhodiola",
-    title: "Adaptogenen: Wat Zijn Ze?",
-    date: "2026-06-15",
-    category: "mentaal",
-    excerpt: "Adaptogenen worden steeds populairder als natuurlijke oplossing tegen stress. Maar wat zijn het precies, welke soorten zijn er, en hoe kies je het juiste adaptogeen supplement? Een complete gids.",
-    author: "Mark",
-    citations: [{ author: "Chandrasekhar K, et al.", name: "Indian Journal of Psychological Medicine (2012)", url: "https://doi.org/10.4103/0253-7176.106022" }],
-    content: `
-      <h2>Wat zijn adaptogenen?</h2>
-      <p>Adaptogenen zijn natuurlijke stoffen — meestal plantaardig — die je lichaam helpen zich aan te passen aan stress. Het woord zegt het al: ze helpen je 'adapteren'. In de jaren 1940 definieerde de Russische wetenschapper Dr. Nikolai Lazarev adaptogenen als stoffen die aan drie criteria moeten voldoen: (1) niet-specifiek — ze verhogen weerstand tegen een breed scala aan stressfactoren, (2) normaliserend — ze brengen het lichaam terug naar balans, en (3) onschadelijk — ze verstoren normale lichaamsfuncties niet bij normaal gebruik.</p>
-      <p>Denk aan adaptogenen als een thermostaat voor je stresssysteem. Een thermostaat koelt niet alleen — hij verwarmt ook als het te koud is. Zo werken adaptogenen ook: ze dempen niet alleen stress, maar reguleren het hele systeem.</p>
-      <h2>De zes belangrijkste adaptogenen op een rij</h2>
-      <h3>Ashwagandha — de stressverlager</h3>
-      <p>Ashwagandha (Withania somnifera) is de best gedocumenteerde adaptogeen. Een gerandomiseerde, placebogecontroleerde studie onder 64 mensen met chronische stress (Chandrasekhar et al., 2012) vond een gemiddelde cortisoldaling van circa 23 tot 28% na 60 dagen bij 300 mg KSM-66 extract, tweemaal daags. Ideaal bij chronische stress, piekeren, slecht inslapen door malende gedachten, en stressgerelateerde vermoeidheid.</p>
-      <h3>Rhodiola rosea — de energiegever</h3>
-      <p>Rhodiola rosea (rozenwortel) groeit in koude berggebieden. Waar ashwagandha meer kalmeert, geeft rhodiola meer mentale energie. Het is het adaptogeen bij uitstek voor burn-outachtige vermoeidheid. Rhodiola werkt deels via het serotonine- en dopamine-systeem — het verhoogt niet alleen stressbestendigheid maar ook motivatie.</p>
-      <h3>Holy Basil (Tulsi) — de ontstekingsremmer</h3>
-      <p>Holy Basil (Ocimum sanctum) heeft een breder effect dan alleen stress: het verlaagt niet alleen cortisol maar ook ontstekingsmarkers zoals IL-6 en TNF-alpha. Interessant voor mensen bij wie stress zich fysiek uit: stress-eczeem, auto-immuunopbloeiingen.</p>
-      <h3>L-theanine — de focus-kalmeerder</h3>
-      <p>L-theanine komt van nature voor in groene thee en verhoogt alfa-hersengolven — de frequentie van 'ontspannen alertheid'. Het kalmeert zonder slaperigheid, werkt binnen 30 tot 60 minuten. Ideaal voor stressvolle werkdagen waarop je scherp moet blijven.</p>
-      <h3>Schisandra — de uithoudingsverhoger</h3>
-      <p>Schisandra chinensis komt uit de Traditionele Chinese Geneeskunde. Studies bij atleten tonen verbeterde concentratie en fysieke prestaties onder stress. Het ondersteunt de bijnierfunctie en levergezondheid.</p>
-      <h3>Panax ginseng — de klassieke tonic</h3>
-      <p>Panax ginseng (Koreaanse ginseng) is de meest klassieke adaptogeen. Het is meer stimulerend dan ashwagandha en richt zich op fysieke energie, immuunsysteem en cognitieve functie. Meest geschikt voor 50+ en fysiek uitgeputte mensen.</p>
-      <h2>Hoe kies je het juiste adaptogeen?</h2>
-      <table>
-      <tr><th>Jouw symptoom</th><th>Beste adaptogeen</th></tr>
-      <tr><td>Chronische stress, piekeren, slecht slapen</td><td>Ashwagandha</td></tr>
-      <tr><td>Burn-out gevoel, leeg, geen energie</td><td>Rhodiola</td></tr>
-      <tr><td>Stress met fysieke klachten</td><td>Holy Basil</td></tr>
-      <tr><td>Hoge werkdruk, moet scherp blijven</td><td>L-theanine</td></tr>
-      <tr><td>Fysieke uitputting, zware training</td><td>Schisandra</td></tr>
-      <tr><td>50+, algemene vitaliteit</td><td>Panax ginseng</td></tr>
-      </table>
-      <h2>Adaptogenen in supplementvorm</h2>
-      <p><strong>Amare EDGE+</strong> is een cafeïnevrij, plantaardig nootropicum met ingrediënten als gojibes (een adaptogeen in de TCM) en Boswellia serrata. Het bevat pantotheenzuur (vitamine B5) dat bijdraagt aan normaal energieleverend metabolisme. Geschikt als dagelijks mentaal fundament.</p>
-      <h2>Veelgestelde vragen</h2>
-      <p><strong>Vraag: Wat is het verschil tussen adaptogenen en nootropics?</strong></p>
-      <p>Adaptogenen helpen je lichaam omgaan met stress — ze werken primair op het stresssysteem (HPA-as). Nootropics verbeteren cognitieve functies zoals focus en geheugen. Er is overlap — rhodiola is zowel adaptogeen als nootropic — maar het doel verschilt: adaptogenen zijn voor stressbestendigheid, nootropics voor mentale prestatie.</p>
-      <p><strong>Vraag: Zijn adaptogenen veilig voor dagelijks gebruik?</strong></p>
-      <p>Ja, voor de meeste mensen. Wissel ashwagandha af (na 3 maanden een pauze van 2-4 weken), vermijd rhodiola bij bipolaire stoornis, en overleg met je arts bij gebruik van antidepressiva, bloeddrukverlagers of schildkliermedicatie.</p>
-      <p><strong>Vraag: Hoe snel werken adaptogenen?</strong></p>
-      <p>Eerste subtiele effecten vaak na 1-2 weken (betere slaap, minder stressreacties). Het volledige effect op cortisolregulatie kost 4 tot 8 weken. L-theanine werkt binnen 30-60 minuten.</p>
-      <p><strong>Vraag: Welk adaptogeen past bij mij als ik niet weet waar ik moet beginnen?</strong></p>
-      <p>Begin met ashwagandha — het best onderzocht met uitstekend veiligheidsprofiel. Start met 300 mg KSM-66 extract per dag, bij voorkeur 's avonds. Als je na 4 weken nog uitgeput bent, voeg dan rhodiola toe in de ochtend.</p>
-      <h2>Conclusie</h2>
-      <p>Adaptogenen behoren tot de meest veelbelovende natuurlijke stoffen voor stressbeheersing. Ze vervangen geen stressmanagement, maar ondersteunen je stresssysteem. De beste om mee te beginnen: ashwagandha (chronische stress), rhodiola (burn-out), en L-theanine (kalme focus). Voor dagelijkse mentale scherpte is Amare EDGE+ — met mangoblad-extract, goji, Boswellia serrata en Terminalia chebula — een plantaardig alternatief.</p>
-      <p><em>Disclaimer: deze uitspraken zijn niet beoordeeld door de NVWA. Supplementen zijn geen vervanging voor een gevarieerd dieet en gezonde levensstijl.</em></p>
-      <a href="https://www.amare.com/susp_2075008/nl-nl/amareedge-plus-watermelon" target="_blank" rel="nofollow noopener noreferrer" style="display:inline-block;background:#C8A951;color:#fff;padding:12px 24px;border-radius:9999px;font-weight:700;text-decoration:none">Ontdek Amare EDGE+ →</a>
-    `,
-  },
-{
     slug: "stress-verminderen-supplementen-cortisol-ontspanning",
     title: "Stress Verminderen: Wat Helpt Écht?",
     date: "2026-06-07",

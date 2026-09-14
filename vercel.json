@@ -803,6 +803,11 @@
       "permanent": true
     },
     {
+      "source": "/blogs/nieuws/adaptogenen-natuurlijke-stressverlichting-ashwagandha-rhodiola",
+      "destination": "/adaptogenen",
+      "permanent": true
+    },
+    {
       "source": "/blogs/nieuws/collageen-essentieel-voor-huid-haar-nagels",
       "destination": "/blogs/nieuws/vloeibaar-collageen-hl5-huid-haar-nagels",
       "permanent": true
