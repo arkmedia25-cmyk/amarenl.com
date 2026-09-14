@@ -803,9 +803,43 @@ als het artikel een `articleProductMap`-entry heeft of krijgt.
 
 ---
 
-*CLAUDE.md versie: 2.10 | Project: amarenl.com | Framework: Next.js 16 App Router | Taal: NL*
-*Laatste update: 14 september 2026 — sectie 31 toegevoegd: keyword-gedreven content + cross-link
-werkmethode, inclusief linkifyProductMentions-valkuil en cluster-duplicatie-check*
+## 32. ADAPTOGENEN-CLUSTER: DUPLICAAT GECONSOLIDEERD + INTERNE LINKING GEFIXT (14 september 2026)
+
+**Aanleiding:** vervolg op de al bestaande GSC-audit van 10-09-2026 (adaptogenen-cluster: 4 pagina's,
+0 klikken in 90 dagen, waarvan 1 volledige duplicaat). Musa vroeg expliciet om dit uit te voeren nadat
+bleek dat taurine/ginseng te weinig zoekvolume hadden voor eigen artikelen — de bestaande ginseng-content
+zat toch al begraven in het duplicaat-artikel.
+
+**Uitgevoerd (commit `739d759`):**
+- `adaptogenen-natuurlijke-stressverlichting-ashwagandha-rhodiola` (lib/blog.ts) verwijderd — elke sectie
+  erin (Ashwagandha, Rhodiola, Panax Ginseng, Schisandra, Tulsi, zelfde Chandrasekhar 2012-citatie) bleek
+  al woordelijk aanwezig op de pillar-pagina `/adaptogenen`. Geen unieke content verloren, vooraf geverifieerd.
+- 301-redirect toegevoegd in `vercel.json`: die slug → `/adaptogenen`.
+- 1 dode interne link gevonden en gefixt (in `natuurlijke-slaap-supplementen-beter-slapen-zonder-melatonine`,
+  `data/extra-articles.json`) — wees nog naar de verwijderde URL.
+- Nieuwe "Gerelateerde Artikelen"-sectie toegevoegd op `/adaptogenen` (tussen FAQ en Bronnen) met links naar
+  de 3 overgebleven spoke-artikelen — die hadden voorheen **nul** inkomende interne links.
+- 1 extra link toegevoegd vanaf de `/edge-plus` productpagina naar de best presterende spoke
+  (`ashwagandha-vs-rhodiola-adaptogeen-vergelijking`, positie 18,6 — de beste van de hele cluster).
+- Bewust NIET gedaan: `/adaptogenen` toevoegen aan Header-navigatie of homepage — apart te bespreken
+  site-IA-besluit, niet meegenomen in deze fix.
+
+**Vervolgcontrole ingepland:** eenmalige scheduled task `adaptogenen-gsc-followup-check`, vuurt op
+19 oktober 2026 — haalt dezelfde GSC-cijfers opnieuw op en vergelijkt met de 10-09-2026-baseline.
+
+**Herbruikbare methode (toe te passen op elke content-cluster, niet alleen adaptogenen):** 1) GSC
+page-gefilterde query per URL in de cluster (niet de ingebouwde summary-command — die telt maar top-25
+queries op, zie [[reference_gsc_api_script]]); 2) check of "duplicaten" écht 100% overlappen vóór
+verwijderen (grep beide bestanden, vergelijk citaties/secties woord voor woord — niet aannemen); 3) reken
+inkomende interne links per pagina in de cluster — vrijwel altijd is "geen links" de grotere hefboom dan
+"content is niet goed genoeg"; 4) voeg redirects + cross-links toe, verifieer met `tsc` + live browser-check
+vóór commit.
+
+---
+
+*CLAUDE.md versie: 2.11 | Project: amarenl.com | Framework: Next.js 16 App Router | Taal: NL*
+*Laatste update: 14 september 2026 — sectie 32 toegevoegd: adaptogenen-cluster consolidatie +
+herbruikbare interne-linking-methode voor toekomstige clusters*
 
 ---
 
