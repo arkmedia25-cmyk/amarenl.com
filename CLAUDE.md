@@ -755,9 +755,57 @@ Fase 9 — Data & Infrastructuur — 2026-05-17
 
 ---
 
-*CLAUDE.md versie: 2.9 | Project: amarenl.com | Framework: Next.js 16 App Router | Taal: NL*
-*Laatste update: 02 september 2026 — dode sectiereferenties gerepareerd, verouderde statusmeldingen
-bijgewerkt, sessie-dagboek (sectie 19-30) ingekort met behoud van herbruikbare lessen per incident*
+## 31. KEYWORD-GEDREVEN CONTENT + CROSS-LINK NAAR PRODUCTEN — WERKMETHODE (14 september 2026)
+
+**Aanleiding:** Musa stelde voor om echte ingrediëntdata van Amare-producten (Sunrise, Sunset, Nitro
+Xtreme — samen Triangle of Wellness Xtreme) te combineren met echte Google Keyword Planner-data, om
+artikelen te schrijven op bewezen hoog-volume zoekwoorden en die vervolgens cross-linken naar zowel de
+losse producten als het pakket.
+
+**Keyword-onderzoek (Google Ads Keyword Planner, account 971-159-3723 onder MCC "Ark Media"):**
+`b12 tekort` en varianten bleken 10k-100k/maand te hebben — het grootste kansgebied van de onderzochte
+ingrediënten (taurine, ginseng, biotine lagen ver lager in volume).
+
+**Belangrijke correctie tijdens uitvoering:** vóór het schrijven van een nieuw artikel bleek er al een
+live pagina te bestaan op exact dit onderwerp: `vitamine-b12-tekort-symptomen-supplement` (24-06-2026,
+in `data/extra-articles.json`, niet gedupliceerd in `lib/blog.ts`). Een tweede, apart artikel schrijven
+had opnieuw een cluster-cannibalisatieprobleem gecreëerd zoals in sectie 25/26 al eerder gebeurde met
+collageen. **In plaats daarvan is het bestaande artikel verrijkt**, niet vervangen door een duplicaat:
+- Een nieuwe sectie "Hoeveel vitamine B12 heb je per dag nodig?" toegevoegd met de echte ADH-waarden van
+  het Voedingscentrum (2,8 microgram/dag volwassenen, 3,3 zwangeren, 3,8 bij borstvoeding).
+- 4 extra echte PubMed-citaties toegevoegd (Voedingscentrum-encyclopedie + Green/Miller 2022,
+  Choudhury et al. 2023 over protonpompremmers, Abuyaman et al. 2024) naast de bestaande NTvG-bron.
+- Cross-links naar `/sunrise` en `/triangle-of-wellness-xtreme` toegevoegd, en het artikel toegevoegd aan
+  `articleProductMap` in `lib/blog.ts` (stond er nog niet in — geen "Aanbevolen Producten"-widget).
+
+**Technische valkuil ontdekt en opgelost — `linkifyProductMentions()` (lib/blog.ts, rond regel 2364):**
+zodra een slug een entry heeft in `articleProductMap`, worden productnaam-vermeldingen in de HTML-content
+automatisch omgezet in gestylede links, MITS je de conventie volgt: schrijf de productnaam kaal in
+`<strong>ProductName</strong>` (exact gelijk aan `product.name` in de map) en laat het systeem linken —
+schrijf NOOIT zelf een `<a href="...">ProductName</a>` met de productnaam als linktekst. Een handmatige
+`<a>`-tag met de productnaam erin wordt door dezelfde regex (die tag-blind op tekst matcht) alsnog
+gesplitst/dubbel gewikkeld, wat kapotte geneste links oplevert (zelf ondervonden en gefixt deze sessie).
+Dit is dezelfde regex-klasse als de eerder opgeloste `linkifyProductMentions` href-collision bug, maar nu
+een net iets andere trigger (matcht ook binnen een bestaande handgeschreven `<a>`, niet alleen binnen een
+`href`-attribuut). **Bevestigd dat de "Bekijk product →"-knop altijd direct na de EERSTE vermelding wordt
+geplakt, ongeacht zinspositie** — dit is bestaand, geaccepteerd sitegedrag (ook zichtbaar op de al langer
+live `venkelthee`-pagina), geen nieuwe bug; plaats een productvermelding daarom bij voorkeur aan het einde
+van een zin/alinea om afbreking middenin een zin te vermijden.
+
+**Herbruikbare werkmethode voor volgende keywords (foliumzuur tekort, taurine, ginseng):** 1) check ALTIJD
+eerst of er al een artikel op dat exacte onderwerp bestaat (`grep` op kernwoord in
+`data/extra-articles.json` + `lib/blog.ts`) vóór je een nieuw artikel schrijft — verrijk bestaande content
+in plaats van dupliceren; 2) haal echte ingrediëntdata uit `data/products/[slug].json` (niet aannemen);
+3) verifieer elke citatie-URL live vóór gebruik (Voedingscentrum-paginanamen zijn niet altijd voorspelbaar
+— `vitamine-b12.aspx` bleek te kloppen, maar eerdere sessie ving al een 404 op een geraden URL); 4) gebruik
+`<strong>Exacte Productnaam</strong>` voor cross-links, nooit handmatige `<a href>` met productnaam erin,
+als het artikel een `articleProductMap`-entry heeft of krijgt.
+
+---
+
+*CLAUDE.md versie: 2.10 | Project: amarenl.com | Framework: Next.js 16 App Router | Taal: NL*
+*Laatste update: 14 september 2026 — sectie 31 toegevoegd: keyword-gedreven content + cross-link
+werkmethode, inclusief linkifyProductMentions-valkuil en cluster-duplicatie-check*
 
 ---
 

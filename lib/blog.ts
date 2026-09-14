@@ -2095,6 +2095,10 @@ interface ProductLink {
 const AFFILIATE_BASE = "https://www.amare.com/susp_2075008/nl-nl";
 
 const articleProductMap: Record<string, ProductLink[]> = {
+"vitamine-b12-tekort-symptomen-supplement": [
+    { name: "Amare Sunrise", url: "/sunrise", isInternal: true, price: "€85,78/maand", tagline: "22 superfoods en 9 vitamines waaronder B12, foliumzuur en B1-B6 in één ochtendformule" },
+    { name: "Triangle of Wellness Xtreme", url: "/triangle-of-wellness-xtreme", isInternal: true, price: "€123,55/maand", tagline: "Compleet dag-nacht systeem: Sunrise, Nitro Xtreme en Sunset voor energie, focus en herstel" }
+  ],
 "venkelthee-opgeblazen-gevoel-bewezen-of-bakerpraatje": [
     { name: "Amare Restore", url: "/restore", isInternal: true, price: "€29,70/maand", tagline: "5 spijsverteringsenzymen, 5 probioticastammen en venkelzaadpoeder in één formule" }
   ],
