@@ -13,7 +13,7 @@
  * Optional env: ANTHROPIC_MODEL (default: claude-sonnet-5)
  */
 
-import Anthropic from "@anthropic-ai/sdk";
+import Anthropic from "./anthropic-compat-gemini.mjs";
 import { readFileSync, writeFileSync, existsSync } from "fs";
 import { execSync } from "child_process";
 import { fileURLToPath } from "url";
