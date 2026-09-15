@@ -27,7 +27,9 @@
  */
 
 import { readFileSync, writeFileSync } from "node:fs";
-import Anthropic from "@anthropic-ai/sdk";
+// Anthropic kredisi bitti (400 "credit balance is too low") — shim Gemini'ye yönlendirir.
+// Geri Anthropic'e dönmek için bu satırı "@anthropic-ai/sdk" yap ve bakiyeyi yükle.
+import Anthropic from "./anthropic-compat-gemini.mjs";
 
 const QUEUE_PATH = new URL("../content/social-queue.json", import.meta.url);
 const MODEL = process.env.ANTHROPIC_MODEL || "claude-sonnet-5";
@@ -125,7 +127,11 @@ async function generateCaption(client, hookFact) {
     const prompt = buildPrompt(hookFact) + (previousError ? `\n\n=== VORIGE POGING MISLUKTE — CORRIGEER DIT ===\n${previousError}` : "");
     const response = await client.messages.create({
       model: MODEL,
-      max_tokens: 1024,
+      // Gemini 2.5 Flash bir "thinking" modeli: bu bütçenin büyük kısmı iç
+      // muhakemeye gidiyor. 1024 ile görünür çıktı ~126 karakterde kesiliyordu ve
+      // JSON parse sessizce patlıyordu (workflow 13-15.09 arası bu yüzden düştü).
+      // Caption kısa ama muhakeme payı için geniş tutuluyor.
+      max_tokens: 4096,
       messages: [{ role: "user", content: prompt }],
     });
     const raw = response.content?.find((b) => b.type === "text")?.text || "";

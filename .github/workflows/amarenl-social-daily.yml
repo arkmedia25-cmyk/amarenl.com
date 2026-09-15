@@ -44,7 +44,10 @@ jobs:
 
       - name: Generate today's social caption
         env:
+          # Anthropic kredisi bitti — script artık Gemini shim (scripts/anthropic-compat-gemini.mjs)
+          # üzerinden çalışır. ANTHROPIC_API_KEY sadece geriye dönük uyumluluk için duruyor.
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: node scripts/generate-social-caption.mjs
 
       - name: Commit updated queue
