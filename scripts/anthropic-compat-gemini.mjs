@@ -64,8 +64,9 @@ function resolveModel(requested) {
 
 export default class Anthropic {
   constructor(options = {}) {
-    // Accepts { apiKey } like the real SDK, but Gemini auth comes from env.
-    this.apiKey = options.apiKey || API_KEY;
+    // The generators still pass the (dead) Anthropic key as options.apiKey,
+    // so the Gemini key from the environment must win over it.
+    this.apiKey = API_KEY || options.apiKey || "";
     this.messages = { create: (params) => this._create(params) };
   }
 
