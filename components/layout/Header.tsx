@@ -96,7 +96,7 @@ export default function Header() {
         <Link href="/" className="text-2xl font-bold font-cormorant text-[var(--color-primary)] shrink-0">AmareNL</Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden 2xl:flex items-center gap-8">
           {categoryLinks.map(([label, href]) => (
             <Link key={label} href={href} className="text-[13px] font-bold tracking-wide text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors whitespace-nowrap">
               {label}
@@ -109,7 +109,7 @@ export default function Header() {
               Alle Producten <ChevronDown size={14} className={`transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
             </button>
             {isDropdownOpen && (
-              <div className="absolute top-full left-0 mt-3 bg-white border border-[var(--color-border)] rounded-2xl shadow-xl py-5 min-w-[640px] z-50 grid grid-cols-3 gap-6 px-6">
+              <div className="absolute top-full right-0 mt-3 bg-white border border-[var(--color-border)] rounded-2xl shadow-xl py-5 w-[640px] max-w-[90vw] z-50 grid grid-cols-3 gap-6 px-6">
                 {productLinks.map((group) => (
                   <div key={group.label}>
                     <span className="block px-2 py-1.5 text-[9px] font-bold text-[var(--color-text-muted)] uppercase tracking-wider border-b border-[var(--color-border)] mb-2">{group.label}</span>
@@ -145,7 +145,7 @@ export default function Header() {
           >
             Bestel bij Amare <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
           </a>
-          <button className="lg:hidden p-2 text-[var(--color-text)]" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle Menu">
+          <button className="2xl:hidden p-2 text-[var(--color-text)]" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle Menu">
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -161,7 +161,7 @@ export default function Header() {
 
       {/* Mobile */}
       {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-[70px] bg-white z-[70] overflow-y-auto">
+        <div className="2xl:hidden fixed inset-0 top-[70px] bg-white z-[70] overflow-y-auto">
           <nav className="flex flex-col p-6 space-y-6">
             {categoryLinks.map(([label, href]) => (
               <Link key={label} href={href} onClick={() => setIsMenuOpen(false)} className="text-xl font-bold text-[var(--color-text)] border-b border-[var(--color-border)] pb-4">
