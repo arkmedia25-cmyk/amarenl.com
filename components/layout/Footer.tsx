@@ -33,6 +33,8 @@ export default function Footer() {
             <h4 className="font-bold text-[var(--color-text)] mb-6">Informatie</h4>
             <ul className="space-y-4 text-sm">
               <li><Link href="/over-ons/" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">Over AmareNL</Link></li>
+              <li><Link href="/gratis-gut-brain-gids" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">🎁 Gratis Gut-Brain Gids</Link></li>
+              <li><Link href="/partner-worden" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">🤝 Partner Worden</Link></li>
               <li><Link href="/blogs/nieuws/supplementen-wijzer-gratis" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">Gratis Wijzer</Link></li>
               <li><Link href="/blogs/nieuws/ervaringen-gebruikers-amare-supplementen" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">Ervaringen</Link></li>
               <li><Link href="/contact/" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">Klantenservice</Link></li>

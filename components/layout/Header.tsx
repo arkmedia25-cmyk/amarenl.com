@@ -96,7 +96,7 @@ export default function Header() {
         <Link href="/" className="text-2xl font-bold font-cormorant text-[var(--color-primary)] shrink-0">AmareNL</Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden 2xl:flex items-center gap-8">
+        <nav className="hidden xl:flex items-center gap-4">
           {categoryLinks.map(([label, href]) => (
             <Link key={label} href={href} className="text-[13px] font-bold tracking-wide text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors whitespace-nowrap">
               {label}
@@ -124,20 +124,15 @@ export default function Header() {
             )}
           </div>
 
-          {/* Separator */}
-          <span className="w-px h-5 bg-[var(--color-border)]" />
-
-          <Link href="/partner-worden" className="text-[13px] font-bold tracking-wide text-emerald-700 hover:text-emerald-800 transition-colors whitespace-nowrap">🤝 Partner Worden</Link>
           <Link href="/blogs/nieuws" className="text-[13px] font-bold tracking-wide text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors whitespace-nowrap">📝 Blog</Link>
-          <Link href="/gratis-gut-brain-gids" className="text-[13px] font-bold tracking-wide text-[var(--color-accent)] hover:text-[var(--color-primary)] transition-colors whitespace-nowrap">🎁 Gratis Gids</Link>
         </nav>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
           <a
             href={ctaUrl}
             target="_blank"
             rel="nofollow noopener noreferrer"
-            className="group hidden sm:inline-flex items-center gap-2 px-7 py-3.5 text-white rounded-full text-sm font-bold transition-all shrink-0"
+            className="group hidden sm:inline-flex items-center gap-2 px-5 py-3 text-white rounded-full text-sm font-bold transition-all shrink-0"
             style={{
               background: "linear-gradient(135deg, var(--color-accent), #dfc06e)",
               boxShadow: "0 4px 20px rgba(200, 169, 81, 0.45)",
@@ -145,7 +140,7 @@ export default function Header() {
           >
             Bestel bij Amare <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
           </a>
-          <button className="2xl:hidden p-2 text-[var(--color-text)]" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle Menu">
+          <button className="xl:hidden p-2 text-[var(--color-text)]" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle Menu">
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -161,7 +156,7 @@ export default function Header() {
 
       {/* Mobile */}
       {isMenuOpen && (
-        <div className="2xl:hidden fixed inset-0 top-[70px] bg-white z-[70] overflow-y-auto">
+        <div className="xl:hidden fixed inset-0 top-[70px] bg-white z-[70] overflow-y-auto">
           <nav className="flex flex-col p-6 space-y-6">
             {categoryLinks.map(([label, href]) => (
               <Link key={label} href={href} onClick={() => setIsMenuOpen(false)} className="text-xl font-bold text-[var(--color-text)] border-b border-[var(--color-border)] pb-4">
