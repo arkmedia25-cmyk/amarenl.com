@@ -43,3 +43,5 @@ next-env.d.ts
 leadgen-os/
 leadgen-os/node_modules
 content/social-assets/samples/
+.claude/worktrees/
+.proof/
