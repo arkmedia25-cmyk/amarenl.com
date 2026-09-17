@@ -14,7 +14,7 @@
  */
 
 import Anthropic from "./anthropic-compat-gemini.mjs";
-import { readFileSync, writeFileSync, existsSync } from "fs";
+import { readFileSync, writeFileSync, existsSync, readdirSync } from "fs";
 import { execSync } from "child_process";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
@@ -373,6 +373,23 @@ function buildUserPrompt({ queueDoc, productSummary, existingArticles, previousE
     "",
     `VERBODEN SLUGS (al in gebruik, kies een nieuwe unieke slug voor je nieuwe artikel): ${existingSlugSet}`,
     "",
+    "=== INTERNE LINKS — VERPLICHT (dit brengt bezoekers en klikken) ===",
+    "De content MOET bevatten:",
+    '(a) minimaal 2 links naar productpagina\'s: <a href="/producten/<slug>">Productnaam</a> —',
+    "    de eerste in een lopende zin, niet alleen als linklijstje onderaan;",
+    '(b) minimaal 1 link naar een categorie-/themiapagina: <a href="/<slug>">Naam</a>;',
+    '(c) minimaal 2 links naar bestaande artikelen: <a href="/blogs/nieuws/<slug>">Titel</a>.',
+    "Gebruik UITSLUITEND deze bestaande doelen (verzin geen slugs):",
+    "PRODUCTPAGINA'S:",
+    [...collectProductTargets().entries()]
+      .map(([slug, name]) => `- /producten/${slug} (${name})`)
+      .join("\n") || "(geen)",
+    "",
+    "CATEGORIE-/THEMIAPAGINA'S:",
+    collectCategoryTargets(collectProductTargets())
+      .map((slug) => `- /${slug}`)
+      .join("\n") || "(geen)",
+    "",
     "Output ALLEEN dit JSON object (geen backticks, geen markdown):",
     '{"slug":"...","title":"...","category":"darmen|mentaal|schoonheid|essentials|energie|gewichtsbeheer","excerpt":"...","content":"<h2>...</h2><p>...</p>...","queue_topic_matched":"korte omschrijving van het gekozen onderwerp uit de queue, voor logging"}'
   );
@@ -382,6 +399,98 @@ function buildUserPrompt({ queueDoc, productSummary, existingArticles, previousE
   }
 
   return parts.join("\n");
+}
+
+/** Productpagina's: slug -> naam, uit data/products.json (route: /producten/<slug>). */
+function collectProductTargets() {
+  const products = JSON.parse(readText("data/products.json"));
+  const map = new Map();
+  for (const p of Array.isArray(products) ? products : []) {
+    if (p?.slug) map.set(p.slug, p.nameNL || p.shortNameNL || p.name || p.slug);
+  }
+  return map;
+}
+
+/**
+ * Categorie-/themiapagina's = uitsluitend de echte topic-pagina's van de site (geen
+ * productpagina's, geen technische routes). Wordt gekruist met de bestaande app/-routes,
+ * zodat er nooit naar een 404 gelinkt wordt.
+ */
+const CATEGORY_PAGES = [
+  "supplementen",
+  "supplementenwijzer",
+  "gewichtsbeheer",
+  "schoonheid",
+  "essentials",
+  "darmgezondheid",
+  "adaptogenen",
+  "gut-brain-axis",
+  "pakketten",
+  "probiotica-stammen",
+  "collageen-poeder",
+  "magnesium-supplement",
+  "omega-3-supplement",
+  "vitamine-d-supplement",
+  "beste-probiotica",
+];
+function collectCategoryTargets(productTargets) {
+  try {
+    const routes = new Set(
+      readdirSync(join(ROOT, "app"), { withFileTypes: true })
+        .filter((d) => d.isDirectory())
+        .map((d) => d.name)
+    );
+    return CATEGORY_PAGES.filter((slug) => routes.has(slug) && !productTargets.has(slug));
+  } catch {
+    return [];
+  }
+}
+
+/**
+ * Maait elke pagina in: minimaal 2 productlinks (/producten/<slug>) en minimaal 1
+ * categorie-/themiapagina in de content. Ontbreekt het, dan wordt een kort blok
+ * "Gerelateerde producten & categorieën" met GELDIGE links toegevoegd. Zo gaat er geen
+ * artikel meer live zonder interne links (bezoekers + klikken), zonder het af te keuren.
+ */
+function ensureCrossLinks(article, { productTargets, categoryTargets }) {
+  const content = typeof article.content === "string" ? article.content : "";
+  const count = (re) => [...content.matchAll(re)].length;
+
+  let productLinks = count(/href="\/producten\/[a-z0-9-]+/g);
+  let categoryLinks = categoryTargets.reduce((n, slug) => n + count(new RegExp(`href="/${slug}"`, "g")), 0);
+
+  const needProducts = Math.max(0, 2 - productLinks);
+  const needCategories = Math.max(0, 1 - categoryLinks);
+  if (!needProducts && !needCategories) return { productLinks, categoryLinks, appended: false };
+
+  const productPicks = [];
+  for (const [slug] of productTargets) {
+    if (productPicks.length >= needProducts) break;
+    if (content.includes(`/producten/${slug}`)) continue;
+    productPicks.push(slug);
+  }
+  const categoryPicks = [];
+  for (const slug of categoryTargets) {
+    if (categoryPicks.length >= needCategories) break;
+    if (content.includes(`href="/${slug}"`)) continue;
+    categoryPicks.push(slug);
+  }
+  if (!productPicks.length && !categoryPicks.length) {
+    return { productLinks, categoryLinks, appended: false };
+  }
+
+  const links = [
+    ...productPicks.map((s) => `<a href="/producten/${s}">${productTargets.get(s) || s}</a>`),
+    ...categoryPicks.map((s) => `<a href="/${s}">${s.replace(/-/g, " ")}</a>`),
+  ];
+  article.content = `${content}\n<h2>Gerelateerde producten & categorieën</h2>\n<p>Meer lezen: ${links.join(" · ")}.</p>\n`;
+
+  productLinks = [...article.content.matchAll(/href="\/producten\/[a-z0-9-]+/g)].length;
+  categoryLinks = categoryTargets.reduce(
+    (n, slug) => n + [...article.content.matchAll(new RegExp(`href="/${slug}"`, "g"))].length,
+    0
+  );
+  return { productLinks, categoryLinks, appended: true };
 }
 
 function validate(article, existingArticles) {
@@ -625,6 +734,15 @@ async function generateArticle(client, ctx, systemPrompt) {
       console.log(`[attempt ${attempt}] Slug "${parsed.slug}" already exists — auto-renamed to "${candidate}"`);
       parsed.slug = candidate;
     }
+
+    const crossLinks = ensureCrossLinks(parsed, {
+      productTargets: collectProductTargets(),
+      categoryTargets: collectCategoryTargets(collectProductTargets()),
+    });
+    console.log(
+      `  Interne links: ${crossLinks.productLinks} product, ${crossLinks.categoryLinks} categorie` +
+        (crossLinks.appended ? ' — blok "Gerelateerde producten & categorieën" toegevoegd.' : ".")
+    );
 
     const errors = validate(parsed, ctx.existingArticles);
     if (errors.length === 0) {
