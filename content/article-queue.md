@@ -1,7 +1,9 @@
 # AmareNL Article Queue — SEO-GEO-AEO İçerik Planı
-> Laatste update: 2026-09-10 (gerçek Google Ads Keyword Planner verisi, NL, 7 kategori — bkz.
-> en üstteki "10 EYLÜL 2026" bölümü; bu, henüz `data/extra-articles.json`'daki 81+ makaleye karşı
-> tek tek doğrulanmamış ham veridir — bir sonraki oturum önce çapraz kontrol etmeli)
+> Laatste update: 2026-09-17 (10 Eylül ham verisi 121 mevcut makaleyle [77 `data/extra-articles.json`
+> + 44 `lib/blog.ts`] tek tek çapraz kontrol edildi, FR (AmareFR) kuyruğuyla aynı standarda —
+> checkbox + kanıt bazlı dedup — getirildi. Bkz. "🆕 17 EYLÜL 2026" bölümü hemen altta.)
+> Önceki update: 2026-09-10 (gerçek Google Ads Keyword Planner verisi, NL, 7 kategori — bkz.
+> "10 EYLÜL 2026" bölümü; bu ham veri artık aşağıdaki 17 Eylül bölümünde doğrulanmış durumda)
 > Önceki update: 2026-09-02 (24 Ağustos kuyruğu, bu tarihteki cluster-konsolidasyonlarına göre
 > doğrulandı ve güncellendi — bkz. Q1-Q4, M4, bölüm C aşağıda)
 > Önceki update: 2026-08-24 (öncelik kuyruğu eklendi — bkz. bölüm aşağıda)
@@ -15,9 +17,90 @@
 
 ## ⚠️ OKUMA SIRASI — Bu bölüm en yeni ve en güvenilir olandır
 
-Aşağıdaki **"10 EYLÜL 2026 — Gerçek Keyword Planner Verisi (NL, 7 kategori)"** bölümü en yeni
-ham veridir (bkz. hemen altında) — ama **24 AĞUSTOS 2026** bölümündeki gibi tek tek
-`data/extra-articles.json` karşı doğrulanmamıştır. Önce o doğrulamayı yap, sonra yaz.
+**17 Eylül 2026 itibariyle bu doğrulama yapıldı** — bkz. hemen altındaki "🆕 17 EYLÜL 2026"
+bölümü. Aşağıdaki **"10 EYLÜL 2026 — Gerçek Keyword Planner Verisi (NL, 7 kategori)"** bölümü ham
+veri olarak hâlâ geçerli (hacim/rekabet rakamları), ama hangi kelimenin gerçekten boşluk olduğuna
+dair kendi iddiaları **güncel değil** — 17 Eylül bölümündeki tek tek doğrulanmış sonuçlara güven.
+
+---
+
+## 🆕 17 EYLÜL 2026 — NL kuyruğu FR (AmareFR) standardına getirildi: tam çapraz kontrol
+
+**Metodoloji (AmareFR'nin `CONTENT_WORKFLOW.md`'deki "16/09/2026" bölümüyle aynı disiplin):** 10
+Eylül'ün 7 kategori × top-25 ham keyword verisindeki (`content/keyword-research-2026-09-10.json`)
+en yüksek hacimli/en düşük rekabetli adaylar, **121 mevcut makalenin tamamına** (77 `data/extra-
+articles.json` + 44 `lib/blog.ts`, tek tek `grep`/python ile) karşı doğrulandı — sadece başlık
+değil, makale **içeriği** de tarandı (bkz. kanıtlar altta).
+
+**Sonuç, dürüstçe:** ilk bakışta "boşluk" gibi görünen adayların neredeyse tamamı **zaten
+kapsanıyor** — site 121 makaleyle beklenenden çok daha olgun. Sadece **1 net, kanıtlanmış boşluk**
+bulundu; onu şişirmek yerine olduğu gibi raporluyorum (FR'deki "Écarté volontairement" mantığıyla
+aynı — kapsanan her aday, hangi makalenin kapsadığının kanıtıyla birlikte aşağıda listeli).
+
+### ✅ Aksiyon alınacak (1 madde — checkbox format, FR ile aynı)
+
+- [ ] **Probiotica-vergelijking (Kruidvat/Lucovitaal/Orthica) eksik** → **Restore / MentaBiotics**
+      (`restore`, `mentabiotics`) — mot-clé: "probiotica orthica" ≈5.000/ay Yüksek, "probiotica
+      kruidvat" ≈5.000/ay Yüksek, "lucovitaal probiotica" ≈5.000/ay Yüksek.
+      **Neden bu net bir boşluk:** site zaten **aynı karşılaştırma formatını** 4 farklı üründe
+      kullanıyor — "Kruidvat, Lucovitaal of Vitakruid: hoe verhoudt zich dat tot Sunset/Sunrise?"
+      tablosu `omega-3-supplement-kopen-alles-wat-je-moet-weten`, `natuurlijke-vitamine-c-vs-
+      synthetisch-vergelijking` ve `vitamine-d-energie-vermoeidheid-winter`'da var; ayrıca
+      `beste-collageen-supplement-2026-werkt-echt`'te Orthica/Lucovitaal/Holland & Barrett'a karşı
+      tam fiyat/doz tablosu var. **Sadece probiyotik bu 4'lü setin dışında kalmış** —
+      `beste-probiotica-2026-kopen-vergelijken` başlığı "vergelijken" dese de içeriğinde Kruidvat/
+      Lucovitaal/Vitakruid/Orthica/Holland kelimelerinden **hiçbiri geçmiyor** (python ile
+      doğrulandı, bkz. kanıt).
+      **Nasıl yapılmalı — YENİ MAKALE DEĞİL, ENRICHMENT:** 14 Eylül'deki b12/foliumzuur oturumunda
+      kurulan "check-first, mevcut makaleyi zenginleştir, duplicate yaratma" kuralıyla aynı —
+      `beste-probiotica-2026-kopen-vergelijken`'e aynı tablo formatıyla (ürün, tip, doz, fiyat,
+      €/gün) bir "Kruidvat, Lucovitaal of Orthica: hoe verhoudt zich dat tot Restore/MentaBiotics?"
+      bölümü eklenmeli. Zorunlu çapraz link kuralı (17/09) zaten otomatik uygulanıyor
+      (`ensureCrossLinks()`), bu makalede muhtemelen zaten `/producten/restore` linki var —
+      sadece rakip tablosu eksik.
+      **Tahmini etki:** 15.000/ay toplam arama hacmi (3 kelime × 5.000), Yüksek rekabet ama sıfır
+      yeni yazım riski (mevcut, zaten sıralanan bir sayfaya ekleme).
+
+### ❌ Doğrulandı, ZATEN KAPSANIYOR — yazma (kanıtla)
+
+- **ashwagandha (genel)** → `ashwagandha-kopen-nederland-complete-gids` + 3 diğer makale
+  (`project_keyword_driven_content_b12_2026_09_14` referansı) — 4 makale zaten var.
+- **collageen vs rakip marka (vitakruid/orthica/lucovitaal)** → `beste-collageen-supplement-
+  2026-werkt-echt` içinde tam fiyat/tip/doz karşılaştırma tablosu (Orthica Collageen, Holland &
+  Barrett dahil) zaten var.
+- **omega-3 vs rakip marka / vorm (visolie)** → `omega-3-supplement-kopen-alles-wat-je-moet-weten`
+  içinde "Kruidvat, Lucovitaal of Vitakruid: hoe verhoudt zich dat tot Sunset?" bölümü zaten var.
+- **vitamine C vs rakip marka** → `natuurlijke-vitamine-c-vs-synthetisch-vergelijking` içinde aynı
+  karşılaştırma bölümü zaten var.
+- **vitamine D3 vs rakip marka + "teveel vitamine d" (bovengrens)** → `vitamine-d-energie-
+  vermoeidheid-winter` içinde hem Vitakruid/Lucovitaal karşılaştırması HEM DE "bovengrens"
+  (güvenli üst sınır) bilgisi zaten var — python ile doğrulandı. ⚠️ Tam "overdosis semptomları"
+  odaklı ayrı bir makale hâlâ gri alan; yazmadan önce bu makalenin ilgili paragrafını oku, muhtemelen
+  enrichment yeterli, yeni makale değil.
+- **magnesium: welke vorm is het beste** → `magnesium-supplement-kopen-welke-vorm-nodig` (blog.ts)
+  zaten tam bu başlıkla var.
+- **darmflora stap-voor-stap herstellen** → `darmflora-verbeteren-herstel-spijsvertering-natuurlijk`
+  ("Darmflora Verbeteren: 7 Manieren") zaten bu açıyı kapsıyor.
+- **natuurlijk afvallen / vetverbranders "werken ze echt"** → `natuurlijk-afvallen-supplementen-
+  metabolisme` ("Natuurlijk Afvallen: Wat Werkt Écht?") muhtemelen bu açıyı zaten kapsıyor —
+  düşük güvenle işaretliyorum (başlık/excerpt kontrolü, tam içerik taranmadı), yazmadan önce
+  mutlaka tam kontrol et.
+
+### 🚫 Kategori tamamen elendi
+
+- **`kids` kategorisi** — 8 keyword'ün tamamı ya çok düşük hacim (max 500/ay) ya da doğrudan rakip
+  marka aramaları ("davitamon kindervitamines"). **Amare'nin hiçbir çocuk ürünü yok** (40 üründen
+  hiçbiri `kids` kategorisinde). Ürünsüz, hacimsiz, marka-arama kategorisi — kuyruğa hiç girmemeli.
+
+### Not — kuyruk mekanizması hâlâ FR'den daha zayıf bir noktada
+
+Bu dosya hâlâ bir "redactieplan" (düz metin), FR'deki gibi satır bazlı `[x]`/`[ ]` durumu
+otomatik script tarafından okunmuyor — `scripts/generate-article-claude.mjs` bu dosyayı bütün
+olarak modele veriyor, seçim model-bazlı (bkz. README "Onderwerp-queue" notu, 15/09/2026).
+Yukarıdaki `[ ]` checkbox'ı FR ile tutarlılık ve insan takibi için ekledim, ama script'in kendisi
+bunu henüz parse etmiyor — güvence hâlâ 17/09'da eklenen "cluster-limiet" (kök kelime başına 3
+kullanım sınırı) ve bu tek maddenin **enrichment** olması (yeni slug yaratmadığı için duplicate
+riski yapısal olarak yok).
 
 ---
 
