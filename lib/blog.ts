@@ -1105,6 +1105,19 @@ export const blogPosts: BlogPost[] = [
         <tr><td>Kinderen</td><td>Lagere dosering, kindvriendelijke stammen en vorm</td><td>Kindprobioticum in druppel- of kauwvorm</td></tr>
       </table>
       <p>Het overkoepelende advies blijft hetzelfde ongeacht je focus: kijk naar stamspecificatie, KVE-aantal, aanwezigheid van prebiotica, en of de stam is onderzocht bij mensen — niet alleen in laboratoriumomstandigheden.</p>
+
+      <h2>Kruidvat, Lucovitaal of Orthica: hoe verhoudt dat zich tot Amare's probiotica?</h2>
+      <p>Drogisterijprobiotica zijn vaak goedkoper, maar het verschil zit in wat je precies koopt. Kruidvat's eigen merk Pre- &amp; Probiotica Capsules (€6,99 voor 30 stuks) levert 3 miljard KVE van één stam (Lactobacillus acidophilus) met wat FOS als prebioticum — een prima instapoptie als je puur een basis-probioticum zoekt. Lucovitaal's Probiotica Vitaminen &amp; Mineralen Complex (€14,99/30 capsules) combineert 6 bacteriestammen met een multivitamine (B-vitamines, C, D, ijzer, zink), maar vermeldt geen KVE-aantal op het etiket. Orthica's Orthiflor Original (€17,50/30 capsules, officiële orthica.nl-prijs) gaat het breedst met 9 stammen en 1 miljard KVE per capsule.</p>
+      <table>
+        <tr><th>Product</th><th>Stammen</th><th>KVE</th><th>Vorm</th><th>Extra</th><th>Prijs/maand</th></tr>
+        <tr><td>Restore (Amare)</td><td>5</td><td>4 miljard/dag</td><td>Capsules</td><td>5 spijsverteringsenzymen, 9 botanicals</td><td>€33,01</td></tr>
+        <tr><td>MentaBiotics (Amare)</td><td>3 (Cerebiome®)</td><td>1 miljard/dag</td><td>Sachet (poeder)</td><td>Prebiotische vezels, magnesium, L-glutamine</td><td>€80,55</td></tr>
+        <tr><td>Kruidvat Pre- &amp; Probiotica</td><td>1</td><td>3 miljard/dag</td><td>Capsules</td><td>FOS</td><td>~€6,99</td></tr>
+        <tr><td>Lucovitaal V&amp;M Complex</td><td>6</td><td>niet vermeld</td><td>Capsules</td><td>Multivitamine (B, C, D, ijzer, zink)</td><td>~€14,99</td></tr>
+        <tr><td>Orthica Orthiflor Original</td><td>9</td><td>1 miljard/capsule</td><td>Capsules</td><td>Pro-Motor techniek</td><td>~€17,50</td></tr>
+      </table>
+      <p>Zoek je puur een betaalbare basis-probioticum, dan is Kruidvat een eerlijke keuze. Wil je gerichte ondersteuning bij de spijsvertering met enzymen erbij, dan is dat het domein van <strong>Restore</strong>. Zoek je klinisch onderzochte psychobiotica-stammen voor de darm-hersen-as, dan past dat beter bij <strong>MentaBiotics</strong>. Beide gaan verder dan wat een algemeen drogisterijmerk op stamniveau documenteert. Meer achtergrond over waar je <a href="/darmgezondheid">darmgezondheid</a> mee begint lees je hierboven in dit artikel. <em>* Voedingssupplement. Geen geneesmiddel.</em></p>
+
       <h2>Veelgestelde vragen</h2>
       <h3>Wat is het verschil tussen een probioticum uit de supermarkt en een premium probioticum?</h3>
       <p>Supermarktprobiotica bevatten vaak alleen gangbare stammen in lage doseringen, zonder prebiotica en zonder specificatie op stamniveau. Premium probiotica zoals MentaBiotics gebruiken klinisch gedocumenteerde stammen met een specifiek stamnummer, gecombineerd met prebiotica en ondersteunende ingrediënten. Het kwaliteitsverschil heeft direct invloed op overleving in het maagzuur en uiteindelijk effect.</p>
