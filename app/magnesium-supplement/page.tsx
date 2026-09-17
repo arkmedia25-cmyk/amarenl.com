@@ -147,6 +147,33 @@ export default function MagnesiumLandingPage() {
         </div>
       </section>
 
+      {/* GERELATEERDE ARTIKELEN */}
+      <section className="py-16 bg-white border-t border-[var(--color-border)]">
+        <div className="container-page max-w-4xl">
+          <h2 className="text-2xl font-cormorant font-bold text-[var(--color-text)] mb-6">
+            Gerelateerde Artikelen
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            <a href="/blogs/nieuws/magnesium-onmisbaar-mineraal-rust-energie-spierherstel" className="block border border-[var(--color-border)] rounded-lg p-5 hover:border-[var(--color-primary)] transition-colors">
+              <p className="font-bold text-[var(--color-text)] mb-1">Waarom Magnesium Onmisbaar Is</p>
+              <p className="text-sm text-[var(--color-text-muted)]">De basis: wat magnesium doet en waarom een tekort veel voorkomt.</p>
+            </a>
+            <a href="/blogs/nieuws/waar-zit-magnesium-in-voedingsbronnen-supplementen-gids" className="block border border-[var(--color-border)] rounded-lg p-5 hover:border-[var(--color-primary)] transition-colors">
+              <p className="font-bold text-[var(--color-text)] mb-1">Waar Zit Magnesium In?</p>
+              <p className="text-sm text-[var(--color-text-muted)]">Voedingsbronnen en hoeveel je dagelijks nodig hebt.</p>
+            </a>
+            <a href="/blogs/nieuws/teveel-magnesium-symptomen-risico" className="block border border-[var(--color-border)] rounded-lg p-5 hover:border-[var(--color-primary)] transition-colors">
+              <p className="font-bold text-[var(--color-text)] mb-1">Teveel Magnesium: Is Dat Gevaarlijk?</p>
+              <p className="text-sm text-[var(--color-text-muted)]">Symptomen van een teveel en wanneer je moet opletten.</p>
+            </a>
+            <a href="/blogs/nieuws/magnesiumolie-spray-transdermaal-werkt-het" className="block border border-[var(--color-border)] rounded-lg p-5 hover:border-[var(--color-primary)] transition-colors">
+              <p className="font-bold text-[var(--color-text)] mb-1">Magnesiumolie en -Spray: Werkt Dat Écht?</p>
+              <p className="text-sm text-[var(--color-text-muted)]">Wat de wetenschap zegt over opname via de huid.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-20 bg-white">
         <div className="container-page max-w-3xl">

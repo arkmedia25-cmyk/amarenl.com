@@ -1989,6 +1989,7 @@ Begin met een basisvorm zoals bisglycinaat (200-400 mg elementair), neem het 's 
 
 
 <h2>Gerelateerde producten & categorieën</h2><p>Meer lezen: <a href="/mentabiotics">Amare MentaBiotics</a> · <a href="/nitro-xtreme">Amare Nitro Xtreme</a> · <a href="/magnesium-supplement">magnesium supplement</a>.</p>
+<p>Lees ook: <a href="/blogs/nieuws/magnesium-onmisbaar-mineraal-rust-energie-spierherstel">Waarom Magnesium Onmisbaar Is</a> · <a href="/blogs/nieuws/waar-zit-magnesium-in-voedingsbronnen-supplementen-gids">Waar Zit Magnesium In?</a>.</p>
     `},
 {
     slug: "supplementen-stress-burn-out-wat-helpt-echt",
