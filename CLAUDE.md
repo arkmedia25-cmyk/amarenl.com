@@ -1318,3 +1318,41 @@ expliciete statusmarkering per regel krijgen (nog niet gedaan).
 
 **Let op:** de queue-header waarschuwt zelf dat de keyworddata van 10-09-2026 nog niet tegen de
 81+ bestaande artikelen (`data/extra-articles.json` + `lib/blog.ts`) is gecontroleerd.
+
+---
+
+## 2026-09-17 — Interne links zijn nu VERPLICHT in elk artikel
+
+**Aanleiding:** een steekproef van de laatste 12 artikelen in `data/extra-articles.json` toonde
+**0 productlinks en 0 categorielinks** (10 van de 12 artikelen hadden zelfs geen enkele interne
+link). Er was dus geen doorstroom van bezoekers en geen kliks — precies het tegenovergestelde van
+wat de site nodig heeft.
+
+**Wat er is gebouwd** (in `scripts/generate-article-claude.mjs`):
+- `collectProductTargets()` — leest de 40 producten uit `data/products.json`; hun URL is
+  `/producten/<slug>` (dynamische route `app/producten/[slug]`).
+- `collectCategoryTargets()` — vaste lijst van 15 echte topic-/categoriepagina's, gekruist met de
+  bestaande mappen in `app/`, zodat er **nooit** naar een 404 gelinkt wordt.
+- `ensureCrossLinks()` — controleert de content en vult aan indien nodig.
+
+**De regel (per artikel):**
+1. minimaal **2 productlinks** — `<a href="/producten/<slug>">Productnaam</a>`
+2. minimaal **1 categorie-/themiapagina** — `<a href="/supplementen">supplementen</a>`
+3. minimaal **2 artikellinks** — `<a href="/blogs/nieuws/<slug>">Titel</a>` (bestaande regel)
+
+**Twee vangnetten, zodat dit nooit meer stilletjes misgaat:**
+- De prompt noemt de regel nu expliciet én geeft de volledige lijst geldige doelen mee (het model
+  kan dus geen slugs meer verzinnen die in een 404 eindigen).
+- Voldoet het model toch niet, dan voegt `ensureCrossLinks()` automatisch een kort blok
+  **"Gerelateerde producten & categorieën"** toe met geldige links. Er wordt dus **nooit** een
+  artikel afgekeurd om links — en er gaat **geen** artikel meer live zonder interne links.
+
+**Geverifieerd (17-09-2026):**
+- Unit-test met de echte functies uit het script: **13/13 geslaagd**; elk doel bestaat aantoonbaar
+  als route in `app/`.
+- De live run van 17-09 sloeg het onderwerp over wegens de **cluster-limiet** (kernwoord
+  "vitamine" 9x, limiet 3) en stuurde daarover een Telegram-bericht. Dat is een bestaande,
+  gewenste anti-kanibalisatie-regel — geen fout van deze wijziging.
+
+**Verwante regel:** artikelen moeten ook inhoudelijk bij de gelinkte producten/categorieën passen
+(geen willekeurige links). De prompt vermeldt dit expliciet.
