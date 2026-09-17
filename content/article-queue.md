@@ -39,7 +39,8 @@ aynı — kapsanan her aday, hangi makalenin kapsadığının kanıtıyla birlik
 
 ### ✅ Aksiyon alınacak (1 madde — checkbox format, FR ile aynı)
 
-- [ ] **Probiotica-vergelijking (Kruidvat/Lucovitaal/Orthica) eksik** → **Restore / MentaBiotics**
+- [x] **YAZILDI 17/09/2026 (commit `e1646e4`).** **Probiotica-vergelijking (Kruidvat/Lucovitaal/
+      Orthica) eksik** → **Restore / MentaBiotics**
       (`restore`, `mentabiotics`) — mot-clé: "probiotica orthica" ≈5.000/ay Yüksek, "probiotica
       kruidvat" ≈5.000/ay Yüksek, "lucovitaal probiotica" ≈5.000/ay Yüksek.
       **Neden bu net bir boşluk:** site zaten **aynı karşılaştırma formatını** 4 farklı üründe
@@ -60,6 +61,14 @@ aynı — kapsanan her aday, hangi makalenin kapsadığının kanıtıyla birlik
       sadece rakip tablosu eksik.
       **Tahmini etki:** 15.000/ay toplam arama hacmi (3 kelime × 5.000), Yüksek rekabet ama sıfır
       yeni yazım riski (mevcut, zaten sıralanan bir sayfaya ekleme).
+      **✅ Sonuç (17/09/2026):** `lib/blog.ts`'e eklendi, commit `e1646e4`, push'landı. Gerçek
+      rakip verisi (web'den, uydurulmadı — bkz. commit mesajı): Kruidvat Pre-&Probiotica €6,99/30
+      caps (3 miljard KVE, orthica.nl/kruidvat.nl kaynaklı), Lucovitaal V&M Complex €14,99/30 caps
+      (6 stam, KVE etikette yok → "niet vermeld" yazıldı, uydurulmadı), Orthica Orthiflor Original
+      €17,50/30 caps (officiële orthica.nl, 9 stam, 1 miljard KVE/capsule). Build + lokal server
+      ile doğrulandı: `/restore`, `/mentabiotics`, `/darmgezondheid` hepsi 200. İki bilinen render
+      hatası (ürün adı `<h2>`'de + cümle ortasında CTA kopması) önceden düzeltildi, tekrar
+      yaşanmadı.
 
 ### ❌ Doğrulandı, ZATEN KAPSANIYOR — yazma (kanıtla)
 

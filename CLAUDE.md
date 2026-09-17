@@ -1356,3 +1356,45 @@ wat de site nodig heeft.
 
 **Verwante regel:** artikelen moeten ook inhoudelijk bij de gelinkte producten/categorieën passen
 (geen willekeurige links). De prompt vermeldt dit expliciet.
+
+---
+
+## 2026-09-17 — Kuyruk FR-standardına getirildi + probiotica-vergelijking geschreven
+
+**Aanleiding:** operator vroeg de status van de "populaire keywords → artikel-kuyruğu" taak te
+controleren en, indien onaf, over te nemen — met expliciete nadruk op **geen dubbele content**.
+
+**Wat is gedaan:**
+1. **Volledige cross-check** van de 10-09-2026 keyword-data tegen **alle 121 bestaande artikelen**
+   (77 `data/extra-articles.json` + 44 `lib/blog.ts`, content zelf doorzocht, niet alleen titels).
+   Resultaat in `content/article-queue.md` sectie "🆕 17 EYLÜL 2026": bijna elke ogenschijnlijke
+   "gap" bleek al gedekt (ashwagandha, collageen/omega-3/vitamine-C/D vs concurrentiemerken,
+   magnesium-vorm, darmflora-stappen, natuurlijk afvallen) — met bewijs per item (welk artikel
+   het al dekt).
+2. **Eén bevestigd gat gevonden en geschreven:** een "Kruidvat, Lucovitaal of Orthica"-
+   vergelijkingssectie ontbrak bij probiotica, terwijl dit format al bestond voor 4 andere
+   producten. Toegevoegd aan `beste-probiotica-2026-kopen-vergelijken` (**enrichment, geen nieuw
+   artikel** — dezelfde regel als de b12-sessie van 14-09). Commit `e1646e4`, gepusht.
+   - Concurrentiedata is **echt, via live web search geverifieerd** (orthica.nl officiële prijs
+     €17,50/30 caps; Kruidvat/Lucovitaal productpagina's) — **niet verzonnen**. Waar een cijfer
+     niet op het etiket stond (Lucovitaal KVE), staat er letterlijk "niet vermeld", geen gok.
+   - Build + lokale server geverifieerd (`/restore`, `/mentabiotics`, `/darmgezondheid` → 200).
+3. **`kids`-categorie afgeraden** voor de queue: geen Amare-product, verwaarloosbaar volume,
+   enkel concurrentiemerk-zoekopdrachten ("davitamon").
+4. **Los hiervan, apart gevonden en gefixt:** de dagelijkse Telegram-artikelcron
+   (`~/.hermes/profiles/amarenl/scripts/artikel_send.py`, andere queue dan hierboven — vaste map
+   met 25 oude artikelen) was sinds 15-09 **dezelfde 3 artikelen aan het herhalen** (queue was op
+   en wrapte stilletjes terug naar #1). Script aangepast: bij een lege queue stuurt het nu een
+   waarschuwing i.p.v. te herhalen; progress-teller gereset zodat het niet morgen alsnog #04 (al
+   gepubliceerd) opnieuw stuurt.
+
+**Voor de volgende sessie — om dubbel werk te voorkomen:**
+- De queue-status in `content/article-queue.md` is nu up-to-date tot 17-09-2026. Lees eerst die
+  "🆕 17 EYLÜL 2026"-sectie voordat je nieuwe onderwerpen voorstelt uit de 10-09-data — de meeste
+  zijn al als "gedekt" gemarkeerd mét bewijs.
+- Het enige queue-item van deze ronde staat op `[x]` (gedaan). Geen nieuwe probiotica-vergelijking
+  meer schrijven.
+- De Telegram-artikelcron (`artikel_send.py`) is een **apart systeem** van de website-blogpijplijn
+  hierboven — verwar ze niet. Die map (`~/projects/worldcup-shorts/social-media/artikelen/`) heeft
+  nog steeds maar 25 statische bestanden; als die queue weer leeg raakt, waarschuwt het script nu
+  in plaats van te herhalen, maar er is nog geen nieuwe content toegevoegd aan die map.
