@@ -1087,6 +1087,31 @@
       "source": "/blogs/nieuws/magnesium-supplement-slapen-spieren-stress",
       "destination": "/blogs/nieuws/magnesium-onmisbaar-mineraal-rust-energie-spierherstel",
       "permanent": true
+    },
+    {
+      "source": "/producten/ignite-her",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/producten/fit20",
+      "destination": "/restore",
+      "permanent": true
+    },
+    {
+      "source": "/producten/origin",
+      "destination": "/restore",
+      "permanent": true
+    },
+    {
+      "source": "/producten/happy-lifestyle-pack-basic",
+      "destination": "/happy-lifestyle-pack-pro",
+      "permanent": true
+    },
+    {
+      "source": "/versterkende-collectie-voor-haarherstel",
+      "destination": "/producten/versterkende-collectie-voor-haarherstel",
+      "permanent": true
     }
   ]
 }
