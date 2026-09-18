@@ -4,13 +4,13 @@
  * Kullanım: bun run scripts/pinterest-auth.ts
  *
  * 1. Tarayıcıda Pinterest onay sayfası açar
- * 2. Onay sonrası amarenl.com/api/pinterest/callback token'ı gösterir
+ * 2. Onay sonrası vitaalroute.nl/api/pinterest/callback token'ı gösterir
  */
 
 import { execSync } from "node:child_process";
 
 const CLIENT_ID = "1582959";
-const REDIRECT_URI = "https://amarenl.com/api/pinterest/callback";
+const REDIRECT_URI = "https://vitaalroute.nl/api/pinterest/callback";
 const SCOPES = "pins:read,pins:write,boards:read";
 const AUTH_URL = `https://www.pinterest.com/oauth/?client_id=${CLIENT_ID}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&response_type=code&scope=${encodeURIComponent(SCOPES)}`;
 

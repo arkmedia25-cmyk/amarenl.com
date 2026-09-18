@@ -37,8 +37,8 @@ async function validatePin(pin) {
     }
   }
 
-  if (pin.link && !pin.link.startsWith("https://amarenl.com")) {
-    problems.push(`link amarenl.com dışına gidiyor: ${pin.link}`);
+  if (pin.link && !pin.link.startsWith("https://vitaalroute.nl")) {
+    problems.push(`link vitaalroute.nl dışına gidiyor: ${pin.link}`);
   }
 
   if (pin.image) {

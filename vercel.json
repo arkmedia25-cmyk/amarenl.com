@@ -1112,6 +1112,28 @@
       "source": "/versterkende-collectie-voor-haarherstel",
       "destination": "/producten/versterkende-collectie-voor-haarherstel",
       "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "amarenl.com"
+        }
+      ],
+      "destination": "https://vitaalroute.nl/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.amarenl.com"
+        }
+      ],
+      "destination": "https://vitaalroute.nl/$1",
+      "permanent": true
     }
   ]
 }

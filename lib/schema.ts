@@ -17,7 +17,7 @@ export function generateOrganizationSchema(input?: OrganizationInput) {
     "@type": "Organization",
     name: ORG_NAME,
     url: SITE_URL,
-    logo: `${SITE_URL}/images/amarenl-logo.png`,
+    logo: `${SITE_URL}/images/vitaalroute-logo.svg`,
     description:
       input?.description ||
       "Onafhankelijke Amare affiliate partner — ontdek natuurlijke wellness supplementen voor mentale en fysieke vitaliteit.",
@@ -77,7 +77,7 @@ export function generateArticleSchema(input: ArticleInput) {
       name: ORG_NAME,
       logo: {
         "@type": "ImageObject",
-        url: `${SITE_URL}/images/amarenl-logo.png`,
+        url: `${SITE_URL}/images/vitaalroute-logo.svg`,
       },
     },
     inLanguage: "nl-NL",
@@ -406,7 +406,7 @@ export function generateMedicalWebPageSchema(input: MedicalWebPageInput) {
       name: ORG_NAME,
       logo: {
         "@type": "ImageObject",
-        url: `${SITE_URL}/images/amarenl-logo.png`,
+        url: `${SITE_URL}/images/vitaalroute-logo.svg`,
       },
     },
   };

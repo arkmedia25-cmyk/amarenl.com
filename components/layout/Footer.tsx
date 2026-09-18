@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { SITE_NAME } from "@/lib/site-config";
 
 export default function Footer() {
@@ -8,8 +9,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand Column */}
           <div className="space-y-6">
-            <Link href="/" className="text-2xl font-bold font-cormorant text-[var(--color-primary)]">
-              {SITE_NAME}
+            <Link href="/" className="flex items-center gap-2">
+              <Image src="/images/vitaalroute-icon.svg" alt="" width={28} height={21} />
+              <span className="text-2xl font-bold font-cormorant text-[var(--color-primary)]">{SITE_NAME}</span>
             </Link>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
               Jouw gids naar natuurlijke mentale wellness en darmgezondheid. Onafhankelijke partner van Amare Global in Nederland.

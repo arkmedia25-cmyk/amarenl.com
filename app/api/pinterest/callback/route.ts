@@ -17,7 +17,7 @@ export async function GET(req: NextRequest) {
 
   const clientId = process.env.PINTEREST_CLIENT_ID || "1582959";
   const clientSecret = process.env.PINTEREST_CLIENT_SECRET;
-  const redirectUri = "https://amarenl.com/api/pinterest/callback";
+  const redirectUri = "https://vitaalroute.nl/api/pinterest/callback";
 
   if (!clientSecret) {
     return NextResponse.json({ error: "PINTEREST_CLIENT_SECRET sunucuda tanımlı değil" }, { status: 500 });

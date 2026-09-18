@@ -14,7 +14,7 @@ try {
 }
 
 module.exports = {
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://amarenl.com",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://vitaalroute.nl",
   generateRobotsTxt: false, // Static robots.txt with AI crawler rules
   generateIndexSitemap: false,
   changefreq: "weekly",

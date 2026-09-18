@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, ArrowRight, ChevronDown } from "lucide-react";
 import { getAffiliateUrl, AFFILIATE_BASE_URL } from "@/lib/products";
 import { SITE_NAME } from "@/lib/site-config";
@@ -94,7 +95,10 @@ export default function Header() {
   return (
     <header className={`relative sticky top-0 z-[60] transition-all duration-300 ${isScrolled ? "bg-white/90 backdrop-blur-lg shadow-md py-2" : "bg-white py-5"}`}>
       <div className="container-page flex items-center justify-between gap-6">
-        <Link href="/" className="text-2xl font-bold font-cormorant text-[var(--color-primary)] shrink-0">{SITE_NAME}</Link>
+        <Link href="/" className="flex items-center gap-2 shrink-0">
+          <Image src="/images/vitaalroute-icon.svg" alt="" width={28} height={21} />
+          <span className="text-2xl font-bold font-cormorant text-[var(--color-primary)]">{SITE_NAME}</span>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden xl:flex items-center gap-4">
