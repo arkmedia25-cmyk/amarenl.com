@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Menu, X, ArrowRight, ChevronDown } from "lucide-react";
 import { getAffiliateUrl, AFFILIATE_BASE_URL } from "@/lib/products";
+import { SITE_NAME } from "@/lib/site-config";
 
 // Paginapad → productslug, alleen voor pagina's met één ondubbelzinnig product
 // (geen bundels/gidsen zoals happy-juice-pack of magnesium-supplement). Op deze
@@ -93,7 +94,7 @@ export default function Header() {
   return (
     <header className={`relative sticky top-0 z-[60] transition-all duration-300 ${isScrolled ? "bg-white/90 backdrop-blur-lg shadow-md py-2" : "bg-white py-5"}`}>
       <div className="container-page flex items-center justify-between gap-6">
-        <Link href="/" className="text-2xl font-bold font-cormorant text-[var(--color-primary)] shrink-0">AmareNL</Link>
+        <Link href="/" className="text-2xl font-bold font-cormorant text-[var(--color-primary)] shrink-0">{SITE_NAME}</Link>
 
         {/* Desktop Nav */}
         <nav className="hidden xl:flex items-center gap-4">
@@ -176,7 +177,7 @@ export default function Header() {
             {[
               ["🤝 Partner Worden", "/partner-worden"],
               ["Blog", "/blogs/nieuws"],
-              ["Over AmareNL", "/over-ons/"],
+              [`Over ${SITE_NAME}`, "/over-ons/"],
               ["Gratis Supplementen Wijzer", "/blogs/nieuws/supplementen-wijzer-gratis"],
               ["Ervaringen", "/blogs/nieuws/ervaringen-gebruikers-amare-supplementen"],
             ].map(([label, href]) => (

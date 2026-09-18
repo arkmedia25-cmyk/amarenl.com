@@ -2,6 +2,7 @@ import { getAllBlogPosts } from "@/lib/blog";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Calendar } from "lucide-react";
+import { SITE_NAME } from "@/lib/site-config";
 
 export default function BlogPreview() {
   const latestPosts = getAllBlogPosts().slice(0, 3);
@@ -38,7 +39,7 @@ export default function BlogPreview() {
                 {post.image ? (
                    <Image
                     src={post.image}
-                    alt="AmareNL"
+                    alt={SITE_NAME}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500" 
                   />

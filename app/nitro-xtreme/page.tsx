@@ -5,13 +5,14 @@ import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import ExpertVideoSection from "@/components/ui/ExpertVideoSection";
 import { getProduct } from "@/lib/products";
 import { generateProductSchema, generateFAQSchema, generateBreadcrumbSchema, combineSchemas } from "@/lib/schema";
+import { SITE_NAME } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Nitro Xtreme Kopen: Middagboost | AmareNL",
+  title: `Nitro Xtreme Kopen: Middagboost | ${SITE_NAME}`,
   description: "Nitro Xtreme: nonivruchtenconcentraat met B1, B3, zink, chroom en CoQ10. De middagboost binnen de Triangle of Wellness. Direct van Amare.",
   alternates: { canonical: "/nitro-xtreme" },
-  openGraph: { title: "Amare Nitro Xtreme Kopen — Noni Middagboost | AmareNL", description: "Noni + B-vitamines + zink + chroom + CoQ10 voor je middagboost.", url: "/nitro-xtreme", type: "website", siteName: "AmareNL", locale: "nl_NL", images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }] },
-  twitter: { card: "summary_large_image", title: "Amare Nitro Xtreme Kopen — Noni Middagboost | AmareNL", description: "Noni + B-vitamines + zink + chroom + CoQ10.", images: ["/images/og-default.jpg"] },
+  openGraph: { title: `Amare Nitro Xtreme Kopen — Noni Middagboost | ${SITE_NAME}`, description: "Noni + B-vitamines + zink + chroom + CoQ10 voor je middagboost.", url: "/nitro-xtreme", type: "website", siteName: `${SITE_NAME}`, locale: "nl_NL", images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }] },
+  twitter: { card: "summary_large_image", title: `Amare Nitro Xtreme Kopen — Noni Middagboost | ${SITE_NAME}`, description: "Noni + B-vitamines + zink + chroom + CoQ10.", images: ["/images/og-default.jpg"] },
 };
 
 const faqs = [

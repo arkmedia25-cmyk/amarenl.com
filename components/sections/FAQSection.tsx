@@ -2,11 +2,12 @@
 
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { SITE_NAME } from "@/lib/site-config";
 
 const faqs = [
   {
     question: "Zijn de producten van Amare origineel?",
-    answer: "Ja, absoluut. AmareNL is een onafhankelijke partner van Amare Global. Wanneer je op de bestelknop klikt, word je rechtstreeks naar de officiële Amare.com website geleid om je aankoop veilig te voltooien."
+    answer: `Ja, absoluut. ${SITE_NAME} is een onafhankelijke partner van Amare Global. Wanneer je op de bestelknop klikt, word je rechtstreeks naar de officiële Amare.com website geleid om je aankoop veilig te voltooien.`
   },
   {
     question: "Hoe werkt de 30-dagen 'lege verpakking' garantie?",

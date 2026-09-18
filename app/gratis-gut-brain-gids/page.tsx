@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
 import LeadMagnetForm from "./LeadMagnetForm";
+import { SITE_URL, SITE_NAME } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Gratis Gut-Brain Gids Downloaden | AmareNL",
+  title: `Gratis Gut-Brain Gids Downloaden | ${SITE_NAME}`,
   description:
     "Download de gratis Gut-Brain Gids en ontdek hoe je darmen en hersenen samenwerken. Inclusief persoonlijk supplementen advies + €8 korting op je eerste bestelling.",
-  alternates: { canonical: "https://amarenl.com/gratis-gut-brain-gids" },
+  alternates: { canonical: `${SITE_URL}/gratis-gut-brain-gids` },
   openGraph: {
-    title: "Gratis Gut-Brain Gids Downloaden | AmareNL",
+    title: `Gratis Gut-Brain Gids Downloaden | ${SITE_NAME}`,
     description:
       "Download de gratis Gut-Brain Gids en ontdek hoe je darmen en hersenen samenwerken. Inclusief persoonlijk supplementen advies.",
-    url: "https://amarenl.com/gratis-gut-brain-gids",
+    url: `${SITE_URL}/gratis-gut-brain-gids`,
   },
 };
 

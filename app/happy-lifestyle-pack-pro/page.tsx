@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import { generateProductSchema, generateFAQSchema, generateBreadcrumbSchema, combineSchemas } from "@/lib/schema";
 import { ShoppingCart, CheckCircle2, Rocket, Users, BookOpen, Headphones } from "lucide-react";
+import { SITE_NAME } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Happy Lifestyle Pack Pro Kopen | AmareNL",
+  title: `Happy Lifestyle Pack Pro Kopen | ${SITE_NAME}`,
   description: "Start als Premium Amare Brand Partner met het Pro pakket. Volledig assortiment, hoogste commissie, exclusieve events. Eenmalig €649,64. Direct bestellen bij Amare.",
   alternates: { canonical: "/happy-lifestyle-pack-pro" },
-  openGraph: { title: "Happy Lifestyle Pack Pro — Premium Brand Partner | AmareNL", description: "Het meest complete Amare startpakket. Volledig assortiment + hoogste commissie.", url: "/happy-lifestyle-pack-pro", siteName: "AmareNL", locale: "nl_NL" },
+  openGraph: { title: `Happy Lifestyle Pack Pro — Premium Brand Partner | ${SITE_NAME}`, description: "Het meest complete Amare startpakket. Volledig assortiment + hoogste commissie.", url: "/happy-lifestyle-pack-pro", siteName: `${SITE_NAME}`, locale: "nl_NL" },
 };
 
 const faqs = [

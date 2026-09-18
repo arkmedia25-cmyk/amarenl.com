@@ -1,5 +1,6 @@
 import AffiliateCTA from "@/components/ui/AffiliateCTA";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
+import { SITE_URL, SITE_NAME } from "@/lib/site-config";
 import {
   generateArticleSchema,
   generateFAQSchema,
@@ -8,7 +9,7 @@ import {
 } from "@/lib/schema";
 
 export const metadata = {
-  title: "Probiotica Stammen: Complete Gids (2026) | AmareNL",
+  title: `Probiotica Stammen: Complete Gids (2026) | ${SITE_NAME}`,
   description:
     "Ontdek welke probiotica stammen écht werken. Lactobacillus, Bifidobacterium, Cerebiome® — complete gids met wetenschappelijke onderbouwing, dosering en vergelijking van de beste probiotica supplementen.",
 };
@@ -74,8 +75,8 @@ export default function ProbioticaStammenPage() {
   });
   const faqSchema = generateFAQSchema(faqs);
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home", url: "https://amarenl.com" },
-    { name: "Probiotica Stammen", url: "https://amarenl.com/probiotica-stammen" },
+    { name: "Home", url: `${SITE_URL}` },
+    { name: "Probiotica Stammen", url: `${SITE_URL}/probiotica-stammen` },
   ]);
   const combinedSchema = combineSchemas(articleSchema, faqSchema, breadcrumbSchema);
 

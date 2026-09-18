@@ -4,6 +4,7 @@ import Image from "next/image";
 import { getBlogPostBySlug, getAllBlogPosts, getProductLinksForArticle, linkifyProductMentions } from "@/lib/blog";
 import { ArrowLeft, Tag, Share2, ExternalLink, ShoppingCart, Gift, ShieldCheck } from "lucide-react";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
+import { SITE_URL, SITE_NAME } from "@/lib/site-config";
 import {
   generateArticleSchema,
   generateFAQSchema,
@@ -75,27 +76,27 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const post = getBlogPostBySlug(slug);
-  if (!post) return { title: "Niet gevonden | AmareNL" };
-  const url = `https://amarenl.com/blogs/nieuws/${slug}`;
+  if (!post) return { title: `Niet gevonden | ${SITE_NAME}` };
+  const url = `${SITE_URL}/blogs/nieuws/${slug}`;
   const imageUrl = post.image || "/images/og-default.jpg";
   const metaDesc = post.metaDescription || post.excerpt;
   return {
-    title: `${post.title} | AmareNL`,
+    title: `${post.title} | ${SITE_NAME}`,
     description: metaDesc,
     alternates: { canonical: url },
     openGraph: {
-      title: `${post.title} | AmareNL`,
+      title: `${post.title} | ${SITE_NAME}`,
       description: metaDesc,
       type: "article",
       url,
       images: [{ url: imageUrl, width: 1200, height: 630 }],
       publishedTime: post.date,
-      siteName: "AmareNL",
+      siteName: `${SITE_NAME}`,
       locale: "nl_NL",
     },
     twitter: {
       card: "summary_large_image",
-      title: `${post.title} | AmareNL`,
+      title: `${post.title} | ${SITE_NAME}`,
       description: metaDesc,
       images: [imageUrl],
     },
@@ -121,9 +122,9 @@ export default async function BlogPostPage({ params }: Props) {
     citations: post.citations,
   });
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home", url: "https://amarenl.com" },
-    { name: "Blog", url: "https://amarenl.com/blogs/nieuws" },
-    { name: post.title, url: `https://amarenl.com/blogs/nieuws/${post.slug}` },
+    { name: "Home", url: `${SITE_URL}` },
+    { name: "Blog", url: `${SITE_URL}/blogs/nieuws` },
+    { name: post.title, url: `${SITE_URL}/blogs/nieuws/${post.slug}` },
   ]);
   // Extract H2 headings for speakable sections
   const h2Regex = /<h2>(.+?)<\/h2>/g;
@@ -147,7 +148,7 @@ export default async function BlogPostPage({ params }: Props) {
       slug: post.slug,
       about: post.category,
       audience: "Nederlandse volwassenen",
-      reviewedBy: post.author ? { name: post.author, affiliation: "AmareNL" } : undefined,
+      reviewedBy: post.author ? { name: post.author, affiliation: `${SITE_NAME}` } : undefined,
       citations: post.citations,
     });
     schemas.unshift(medicalSchema);
@@ -192,7 +193,7 @@ export default async function BlogPostPage({ params }: Props) {
               {post.category}
             </div>
             <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-[var(--color-text-muted)]">
-              Door {post.author || "AmareNL Redactie"}
+              Door {post.author || `${SITE_NAME} Redactie`}
             </div>
           </div>
 
@@ -208,7 +209,7 @@ export default async function BlogPostPage({ params }: Props) {
             <div className="mt-10 rounded-2xl overflow-hidden shadow-lg bg-white">
               <Image
                 src={post.image}
-                alt="AmareNL"
+                alt={`${SITE_NAME}`}
                 width={1200}
                 height={630}
                 className="w-full h-auto object-cover"
@@ -321,7 +322,7 @@ export default async function BlogPostPage({ params }: Props) {
                     <div className="flex items-center gap-2">
                       <ShoppingCart size={16} className="text-[var(--color-primary)]" />
                       <span className="text-[10px] font-bold uppercase tracking-widest text-[var(--color-text-muted)]">
-                        {product.isInternal ? "Bekijk op AmareNL" : "Bestel bij Amare"}
+                        {product.isInternal ? `Bekijk op ${SITE_NAME}` : "Bestel bij Amare"}
                       </span>
                     </div>
                     {!product.isInternal && <ExternalLink size={14} className="text-[var(--color-text-muted)] opacity-40" />}

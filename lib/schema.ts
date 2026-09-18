@@ -1,11 +1,10 @@
 /**
- * JSON-LD Schema generators voor amarenl.com
+ * JSON-LD Schema generators
  * Alle types volgens schema.org — content in het Nederlands
  */
+import { SITE_URL, SITE_NAME } from "./site-config";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://amarenl.com";
-const SITE_NAME = "AmareNL";
-const ORG_NAME = "AmareNL";
+const ORG_NAME = SITE_NAME;
 
 export interface OrganizationInput {
   description?: string;
@@ -67,7 +66,7 @@ export function generateArticleSchema(input: ArticleInput) {
     dateModified: input.dateModified || input.datePublished,
     author: {
       "@type": "Person",
-      name: input.author || "AmareNL Redactie",
+      name: input.author || `${SITE_NAME} Redactie`,
     },
     image: input.image
       ? `${SITE_URL}${input.image}`
@@ -465,7 +464,7 @@ export function generatePersonSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "AmareNL Redactie",
+    name: `${SITE_NAME} Redactie`,
     jobTitle: "Wellness & Supplementen Expert",
     description:
       "Onafhankelijke supplementen-onderzoeker gespecialiseerd in natuurlijke formules, gut-brain gezondheid en evidence-based wellness in de Nederlandse markt.",

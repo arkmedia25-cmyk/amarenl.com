@@ -4,6 +4,7 @@ import AffiliateCTA from "@/components/ui/AffiliateCTA";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import ExpertVideoSection from "@/components/ui/ExpertVideoSection";
 import { getProduct } from "@/lib/products";
+import { SITE_NAME } from "@/lib/site-config";
 import {
   generateProductSchema,
   generateFAQSchema,
@@ -12,22 +13,22 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Triangle of Wellness Xtreme: Dag & Nacht | AmareNL",
+  title: `Triangle of Wellness Xtreme: Dag & Nacht | ${SITE_NAME}`,
   description:
     "Amare's complete dag-nacht systeem: Sunrise (ochtend), Nitro Xtreme (middag) en Sunset (avond). Eén pakket voor energie, focus en herstel. Beste prijs Nederland.",
   alternates: { canonical: "/triangle-of-wellness-xtreme" },
   openGraph: {
-    title: "Triangle of Wellness Xtreme: Dag & Nacht | AmareNL",
+    title: `Triangle of Wellness Xtreme: Dag & Nacht | ${SITE_NAME}`,
     description: "Complete dag-nacht systeem: Sunrise, Nitro Xtreme en Sunset in één pakket.",
     url: "/triangle-of-wellness-xtreme",
     type: "website",
-    siteName: "AmareNL",
+    siteName: `${SITE_NAME}`,
     locale: "nl_NL",
     images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Triangle of Wellness Xtreme: Dag & Nacht | AmareNL",
+    title: `Triangle of Wellness Xtreme: Dag & Nacht | ${SITE_NAME}`,
     description: "Complete dag-nacht systeem: Sunrise, Nitro Xtreme en Sunset in één pakket.",
     images: ["/images/og-default.jpg"],
   },

@@ -4,6 +4,7 @@ import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
 import AffiliateCTA from "@/components/ui/AffiliateCTA";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import { getProduct } from "@/lib/products";
+import { SITE_NAME } from "@/lib/site-config";
 import {
   generateProductSchema,
   generateFAQSchema,
@@ -12,22 +13,22 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Energy+ Kopen: Energie Zonder Crash | AmareNL",
+  title: `Energy+ Kopen: Energie Zonder Crash | ${SITE_NAME}`,
   description:
     "Amare Energy+ met vitamine C, L-glycine en natuurlijke cafeïne (27,64 mg) — energie zonder de crash van koffie. Plantaardig, natuurlijke ingrediënten. Direct van Amare — premium kwaliteit.",
   alternates: { canonical: "/energy" },
   openGraph: {
-    title: "Energy+ Kopen: Energie Zonder Crash | AmareNL",
+    title: `Energy+ Kopen: Energie Zonder Crash | ${SITE_NAME}`,
     description: "Amare Energy+ met vitamine C, L-glycine en natuurlijke cafeïne — energie zonder de crash van koffie.",
     url: "/energy",
     type: "website",
-    siteName: "AmareNL",
+    siteName: `${SITE_NAME}`,
     locale: "nl_NL",
     images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Energy+ Kopen: Energie Zonder Crash | AmareNL",
+    title: `Energy+ Kopen: Energie Zonder Crash | ${SITE_NAME}`,
     description: "Amare Energy+ met vitamine C, L-glycine en natuurlijke cafeïne — energie zonder de crash van koffie.",
     images: ["/images/og-default.jpg"],
   },

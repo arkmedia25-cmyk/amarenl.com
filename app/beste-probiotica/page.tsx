@@ -5,9 +5,10 @@ import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
 import { generateFAQSchema, generateBreadcrumbSchema, combineSchemas } from "@/lib/schema";
 import { Check } from "lucide-react";
+import { SITE_URL, SITE_NAME } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Probiotica Supplement: Gids 2026 | AmareNL",
+  title: `Probiotica Supplement: Gids 2026 | ${SITE_NAME}`,
   description: "Beste probiotica supplement kopen? Ontdek welke stammen echt werken voor stemming en spijsvertering.",
   alternates: { canonical: "/beste-probiotica" },
 };
@@ -20,8 +21,8 @@ const faqItems = [
 ];
 
 const breadcrumb = generateBreadcrumbSchema([
-  { name: "Home", url: "https://amarenl.com" },
-  { name: "Beste Probiotica Supplement", url: "https://amarenl.com/beste-probiotica" },
+  { name: "Home", url: `${SITE_URL}` },
+  { name: "Beste Probiotica Supplement", url: `${SITE_URL}/beste-probiotica` },
 ]);
 
 export default function Page() {

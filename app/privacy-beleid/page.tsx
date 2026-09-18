@@ -1,23 +1,24 @@
 import type { Metadata } from "next";
+import { SITE_NAME } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Privacybeleid — AmareNL",
+  title: `Privacybeleid — ${SITE_NAME}`,
   description:
-    "Privacybeleid van AmareNL. Lees hoe wij omgaan met jouw persoonsgegevens conform de AVG/GDPR.",
+    `Privacybeleid van ${SITE_NAME}. Lees hoe wij omgaan met jouw persoonsgegevens conform de AVG/GDPR.`,
   alternates: { canonical: "/privacy-beleid" },
   openGraph: {
-    title: "Privacybeleid — AmareNL",
-    description: "Privacybeleid van AmareNL. Lees hoe wij omgaan met jouw persoonsgegevens conform de AVG/GDPR.",
+    title: `Privacybeleid — ${SITE_NAME}`,
+    description: `Privacybeleid van ${SITE_NAME}. Lees hoe wij omgaan met jouw persoonsgegevens conform de AVG/GDPR.`,
     url: "/privacy-beleid",
     type: "website",
-    siteName: "AmareNL",
+    siteName: `${SITE_NAME}`,
     locale: "nl_NL",
     images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Privacybeleid — AmareNL",
-    description: "Privacybeleid van AmareNL. Lees hoe wij omgaan met jouw persoonsgegevens conform de AVG/GDPR.",
+    title: `Privacybeleid — ${SITE_NAME}`,
+    description: `Privacybeleid van ${SITE_NAME}. Lees hoe wij omgaan met jouw persoonsgegevens conform de AVG/GDPR.`,
     images: ["/images/og-default.jpg"],
   },
 }
@@ -48,7 +49,7 @@ export default function PrivacyBeleid() {
 
           <h2>2. Wie zijn wij</h2>
           <p>
-            AmareNL is een onafhankelijke affiliate partner van Amare Global. Wij zijn geen onderdeel van Amare Global zelf. Contactgegevens vind je op onze contactpagina.
+            {SITE_NAME} is een onafhankelijke affiliate partner van Amare Global. Wij zijn geen onderdeel van Amare Global zelf. Contactgegevens vind je op onze contactpagina.
           </p>
 
           <h2>3. Welke gegevens verzamelen wij</h2>

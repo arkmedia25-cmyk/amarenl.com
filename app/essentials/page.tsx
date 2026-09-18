@@ -2,12 +2,13 @@ import CategoryLanding from "@/components/sections/CategoryLanding";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import { generateBreadcrumbSchema, generateFAQSchema, combineSchemas } from "@/lib/schema";
 import type { Metadata } from "next";
+import { SITE_NAME } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Essentials: Vitamines, Proteïne & Omega 3 | AmareNL",
+  title: `Essentials: Vitamines, Proteïne & Omega 3 | ${SITE_NAME}`,
   description: "Je dagelijkse basis: Sunrise (22 superfoods + 9 vitaminen), Origin (plantaardig eiwit), Sunset (omega 3) en Nitro Xtreme (noni). Complete dagelijkse voedingsondersteuning.",
   alternates: { canonical: "/essentials" },
-  openGraph: { title: "Dagelijkse Essentials Supplementen | AmareNL", description: "Vitamines, proteïne & omega 3 voor je dagelijkse routine.", url: "/essentials", type: "website", siteName: "AmareNL", locale: "nl_NL", images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }] },
+  openGraph: { title: `Dagelijkse Essentials Supplementen | ${SITE_NAME}`, description: "Vitamines, proteïne & omega 3 voor je dagelijkse routine.", url: "/essentials", type: "website", siteName: `${SITE_NAME}`, locale: "nl_NL", images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }] },
 };
 
 const faqs = [

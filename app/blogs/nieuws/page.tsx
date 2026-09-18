@@ -6,24 +6,25 @@ import {
   combineSchemas,
 } from "@/lib/schema";
 import type { Metadata } from "next";
+import { SITE_URL, SITE_NAME } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "AmareNL Blog — Wellness, Supplementen & Gezondheid",
+  title: `${SITE_NAME} Blog — Wellness, Supplementen & Gezondheid`,
   description:
     "Ontdek wetenschappelijke inzichten, tips en gidsen over darmgezondheid, mentale wellness, collageen, supplementen en natuurlijke gezondheid.",
   alternates: { canonical: "/blogs/nieuws" },
   openGraph: {
-    title: "AmareNL Blog — Wellness, Supplementen & Gezondheid",
+    title: `${SITE_NAME} Blog — Wellness, Supplementen & Gezondheid`,
     description: "Ontdek wetenschappelijke inzichten, tips en gidsen over supplementen en natuurlijke gezondheid.",
     url: "/blogs/nieuws",
     type: "website",
-    siteName: "AmareNL",
+    siteName: `${SITE_NAME}`,
     locale: "nl_NL",
     images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AmareNL Blog — Wellness, Supplementen & Gezondheid",
+    title: `${SITE_NAME} Blog — Wellness, Supplementen & Gezondheid`,
     description: "Ontdek wetenschappelijke inzichten, tips en gidsen over supplementen en natuurlijke gezondheid.",
     images: ["/images/og-default.jpg"],
   },
@@ -42,21 +43,21 @@ export default function BlogListingPage() {
   const blogSchema = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    name: "AmareNL Blog",
+    name: `${SITE_NAME} Blog`,
     description: "Wetenschappelijke inzichten over darmgezondheid, mentale wellness en supplementen.",
-    url: "https://amarenl.com/blogs/nieuws",
+    url: `${SITE_URL}/blogs/nieuws`,
     blogPost: posts.map((p) => ({
       "@type": "BlogPosting",
       headline: p.title,
-      url: `https://amarenl.com/blogs/nieuws/${p.slug}`,
+      url: `${SITE_URL}/blogs/nieuws/${p.slug}`,
       datePublished: p.date,
       description: p.excerpt,
     })),
   };
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home", url: "https://amarenl.com" },
-    { name: "Blog", url: "https://amarenl.com/blogs/nieuws" },
+    { name: "Home", url: `${SITE_URL}` },
+    { name: "Blog", url: `${SITE_URL}/blogs/nieuws` },
   ]);
 
   return (

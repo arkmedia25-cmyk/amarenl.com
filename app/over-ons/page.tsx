@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import { generateOrganizationSchema } from "@/lib/schema";
+import { SITE_URL, SITE_NAME } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Over Ons — Waarom Wij Dit Doen | AmareNL",
-  description: "AmareNL is een onafhankelijk platform over supplementen en natuurlijke gezondheid. Lees wie we zijn, wat ons drijft en waarom we begonnen zijn.",
-  alternates: { canonical: "https://amarenl.com/over-ons" },
+  title: `Over Ons — Waarom Wij Dit Doen | ${SITE_NAME}`,
+  description: `${SITE_NAME} is een onafhankelijk platform over supplementen en natuurlijke gezondheid. Lees wie we zijn, wat ons drijft en waarom we begonnen zijn.`,
+  alternates: { canonical: `${SITE_URL}/over-ons` },
 };
 
 export default function OverOns() {
@@ -17,7 +18,7 @@ export default function OverOns() {
         
         <div className="prose max-w-none text-[var(--color-text-muted)] space-y-6">
           <p>
-            Ik ga eerlijk zijn: AmareNL is begonnen uit frustratie.
+            Ik ga eerlijk zijn: {SITE_NAME} is begonnen uit frustratie.
           </p>
           <p>
             Een paar jaar terug liep ik vast. Altijd moe. Slecht slapen. Om drie uur 's middags 

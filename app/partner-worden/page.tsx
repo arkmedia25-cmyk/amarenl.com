@@ -15,6 +15,7 @@ import {
   Heart,
 } from "lucide-react";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
+import { SITE_URL, SITE_NAME } from "@/lib/site-config";
 import {
   generateFAQSchema,
   generateBreadcrumbSchema,
@@ -22,17 +23,17 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Word Amare Brand Partner | AmareNL",
+  title: `Word Amare Brand Partner | ${SITE_NAME}`,
   description:
     "Word Brand Partner bij Amare. Kies je startpakket, ervaar de producten zelf, en verdien commissie door premium supplementen te delen. Start vandaag.",
-  alternates: { canonical: "https://amarenl.com/partner-worden" },
+  alternates: { canonical: `${SITE_URL}/partner-worden` },
   openGraph: {
-    title: "Word Amare Brand Partner | AmareNL",
+    title: `Word Amare Brand Partner | ${SITE_NAME}`,
     description:
       "Word Brand Partner bij Amare. Kies je startpakket, ervaar de producten zelf, en verdien commissie door premium supplementen te delen.",
     type: "website",
-    url: "https://amarenl.com/partner-worden",
-    siteName: "AmareNL",
+    url: `${SITE_URL}/partner-worden`,
+    siteName: `${SITE_NAME}`,
     locale: "nl_NL",
   },
 };
@@ -66,8 +67,8 @@ const faqItems = [
 ];
 
 const breadcrumbSchema = generateBreadcrumbSchema([
-  { name: "Home", url: "https://amarenl.com" },
-  { name: "Partner Worden", url: "https://amarenl.com/partner-worden" },
+  { name: "Home", url: `${SITE_URL}` },
+  { name: "Partner Worden", url: `${SITE_URL}/partner-worden` },
 ]);
 const combinedSchema = combineSchemas(
   breadcrumbSchema,
@@ -471,7 +472,7 @@ export default function PartnerWordenPage() {
                   Je hoeft geen netwerker te zijn die op feestjes producten staat aan te prijzen. De meeste succesvolle Brand Partners zijn juist <strong>introvert</strong> — ze bouwen rustig een website, schrijven blogs, delen op Instagram of sturen af en toe een appje naar iemand die toch al om advies vroeg.
                 </p>
                 <p className="text-[var(--color-text-muted)] leading-relaxed">
-                  Deze site — amarenl.com — is daar het bewijs van. Geen verkoopgesprekken, geen DM's sturen naar vreemden. Gewoon content maken die mensen zélf vinden via Google. Jij deelt je kennis, Amare handelt de rest af.
+                  Deze site — {SITE_NAME} — is daar het bewijs van. Geen verkoopgesprekken, geen DM's sturen naar vreemden. Gewoon content maken die mensen zélf vinden via Google. Jij deelt je kennis, Amare handelt de rest af.
                 </p>
               </div>
 

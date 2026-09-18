@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Star, TrendingUp, Droplets } from "lucide-react";
 import AffiliateCTA from "@/components/ui/AffiliateCTA";
+import { SITE_NAME } from "@/lib/site-config";
 
 export default function FeaturedProducts() {
   const featured = [
@@ -51,7 +52,7 @@ export default function FeaturedProducts() {
         <div className="text-center mb-16 animate-slide-up">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 bg-[var(--color-primary)]/10 text-[var(--color-primary)] rounded-full text-xs font-bold uppercase tracking-widest">
             <TrendingUp size={14} />
-            Aanbevolen door AmareNL
+            Aanbevolen door {SITE_NAME}
           </div>
           <h2 className="text-4xl md:text-5xl font-cormorant font-bold text-[var(--color-text)] mb-4">
             Begin hier met <span className="text-[var(--color-primary)]">Amare</span>

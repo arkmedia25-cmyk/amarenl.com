@@ -2,12 +2,13 @@ import CategoryLanding from "@/components/sections/CategoryLanding";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import { generateBreadcrumbSchema, generateFAQSchema, combineSchemas } from "@/lib/schema";
 import type { Metadata } from "next";
+import { SITE_NAME } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Schoonheid: Collageen, Huid & Haar | AmareNL",
+  title: `Schoonheid: Collageen, Huid & Haar | ${SITE_NAME}`,
   description: "Stralende huid, sterker haar en nagels van binnenuit. HL5 collageen, Skin to Mind serums en Rootist haarverzorging. Wetenschappelijk onderbouwd, natuurlijke ingrediënten.",
   alternates: { canonical: "/schoonheid" },
-  openGraph: { title: "Schoonheid & Verzorging Supplementen | AmareNL", description: "Collageen, huid & haar van binnenuit — HL5, Skin to Mind en Rootist.", url: "/schoonheid", type: "website", siteName: "AmareNL", locale: "nl_NL", images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }] },
+  openGraph: { title: `Schoonheid & Verzorging Supplementen | ${SITE_NAME}`, description: "Collageen, huid & haar van binnenuit — HL5, Skin to Mind en Rootist.", url: "/schoonheid", type: "website", siteName: `${SITE_NAME}`, locale: "nl_NL", images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }] },
 };
 
 const faqs = [

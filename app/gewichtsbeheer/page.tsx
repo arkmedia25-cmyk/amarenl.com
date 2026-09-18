@@ -2,12 +2,13 @@ import CategoryLanding from "@/components/sections/CategoryLanding";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import { generateBreadcrumbSchema, generateFAQSchema, combineSchemas } from "@/lib/schema";
 import type { Metadata } from "next";
+import { SITE_NAME } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Gewichtsbeheer: Metabolisme & Vitaliteit | AmareNL",
+  title: `Gewichtsbeheer: Metabolisme & Vitaliteit | ${SITE_NAME}`,
   description: "Ondersteun je metabolisme en gewichtsbeheer met Amare: FIT20, Origin plantaardige eiwitshake en meer. Natuurlijke metabolisme-ondersteuning zonder crash-diëten.",
   alternates: { canonical: "/gewichtsbeheer" },
-  openGraph: { title: "Gewichtsbeheer: Metabolisme & Vitaliteit | AmareNL", description: "Natuurlijke metabolisme-ondersteuning met Amare supplementen.", url: "/gewichtsbeheer", type: "website", siteName: "AmareNL", locale: "nl_NL", images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }] },
+  openGraph: { title: `Gewichtsbeheer: Metabolisme & Vitaliteit | ${SITE_NAME}`, description: "Natuurlijke metabolisme-ondersteuning met Amare supplementen.", url: "/gewichtsbeheer", type: "website", siteName: `${SITE_NAME}`, locale: "nl_NL", images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }] },
 };
 
 const faqs = [

@@ -2,12 +2,13 @@ import CategoryLanding from "@/components/sections/CategoryLanding";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import { generateBreadcrumbSchema, generateFAQSchema, combineSchemas } from "@/lib/schema";
 import type { Metadata } from "next";
+import { SITE_NAME } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Darmgezondheid: Probiotica & Enzymen | AmareNL",
+  title: `Darmgezondheid: Probiotica & Enzymen | ${SITE_NAME}`,
   description: "Een gezonde darmflora is de basis van je welzijn. Ontdek Amare's probiotica, enzymen en superfoods voor betere spijsvertering en stemming.",
   alternates: { canonical: "/darmgezondheid" },
-  openGraph: { title: "Darmgezondheid Supplementen | AmareNL", description: "Probiotica, enzymen & superfoods voor een gezonde darmflora en betere spijsvertering.", url: "/darmgezondheid", type: "website", siteName: "AmareNL", locale: "nl_NL", images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }] },
+  openGraph: { title: `Darmgezondheid Supplementen | ${SITE_NAME}`, description: "Probiotica, enzymen & superfoods voor een gezonde darmflora en betere spijsvertering.", url: "/darmgezondheid", type: "website", siteName: `${SITE_NAME}`, locale: "nl_NL", images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }] },
 };
 
 const faqs = [

@@ -3,9 +3,10 @@ import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import { generateBreadcrumbSchema, generateFAQSchema, combineSchemas } from "@/lib/schema";
 import PakketGrid from "./PakketGrid";
 import LeadForm from "./LeadForm";
+import { SITE_NAME } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Amare Pakketten: Kies Jouw Startpakket | AmareNL",
+  title: `Amare Pakketten: Kies Jouw Startpakket | ${SITE_NAME}`,
   description: "Start als Amare Brand Partner. Verdien commissie met premium supplementen. Laat je gegevens achter voor gratis info & persoonlijk advies. Geen voorraad, geen verzending.",
   alternates: { canonical: "/pakketten" },
 };

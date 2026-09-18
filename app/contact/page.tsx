@@ -1,24 +1,25 @@
 import type { Metadata } from "next";
 import { Mail, MessageCircle, Clock } from "lucide-react";
+import { SITE_NAME } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Contact & Klantenservice — AmareNL",
+  title: `Contact & Klantenservice — ${SITE_NAME}`,
   description:
-    "Heb je vragen over Amare producten, je bestelling of wil je persoonlijk advies? Neem contact op met AmareNL. Wij helpen je graag verder.",
+    `Heb je vragen over Amare producten, je bestelling of wil je persoonlijk advies? Neem contact op met ${SITE_NAME}. Wij helpen je graag verder.`,
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Contact & Klantenservice — AmareNL",
-    description: "Heb je vragen over Amare producten? Neem contact op met AmareNL. Wij helpen je graag verder.",
+    title: `Contact & Klantenservice — ${SITE_NAME}`,
+    description: `Heb je vragen over Amare producten? Neem contact op met ${SITE_NAME}. Wij helpen je graag verder.`,
     url: "/contact",
     type: "website",
-    siteName: "AmareNL",
+    siteName: `${SITE_NAME}`,
     locale: "nl_NL",
     images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact & Klantenservice — AmareNL",
-    description: "Heb je vragen over Amare producten? Neem contact op met AmareNL. Wij helpen je graag verder.",
+    title: `Contact & Klantenservice — ${SITE_NAME}`,
+    description: `Heb je vragen over Amare producten? Neem contact op met ${SITE_NAME}. Wij helpen je graag verder.`,
     images: ["/images/og-default.jpg"],
   },
 }

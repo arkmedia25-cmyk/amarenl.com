@@ -5,9 +5,10 @@ import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
 import { generateFAQSchema, generateBreadcrumbSchema, combineSchemas } from "@/lib/schema";
 import { Check } from "lucide-react";
+import { SITE_URL, SITE_NAME } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Collageen Poeder Kopen: Gids 2026 | AmareNL",
+  title: `Collageen Poeder Kopen: Gids 2026 | ${SITE_NAME}`,
   description: "Collageen poeder kopen? Ontdek welk type collageen je nodig hebt voor huid, haar en nagels.",
   alternates: { canonical: "/collageen-poeder" },
 };
@@ -20,8 +21,8 @@ const faqItems = [
 ];
 
 const breadcrumb = generateBreadcrumbSchema([
-  { name: "Home", url: "https://amarenl.com" },
-  { name: "Collageen Poeder Kopen", url: "https://amarenl.com/collageen-poeder" },
+  { name: "Home", url: `${SITE_URL}` },
+  { name: "Collageen Poeder Kopen", url: `${SITE_URL}/collageen-poeder` },
 ]);
 
 export default function Page() {

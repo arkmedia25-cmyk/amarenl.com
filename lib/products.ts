@@ -14,6 +14,7 @@
  */
 
 import rawProducts from '../data/products.json';
+import { SITE_NAME } from './site-config';
 
 export const AFFILIATE_ID = 'susp_2075008';
 export const AFFILIATE_BASE_URL = `https://www.amare.com/${AFFILIATE_ID}/nl-nl/`;
@@ -342,7 +343,7 @@ export function hasInternalPage(productId: string): boolean {
 
 const META_TITLE_MAX = 60;
 const META_DESC_MAX = 155;
-const BRAND_SUFFIX = " | AmareNL";
+const BRAND_SUFFIX = ` | ${SITE_NAME}`;
 
 function truncateAtWord(text: string, maxLength: number): string {
   if (text.length <= maxLength) return text;

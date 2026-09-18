@@ -4,6 +4,7 @@ import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
 import AffiliateCTA from "@/components/ui/AffiliateCTA";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import { getProduct } from "@/lib/products";
+import { SITE_NAME } from "@/lib/site-config";
 import {
   generateProductSchema,
   generateFAQSchema,
@@ -12,22 +13,22 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "MentaBiotics Kopen: Probiotica voor Mentaal | AmareNL",
+  title: `MentaBiotics Kopen: Probiotica voor Mentaal | ${SITE_NAME}`,
   description:
     "Amare MentaBiotics met Cerebiome® blend: probiotica voor de darm-hersen-as. Magnesium voor normale psychologische functie. Direct van Amare — premium kwaliteit.",
   alternates: { canonical: "/mentabiotics" },
   openGraph: {
-    title: "MentaBiotics Kopen: Probiotica voor Mentaal | AmareNL",
+    title: `MentaBiotics Kopen: Probiotica voor Mentaal | ${SITE_NAME}`,
     description: "Amare MentaBiotics met Cerebiome® blend: probiotica voor de darm-hersen-as.",
     url: "/mentabiotics",
     type: "website",
-    siteName: "AmareNL",
+    siteName: `${SITE_NAME}`,
     locale: "nl_NL",
     images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "MentaBiotics Kopen: Probiotica voor Mentaal | AmareNL",
+    title: `MentaBiotics Kopen: Probiotica voor Mentaal | ${SITE_NAME}`,
     description: "Amare MentaBiotics met Cerebiome® blend: probiotica voor de darm-hersen-as.",
     images: ["/images/og-default.jpg"],
   },

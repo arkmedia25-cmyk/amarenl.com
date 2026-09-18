@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import { generateProductSchema, generateFAQSchema, generateBreadcrumbSchema, combineSchemas } from "@/lib/schema";
 import { ShoppingCart, CheckCircle2, Share2, Gift, Users } from "lucide-react";
+import { SITE_NAME } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Triangle Marketing Pack: 3x Triangle | AmareNL",
+  title: `Triangle Marketing Pack: 3x Triangle | ${SITE_NAME}`,
   description: "Start als Amare Brand Partner met 3 complete Triangle of Wellness Xtreme sets. Ervaar zelf, deel met klanten, verdien commissie. Eenmalig €511,21.",
   alternates: { canonical: "/triangle-marketing-pack" },
-  openGraph: { title: "Triangle Marketing Pack — 3x Set | AmareNL", description: "3x Triangle of Wellness Xtreme — jouw Brand Partner startkit. Ervaar, deel & verdien.", url: "/triangle-marketing-pack", siteName: "AmareNL", locale: "nl_NL" },
+  openGraph: { title: `Triangle Marketing Pack — 3x Set | ${SITE_NAME}`, description: "3x Triangle of Wellness Xtreme — jouw Brand Partner startkit. Ervaar, deel & verdien.", url: "/triangle-marketing-pack", siteName: `${SITE_NAME}`, locale: "nl_NL" },
 };
 
 const faqs = [

@@ -5,9 +5,10 @@ import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
 import { generateFAQSchema, generateBreadcrumbSchema, combineSchemas } from "@/lib/schema";
 import { Check } from "lucide-react";
+import { SITE_URL, SITE_NAME } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Vitamine D Supplement: Gids 2026 | AmareNL",
+  title: `Vitamine D Supplement: Gids 2026 | ${SITE_NAME}`,
   description: "Vitamine D supplement kopen? Ontdek het verschil tussen D2 en D3, waarom K2 onmisbaar is.",
   alternates: { canonical: "/vitamine-d-supplement" },
 };
@@ -20,8 +21,8 @@ const faqItems = [
 ];
 
 const breadcrumb = generateBreadcrumbSchema([
-  { name: "Home", url: "https://amarenl.com" },
-  { name: "Vitamine D Supplement Kopen", url: "https://amarenl.com/vitamine-d-supplement" },
+  { name: "Home", url: `${SITE_URL}` },
+  { name: "Vitamine D Supplement Kopen", url: `${SITE_URL}/vitamine-d-supplement` },
 ]);
 
 export default function Page() {

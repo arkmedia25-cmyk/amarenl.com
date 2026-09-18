@@ -5,9 +5,10 @@ import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
 import { generateFAQSchema, generateBreadcrumbSchema, combineSchemas } from "@/lib/schema";
 import { Check } from "lucide-react";
+import { SITE_URL, SITE_NAME } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Omega 3 Supplement: Gids 2026 | AmareNL",
+  title: `Omega 3 Supplement: Gids 2026 | ${SITE_NAME}`,
   description: "Omega 3 supplement kopen? Ontdek verschil visolie vs algenolie, EPA/DHA-verhouding en dosering.",
   alternates: { canonical: "/omega-3-supplement" },
 };
@@ -20,8 +21,8 @@ const faqItems = [
 ];
 
 const breadcrumb = generateBreadcrumbSchema([
-  { name: "Home", url: "https://amarenl.com" },
-  { name: "Omega 3 Supplement Kopen", url: "https://amarenl.com/omega-3-supplement" },
+  { name: "Home", url: `${SITE_URL}` },
+  { name: "Omega 3 Supplement Kopen", url: `${SITE_URL}/omega-3-supplement` },
 ]);
 
 export default function Page() {

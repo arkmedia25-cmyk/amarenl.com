@@ -5,13 +5,14 @@ import AffiliateCTA from "@/components/ui/AffiliateCTA";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import { getProduct } from "@/lib/products";
 import { generateProductSchema, generateFAQSchema, generateBreadcrumbSchema, combineSchemas } from "@/lib/schema";
+import { SITE_NAME } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "EDGE+™ Kopen: Cafeïnevrij Nootropicum | AmareNL",
+  title: `EDGE+™ Kopen: Cafeïnevrij Nootropicum | ${SITE_NAME}`,
   description: "EDGE+ is Amare's cafeïnevrije nootropicum met pantotheenzuur (Vit B5), goji, mango-extract en Boswellia. Natuurlijke focus zonder crash, zonder cafeïne. Direct van Amare.",
   alternates: { canonical: "/edge-plus" },
-  openGraph: { title: "Amare EDGE+™ Kopen — Cafeïnevrij Nootropicum | AmareNL", description: "Cafeïnevrij nootropicum met pantotheenzuur, goji en mango voor focus.", url: "/edge-plus", type: "website", siteName: "AmareNL", locale: "nl_NL", images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }] },
-  twitter: { card: "summary_large_image", title: "Amare EDGE+™ Kopen — Cafeïnevrij Nootropicum | AmareNL", description: "Cafeïnevrij nootropicum voor focus.", images: ["/images/og-default.jpg"] },
+  openGraph: { title: `Amare EDGE+™ Kopen — Cafeïnevrij Nootropicum | ${SITE_NAME}`, description: "Cafeïnevrij nootropicum met pantotheenzuur, goji en mango voor focus.", url: "/edge-plus", type: "website", siteName: `${SITE_NAME}`, locale: "nl_NL", images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }] },
+  twitter: { card: "summary_large_image", title: `Amare EDGE+™ Kopen — Cafeïnevrij Nootropicum | ${SITE_NAME}`, description: "Cafeïnevrij nootropicum voor focus.", images: ["/images/og-default.jpg"] },
 };
 
 const faqs = [

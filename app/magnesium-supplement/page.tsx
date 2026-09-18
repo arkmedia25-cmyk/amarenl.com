@@ -5,17 +5,18 @@ import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
 import { generateFAQSchema, generateBreadcrumbSchema, combineSchemas } from "@/lib/schema";
 import { Check, X, Star, Award, Shield, Zap } from "lucide-react";
+import { SITE_URL, SITE_NAME } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Magnesium Supplement: Gids 2026 | AmareNL",
+  title: `Magnesium Supplement: Gids 2026 | ${SITE_NAME}`,
   description: "Magnesium supplement kopen? Ontdek welke vorm (bisglycinaat, citraat, malaat) je nodig hebt voor slaap, stress of spieren. Beste magnesium supplementen vergeleken.",
   alternates: { canonical: "/magnesium-supplement" },
   openGraph: {
-    title: "Magnesium Supplement: Gids 2026 | AmareNL",
+    title: `Magnesium Supplement: Gids 2026 | ${SITE_NAME}`,
     description: "Ontdek welke magnesium vorm je nodig hebt. Vergelijk bisglycinaat, citraat en malaat. Beste prijs-kwaliteit.",
     url: "/magnesium-supplement",
     type: "website",
-    siteName: "AmareNL",
+    siteName: `${SITE_NAME}`,
     locale: "nl_NL",
   },
 };
@@ -29,8 +30,8 @@ const faqItems = [
 ];
 
 const breadcrumb = generateBreadcrumbSchema([
-  { name: "Home", url: "https://amarenl.com" },
-  { name: "Magnesium Supplement Kopen", url: "https://amarenl.com/magnesium-supplement" },
+  { name: "Home", url: `${SITE_URL}` },
+  { name: "Magnesium Supplement Kopen", url: `${SITE_URL}/magnesium-supplement` },
 ]);
 
 export default function MagnesiumLandingPage() {

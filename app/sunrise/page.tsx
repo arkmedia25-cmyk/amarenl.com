@@ -5,6 +5,7 @@ import AffiliateCTA from "@/components/ui/AffiliateCTA";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import ExpertVideoSection from "@/components/ui/ExpertVideoSection";
 import { getProduct } from "@/lib/products";
+import { SITE_NAME } from "@/lib/site-config";
 import {
   generateProductSchema,
   generateFAQSchema,
@@ -13,23 +14,23 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Sunrise 2-Pack: Ochtend Superfoods | AmareNL",
+  title: `Sunrise 2-Pack: Ochtend Superfoods | ${SITE_NAME}`,
   description:
     "Amare Sunrise: 22 superfoods, 9 essentiële vitaminen (C, B-complex, Biotine) in vloeibare ochtendformule. Voor energie, huid, haar en immuunsysteem. Direct van Amare — premium kwaliteit.",
   alternates: { canonical: "/sunrise" },
   openGraph: {
-    title: "Sunrise 2-Pack: Ochtend Superfoods | AmareNL",
+    title: `Sunrise 2-Pack: Ochtend Superfoods | ${SITE_NAME}`,
     description:
       "Amare Sunrise: 22 superfoods, 9 essentiële vitaminen in vloeibare ochtendformule. Direct van Amare — premium kwaliteit.",
     url: "/sunrise",
     type: "website",
-    siteName: "AmareNL",
+    siteName: `${SITE_NAME}`,
     locale: "nl_NL",
     images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sunrise 2-Pack: Ochtend Superfoods | AmareNL",
+    title: `Sunrise 2-Pack: Ochtend Superfoods | ${SITE_NAME}`,
     description:
       "Amare Sunrise: 22 superfoods, 9 essentiële vitaminen in vloeibare ochtendformule.",
     images: ["/images/og-default.jpg"],

@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { ArrowLeft, Home, Search } from "lucide-react";
+import { SITE_NAME } from "@/lib/site-config";
 
 export const metadata = {
-  title: "Pagina niet gevonden | AmareNL",
-  description: "De pagina die je zoekt bestaat niet. Ga terug naar de homepage of zoek verder op AmareNL.",
+  title: `Pagina niet gevonden | ${SITE_NAME}`,
+  description: `De pagina die je zoekt bestaat niet. Ga terug naar de homepage of zoek verder op ${SITE_NAME}.`,
 };
 
 export default function NotFoundPage() {

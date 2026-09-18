@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import AffiliateCTA from "@/components/ui/AffiliateCTA";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
+import { SITE_NAME } from "@/lib/site-config";
 import {
   generateProductSchema,
   generateBreadcrumbSchema,
@@ -8,23 +9,23 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Amare Wellness Essentials — Complete Gezondheid Collectie | AmareNL",
+  title: `Amare Wellness Essentials — Complete Gezondheid Collectie | ${SITE_NAME}`,
   description:
-    "Ontdek de Amare Wellness Essentials collectie. Een zorgvuldig samengestelde bundel voor complete gut-brain ondersteuning. Bestel met korting via AmareNL.",
+    `Ontdek de Amare Wellness Essentials collectie. Een zorgvuldig samengestelde bundel voor complete gut-brain ondersteuning. Bestel met korting via ${SITE_NAME}.`,
   alternates: { canonical: "/collections/amare-wellness-essentials-2" },
   openGraph: {
-    title: "Amare Wellness Essentials — Complete Gezondheid Collectie | AmareNL",
-    description: "Een zorgvuldig samengestelde bundel voor complete gut-brain ondersteuning. Bestel met korting via AmareNL.",
+    title: `Amare Wellness Essentials — Complete Gezondheid Collectie | ${SITE_NAME}`,
+    description: `Een zorgvuldig samengestelde bundel voor complete gut-brain ondersteuning. Bestel met korting via ${SITE_NAME}.`,
     url: "/collections/amare-wellness-essentials-2",
     type: "website",
-    siteName: "AmareNL",
+    siteName: `${SITE_NAME}`,
     locale: "nl_NL",
     images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Amare Wellness Essentials — Complete Gezondheid Collectie | AmareNL",
-    description: "Een zorgvuldig samengestelde bundel voor complete gut-brain ondersteuning. Bestel met korting via AmareNL.",
+    title: `Amare Wellness Essentials — Complete Gezondheid Collectie | ${SITE_NAME}`,
+    description: `Een zorgvuldig samengestelde bundel voor complete gut-brain ondersteuning. Bestel met korting via ${SITE_NAME}.`,
     images: ["/images/og-default.jpg"],
   },
 }

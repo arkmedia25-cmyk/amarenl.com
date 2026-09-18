@@ -19,6 +19,7 @@ import {
   combineSchemas,
 } from "@/lib/schema";
 import { GA_ID } from "@/lib/analytics";
+import { SITE_URL, SITE_NAME } from "@/lib/site-config";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -36,8 +37,8 @@ const nunito = Nunito_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://amarenl.com"),
-  title: "AmareNL — Ontdek Natuurlijke Wellness Supplementen",
+  metadataBase: new URL(SITE_URL),
+  title: `${SITE_NAME} — Ontdek Natuurlijke Wellness Supplementen`,
   description:
     "Ontdek de beste natuurlijke supplementen van Amare voor energie, focus, slaap en welzijn. Gratis advies + €8 korting op je eerste bestelling.",
   other: {
@@ -49,25 +50,25 @@ export const metadata: Metadata = {
     google: ["Ss_zLWuGuXmzgf5vuuOzoIE4PEAGskWPIlWwuYgloHE", "KceFctyCbz_FMfXcU3C1HDekkNHRVFokIYJ5-wMto1A"],
   },
   openGraph: {
-    siteName: "AmareNL",
+    siteName: SITE_NAME,
     locale: "nl_NL",
     type: "website",
-    title: "AmareNL — Ontdek Natuurlijke Wellness Supplementen",
+    title: `${SITE_NAME} — Ontdek Natuurlijke Wellness Supplementen`,
     description:
       "Ontdek de beste natuurlijke supplementen van Amare voor energie, focus, slaap en welzijn. Gratis advies + €8 korting op je eerste bestelling.",
-    url: "https://amarenl.com",
+    url: SITE_URL,
     images: [
       {
         url: "/images/og-default.jpg",
         width: 1200,
         height: 630,
-        alt: "AmareNL — Natuurlijke Wellness Supplementen",
+        alt: `${SITE_NAME} — Natuurlijke Wellness Supplementen`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AmareNL — Ontdek Natuurlijke Wellness Supplementen",
+    title: `${SITE_NAME} — Ontdek Natuurlijke Wellness Supplementen`,
     description:
       "Ontdek de beste natuurlijke supplementen van Amare voor energie, focus, slaap en welzijn.",
     images: ["/images/og-default.jpg"],

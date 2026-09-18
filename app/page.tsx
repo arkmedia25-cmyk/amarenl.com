@@ -13,6 +13,7 @@ import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import { generateBreadcrumbSchema } from "@/lib/schema";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   alternates: {
@@ -41,7 +42,7 @@ const popular = [
 export default function Home() {
   return (
     <>
-      <SchemaMarkup schema={generateBreadcrumbSchema([{ name: "Home", url: "https://amarenl.com" }])} id="home-breadcrumb" />
+      <SchemaMarkup schema={generateBreadcrumbSchema([{ name: "Home", url: `${SITE_URL}` }])} id="home-breadcrumb" />
       <HeroSection />
       <FeaturedProducts />
       <PromoCarousel />

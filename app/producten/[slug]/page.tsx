@@ -10,6 +10,7 @@ import Image from "next/image";
 import AffiliateCTA from "@/components/ui/AffiliateCTA";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import { getProduct, getAllProducts, buildProductMetaTitle, buildProductMetaDescription } from "@/lib/products";
+import { SITE_NAME } from "@/lib/site-config";
 import {
   generateProductSchema,
   generateFAQSchema,
@@ -31,23 +32,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { alternates: { canonical: CANONICAL_REDIRECTS[slug] } };
   }
   const p = getProduct(slug);
-  if (!p) return { title: "Product niet gevonden | AmareNL" };
+  if (!p) return { title: `Product niet gevonden | ${SITE_NAME}` };
   return {
     title: p.seo?.title || buildProductMetaTitle(p.shortNameNL, p.taglineNL),
     description: p.seo?.description || buildProductMetaDescription(p.shortNameNL, p.taglineNL),
     alternates: { canonical: `/producten/${slug}` },
     openGraph: {
-      title: `${p.nameNL} Kopen — Beste Prijs Nederland | AmareNL`,
+      title: `${p.nameNL} Kopen — Beste Prijs Nederland | ${SITE_NAME}`,
       description: `${p.taglineNL}. 30 dagen risicovrij proberen.`,
       url: `/producten/${slug}`,
       type: "website",
-      siteName: "AmareNL",
+      siteName: `${SITE_NAME}`,
       locale: "nl_NL",
       images: [{ url: p.image || "/images/og-default.jpg", width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${p.nameNL} Kopen | AmareNL`,
+      title: `${p.nameNL} Kopen | ${SITE_NAME}`,
       description: p.taglineNL,
       images: [p.image || "/images/og-default.jpg"],
     },

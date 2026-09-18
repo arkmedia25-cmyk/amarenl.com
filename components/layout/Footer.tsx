@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SITE_NAME } from "@/lib/site-config";
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="space-y-6">
             <Link href="/" className="text-2xl font-bold font-cormorant text-[var(--color-primary)]">
-              AmareNL
+              {SITE_NAME}
             </Link>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
               Jouw gids naar natuurlijke mentale wellness en darmgezondheid. Onafhankelijke partner van Amare Global in Nederland.
@@ -32,7 +33,7 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-[var(--color-text)] mb-6">Informatie</h4>
             <ul className="space-y-4 text-sm">
-              <li><Link href="/over-ons/" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">Over AmareNL</Link></li>
+              <li><Link href="/over-ons/" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">Over {SITE_NAME}</Link></li>
               <li><Link href="/gratis-gut-brain-gids" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">🎁 Gratis Gut-Brain Gids</Link></li>
               <li><Link href="/partner-worden" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">🤝 Partner Worden</Link></li>
               <li><Link href="/blogs/nieuws/supplementen-wijzer-gratis" className="text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">Gratis Wijzer</Link></li>
@@ -64,7 +65,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-[var(--color-border)] pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-medium text-[var(--color-text-muted)] uppercase tracking-widest">
-          <p>&copy; {new Date().getFullYear()} AmareNL — Onafhankelijke Affiliate Partner</p>
+          <p>&copy; {new Date().getFullYear()} {SITE_NAME} — Onafhankelijke Affiliate Partner</p>
         </div>
       </div>
     </footer>

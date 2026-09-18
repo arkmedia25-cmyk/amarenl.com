@@ -2,12 +2,13 @@ import CategoryLanding from "@/components/sections/CategoryLanding";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import { generateBreadcrumbSchema, generateFAQSchema, combineSchemas } from "@/lib/schema";
 import type { Metadata } from "next";
+import { SITE_NAME } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Mentale Wellness: Focus & Energie | AmareNL",
+  title: `Mentale Wellness: Focus & Energie | ${SITE_NAME}`,
   description: "Ontdek Amare's mentale wellness supplementen: Happy Juice Pack, MentaBiotics, EDGE+, Energy+ en meer. Voor focus, stemming en natuurlijke energie. Wetenschappelijk onderbouwd.",
   alternates: { canonical: "/supplementen" },
-  openGraph: { title: "Mentale Wellness Supplementen — Focus & Stemming | AmareNL", description: "Happy Juice Pack, MentaBiotics, EDGE+ voor focus, stemming en energie.", url: "/supplementen", type: "website", siteName: "AmareNL", locale: "nl_NL", images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }] },
+  openGraph: { title: `Mentale Wellness Supplementen — Focus & Stemming | ${SITE_NAME}`, description: "Happy Juice Pack, MentaBiotics, EDGE+ voor focus, stemming en energie.", url: "/supplementen", type: "website", siteName: `${SITE_NAME}`, locale: "nl_NL", images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }] },
 };
 
 const faqs = [

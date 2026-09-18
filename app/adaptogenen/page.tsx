@@ -1,5 +1,6 @@
 import AffiliateCTA from "@/components/ui/AffiliateCTA";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
+import { SITE_URL, SITE_NAME } from "@/lib/site-config";
 import {
   generateArticleSchema,
   generateFAQSchema,
@@ -8,7 +9,7 @@ import {
 } from "@/lib/schema";
 
 export const metadata = {
-  title: "Adaptogenen: Complete Gids (2026) | AmareNL",
+  title: `Adaptogenen: Complete Gids (2026) | ${SITE_NAME}`,
   description:
     "Alles over adaptogenen zoals Ashwagandha, Rhodiola en Heilige Basilicum. Complete gids: wat zijn adaptogenen, hoe werken ze, welke passen bij jou en het beste adaptogeen supplement kopen.",
 };
@@ -93,8 +94,8 @@ export default function AdaptogenenPage() {
   });
   const faqSchema = generateFAQSchema(faqs);
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home", url: "https://amarenl.com" },
-    { name: "Adaptogenen", url: "https://amarenl.com/adaptogenen" },
+    { name: "Home", url: `${SITE_URL}` },
+    { name: "Adaptogenen", url: `${SITE_URL}/adaptogenen` },
   ]);
   const combinedSchema = combineSchemas(articleSchema, faqSchema, breadcrumbSchema);
 

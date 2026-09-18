@@ -2,6 +2,7 @@ import Image from "next/image";
 import AffiliateCTA from "@/components/ui/AffiliateCTA";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import { getProduct } from "@/lib/products";
+import { SITE_NAME } from "@/lib/site-config";
 import {
   generateProductSchema,
   generateFAQSchema,
@@ -10,7 +11,7 @@ import {
 } from "@/lib/schema";
 
 export const metadata = {
-  title: "Sunset Kopen: Omega-3 Avondformule | AmareNL",
+  title: `Sunset Kopen: Omega-3 Avondformule | ${SITE_NAME}`,
   description:
     "Amare Sunset: EPA 520 mg, DHA 223 mg per dagdosering met vitamine D3 (6 µg), A, E en astaxanthine 2 mg. Melatoninevrije avondformule voor hart, hersenen en herstel. Direct van Amare.",
 };

@@ -4,13 +4,14 @@ import AffiliateCTA from "@/components/ui/AffiliateCTA";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import { getProduct } from "@/lib/products";
 import { generateProductSchema, generateFAQSchema, generateBreadcrumbSchema, combineSchemas } from "@/lib/schema";
+import { SITE_NAME } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Amare ON Kopen: Energie Shot | AmareNL",
+  title: `Amare ON Kopen: Energie Shot | ${SITE_NAME}`,
   description: "Amare ON: compacte energie shot met guarana-cafeïne en B-vitaminecomplex. Geen crash, geen nervositeit. Direct van Amare — beste prijs.",
   alternates: { canonical: "/on" },
-  openGraph: { title: "Amare ON Kopen — Natuurlijke Energie Shot | AmareNL", description: "Compacte energie shot met B-vitamines — geen crash.", url: "/on", type: "website", siteName: "AmareNL", locale: "nl_NL", images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }] },
-  twitter: { card: "summary_large_image", title: "Amare ON Kopen — Natuurlijke Energie Shot | AmareNL", description: "Compacte energie shot met B-vitamines — geen crash.", images: ["/images/og-default.jpg"] },
+  openGraph: { title: `Amare ON Kopen — Natuurlijke Energie Shot | ${SITE_NAME}`, description: "Compacte energie shot met B-vitamines — geen crash.", url: "/on", type: "website", siteName: `${SITE_NAME}`, locale: "nl_NL", images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }] },
+  twitter: { card: "summary_large_image", title: `Amare ON Kopen — Natuurlijke Energie Shot | ${SITE_NAME}`, description: "Compacte energie shot met B-vitamines — geen crash.", images: ["/images/og-default.jpg"] },
 };
 
 const faqs = [
