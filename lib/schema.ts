@@ -70,7 +70,7 @@ export function generateArticleSchema(input: ArticleInput) {
     },
     image: input.image
       ? `${SITE_URL}${input.image}`
-      : `${SITE_URL}/images/amarenl-og-default.jpg`,
+      : `${SITE_URL}/images/og-default.jpg`,
     url: `${SITE_URL}/blogs/nieuws/${input.slug}`,
     publisher: {
       "@type": "Organization",

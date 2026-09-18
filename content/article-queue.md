@@ -11,7 +11,7 @@
 > Deploy: Vercel production ✅
 > Metodoloji: NL search volume × commercial intent × product match × GEO query fan-out
 > Yayın takvimi: 2 günde bir (cron — article-scheduler skill)
-> Bron: amarenl-agent-keywords.md + keywords-onderzoek.md + GEO/AIO audit (juli 2026)
+> Bron: vitaalroute-agent-keywords.md + keywords-onderzoek.md + GEO/AIO audit (juli 2026)
 
 ---
 
@@ -545,7 +545,7 @@ Week 5: N13 (ma) → N14 (wo) → N15 (vr)
 
 ## 🗓 12 Artikelen — 2 Günde Bir Yayın Takvimi (19 Mayıs — 11 Haziran 2026)
 
-> Bron: amarenl-agent-keywords.md
+> Bron: vitaalroute-agent-keywords.md
 
 | Gün | # | Anahtar Kelime | Ürün CTA | Status |
 |-----|---|---------------|----------|--------|
