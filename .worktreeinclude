@@ -1,0 +1,6 @@
+# Bu dosya .gitignore sözdizimi kullanır.
+# Buraya yazılan gitignore'lu dosyalar her yeni worktree'ye kopyalanır.
+# Worktree taze bir checkout olduğu için .env dosyan orada olmaz — bu onu çözer.
+.env
+.env.local
+.env.development.local
