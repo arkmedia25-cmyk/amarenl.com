@@ -10,8 +10,8 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-2">
-              <Image src="/images/vitaalroute-icon.svg" alt="" width={28} height={21} />
-              <span className="text-2xl font-bold font-cormorant text-[var(--color-primary)]">{SITE_NAME}</span>
+              <Image src="/images/vitaalroute-icon.svg" alt="" width={40} height={30} />
+              <span className="text-3xl font-extrabold font-cormorant text-[var(--color-primary)]">{SITE_NAME}</span>
             </Link>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
               Jouw gids naar natuurlijke mentale wellness en darmgezondheid. Onafhankelijke partner van Amare Global in Nederland.

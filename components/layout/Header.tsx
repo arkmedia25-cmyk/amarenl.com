@@ -96,8 +96,8 @@ export default function Header() {
     <header className={`relative sticky top-0 z-[60] transition-all duration-300 ${isScrolled ? "bg-white/90 backdrop-blur-lg shadow-md py-2" : "bg-white py-5"}`}>
       <div className="container-page flex items-center justify-between gap-6">
         <Link href="/" className="flex items-center gap-2 shrink-0">
-          <Image src="/images/vitaalroute-icon.svg" alt="" width={28} height={21} />
-          <span className="text-2xl font-bold font-cormorant text-[var(--color-primary)]">{SITE_NAME}</span>
+          <Image src="/images/vitaalroute-icon.svg" alt="" width={40} height={30} />
+          <span className="text-3xl font-extrabold font-cormorant text-[var(--color-primary)]">{SITE_NAME}</span>
         </Link>
 
         {/* Desktop Nav */}
