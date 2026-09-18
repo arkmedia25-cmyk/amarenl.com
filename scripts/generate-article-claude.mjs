@@ -235,7 +235,7 @@ function buildYoutubeContext() {
 
 function buildSystemPrompt(articleQualitySkill, claudeMdExcerpt) {
   return [
-    "Jij bent een ervaren Nederlandse gezondheidsjournalist die blogartikelen schrijft voor amarenl.com.",
+    "Jij bent een ervaren Nederlandse gezondheidsjournalist die blogartikelen schrijft voor vitaalroute.nl.",
     "Je output is ALTIJD strict JSON — geen markdown codeblokken, geen uitleg erbuiten, alleen het JSON object.",
     "",
     "=== ARTIKEL KWALITEITSREGELS (sectie 0 is hard, niet onderhandelbaar) ===",
@@ -265,7 +265,7 @@ function buildTopicPrompt({ queueDoc, existingArticles, rejectedTopics, openPend
       ].join("\n")
     : "";
   return [
-    "Hieronder staat de volledige content/article-queue.md van amarenl.com — een redactieplan met",
+    "Hieronder staat de volledige content/article-queue.md van vitaalroute.nl — een redactieplan met",
     "meerdere tabellen (30-dagen planning, keyword-clusters, TIER-lijsten). Sommige onderwerpen zijn",
     "al gemarkeerd als voltooid (✅ / doorgestreept / 'live'), andere staan nog open (⏳).",
     "",
@@ -325,7 +325,7 @@ function buildUserPrompt({ queueDoc, productSummary, existingArticles, previousE
   const parts = topic
     ? [`Het onderwerp is al gekozen: "${topic}". Schrijf hier een compleet artikel over volgens de kwaliteitsregels.`]
     : [
-        "Hieronder staat de volledige content/article-queue.md van amarenl.com — een redactieplan met",
+        "Hieronder staat de volledige content/article-queue.md van vitaalroute.nl — een redactieplan met",
         "meerdere tabellen (30-dagen planning, keyword-clusters, TIER-lijsten). Sommige onderwerpen zijn",
         "al gemarkeerd als voltooid (✅ / doorgestreept / 'live'), andere staan nog open (⏳).",
         "",

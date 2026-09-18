@@ -79,7 +79,7 @@ function collectExistingArticles() {
 
 function buildSystemPrompt(articleQualitySkill, claudeMdExcerpt) {
   return [
-    "Jij bent een ervaren Nederlandse gezondheidsjournalist die blogartikelen schrijft voor amarenl.com.",
+    "Jij bent een ervaren Nederlandse gezondheidsjournalist die blogartikelen schrijft voor vitaalroute.nl.",
     "Je output is ALTIJD strict JSON — geen markdown codeblokken, geen uitleg erbuiten, alleen het JSON object.",
     "",
     "=== ARTIKEL KWALITEITSREGELS ===",
@@ -98,7 +98,7 @@ function buildUserPrompt({ topic, existingArticles, previousErrors }) {
   const existingSlugSet = [...existingArticles.keys()].join(", ");
 
   const parts = [
-    `Schrijf 1 blog artikel voor amarenl.com over het onderwerp: "${topic}".`,
+    `Schrijf 1 blog artikel voor vitaalroute.nl over het onderwerp: "${topic}".`,
     "",
     "BESTAANDE ARTIKELEN (gebruik minimaal 2 hiervan als interne link — kopieer de slug EXACT, verzin nooit een slug):",
     linkCandidates,
@@ -246,7 +246,7 @@ async function main() {
     apiKey: OPENROUTER_API_KEY,
     baseURL: BASE_URL,
     defaultHeaders: {
-      "HTTP-Referer": "https://amarenl.com",
+      "HTTP-Referer": "https://vitaalroute.nl",
       "X-Title": "AmareNL Article Generator",
     },
   });
