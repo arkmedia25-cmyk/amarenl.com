@@ -31,7 +31,7 @@ async function telegramApi(method, body) {
 async function main() {
   const queue = JSON.parse(readFileSync(QUEUE_PATH, "utf-8"));
   const id = `${TOPIC}-${Date.now()}`;
-  const link = LINK || "https://amarenl.com/gratis-gut-brain-gids";
+  const link = LINK || "https://vitaalroute.nl/gratis-gut-brain-gids";
 
   await telegramApi("sendVideo", {
     chat_id: TELEGRAM_CHAT_ID,

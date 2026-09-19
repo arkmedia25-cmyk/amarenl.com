@@ -6,8 +6,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const SITE_URL = 'https://amarenl.com';
-const SITE_NAME = 'AmareNL';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://vitaalroute.nl';
+const SITE_NAME = 'VitaalRoute';
 const OUTPUT = path.join(__dirname, '..', 'public', 'llms-full.txt');
 
 function main() {

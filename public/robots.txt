@@ -1,4 +1,4 @@
-# AmareNL — Robots.txt
+# VitaalRoute — Robots.txt
 # Laatste update: 2026-08-17
 
 # Alle crawlers: volledige toegang
@@ -47,7 +47,7 @@ Allow: /
 Crawl-delay: 1
 
 # Host
-Host: https://amarenl.com
+Host: https://vitaalroute.nl
 
 # Sitemaps
-Sitemap: https://amarenl.com/sitemap.xml
+Sitemap: https://vitaalroute.nl/sitemap.xml

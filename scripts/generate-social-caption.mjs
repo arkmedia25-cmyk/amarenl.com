@@ -35,7 +35,7 @@ const QUEUE_PATH = new URL("../content/social-queue.json", import.meta.url);
 const MODEL = process.env.ANTHROPIC_MODEL || "claude-sonnet-5";
 const MAX_ATTEMPTS = 3;
 const FORBIDDEN_CLAIMS = ["geneest", "behandelt", "klinisch bewezen", "voorkomt", "garantie op", "wondermiddel"];
-const LEAD_MAGNET_URL = "https://amarenl.com/gratis-gut-brain-gids";
+const LEAD_MAGNET_URL = "https://vitaalroute.nl/gratis-gut-brain-gids";
 
 // Sadece GERÇEKTEN VAR OLAN, marka-nötr görsellerle eşleşen konular.
 // Her biri, o günkü Meta Ads video script'inin (bkz.

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const matter = require('gray-matter');
 
-const SITE = 'https://amarenl.com';
+const SITE = process.env.NEXT_PUBLIC_SITE_URL || 'https://vitaalroute.nl';
 
 // Blog posts
 const blogFiles = fs.readdirSync('content/blog').filter(f => f.endsWith('.mdx'));
@@ -29,12 +29,12 @@ const routes = appDirs
   .map(d => d.name)
   .filter(r => !r.startsWith('[') && !r.startsWith('_') && r !== 'api' && r !== 'blogs' && r !== 'go' && r !== 'producten' && r !== 'collections' && r !== 'on');
 
-let html = '<!DOCTYPE html>\n<html lang="nl">\n<head>\n<meta charset="UTF-8">\n<title>Sitemap | AmareNL</title>\n';
+let html = '<!DOCTYPE html>\n<html lang="nl">\n<head>\n<meta charset="UTF-8">\n<title>Sitemap | VitaalRoute</title>\n';
 html += '<meta name="robots" content="noindex">\n';
 html += '<style>body{font-family:system-ui;max-width:800px;margin:2rem auto;padding:1rem;line-height:1.8;color:#2C2C2C}h1{color:#6B4C8C}h2{color:#6B4C8C;margin-top:2rem}a{color:#6B4C8C;text-decoration:none}a:hover{text-decoration:underline}</style>\n';
 html += '</head>\n<body>\n';
-html += '<h1>AmareNL Sitemap</h1>\n';
-html += '<p>Alle paginas op amarenl.com — handig voor Google en bezoekers.</p>\n';
+html += '<h1>VitaalRoute Sitemap</h1>\n';
+html += `<p>Alle paginas op ${SITE.replace(/^https?:\/\//, '')} — handig voor Google en bezoekers.</p>\n`;
 
 // Pages
 html += '<h2>Paginas</h2>\n<ul>\n';

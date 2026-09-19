@@ -67,7 +67,7 @@ export default function BlogListingPage() {
       <section className="bg-[var(--color-bg-soft)] py-16 md:py-20 border-b border-[var(--color-border)]">
         <div className="container-page text-center max-w-3xl">
           <h1 className="text-3xl md:text-5xl font-cormorant font-bold text-[var(--color-text)] mb-4">
-            AmareNL <span className="text-[var(--color-primary)]">Kennisbank</span>
+            {SITE_NAME} <span className="text-[var(--color-primary)]">Kennisbank</span>
           </h1>
           <p className="text-sm md:text-base text-[var(--color-text-muted)] leading-relaxed">
             Alles over darmgezondheid, mentale wellness, collageen, supplementen en natuurlijke leefstijl — helder uitgelegd, wetenschappelijk onderbouwd.

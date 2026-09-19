@@ -44,7 +44,7 @@ export default function PrivacyBeleid() {
 
           <h2>1. Inleiding</h2>
           <p>
-            AmareNL respecteert jouw privacy en verwerkt persoonsgegevens in overeenstemming met de Algemene Verordening Gegevensbescherming (AVG/GDPR). In dit privacybeleid leggen wij uit welke gegevens wij verzamelen, waarom wij dit doen en wat jouw rechten zijn.
+            {SITE_NAME} respecteert jouw privacy en verwerkt persoonsgegevens in overeenstemming met de Algemene Verordening Gegevensbescherming (AVG/GDPR). In dit privacybeleid leggen wij uit welke gegevens wij verzamelen, waarom wij dit doen en wat jouw rechten zijn.
           </p>
 
           <h2>2. Wie zijn wij</h2>
@@ -100,7 +100,7 @@ export default function PrivacyBeleid() {
 
           <h2>10. Affiliate Disclosure</h2>
           <p>
-            AmareNL ontvangt een commissie bij aankopen via onze affiliate links naar Amare.com. Dit heeft geen invloed op de prijs die jij betaalt. Wij zijn een onafhankelijke partner en onze content, reviews en aanbevelingen zijn gebaseerd op eigen onderzoek en ervaring.
+            {SITE_NAME} ontvangt een commissie bij aankopen via onze affiliate links naar Amare.com. Dit heeft geen invloed op de prijs die jij betaalt. Wij zijn een onafhankelijke partner en onze content, reviews en aanbevelingen zijn gebaseerd op eigen onderzoek en ervaring.
           </p>
 
           <h2>11. Contact</h2>

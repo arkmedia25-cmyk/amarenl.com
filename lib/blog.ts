@@ -11,7 +11,7 @@ export interface BlogPost {
   category: string;
   content: string;
   image?: string;
-  /** Echte auteur/editor van dit artikel (E-E-A-T signaal). Valt terug op "AmareNL Redactie" indien leeg. */
+  /** Echte auteur/editor van dit artikel (E-E-A-T signaal). Valt terug op "VitaalRoute Redactie" indien leeg. */
   author?: string;
   /** Externe, geverifieerde bronnen (RIVM, PubMed, klinische studies) die dit artikel onderbouwen */
   citations?: { author: string; name: string; url: string }[];
