@@ -332,7 +332,7 @@ Gebruiker deelde het rapport "AmareNL — SEO Fırsat Araştırması" (19-08-202
 Google Ads Keyword Planner + live SERP-check, 634 kandidaat-zoekwoorden gescand, 592 als
 realistisch gemarkeerd) en vroeg om hier een schrijfplan van te maken voor de bestaande
 ma/wo/vr content-motor (`scripts/generate-article-claude.mjs`, cron in
-`.github/workflows/amarenl-article-claude.yml`).
+`.github/workflows/vitaalroute-article-claude.yml`).
 
 **Belangrijke correctie tijdens dit werk:** de "Rekabet" (concurrentie) kolom in Google Ads
 Keyword Planner meet **advertentie-concurrentie** (hoeveel adverteerders op dat woord bieden),

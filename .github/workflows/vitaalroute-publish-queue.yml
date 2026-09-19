@@ -6,10 +6,10 @@ name: AmareNL — Yayın Kuyruğu (staggered, 2 günde bir)
 # sonraki çalışmaya bırakır.
 #
 # 17-08-2026: schedule kapatıldı — kuyruk tamamen eridi (18/18 işlendi, 0
-# pending). Yeni makaleler artık amarenl-promote-draft.yml üzerinden tek tek
+# pending). Yeni makaleler artık vitaalroute-promote-draft.yml üzerinden tek tek
 # (Telegram onayı → anında merge+deploy) yayınlanıyor, bu ayrı staggered
 # kuyruğa gerek kalmadı. workflow_dispatch açık bırakıldı — ileride yine
-# büyük bir backlog birikirse (`gh workflow run amarenl-publish-queue.yml`)
+# büyük bir backlog birikirse (`gh workflow run vitaalroute-publish-queue.yml`)
 # manuel tetiklenebilir, mantık/script'ler dokunulmadan duruyor.
 on:
   # schedule:

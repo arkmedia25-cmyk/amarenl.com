@@ -88,9 +88,9 @@ jobs:
               --jq 'if length == 0 then "henüz hiç çalışmadı" else .[0] | (if .status != "completed" then "çalışıyor" elif .conclusion == "success" then "✅ başarılı (\(.createdAt))" else "❌ BAŞARISIZ (\(.createdAt))" end) end'
           }
 
-          ARTICLE_STATUS=$(runstatus "amarenl-article-claude.yml")
-          PINTEREST_STATUS=$(runstatus "amarenl-pinterest-queue.yml")
-          DEPLOY_STATUS=$(runstatus "amarenl-promote-draft.yml")
+          ARTICLE_STATUS=$(runstatus "vitaalroute-article-claude.yml")
+          PINTEREST_STATUS=$(runstatus "vitaalroute-pinterest-queue.yml")
+          DEPLOY_STATUS=$(runstatus "vitaalroute-promote-draft.yml")
 
           OPEN_PRS=$(gh pr list --state open --json number --jq 'length')
 

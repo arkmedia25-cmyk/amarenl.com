@@ -1,8 +1,8 @@
-name: AmareNL — Product SEO Makale (manuel/yedek)
+name: AmareNL — Genel Makale (manuel/yedek)
 
 # Otomatik cron devre dışı (Faz 2) — içerik üretimi artık zamanlanmış
 # Claude ajanı üzerinden yürüyor (bkz. /Users/ark/.claude/plans/smooth-churning-cat.md).
-# Bu workflow manuel yedek olarak kalıyor: gh workflow run amarenl-article-product.yml
+# Bu workflow manuel yedek olarak kalıyor: gh workflow run vitaalroute-article-general.yml
 on:
   workflow_dispatch: {}
 
@@ -36,7 +36,7 @@ jobs:
         id: generate
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        run: node scripts/generate-article.mjs product
+        run: node scripts/generate-article.mjs general
 
       - name: Type-check
         run: npx tsc --noEmit -p tsconfig.json
@@ -54,7 +54,7 @@ jobs:
           git config user.email "actions@github.com"
           git checkout -b "$BRANCH"
           git add data/extra-articles.json public/sitemap.xml
-          git commit -m "publish: ${SLUG} (auto — product SEO, pending approval)"
+          git commit -m "publish: ${SLUG} (auto — general, pending approval)"
           git push origin "$BRANCH"
           echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
 
@@ -67,9 +67,9 @@ jobs:
           SLUG: ${{ steps.generate.outputs.slug }}
           EXCERPT: ${{ steps.generate.outputs.excerpt }}
         run: |
-          BODY=$(printf 'Otomatik üretilen product SEO makalesi — onay bekliyor.\n\n**Slug:** `%s`\n**Özet:** %s\n\nBu PR, Telegram'"'"'dan ✅ onaylanınca otomatik merge + deploy edilecek. ❌ Reddedilirse kapatılır ve main hiç değişmez.' \
+          BODY=$(printf 'Otomatik üretilen genel makale — onay bekliyor.\n\n**Slug:** `%s`\n**Özet:** %s\n\nBu PR, Telegram'"'"'dan ✅ onaylanınca otomatik merge + deploy edilecek. ❌ Reddedilirse kapatılır ve main hiç değişmez.' \
             "$SLUG" "$EXCERPT")
-          URL=$(gh pr create --title "🛒 ${TITLE}" --body "$BODY" --base main --head "$BRANCH")
+          URL=$(gh pr create --title "📝 ${TITLE}" --body "$BODY" --base main --head "$BRANCH")
           NUMBER=$(gh pr view "$URL" --json number -q .number)
           echo "url=$URL" >> "$GITHUB_OUTPUT"
           echo "number=$NUMBER" >> "$GITHUB_OUTPUT"
@@ -84,7 +84,7 @@ jobs:
           PR_URL: ${{ steps.pr.outputs.url }}
           PR_NUMBER: ${{ steps.pr.outputs.number }}
         run: |
-          TEXT=$(printf '🛒 Yeni ürün SEO makale taslağı\n\n%s\n\n%s\n\nPR: %s' \
+          TEXT=$(printf '📝 Yeni genel makale taslağı\n\n%s\n\n%s\n\nPR: %s' \
             "$TITLE" "$EXCERPT" "$PR_URL")
 
           PAYLOAD=$(jq -n \

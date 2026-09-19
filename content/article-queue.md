@@ -290,7 +290,7 @@ Emin değilsen, o satırı atla ve bu yeni bölümdeki maddeleri tercih et.
 > tutuluyor, bkz. `soro-vs-amarenl-analiz.md`). Cron her gün çalışır, önce kota/kalite
 > şartlarını kontrol eder, uygunsa kuyruktan TEK bir görev seçer (yeni yazı / mevcut sayfa
 > güçlendirme / küme birleştirme) — uygun değilse o gün hiçbir şey yapmadan çıkar. Detaylar
-> için `.github/workflows/amarenl-article-claude.yml` ve bu görevin Claude Code prompt'una bak.
+> için `.github/workflows/vitaalroute-article-claude.yml` ve bu görevin Claude Code prompt'una bak.
 
 > **02-09-2026 SONUÇ:** Q1-Q9'un tamamı tek tek doğrulandı. Sonuç: **hiçbiri sıfırdan yeni makale
 > gerektirmiyor** — Q1, Q2, Q3, Q5, Q6, Q7, Q9 zaten tam kapsanıyor; Q4 ve Q8 sadece mevcut

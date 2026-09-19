@@ -849,13 +849,19 @@ herbruikbare interne-linking-methode voor toekomstige clusters*
 niet het actieve systeem. De echte automatisering draait via GitHub Actions (zie hieronder). Een aparte
 Hermes-gateway LaunchAgent bestond ook nog kort, gestopt 28-07-2026.
 
+> **Naamswijziging 2026-09-19:** alle workflow-bestanden zijn hernoemd van `amarenl-*.yml` naar
+> `vitaalroute-*.yml` (zelfde inhoud; alleen de kruisverwijzingen in `vitaalroute-weekly-report.yml` zijn
+> aangepast). Oudere incidentlogs verderop (o.a. sectie 26, "2026-09-15") noemen bewust nog de oude namen — zo heetten
+> de bestanden toen. De `name:`-velden in de workflows ("AmareNL — …") en de `concurrency`-groepen zijn niet
+> gewijzigd; `~/.hermes/scripts/portfolio_brief.sh` zoekt op die workflow-`name:`, dus pas ze samen aan.
+
 **Huidige actieve pijplijn (Faz 1+2, GitHub Actions):**
 - **Faz 1 — Telegram-onaygate:** artikel-workflows committen niet direct naar `main`. Ze openen een
   `draft/<slug>` PR, sturen een Telegram-bericht met ✅/❌ knoppen
   (`app/api/telegram/webhook/route.ts`), pas na goedkeuring merget/deployt
-  `.github/workflows/amarenl-promote-draft.yml` automatisch.
+  `.github/workflows/vitaalroute-promote-draft.yml` automatisch.
 - **Faz 2 — Claude API content-motor:** `scripts/generate-article-claude.mjs`, cron ma/wo/vr
-  (`amarenl-article-claude.yml`). Kiest onderwerp uit `content/article-queue.md`, haalt PubMed-abstracts
+  (`vitaalroute-article-claude.yml`). Kiest onderwerp uit `content/article-queue.md`, haalt PubMed-abstracts
   op als primaire bron voor claims, plus optionele context uit `tools/competitor-scraper/` (wekelijkse
   cron, vitaminstore.nl) en `tools/youtube-research/` (wekelijkse cron, YouTube Data API v3) — beide
   puur thema-inspiratie, nooit letterlijk overgenomen.
@@ -896,7 +902,7 @@ Hermes-gateway LaunchAgent bestond ook nog kort, gestopt 28-07-2026.
   (ingelogde browser-sessie, `/me/settings`) — cyclus is op 04-09 zoals verwacht ververst, **200/200
   credits beschikbaar**, usage history sinds de refresh leeg (nog niets verbruikt). Gekozen flow:
   ugc-product-flow (product-only, voiceover, geen nep-testimonial — bewuste ACM/NVWA-keuze).
-  **Bewuste keuze (Musa, 07-09):** de geautomatiseerde Faz 6-pijplijn (`amarenl-social-daily.yml` →
+  **Bewuste keuze (Musa, 07-09):** de geautomatiseerde Faz 6-pijplijn (`vitaalroute-social-daily.yml` →
   `scripts/generate-social-caption.mjs`) blijft ONGEWIJZIGD op zijn huidige statische-afbeelding-
   fallback staan (zie de `NEDEN Higgsfield DEĞİL`-comment bovenin dat bestand, geschreven toen de
   gedeelde creditpool leeg was op 10-08) — dit NIET automatiseren was een expliciete keuze, geen
@@ -912,7 +918,7 @@ Hermes-gateway LaunchAgent bestond ook nog kort, gestopt 28-07-2026.
   2. OAuth-flow met scope `pins:read,pins:write,boards:read`.
   3. Zet `PINTEREST_ACCESS_TOKEN`/`PINTEREST_REFRESH_TOKEN` als Vercel production env var.
   4. Maak de 5 boards aan (namen in `content/PINTEREST_PLAN.md`).
-  5. Trigger `amarenl-pinterest-queue.yml` handmatig of wacht op de cron (ma/wo/vr/za 09:00).
+  5. Trigger `vitaalroute-pinterest-queue.yml` handmatig of wacht op de cron (ma/wo/vr/za 09:00).
 - **Faz 5 (Meta Ads):** plan vastgelegd, **nog niet gestart**. Budget €10-15/dag, Leads-objective op
   `/gratis-gut-brain-gids`, bestaande Pixel/CAPI-tracking geverifieerd werkend (test-POST naar
   `/api/capi-event` gaf `{"ok":true}`). 2 creatives gekozen: **A** (symptoom+mechanisme,
