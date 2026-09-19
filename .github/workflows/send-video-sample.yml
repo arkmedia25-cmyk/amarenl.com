@@ -1,4 +1,4 @@
-name: AmareNL — Video Örneği Telegram'a Gönder (manuel)
+name: VitaalRoute — Video Örneği Telegram'a Gönder (manuel)
 
 on:
   workflow_dispatch:

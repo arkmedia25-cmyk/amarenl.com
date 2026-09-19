@@ -1,4 +1,4 @@
-name: AmareNL — Onaylanan Taslağı Yayınla
+name: VitaalRoute — Onaylanan Taslağı Yayınla
 
 on:
   repository_dispatch:

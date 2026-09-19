@@ -1,4 +1,4 @@
-name: AmareNL — Yayın Kuyruğu (staggered, 2 günde bir)
+name: VitaalRoute — Yayın Kuyruğu (staggered, 2 günde bir)
 
 # Onaylanmış 15 PR'ı tek seferde değil, kuyruktan sırayla — her seferinde bir
 # tanesini — merge+build+deploy eder. content/publish-queue.json içindeki ilk
