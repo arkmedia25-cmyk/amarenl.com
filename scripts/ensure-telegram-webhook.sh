@@ -12,7 +12,12 @@
 
 set -euo pipefail
 
-EXPECTED_URL="https://amarenl.com/api/telegram/webhook"
+# 2026-09-23: stond op https://amarenl.com/... — dat domein 308-redirect naar
+# vitaalroute.nl, en Telegram weigert een webhook die een redirect teruggeeft
+# ("Wrong response from the webhook: 308 Permanent Redirect"). Gevolg: elke
+# ✅/❌-tik werd stil in Telegram's wachtrij gezet en NOOIT verwerkt.
+# Registreer daarom direct op het eindpunt zonder redirect.
+EXPECTED_URL="https://vitaalroute.nl/api/telegram/webhook"
 CURRENT_URL=$(curl -sS "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/getWebhookInfo" | jq -r '.result.url // ""')
 
 if [ "$CURRENT_URL" != "$EXPECTED_URL" ]; then
