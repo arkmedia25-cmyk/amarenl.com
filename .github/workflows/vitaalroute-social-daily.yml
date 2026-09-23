@@ -44,10 +44,11 @@ jobs:
 
       - name: Generate today's social caption
         env:
-          # Anthropic kredisi bitti — script artık Gemini shim (scripts/anthropic-compat-gemini.mjs)
-          # üzerinden çalışır. ANTHROPIC_API_KEY sadece geriye dönük uyumluluk için duruyor.
+          # Anthropic kredisi bitti; Gemini projesi 23-09-2026 de maandelijkse spend-cap raakte
+          # (429 RESOURCE_EXHAUSTED) — dit script draait nu op de DeepSeek shim
+          # (scripts/anthropic-compat-deepseek.mjs), net als de artikel-generator (Faz 2).
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: node scripts/generate-social-caption.mjs
 
       - name: Commit updated queue

@@ -24,9 +24,13 @@ const BASE_URL = (
 ).replace(/\/$/, "");
 const DEFAULT_MODEL = process.env.DEEPSEEK_MODEL || "deepseek-flash";
 
-// DeepSeek's max output is 384K tokens; this clamp only exists to mirror the
-// Claude-side max_tokens callers pass (16000/32000) — never actually limiting.
-const MAX_OUTPUT_TOKENS = 32768;
+// DeepSeek V4.1 Flash allows ~384K output tokens; the clamp only guards against a runaway
+// caller value. 2026-09-23: stond op 32768, maar de artikel-calls vroegen 16000 — en omdat
+// reasoning-tokens hetzelfde budget delen, liep een lange prompt tegen de cap aan:
+// finish_reason=length met lege content, waarna de oude fallback de afgekapte
+// reasoning-tekst ("Let me ana…") als content teruggaf en de generator 3x op een
+// JSON-parsefout stukliep. Vandaar: ruimere clamp + hard falen i.p.v. prose teruggeven.
+const MAX_OUTPUT_TOKENS = 131072;
 
 function blocksToText(content) {
   if (typeof content === "string") return content;
@@ -123,16 +127,28 @@ export default class Anthropic {
     }
 
     const choice = json?.choices?.[0] || {};
-    // Reasoning models can return an empty content string with the text in
-    // reasoning_content; fall back so callers never see a silent blank.
-    const text = choice.message?.content || choice.message?.reasoning_content || "";
+    const content = choice.message?.content || "";
+    const reasoning = choice.message?.reasoning_content || "";
+
+    // Reasoning-modellen kunnen het hele output-budget aan redeneren besteden
+    // (finish_reason=length) en dan een LEEG content-veld terugsturen. De vorige versie
+    // viel dan terug op reasoning_content — dat is geen antwoord maar afgekapte
+    // denktekst, en leverde 3x een onverklaarbare JSON-parsefout op. Beter hard falen:
+    // de aanroeper heeft retry-logica en kan met meer tokens opnieuw proberen.
+    if (!content.trim()) {
+      throw new Error(
+        `DeepSeek gaf geen content terug (finish_reason=${choice.finish_reason || "?"}, ` +
+          `reasoning=${reasoning.length} tekens) — output-budget volledig aan redeneren besteed. ` +
+          `Verhoog max_tokens of verklein de prompt.`
+      );
+    }
 
     return {
       id: json?.id,
       model: json?.model || body.model,
       type: "message",
       role: "assistant",
-      content: [{ type: "text", text }],
+      content: [{ type: "text", text: content }],
       stop_reason: choice.finish_reason || "stop",
       usage: {
         input_tokens: json?.usage?.prompt_tokens,

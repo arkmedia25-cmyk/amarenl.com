@@ -27,9 +27,10 @@
  */
 
 import { readFileSync, writeFileSync } from "node:fs";
-// Anthropic kredisi bitti (400 "credit balance is too low") — shim Gemini'ye yönlendirir.
+// Anthropic kredisi bitti (400 "credit balance is too low"), Gemini projesi 2026-09-23 de
+// maandelijkse spend-cap raakte (429) — shim DeepSeek'e yönlendirir.
 // Geri Anthropic'e dönmek için bu satırı "@anthropic-ai/sdk" yap ve bakiyeyi yükle.
-import Anthropic from "./anthropic-compat-gemini.mjs";
+import Anthropic from "./anthropic-compat-deepseek.mjs";
 
 const QUEUE_PATH = new URL("../content/social-queue.json", import.meta.url);
 const MODEL = process.env.ANTHROPIC_MODEL || "claude-sonnet-5";

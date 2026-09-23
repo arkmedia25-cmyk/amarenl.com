@@ -248,6 +248,22 @@ function buildSystemPrompt(articleQualitySkill, claudeMdExcerpt) {
 
 function buildTopicPrompt({ queueDoc, existingArticles, rejectedTopics, openPendingTopics, excludedKeywords }) {
   const existingTitles = [...existingArticles.values()].join("\n- ");
+  const saturatedBlock = (() => {
+    const saturated = computeSaturatedClusters(existingArticles);
+    if (!saturated.length) return "";
+    const list = saturated.map(([kw, count]) => `${kw} (${count}x)`).join(", ");
+    return [
+      "",
+      "=== VERZADIGDE CLUSTERS (programmatisch berekend — kies hier GEEN onderwerp uit) ===",
+      `Deze kernwoorden komen al in ${TOPIC_CLUSTER_LIMIT} of meer bestaande titels voor: ${list}.`,
+      "Een onderwerp waarvan de titel zo'n kernwoord bevat wordt NA jouw keuze automatisch afgewezen,",
+      "ongeacht de invalshoek (\"X in voeding\" vs \"X tekort\" telt als hetzelfde cluster). Kies dus een",
+      "onderwerp uit een thema dat hier NIET in staat, maar wel binnen de site-niche past",
+      "(natuurlijke supplementen, voeding, energie, darmen, huid, haar, stress, weerstand, sport).",
+      "Bestaat er werkelijk niets meer buiten deze clusters, kies dan niets — een leeg antwoord is",
+      "beter dan cluster-lid nummer 4.",
+    ].join("\n");
+  })();
   const rejectedList = rejectedTopics?.length
     ? rejectedTopics.map((t) => `- ${t}`).join("\n")
     : "(geen)";
@@ -291,7 +307,7 @@ function buildTopicPrompt({ queueDoc, existingArticles, rejectedTopics, openPend
     "door de menselijke reviewer als hetzelfde onderwerp gezien en afgewezen). Beoordeel op ONDERWERP,",
     "niet op exacte woordovereenkomst.",
     excludedBlock,
-    "",
+    saturatedBlock,
     "=== BESTAANDE ARTIKEL-TITELS (al gepubliceerd — kies geen overlappend onderwerp) ===",
     `- ${existingTitles}`,
     "",
@@ -493,6 +509,26 @@ function ensureCrossLinks(article, { productTargets, categoryTargets }) {
   return { productLinks, categoryLinks, appended: true };
 }
 
+/** Sommige modellen zetten nog een inleidende zin of markdown-fence vóór de JSON, of
+ *  eindigen met een ``` erachter. Pak dan het eerste '{' t/m het laatste '}' en parse dat
+ *  — anders sneuvelt een volledige generatie op een cosmetisch voorzinnetje.
+ *  (2026-09-23: DeepSeek gaf "Let me ana…" + JSON terug waar Claude puur JSON gaf.) */
+function parseJsonLoose(text) {
+  const cleaned = (text || "")
+    .trim()
+    .replace(/^```json\s*/i, "")
+    .replace(/^```\s*/i, "")
+    .replace(/```\s*$/, "");
+  try {
+    return JSON.parse(cleaned);
+  } catch (err) {
+    const start = cleaned.indexOf("{");
+    const end = cleaned.lastIndexOf("}");
+    if (start === -1 || end <= start) throw err;
+    return JSON.parse(cleaned.slice(start, end + 1));
+  }
+}
+
 function validate(article, existingArticles) {
   const errors = [];
   if (!article || typeof article !== "object") return ["Output is geen geldig JSON object"];
@@ -611,6 +647,12 @@ const STOPWORDS_NL = new Set([
   // wordt hergebruikt voor magnesium, ijzer, vitamine B12, vitamine D...) — deze woorden
   // zeggen niets over het ONDERWERP zelf en zouden anders valse cluster-matches geven.
   "tekort", "symptomen", "oorzaken", "oplossingen", "voorkomen", "wanneer", "verband",
+  // Generieke functie-/werkwoordsvormen die in bijna elke titel terugkeren en dus geen
+  // cluster-ONDERWERP aanduiden. 2026-09-23: "nodig" (7x) en "natuurlijke" (6x) blokkeerden
+  // een run terwijl het onderwerp zelf nog vrij was — valse positieven op de cluster-limiet.
+  "nodig", "helpt", "helpen", "zonder", "altijd", "anders", "herken", "signalen", "scheelt",
+  "losse", "natuurlijke", "natuurlijk", "precies", "gewoon", "blijkt", "maakt", "doet", "doen",
+  "voelt", "tussen", "tijdens", "vaak", "nooit", "soms", "eerste", "laatste",
 ]);
 
 /** Significante kernwoorden uit een titel/onderwerp-omschrijving — alles korter dan 5
@@ -659,6 +701,24 @@ function checkTopicClusterLimit(topicText, existingArticles) {
     : { blocked: false };
 }
 
+/**
+ * Kernwoorden die de cluster-limiet al hebben bereikt, gesorteerd op aantal. Wordt als
+ * expliciet verboden-terrein aan het onderwerp-prompt meegegeven, zodat het model niet
+ * eindeloos Öncelik 1-rijen blijft kiezen die de harde poort daarna toch afwijst
+ * (2026-09-23: run werd overgeslagen op "nodig"/"magnesium" zonder alternatief te krijgen).
+ */
+function computeSaturatedClusters(existingArticles, limit = TOPIC_CLUSTER_LIMIT) {
+  const counts = new Map();
+  for (const title of existingArticles.values()) {
+    for (const kw of new Set(extractKeywords(title))) {
+      counts.set(kw, (counts.get(kw) || 0) + 1);
+    }
+  }
+  return [...counts.entries()]
+    .filter(([, count]) => count >= limit)
+    .sort((a, b) => b[1] - a[1]);
+}
+
 async function pickTopic(client, ctx, systemPrompt) {
   for (let attempt = 1; attempt <= 2; attempt++) {
     try {
@@ -667,13 +727,14 @@ async function pickTopic(client, ctx, systemPrompt) {
         // Extended thinking shares this budget — a small cap here (like a plain
         // 2000-token guess) leaves zero room for the actual JSON text block once
         // thinking eats into it, same failure mode fixed for generateArticle().
-        max_tokens: 6000,
+        // 2026-09-23: DeepSeek redeneerde 55-60k tekens weg op deze prompt (queue-doc +
+        // alle titels) en raakte met 16000 tokens de cap → lege content. 32000 is ruim.
+        max_tokens: 32000,
         system: systemPrompt,
         messages: [{ role: "user", content: buildTopicPrompt(ctx) }],
       });
       const raw = response.content?.find((b) => b.type === "text")?.text || "";
-      const cleaned = raw.trim().replace(/^```json\s*/i, "").replace(/```\s*$/, "");
-      const parsed = JSON.parse(cleaned);
+      const parsed = parseJsonLoose(raw);
       if (parsed?.topic) return parsed;
     } catch (err) {
       console.warn(`[topic-pick attempt ${attempt}] mislukt: ${err.message}`);
@@ -692,7 +753,7 @@ async function generateArticle(client, ctx, systemPrompt) {
     try {
       const response = await client.messages.create({
         model: MODEL,
-        max_tokens: 16000,
+        max_tokens: 32000,
         system: systemPrompt,
         messages: [{ role: "user", content: buildUserPrompt({ ...ctx, previousErrors }) }],
       });
@@ -711,8 +772,7 @@ async function generateArticle(client, ctx, systemPrompt) {
 
     let parsed;
     try {
-      const cleaned = raw.trim().replace(/^```json\s*/i, "").replace(/```\s*$/, "");
-      parsed = JSON.parse(cleaned);
+      parsed = parseJsonLoose(raw);
     } catch (err) {
       console.error(`[attempt ${attempt}] JSON parse failed: ${err.message}`);
       previousErrors = [`JSON parse failed: ${err.message}. Output moet PUUR JSON zijn, geen markdown.`];
@@ -797,39 +857,41 @@ async function main() {
   // lukt dat niet, dan wordt de run bewust overgeslagen — geen artikel is beter
   // dan cluster-lid #(limiet + 1).
   let clusterCheck = topicPick?.topic ? checkTopicClusterLimit(topicPick.topic, existingArticles) : { blocked: false };
-  if (clusterCheck.blocked) {
+  const excludedKeywords = [];
+  const triedTopics = [];
+  const MAX_TOPIC_PICKS = 3;
+  for (let pick = 2; clusterCheck.blocked && pick <= MAX_TOPIC_PICKS; pick++) {
+    excludedKeywords.push(clusterCheck.keyword);
+    if (topicPick?.topic) triedTopics.push(topicPick.topic);
     console.warn(
       `  ⛔ Onderwerp geblokkeerd door cluster-limiet: kernwoord "${clusterCheck.keyword}" komt al voor ` +
       `in ${clusterCheck.count} bestaande artikelen (limiet: ${TOPIC_CLUSTER_LIMIT}). ` +
-      `Origineel onderwerp: "${topicPick.topic}". Eén herkansing met dit kernwoord uitgesloten...`
+      `Origineel onderwerp: "${topicPick?.topic}". Herkansing ${pick}/${MAX_TOPIC_PICKS} met dit kernwoord uitgesloten...`
     );
-    const retryPick = await pickTopic(
+    topicPick = await pickTopic(
       client,
       {
         queueDoc,
         existingArticles,
-        rejectedTopics: [...rejectedTopics, topicPick.topic],
+        rejectedTopics: [...rejectedTopics, ...triedTopics],
         openPendingTopics,
-        excludedKeywords: [clusterCheck.keyword],
+        excludedKeywords,
       },
       systemPrompt
     );
-    const retryCheck = retryPick?.topic ? checkTopicClusterLimit(retryPick.topic, existingArticles) : { blocked: false };
-    if (!retryPick?.topic || retryCheck.blocked) {
-      const reason = retryPick?.topic
-        ? `herkansing "${retryPick.topic}" botst opnieuw op kernwoord "${retryCheck.keyword}" (${retryCheck.count}x)`
-        : "herkansing leverde geen geldig onderwerp op";
-      console.log(
-        `SKIPPED: geen onderwerp buiten oververtegenwoordigde clusters gevonden (${reason}). ` +
-        `Geen artikel vandaag — dit is een bewuste, programmatische keuze, geen storing.`
-      );
-      if (process.env.GITHUB_OUTPUT) {
-        writeFileSync(process.env.GITHUB_OUTPUT, `skipped=true\nskip_reason=cluster-limiet kernwoord "${clusterCheck.keyword}" (${clusterCheck.count}x, limiet ${TOPIC_CLUSTER_LIMIT})\n`, { flag: "a" });
-      }
-      process.exit(0);
+    clusterCheck = topicPick?.topic ? checkTopicClusterLimit(topicPick.topic, existingArticles) : { blocked: false };
+  }
+
+  if (clusterCheck.blocked) {
+    const reason = `onderwerp "${topicPick?.topic}" botst opnieuw op kernwoord "${clusterCheck.keyword}" (${clusterCheck.count}x)`;
+    console.log(
+      `SKIPPED: geen onderwerp buiten oververtegenwoordigde clusters gevonden (${reason}). ` +
+      `Geen artikel vandaag — dit is een bewuste, programmatische keuze, geen storing.`
+    );
+    if (process.env.GITHUB_OUTPUT) {
+      writeFileSync(process.env.GITHUB_OUTPUT, `skipped=true\nskip_reason=cluster-limiet kernwoord "${clusterCheck.keyword}" (${clusterCheck.count}x, limiet ${TOPIC_CLUSTER_LIMIT})\n`, { flag: "a" });
     }
-    topicPick = retryPick;
-    clusterCheck = retryCheck;
+    process.exit(0);
   }
 
   let pubmedContext = "";
