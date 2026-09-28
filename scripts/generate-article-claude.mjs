@@ -29,7 +29,7 @@ if (!ANTHROPIC_API_KEY) {
 }
 
 const MODEL = process.env.ANTHROPIC_MODEL || "claude-sonnet-5";
-const MAX_ATTEMPTS = 3;
+const MAX_ATTEMPTS = 5;
 const CATEGORIES = ["darmen", "mentaal", "schoonheid", "essentials", "energie", "gewichtsbeheer"];
 const FORBIDDEN_CLAIMS = ["geneest", "behandelt", "klinisch bewezen", "voorkomt", "garantie op", "wondermiddel"];
 // Common non-Dutch words that have slipped into past output (Turkish especially,
