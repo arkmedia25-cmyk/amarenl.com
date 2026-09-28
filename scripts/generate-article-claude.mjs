@@ -13,7 +13,7 @@
  * Optional env: ANTHROPIC_MODEL (default: claude-sonnet-5)
  */
 
-import Anthropic from "./anthropic-compat-deepseek.mjs";
+import Anthropic from "./anthropic-compat-fallback.mjs";
 import { readFileSync, writeFileSync, existsSync, readdirSync } from "fs";
 import { execSync } from "child_process";
 import { fileURLToPath } from "url";
