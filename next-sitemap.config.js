@@ -13,13 +13,31 @@ try {
   // Fallback: data not available during build
 }
 
+// Redirect-only URL's horen niet in de sitemap. Anders ziet Google een sitemap-item
+// dat met een 308 doorstuurt en verspilt crawlbudget aan een niet-indexeerbare URL.
+// Bron 1: vercel.json (edge-redirects, bv. hernoemde blogartikelen)
+// Bron 2: producten die via permanentRedirect() naar hun eigen landingspagina gaan
+// Bron 3: /go — affiliate-doorstuurpagina (noindex, zie app/go/layout.tsx)
+const redirectSources = (require("./vercel.json").redirects || []).map((r) =>
+  r.source.replace(/\/$/, "")
+);
+
+const REDIRECT_ONLY_PATHS = [
+  ...new Set([
+    ...redirectSources,
+    "/go",
+    "/producten/happy-lifestyle-pack-pro",
+    "/producten/triangle-marketing-pack",
+  ]),
+];
+
 module.exports = {
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://vitaalroute.nl",
   generateRobotsTxt: false, // Static robots.txt with AI crawler rules
   generateIndexSitemap: false,
   changefreq: "weekly",
   priority: 0.7,
-  exclude: [],
+  exclude: async () => REDIRECT_ONLY_PATHS,
   transform: async (config, path) => {
     let priority = config.priority;
     if (path === "/") priority = 1.0;

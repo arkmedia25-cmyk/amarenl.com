@@ -12,6 +12,7 @@ export const metadata = {
   title: `Darm-Hersen-As: Je Tweede Brein | ${SITE_NAME}`,
   description:
     "Ontdek hoe je darmen en hersenen communiceren via de nervus vagus. 90% van serotonine wordt in je darm gemaakt. Wetenschap, probiotica en praktische tips voor een gezonde gut-brain axis.",
+  alternates: { canonical: "/gut-brain-axis" },
 };
 
 const faqs = [
