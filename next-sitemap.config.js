@@ -19,7 +19,7 @@ module.exports = {
   generateIndexSitemap: false,
   changefreq: "weekly",
   priority: 0.7,
-  exclude: [],
+  exclude: ["/producten/happy-lifestyle-pack-pro", "/producten/triangle-marketing-pack"],
   transform: async (config, path) => {
     let priority = config.priority;
     if (path === "/") priority = 1.0;
