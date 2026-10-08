@@ -246,7 +246,7 @@ export const blogPosts: BlogPost[] = [
   },
 {
     slug: "beste-collageen-supplement-2026-werkt-echt",
-    title: "Collageen Supplement: Welke Werkt Écht?",
+    title: "Beste Viscollageen Poeder: Welke Werkt Écht?",
     date: "2026-06-03",
     category: "schoonheid",
     metaDescription: "Beste viscollageen poeder vergeleken: HL5, NeuCollagen en supermarkt collageen. Welke werkt echt, welke dosering heb je nodig en waar let je op bij het kopen?",
