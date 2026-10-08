@@ -249,6 +249,7 @@ export const blogPosts: BlogPost[] = [
     title: "Collageen Supplement: Welke Werkt Écht?",
     date: "2026-06-03",
     category: "schoonheid",
+    metaDescription: "Beste viscollageen poeder vergeleken: HL5, NeuCollagen en supermarkt collageen. Welke werkt echt, welke dosering heb je nodig en waar let je op bij het kopen?",
     excerpt: "De collageenmarkt is explosief gegroeid — van supermarkt tot premium merken. Maar welk collageen supplement werkt echt? We vergelijken HL5, NeuCollagen en budget opties op dosering, type, biologische beschikbaarheid en prijs.",
     content: `
       <h2>Welk collageen supplement werkt écht?</h2>
