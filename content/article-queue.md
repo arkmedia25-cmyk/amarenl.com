@@ -654,3 +654,47 @@ Disclaimer: "* Deze uitspraken zijn niet beoordeeld door de NVWA..."
 | **TOTAAL** | **20** | **16** | **4** | **0** |
 
 > Alle 20 TIER-artikelen voltooid! 🎉 16 live, 4 onderwerpen gecovered door gerelateerde artikelen onder andere slugs.
+
+---
+
+## 🧭 9 OKTOBER 2026 — GEO/AI-zichtbaarheidsmeting (3 motoren × 8 vragen × 4 sites)
+
+**Meting (live, herhaalbaar):** 8 vragen per site (2 discovery / 2 vergelijking / 2 feitelijk / 2 geschiktheid),
+gesteld aan **Perplexity Pro, Grok (web) en Gemini (web)** — 96 geldige runs, elke vraag in een nieuwe sessie.
+Meetbestanden: `~/Documents/geo-visibility/` (`run_geo.py`, `runs/raw-*.jsonl`, panel in `reports/`).
+
+**Uitkomst vitaalroute.nl:**
+- **Discovery-vragen: 0/5 genoemd bij alle drie de motoren** (stress/nachtrust, moe wakker worden, darm-hersenas
+  vs. gewone vitaminepillen, betrouwbare NL-webshops, persoonlijk advies).
+- **Merkvragen (naam wél genoemd): 3/3 — maar het antwoord is negatief:** "geen bekende/actieve webshop onder deze
+  naam te vinden … wees extra alert, zoek KvK/keurmerken/reviews". Dat is een **vertrouwensprobleem**, geen
+  zichtbaarheidsprobleem: de motoren kennen het domein onvoldoende als aanbieder.
+- **Enige echte contentleemte:** de advies/begeleidingsvraag (V08) — **0 bestaande artikelen** (gecontroleerd tegen
+  132 bestaande artikelen in `data/extra-articles.json` + `lib/blog.ts`).
+
+**Waarom dit géén nieuwe artikelen vraagt (dedupe-uitkomst):** de vier discovery-thema's zijn al gedekt —
+V01 `supplementen-stress-burn-out-wat-helpt-echt` + `natuurlijke-slaap-supplementen-beter-slapen-zonder-melatonine`;
+V02 `waarom-altijd-moe-oorzaken-oplossingen` + `beste-supplementen-tegen-vermoeidheid-energie`;
+V03 `prebiotica-probiotica-verschil-darmen-uitleg` + `darmgezondheid-verbeteren-dagelijkse-gewoontes`;
+V04 `omega-3-supplement-kopen-alles-wat-je-moet-weten` + `collageen-hl5-vs-supermarkt-vergelijken`.
+Een nieuw artikel zou een content-farm-duplicate zijn (max 2 per cluster-regel).
+
+### ✅ Actie 1 — nieuwe pagina (enige bewezen gap)
+- [ ] **`/persoonlijk-advies`** (of enrichment van `/over-ons`): direct antwoord op "waar krijg ik persoonlijk
+      advies over supplementen voor energie en slaap, met begeleiding?" — voor wie, hoe het werkt (gratis intake,
+      productkeuze op basis van leefstijl/vragenlijst), doorlooptijd, wat het **niet** is (geen medisch advies),
+      FAQ-blok van 5 vragen + `FAQPage` JSON-LD. Geen genees-/behandelclaims (EFSA-formulering).
+
+### ✅ Actie 2 — citatie-waardigheid van bestaande pagina's (geen nieuwe artikelen)
+- [ ] De 8 pagina's hierboven: per pagina één **direct antwoord** in de eerste alinea, een `FAQPage`-blok waarin de
+      vraag letterlijk de zoekvraag is, en elk cijfer met **datum + bron + eenheid**. Dit is de vorm die
+      AI-antwoorden letterlijk overnemen (Rankie-protocol, dag 4: "maak één pagina bruikbaar").
+
+### ✅ Actie 3 — entiteit & vertrouwen (tegen het "onbekende webshop"-antwoord)
+- [x] **Live 9/10/2026** (commit `de0978d`, geverifieerd met curl): `Organization.sameAs` naar de zustersites,
+      cross-domain `hreflang` (nl-NL/fr-FR/de-DE/x-default) en `FAQPage` op de homepage.
+- [ ] KvK-nummer, retourbeleid en auteurspagina zichtbaar én in schema (`Organization`/`AboutPage`) — alleen
+      verifieerbare feiten, niets verzinnen.
+
+**Herhaalmeting:** dezelfde 8 vragen + dezelfde motoren + datum, over 4 weken. Alleen dan is "verbeterd" een
+uitspraak; andere vragen of motoren maken de vergelijking ongeldig.
