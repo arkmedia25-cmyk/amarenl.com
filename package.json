@@ -10,7 +10,8 @@
     "sitemap": "next-sitemap",
     "postbuild": "next-sitemap",
     "validate-products": "node scripts/validate-products.js",
-    "efsa-check": "node scripts/efsa-audit.js"
+    "efsa-check": "node scripts/efsa-audit.js",
+    "submit-indexnow": "node scripts/submit-indexnow.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.115.0",
