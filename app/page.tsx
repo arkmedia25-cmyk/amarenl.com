@@ -10,7 +10,8 @@ import BlogPreview from "@/components/sections/BlogPreview";
 import FAQSection from "@/components/sections/FAQSection";
 import NewsletterForm from "@/components/sections/NewsletterForm";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
-import { generateBreadcrumbSchema } from "@/lib/schema";
+import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema";
+import { homeFaqs } from "@/lib/faq-home";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/site-config";
@@ -18,6 +19,13 @@ import { SITE_URL } from "@/lib/site-config";
 export const metadata: Metadata = {
   alternates: {
     canonical: "/",
+    // Cross-domain hreflang: dezelfde aanbieder, drie markten (NL/FR/DE).
+    languages: {
+      "nl-NL": "https://vitaalroute.nl/",
+      "fr-FR": "https://vitalroute.fr/",
+      "de-DE": "https://vital4you.de/",
+      "x-default": "https://vitaalroute.nl/",
+    },
   },
 };
 
@@ -43,6 +51,12 @@ export default function Home() {
   return (
     <>
       <SchemaMarkup schema={generateBreadcrumbSchema([{ name: "Home", url: `${SITE_URL}` }])} id="home-breadcrumb" />
+      {/* FAQPage: dezelfde 5 vragen als zichtbaar in FAQSection — dit blok is wat
+          AI-antwoorden (ChatGPT/Perplexity/AI Overviews) letterlijk kunnen citeren. */}
+      <SchemaMarkup
+        schema={generateFAQSchema(homeFaqs.map((f) => ({ question: f.question, answer: f.answer })))}
+        id="home-faq"
+      />
       <HeroSection />
       <FeaturedProducts />
       <PromoCarousel />
