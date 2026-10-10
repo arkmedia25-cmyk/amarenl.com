@@ -16,15 +16,14 @@ Bu dosya o ikinci hedefi veriyor.
 
 ## Katmanlar
 
-<!-- AŞAĞISINI KENDİ PROJENE GÖRE DOLDUR. Boş bırakırsan skill işe yaramaz. -->
-<!-- İpucu: /init benzeri bir tarama yaptırıp mevcut deseni buraya yazdır. -->
-
-- **Sunum** (`[klasör]`): sadece gösterir. İş mantığı, veri erişimi, hesap YOK.
-- **Servis** (`[klasör]`): iş mantığı burada. Framework'e bağımlı olmasın.
-- **Veri** (`[klasör]`): veritabanı ve dış servis erişimi. Sadece burada.
-
-Yeni bir dosya yazarken önce hangi katmana ait olduğuna karar ver.
-Karar veremiyorsan dosya muhtemelen iki iş yapıyor — böl.
+- **Sunum** (`app/`, `components/`): kategori/makale sayfaları (adaptogenen,
+  beste-probiotica, collageen-poeder, darmgezondheid, blogs) ve
+  `components/{blog,layout,sections,ui}`. Sadece gösterir.
+- **Servis** (`lib/`): `products.ts`, `blog.ts`, `affiliate.ts`, `schema.ts`,
+  `meta-pixel.ts`, `site-config.ts` — ürün/blog/affiliate mantığı. Saf TS kalsın.
+- **Veri** (`data/`, `content/blog/`, `scripts/`): `data/products.json`,
+  `extra-articles.json`, markdown makaleler ve makale/denetim betikleri
+  (`efsa-audit.js`, `anthropic-compat-*.mjs`). Dosya sistemi/dış servis erişimi burada.
 
 ## Kurallar
 

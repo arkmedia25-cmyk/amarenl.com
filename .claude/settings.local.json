@@ -19,7 +19,20 @@
       "mcp__claude-in-chrome__tabs_context_mcp",
       "mcp__claude-in-chrome__read_page",
       "mcp__claude-in-chrome__form_input",
-      "mcp__claude-in-chrome__navigate"
+      "mcp__claude-in-chrome__navigate",
+      "Bash(gh api *)",
+      "Read(//tmp/**)",
+      "WebSearch",
+      "WebFetch(domain:ai.google.dev)",
+      "Bash(xargs -I{} git grep -l \"AIza\" {})",
+      "WebFetch(domain:api-docs.deepseek.com)",
+      "Bash(node --check scripts/anthropic-compat-deepseek.mjs)",
+      "Bash(node --check scripts/generate-article-claude.mjs)",
+      "Bash(gh secret *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(gh workflow *)"
     ]
   }
 }

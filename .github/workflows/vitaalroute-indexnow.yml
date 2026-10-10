@@ -1,0 +1,42 @@
+name: VitaalRoute — IndexNow na deploy
+
+# Meldt de sitemap-URL's aan bij Bing/Yandex/Seznam/Naver zodra Vercel een
+# productie-deploy afrondt (het project is git-connected, dus de
+# deployment_status-gebeurtenis komt uit de repo). Google doet niet mee aan
+# IndexNow — daar loopt de sitemap-ping via de Search Console.
+#
+# Let op: Bing geeft 403 tot het domein in Bing Webmaster Tools is toegevoegd
+# en geverifieerd. Tot die tijd faalt deze stap zichtbaar (geen stille fout).
+
+on:
+  deployment_status:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vitaalroute-indexnow
+  cancel-in-progress: false
+
+jobs:
+  indexnow:
+    if: github.event_name == 'workflow_dispatch' || github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # Wacht tot de productie-URL de nieuwe build serveert (Vercel alias-tijd)
+      - name: Wacht op live sitemap
+        run: |
+          for i in $(seq 1 12); do
+            code=$(curl -s -o /dev/null -w '%{http_code}' https://vitaalroute.nl/sitemap.xml || true)
+            [ "$code" = "200" ] && echo "sitemap live" && exit 0
+            sleep 10
+          done
+          echo "sitemap niet bereikbaar binnen 2 minuten" && exit 1
+      - name: IndexNow aanmelden
+        run: node scripts/submit-indexnow.mjs

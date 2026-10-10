@@ -25,11 +25,11 @@ Tek dosyadan az ve geri alınabilir bir değişiklikse (yazı düzeltmesi, sabit
 yorum satırı) dört adımı atla ve doğrudan yap. Emin değilsen bana sor.
 
 ## Proje kuralları
-<!-- AŞAĞIYI KENDİ PROJENE GÖRE DOLDUR. Doldurmazsan skill'ler çalışır ama
-     komutları her seferinde arar; doldurursan hızlanır. -->
-- Paket yöneticisi: [npm / pnpm / bun / yarn]
-- Kurulum komutu: [npm install]
-- Geliştirme sunucusu: [npm run dev]
-- Test komutu: [npm test]
-- Lint komutu: [npm run lint]
+- Paket yöneticisi: **npm** (`package-lock.json` — bun/yarn karıştırma)
+- Kurulum komutu: `npm install`
+- Geliştirme sunucusu: `npm run dev`
+- Test komutu: **yok** — yerine kontrol komutları:
+  `npm run validate-products` (ürün verisi) + `npm run efsa-check` (EFSA iddia denetimi)
+- Lint komutu: `npm run lint`
+- Build: `npm run build` (postbuild `next-sitemap`)
 - Bunları her PR'dan önce çalıştır.
