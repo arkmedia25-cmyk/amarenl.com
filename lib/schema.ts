@@ -6,6 +6,18 @@ import { SITE_URL, SITE_NAME } from "./site-config";
 
 const ORG_NAME = SITE_NAME;
 
+/**
+ * Zustersites van dezelfde onafhankelijke Amare-distributeur (NL / FR / DE).
+ * Doel: entiteitssignaal voor zoek- én AI-systemen (sameAs + cross-domain hreflang),
+ * zodat de drie taaldomeinen als één aanbieder herkend worden in plaats van als
+ * drie losse, onbekende sites (bron: Rankie Partner-protocol, entiteitslaag).
+ */
+export const SIBLING_SITES = [
+  "https://vitaalroute.nl",
+  "https://vitalroute.fr",
+  "https://vital4you.de",
+];
+
 export interface OrganizationInput {
   description?: string;
   sameAs?: string[];
@@ -21,7 +33,8 @@ export function generateOrganizationSchema(input?: OrganizationInput) {
     description:
       input?.description ||
       "Onafhankelijke Amare affiliate partner — ontdek natuurlijke wellness supplementen voor mentale en fysieke vitaliteit.",
-    sameAs: input?.sameAs || [],
+    sameAs: input?.sameAs?.length ? input.sameAs : SIBLING_SITES,
+    knowsLanguage: ["nl"],
   };
 }
 

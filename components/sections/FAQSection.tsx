@@ -2,30 +2,7 @@
 
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import { SITE_NAME } from "@/lib/site-config";
-
-const faqs = [
-  {
-    question: "Zijn de producten van Amare origineel?",
-    answer: `Ja, absoluut. ${SITE_NAME} is een onafhankelijke partner van Amare Global. Wanneer je op de bestelknop klikt, word je rechtstreeks naar de officiële Amare.com website geleid om je aankoop veilig te voltooien.`
-  },
-  {
-    question: "Hoe werkt de 30-dagen 'lege verpakking' garantie?",
-    answer: "Amare gelooft zo sterk in hun producten dat ze een unieke garantie bieden: als je na 30 dagen geen resultaat ziet, kun je de verpakking (zelfs als deze leeg is) terugsturen en je geld terugkrijgen. Geen vragen gesteld."
-  },
-  {
-    question: "Hoe claim ik mijn €8 welkomstkorting?",
-    answer: "Heel eenvoudig! Schrijf je in via ons nieuwsbriefformulier op deze pagina. Je ontvangt dan direct een persoonlijke kortingscode in je e-mail die je kunt gebruiken bij je eerste bestelling op de Amare website."
-  },
-  {
-    question: "Wat zijn de verzendkosten naar Nederland?",
-    answer: "Bij bestellingen boven de €175 geniet je van gratis verzending binnen Nederland. Voor kleinere bestellingen worden de standaard verzendtarieven van Amare toegepast tijdens het afrekenen."
-  },
-  {
-    question: "Hoe lang duurt de levering?",
-    answer: "Omdat de producten rechtstreeks vanuit het Amare magazijn in Europa worden verzonden, kun je rekenen op een levertijd van 3 tot 5 werkdagen."
-  }
-];
+import { homeFaqs } from "@/lib/faq-home";
 
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -43,7 +20,7 @@ export default function FAQSection() {
         </div>
 
         <div className="space-y-4">
-          {faqs.map((faq, index) => (
+          {homeFaqs.map((faq, index) => (
             <div 
               key={index}
               className="border border-[var(--color-border)] rounded-2xl overflow-hidden transition-all"

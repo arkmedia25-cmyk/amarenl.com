@@ -12,6 +12,7 @@ export const metadata = {
   title: `Probiotica Stammen: Complete Gids (2026) | ${SITE_NAME}`,
   description:
     "Ontdek welke probiotica stammen écht werken. Lactobacillus, Bifidobacterium, Cerebiome® — complete gids met wetenschappelijke onderbouwing, dosering en vergelijking van de beste probiotica supplementen.",
+  alternates: { canonical: "/probiotica-stammen" },
 };
 
 const faqs = [
