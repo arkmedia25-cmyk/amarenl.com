@@ -11,7 +11,7 @@ const SITE_NAME = 'VitaalRoute';
 const OUTPUT = path.join(__dirname, '..', 'public', 'llms-full.txt');
 
 function main() {
-  let output = [];
+  const output = [];
 
   output.push(`# ${SITE_NAME} — Volledige Site Content voor AI Modellen`);
   output.push(`# URL: ${SITE_URL}`);
