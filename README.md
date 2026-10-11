@@ -28,6 +28,50 @@ npx tsx scripts/validate-products.js       # Affiliate URL validatie
 
 ---
 
+## Onderhoud & valkuilen (gemeten, 11.10.2026)
+
+Deze punten komen uit echte productie-incidenten — niet uit theorie.
+
+**Sitemap: het gecommitte bestand is wat live staat.**
+`public/sitemap.xml` wordt door `next-sitemap` gegenereerd via de npm `postbuild`-hook. Vercel draait voor het
+Next.js-preset alleen `next build`, dus **die hook gaat in CI niet af**: wat live komt is de versie die in de repo
+is gecommit. Voeg je een pagina toe of verwijder je er een, dan horen `npm run build` én een commit van
+`public/sitemap.xml` bij dezelfde PR. (Meegemaakt: nieuwe pagina live, sitemap bleef een generatie oud.)
+
+⚠️ **Voeg géén `"vercel-build"` script toe.** Geprobeerd om de sitemap in CI te regenereren: de productie-build
+viel om (`Command "npm run vercel-build" exited with 1`, met `[next]/internal/font/google/…module.css:
+module-not-found` in het log), terwijl preview-builds wél slaagden. Teruggedraaid in #91.
+
+**Redirects staan in `vercel.json`, niet in `next.config.mjs`.** `next-sitemap.config.js` leest die lijst en houdt
+redirect-only URL's automatisch uit de sitemap — zet een redirect dus daar en hij sluit zichzelf uit.
+
+**`public/robots.txt` is statisch** (`generateRobotsTxt: false` in `next-sitemap.config.js`). AI- en
+answer-engine-crawlers (GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, PerplexityBot, …) staan er expliciet met
+`Allow: /`; crawlers die niet genoemd worden vallen onder `User-agent: *` en erven de Disallow-regels van het oude
+platform. Let op dat contact-, garantie- en retourpaden daar niet in terechtkomen: dat is precies wat een
+AI-assistent controleert voordat hij een webshop noemt.
+
+**Een groene `npm run build` is geen groene deploy.** Controleer het platform:
+
+```bash
+npx vercel ls amarenl-com --scope arks-projects-2ac3ac7b   # ● Ready / ● Error per omgeving + bouwtijd
+gh run list --limit 3                                       # "VitaalRoute — IndexNow na deploy"
+```
+
+Een `skipped` run op `main` betekent meestal dat een `concurrency`-groep hem naast de branch-run afblies — niet dat
+er geen deploy was. Een "production build" van ~20 seconden is gestorven in de config, niet in de code.
+
+**Edge-redirects zijn niet lokaal te testen.** `next start` past `vercel.json` niet toe; controleer de 308's live
+(`curl -s -o /dev/null -w '%{http_code} → %{redirect_url}' <url>`) nadat de deploy klaar is.
+
+**Bekende, nog openstaande punten:**
+- `npm run validate-products` meldt **4 fouten**: `happy-lifestyle-pack-pro` en `triangle-marketing-pack` missen
+  het veld `usage` (producttekst nodig, nog niet ingevuld).
+- `npm run lint` is groen (0 errors) maar heeft **117 warnings** als afbouwlijst — zie `eslint.config.mjs`.
+- `next lint` bestaat niet meer in Next 16; lint draait via `eslint .` met flat config (`eslint.config.mjs`).
+
+---
+
 ## Structuur
 
 ```

@@ -30,6 +30,17 @@ yorum satırı) dört adımı atla ve doğrudan yap. Emin değilsen bana sor.
 - Geliştirme sunucusu: `npm run dev`
 - Test komutu: **yok** — yerine kontrol komutları:
   `npm run validate-products` (ürün verisi) + `npm run efsa-check` (EFSA iddia denetimi)
-- Lint komutu: `npm run lint`
+  - ⚠️ `validate-products` şu an **4 hata** veriyor (`happy-lifestyle-pack-pro` + `triangle-marketing-pack`
+    için eksik `usage`) — bunlar bilinen ve PR'ın kapsamı dışında; yeni hata ekleme.
+- Lint komutu: `npm run lint` (`eslint .` + flat config; Next 16'da `next lint` kaldırıldı)
 - Build: `npm run build` (postbuild `next-sitemap`)
 - Bunları her PR'dan önce çalıştır.
+
+## Sayfa ekleme / değiştirme kuralı (zorunlu)
+- **`public/sitemap.xml` commit'lenir.** Vercel `next build` çalıştırdığı için `postbuild` CI'da tetiklenmez;
+  canlıya giden sitemap commit'teki dosyadır. Yeni sayfa = `npm run build` + sitemap'i aynı PR'da commit et.
+- **`"vercel-build"` script'i EKLEME** — üretim build'ini düşürüyor (bkz. PR #91).
+- Redirect'ler `vercel.json`'a yazılır (sitemap'ten otomatik dışlanır); `robots.txt` statiktir (`public/robots.txt`).
+- Deploy'u yerel build'e bakarak "tamam" sayma: `npx vercel ls amarenl-com --scope arks-projects-2ac3ac7b`
+  (● Ready / ● Error) + `gh run list` ile doğrula.
+- Ayrıntılı gerekçeler: `README.md` → "Onderhoud & valkuilen".
