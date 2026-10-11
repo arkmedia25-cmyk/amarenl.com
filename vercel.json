@@ -1114,6 +1114,86 @@
       "permanent": true
     },
     {
+      "source": "/about",
+      "destination": "/over-ons",
+      "permanent": true
+    },
+    {
+      "source": "/about-us",
+      "destination": "/over-ons",
+      "permanent": true
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/policies",
+      "destination": "/retour-en-garantie",
+      "permanent": true
+    },
+    {
+      "source": "/policies/refund-policy",
+      "destination": "/retour-en-garantie",
+      "permanent": true
+    },
+    {
+      "source": "/policies/return-policy",
+      "destination": "/retour-en-garantie",
+      "permanent": true
+    },
+    {
+      "source": "/policies/shipping-policy",
+      "destination": "/retour-en-garantie",
+      "permanent": true
+    },
+    {
+      "source": "/policies/terms-of-service",
+      "destination": "/retour-en-garantie",
+      "permanent": true
+    },
+    {
+      "source": "/retour",
+      "destination": "/retour-en-garantie",
+      "permanent": true
+    },
+    {
+      "source": "/retourneren",
+      "destination": "/retour-en-garantie",
+      "permanent": true
+    },
+    {
+      "source": "/ruilen",
+      "destination": "/retour-en-garantie",
+      "permanent": true
+    },
+    {
+      "source": "/garantie",
+      "destination": "/retour-en-garantie",
+      "permanent": true
+    },
+    {
+      "source": "/verzending",
+      "destination": "/retour-en-garantie",
+      "permanent": true
+    },
+    {
+      "source": "/verzendkosten",
+      "destination": "/retour-en-garantie",
+      "permanent": true
+    },
+    {
+      "source": "/algemene-voorwaarden",
+      "destination": "/retour-en-garantie",
+      "permanent": true
+    },
+    {
+      "source": "/voorwaarden",
+      "destination": "/retour-en-garantie",
+      "permanent": true
+    },
+    {
       "source": "/(.*)",
       "has": [
         {

@@ -1,11 +1,11 @@
 # VitaalRoute — Robots.txt
-# Laatste update: 2026-08-17
+# Laatste update: 2026-10-11
 
 # Alle crawlers: volledige toegang
 User-agent: *
 Allow: /
 
-# WordPress & Shopify systeem-URL's blokkeren (oud platform — nooit echte content)
+# Oud platform (WordPress/Shopify) — nooit echte content
 Disallow: /wp-content/
 Disallow: /wp-admin/
 Disallow: /?page_id=
@@ -14,18 +14,38 @@ Disallow: /author/
 Disallow: /sample-page/
 Disallow: /collections/
 Allow: /collections/amare-wellness-essentials-2
-Disallow: /pages/contact
-Disallow: /policies/
 Disallow: /cdn
 Disallow: /wpm
 Disallow: /amarenl/
 Disallow: /instagram.com/
 
-# AI Crawlers — expliciet toestaan voor GEO/AIO zichtbaarheid
+# Host
+Host: https://vitaalroute.nl
+
+# Sitemaps
+Sitemap: https://vitaalroute.nl/sitemap.xml
+
+# AI Crawlers & zoekmachines — expliciet volledige toegang.
+# Let op: bots die hier niet genoemd worden vallen onder de groep hierboven, en
+# die blokkeert een aantal (oude) paden. Contact-, garantie- en retourpagina's
+# moeten juist wél leesbaar zijn: dat is precies wat een AI-assistent controleert
+# voordat hij een webshop noemt. Daarom staan de crawlers hieronder apart.
 User-agent: GPTBot
 Allow: /
 
-User-agent: CCBot
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
 Allow: /
 
 User-agent: anthropic-ai
@@ -34,7 +54,25 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: Perplexity-User
+Allow: /
+
 User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: CCBot
 Allow: /
 
 User-agent: Omgili
@@ -42,12 +80,3 @@ Allow: /
 
 User-agent: FacebookBot
 Allow: /
-
-# Crawl-delay (respectvol voor server)
-Crawl-delay: 1
-
-# Host
-Host: https://vitaalroute.nl
-
-# Sitemaps
-Sitemap: https://vitaalroute.nl/sitemap.xml
