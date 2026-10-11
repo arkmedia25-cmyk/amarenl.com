@@ -60,3 +60,24 @@ dus dit is de grootste onbenutte vraag van het hele portfolio.
 
 Totaal geadresseerde vraag deze ronde: circa **300 vertoningen per maand** op één cluster pagina's.
 Verificatie: JSON geldig (91 artikelen), `npm run build` exit 0, live gecontroleerd, IndexNow aangemeld.
+
+---
+
+# Ronde 3b — de schone quick-winlijst (na uitsluiting van het legacy-domein)
+
+De "22 quick wins" uit het rapport bleken na de legacy-correctie voor het grootste deel al
+gedaan in ronde 1 en 2. Wat er écht nog open stond:
+
+| Pagina | Zoekvraag | Status |
+|---|---|---|
+| `/blogs/nieuws/vermoeid-na-griep-hoe-lang-wat-helpt` | vermoeidheid na griep 2026 (8 vertoningen, positie 10,0) | **gedaan** — nieuwe sectie met letterlijk antwoord + dode Voedingscentrum-link hersteld |
+| `vital4you.de/blog/zucker-crash-…` | zucker crash (5 vertoningen, positie 10,8) | **niet gedaan** — lokale checkout heeft lege `content/blog`, artikelen staan niet in git; bron eerst vinden |
+| `/` (homepage) | amare global (8 vertoningen, positie 5,5) | overgeslagen — merknaam, geen contentkans |
+
+Al in ronde 1/2 gedaan (stonden ook in deze lijst): welke zink is het beste · in welk eten zit zink ·
+beste collageen supplement · lion's mane ervaringen · hoe kies ik de juiste probioticastam ·
+kpi's voor geo · productpagina's voor AI-assistenten · schema markup (CTR-fix).
+
+Extra kwaliteitsfix deze ronde: de automatische interne-linker zette CTA-knoppen ín koppen
+(h1-h4). Koppen worden nu overgeslagen, zodat het letterlijke zoekwoord platte tekst blijft.
+
