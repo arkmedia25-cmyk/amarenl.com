@@ -71,7 +71,7 @@ gedaan in ronde 1 en 2. Wat er écht nog open stond:
 | Pagina | Zoekvraag | Status |
 |---|---|---|
 | `/blogs/nieuws/vermoeid-na-griep-hoe-lang-wat-helpt` | vermoeidheid na griep 2026 (8 vertoningen, positie 10,0) | **gedaan** — nieuwe sectie met letterlijk antwoord + dode Voedingscentrum-link hersteld |
-| `vital4you.de/blog/zucker-crash-…` | zucker crash (5 vertoningen, positie 10,8) | **niet gedaan** — lokale checkout heeft lege `content/blog`, artikelen staan niet in git; bron eerst vinden |
+| `vital4you.de/blog/zucker-crash-…` | zucker crash (5 vertoningen, positie 10,8) | **gedaan** — bron gevonden: GitHub `arkmedia25-cmyk/vital4you` (Vercel is git-gekoppeld). PR #22 open: nieuwe H2 "Was ist ein Zucker-Crash?" + antwoordblok + DGE-bron + 2 interne links; plus 4x verboden woord "Wundermittel" vervangen |
 | `/` (homepage) | amare global (8 vertoningen, positie 5,5) | overgeslagen — merknaam, geen contentkans |
 
 Al in ronde 1/2 gedaan (stonden ook in deze lijst): welke zink is het beste · in welk eten zit zink ·
