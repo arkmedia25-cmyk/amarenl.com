@@ -5,9 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "vercel-build": "next build && next-sitemap",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "sitemap": "next-sitemap",
     "postbuild": "next-sitemap",
     "validate-products": "node scripts/validate-products.js",
