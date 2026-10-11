@@ -297,6 +297,37 @@ export default function ProbioticaStammenPage() {
           </div>
         </section>
 
+        {/* Hoe kies je de juiste stam — directe match op de zoekvraag */}
+        <section className="container-page max-w-4xl py-12">
+          <h2 className="text-3xl font-cormorant font-bold text-[var(--color-text)] mb-6">
+            Hoe kies ik de juiste probioticastam?
+          </h2>
+          <p className="text-[var(--color-text-muted)] leading-relaxed mb-4">
+            Hoe kies ik de juiste probioticastam? Kijk eerst naar je doel, niet naar het aantal
+            CFU&apos;s. Voor stemming en stress zijn Lactobacillus helveticus R0052 en Bifidobacterium
+            longum R0175 het best onderzocht (samen de Cerebiome&reg;-blend); voor spijsvertering en een
+            opgeblazen gevoel gaat het vooral om Bifidobacterium animalis lactis. Kies daarna een product
+            dat de stamcodes op het etiket vermeldt, met een dosering die in onderzoek effectief bleek.
+          </p>
+          <p className="text-[var(--color-text)] leading-relaxed">
+            Twijfel je tussen merken? Bekijk dan onze{" "}
+            <a
+              href="/beste-probiotica"
+              className="text-[var(--color-primary)] underline underline-offset-2"
+            >
+              vergelijking van de beste probiotica supplementen
+            </a>{" "}
+            of lees hoe probiotica en je{" "}
+            <a
+              href="/blogs/nieuws/darm-huid-connectie-gezondheid-stralende-huid-probiotica"
+              className="text-[var(--color-primary)] underline underline-offset-2"
+            >
+              huid via de darm-huid-as samenhangen
+            </a>
+            .
+          </p>
+        </section>
+
         {/* Veelgestelde vragen */}
         <section className="container-page max-w-4xl py-12">
           <h2 className="text-3xl font-cormorant font-bold text-[var(--color-text)] mb-8">
