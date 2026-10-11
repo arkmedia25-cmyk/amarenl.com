@@ -4,8 +4,12 @@ Bron van de "voor"-cijfers: rank-rapport 2026-10-11 (`~/Documents/geo-visibility
 Google Search Console, venster 28 dagen. Effect meten: wekelijkse rank-engine (cron `f46993af864f`,
 maandag 09:20) en de maandelijkse AI-meting (6 november).
 
-Let op: amarenl.com en vitaalroute.nl serveren dezelfde codebase; amarenl.com heeft
-`canonical → https://vitaalroute.nl`. Eén aanpassing telt dus voor beide properties.
+Let op: de site draait op **vitaalroute.nl**. Het oude domein **amarenl.com bestaat niet meer**:
+het geeft per URL een 308-redirect naar hetzelfde pad op vitaalroute.nl (gecontroleerd op
+11-10-2026: `/`, `/happy-juice-pack` en een blogartikel redirecten alle drie 308 → vitaalroute.nl).
+De GSC-property `amarenl.com` laat dus alleen zien hoeveel legacy-vraag er nog naar oude URL's
+wijst; de rank-engine slaat die property over bij de quick wins. Eén aanpassing op vitaalroute.nl
+telt voor beide, want de redirect komt op die pagina uit.
 
 | # | Pagina | Doelzoekwoord | Voor (positie / vertoningen) | Wat is aangepast | Verwacht |
 |---|---|---|---|---|---|
@@ -37,3 +41,22 @@ Let op: amarenl.com en vitaalroute.nl serveren dezelfde codebase; amarenl.com he
 `data/extra-articles.json` bevatte al één nieuwe draft uit de contentpipeline
 ("EDGE+ Mango of Watermelon: welke variant kies jij?"). Die is meegegaan in dezelfde commit
 omdat het bestand één geheel is — het is de eigen output van de cron-pipeline.
+
+---
+
+# Ronde 3a — legacy-vraag (zelfde dag, na de correctie dat amarenl.com niet meer bestaat)
+
+Bron: "Legacy-vraag"-blok in het rank-rapport (GSC-property amarenl.com, 308 → vitaalroute.nl).
+Deze vragen wijzen naar oude URL's, maar het verkeer landt op dezelfde pagina's op vitaalroute.nl —
+dus dit is de grootste onbenutte vraag van het hele portfolio.
+
+| # | Pagina (vitaalroute.nl) | Zoekvragen (vertoningen op oud domein) | Wat is aangepast |
+|---|---|---|---|
+| 1 | `/blogs/nieuws/teveel-magnesium-symptomen-risico` | klachten teveel magnesium (31) · te veel magnesium klachten (28) · teveel magnesium hoofdpijn (21) · magnesium bijwerkingen (20) · te veel magnesium schadelijk (17) · teveel aan magnesium (17) · teveel magnesium duizelig (17) ≈ **167** | Twee nieuwe secties bovenaan: "Klachten bij te veel magnesium: welke merk je?" en "Magnesium bijwerkingen: welke zijn bekend?" met antwoordblokken van 45-50 woorden; Voedingscentrum-link toegevoegd (die ontbrak) |
+| 2 | `/blogs/nieuws/natuurlijke-slaap-supplementen-beter-slapen-zonder-melatonine` | slaap supplement (21) | Nieuwe sectie "Slaap supplement: welk supplement helpt bij slecht slapen?" met antwoordblok dat per slaapprobleem het juiste supplement koppelt |
+| 3 | `/blogs/nieuws/prebiotica-probiotica-verschil-darmen-uitleg` | prebiotica (19) · verschil pre en probiotica (16) · probiotica en prebiotica (14) ≈ **49** | Nieuwe sectie "Wat is prebiotica?" bovenaan met antwoordblok + 2 interne links (het artikel had er **nul**, terwijl de kwaliteitsregel er minimaal 2 eist) |
+| 4 | `/blogs/nieuws/vloeibaar-collageen-hl5-huid-haar-nagels` | collageen haargroei (18) | Nieuwe sectie "Collageen en haargroei: wat zegt onderzoek?" met eerlijk antwoord (haar = keratine, collageen werkt indirect) |
+| 5 | `/blogs/nieuws/supplementen-voor-meer-energie-dit-werkt-echt` | energie supplementen (36) · supplementen energie (10) ≈ **46** | Nieuwe sectie "Energie supplementen: welke werken echt?" + Voedingscentrum-link + 2 interne links (artikel had er nul) |
+
+Totaal geadresseerde vraag deze ronde: circa **300 vertoningen per maand** op één cluster pagina's.
+Verificatie: JSON geldig (91 artikelen), `npm run build` exit 0, live gecontroleerd, IndexNow aangemeld.

@@ -1177,6 +1177,8 @@ export const blogPosts: BlogPost[] = [
     author: "Mark",
     citations: [{ author: "Barbagallo M, et al.", name: "Nutrients (2021)", url: "https://doi.org/10.3390/nu13020463" }],
     content: `
+      <h2>Energie supplementen: welke werken echt?</h2>
+      <p>Energie supplementen werken alleen op het tekort dat je hebt — niet op vermoeidheid in het algemeen. IJzer en vitamine B12 helpen bij een aangetoond tekort, magnesium bij spiervermoeidheid en slaapkwaliteit, en cafeïne maskeert vermoeidheid zonder iets op te lossen. Het <a href='https://www.voedingscentrum.nl/encyclopedie/energie.aspx' target='_blank' rel='noopener'>Voedingscentrum</a> adviseert eerst te kijken naar slaap, beweging en voeding. Meer lezen: <a href='/blogs/nieuws/vermoeid-na-griep-hoe-lang-wat-helpt'>vermoeidheid na griep</a> en <a href='/blogs/nieuws/magnesium-onmisbaar-mineraal-rust-energie-spierherstel'>magnesium voor rust en energie</a>.</p>
       <h2>Wat is cel-energie en waarom ben je zo moe?</h2>
       <p>Voel je je vaak futloos, ook na een goede nacht slaap? Je bent niet alleen. <strong>Vermoeidheid is de meest gerapporteerde klacht</strong> in Nederland — ruim 30% van de volwassenen geeft aan regelmatig last te hebben van aanhoudende vermoeidheid.</p>
       <p>De sleutel tot meer energie ligt niet in nóg een kop koffie, maar in je cellen. Specifiek in je <strong>mitochondriën</strong> — de energiecentrales van elke cel in je lichaam. Deze microscopische structuren zetten voeding om in ATP (adenosinetrifosfaat), de brandstof waar je volledige lichaam op draait.</p>
