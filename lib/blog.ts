@@ -2382,10 +2382,19 @@ export function linkifyProductMentions(html: string, slug: string): string {
   }
 
   // STAP 2: Algemene keywords → categorie/generieke pagina's
-  for (const kw of generalKeywords) {
-    kw.pattern.lastIndex = 0;
-    result = result.replace(kw.pattern, (match: string) => buildLink(kw.url, match, false));
+  // Koppen (h1-h4) blijven ongemoeid. Reden: een CTA-knop ín een <h2> breekt de kop
+  // (de letterlijke zoekterm moet als platte tekst in de kop staan) en levert
+  // ongeldige HTML op. Alleen de lopende tekst krijgt de automatische links.
+  const headingSplit = /(<h[1-4][^>]*>[\s\S]*?<\/h[1-4]>)/gi;
+  const parts = result.split(headingSplit);
+  for (let i = 0; i < parts.length; i++) {
+    if (/^<h[1-4][^>]*>/i.test(parts[i])) continue;
+    for (const kw of generalKeywords) {
+      kw.pattern.lastIndex = 0;
+      parts[i] = parts[i].replace(kw.pattern, (match: string) => buildLink(kw.url, match, false));
+    }
   }
+  result = parts.join("");
 
   return result;
 }
