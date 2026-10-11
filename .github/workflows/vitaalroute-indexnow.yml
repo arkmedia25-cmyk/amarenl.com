@@ -40,3 +40,19 @@ jobs:
           echo "sitemap niet bereikbaar binnen 2 minuten" && exit 1
       - name: IndexNow aanmelden
         run: node scripts/submit-indexnow.mjs
+
+      - name: Sitemap bij Google aanmelden (Search Console)
+        env:
+          GSC_SERVICE_ACCOUNT_JSON_B64: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON_B64 }}
+        run: |
+          set -euo pipefail
+          # Google doet niet mee aan IndexNow. De enige officiële, geautomatiseerde
+          # melding aan Google is de sitemap opnieuw aanmelden in Search Console.
+          if [ -z "${GSC_SERVICE_ACCOUNT_JSON_B64:-}" ]; then
+            echo "::warning::GSC_SERVICE_ACCOUNT_JSON_B64 ontbreekt — sitemap-ping naar Google overgeslagen"
+            exit 0
+          fi
+          mkdir -p /tmp/gsc
+          echo "$GSC_SERVICE_ACCOUNT_JSON_B64" | base64 -d > /tmp/gsc/service-account.json
+          GSC_KEY_PATH=/tmp/gsc/service-account.json node scripts/gsc-sitemap.mjs submit "sc-domain:vitaalroute.nl" "https://vitaalroute.nl/sitemap.xml"
+          rm -f /tmp/gsc/service-account.json
