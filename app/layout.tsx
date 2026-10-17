@@ -147,6 +147,13 @@ export default function RootLayout({
             });
           `}
         </Script>
+        {/* Cited — kendi analitiğimiz (çerez yok, kişisel veri yok) */}
+        <Script
+          defer
+          src={`${process.env.NEXT_PUBLIC_CITED_URL || "https://cited-ark.fly.dev"}/tracker.js`}
+          data-site={process.env.NEXT_PUBLIC_CITED_SITE || "sa373527370df2a25"}
+          data-host={process.env.NEXT_PUBLIC_CITED_URL || "https://cited-ark.fly.dev"}
+        />
       </body>
     </html>
   );
