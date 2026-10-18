@@ -2,10 +2,11 @@ name: VitaalRoute — Makale (Claude API, Faz 2)
 
 on:
   schedule:
-    # 12:57 UTC ≈ 14:57 Amsterdam (zomertijd), Pazartesi/Çarşamba/Cuma.
-    # DeepSeek peak saatleri (hafta içi 01:00-04:00 ve 06:00-10:00 UTC) dışında,
-    # off-peak fiyatlandırma için bilinçli seçildi (was 06:57 UTC, tam peak içindeydi).
-    - cron: "57 12 * * 1,3,5"
+    # 12:57 UTC ≈ 14:57 Amsterdam (zomertijd), Pazartesi/Salı/Perşembe/Cumartesi = haftada 4.
+    # 18-10-2026: gunluk Telegram makale kuyrugu emekliye ayrildi; tek yazar = bu is akisi.
+    # DeepSeek peak saatleri (hafta ici 01:00-04:00 ve 06:00-10:00 UTC) disinda,
+    # off-peak fiyatlandirma icin bilincli secildi (was 06:57 UTC, tam peak icindeydi).
+    - cron: "57 12 * * 1,2,4,6"
   workflow_dispatch: {}
 
 permissions:
