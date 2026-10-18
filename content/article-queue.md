@@ -48,7 +48,7 @@ kapsanmıyor (kelime öbeği eşleşmesi + manuel kontrol).
 | 6 | Gewrichtspijnen in de overgang | gewrichtspijnen overgang | 880 | YÜKSEK | HL5 (`hl5-peach`) |
 | 7 | Borrelende buik: gas. lucht en je darmen | borrelende buik | 480 | DÜŞÜK | Restore (`restore`) |
 | 8 | Omega 3-6-9: heb je alle drie nodig? | omega3 6 9 | 880 | YÜKSEK | Sunset (`sunset`) |
-| 9 | Rimpels boven je lip: wat werkt | rimpers bovenlip | 720 | YÜKSEK | Skin to Mind OptiMIST (`skin-to-mind-optimist-awaken-glow-facial-mist`) |
+| 9 | Rimpels boven je lip: wat werkt | rimpels bovenlip | 720 | YÜKSEK | Skin to Mind OptiMIST (`skin-to-mind-optimist-awaken-glow-facial-mist`) |
 | 10 | Gebufferde vitamine C: beter of duurder? | gebufferde vitamine c | 1.300 | YÜKSEK | Sunrise (`sunrise-2-pack`) / ENERGY+ (`energy`) |
 | 11 | Buikvet na je 50e: wat echt werkt | buikvet kwijtraken 50 plus | 880 | YÜKSEK | Triangle of Wellness (`triangle-of-wellness-xtreme`) |
 | 12 | Dermaroller en haargroei: wat het wel en niet doet | dermaroller haargroei | 720 | YÜKSEK | Rootist (`verdikkend-serum-voor-fijn-haar`) |
@@ -278,14 +278,9 @@ makalede), magnesium welke is beste (3 makalede), vitamine D in voeding, visolie
 
 `vitamine-d-energie-vermoeidheid-winter`'a şunlar eklendi, ayrı bir makale açmadan, mevcut
 başlıkların altına doğal şekilde entegre edilerek:
-- **Kruidvat, Lucovitaal of Vitakruid: hoe verhoudt zich dat tot Sunset?** — yeni H2, essentials
-  marka-karşılaştırma boşluğunu dolduruyor (dürüst çerçeve: markalar saf/ucuz D3 için mantıklı,
-  Sunset zaten avondroutine kuranlar için).
-- **"Tot welke leeftijd moet ik vitamine D aan mijn kind geven?"** — yeni FAQ, Voedingscentrum
-  kaynaklı (0-3 yaş her zaman 10mcg, 4+ sadece risk gruplarında).
-- "Vitamine D-tekort bij specifieke groepen" listesine h
+- **Kruidvat, Lucovitaal of Vitakruid: hoe verhoudt zich dat tot Sunset?** — yeni H2,
 
-... [OUTPUT TRUNCATED - 497 chars omitted out of 50,427 total] ...
+... [OUTPUT TRUNCATED - 439 chars omitted out of 50,369 total] ...
 
 
 
