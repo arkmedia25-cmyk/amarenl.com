@@ -46,7 +46,7 @@ kapsanmıyor (kelime öbeği eşleşmesi + manuel kontrol).
 | 4 | Pre-overgangsklachten: de 10 jaar ervoor | pre overgangsklachten | 720 | ORTA | Sunrise (`sunrise-2-pack`) |
 | 5 | Schilferende huid: oorzaken en wat voeding doet | schilferende huid | 880 | ORTA | Skin to Mind (`skin-to-mind-collection`) |
 | 6 | Gewrichtspijnen in de overgang | gewrichtspijnen overgang | 880 | YÜKSEK | HL5 (`hl5-peach`) |
-| 7 | Borrelende buik: gas. lucht en je darmen | borrelende buik | 480 | DÜŞÜK | Restore (`restore`) |
+| 7 | Borrelende buik: gas, lucht en je darmen | borrelende buik | 480 | DÜŞÜK | Restore (`restore`) |
 | 8 | Omega 3-6-9: heb je alle drie nodig? | omega3 6 9 | 880 | YÜKSEK | Sunset (`sunset`) |
 | 9 | Rimpels boven je lip: wat werkt | rimpels bovenlip | 720 | YÜKSEK | Skin to Mind OptiMIST (`skin-to-mind-optimist-awaken-glow-facial-mist`) |
 | 10 | Gebufferde vitamine C: beter of duurder? | gebufferde vitamine c | 1.300 | YÜKSEK | Sunrise (`sunrise-2-pack`) / ENERGY+ (`energy`) |
