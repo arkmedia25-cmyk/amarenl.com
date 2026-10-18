@@ -38,21 +38,21 @@ orthica, vitakruid, holland & barrett, davitamon …) hiç kullanılmaz.
 → toplam **227 makale / 1,68M karakter** gövde metni tarandı; aşağıdaki 13 konunun hiçbiri bu korpusta
 kapsanmıyor (kelime öbeği eşleşmesi + manuel kontrol).
 
-| # | Onderwerp | Ölçülen keyword | Hacim/ay | Rekabet | Ürün |
+| # | Onderwerp | Ölçülen keyword | Hacim/ay | Rekabet | Ürün (doğrulanmış slug) |
 |---|---|---|---|---|---|
-| 1 | Visceraal vet: waarom buikvet meer is dan cosmetiek | visceraal vet | 3.600 | DÜŞÜK | Triangle of Wellness |
-| 2 | Telogene haaruitval: haar dat maanden later uitvalt | telogene haaruitval | 1.300 | DÜŞÜK | Rootist Densifying |
-| 3 | Vervroegde overgang: de overgang vóór je 40e | vervroegde overgang | 720 | DÜŞÜK | Sunrise |
-| 4 | Pre-overgangsklachten: de 10 jaar ervoor | pre overgangsklachten | 720 | ORTA | Sunrise |
-| 5 | Schilferende huid: oorzaken en wat voeding doet | schilferende huid | 880 | ORTA | Skin to Mind |
-| 6 | Gewrichtspijnen in de overgang | gewrichtspijnen overgang | 880 | YÜKSEK | HL5 |
-| 7 | Borrelende buik: gas, lucht en je darmen | borrelende buik | 480 | DÜŞÜK | Restore |
-| 8 | Omega 3-6-9: heb je alle drie nodig? | omega3 6 9 | 880 | YÜKSEK | Sunset |
-| 9 | Rimpels boven je lip: wat werkt | rimpels bovenlip | 720 | YÜKSEK | Skin to Mind OptiMIST |
-| 10 | Gebufferde vitamine C: beter of duurder? | gebufferde vitamine c | 1.300 | YÜKSEK | Sunrise / ENERGY+ |
-| 11 | Buikvet na je 50e: wat echt werkt | buikvet kwijtraken 50 plus | 880 | YÜKSEK | Triangle of Wellness |
-| 12 | Dermaroller en haargroei: wat het wel en niet doet | dermaroller haargroei | 720 | YÜKSEK | Rootist |
-| 13 | Spierbehoud na je 40e: eiwit + kracht | spieren bovenbeen | 2.400 | DÜŞÜK | FIT20 / Origin |
+| 1 | Visceraal vet: waarom buikvet meer is dan cosmetiek | visceraal vet | 3.600 | DÜŞÜK | Triangle of Wellness (`triangle-of-wellness-xtreme`) |
+| 2 | Telogene haaruitval: haar dat maanden later uitvalt | telogene haaruitval | 1.300 | DÜŞÜK | Rootist Densifying (`haarverdikkende-collectie-voor-volume`) |
+| 3 | Vervroegde overgang: de overgang vóór je 40e | vervroegde overgang | 720 | DÜŞÜK | Sunrise (`sunrise-2-pack`) |
+| 4 | Pre-overgangsklachten: de 10 jaar ervoor | pre overgangsklachten | 720 | ORTA | Sunrise (`sunrise-2-pack`) |
+| 5 | Schilferende huid: oorzaken en wat voeding doet | schilferende huid | 880 | ORTA | Skin to Mind (`skin-to-mind-collection`) |
+| 6 | Gewrichtspijnen in de overgang | gewrichtspijnen overgang | 880 | YÜKSEK | HL5 (`hl5-peach`) |
+| 7 | Borrelende buik: gas. lucht en je darmen | borrelende buik | 480 | DÜŞÜK | Restore (`restore`) |
+| 8 | Omega 3-6-9: heb je alle drie nodig? | omega3 6 9 | 880 | YÜKSEK | Sunset (`sunset`) |
+| 9 | Rimpels boven je lip: wat werkt | rimpers bovenlip | 720 | YÜKSEK | Skin to Mind OptiMIST (`skin-to-mind-optimist-awaken-glow-facial-mist`) |
+| 10 | Gebufferde vitamine C: beter of duurder? | gebufferde vitamine c | 1.300 | YÜKSEK | Sunrise (`sunrise-2-pack`) / ENERGY+ (`energy`) |
+| 11 | Buikvet na je 50e: wat echt werkt | buikvet kwijtraken 50 plus | 880 | YÜKSEK | Triangle of Wellness (`triangle-of-wellness-xtreme`) |
+| 12 | Dermaroller en haargroei: wat het wel en niet doet | dermaroller haargroei | 720 | YÜKSEK | Rootist (`verdikkend-serum-voor-fijn-haar`) |
+| 13 | Spierbehoud na je 40e: eiwit + kracht | spieren bovenbeen | 2.400 | DÜŞÜK | HL5 (`hl5-2-pack`) / ENERGY+ (`energy`) |
 
 **Volgorde = prioriteitsscore (hoog → laag).** Schrijf ze in deze volgorde; #1-4 zijn de sterkste
 "lage concurrentie"-kansen. Productfeit-check blijft verplicht (`data/products/*.json`), EFSA-formulering
@@ -283,15 +283,10 @@ başlıkların altına doğal şekilde entegre edilerek:
   Sunset zaten avondroutine kuranlar için).
 - **"Tot welke leeftijd moet ik vitamine D aan mijn kind geven?"** — yeni FAQ, Voedingscentrum
   kaynaklı (0-3 yaş her zaman 10mcg, 4+ sadece risk gruplarında).
-- "Vitamine D-tekort bij specifieke groepen" listesine her grup için mcg dozu eklendi (Voedingscentrum
-  kaynaklı: 50-69 kadın 10mcg, 70+ herkes 20mcg dahil — önceden eksikti).
+- "Vitamine D-tekort bij specifieke groepen" listesine h
 
-**⚠️ Açık bulgu, henüz düzeltilmedi (kullanıcı erteledi 10-09):** Sunrise'a demir/magnezyum/çinko/D3
-atfeden yanlış iddialar sitede en az 13 yerde daha var (`ijzer-tekort-vermoeidheid-supplement-nederland`
-makalesinin tamamı dahil — başlığı bile yanlış öncüle dayanıyor). Detay: memory
-`project_sunrise_f
+... [OUTPUT TRUNCATED - 497 chars omitted out of 50,427 total] ...
 
-... [OUTPUT TRUNCATED - 3,419 chars omitted out of 53,347 total] ...
 
 
  voeding, magnesium in voedingsmiddelen, magnesium en voeding, magnesium in/welke voeding | ~30.000 (toplam varyant) | Orta | essentials — Sunrise | ✅ **02-09 doğrulandı: ZATEN VAR — YAZMA.** `waar-zit-magnesium-in-voedingsbronnen-supplementen-gids` (02-09'da pillar'a genişletildi — besin kaynakları + günlük öğün planı + doz tablosu) bunu tam kapsıyor. |
