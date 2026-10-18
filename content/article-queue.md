@@ -54,6 +54,10 @@ kapsanmıyor (kelime öbeği eşleşmesi + manuel kontrol).
 | 12 | Dermaroller en haargroei: wat het wel en niet doet | dermaroller haargroei | 720 | YÜKSEK | Rootist (`verdikkend-serum-voor-fijn-haar`) |
 | 13 | Spierbehoud na je 40e: eiwit + kracht | spieren bovenbeen | 2.400 | DÜŞÜK | HL5 (`hl5-2-pack`) / ENERGY+ (`energy`) |
 
+**🌍 Landen (18-10-2026 ölçümü):** aynı kelimeler Belçika'da (nl, loc 2056) NL hacminin ~%20-25'i:
+`visceraal vet` 880, `spieren bovenbeen` 880 (orta), `telogene haaruitval` 320, `schilferende huid` 210.
+Ayrı BE makalesi gerekmiyor — başlıklar nl-NL kalır, `hreflang nl-BE` (ve nl-BE hedefleme) yeterli.
+
 **Volgorde = prioriteitsscore (hoog → laag).** Schrijf ze in deze volgorde; #1-4 zijn de sterkste
 "lage concurrentie"-kansen. Productfeit-check blijft verplicht (`data/products/*.json`), EFSA-formulering
 alleen, geen genees-/behandelclaims.
@@ -280,11 +284,9 @@ makalede), magnesium welke is beste (3 makalede), vitamine D in voeding, visolie
 başlıkların altına doğal şekilde entegre edilerek:
 - **Kruidvat, Lucovitaal of Vitakruid: hoe verhoudt zich dat tot Sunset?** — yeni H2,
 
-... [OUTPUT TRUNCATED - 439 chars omitted out of 50,369 total] ...
+... [OUTPUT TRUNCATED - 99 chars omitted out of 50,030 total] ...
 
-
-
- voeding, magnesium in voedingsmiddelen, magnesium en voeding, magnesium in/welke voeding | ~30.000 (toplam varyant) | Orta | essentials — Sunrise | ✅ **02-09 doğrulandı: ZATEN VAR — YAZMA.** `waar-zit-magnesium-in-voedingsbronnen-supplementen-gids` (02-09'da pillar'a genişletildi — besin kaynakları + günlük öğün planı + doz tablosu) bunu tam kapsıyor. |
+ingsmiddelen, magnesium en voeding, magnesium in/welke voeding | ~30.000 (toplam varyant) | Orta | essentials — Sunrise | ✅ **02-09 doğrulandı: ZATEN VAR — YAZMA.** `waar-zit-magnesium-in-voedingsbronnen-supplementen-gids` (02-09'da pillar'a genişletildi — besin kaynakları + günlük öğün planı + doz tablosu) bunu tam kapsıyor. |
 | ~~Q3~~ | ~~Magnesium Hoeveel Per Dag? Dosering & Veiligheid~~ | magnesium hoeveel per dag | 5.000 | Orta | essentials — Sunrise | ✅ **02-09 doğrulandı: ZATEN VAR — YAZMA.** Aynı pillar'a (`waar-zit-magnesium-in...`) 02-09'da birleştirildi — nüfus-grubu bazlı doz tablosu + RIVM istatistiği dahil. |
 | Q4 | Magnesium Vormen Vergelijken: Tauraat, Orotaat, Citraat, Glycinaat | magnesium tauraat, magnesiumorotaat | 10.000 (toplam) | Yüksek | essentials — Sunrise, Sleep+ | 🟡 **02-09 doğrulandı: KISMEN VAR.** `magnesium-supplement-kopen-welke-vorm-nodig` zaten tauraat/citraat/glycinaat/bisglycinaat kapsıyor — sadece **orotaat** eksik. Sıfırdan makale YAZMA, mevcut makaleye küçük bir orotaat bölümü ekle. |
 | ~~Q5~~ | ~~Collageen Tabletten/Poeder vs Vloeibaar Collageen: Wat Werkt Beter?~~ | collageentabletten, collageenpillen | 10.000 (toplam) | Yüksek | schoonheid — HL5 | ✅ **02-09 doğrulandı: ZATEN VAR — YAZMA.** `collageen-poeder-vs-pillen-vergelijking` (820 kelime) poeder/pillen/vloeibaar üçlü karşılaştırmasını, %90 vs %30 emilim istatistiğini ve HL5 konumlandırmasını tam kapsıyor; pillar'a (`vloeibaar-collageen-hl5-huid-haar-nagels`) doğru linkleniyor. |
