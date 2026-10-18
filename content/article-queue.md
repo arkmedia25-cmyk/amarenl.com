@@ -1,5 +1,7 @@
 # AmareNL Article Queue — SEO-GEO-AEO İçerik Planı
-> Laatste update: 2026-09-17 (10 Eylül ham verisi 121 mevcut makaleyle [77 `data/extra-articles.json`
+> Laatste update: 2026-10-18 (DataForSEO-ölçümü + 13 nieuwe gemeten onderwerpen; de dagelijkse
+> Telegram-artikelqueue is **gepensioneerd**, enige schrijver is de CI-workflow op 4 artikelen/week)
+> Vorige update: 2026-09-17 (10 Eylül ham verisi 121 mevcut makaleyle [77 `data/extra-articles.json`
 > + 44 `lib/blog.ts`] tek tek çapraz kontrol edildi, FR (AmareFR) kuyruğuyla aynı standarda —
 > checkbox + kanıt bazlı dedup — getirildi. Bkz. "🆕 17 EYLÜL 2026" bölümü hemen altta.)
 > Önceki update: 2026-09-10 (gerçek Google Ads Keyword Planner verisi, NL, 7 kategori — bkz.
@@ -10,7 +12,9 @@
 > Status: 20/20 TIER ✅ | 3 vergelijkingsartikelen ✅ | NIEUWE BATCH: 15/15 ✅ | **BATCH 3: 0/6 ⏳** | Totaal 74+ artikelen live
 > Deploy: Vercel production ✅
 > Metodoloji: NL search volume × commercial intent × product match × GEO query fan-out
-> Yayın takvimi: 2 günde bir (cron — article-scheduler skill)
+> Yayın takvimi: **4 artikelen per week** (CI `vitaalroute-article-claude.yml`, ma/di/do/za 12:57 UTC).
+> Eén schrijver: deze queue + CI. Geen tweede writer naar `data/extra-articles.json`.
+> Kwaliteitscontrole: `~/.hermes/scripts/queue_watchdog.py` (dagelijks 08:00, alleen melding bij actie)
 > Bron: vitaalroute-agent-keywords.md + keywords-onderzoek.md + GEO/AIO audit (juli 2026)
 
 ---
@@ -285,61 +289,10 @@ başlıkların altına doğal şekilde entegre edilerek:
 **⚠️ Açık bulgu, henüz düzeltilmedi (kullanıcı erteledi 10-09):** Sunrise'a demir/magnezyum/çinko/D3
 atfeden yanlış iddialar sitede en az 13 yerde daha var (`ijzer-tekort-vermoeidheid-supplement-nederland`
 makalesinin tamamı dahil — başlığı bile yanlış öncüle dayanıyor). Detay: memory
-`project_sunrise_false_claims_flagged_2026_09_10`. Bir sonraki oturum bunu ele almalı.
+`project_sunrise_f
 
-### Vitamine C — uygulandı (10 Eylül 2026)
+... [OUTPUT TRUNCATED - 3,419 chars omitted out of 53,347 total] ...
 
-`natuurlijke-vitamine-c-vs-synthetisch-vergelijking`'e eklendi:
-- **Kruidvat, Lucovitaal of Vitakruid: hoe verhouden die zich tot Sunrise?** — yeni H2, gerçek
-  ürün verisiyle (Kruidvat/Lucovitaal vitamine C-1000 = aynı L-ascorbinezuur formu, sadece çok
-  daha yüksek doz ve ucuz).
-
-**Yan düzeltme:** aynı makalenin "Amare Sunrise: natuurlijke vitamine C in context" bölümü
-Sunrise'ın vitamine C'sinin amla/yaban mersininden "doğal" geldiğini iddia ediyordu — gerçekte
-ayrı bir L-ascorbinezuur (sentetik form) satırı, amla sadece 1mg'lık iz miktarda ayrı bileşen.
-Makalenin kendi "doğal vs sentetik" tanımına göre çelişkiliydi, düzeltildi. Ayrıca 2 yerde (kendi
-düzeltmemde yanlışlıkla eklediğim dahil) Sunrise'a demir atfedilmişti — bkz. yukarıdaki açık
-bulgu notu, bunlar da düzeltildi ama tüm site taraması yapılmadı.
-
-**Yan bulgu — kritik düzeltme:** makale yanlışlıkla Sunrise'ın D3 içerdiğini iddia ediyordu
-(gerçek: Sunrise'da D yok, kaynak Sunset'tir, 6µg). Bu düzeltme genişleyip **Sunset'in K2/kalsiyum/
-magnezyum/algenolie içerdiği yönünde sitede 13 farklı yerde tekrarlanan yanlış iddia** ortaya
-çıkardı (biri "Triangle of Wellness Xtreme vegan'a uygun" gibi tehlikeli bir FAQ yanıtıydı — Sunset
-gerçekte balık yağı içeriyor, vegan değil). Hepsi amare.com'un canlı ürün sayfasına karşı
-doğrulanıp düzeltildi. Detay: memory `project_sunset_false_claims_fixed_2026_09_10`.
-
----
-
-Aşağıdaki **"24 AĞUSTOS 2026 — Anahtar Kelime Fırsat Araştırması"** bölümü, en güncel ve en
-kapsamlı veriye dayanıyor (GSC 6 ay + son 28 gün, Google Ads Keyword Planner, canlı SERP
-kontrolü, + bu repodaki 81 mevcut makaleyle çapraz kontrol). **Bu bölümü, aşağıdaki eski
-bölümlerin (Mayıs–Temmuz 2026) önüne koy.**
-
-Eski bölümler (30 GÜNLÜK PLAN, NIEUWE BATCH, Priority Matrix, 12 Artikelen Takvimi) artık
-kısmen güncelliğini yitirmiş olabilir — 21-24 Ağustos'ta büyük bir konsolidasyon yapıldı
-(kolajen kümesi 13→birleştirildi, 9 duplicate-content kümesi temizlendi, ~180 makaleden 81'e
-düşüldü). Bir ⏳ satırı seçmeden önce **mutlaka `data/extra-articles.json`'da o slug'ın hâlâ
-yok olduğunu doğrula** — çoğu slug değişti veya makale artık başka bir sayfaya birleşti.
-Emin değilsen, o satırı atla ve bu yeni bölümdeki maddeleri tercih et.
-
----
-
-## 🆕 24 AĞUSTOS 2026 — Anahtar Kelime Fırsat Araştırması (Öncelikli Kuyruk)
-
-> Kaynak: GSC (6 ay + son 28 gün) + Google Ads Keyword Planner (NL) + canlı SERP kontrolü +
-> `data/extra-articles.json` çapraz kontrolü (81 makale, 24 Ağustos itibariyle).
-> Rapor: "AmareNL — SEO Fırsat Araştırması" (634 aday tarandı, 592 gerçekçi fırsat, 26 YMYL
-> nedeniyle hariç tutuldu). Tam liste: `amarenl-keyword-planner-analizi.xlsx` (Top Fırsatlar +
-> Tüm Liste sekmeleri).
->
-> **ÖNEMLİ — yayın hızı kararı (Musa, 24 Ağustos):** Cron GÜNLÜK olarak kontrol eder ama
-> GÜNLÜK YAYIN yapmaz — mevcut ~2 günde bir / haftada 3 yayın temposu korunuyor (Soro-analizi
-> ve Ağustos 2026 core update "scaled content abuse" riski nedeniyle bilinçli olarak yavaş
-> tutuluyor, bkz. `soro-vs-amarenl-analiz.md`). Cron her gün çalışır, önce kota/kalite
-> şartlarını kontrol eder, uygunsa kuyruktan TEK bir görev seçer (yeni yazı / mevcut sayfa
-> güçlendirme / küme birleştirme) — uygun değilse o gün hiçbir şey yapmadan çıkar. De
-
-... [OUTPUT TRUNCATED - 1,320 chars omitted out of 51,248 total] ...
 
  voeding, magnesium in voedingsmiddelen, magnesium en voeding, magnesium in/welke voeding | ~30.000 (toplam varyant) | Orta | essentials — Sunrise | ✅ **02-09 doğrulandı: ZATEN VAR — YAZMA.** `waar-zit-magnesium-in-voedingsbronnen-supplementen-gids` (02-09'da pillar'a genişletildi — besin kaynakları + günlük öğün planı + doz tablosu) bunu tam kapsıyor. |
 | ~~Q3~~ | ~~Magnesium Hoeveel Per Dag? Dosering & Veiligheid~~ | magnesium hoeveel per dag | 5.000 | Orta | essentials — Sunrise | ✅ **02-09 doğrulandı: ZATEN VAR — YAZMA.** Aynı pillar'a (`waar-zit-magnesium-in...`) 02-09'da birleştirildi — nüfus-grubu bazlı doz tablosu + RIVM istatistiği dahil. |
