@@ -15,6 +15,54 @@
 
 ---
 
+## 🆕 18 OKTOBER 2026 — DataForSEO ile ÖLÇÜLMÜŞ kuyruk (tek yazar, haftada 4)
+
+**Neden bu bölüm:** 18-10-2026'da günlük Telegram makale kuyruğu (51/51 bitti) **emekliye ayrıldı** ve
+`vitaalroute.nl` CI makalesi **Pzt/Sal/Per/Cmt = haftada 4**'e çıkarıldı. Böylece siteye yazan **tek**
+hat bu iş akışı; `data/extra-articles.json`'a ikinci bir yazar yok (Product SEO Orkestratör cron'u da
+duraklatıldı).
+
+**Ölçüm kaynağı:** DataForSEO Google Ads `keywords_for_keywords` + `search_volume`, location 2528 (NL),
+dil `nl`, 18-10-2026. Rakamlar gerçek aylık ortalamadır (≈ değil). Maliyet: 10 kelime ≈ $0,09.
+
+**Öncelik kuralı (bu sırayla):** 1) DÜŞÜK rekabet & hacim ≥500 → 2) ORTA rekabet & hacim ≥1.000 →
+3) YÜKSEK rekabet yalnızca hacim ≥5.000 **ve** kümede yazılı içerik varsa. Skor = hacim × (DÜŞÜK 1,6 /
+ORTA 1,15 / YÜKSEK 0,8). Aynı kümeden en fazla 2-3 makale; rakip/marka kelimeleri (kruidvat, lucovitaal,
+orthica, vitakruid, holland & barrett, davitamon …) hiç kullanılmaz.
+
+**Dedupe kanıtı:** 133 canlı `/blogs/nieuws/*` URL'si + `data/extra-articles.json` (94) + `content/blog/*.mdx`
+→ toplam **227 makale / 1,68M karakter** gövde metni tarandı; aşağıdaki 13 konunun hiçbiri bu korpusta
+kapsanmıyor (kelime öbeği eşleşmesi + manuel kontrol).
+
+| # | Onderwerp | Ölçülen keyword | Hacim/ay | Rekabet | Ürün |
+|---|---|---|---|---|---|
+| 1 | Visceraal vet: waarom buikvet meer is dan cosmetiek | visceraal vet | 3.600 | DÜŞÜK | Triangle of Wellness |
+| 2 | Telogene haaruitval: haar dat maanden later uitvalt | telogene haaruitval | 1.300 | DÜŞÜK | Rootist Densifying |
+| 3 | Vervroegde overgang: de overgang vóór je 40e | vervroegde overgang | 720 | DÜŞÜK | Sunrise |
+| 4 | Pre-overgangsklachten: de 10 jaar ervoor | pre overgangsklachten | 720 | ORTA | Sunrise |
+| 5 | Schilferende huid: oorzaken en wat voeding doet | schilferende huid | 880 | ORTA | Skin to Mind |
+| 6 | Gewrichtspijnen in de overgang | gewrichtspijnen overgang | 880 | YÜKSEK | HL5 |
+| 7 | Borrelende buik: gas, lucht en je darmen | borrelende buik | 480 | DÜŞÜK | Restore |
+| 8 | Omega 3-6-9: heb je alle drie nodig? | omega3 6 9 | 880 | YÜKSEK | Sunset |
+| 9 | Rimpels boven je lip: wat werkt | rimpels bovenlip | 720 | YÜKSEK | Skin to Mind OptiMIST |
+| 10 | Gebufferde vitamine C: beter of duurder? | gebufferde vitamine c | 1.300 | YÜKSEK | Sunrise / ENERGY+ |
+| 11 | Buikvet na je 50e: wat echt werkt | buikvet kwijtraken 50 plus | 880 | YÜKSEK | Triangle of Wellness |
+| 12 | Dermaroller en haargroei: wat het wel en niet doet | dermaroller haargroei | 720 | YÜKSEK | Rootist |
+| 13 | Spierbehoud na je 40e: eiwit + kracht | spieren bovenbeen | 2.400 | DÜŞÜK | FIT20 / Origin |
+
+**Volgorde = prioriteitsscore (hoog → laag).** Schrijf ze in deze volgorde; #1-4 zijn de sterkste
+"lage concurrentie"-kansen. Productfeit-check blijft verplicht (`data/products/*.json`), EFSA-formulering
+alleen, geen genees-/behandelclaims.
+
+**🚫 Gemeten maar bewust NIET in de kuyruk (YMYL — niet automatisch schrijven):** seborroïsch eczeem
+(14.800, DÜŞÜK), LDL-cholesterolwaarden (12.100, DÜŞÜK), systolische bloeddruk (2.400, DÜŞÜK). Medische
+diagnose/behandeling-intentie; alleen met handmatige redactie en artsverwijzing.
+
+**Kwartaal-verversing:** deze tabel 3 maanden na dato opnieuw meten (`~/.hermes/scripts/kw_queue.py`)
+voordat de kuyruk leegloopt — niet wachten tot 0/0.
+
+---
+
 ## ⚠️ OKUMA SIRASI — Bu bölüm en yeni ve en güvenilir olandır
 
 **17 Eylül 2026 itibariyle bu doğrulama yapıldı** — bkz. hemen altındaki "🆕 17 EYLÜL 2026"
@@ -289,21 +337,11 @@ Emin değilsen, o satırı atla ve bu yeni bölümdeki maddeleri tercih et.
 > ve Ağustos 2026 core update "scaled content abuse" riski nedeniyle bilinçli olarak yavaş
 > tutuluyor, bkz. `soro-vs-amarenl-analiz.md`). Cron her gün çalışır, önce kota/kalite
 > şartlarını kontrol eder, uygunsa kuyruktan TEK bir görev seçer (yeni yazı / mevcut sayfa
-> güçlendirme / küme birleştirme) — uygun değilse o gün hiçbir şey yapmadan çıkar. Detaylar
-> için `.github/workflows/vitaalroute-article-claude.yml` ve bu görevin Claude Code prompt'una bak.
+> güçlendirme / küme birleştirme) — uygun değilse o gün hiçbir şey yapmadan çıkar. De
 
-> **02-09-2026 SONUÇ:** Q1-Q9'un tamamı tek tek doğrulandı. Sonuç: **hiçbiri sıfırdan yeni makale
-> gerektirmiyor** — Q1, Q2, Q3, Q5, Q6, Q7, Q9 zaten tam kapsanıyor; Q4 ve Q8 sadece mevcut
-> makaleye küçük birer ek gerektiriyor (orotaat / voetenbad). Bu öncelik kuyruğu fiilen tükenmiş
-> durumda — bir sonraki oturum yeni bir keyword-fırsat taraması yapmadan otomatik pipeline'ı
-> "yeni yazı" moduna sokmamalı (bkz. section A'nın kendi kanibalizasyon-riski uyarısı).
+... [OUTPUT TRUNCATED - 1,320 chars omitted out of 51,248 total] ...
 
-### A. Öncelik 1 — Yeni yazı (gerçek, doğrulanmış boşluk — kanibalizasyon riski yok)
-
-| # | Konu / Başlık Önerisi | Hedef Anahtar Kelimeler (birleştirilmiş varyantlar) | Hacim (top.) | Ads-Rekabet* | Kategori/Ürün | Not |
-|---|---|---|---|---|---|---|
-| ~~Q1~~ | ~~Beste Probiotica Kopen 2026: Complete Vergelijkingsgids~~ | probiotica beste, best probiotica, probiotica welke beste, beste probiotica | ~20.000 | Yüksek | darmen — MentaBiotics | ✅ **02-09 doğrulandı: ZATEN VAR — YAZMA.** `beste-probiotica-2026-kopen-vergelijken` bu açıyı tam kapsıyor (aynı gün ayrıca zenginleştirildi: stam-tablosu + saklama FAQ'ı eklendi). |
-| ~~Q2~~ | ~~Magnesium in Voeding: Welke Voedingsmiddelen Bevatten Magnesium?~~ | voeding met magnesium, magnesium voeding, magnesium in voedingsmiddelen, magnesium en voeding, magnesium in/welke voeding | ~30.000 (toplam varyant) | Orta | essentials — Sunrise | ✅ **02-09 doğrulandı: ZATEN VAR — YAZMA.** `waar-zit-magnesium-in-voedingsbronnen-supplementen-gids` (02-09'da pillar'a genişletildi — besin kaynakları + günlük öğün planı + doz tablosu) bunu tam kapsıyor. |
+ voeding, magnesium in voedingsmiddelen, magnesium en voeding, magnesium in/welke voeding | ~30.000 (toplam varyant) | Orta | essentials — Sunrise | ✅ **02-09 doğrulandı: ZATEN VAR — YAZMA.** `waar-zit-magnesium-in-voedingsbronnen-supplementen-gids` (02-09'da pillar'a genişletildi — besin kaynakları + günlük öğün planı + doz tablosu) bunu tam kapsıyor. |
 | ~~Q3~~ | ~~Magnesium Hoeveel Per Dag? Dosering & Veiligheid~~ | magnesium hoeveel per dag | 5.000 | Orta | essentials — Sunrise | ✅ **02-09 doğrulandı: ZATEN VAR — YAZMA.** Aynı pillar'a (`waar-zit-magnesium-in...`) 02-09'da birleştirildi — nüfus-grubu bazlı doz tablosu + RIVM istatistiği dahil. |
 | Q4 | Magnesium Vormen Vergelijken: Tauraat, Orotaat, Citraat, Glycinaat | magnesium tauraat, magnesiumorotaat | 10.000 (toplam) | Yüksek | essentials — Sunrise, Sleep+ | 🟡 **02-09 doğrulandı: KISMEN VAR.** `magnesium-supplement-kopen-welke-vorm-nodig` zaten tauraat/citraat/glycinaat/bisglycinaat kapsıyor — sadece **orotaat** eksik. Sıfırdan makale YAZMA, mevcut makaleye küçük bir orotaat bölümü ekle. |
 | ~~Q5~~ | ~~Collageen Tabletten/Poeder vs Vloeibaar Collageen: Wat Werkt Beter?~~ | collageentabletten, collageenpillen | 10.000 (toplam) | Yüksek | schoonheid — HL5 | ✅ **02-09 doğrulandı: ZATEN VAR — YAZMA.** `collageen-poeder-vs-pillen-vergelijking` (820 kelime) poeder/pillen/vloeibaar üçlü karşılaştırmasını, %90 vs %30 emilim istatistiğini ve HL5 konumlandırmasını tam kapsıyor; pillar'a (`vloeibaar-collageen-hl5-huid-haar-nagels`) doğru linkleniyor. |
