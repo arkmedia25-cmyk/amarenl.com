@@ -379,9 +379,11 @@ export default async function BlogPostPage({ params }: Props) {
         <div className="container-page max-w-5xl">
           <h2 className="text-3xl font-bold text-[var(--color-text)] mb-12 text-center font-cormorant">Gerelateerde Artikelen</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            {getAllBlogPosts()
-              .filter((p) => p.slug !== post.slug && p.category === post.category)
-              .slice(0, 3)
+            {[
+              ...getAllBlogPosts().filter((p) => p.slug !== post.slug && p.category === post.category),
+              ...getAllBlogPosts().filter((p) => p.slug !== post.slug && p.category !== post.category),
+            ]
+              .slice(0, 6)
               .map((rp) => (
                 <Link
                   key={rp.slug}
@@ -394,6 +396,14 @@ export default async function BlogPostPage({ params }: Props) {
                   <span className="text-xs font-bold text-[var(--color-primary)] uppercase tracking-widest">Lees Verder →</span>
                 </Link>
               ))}
+          </div>
+          <div className="mt-12 text-center">
+            <Link
+              href="/blogs/nieuws"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[var(--color-border)] text-xs font-bold uppercase tracking-widest text-[var(--color-primary)] hover:bg-white transition-colors"
+            >
+              Alle artikelen bekijken →
+            </Link>
           </div>
         </div>
       </section>
