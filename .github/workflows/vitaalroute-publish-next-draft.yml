@@ -1,0 +1,70 @@
+name: VitaalRoute — Volgend concept publiceren (1 per publicatiedag)
+
+# Waarom dit bestaat:
+# Er staan meerdere concept-PR's open (#96 met 1 artikel, #98 met 6). Ze in één
+# keer mergen zou 7 artikelen op één dag publiceren. Deze workflow publiceert
+# **één** artikel per publicatiedag (ma/di/do/za), zet de publicatiedatum op
+# vandaag en pusht naar main. De rest blijft in de wachtrij voor de volgende dag.
+#
+# De site verbergt artikelen met een toekomstdatum (lib/blog.ts → isPublished),
+# dus de datum bepaalt wanneer een artikel online komt.
+#
+# Zolang deze workflow de wachtrij leegt, staat de generatie-workflow
+# (vitaalroute-article-claude.yml) uit — anders komen er twee artikelen per dag.
+# Zodra de wachtrij leeg is, zet deze workflow de generatie automatisch weer aan.
+
+on:
+  schedule:
+    - cron: "7 13 * * 1,2,4,6" # 15:07 Amsterdam, ná het generatie-slot van 12:57
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Alleen tonen welk artikel gepubliceerd zou worden"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  pull-requests: write
+  actions: write
+
+concurrency:
+  group: vitaalroute-publish-next-draft
+  cancel-in-progress: false
+
+jobs:
+  publish-next:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - name: Git-identiteit
+        run: |
+          git config user.name "VitalRoute Publish Bot"
+          git config user.email "bot@vitaalroute.nl"
+
+      - name: Toon wat er gepubliceerd zou worden
+        if: inputs.dry_run == true
+        run: python3 scripts/publish_next_draft.py --dry-run
+
+      - name: Publiceer één artikel
+        if: inputs.dry_run != true
+        run: python3 scripts/publish_next_draft.py
+
+      - name: Wachtrij leeg? Zet de generatie weer aan
+        if: inputs.dry_run != true
+        run: |
+          set -euo pipefail
+          OUT=$(python3 scripts/publish_next_draft.py --dry-run)
+          echo "$OUT"
+          if echo "$OUT" | grep -q "Wachtrij leeg"; then
+            gh workflow enable vitaalroute-article-claude.yml || true
+            echo "- wachtrij leeg → generatie weer aangezet" >> "$GITHUB_STEP_SUMMARY"
+          fi
