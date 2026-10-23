@@ -53,6 +53,18 @@ export default function BlogPreview() {
                 <div className="text-[10px] font-bold text-[var(--color-primary)] uppercase tracking-widest mb-3">
                   {post.category}
                 </div>
+                {post.date && (
+                  <time
+                    dateTime={post.date}
+                    className="block text-[10px] font-bold uppercase tracking-widest text-[var(--color-text-muted)] mb-2"
+                  >
+                    {new Date(post.date).toLocaleDateString("nl-NL", {
+                      day: "numeric",
+                      month: "long",
+                      year: "numeric",
+                    })}
+                  </time>
+                )}
                 <h3 className="text-xl font-bold font-cormorant text-[var(--color-text)] mb-3 group-hover:text-[var(--color-primary)] transition-colors line-clamp-2">
                   {post.title}
                 </h3>

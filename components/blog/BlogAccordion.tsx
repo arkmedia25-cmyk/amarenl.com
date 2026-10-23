@@ -31,6 +31,18 @@ export default function BlogAccordion({ posts }: { posts: BlogPost[] }) {
                 <h3 className="text-sm md:text-base font-semibold text-[var(--color-text)] group-hover:text-[var(--color-primary)] transition-colors pr-4">
                   {post.title}
                 </h3>
+                {post.date && (
+                  <time
+                    dateTime={post.date}
+                    className="block mt-1 text-[10px] font-bold uppercase tracking-widest text-[var(--color-text-muted)]"
+                  >
+                    {new Date(post.date).toLocaleDateString("nl-NL", {
+                      day: "numeric",
+                      month: "long",
+                      year: "numeric",
+                    })}
+                  </time>
+                )}
               </div>
               <ChevronDown
                 size={18}

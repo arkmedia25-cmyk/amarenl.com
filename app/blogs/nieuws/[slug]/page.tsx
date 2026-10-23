@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { getBlogPostBySlug, getAllBlogPosts, getProductLinksForArticle, linkifyProductMentions } from "@/lib/blog";
-import { ArrowLeft, Tag, Share2, ExternalLink, ShoppingCart, Gift, ShieldCheck } from "lucide-react";
+import { ArrowLeft, Tag, Share2, ExternalLink, ShoppingCart, Gift, ShieldCheck, CalendarDays } from "lucide-react";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import { SITE_URL, SITE_NAME } from "@/lib/site-config";
 import {
@@ -195,6 +195,19 @@ export default async function BlogPostPage({ params }: Props) {
             <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-[var(--color-text-muted)]">
               Door {post.author || `${SITE_NAME} Redactie`}
             </div>
+            {post.date && (
+              <time
+                dateTime={post.date}
+                className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-[var(--color-text-muted)]"
+              >
+                <CalendarDays size={12} />
+                {new Date(post.date).toLocaleDateString("nl-NL", {
+                  day: "numeric",
+                  month: "long",
+                  year: "numeric",
+                })}
+              </time>
+            )}
           </div>
 
           <h1 className="text-4xl md:text-6xl font-cormorant font-bold text-[var(--color-text)] leading-tight mb-8">
