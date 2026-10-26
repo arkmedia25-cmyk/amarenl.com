@@ -29,6 +29,9 @@ import extraArticles from '@/data/extra-articles.json'
  */
 function isPublished(post: BlogPost): boolean {
   const todayIso = new Date().toISOString().slice(0, 10);
+  // `status: "draft"` moet ook echt verborgen blijven: alleen op datum filteren liet een
+  // concept met een datum in het verleden LIVE gaan (26.10.2026, alcohol-darmflora).
+  if ((post as BlogPost & { status?: string }).status === "draft") return false;
   return post.date <= todayIso;
 }
 
