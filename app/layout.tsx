@@ -38,9 +38,9 @@ const nunito = Nunito_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: `${SITE_NAME} — Ontdek Natuurlijke Wellness Supplementen`,
+  title: `${SITE_NAME} — Amare supplementen & natuurlijke wellness`,
   description:
-    "Ontdek de beste natuurlijke supplementen van Amare voor energie, focus, slaap en welzijn. Gratis advies + €8 korting op je eerste bestelling.",
+    "Amare Global supplementen: HL5 collageen, MentaBiotics, Happy Juice en meer. Vergelijk het assortiment en bestel met €8 korting op je eerste bestelling.",
   other: {
     "p:domain_verify": "f1dafe74931e565325530d7434f9fddf",
   },
@@ -53,9 +53,9 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     locale: "nl_NL",
     type: "website",
-    title: `${SITE_NAME} — Ontdek Natuurlijke Wellness Supplementen`,
+    title: `${SITE_NAME} — Amare supplementen & natuurlijke wellness`,
     description:
-      "Ontdek de beste natuurlijke supplementen van Amare voor energie, focus, slaap en welzijn. Gratis advies + €8 korting op je eerste bestelling.",
+      "Amare Global supplementen: HL5 collageen, MentaBiotics, Happy Juice en meer. Vergelijk het assortiment en bestel met €8 korting op je eerste bestelling.",
     url: SITE_URL,
     images: [
       {
@@ -68,9 +68,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} — Ontdek Natuurlijke Wellness Supplementen`,
+    title: `${SITE_NAME} — Amare supplementen & natuurlijke wellness`,
     description:
-      "Ontdek de beste natuurlijke supplementen van Amare voor energie, focus, slaap en welzijn.",
+      "Amare Global supplementen vergeleken: HL5 collageen, MentaBiotics, Happy Juice en meer.",
     images: ["/images/og-default.jpg"],
   },
 };

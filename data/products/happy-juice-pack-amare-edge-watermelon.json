@@ -32,9 +32,18 @@
     "duration": "Eerste effecten na 3-4 weken consistent gebruik"
   },
   "ingredients": [
-    { "name": "Amare EDGE+™ Watermelon", "amount": "Cafeïnevrij nootropicum" },
-    { "name": "Amare Energy+™", "amount": "Bevat cafeïne (~27,6 mg per portie), L-glycine, vitamine C" },
-    { "name": "Amare MentaBiotics®", "amount": "Probiotica voor de darm-hersen-as" }
+    {
+      "name": "Amare EDGE+™ Watermelon",
+      "amount": "Cafeïnevrij nootropicum"
+    },
+    {
+      "name": "Amare Energy+™",
+      "amount": "Bevat cafeïne (~27,6 mg per portie), L-glycine, vitamine C"
+    },
+    {
+      "name": "Amare MentaBiotics®",
+      "amount": "Probiotica voor de darm-hersen-as"
+    }
   ],
   "affiliate": {
     "url": "https://www.amare.com/susp_2075008/nl-nl/happy-juice-edge-plus-watermelon",
@@ -47,8 +56,8 @@
   "relatedProducts": [],
   "tags": [],
   "seo": {
-    "title": "Amare Happy Juice Pack® - Amare EDGE+™ Watermelon Kopen | Beste Prijs Nederland 2026",
-    "description": "Bundel van EDGE+ Watermelon, Energy+ en MentaBiotics",
+    "title": "Amare Happy Juice Pack Watermelon kopen | VitaalRoute",
+    "description": "Happy Juice Pack Watermelon: EDGE+ Watermelon, Energy+ en MentaBiotics in één bundel voor focus en stemming. 30 dagen garantie, €8 korting.",
     "keywords": []
   },
   "isNew": false,
