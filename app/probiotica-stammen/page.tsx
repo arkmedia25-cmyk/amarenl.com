@@ -9,9 +9,9 @@ import {
 } from "@/lib/schema";
 
 export const metadata = {
-  title: `Probiotica Stammen: Complete Gids (2026) | ${SITE_NAME}`,
+  title: `Probiotica stammen: welke kies je? Gids 2026 | ${SITE_NAME}`,
   description:
-    "Ontdek welke probiotica stammen écht werken. Lactobacillus, Bifidobacterium, Cerebiome® — complete gids met wetenschappelijke onderbouwing, dosering en vergelijking van de beste probiotica supplementen.",
+    "Hoe kies je de juiste probioticastam? Lactobacillus, Bifidobacterium en Cerebiome vergeleken op werking, dosering en onderzoek, met keuzehulp.",
   alternates: { canonical: "/probiotica-stammen" },
 };
 
