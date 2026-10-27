@@ -65,6 +65,20 @@ function extractFAQItems(content: string) {
     }
   }
 
+  // Format 3: <p><strong>Vraag?</strong><br/>Antwoord</p>  (redactionele standaard)
+  const brRegex = /<p>\s*<strong>\s*(?:Vraag:\s*)?(.+?)\s*<\/strong>\s*<br\s*\/?>\s*([\s\S]*?)<\/p>/g;
+  let bmatch: RegExpExecArray | null;
+  while ((bmatch = brRegex.exec(content)) !== null) {
+    const question = bmatch[1].replace(/<[^>]*>/g, "").trim();
+    const answer = bmatch[2].replace(/<[^>]*>/g, "").trim();
+    if (question.endsWith("?") && answer.length > 20) {
+      const alreadyExists = items.some((item) => item.question === question);
+      if (!alreadyExists) {
+        items.push({ question, answer });
+      }
+    }
+  }
+
   return items;
 }
 
