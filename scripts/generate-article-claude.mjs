@@ -675,8 +675,25 @@ const TOPIC_CLUSTER_LIMIT = 3;
  * bereikt, wordt het onderwerp geblokkeerd — dit is de harde poort die vóór
  * generateArticle() draait, dus vóór er ook maar één woord content geschreven is.
  */
+/**
+ * Alleen de KOP van het onderwerp telt voor de cluster-check. Het model schrijft bij
+ * het onderwerp vaak een toelichting ("— waarom je haar uitvalt ... met Rootist
+ * Densifying als product") en die toelichting bevat productnamen en woorden als
+ * "vitamine"/"stress" die niets zeggen over het onderwerp zelf. Zonder deze knip
+ * blokkeerde de poort elk onderwerp dat toevallig zo'n woord in de uitleg noemde
+ * (27-10-2026: 3 van 3 herkansingen geblokkeerd, 0 artikelen).
+ */
+const PRODUCT_NAMES = /\b(amare|triangle of wellness|hl5|rootist|skin to mind|sunrise|sunset|energy\+|mentabiotics|restore|edge\+|happy juice)\b/gi;
+
+function topicHeadline(topicText) {
+  return (topicText || "")
+    .split(/\s+[—–]\s+|\s*\(/)[0]      // knippen bij " — toelichting" of " (product ...)"
+    .replace(PRODUCT_NAMES, " ")
+    .trim();
+}
+
 function checkTopicClusterLimit(topicText, existingArticles) {
-  const newKeywords = new Set(extractKeywords(topicText));
+  const newKeywords = new Set(extractKeywords(topicHeadline(topicText)));
   if (newKeywords.size === 0) return { blocked: false };
 
   const counts = new Map();

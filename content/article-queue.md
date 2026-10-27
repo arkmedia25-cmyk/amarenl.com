@@ -71,6 +71,35 @@ voordat de kuyruk leegloopt — niet wachten tot 0/0.
 
 ---
 
+## 🆕 27 OKTOBER 2026 — hermeting (DataForSEO) + verse onderwerpen
+
+**Hermeting:** de 13 keywords van 18-10 zijn vandaag opnieuw gemeten (DataForSEO
+`google_ads/search_volume`, NL, location 2528, 27-10-2026 14:35). **Alle 13 volumes zijn
+ongewijzigd** (3.600 / 1.300 / 720 / 720 / 880 / 880 / 480 / 880 / 720 / 1.300 / 880 / 720 / 2.400)
+— de bestaande tabel hieronder blijft dus geldig, geen correctie nodig.
+
+**Nieuwe onderwerpen (vandaag gemeten, nog niet in de 227-artikelcorpus):**
+
+| # | Onderwerp | Ölçülen keyword | Hacim/ay | Rekabet | Ürün (doğrulanmış slug) |
+|---|---|---|---|---|---|
+| A | REM-slaap: wat je hersenen 's nachts doen | rem slaap | 3.600 | DÜŞÜK | Sunset (`sunset`) |
+| B | Slechte slaap: oorzaken en wat je zelf kunt aanpakken | slechte slaap | 1.900 | ORTA | Sunset (`sunset`) |
+| C | Waar is zink goed voor? | waar is zink goed voor | 1.300 | ORTA | Triangle of Wellness (`triangle-of-wellness-xtreme`) |
+| D | Hoeveel diepe slaap heb je per nacht nodig? | hoeveel diepe slaap per nacht | 1.000 | DÜŞÜK | Sunset (`sunset`) |
+
+**Cluster-limiter is vandaag versoepeld (bug):** de poort keek naar de *hele*
+onderwerp-omschrijving, inclusief productnamen en toelichtingen. Daardoor werd elk onderwerp
+geblokkeerd zodra het model "… (met Triangle of Wellness als product)" of "… rol van vitamine A"
+opschreef — 27-10 leverde dat 3 van 3 blokkades en **0 artikelen** op. Nu telt alleen de kop
+(vóór " — " of " ("), met productnamen eruit gefilterd. Effect: 10 van de 29 kuyupregels passeren
+de poort i.p.v. 7, en #1 (visceraal vet) komt vrij.
+
+**Let op:** woorden die al in ≥3 titels staan blijven geblokkeerd (o.a. `collageen` 17x,
+`vitamine` 18x, `probiotica` 11x, `energie` 9x, `haaruitval` 4x). Nieuwe onderwerpen moeten
+buiten die clusters vallen — daarom staan hierboven twee slaap- en één zink-onderwerp.
+
+---
+
 ## ⚠️ OKUMA SIRASI — Bu bölüm en yeni ve en güvenilir olandır
 
 **17 Eylül 2026 itibariyle bu doğrulama yapıldı** — bkz. hemen altındaki "🆕 17 EYLÜL 2026"
