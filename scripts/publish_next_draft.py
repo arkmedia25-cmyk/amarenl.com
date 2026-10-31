@@ -107,6 +107,21 @@ def main() -> int:
         json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
 
+    # Sitemap bijwerken: zonder dit blijft elk gepubliceerd artikel een orphan
+    # (live, maar niet in sitemap.xml — gebeurde bij rem-slaap op 29-10).
+    sitemap = Path("public/sitemap.xml")
+    if sitemap.exists():
+        xml = sitemap.read_text(encoding="utf-8")
+        loc = f"https://vitaalroute.nl/blogs/nieuws/{slug}"
+        if loc not in xml:
+            entry = (
+                f"<url><loc>{loc}</loc><lastmod>{today}T00:00:00.000Z</lastmod>"
+                f"<changefreq>weekly</changefreq><priority>0.6</priority></url>\n"
+            )
+            sitemap.write_text(xml.replace("</urlset>", entry + "</urlset>"), encoding="utf-8")
+            git("add", str(sitemap))
+            print("Sitemap bijgewerkt met nieuwe URL.")
+
     git("add", DATA_FILE)
     git(
         "commit", "-m",
