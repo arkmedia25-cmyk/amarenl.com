@@ -6,6 +6,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ReturnVisitorBanner from "@/components/layout/ReturnVisitorBanner";
 import VisitTracker from "@/components/layout/VisitTracker";
+import CitedAffiliateTracker from "@/components/layout/CitedAffiliateTracker";
 import FloatingMobileCTA from "@/components/ui/FloatingMobileCTA";
 import ExitIntentPopup from "@/components/ui/ExitIntentPopup";
 import LeadPopup from "@/components/ui/LeadPopup";
@@ -95,6 +96,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased min-h-screen flex flex-col font-nunito">
         <VisitTracker />
+        <CitedAffiliateTracker />
         <CampaignBanner />
         <ReturnVisitorBanner />
         <Header />
