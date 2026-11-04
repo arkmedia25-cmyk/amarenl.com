@@ -45,17 +45,17 @@ module.exports = {
       priority = 0.8;
     else if (path.startsWith("/blogs/nieuws")) priority = 0.6;
 
-    // Use actual publish date for blog posts when available
+    // Alleen blogposts hebben een echte publicatiedatum. Voor statische pagina's
+    // zou `new Date()` bij elke build álle URL's als "gewijzigd" aan Google melden —
+    // dat maakt het freshness-signaal waardeloos. Daarom: geen lastmod als er geen
+    // echte datum is (Google mag het veld missen, het mag niet liegen).
     const actualDate = blogDates[path];
-    const lastmod = actualDate
-      ? new Date(actualDate).toISOString()
-      : new Date().toISOString();
 
     return {
       loc: path,
       changefreq: config.changefreq,
       priority,
-      lastmod,
+      ...(actualDate ? { lastmod: new Date(actualDate).toISOString() } : {}),
     };
   },
 };

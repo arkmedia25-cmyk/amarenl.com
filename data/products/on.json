@@ -32,19 +32,58 @@
     "duration": "Raadpleeg de verpakking"
   },
   "ingredients": [
-    { "name": "Guarana-zaadextract (Paullinia cupana)", "amount": "80 mg cafeïne per dagelijkse dosis" },
-    { "name": "Groene theebladextract (Camellia sinensis)", "amount": "0,7 mg EGCG per portie" },
-    { "name": "Cholinebitartraat", "amount": "" },
-    { "name": "Inositol", "amount": "" },
-    { "name": "Taurine", "amount": "" },
-    { "name": "L-citrulline", "amount": "" },
-    { "name": "Laoswortelextract (Alpinia galanga)", "amount": "" },
-    { "name": "Trossenbosbes-vruchtensappoeder (Vaccinium corymbosum)", "amount": "" },
-    { "name": "Niacine (Vitamine B3)", "amount": "" },
-    { "name": "Vitamine B6 (pyridoxinehydrochloride)", "amount": "" },
-    { "name": "Vitamine B1 (thiaminehydrochloride)", "amount": "" },
-    { "name": "Vitamine B2 (riboflavine)", "amount": "" },
-    { "name": "Vitamine B12 (methylcobalamine)", "amount": "" }
+    {
+      "name": "Guarana-zaadextract (Paullinia cupana)",
+      "amount": "80 mg cafeïne per dagelijkse dosis"
+    },
+    {
+      "name": "Groene theebladextract (Camellia sinensis)",
+      "amount": "0,7 mg EGCG per portie"
+    },
+    {
+      "name": "Cholinebitartraat",
+      "amount": ""
+    },
+    {
+      "name": "Inositol",
+      "amount": ""
+    },
+    {
+      "name": "Taurine",
+      "amount": ""
+    },
+    {
+      "name": "L-citrulline",
+      "amount": ""
+    },
+    {
+      "name": "Laoswortelextract (Alpinia galanga)",
+      "amount": ""
+    },
+    {
+      "name": "Trossenbosbes-vruchtensappoeder (Vaccinium corymbosum)",
+      "amount": ""
+    },
+    {
+      "name": "Niacine (Vitamine B3)",
+      "amount": ""
+    },
+    {
+      "name": "Vitamine B6 (pyridoxinehydrochloride)",
+      "amount": ""
+    },
+    {
+      "name": "Vitamine B1 (thiaminehydrochloride)",
+      "amount": ""
+    },
+    {
+      "name": "Vitamine B2 (riboflavine)",
+      "amount": ""
+    },
+    {
+      "name": "Vitamine B12 (methylcobalamine)",
+      "amount": ""
+    }
   ],
   "mechanismNL": "ON bevat vitamines B1, B2, B3, B6 en B12, die bijdragen aan de normale werking van het zenuwstelsel, normale psychologische functie en vermindering van vermoeidheid en moeheid. De natuurlijke cafeïne uit guarana (80 mg per dosis) stimuleert het centrale zenuwstelsel; groene thee-extract levert EGCG (0,7 mg per portie).",
   "affiliate": {
@@ -68,8 +107,8 @@
     }
   ],
   "seo": {
-    "title": "Amare ON Kopen | Beste Prijs Nederland 2026",
-    "description": "Focus-shot met guarana-cafeïne, groene thee en B-vitamines",
+    "title": "Amare ON kopen | Focus-shot met guarana",
+    "description": "Focus-shot met guarana, groene thee en B-vitamines, 56 ml. Bekijk ingrediënten, gebruik en prijs — bestel met €8 korting en 30 dagen garantie.",
     "keywords": []
   },
   "isNew": false,
