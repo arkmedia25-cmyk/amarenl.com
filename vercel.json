@@ -1,5 +1,7 @@
 {
-  "regions": ["fra1"],
+  "regions": [
+    "fra1"
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -28,6 +30,31 @@
     }
   ],
   "redirects": [
+    {
+      "source": "/producten/mentabiotics",
+      "destination": "/mentabiotics",
+      "permanent": true
+    },
+    {
+      "source": "/producten/sunset",
+      "destination": "/sunset",
+      "permanent": true
+    },
+    {
+      "source": "/producten/restore",
+      "destination": "/restore",
+      "permanent": true
+    },
+    {
+      "source": "/producten/energy",
+      "destination": "/energy",
+      "permanent": true
+    },
+    {
+      "source": "/producten/on",
+      "destination": "/on",
+      "permanent": true
+    },
     {
       "source": "/blogs/nieuws/intimiteit-hormonen-stress-ignite-her-him",
       "destination": "/",
