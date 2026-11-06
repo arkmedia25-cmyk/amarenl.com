@@ -39,9 +39,9 @@ const nunito = Nunito_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: `${SITE_NAME} — Amare supplementen & natuurlijke wellness`,
+  title: `Amare Global supplementen in Nederland | VitaalRoute`,
   description:
-    "Amare Global supplementen: HL5 collageen, MentaBiotics, Happy Juice en meer. Vergelijk het assortiment en bestel met €8 korting op je eerste bestelling.",
+    "Amare Global supplementen: HL5 collageen, MentaBiotics, Happy Juice en meer. Vergelijk het assortiment en bestel met €8 korting en 30 dagen garantie.",
   other: {
     "p:domain_verify": "f1dafe74931e565325530d7434f9fddf",
   },
@@ -54,9 +54,9 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     locale: "nl_NL",
     type: "website",
-    title: `${SITE_NAME} — Amare supplementen & natuurlijke wellness`,
+    title: `Amare Global supplementen in Nederland | VitaalRoute`,
     description:
-      "Amare Global supplementen: HL5 collageen, MentaBiotics, Happy Juice en meer. Vergelijk het assortiment en bestel met €8 korting op je eerste bestelling.",
+      "Amare Global supplementen: HL5 collageen, MentaBiotics, Happy Juice en meer. Vergelijk het assortiment en bestel met €8 korting.",
     url: SITE_URL,
     images: [
       {
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} — Amare supplementen & natuurlijke wellness`,
+    title: `Amare Global supplementen in Nederland | VitaalRoute`,
     description:
       "Amare Global supplementen vergeleken: HL5 collageen, MentaBiotics, Happy Juice en meer.",
     images: ["/images/og-default.jpg"],
