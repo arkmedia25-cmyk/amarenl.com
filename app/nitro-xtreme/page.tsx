@@ -8,7 +8,7 @@ import { generateProductSchema, generateFAQSchema, generateBreadcrumbSchema, com
 import { SITE_NAME } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: `Nitro Xtreme Kopen: Testosteron- & Middagboost | ${SITE_NAME}`,
+  title: `Amare Nitro Xtreme Kopen: Middagboost | ${SITE_NAME}`,
   description: "Nitro Xtreme: nonivruchtenconcentraat met zink (testosteron), B1, B3, chroom en CoQ10. Natuurlijke middagboost van Amare.",
   alternates: { canonical: "/nitro-xtreme" },
   openGraph: { title: `Amare Nitro Xtreme Kopen — Testosteron- & Middagboost | ${SITE_NAME}`, description: "Noni + zink (testosteron) + B-vitamines + chroom + CoQ10 voor je middagboost.", url: "/nitro-xtreme", type: "website", siteName: `${SITE_NAME}`, locale: "nl_NL", images: [{ url: "/images/og-default.jpg", width: 1200, height: 630 }] },

@@ -14,12 +14,12 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: `Happy Juice Pack: Energie & Focus | ${SITE_NAME}`,
+  title: `Amare Happy Juice Pack Kopen: Prijs & Inhoud | ${SITE_NAME}`,
   description:
     "Het Happy Juice Pack van Amare is de #1 bundel voor mentale energie, focus en een stabiele stemming. MentaBiotics + Energy+ + EDGE+. Bekijk het pakket →",
   alternates: { canonical: "/happy-juice-pack" },
   openGraph: {
-    title: `Happy Juice Pack: Energie & Focus | ${SITE_NAME}`,
+    title: `Amare Happy Juice Pack Kopen: Prijs & Inhoud | ${SITE_NAME}`,
     description: "Het Happy Juice Pack van Amare is de #1 bundel voor mentale energie, focus en een stabiele stemming.",
     url: "/happy-juice-pack",
     type: "website",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `Happy Juice Pack: Energie & Focus | ${SITE_NAME}`,
+    title: `Amare Happy Juice Pack Kopen: Prijs & Inhoud | ${SITE_NAME}`,
     description: "Het Happy Juice Pack van Amare is de #1 bundel voor mentale energie, focus en een stabiele stemming.",
     images: ["/images/og-default.jpg"],
   },
@@ -132,7 +132,8 @@ export default function HappyJuicePackPage() {
                 <span className="text-[9px] text-[var(--color-text-muted)]">⭐ 4.8/5 (750+ reviews)</span>
               </div>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-cormorant font-bold text-[var(--color-text)] mb-4 leading-tight">
-                Happy Juice Pack<span className="text-[var(--color-primary)]">®</span>
+                Amare <span className="text-[var(--color-primary)]">Happy Juice Pack</span>
+                <span className="text-[var(--color-primary)]">®</span>
               </h1>
               <p className="text-lg text-[var(--color-text-muted)] mb-6 leading-relaxed">
                 De #1 bundel van Amare voor mentale energie, focus en een stabiele stemming — wetenschappelijk onderbouwd, gemaakt met natuurlijke ingrediënten. <strong>Direct van Amare — premium kwaliteit.</strong>

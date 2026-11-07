@@ -1,0 +1,13 @@
+[
+  {"property": "sc-domain:vitaalroute.nl", "url": "https://vitaalroute.nl/producten/hl5-peach", "status": "requested", "note": "2026-11-04 GSC UI"},
+  {"property": "sc-domain:vitaalroute.nl", "url": "https://vitaalroute.nl/producten/edge-mango", "status": "pending", "note": "URL is unknown to Google"},
+  {"property": "sc-domain:vitaalroute.nl", "url": "https://vitaalroute.nl/producten/edge-watermelon", "status": "pending", "note": "Discovered - not indexed"},
+  {"property": "sc-domain:vitaalroute.nl", "url": "https://vitaalroute.nl/producten/sunrise-2-pack", "status": "pending", "note": "Discovered - not indexed"},
+  {"property": "sc-domain:vitaalroute.nl", "url": "https://vitaalroute.nl/producten/nitro-xtreme-56ml", "status": "pending", "note": "geïndexeerd op 10-08, opnieuw aanmelden na meta-wijziging"},
+  {"property": "sc-domain:vitaalroute.nl", "url": "https://vitaalroute.nl/producten/on-4-pack", "status": "pending"},
+  {"property": "sc-domain:vitaalroute.nl", "url": "https://vitaalroute.nl/producten/triangle-of-wellness-xtreme-2-pack", "status": "pending"},
+  {"property": "sc-domain:vitaalroute.nl", "url": "https://vitaalroute.nl/producten/verdikkend-serum-voor-fijn-haar", "status": "pending"},
+  {"property": "sc-domain:vitaalroute.nl", "url": "https://vitaalroute.nl/producten/verdichten-geconcentreerde-shampoo", "status": "pending"},
+  {"property": "sc-domain:vitaalroute.nl", "url": "https://vitaalroute.nl/producten/versterken-geconcentreerde-shampoo", "status": "pending"},
+  {"property": "sc-domain:vitaalroute.nl", "url": "https://vitaalroute.nl/supplementen", "status": "pending", "note": "nieuwe hub, 2026-11-04 gepubliceerd"}
+]

@@ -4,6 +4,7 @@ import PromoCarousel from "@/components/sections/PromoCarousel";
 import TrustBar from "@/components/sections/TrustBar";
 import GuaranteeBlock from "@/components/sections/GuaranteeBlock";
 import ProductGrid from "@/components/sections/ProductGrid";
+import AmareBrandHub from "@/components/sections/AmareBrandHub";
 import HowItWorks from "@/components/sections/HowItWorks";
 import Testimonials from "@/components/sections/Testimonials";
 import BlogPreview from "@/components/sections/BlogPreview";
@@ -17,6 +18,16 @@ import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/site-config";
 
 export const metadata: Metadata = {
+  title: "Amare Global producten: prijzen & ingrediënten",
+  description:
+    "Alle Amare supplementen met volledige ingrediëntenlijst, dosering en actuele prijs in euro's. Onafhankelijk uitgelegd, met vergelijkingen en snelle levering.",
+  openGraph: {
+    title: "Amare Global producten: prijzen & ingrediënten",
+    description:
+      "Alle Amare supplementen met volledige ingrediëntenlijst en actuele prijs. Onafhankelijk uitgelegd.",
+    url: "/",
+    type: "website",
+  },
   alternates: {
     canonical: "/",
     // Cross-domain hreflang: dezelfde aanbieder, drie markten (NL/FR/DE).
@@ -59,6 +70,7 @@ export default function Home() {
       />
       <HeroSection />
       <FeaturedProducts />
+      <AmareBrandHub />
       <PromoCarousel />
       <TrustBar />
 
