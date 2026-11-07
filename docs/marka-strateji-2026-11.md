@@ -29,14 +29,15 @@ En yüksek hacimli sorgular: `amare global` 63 imp / poz 5,8 · `amare happy jui
    (ana sayfa daha önce layout varsayılanını miras alıyordu).
 2. `components/sections/AmareBrandHub.tsx` → ana sayfada "Amare producten in Nederland — het
    volledige overzicht": 40 ürüne iç link, paket/çok satan 6 ürün fiyatla, 3 şeffaflık maddesi
-   ("officiële Amare-website değiliz; affiliate link, Amare teslim eder").
+   ("Eén link naar de Amare-shop — bestellen/leveren door Amare zelf").
 3. Başlıklarda marka adı: `/mentabiotics`, `/nitro-xtreme`, `/happy-juice-pack`, `/sunset`
    (hepsi ≤ 60 karakter, niyet kelimesi korundu).
 4. `/happy-juice-pack` H1: `Amare Happy Juice Pack®`.
 5. IndexNow: 5 URL → HTTP 200.
 
 ## Marka politikası çizgisi
-- "Officiële Amare webshop" gibi ifade **yok**; "onafhankelijk", "wij leggen uit, Amare levert".
+- "Officiële Amare webshop" gibi ifade **yok**; "biz resmî site değiliz, oraya git" tonu da yok (dönüşümü düşürüyor).
+  Bilgi yalnızca olumlu çerçevede: "bestellen/leveren door Amare zelf".
 - Marka adı domain'de değil, reklamda teklif edilmiyor; yalnızca ürün sayfası başlığında.
 
 ## Ölçüm planı

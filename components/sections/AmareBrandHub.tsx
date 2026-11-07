@@ -73,8 +73,8 @@ export default function AmareBrandHub() {
             abonnement, met het verschil in euro&apos;s per maand.
           </li>
           <li className="bg-[var(--color-bg-soft)] rounded-xl p-4">
-            <strong className="text-[var(--color-text)]">Onafhankelijk.</strong> We zijn geen officiële Amare-website.
-            Bestellen gebeurt via de officiële Amare-shop (affiliate link); wij leggen uit, Amare levert.
+            <strong className="text-[var(--color-text)]">Eén link naar de Amare-shop.</strong> Bestellen en leveren
+            gebeurt door Amare zelf — met hun eigen voorraad, levertijd en garantie.
           </li>
         </ul>
       </div>
