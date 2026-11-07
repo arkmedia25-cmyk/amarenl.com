@@ -1,0 +1,80 @@
+{
+ "tarih": "2026-11-07",
+ "donem": "2026-10-10..2026-11-06",
+ "site": {
+  "imp": 580,
+  "tik": 2
+ },
+ "marka": {
+  "sorgu": 27,
+  "imp": 121,
+  "tik": 1
+ },
+ "marka_niyet": {
+  "sorgu": 1,
+  "imp": 1,
+  "tik": 0
+ },
+ "marka_sorgulari": {
+  "amare global": [
+   63,
+   0,
+   5.8
+  ],
+  "amare happy juice": [
+   13,
+   0,
+   6.5
+  ],
+  "amare energy": [
+   7,
+   0,
+   8
+  ],
+  "amare supplements": [
+   4,
+   0,
+   5.2
+  ],
+  "happy juice amare": [
+   4,
+   0,
+   6.2
+  ],
+  "amare products": [
+   3,
+   0,
+   9.3
+  ],
+  "amare happy juice pack": [
+   2,
+   1,
+   3.5
+  ],
+  "amare nitro xtreme": [
+   2,
+   0,
+   3
+  ],
+  "amare sunset": [
+   2,
+   0,
+   2.5
+  ],
+  "amare supplement": [
+   2,
+   0,
+   11
+  ],
+  "amareglobal": [
+   2,
+   0,
+   5.5
+  ],
+  "energy amare": [
+   2,
+   0,
+   9.5
+  ]
+ }
+}
