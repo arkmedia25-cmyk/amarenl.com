@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "mariëlle-muis",
+    "name": "Mariëlle Muis",
+    "practice": "Mariëlle Muis",
+    "specialty": "Gecombineerde Leefstijlinterventie (GLI)",
+    "website": "https://www.prevenzie.nl",
+    "email": "info@prevenzie.nl",
+    "status": "concept",
+    "consent": false,
+    "note": "Wacht op akkoord; pas na 'ja' op gepubliceerd zetten."
+  },
+  {
+    "slug": "celine-neefkes-zonneveld",
+    "name": "Celine Neefkes-Zonneveld",
+    "practice": "Celine Neefkes-Zonneveld",
+    "specialty": "Gecombineerde Leefstijlinterventie (GLI), Diabetes type 2",
+    "website": "https://www.lifecentrum.nl",
+    "email": "info@lifecentrum.nl",
+    "status": "concept",
+    "consent": false,
+    "note": "Wacht op akkoord; pas na 'ja' op gepubliceerd zetten."
+  },
+  {
+    "slug": "thiro-van-zijl",
+    "name": "Thiro van Zijl",
+    "practice": "Thiro van Zijl",
+    "specialty": "Psychische aandoeningen",
+    "website": "https://www.thirotraining.nl",
+    "email": "info@thirotraining.nl",
+    "status": "concept",
+    "consent": false,
+    "note": "Wacht op akkoord; pas na 'ja' op gepubliceerd zetten."
+  },
+  {
+    "slug": "ellen-van-duijnen",
+    "name": "Ellen van Duijnen",
+    "practice": "Ellen van Duijnen",
+    "specialty": "Gecombineerde Leefstijlinterventie (GLI), Stoppen met roken",
+    "website": "https://leefstijlxpert.nl/",
+    "email": "ellenvanduijnen@leefstijlxpert.nl",
+    "status": "concept",
+    "consent": false,
+    "note": "Wacht op akkoord; pas na 'ja' op gepubliceerd zetten."
+  },
+  {
+    "slug": "vera-lurvink",
+    "name": "Vera Lurvink",
+    "practice": "Vera Lurvink",
+    "specialty": "leefstijlcoach in Drunen",
+    "website": "https://medifit-healthclub.nl/",
+    "email": "vera@medifit-healthclub.nl",
+    "status": "concept",
+    "consent": false,
+    "note": "Wacht op akkoord; pas na 'ja' op gepubliceerd zetten."
+  }
+]

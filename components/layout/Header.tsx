@@ -29,6 +29,7 @@ const categoryLinks = [
   ["✨ Schoonheid", "/schoonheid/"],
   ["🌿 Essentials", "/essentials/"],
   ["🚀 Startpakketten", "/pakketten/"],
+  ["🤝 Praktijken", "/praktijken"],
 ];
 
 const productLinks = [

@@ -26,6 +26,7 @@ const REDIRECT_ONLY_PATHS = [
   ...new Set([
     ...redirectSources,
     "/go",
+    "/praktijken/voorbeeld",
     "/producten/happy-lifestyle-pack-pro",
     "/producten/triangle-marketing-pack",
   ]),
