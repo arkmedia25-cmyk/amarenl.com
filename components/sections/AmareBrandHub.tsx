@@ -74,7 +74,7 @@ export default function AmareBrandHub() {
           </li>
           <li className="bg-[var(--color-bg-soft)] rounded-xl p-4">
             <strong className="text-[var(--color-text)]">Eén link naar de Amare-shop.</strong> Bestellen en leveren
-            gebeurt door Amare zelf — met hun eigen voorraad, levertijd en garantie.
+            gaan via Amare.
           </li>
         </ul>
       </div>
