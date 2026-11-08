@@ -97,7 +97,7 @@ jobs:
         run: npx tsc --noEmit -p tsconfig.json
 
       - name: Build (production sanity check)
-        run: npm run build
+        run: npm run build -- --webpack
 
       - name: Wait for Vercel auto-deploy (GitHub-integratie, geen dubbele upload)
         # Vercel's GitHub App deployt al automatisch bij elke push naar main —

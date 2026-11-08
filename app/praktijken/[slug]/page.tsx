@@ -26,7 +26,7 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
   const p = published.find((x) => x.slug === slug);
@@ -38,7 +38,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function PraktijkPage({ params }: { params: { slug: string } }) {
+export default async function PraktijkPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const p = published.find((x) => x.slug === slug);
   if (!p) notFound();

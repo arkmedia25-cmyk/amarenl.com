@@ -180,7 +180,7 @@ jobs:
 
       - name: Build (production sanity check)
         if: steps.next.outputs.empty == 'false'
-        run: npm run build
+        run: npm run build -- --webpack
 
       - name: Wait for Vercel auto-deploy (GitHub-integratie, geen dubbele upload)
         if: steps.next.outputs.empty == 'false'

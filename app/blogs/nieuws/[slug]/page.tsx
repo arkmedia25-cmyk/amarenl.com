@@ -31,7 +31,7 @@ function extractHowToSteps(content: string): { name: string; text: string }[] {
 }
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 function extractFAQItems(content: string) {
