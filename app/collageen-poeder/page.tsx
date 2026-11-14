@@ -8,8 +8,9 @@ import { Check } from "lucide-react";
 import { SITE_URL, SITE_NAME } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: `Collageen Poeder Kopen: Gids 2026 | ${SITE_NAME}`,
-  description: "Collageen poeder kopen? Ontdek welk type collageen je nodig hebt voor huid, haar en nagels.",
+  title: `Gehydrolyseerd Collageen Kopen: Poeder Type I & III | ${SITE_NAME}`,
+  description:
+    "Gehydrolyseerd collageen poeder kopen? Vergelijk Type I & III, dosering (5 g per dag) en prijs — 30 dagen geld-terug-garantie en €8 korting op je eerste bestelling.",
   alternates: { canonical: "/collageen-poeder" },
 };
 
