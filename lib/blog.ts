@@ -2285,6 +2285,48 @@ const articleProductMap: Record<string, ProductLink[]> = {
   ],
 };
 
+/**
+ * Ürün sayfası → makale ters linki.
+ *
+ * NEDEN (14.11.2026): tıklama getiren sayfalar ürün sayfaları ama producten/[slug]
+ * hiçbir makaleye link vermiyordu (ağ tek yönlü: makale → ürün). Ürün metniyle
+ * başlık/özet kelime örtüşmesine göre 3 makale döndürür.
+ */
+export function getArticlesForProduct(productText: string, limit = 3): BlogPost[] {
+  const all = getAllBlogPosts();
+  const stop = new Set([
+    "worden", "wordt", "zonder", "tussen", "omdat", "welke", "hebben", "altijd",
+    "beter", "helpen", "helpt", "worden", "daarom", "hierdoor", "waarom", "wanneer",
+    "ondersteunt", "ondersteunen", "regelmatig", "dagelijkse", "dagelijks", "gebruik",
+    "product", "producten", "amare", "onze", "jouw", "deze", "meer", "over",
+  ]);
+  const words = (s: string) =>
+    new Set(
+      (s || "")
+        .toLowerCase()
+        .normalize("NFKD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9\s]/g, " ")
+        .split(/\s+/)
+        .filter((w) => w.length > 3 && !stop.has(w) && !/^\d+$/.test(w))
+    );
+  const cur = words(productText);
+  const scored = all
+    .map((p) => {
+      const w = words(`${p.title} ${p.excerpt || ""} ${p.category || ""}`);
+      let shared = 0;
+      cur.forEach((x) => {
+        if (w.has(x)) shared += 1;
+      });
+      return { p, score: shared };
+    })
+    .filter((x) => x.score > 0)
+    .sort((a, b) => b.score - a.score || (a.p.date < b.p.date ? 1 : -1));
+  if (scored.length >= limit) return scored.slice(0, limit).map((x) => x.p);
+  const rest = all.filter((p) => !scored.find((s) => s.p.slug === p.slug));
+  return [...scored.map((x) => x.p), ...rest].slice(0, limit);
+}
+
 export function getProductLinksForArticle(slug: string): ProductLink[] {
   return articleProductMap[slug] || [];
 }

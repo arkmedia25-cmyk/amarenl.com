@@ -7,9 +7,11 @@ const CANONICAL_REDIRECTS: Record<string, string> = {
   "triangle-marketing-pack": "/triangle-marketing-pack",
 };
 import Image from "next/image";
+import Link from "next/link";
 import AffiliateCTA from "@/components/ui/AffiliateCTA";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import { getProduct, getAllProducts, buildProductMetaTitle, buildProductMetaDescription } from "@/lib/products";
+import { getArticlesForProduct } from "@/lib/blog";
 import { SITE_NAME } from "@/lib/site-config";
 import {
   generateProductSchema,
@@ -68,6 +70,12 @@ export default async function ProductPage({ params }: Props) {
     essentials: "Dagelijkse Essentials",
     pakketten: "Pakketten & Bundels",
   };
+
+  // Ters iç link: ürün → makale (14.11.2026). Ürün metniyle örtüşen 3 makale.
+  const relatedArticles = getArticlesForProduct(
+    `${product.nameNL} ${product.shortNameNL ?? ""} ${product.category ?? ""} ${product.descriptionNL ?? ""} ${product.taglineNL ?? ""}`,
+    3
+  );
 
   // FAQ genereren — elke productpagina krijgt minimaal 4 vragen
   const faqs = [
@@ -299,6 +307,34 @@ export default async function ProductPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* TERS İÇ LİNK — ürün sayfasından makalelere (crawl yolu + topical otorite) */}
+      {relatedArticles.length > 0 && (
+        <section className="py-12 bg-white border-y border-[var(--color-border)]">
+          <div className="container-page max-w-3xl">
+            <h2 className="text-xl md:text-2xl font-cormorant font-bold text-[var(--color-text)] mb-6">
+              Lees ook
+            </h2>
+            <ul className="space-y-4">
+              {relatedArticles.map((a) => (
+                <li key={a.slug}>
+                  <Link
+                    href={`/blogs/nieuws/${a.slug}`}
+                    className="text-base font-semibold text-[var(--color-primary)] hover:underline"
+                  >
+                    {a.title}
+                  </Link>
+                  {a.excerpt && (
+                    <p className="mt-1 text-sm text-[var(--color-text-muted)] leading-relaxed">
+                      {a.excerpt.length > 150 ? `${a.excerpt.slice(0, 150)}…` : a.excerpt}
+                    </p>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       {/* INGREDIËNTEN — als beschikbaar */}
       {hasIngredients && (
