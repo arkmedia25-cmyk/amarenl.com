@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { getBlogPostBySlug, getAllBlogPosts, getProductLinksForArticle, linkifyProductMentions } from "@/lib/blog";
+import { getBlogPostBySlug, getAllBlogPosts, getProductLinksForArticle, linkifyProductMentions, getRelatedArticles } from "@/lib/blog";
 import { ArrowLeft, Tag, Share2, ExternalLink, ShoppingCart, Gift, ShieldCheck, CalendarDays } from "lucide-react";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import { SITE_URL, SITE_NAME } from "@/lib/site-config";
@@ -124,6 +124,12 @@ export default async function BlogPostPage({ params }: Props) {
 
   const productLinks = getProductLinksForArticle(post.slug);
   const linkedContent = linkifyProductMentions(post.content, post.slug);
+  // Gövdenin ÜSTÜNDE iç link bloğu: yeni makaleler dizinlenmiş sayfalardan link alsın
+  // diye ilk paragraftan hemen sonra 3 "Lees ook" linki basılır (14.11.2026 index ölçümü).
+  const inlineRelated = getRelatedArticles(post.slug, 3);
+  const firstBreak = linkedContent.indexOf("</p>");
+  const introHtml = firstBreak > 0 ? linkedContent.slice(0, firstBreak + 4) : "";
+  const restHtml = firstBreak > 0 ? linkedContent.slice(firstBreak + 4) : linkedContent;
   const faqItems = extractFAQItems(post.content);
   const articleSchema = generateArticleSchema({
     title: post.title,
@@ -288,8 +294,39 @@ export default async function BlogPostPage({ params }: Props) {
               prose-p:text-[var(--color-text-muted)] prose-p:leading-relaxed
               prose-strong:text-[var(--color-text)]
               prose-li:text-[var(--color-text-muted)]"
-            dangerouslySetInnerHTML={{ __html: linkedContent }}
+            dangerouslySetInnerHTML={{ __html: introHtml || restHtml }}
           />
+
+          {inlineRelated.length > 0 && (
+            <aside className="my-10 rounded-r-xl border-l-4 border-[var(--color-accent)] bg-[var(--color-bg-soft)] px-5 py-4">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-[var(--color-text-muted)]">
+                Lees ook
+              </span>
+              <ul className="mt-2 space-y-1.5">
+                {inlineRelated.map((r) => (
+                  <li key={r.slug}>
+                    <Link
+                      href={`/blogs/nieuws/${r.slug}`}
+                      className="text-[15px] font-semibold text-[var(--color-primary)] hover:underline"
+                    >
+                      {r.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </aside>
+          )}
+
+          {introHtml && (
+            <div
+              className="article-prose prose prose-lg prose-primary max-w-none
+                prose-headings:font-cormorant prose-headings:font-bold prose-headings:text-[var(--color-text)]
+                prose-p:text-[var(--color-text-muted)] prose-p:leading-relaxed
+                prose-strong:text-[var(--color-text)]
+                prose-li:text-[var(--color-text-muted)]"
+              dangerouslySetInnerHTML={{ __html: restHtml }}
+            />
+          )}
 
           {post.citations && post.citations.length > 0 && (
             <div className="mt-12 pt-8 border-t border-[var(--color-border)]">

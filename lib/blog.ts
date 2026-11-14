@@ -2290,6 +2290,45 @@ export function getProductLinksForArticle(slug: string): ProductLink[] {
 }
 
 /**
+ * İç link / tarama yolu: bir makaleye en yakın 3 makaleyi döndürür.
+ *
+ * NEDEN: 1 Ekim–14 Kasım 2026 ölçümünde yeni yayınlanan 26 makalenin 25'i Google'da
+ * "unknown / discovered – not indexed" durumdaydı; sebep, makalelere repoda HİÇBİR iç link
+ * gitmemesiydi (yalnızca sitemap). Bu fonksiyon gövdenin üstünde "Lees ook" bloğu besler,
+ * böylece her yeni makale dizinlenmiş sayfalardan link alır.
+ */
+export function getRelatedArticles(slug: string, limit = 3): BlogPost[] {
+  const all = getAllBlogPosts();
+  const current = all.find((p) => p.slug === slug);
+  if (!current) return [];
+  const words = (s: string) =>
+    new Set(
+      (s || "")
+        .toLowerCase()
+        .normalize("NFKD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9\s]/g, " ")
+        .split(/\s+/)
+        .filter((w) => w.length > 4)
+    );
+  const cur = words(`${current.title} ${current.excerpt || ""}`);
+  return all
+    .filter((p) => p.slug !== slug)
+    .map((p) => {
+      const w = words(`${p.title} ${p.excerpt || ""}`);
+      let shared = 0;
+      cur.forEach((x) => {
+        if (w.has(x)) shared += 1;
+      });
+      const score = shared * 2 + (p.category === current.category ? 3 : 0);
+      return { p, score };
+    })
+    .sort((a, b) => b.score - a.score || (a.p.date < b.p.date ? 1 : -1))
+    .slice(0, limit)
+    .map((x) => x.p);
+}
+
+/**
  * Algemene keywords → categorie/generieke pagina's.
  * Deze worden ALLEEN gelinkt als er GEEN specifiek product in de buurt staat.
  */
