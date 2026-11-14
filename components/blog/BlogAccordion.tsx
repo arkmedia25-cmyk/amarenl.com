@@ -7,6 +7,15 @@ import type { BlogPost } from "@/lib/blog";
 import DOMPurify from "dompurify";
 import { linkifyProductMentions } from "@/lib/blog";
 
+/**
+ * Bilgi bankası (knowledge base) listesi.
+ *
+ * NEDEN 14.11.2026'da değişti: her başlık bir <button> içindeydi ve makale linki yalnızca
+ * akordeon AÇILINCA DOM'a giriyordu. Sonuç: /blogs/nieuws HTML'inde TEK bir makale linki yoktu
+ * ve 230+ makale Google için orphan kaldı (ölçüm: 26 yeni makalenin 25'i "unknown to Google" /
+ * "discovered – not indexed"). Başlık artık her zaman gerçek bir <a> (Link); akordeon yalnızca
+ * özet/gövdeyi açıp kapatıyor. Böylece sayfa gerçek bir iç link hub'ı.
+ */
 export default function BlogAccordion({ posts }: { posts: BlogPost[] }) {
   const [openSlug, setOpenSlug] = useState<string | null>(null);
 
@@ -21,13 +30,9 @@ export default function BlogAccordion({ posts }: { posts: BlogPost[] }) {
 
         return (
           <div key={post.slug} className="group">
-            {/* Title row — clickable */}
-            <button
-              onClick={() => toggle(post.slug)}
-              className="w-full flex items-center justify-between gap-4 py-4 text-left hover:bg-[var(--color-bg-soft)]/50 transition-colors px-2 rounded-lg"
-              aria-expanded={isOpen}
-            >
-              <div className="flex-1 min-w-0">
+            {/* Title row — başlık HER ZAMAN bir link (crawl yolu), ok akordeonu açar */}
+            <div className="flex items-center gap-3 py-4 px-2 rounded-lg hover:bg-[var(--color-bg-soft)]/50 transition-colors">
+              <Link href={`/blogs/nieuws/${post.slug}`} className="flex-1 min-w-0">
                 <h3 className="text-sm md:text-base font-semibold text-[var(--color-text)] group-hover:text-[var(--color-primary)] transition-colors pr-4">
                   {post.title}
                 </h3>
@@ -43,14 +48,21 @@ export default function BlogAccordion({ posts }: { posts: BlogPost[] }) {
                     })}
                   </time>
                 )}
-              </div>
-              <ChevronDown
-                size={18}
-                className={`shrink-0 text-[var(--color-primary)] transition-transform duration-300 ${
-                  isOpen ? "rotate-180" : ""
-                }`}
-              />
-            </button>
+              </Link>
+              <button
+                onClick={() => toggle(post.slug)}
+                aria-expanded={isOpen}
+                aria-label={`Samenvatting ${isOpen ? "sluiten" : "openen"}: ${post.title}`}
+                className="shrink-0 p-2 rounded-full hover:bg-[var(--color-bg-soft)] transition-colors"
+              >
+                <ChevronDown
+                  size={18}
+                  className={`text-[var(--color-primary)] transition-transform duration-300 ${
+                    isOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+            </div>
 
             {/* Expandable full article content */}
             {isOpen && (
