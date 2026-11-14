@@ -6,6 +6,7 @@ import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import ExpertVideoSection from "@/components/ui/ExpertVideoSection";
 import { getProduct } from "@/lib/products";
 import { SITE_NAME } from "@/lib/site-config";
+import RelatedArticles from "@/components/sections/RelatedArticles";
 import {
   generateProductSchema,
   generateFAQSchema,
@@ -329,7 +330,9 @@ export default function SunrisePage() {
       {/* ── FAQ ── */}
       <section className="py-16 bg-white">
         <div className="container-page max-w-3xl">
-          <h2 className="text-2xl md:text-3xl font-cormorant font-bold text-[var(--color-text)] mb-8">Veelgestelde vragen</h2>
+                <RelatedArticles seed="Amare Sunrise vitamines ochtend energie supplement" />
+
+      <h2 className="text-2xl md:text-3xl font-cormorant font-bold text-[var(--color-text)] mb-8">Veelgestelde vragen</h2>
           <div className="space-y-3">
             {faqs.map((faq, i) => (
               <details key={i} className="bg-white rounded-xl border border-[var(--color-border)] group">

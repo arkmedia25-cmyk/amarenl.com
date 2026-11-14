@@ -5,6 +5,7 @@ import AffiliateCTA from "@/components/ui/AffiliateCTA";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import { getProduct } from "@/lib/products";
 import { SITE_NAME } from "@/lib/site-config";
+import RelatedArticles from "@/components/sections/RelatedArticles";
 import {
   generateProductSchema,
   generateFAQSchema,
@@ -596,6 +597,8 @@ export default function HL5Page() {
           </div>
         </div>
       </section>
+
+            <RelatedArticles seed="Amare HL5 collageen peptiden huid haar nagels collageen drinken" />
 
       {/* ── Veelgestelde vragen ── */}
       <section className="py-16 bg-[var(--color-bg-soft)]">

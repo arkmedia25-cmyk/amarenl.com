@@ -6,6 +6,7 @@ import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import { getProduct } from "@/lib/products";
 import { generateProductSchema, generateFAQSchema, generateBreadcrumbSchema, combineSchemas } from "@/lib/schema";
 import { SITE_NAME } from "@/lib/site-config";
+import RelatedArticles from "@/components/sections/RelatedArticles";
 
 export const metadata: Metadata = {
   title: `EDGE+™ Kopen: Cafeïnevrij Nootropicum | ${SITE_NAME}`,
@@ -179,6 +180,8 @@ export default function EdgePlusPage() {
 
     {/* ── FAQ ── */}
     <section className="py-16 bg-[var(--color-bg-soft)]"><div className="container-page max-w-3xl">
+            <RelatedArticles seed="Edge Plus cafeine focus concentratie nootropicum energie" />
+
       <h2 className="text-2xl md:text-3xl font-cormorant font-bold text-[var(--color-text)] mb-8">Veelgestelde vragen</h2>
       <div className="space-y-4">{faqs.map((faq, i) => (<details key={i} className="bg-white rounded-xl border border-[var(--color-border)] group"><summary className="p-5 cursor-pointer font-bold text-sm text-[var(--color-text)] list-none flex justify-between items-center">{faq.question}<span className="text-[var(--color-primary)] text-lg ml-2 group-open:rotate-45 transition-transform">+</span></summary><div className="px-5 pb-5 text-xs text-[var(--color-text-muted)] leading-relaxed">{faq.answer}</div></details>))}</div>
     </div></section>

@@ -6,6 +6,7 @@ import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import ExpertVideoSection from "@/components/ui/ExpertVideoSection";
 import { getAffiliateUrl, getProduct } from "@/lib/products";
 import { SITE_NAME } from "@/lib/site-config";
+import RelatedArticles from "@/components/sections/RelatedArticles";
 import {
   generateProductSchema,
   generateFAQSchema,
@@ -355,6 +356,8 @@ export default function HappyJuicePackPage() {
         posterSrc="/images/videos/dr-derosimo-happy-juice-poster.jpg"
         title="De wetenschap achter Happy Juice Pack"
       />
+
+            <RelatedArticles seed="Happy Juice energie focus concentratie cafeine theanine" />
 
       {/* ── Veelgestelde vragen ── */}
       <section className="py-16 bg-white">

@@ -6,6 +6,7 @@ import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import ExpertVideoSection from "@/components/ui/ExpertVideoSection";
 import { getProduct } from "@/lib/products";
 import { SITE_NAME } from "@/lib/site-config";
+import RelatedArticles from "@/components/sections/RelatedArticles";
 import {
   generateProductSchema,
   generateFAQSchema,
@@ -440,6 +441,8 @@ export default function RestorePage() {
         posterSrc="/images/videos/dr-derosimo-restore-poster.jpg"
         title="De wetenschap achter Restore"
       />
+
+            <RelatedArticles seed="Restore darmflora darmsanering probiotica spijsvertering" />
 
       {/* ── Veelgestelde vragen ── */}
       <section className="py-16 bg-white">

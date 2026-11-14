@@ -5,6 +5,7 @@ import AffiliateCTA from "@/components/ui/AffiliateCTA";
 import SchemaMarkup from "@/components/ui/SchemaMarkup";
 import { getProduct } from "@/lib/products";
 import { SITE_NAME } from "@/lib/site-config";
+import RelatedArticles from "@/components/sections/RelatedArticles";
 import {
   generateProductSchema,
   generateFAQSchema,
@@ -583,6 +584,8 @@ export default function MentaBioticsPage() {
           </div>
         </div>
       </section>
+
+            <RelatedArticles seed="Mentabiotics probiotica darmbacteriën darm-hersen-as stemming" />
 
       {/* ── Veelgestelde vragen ── */}
       <section className="py-16 bg-[var(--color-bg-soft)]">
