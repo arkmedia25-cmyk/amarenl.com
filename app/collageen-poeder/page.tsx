@@ -37,9 +37,12 @@ export default function Page() {
             <span className="inline-block px-4 py-1.5 bg-[var(--color-primary)]/10 text-[var(--color-primary)] rounded-full text-xs font-bold uppercase tracking-widest mb-6">
               ✨ Huid · Haar · Nagels
             </span>
-            <h1 className="text-4xl md:text-6xl font-cormorant font-bold text-[var(--color-text)] leading-tight mb-6">
-              Collageen Poeder Kopen? <span className="text-[var(--color-primary)]">Dit Moet Je Weten</span>
+            <h1 className="text-4xl md:text-6xl font-cormorant font-bold text-[var(--color-text)] leading-tight mb-4">
+              Gehydrolyseerd collageen kopen
             </h1>
+            <p className="text-xl md:text-2xl font-cormorant text-[var(--color-primary)] mb-6">
+              Waar je op moet letten
+            </p>
             <p className="text-lg text-[var(--color-text-muted)] mb-10 max-w-2xl mx-auto">
               Vanaf je 25e verlies je elk jaar 1% collageen. Ontdek welk collageen supplement echt werkt voor stralende huid, sterker haar en soepele gewrichten.
             </p>
