@@ -1,0 +1,848 @@
+{
+ "donem": [
+  "2026-10-30",
+  "2026-11-26"
+ ],
+ "sayfa": [
+  {
+   "p": "/blogs/nieuws/probiotica-kuur-hoe-lang-nemen",
+   "i": 100,
+   "c": 2,
+   "pos": 7.07
+  },
+  {
+   "p": "/blogs/nieuws/vaginale-probiotica-werkt-het-echt",
+   "i": 119,
+   "c": 2,
+   "pos": 21.58823529411765
+  },
+  {
+   "p": "/producten/happy-juice-pack-amare-edge-mango",
+   "i": 30,
+   "c": 2,
+   "pos": 9.433333333333334
+  },
+  {
+   "p": "/producten/nitro-xtreme-56ml",
+   "i": 15,
+   "c": 2,
+   "pos": 11.066666666666666
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/vaginale-probiotica-werkt-het-echt",
+   "i": 29,
+   "c": 2,
+   "pos": 7.241379310344827
+  },
+  {
+   "p": "/",
+   "i": 138,
+   "c": 1,
+   "pos": 6.13768115942029
+  },
+  {
+   "p": "/blogs/nieuws/amare-sunset-review-omega-3-vitamine-d3-avondsupplement",
+   "i": 18,
+   "c": 1,
+   "pos": 6.666666666666667
+  },
+  {
+   "p": "/blogs/nieuws/natuurlijke-slaap-supplementen-beter-slapen-zonder-melatonine",
+   "i": 120,
+   "c": 1,
+   "pos": 40.85
+  },
+  {
+   "p": "/blogs/nieuws/natuurlijke-vitamine-c-vs-synthetisch-vergelijking",
+   "i": 21,
+   "c": 1,
+   "pos": 6.285714285714286
+  },
+  {
+   "p": "/blogs/nieuws/supplementen-voor-meer-energie-dit-werkt-echt",
+   "i": 267,
+   "c": 1,
+   "pos": 66.61797752808988
+  },
+  {
+   "p": "/blogs/nieuws/venkelthee-opgeblazen-gevoel-bewezen-of-bakerpraatje",
+   "i": 96,
+   "c": 1,
+   "pos": 6.9375
+  },
+  {
+   "p": "/mentabiotics",
+   "i": 28,
+   "c": 1,
+   "pos": 9.607142857142858
+  },
+  {
+   "p": "/producten/hl5-peach",
+   "i": 5,
+   "c": 1,
+   "pos": 8.2
+  },
+  {
+   "p": "/producten/triangle-of-wellness-xtreme-3-pack",
+   "i": 8,
+   "c": 1,
+   "pos": 10.125
+  },
+  {
+   "p": "/sunset",
+   "i": 36,
+   "c": 1,
+   "pos": 3.138888888888889
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/vermoeid-na-griep-hoe-lang-wat-helpt",
+   "i": 187,
+   "c": 1,
+   "pos": 9.475935828877006
+  },
+  {
+   "p": "https://www.vitaalroute.nl/mentabiotics",
+   "i": 4,
+   "c": 1,
+   "pos": 4.75
+  },
+  {
+   "p": "http://vitaalroute.nl/",
+   "i": 1,
+   "c": 0,
+   "pos": 1
+  },
+  {
+   "p": "/blogs/nieuws/altijd-koud-en-moe-verband",
+   "i": 27,
+   "c": 0,
+   "pos": 12.777777777777779
+  },
+  {
+   "p": "/blogs/nieuws/altijd-moe-ontdek-hoe-cel-energie-jouw-energieniveau-bepaalt",
+   "i": 3,
+   "c": 0,
+   "pos": 9
+  },
+  {
+   "p": "/blogs/nieuws/amare-triangle-of-wellness-ervaringen-waarom-balans-voeding-en-vitaliteit-samenkomen",
+   "i": 1,
+   "c": 0,
+   "pos": 4
+  },
+  {
+   "p": "/blogs/nieuws/apotheek-of-groenteboer",
+   "i": 2,
+   "c": 0,
+   "pos": 19
+  },
+  {
+   "p": "/blogs/nieuws/ashwagandha-vs-rhodiola-adaptogeen-vergelijking",
+   "i": 2,
+   "c": 0,
+   "pos": 11.5
+  },
+  {
+   "p": "/blogs/nieuws/beste-collageen-supplement-2026-werkt-echt",
+   "i": 9,
+   "c": 0,
+   "pos": 68.55555555555556
+  },
+  {
+   "p": "/blogs/nieuws/beste-eiwitpoeder-2026-plantaardig-wei-vergelijking",
+   "i": 3,
+   "c": 0,
+   "pos": 49
+  },
+  {
+   "p": "/blogs/nieuws/beste-multivitamine-supplementen-vergelijking",
+   "i": 1,
+   "c": 0,
+   "pos": 11
+  },
+  {
+   "p": "/blogs/nieuws/beste-probiotica-2026-kopen-vergelijken",
+   "i": 15,
+   "c": 0,
+   "pos": 7.866666666666666
+  },
+  {
+   "p": "/blogs/nieuws/beste-supplementen-haar-nagels-werkt-echt",
+   "i": 17,
+   "c": 0,
+   "pos": 10.117647058823529
+  },
+  {
+   "p": "/blogs/nieuws/collageen-poeder-vs-pillen-vergelijking",
+   "i": 72,
+   "c": 0,
+   "pos": 23.38888888888889
+  },
+  {
+   "p": "/blogs/nieuws/creatine-kracht-herstel-werking-dosering",
+   "i": 7,
+   "c": 0,
+   "pos": 26.571428571428573
+  },
+  {
+   "p": "/blogs/nieuws/darmflora-verbeteren-herstel-spijsvertering-natuurlijk",
+   "i": 2,
+   "c": 0,
+   "pos": 9.5
+  },
+  {
+   "p": "/blogs/nieuws/elektrolyten-aanvullen-sport-hydratatie-gids",
+   "i": 112,
+   "c": 0,
+   "pos": 68.22321428571429
+  },
+  {
+   "p": "/blogs/nieuws/energy-plus-facts-ingredienten-ervaring",
+   "i": 1,
+   "c": 0,
+   "pos": 11
+  },
+  {
+   "p": "/blogs/nieuws/focus-supplement-natuurlijke-nootropics-concentratie",
+   "i": 5,
+   "c": 0,
+   "pos": 5.6
+  },
+  {
+   "p": "/blogs/nieuws/focus-verbeteren-concentratie-kwijt-supplementen-die-helpen",
+   "i": 5,
+   "c": 0,
+   "pos": 20.8
+  },
+  {
+   "p": "/blogs/nieuws/foliumzuur-tekort-signalen-en-adh",
+   "i": 2,
+   "c": 0,
+   "pos": 5.5
+  },
+  {
+   "p": "/blogs/nieuws/gaba-supplement-natuurlijke-rustgever-brein",
+   "i": 4,
+   "c": 0,
+   "pos": 108.25
+  },
+  {
+   "p": "/blogs/nieuws/gut-brain-connectie-darmen-stemming-mentaal",
+   "i": 5,
+   "c": 0,
+   "pos": 34.4
+  },
+  {
+   "p": "/blogs/nieuws/haaruitval-supplement-vrouwen-oorzaken-oplossingen",
+   "i": 1,
+   "c": 0,
+   "pos": 9
+  },
+  {
+   "p": "/blogs/nieuws/hormoonbalans-supplement-vrouwen-levensfase-ondersteuning",
+   "i": 5,
+   "c": 0,
+   "pos": 14
+  },
+  {
+   "p": "/blogs/nieuws/ijzer-tekort-vermoeidheid-supplement-nederland",
+   "i": 1,
+   "c": 0,
+   "pos": 120
+  },
+  {
+   "p": "/blogs/nieuws/ijzertekort-vermoeidheid-symptomen-oplossing",
+   "i": 1,
+   "c": 0,
+   "pos": 9
+  },
+  {
+   "p": "/blogs/nieuws/immuunsysteem-versterken-supplementen-werkt-echt",
+   "i": 5,
+   "c": 0,
+   "pos": 7.2
+  },
+  {
+   "p": "/blogs/nieuws/lions-mane-paddenstoel-focus-nootropic",
+   "i": 2,
+   "c": 0,
+   "pos": 9
+  },
+  {
+   "p": "/blogs/nieuws/magnesiumolie-spray-transdermaal-werkt-het",
+   "i": 5,
+   "c": 0,
+   "pos": 7.8
+  },
+  {
+   "p": "/blogs/nieuws/mct-olie-energie-gewicht-supplement",
+   "i": 1,
+   "c": 0,
+   "pos": 11
+  },
+  {
+   "p": "/blogs/nieuws/menopauze-supplement-natuurlijke-ondersteuning-overgang",
+   "i": 16,
+   "c": 0,
+   "pos": 8.9375
+  },
+  {
+   "p": "/blogs/nieuws/mijn-ervaring-collageen-6-maanden",
+   "i": 1,
+   "c": 0,
+   "pos": 7
+  },
+  {
+   "p": "/blogs/nieuws/nachtcreme-wetenschap-huidherstel-slaap",
+   "i": 1,
+   "c": 0,
+   "pos": 4
+  },
+  {
+   "p": "/blogs/nieuws/natuurlijk-afvallen-supplementen-metabolisme",
+   "i": 1,
+   "c": 0,
+   "pos": 7
+  },
+  {
+   "p": "/blogs/nieuws/natuurlijke-pre-workout-supplementen-zonder-cafeinecrash",
+   "i": 1,
+   "c": 0,
+   "pos": 7
+  },
+  {
+   "p": "/blogs/nieuws/natuurlijke-supplementen-waarheid-marketing-mythe",
+   "i": 2,
+   "c": 0,
+   "pos": 38
+  },
+  {
+   "p": "/blogs/nieuws/ochtendroutine-meer-energie-supplementen-tips",
+   "i": 1,
+   "c": 0,
+   "pos": 9
+  },
+  {
+   "p": "/blogs/nieuws/omega-3-hersenen-cognitie-supplement-wetenschap",
+   "i": 2,
+   "c": 0,
+   "pos": 20.5
+  },
+  {
+   "p": "/blogs/nieuws/omega-3-supplement-kopen-alles-wat-je-moet-weten",
+   "i": 1,
+   "c": 0,
+   "pos": 6
+  },
+  {
+   "p": "/blogs/nieuws/oververmoeid-grens-moe-opgebrand",
+   "i": 3,
+   "c": 0,
+   "pos": 11.666666666666666
+  },
+  {
+   "p": "/blogs/nieuws/plantaardige-proteine-shake-kopen-vergelijken",
+   "i": 1,
+   "c": 0,
+   "pos": 26
+  },
+  {
+   "p": "/blogs/nieuws/plotseling-extreem-moe-alarmsignaal-oorzaken",
+   "i": 3,
+   "c": 0,
+   "pos": 5
+  },
+  {
+   "p": "/blogs/nieuws/prebiotica-probiotica-verschil-darmen-uitleg",
+   "i": 14,
+   "c": 0,
+   "pos": 12.857142857142858
+  },
+  {
+   "p": "/blogs/nieuws/prebiotica-vezels-darmen-gezondheid-voeding-supplementen",
+   "i": 1,
+   "c": 0,
+   "pos": 21
+  },
+  {
+   "p": "/blogs/nieuws/prikkelbare-darm-syndroom-supplementen-pds-ibs",
+   "i": 8,
+   "c": 0,
+   "pos": 8.875
+  },
+  {
+   "p": "/blogs/nieuws/probiotica-na-antibiotica-darmflora",
+   "i": 1,
+   "c": 0,
+   "pos": 29
+  },
+  {
+   "p": "/blogs/nieuws/probiotica-voeding-gefermenteerd-eten",
+   "i": 2,
+   "c": 0,
+   "pos": 7.5
+  },
+  {
+   "p": "/blogs/nieuws/sunrise-superfood-blend-ochtend-energie",
+   "i": 7,
+   "c": 0,
+   "pos": 12
+  },
+  {
+   "p": "/blogs/nieuws/supplement-routine-ochtend-timing-schema",
+   "i": 2,
+   "c": 0,
+   "pos": 4
+  },
+  {
+   "p": "/blogs/nieuws/supplementen-bewaren-zomer-hitte-vocht-zonlicht",
+   "i": 4,
+   "c": 0,
+   "pos": 6.75
+  },
+  {
+   "p": "/blogs/nieuws/supplementen-bundel-vs-los-kopen-triangle-wellness",
+   "i": 10,
+   "c": 0,
+   "pos": 2.3
+  },
+  {
+   "p": "/blogs/nieuws/supplementen-combineren-wel-niet-gids",
+   "i": 2,
+   "c": 0,
+   "pos": 6
+  },
+  {
+   "p": "/blogs/nieuws/supplementen-stress-burn-out-wat-helpt-echt",
+   "i": 9,
+   "c": 0,
+   "pos": 13.222222222222221
+  },
+  {
+   "p": "/blogs/nieuws/supplementen-winterdip-voorkomen-behandelen",
+   "i": 5,
+   "c": 0,
+   "pos": 8.6
+  },
+  {
+   "p": "/blogs/nieuws/supplementenlabel-lezen-waar-let-je-op",
+   "i": 1,
+   "c": 0,
+   "pos": 74
+  },
+  {
+   "p": "/blogs/nieuws/synbiotica-wat-is-het-combinatie-pre-probiotica",
+   "i": 6,
+   "c": 0,
+   "pos": 6.5
+  },
+  {
+   "p": "/blogs/nieuws/synergie-supplementen-pakket-vs-losse-supplementen",
+   "i": 1,
+   "c": 0,
+   "pos": 7
+  },
+  {
+   "p": "/blogs/nieuws/terug-naar-kantoor-darmen-mentabiotics-restore",
+   "i": 1,
+   "c": 0,
+   "pos": 7
+  },
+  {
+   "p": "/blogs/nieuws/testosteron-dalen-oorzaken-leefstijl-ignite-him",
+   "i": 5,
+   "c": 0,
+   "pos": 3.8
+  },
+  {
+   "p": "/blogs/nieuws/teveel-magnesium-symptomen-risico",
+   "i": 35,
+   "c": 0,
+   "pos": 8.6
+  },
+  {
+   "p": "/blogs/nieuws/vergeetachtig-moe-brain-fog-oorzaken",
+   "i": 7,
+   "c": 0,
+   "pos": 8
+  },
+  {
+   "p": "/blogs/nieuws/vermoeid-na-griep-hoe-lang-wat-helpt",
+   "i": 37,
+   "c": 0,
+   "pos": 8.135135135135135
+  },
+  {
+   "p": "/blogs/nieuws/vermoeide-pijnlijke-spieren-herstel",
+   "i": 7,
+   "c": 0,
+   "pos": 6
+  },
+  {
+   "p": "/blogs/nieuws/vitamine-b12-tekort-symptomen-supplement",
+   "i": 1,
+   "c": 0,
+   "pos": 27
+  },
+  {
+   "p": "/blogs/nieuws/vitamine-c-tekort-symptomen-oorzaken-oplossingen",
+   "i": 3,
+   "c": 0,
+   "pos": 8
+  },
+  {
+   "p": "/blogs/nieuws/vitamine-d-energie-vermoeidheid-winter",
+   "i": 2,
+   "c": 0,
+   "pos": 9
+  },
+  {
+   "p": "/blogs/nieuws/vitamine-d-voeding-welke-producten-helpen-echt",
+   "i": 1,
+   "c": 0,
+   "pos": 10
+  },
+  {
+   "p": "/blogs/nieuws/waar-zit-collageen-in-voedingsbronnen-supplementen",
+   "i": 4,
+   "c": 0,
+   "pos": 8
+  },
+  {
+   "p": "/blogs/nieuws/zink-testosteron-supplement-nederland",
+   "i": 4,
+   "c": 0,
+   "pos": 13
+  },
+  {
+   "p": "/blogs/nieuws/zink-waar-goed-voor-tekort-signalen-supplement",
+   "i": 6,
+   "c": 0,
+   "pos": 17.166666666666668
+  },
+  {
+   "p": "/collageen-poeder",
+   "i": 76,
+   "c": 0,
+   "pos": 45.01315789473684
+  },
+  {
+   "p": "/contact",
+   "i": 9,
+   "c": 0,
+   "pos": 6.666666666666667
+  },
+  {
+   "p": "/darmgezondheid",
+   "i": 26,
+   "c": 0,
+   "pos": 49.03846153846154
+  },
+  {
+   "p": "/essentials",
+   "i": 11,
+   "c": 0,
+   "pos": 28
+  },
+  {
+   "p": "/happy-juice-pack",
+   "i": 33,
+   "c": 0,
+   "pos": 7.818181818181818
+  },
+  {
+   "p": "/pakketten",
+   "i": 25,
+   "c": 0,
+   "pos": 21.96
+  },
+  {
+   "p": "/partner-worden",
+   "i": 16,
+   "c": 0,
+   "pos": 10.625
+  },
+  {
+   "p": "/praktijken/voorbeeld",
+   "i": 1,
+   "c": 0,
+   "pos": 11
+  },
+  {
+   "p": "/probiotica-stammen",
+   "i": 11,
+   "c": 0,
+   "pos": 6.2727272727272725
+  },
+  {
+   "p": "/producten/biobrew-gefermenteerd-versterkend-serum",
+   "i": 3,
+   "c": 0,
+   "pos": 98.66666666666667
+  },
+  {
+   "p": "/producten/haarverdikkende-collectie-voor-volume",
+   "i": 1,
+   "c": 0,
+   "pos": 21
+  },
+  {
+   "p": "/producten/happy-juice-pack-amare-edge-watermelon",
+   "i": 24,
+   "c": 0,
+   "pos": 7.5
+  },
+  {
+   "p": "/producten/on",
+   "i": 11,
+   "c": 0,
+   "pos": 7
+  },
+  {
+   "p": "/producten/skin-to-mind-neuday-brighten-revitalize-serum",
+   "i": 4,
+   "c": 0,
+   "pos": 6.25
+  },
+  {
+   "p": "/producten/sunrise-2-pack",
+   "i": 9,
+   "c": 0,
+   "pos": 7.333333333333333
+  },
+  {
+   "p": "/producten/triangle-of-wellness-xtreme-6-pack",
+   "i": 10,
+   "c": 0,
+   "pos": 7.8
+  },
+  {
+   "p": "/producten/xtreme-56ml-2-pack",
+   "i": 1,
+   "c": 0,
+   "pos": 4
+  },
+  {
+   "p": "/restore",
+   "i": 2,
+   "c": 0,
+   "pos": 9
+  },
+  {
+   "p": "/schoonheid",
+   "i": 1,
+   "c": 0,
+   "pos": 9
+  },
+  {
+   "p": "/sunrise",
+   "i": 1,
+   "c": 0,
+   "pos": 8
+  },
+  {
+   "p": "/supplementen",
+   "i": 31,
+   "c": 0,
+   "pos": 34.41935483870968
+  },
+  {
+   "p": "/supplementenwijzer",
+   "i": 1,
+   "c": 0,
+   "pos": 1
+  },
+  {
+   "p": "/triangle-of-wellness-xtreme",
+   "i": 11,
+   "c": 0,
+   "pos": 8.818181818181818
+  },
+  {
+   "p": "/vitamine-d-supplement",
+   "i": 2,
+   "c": 0,
+   "pos": 15
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/altijd-moe-ontdek-hoe-cel-energie-jouw-energieniveau-bepaalt",
+   "i": 3,
+   "c": 0,
+   "pos": 2.666666666666667
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/ashwagandha-vs-rhodiola-adaptogeen-vergelijking",
+   "i": 18,
+   "c": 0,
+   "pos": 6.722222222222222
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/beste-multivitamine-supplementen-vergelijking",
+   "i": 1,
+   "c": 0,
+   "pos": 10
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/collageen-mannen-30-huid-gewrichten-spierherstel",
+   "i": 14,
+   "c": 0,
+   "pos": 6.071428571428571
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/darmflora-verbeteren-herstel-spijsvertering-natuurlijk",
+   "i": 2,
+   "c": 0,
+   "pos": 10
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/focus-verbeteren-concentratie-kwijt-supplementen-die-helpen",
+   "i": 4,
+   "c": 0,
+   "pos": 36.75
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/happy-juice-pack-vs-triangle-of-wellness-vergelijking",
+   "i": 1,
+   "c": 0,
+   "pos": 9
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/huidverzorging-van-binnenuit-supplementen-stralende-huid",
+   "i": 1,
+   "c": 0,
+   "pos": 4
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/ijzertekort-vermoeidheid-symptomen-oplossing",
+   "i": 1,
+   "c": 0,
+   "pos": 11
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/magnesiumolie-spray-transdermaal-werkt-het",
+   "i": 2,
+   "c": 0,
+   "pos": 5.5
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/middagdip-oplossen-zonder-koffie-nitro-xtreme",
+   "i": 1,
+   "c": 0,
+   "pos": 8
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/mijn-ervaring-collageen-6-maanden",
+   "i": 1,
+   "c": 0,
+   "pos": 18
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/natuurlijke-pre-workout-supplementen-zonder-cafeinecrash",
+   "i": 2,
+   "c": 0,
+   "pos": 2.5
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/omega-3-hersenen-cognitie-supplement-wetenschap",
+   "i": 1,
+   "c": 0,
+   "pos": 23
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/oververmoeid-grens-moe-opgebrand",
+   "i": 1,
+   "c": 0,
+   "pos": 5
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/plotseling-extreem-moe-alarmsignaal-oorzaken",
+   "i": 2,
+   "c": 0,
+   "pos": 8
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/probiotica-kuur-hoe-lang-nemen",
+   "i": 14,
+   "c": 0,
+   "pos": 7.928571428571429
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/probiotica-voeding-gefermenteerd-eten",
+   "i": 1,
+   "c": 0,
+   "pos": 82
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/supplement-routine-ochtend-timing-schema",
+   "i": 2,
+   "c": 0,
+   "pos": 3.5
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/synbiotica-wat-is-het-combinatie-pre-probiotica",
+   "i": 2,
+   "c": 0,
+   "pos": 11
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/teveel-magnesium-symptomen-risico",
+   "i": 66,
+   "c": 0,
+   "pos": 7.848484848484849
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/teveel-vitamine-d-symptomen-risicos-veilige-dosering",
+   "i": 33,
+   "c": 0,
+   "pos": 11.515151515151516
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/vegan-supplementen-tekorten-voorkomen-essentiele-gids",
+   "i": 1,
+   "c": 0,
+   "pos": 8
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/venkelthee-opgeblazen-gevoel-bewezen-of-bakerpraatje",
+   "i": 11,
+   "c": 0,
+   "pos": 6.2727272727272725
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/vergeetachtig-moe-brain-fog-oorzaken",
+   "i": 4,
+   "c": 0,
+   "pos": 8.75
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/vermoeidheid-menstruatie-hormonen",
+   "i": 22,
+   "c": 0,
+   "pos": 9.409090909090908
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/vitamine-c-immuunsysteem-supplement",
+   "i": 1,
+   "c": 0,
+   "pos": 6
+  },
+  {
+   "p": "https://www.vitaalroute.nl/blogs/nieuws/zink-testosteron-supplement-nederland",
+   "i": 2,
+   "c": 0,
+   "pos": 8
+  },
+  {
+   "p": "https://www.vitaalroute.nl/probiotica-stammen",
+   "i": 7,
+   "c": 0,
+   "pos": 8.857142857142858
+  },
+  {
+   "p": "https://www.vitaalroute.nl/producten/happy-lifestyle-pack-pro",
+   "i": 1,
+   "c": 0,
+   "pos": 24
+  }
+ ]
+}
